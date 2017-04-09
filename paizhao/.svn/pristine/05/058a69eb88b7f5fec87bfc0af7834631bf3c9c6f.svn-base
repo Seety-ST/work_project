@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<link href="web/pc/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="web/pc/js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="web/pc/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Horse Farm Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- start-->
+<link rel="stylesheet" href="web/pc/css/flexslider.css" type="text/css" media="screen" />
+</head>
+<body>
+<!--header start here-->
+ <div class="banner">
+ 	<div class="container">
+		 <div class="banner-bottom">
+            <div class="slider">
+               <section class="slider">
+                  <div class="flexslider">
+                    <ul class="slides">
+                    {%foreach $data as $values%}
+                    {%foreach $values as $v%}
+					<li>
+	                      <div class="col-md-4 banner-left">
+		    	             <h3>{%$v['title']%} <span class="bann-sli-text"> {%$v['user_name']%} </span> <span class="bann-sli-text">{%$v['role']%}</span></h3>
+	                      </div>
+	                       <div class="col-md-8 banner-right">
+	                          <img  class="img-responsive" src="{%$v['img_url']%}" alt="">
+	                      	</div>
+	                       <div class="clearfix"> </div>
+  	    		     </li>
+  	    		     {%/foreach%}
+					{%/foreach%}
+                 </ul>
+           </div>
+      </section>
+			  <script>window.jQuery || document.write('<script src="web/pc/js/libs/jquery-1.7.min.js">\x3C/script>')</script>
+			  <!--FlexSlider-->
+			  <script defer src="web/pc/js/jquery.flexslider.js"></script>
+			  <script type="text/javascript">
+			    $(function(){
+			     
+			    });
+			    $(window).load(function(){
+			      $('.flexslider').flexslider({
+			        animation: "slide",
+			        start: function(slider){
+			          $('body').removeClass('loading');
+			        }
+			      });
+			    });
+			  </script>
+			</div>
+		 </div>
+		 <span class="mover"> </span>
+  </div>
+</div>
+<!--header end here-->
+</body>
+</html>

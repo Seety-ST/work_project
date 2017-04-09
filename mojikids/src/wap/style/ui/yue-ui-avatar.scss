@@ -1,0 +1,46 @@
+@import "../../sass/compass";
+
+// 用户头像
+.ui-avatar-icon {
+    overflow: hidden;
+    i, span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-size: cover;
+        border-radius: 50%;
+        @include box-sizing(border-box);
+    }
+    .has-border{
+        border: 2px solid #fff;
+    }
+}
+.ui-avatar-icon-s {
+    width: 32px;
+    height: 32px;
+}
+.ui-avatar-icon-m {
+    width: 50px;
+    height: 50px;
+}
+.ui-avatar-icon-l {
+    width: 80px;
+    height: 80px;
+}
+
+.ui-avatar-icon-40 {
+    width: 40px;
+    height: 40px;
+}
+
+
+.ui-avatar-icon-60 {
+    width: 60px;
+    height: 60px;
+}
+
+
+.ui-avatar-icon-98 {
+    width: 98px;
+    height: 98px;
+}

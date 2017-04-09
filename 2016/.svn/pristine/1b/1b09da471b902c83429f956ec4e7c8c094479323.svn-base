@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>沃尔沃V40</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="index-page font_wryh">
+		<div class="header">
+			<div class="w1000 re clearfix">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+				<div class="btn-item">
+					<a href="#" class="join-btn">了解更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="path1">
+				<div class="w1000">
+					<div class="input-warp">
+						<div class="item clearfix">
+							<h4 class="title">
+								<img src="images-pc/ll-img-22.png" />
+							</h4>
+							<div class="input-item">
+								<input type="text" class="input-txt" />
+							</div>
+						</div>
+						<div class="item sex-item clearfix">
+							<div class="input-item input-item-radio">
+								<label>
+									<input type="radio" name="RadioGroup1" value="先生" id="RadioGroup1_0" checked="checked">
+									<img src="images-pc/ll-img-27.png" />
+								</label>
+								<label>
+									<input type="radio" name="RadioGroup1" value="女士" id="RadioGroup1_1">
+									<img src="images-pc/ll-img-28.png" />
+								</label>
+							</div>
+						</div>
+						<div class="item clearfix">
+							<h4 class="title">
+								<img src="images-pc/ll-img-23.png" />
+							</h4>
+							<div class="input-item">
+								<input type="text" class="input-txt" />
+							</div>
+						</div>
+						<div class="item select-item clearfix">
+							<div class="title-item">
+								<h4 class="title">
+									<img src="images-pc/ll-img-24.png" />
+								</h4>
+								<h4 class="title">
+									<img src="images-pc/ll-img-26.png" />
+								</h4>
+							</div>
+							<div class="input-item">
+								<select>
+									<option>广东</option>
+									<option>河北</option>
+								</select>
+								<select>
+									<option>广州</option>
+									<option>其他</option>
+								</select>
+							</div>
+						</div>
+						<div class="tips-item">
+							<p>
+								*请准确填写个人信息，以便于工作人员及时与您取得联系。
+							</p>
+							<p>
+								*您的信息将只用于沃尔沃相关市场活动，不会透露给第三方。
+							</p>
+						</div>
+						<div class="btn-item">
+							<a href="#" class="btn">
+								<img src="images-pc/ll-img-21.png" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="path2">
+				<div class="more-btn">
+					<a href="#" class="btn">了解更多</a>
+				</div>
+			</div>
+			<div class="path3">
+				<div class="pathA"></div>
+				<div class="pathB"></div>
+			</div>
+			<div class="path4">
+				<div class="show-item">
+					<div class="scrollBox">
+						<ul class="img_list clearfix" id="foo1">
+							<li>
+								<div class="img-item">
+									<img src="images-pc/img-item/1.jpg" />
+								</div>
+								<dl class="text-item">
+									<dt>CITY SAFETY增强版城市安全系统</dt>
+									<dd>在复杂的城市路况中，CITY SAFETY 增强版城市安全系统可以防止您撞上前方突然停驶的车辆。当车速不高于50 公里/ 小时，系统能感应到即将发生的碰撞并采取措施。</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/img-item/2.jpg" />
+								</div>
+								<dl class="text-item">
+									<dt>Volvo On Call 随车管家</dt>
+									<dd>Volvo On Call 随车管家是我们的智能手机应用程序，内置有一系列精妙的解决方案，使您能够远程控制车辆并在需要时获取帮助。这是我们沃尔沃特有的方式，让您的生活更轻松自如。</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/img-item/3.jpg" />
+								</div>
+								<dl class="text-item">
+									<dt>全新座舱极光氛围灯</dt>
+									<dd>普罗旺斯紫、波罗的海蓝、挪威森林绿等7种极光氛围，随车内温度设定不同而变换，为您打造七彩绚烂的尊享意境，以匹配您的不同心情与幸福感。</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/img-item/4.jpg" />
+								</div>
+								<dl class="text-item">
+									<dt>传承跑车的曲线设计</dt>
+									<dd>2016款V40骤然在腰线处上扬和收起立体弧度的车肩线，正传承于沃尔沃经典跑车P1800的“邦德曲线”，而整个尾部更是以优美、典雅的形态展现自由流畅的曲线设计，将美学与力学充分融合，营造出跃跃欲试的动感活力。</dd>
+								</dl>
+							</li>
+						</ul>
+						<div class="page-wrap clearfix">
+							<div class="page-box" id="pager1">
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="path5">
+				<div class="show-item">
+					<div class="scrollBox">
+						<ul class="img_list clearfix" id="foo2">
+							<li>
+								<div class="img-item">
+									<img src="images-pc/show-item/1.jpg" />
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/show-item/2.jpg" />
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/show-item/3.jpg" />
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/show-item/4.jpg" />
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/show-item/5.jpg" />
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<img src="images-pc/show-item/6.jpg" />
+								</div>
+							</li>
+						</ul>
+						<div class="page-wrap clearfix">
+							<a href="#" class="pre" id="prev2"></a>
+							<div class="page-box" id="pager2">
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+							</div>
+							<a href="#" class="next" id="next2"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer"></div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.carouFredSel-5.5.0.js"></script>
+	<script>
+		$('#foo1').carouFredSel({
+			pagination: "#pager1",
+			auto: true,
+			responsive: true,
+			items: 1,
+			scroll: {
+				fx: "crossfade"
+			}
+		});
+		$('#foo2').carouFredSel({
+			prev: '#prev2',
+			next: '#next2',
+			pagination: "#pager2",
+			auto: true
+		});
+	</script>
+</body>
+</html>

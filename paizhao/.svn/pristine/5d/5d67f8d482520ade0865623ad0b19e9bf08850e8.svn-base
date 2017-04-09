@@ -1,0 +1,13 @@
+.go-top-mod a {
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 95px;
+  text-decoration: none;
+  color: #fff;
+  background: url(http://51snap.yueus.com/static/wap/image/common/go-top-88x88.png);
+  width: 44px;
+  height: 44px;
+  background-size: cover; }

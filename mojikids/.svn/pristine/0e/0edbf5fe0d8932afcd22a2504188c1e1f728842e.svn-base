@@ -1,0 +1,67 @@
+.list-wrapper .list-page .fixed {
+  position: fixed;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.list-wrapper .list-page .item-wrap {
+  padding: 0.18rem 0.15rem 0.15rem 0.15rem;
+}
+
+.list-wrapper .list-page .item-wrap .item {
+  margin-bottom: 0.15rem;
+  font-size: 0.14rem;
+  padding: 0.15rem;
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 0.05rem;
+}
+
+.list-wrapper .list-page .item-wrap .item .wbox1 {
+  padding: 0 0 0.1rem 0;
+}
+
+.list-wrapper .list-page .item-wrap .item .des {
+  padding: 0.05rem 0 0.1rem 0;
+}
+
+.list-wrapper .list-page .item-wrap .item .des p {
+  padding-top: 0.09rem;
+}
+
+.list-wrapper .list-page .item-wrap .item .des .t-title {
+  margin-right: 0.1rem;
+}
+
+.list-wrapper .list-page .item-wrap .item .total {
+  text-align: right;
+  padding: 0.12rem 0 0.1rem 0;
+}
+
+.list-wrapper .list-page .item-wrap .item .submit {
+  padding-top: 0.15rem;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: end;
+  box-pack: end;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.list-wrapper .list-page .item-wrap .item .submit .ui-button {
+  margin-left: 0.15rem;
+}
+
+.list-wrapper .mint-popup {
+  width: 100%;
+}
+
+.list-wrapper .global-map-pop {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+}

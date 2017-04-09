@@ -1,0 +1,1 @@
+define("wap-kids:widget/radio_test/index",function(e,t,d){"use strict";function i(e){return e&&e.__esModule?e:{"default":e}}var a=e("wap-kids:widget/radio_test/radio"),r=i(a);d.exports=r.default});

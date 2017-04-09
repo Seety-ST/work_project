@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>volvoV40</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="volvo-page">
+		<div class="path1 clearfix">
+			<div class="bg-item">
+				<img src="images/blank-84x118.png" />
+			</div>
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-img.png" />
+				</a>
+			</h1>
+			<div class="btn-item">
+				<a href="#">
+					<img src="images/ll-img-1.png" />
+				</a>
+			</div>
+		</div>
+		<div class="path2">
+			<div class="fromList">
+				<div class="item clearfix">
+					<h3 class="title">
+						<img src="images/ll-title-1.png" />
+					</h3>
+					<input type="text" class="input-txt"/>
+				</div>
+				<div class="item clearfix">
+					<div class="sex-item">
+						<label>
+							<input type="radio" name="RadioGroup1" value="男" id="RadioGroup1_0" checked="checked">
+							<img src="images/ll-title-5-m.png" />
+						</label>
+						<label>
+							<input type="radio" name="RadioGroup1" value="女" id="RadioGroup1_1">
+							<img src="images/ll-title-5-w.png" />
+						</label>
+					</div>
+				</div>
+				<div class="item clearfix">
+					<h3 class="title">
+						<img src="images/ll-title-2.png" />
+					</h3>
+					<input type="text" class="input-txt" />
+				</div>
+				<div class="item address-item clearfix">
+					<div class="title-item">
+						<h3 class="title">
+							<img src="images/ll-title-3.png" />
+						</h3>
+						<h3 class="title">
+							<img src="images/ll-title-4.png" />
+						</h3>
+					</div>
+					<div id="sel">
+						<select class="input-txt">
+							<option>广东</option>
+							<option>河北</option>
+						</select>
+						<select class="input-txt" >
+							<option>广州</option>
+							<option>其他</option>
+						</select>
+					</div>
+				</div>
+				<div class="tips-item">
+					<img src="images/ll-img-4.png" />
+				</div>
+				<div class="btn-item">
+					<img src="images/ll-img-2.jpg" />
+				</div>
+			</div>
+		</div>
+		<!-- 金融专家 -->
+		<div class="path-jrzj">
+			<div class="text-item">
+				<p>
+					即日起至3月31日，凡购买2016款沃尔沃V40 T4智雅版 ，<span class="point">首付低至20%， 2年0利率，</span>梦想触手可及更多金融专案，详见沃尔沃汽车官方网站。
+				</p>
+			</div>
+			<div class="btn-item">
+				<img src="images/ll-img-6.png" />
+			</div>
+		</div>
+		<!-- 金融专家 end -->
+		<div class="path3">
+			<img src="images/blank-81x122.png" />
+		</div>
+		<div class="path4">
+			<!-- Swiper -->
+			<div class="swiper-container banner-warp">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images/point-img/1.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>CITY SAFETY增强版城市安全系统</dt>
+								<dd>
+									在复杂的城市路况中，CITY SAFETY 增强版城市安全系统可以防止您撞上前方突然停驶的车辆。当车速不高于50 公里/ 小时，系统能感应到即将发生的碰撞并采取措施。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images/point-img/2.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>Volvo On Call 随车管家</dt>
+								<dd>
+									Volvo On Call 随车管家是我们的智能手机应用程序，内置有一系列精妙的解决方案，使您能够远程控制车辆并在需要时获取帮助。这是我们沃尔沃特有的方式，让您的生活更轻松自如。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images/point-img/3.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>全新座舱极光氛围灯</dt>
+								<dd>
+									普罗旺斯紫、波罗的海蓝、挪威森林绿等7种极光氛围，随车内温度设定不同而变换，为您打造七彩绚烂的尊享意境，以匹配您的不同心情与幸福感。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images/point-img/4.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>传承跑车的曲线设计</dt>
+								<dd>
+									2016款V40骤然在腰线处上扬和收起立体弧度的车肩线，正传承于沃尔沃经典跑车P1800的“邦德曲线”，而整个尾部更是以优美、典雅的形态展现自由流畅的曲线设计，将美学与力学充分融合，营造出跃跃欲试的动感活力。
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- Swiper end-->
+		</div>
+		<div class="path5">
+			<div class="list clearfix">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images/list-img/s/1.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/list-img/s/2.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/list-img/s/3.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/list-img/s/4.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/list-img/s/5.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images/list-img/s/6.jpg" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--弹出层-->
+	<div class="fade" style="display:none"></div>
+	<!--大图弹出层-->
+	<div class="pop-img" style="display:none">
+		<div class="img-item">
+			<img src="images/list-img/b/1.jpg" />
+		</div>
+	</div>
+	<!--大图弹出层 end-->
+	<!--正在提交弹出层-->
+	<div class="pop-tjing" style="display:none">
+		<p>正在提交，请稍后...</p>
+	</div>
+	<!--正在提交弹出层 end-->
+	<!--弹出层 end-->
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper1 = new Swiper('.banner-warp', {
+			pagination : '.swiper-pagination',
+			preloadImages: true,
+			lazyLoading: true,
+			loop : true,
+			speed: 700,
+			autoplay : 5000,
+			autoplayDisableOnInteraction : false
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>{%$ret.title%}</title>    
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/placeholder/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/placeholder/index.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/topic/index-page.css">
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	
+
+	<div class="topic-index-page">
+		<div class="w1200">
+			<div class="title-item">
+				<div class="global-nav-mod-1">
+					<a href="{%$paizhao_page_url.index%}" class="color-666">首页</a><span class="ml5 mr5"> ></span>
+					<span class="color-666">{%$ret.title%}</span>
+				</div>
+			</div>
+			<div class="item-wrap">
+				{%if $ret.content %}
+				<div class="p1th">
+					{%$ret.content%}
+				</div>
+				{%else%}
+				
+				<div class="no-content-tips-mod-1">
+					<div class="img">
+						<img src="http://51snap.yueus.com//static/pc/image/ui/no-content-icon-59x59.png" />   
+					</div>
+					<div class="txt color-666 f14 pt10">
+						暂无内容
+					</div>
+				</div>
+				{%/if%}
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	
+
+
+</script>
+
+{%$pc_global_tj%}
+</html>

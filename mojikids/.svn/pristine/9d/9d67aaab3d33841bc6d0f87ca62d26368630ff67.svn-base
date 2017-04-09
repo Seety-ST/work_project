@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        我的订单 - 莫吉照相馆
+    </title>
+    <meta name="Keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+    <meta name="Description" content="MOJIKIDS莫吉照相馆，专注3-7岁儿童亲子摄影。我们一直坚持对细节及品质的极致追求，用镜头记录孩子的纯真笑颜。">
+    {%$wap_global_head%}
+    <!-- <link rel="import" href="../ui/g_head.tpl.htm?__inline"> -->
+
+    
+</head>
+
+<body >
+
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/order/list.css">
+{%include file="../webcontrol/global_footer_bar.tpl.htm" current_page_name='order' page_url = $page_url%}
+
+<main role="main" class="list-wrapper">
+    <div id="page-container" class="page-container" >
+
+        <div class="list-page">
+            <div class="yue-ui-tab-menu "  v-bind:class="[fix_class]">
+                <ul class="list f14  color-999 ui-border-b" data-role="nav">
+                    <li :class="[type=='all'?'cur':'']"  @click="change_tye('all',0)"  ><p class="txt"><span class="circle fn-hide" ></span>全部</p></li>
+                    <li :class="[type=='unpaid'?'cur':'']"  @click="change_tye('unpaid',1)"><p class="txt">待支付</p></li>
+                    <li :class="[type=='tbc'?'cur':'']"  @click="change_tye('tbc',2)"><p class="txt">待到店</p></li>
+                    <li :class="[type=='checkin'?'cur':'']"  @click="change_tye('checkin',3)"><p class="txt">待完成</p></li>
+                    <li :class="[type=='completed'?'cur':'']"  @click="change_tye('completed',4)"><p class="txt">已完成</p></li>
+                </ul>
+            </div>
+
+            <div class="main-content" data-role="main-content">
+                <moji-list-com1 ref="list1" @success="list_com1_success"></moji-list-com1>
+            </div>
+
+
+        </div>
+
+
+        <mt-popup v-model="map_popup" position="bottom">
+            <div id="container"  class="global-map-pop"></div>
+        </mt-popup>
+
+
+
+
+    </div>
+</main>
+
+
+</body>
+
+</html>
+
+ {%$wap_global_footer%}
+
+<script type="text/javascript" src="http://mojikids.yueus.com/static/wap/modules/layout/list/index.js"></script>
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- <link rel="import" href="../ui/g_footer.tpl.htm?__inline"> -->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+        var Toast  =  require.syncLoad('wap-kids:widget/toast/index');
+
+        var Popup = require.syncLoad('wap-kids:widget/popup/index');
+        // 使用popup
+        Vue.component(Popup.name, Popup);
+
+
+        // 加载util
+        var Util = require.syncLoad('wap-kids:global/util/index');
+        // 加载list
+        var List = require('wap-kids:layout/list/index');
+
+        var Map = '';
+
+        var vm = new Vue
+        ({
+            el: '#page-container',
+            data:function()
+            {
+                return {
+                    type : "all",
+                    map_popup : false,
+                    fix_class : ''
+                }
+            },
+            mounted : function()
+            {
+                // 主动去刷新当前列表
+                var self = this;
+                // 获取对应列表子组件并调用刷新方法
+                self.$refs.list1.refresh();
+
+                self.on_scroll();
+
+
+
+
+
+            },
+            components :
+            {
+                'moji-list-com1' : List.init
+                ({
+                    
+                    url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN'] + 'order/get_list.php',
+                    template : "<div class=\"item-wrap\">\r\n   \r\n\r\n\r\n        <div class=\"item color-666\" v-for=\"$item in data.list\" @click=\"go_detail($item.order_sn)\" >\r\n            <div class=\"wbox1 clearfix ui-border-b\">\r\n                <div class=\"lbox fl\">{{$item.title}}</div>\r\n                <div class=\"rbox fr main-color state\">{{$item.status_str}}</div>\r\n            </div>\r\n            <div class=\"des ui-border-b\">\r\n                <div v-for=\"$s_item in $item.property\" class=\"w\">\r\n                    <div class=\"l color-333 t-title\">{{$s_item.title}}</div>\r\n                    <div class=\"r\">{{$s_item.value}}</div>\r\n                </div>\r\n            </div>\r\n            <div class=\"total  ui-border-b \" v-for=\"$s_item in $item.bill\">{{$s_item.title}}<span class=\"price main-color\">{{$s_item.value}}</span></div>\r\n            <div class=\"submit\">\r\n                <button  v-for=\"$s_item in $item.button\"  @click=\"operation_tyle($s_item.action,$event,$item.order_sn,$s_item.value,$item.property[1].value,$item.property[2].value)\"  class=\"ui-button ui-button-block  ui-button-size-x  ui-button-radius-l ui-button-bd-fac main-border-color\">\r\n                    <span class=\"ui-button-content f14\" >{{$s_item.title}}</span>\r\n                </button>\r\n            </div>\r\n        </div> \r\n\r\n    \r\n</div>     \r\n\r\n\r\n<!-- \r\n<div class=\"wap-list-mod-1\">\r\n    <ul class=\"list\" >        \r\n        <li class=\"clearfix\" v-for=\"$item in data.list\">\r\n            <div class=\"avator-item fldi\">\r\n                <div class=\"ui-avatar-icon ui-avatar-icon-60\">\r\n                           <i :style=\"{backgroundImage:'url('+$item.images+')'}\"></i>\r\n                </div>\r\n                <i class=\"mark-icon girl-mark-icon\"></i>\r\n            </div>\r\n            <div class=\"txt-item fldi\">\r\n                <p class=\"box-1 tc\">\r\n                    {{$item.titles}}\r\n                </p>\r\n                <p class=\"box-2 f14 color-666 tc\">\r\n                    {{$item.titles}}\r\n                </p>\r\n            </div>\r\n            <div class=\"btn-item\">\r\n                <button @click=\"show_title($item.titles)\" class=\"ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l\">\r\n                    <span class=\"ui-button-content f12\">修改</span>\r\n                </button>\r\n            </div>\r\n        </li>\r\n    </ul>\r\n</div>\r\n -->",
+                    data : function()
+                    {
+                        var obj =
+                        {
+                            ajax_params :
+                            {
+                                trade_type:'all',
+                                page : 1
+                            },
+                            data :
+                            {
+                                code : 1,
+                                list : [],
+                                msg : '',
+                                page : 1,
+                                has_next_page:true
+                            }
+                        };
+
+                        return obj
+                    },
+                    methods :
+                    {
+                        // 子组件点击按钮表单类型操作
+                        operation_tyle : function(param,event,order_sn,lng_lat,name,place)
+                        {
+                            var self = this;
+                            event.stopPropagation();
+                            console.log(param);
+                            switch (param)
+                            {
+                                // 致电我们
+                                case 'oncall':
+                                    window.location.href = "tel:" + window.__MOJIKIDS_GLOBAL['PHONE'];
+                                break;
+
+                                // 致电我们
+                                case 'pay':
+                                    console.log(order_sn);
+                                    window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['pay'] +'index.php?order_sn=' + order_sn;
+                                break;
+
+                                case 'showmap':
+
+                                    /****************** 定位功能 BEGIN ******************/
+                                    console.log(lng_lat);
+
+                                    var location_data = lng_lat.split(",");//经纬度
+
+                                    if(!location_data)
+                                    {
+                                        Util.toast
+                                        ({
+                                            message: '暂无定位数据',
+                                            position: 'middle',
+                                            duration: 3000
+                                        });
+                                        return;
+                                    }
+
+                                    if(!Map)
+                                    {
+                                        // 使用定位功能
+                                        Map = Util.open_location
+                                        ({
+                                            wx_prams :
+                                            {
+                                                longitude : location_data[0],
+                                                latitude : location_data[1],
+                                                name: name, // 位置名
+                                                address: place // 地址详情说明
+                                            },
+                                            gaode_params :
+                                            {
+                                                longitude : location_data[0],
+                                                latitude : location_data[1],
+                                                el : 'container',
+                                                zoom : 16,
+                                                showIndoorMap : true,
+                                                before_init : function()
+                                                {
+                                                    vm.map_popup = true;
+                                                }
+                                            }
+                                        });
+
+                                        Map = null;
+                                    }
+                                    else
+                                    {
+                                       if(Map.type == 'gaode')
+                                       {
+                                           vm.map_popup = true;
+                                       }
+                                    }
+                                    /****************** 定位功能 END ******************/
+                                break;
+
+                                case 'exhibit':
+                                    window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['mine'] + 'photos.php?order_sn=' + order_sn;
+                                break;
+
+                            }
+                        },
+
+                        // 跳转订单详情
+                        go_detail : function(param){
+                            window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['order'] + 'detail.php?order_sn=' + param;
+                        }
+                    },
+
+                }),
+            },
+
+            methods:
+            {
+                // 监听列表组件1的回调
+                // 注意，一定是父组件监听子组件的event
+                list_com1_success : function(res)
+                {
+                    var self = this;
+                    console.log(res);
+                },
+
+                // 切换类型
+                change_tye : function(type,key)
+                {
+                    console.log(type);
+                    var self = this;
+                    if(type == self.$data.type)
+                    {
+                        return;
+                    }
+
+                    window.scrollTo(0,0); 
+
+                    self.$data.type = type;
+                    self.$refs.list1.$data.ajax_params.trade_type = type ;
+                    self.$refs.list1.refresh();
+                },
+
+                // 滚动处理样式
+                on_scroll : function ()
+                {
+                    var self = this;
+                    window.onscroll = function(){ 
+                        var t = document.documentElement.scrollTop || document.body.scrollTop;  //获取距离页面顶部的距离
+                        var uptop = document.getElementById( "uptop" ); //获取div元素
+                        if( t >= 30 ) 
+                        { 
+                            //当距离顶部超过300px时
+                            self.fix_class = 'fixed'
+                        } 
+                        else 
+                        {
+                            //如果距离顶部小于300px
+                            self.fix_class = ''
+                        } 
+                    } 
+                }
+            }
+
+        });
+    })();
+</script>
+
+
+
+{%$wap_global_tj%}

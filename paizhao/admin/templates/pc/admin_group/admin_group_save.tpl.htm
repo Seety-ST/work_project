@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gbk">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<!--<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>-->
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<title>管理员添加/更新</title>
+</head>
+<body>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+</style>
+{global_header_html}
+
+<div class="mainbox">
+  <div id="tabs" style="margin-top:10px;">
+    <div class="tabbox">
+      <div class="table-list">
+        <div class="table" style="width:100%;">          
+          <fieldset>
+            <legend>管理员添加/更新</legend>
+            <iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+			<form id="form1" name="form1" method="post" action="" target="form_iframe" >
+			  <table width="90%" align="center">
+				  <tr>
+					  <td width="26%" height="25">组的名称</td>
+					  <td width="74%" height="25">
+                         <input name="name" type="text" id="name" value="{admin_group_info.name}" />
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">状态</td>
+					  <td width="74%" height="25">
+                         {top.status_html}
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">组长用户id</td>
+					  <td width="74%" height="25">
+                         <input name="user_id" type="text" id="user_id" value="{admin_group_info.user_id}" />
+                      </td>
+                  </tr>
+                  
+				  <tr>
+                      <td colspan="2" align="center">
+                          <input type="button" name="button" id="button_return" value="返回" onclick="jump();" />&nbsp;&nbsp;<input type="submit" id="button" value="提交" />
+                      </td>
+                  </tr>
+			  </table>
+              <input type='hidden' name='id' value="{top.id}"/>
+			</form>
+          </fieldset>
+        </div>
+      </div>
+    </div>   
+    </div>
+     </div>
+{top.admin_log_list_html}
+
+<script>
+    function jump()
+    {
+        window.parent.location.href="admin_group.php?action=admin_group_list";
+    }
+</script>
+</body>
+</html>

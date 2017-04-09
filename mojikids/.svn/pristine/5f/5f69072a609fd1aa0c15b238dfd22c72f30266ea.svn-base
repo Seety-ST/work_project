@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="./g_head.tpl.htm?__inline">
+	<title>
+	   列表
+	</title>
+	<style>
+		body{
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	
+
+<!-- YUE-UI VUE 头部返回模块 start -->
+<link rel="import" href="./g_back.tpl.htm?__inline">
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+
+<div class="wap-list-mod-1">
+	<ul class="list">
+		<li class="clearfix">
+			<div class="avator-item fldi">
+				<div class="ui-avatar-icon ui-avatar-icon-60">
+				           <i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-m.jpg)"></i>
+				</div>
+				<i class="mark-icon girl-mark-icon"></i>
+			</div>
+			<div class="txt-item fldi">
+				<p class="box-1 tc">
+					刘雯小公主
+				</p>
+				<p class="box-2 f14 color-666 tc">
+					2岁
+				</p>
+			</div>
+			<div class="btn-item frdi">
+				<button class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+					<span class="ui-button-content f12">修改</span>
+				</button>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="avator-item fldi">
+				<div class="ui-avatar-icon ui-avatar-icon-60">
+				           <i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-m.jpg)"></i>
+				</div>
+				<i class="mark-icon boy-mark-icon"></i>
+			</div>
+			<div class="txt-item fldi">
+				<p class="box-1 tc">
+					余文乐小王子
+				</p>   
+				<p class="box-2 f14 color-666 tc">
+					2岁
+				</p>
+			</div>
+			<div class="btn-item frdi">
+				<button class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+					<span class="ui-button-content f12">修改</span>
+				</button>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+</body>
+
+
+
+
+</html>

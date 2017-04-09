@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>万里科demo</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body>
+		<section class="wlk-page">
+			<section class="bg-item"></section>
+			<section class="con-item">
+				<h1 class="logo-item animated"></h1>
+				<div class="light-item animated"></div>
+			</section>
+			<section class="more-item">
+				<div class="bar-bg animated"></div>
+				<div class="text-item animated">
+					<span>奖</span><span>品</span><span>就</span><span>绪</span> <span>各</span><span>就</span><span>各</span><span>位</span>
+				</div>
+			</section>
+		</section>
+	</body>
+</html>

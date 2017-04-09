@@ -1,0 +1,589 @@
+/**
+ * @file: mod.js
+ * @author fis
+ * ver: 1.0.13
+ * update: 2016/01/27
+ * https://github.com/fex-team/mod
+ */
+var require;
+
+/* eslint-disable no-unused-vars */
+var define;
+
+(function (global) {
+
+    // 避免重复加载而导致已定义模块丢失
+    if (require) {
+        return;
+    }
+
+    var head = document.getElementsByTagName('head')[0];
+    var loadingMap = {};
+    var factoryMap = {};
+    var modulesMap = {};
+    var scriptsMap = {};
+    var resMap = {};
+    var pkgMap = {};
+
+    var createScripts = function(queues, onerror){
+
+        var docFrag = document.createDocumentFragment();
+
+        for(var i = 0, len = queues.length; i < len; i++){
+            var id = queues[i].id;
+            var url = queues[i].url;
+
+            if (url in scriptsMap) {
+                continue;
+            }
+
+            scriptsMap[url] = true;
+
+            var script = document.createElement('script');
+            if (onerror) {
+                (function(script, id){
+                    var tid = setTimeout(function(){
+                        onerror(id);
+                    }, require.timeout);
+
+                    script.onerror = function () {
+                        clearTimeout(tid);
+                        onerror(id);
+                    };
+
+                    var onload = function () {
+                        clearTimeout(tid);
+                    };
+
+                    if ('onload' in script) {
+                        script.onload = onload;
+                    }
+                    else {
+                        script.onreadystatechange = function () {
+                            if (this.readyState === 'loaded' || this.readyState === 'complete') {
+                                onload();
+                            }
+                        };
+                    }
+                })(script, id);
+            }
+            script.type = 'text/javascript';
+            script.src = url;
+
+            docFrag.appendChild(script);
+        }
+
+        head.appendChild(docFrag);
+    };
+
+    var loadScripts = function(ids, callback, onerror){
+        var queues = [];
+        for(var i = 0, len = ids.length; i < len; i++){
+            var id = ids[i];
+            var queue = loadingMap[id] || (loadingMap[id] = []);
+            queue.push(callback);
+
+            //
+            // resource map query
+            //
+            var res = resMap[id] || resMap[id + '.js'] || {};
+            var pkg = res.pkg;
+            var url;
+
+            if (pkg) {
+                url = pkgMap[pkg].url || pkgMap[pkg].uri;
+            }
+            else {
+                url = res.url || res.uri || id;
+            }
+
+            queues.push({
+                id: id,
+                url: url
+            });
+        }
+
+        createScripts(queues, onerror);
+    };
+
+    define = function (id, factory) {
+
+        if(typeof id == 'string' && id)
+        {
+            id = id.replace(/\.js$/i, '');
+        }
+        
+        factoryMap[id] = factory;
+
+        var queue = loadingMap[id];
+        if (queue) {
+            for (var i = 0, n = queue.length; i < n; i++) {
+                queue[i]();
+            }
+            delete loadingMap[id];
+        }
+    };
+
+    require = function (id) {
+
+        // compatible with require([dep, dep2...]) syntax.
+        if (id && id.splice) {
+            return require.async.apply(this, arguments);
+        }
+
+        id = require.alias(id);
+
+        var mod = modulesMap[id];
+        if (mod) {
+            return mod.exports;
+        }
+
+        //
+        // init module
+        //
+        var factory = factoryMap[id];
+        if (!factory) {
+            throw '[ModJS] Cannot find module `' + id + '`';
+        }
+
+        mod = modulesMap[id] = {
+            exports: {}
+        };
+
+        //
+        // factory: function OR value
+        //
+        var ret = (typeof factory === 'function') ? factory.apply(mod, [require, mod.exports, mod]) : factory;
+
+        if (ret) {
+            mod.exports = ret;
+        }
+
+        return mod.exports;
+    };
+
+    require.async = function (names, onload, onerror) {
+        if (typeof names === 'string') {
+            names = [names];
+        }
+
+        var needMap = {};
+        var needNum = 0;
+        var needLoad = [];
+
+        function findNeed(depArr) {
+            var child;
+
+            for (var i = 0, n = depArr.length; i < n; i++) {
+                //
+                // skip loading or loaded
+                //
+                var dep = require.alias(depArr[i]);
+
+                if (dep in needMap) {
+                    continue;
+                }
+
+                needMap[dep] = true;
+
+                if (dep in factoryMap) {
+                    // check whether loaded resource's deps is loaded or not
+                    child = resMap[dep] || resMap[dep + '.js'];
+                    if (child && 'deps' in child) {
+                        findNeed(child.deps);
+                    }
+                    continue;
+                }
+
+                needLoad.push(dep);
+                needNum++;
+
+                child = resMap[dep] || resMap[dep + '.js'];
+                if (child && 'deps' in child) {
+                    findNeed(child.deps);
+                }
+            }
+        }
+
+        function updateNeed() {
+            if (0 === needNum--) {
+                var args = [];
+                for (var i = 0, n = names.length; i < n; i++) {
+                    args[i] = require(names[i]);
+                }
+
+                onload && onload.apply(global, args);
+            }
+        }
+
+        findNeed(names);
+        loadScripts(needLoad, updateNeed, onerror);
+        updateNeed();
+    };
+    
+    require.ensure = function(names, callback) {
+      require.async(names, function() {
+        callback && callback.call(this, require);
+      });
+    };
+
+    require.resourceMap = function (obj) {
+        var k;
+        var col;
+
+        // merge `res` & `pkg` fields
+        col = obj.res;
+        for (k in col) {
+            if (col.hasOwnProperty(k)) {
+                resMap[k] = col[k];
+            }
+        }
+
+        col = obj.pkg;
+        for (k in col) {
+            if (col.hasOwnProperty(k)) {
+                pkgMap[k] = col[k];
+            }
+        }
+
+        window.__RESOURCES_MAP__ = obj;
+        window.__RESOURCES_MAP = obj;
+
+        require.__RESOURCES_MAP_OBJ = obj;
+    };
+
+    require.loadJs = function (url) {
+        if (url in scriptsMap) {
+            return;
+        }
+
+        scriptsMap[url] = true;
+
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        head.appendChild(script);
+    };
+
+    require.loadCss = function (cfg) {
+        if (cfg.content) {
+            var sty = document.createElement('style');
+            sty.type = 'text/css';
+
+            if (sty.styleSheet) { // IE
+                sty.styleSheet.cssText = cfg.content;
+            }
+            else {
+                sty.innerHTML = cfg.content;
+            }
+            head.appendChild(sty);
+        }
+        else if (cfg.url) {
+            var link = document.createElement('link');
+            link.href = cfg.url;
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            head.appendChild(link);
+        }
+    };
+
+
+    require.alias = function (id) {
+        return id.replace(/\.js$/i, '');
+    };
+
+    // 同步加载，也是为了避开fis的检测
+    require.syncLoad = function(id)
+    {
+        return require(id);
+    };
+
+    require.timeout = 5000;
+
+})(this);
+
+;(function (global) {
+    'use strict';
+
+    //检查文件类型
+    var TYPE_RE = /\.(js|css)(?=[?&,]|$)/i;
+    var head = document.getElementsByTagName('head')[0];
+    function fileType(str) {
+        var ext = 'js';
+        str.replace(TYPE_RE, function (m, $1) {
+            ext = $1;
+        });
+        if (ext !== 'js' && ext !== 'css') ext = 'unknown';
+        return ext;
+    }
+
+
+
+    //将js片段插入dom结构
+    function evalGlobal(strScript){
+        var scriptEl = document.createElement ("script");
+        scriptEl.type= "text/javascript";
+        scriptEl.text= strScript;
+        document.getElementsByTagName("head")[0].appendChild(scriptEl) ;
+    }
+
+    //将css片段插入dom结构
+    function createCss(strCss) {
+        var styleEl = document.createElement('style');
+        document.head.appendChild(styleEl);
+        styleEl.appendChild(document.createTextNode(strCss));
+    }
+
+    function load_js(url)
+    {
+        var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+
+            script.setAttribute('async',false);
+
+            head.appendChild(script);
+    }
+
+    function load_css(url)
+    {
+        var link = document.createElement('link');
+            link.type = 'text/css';
+            link.href = url;
+
+            head.appendChild(link);
+    }
+
+    // 在全局作用域执行js或插入style node
+    function defineCode(url, str) {
+        var type = fileType(url);
+        if (type === "js"){
+            //with(window)eval(str);
+            evalGlobal(str);
+        }else if(type === "css"){
+            createCss(str);
+        }
+    }
+
+    // 将数据写入localstorage
+    var setLocalStorage = function(key, item){
+
+        var STORAGE_OVERFLOW = 'QuotaExceededError';
+        var ls = window.localStorage;
+        try
+        {
+            ls && ls.setItem(key, item);
+        }
+        catch(err)
+        {
+            if(err.name === STORAGE_OVERFLOW)
+            {
+                window.localStorage.clear();
+
+                ls && ls.setItem(key, item);
+            }
+        }
+
+        
+    }
+
+    // 从localstorage中读取数据
+    var getLocalStorage = function(key){
+        return window.localStorage && window.localStorage.getItem(key);
+    }
+
+    // 清除localStorage
+    var clearLocalStorage = function(key)
+    {
+        var ls = window.localStorage;
+        for(var k in ls)
+        {
+            if(key == k)
+            {
+                ls.removeItem(key);    
+            }
+            
+        }
+    }
+
+    // 通过AJAX请求读取js和css文件内容，使用队列控制js的执行顺序
+    var rawQ = [];
+    var monkeyLoader = {
+        checkExit : function(url)
+        {
+            var ls = getLocalStorage(url);
+            return ls;
+        },
+        loadInjection: function(url,onload,bOrder){
+            var iQ = rawQ.length;
+            if(bOrder){
+                var qScript = {key: null, response: null, onload: onload, done: false};
+                rawQ[iQ] = qScript;
+            }
+            //有localstorage 缓存
+            var ls = getLocalStorage(url);
+            if(ls !== null){
+                if(bOrder){
+                    rawQ[iQ].response = ls;
+                    rawQ[iQ].key = url;
+                    monkeyLoader.injectScripts();
+                }else{
+                    defineCode(url, ls)
+                    if(onload){
+                        onload();
+                    }
+                }
+            } else {
+                var xhrObj = monkeyLoader.getXHROject();
+                xhrObj.open('GET', url, true);
+                xhrObj.send(null);
+                xhrObj.onreadystatechange = function(){
+                    if(xhrObj.readyState == 4){
+                        if(xhrObj.status == 200){
+                            setLocalStorage(url, xhrObj.responseText);
+                            if(bOrder){
+                                rawQ[iQ].response = xhrObj.responseText;
+                                rawQ[iQ].key = url;
+                                monkeyLoader.injectScripts();
+                            }else{
+                                defineCode(url, xhrObj.responseText)
+                                if(onload){
+                                    onload();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+
+        injectScripts: function(){
+            var len = rawQ.length;
+            //按顺序执行队列中的脚本
+            for (var i = 0; i < len; i++) {
+                var qScript = rawQ[i];
+                //没有执行
+                if(!qScript.done){
+                    //没有加载完成
+                    if(!qScript.response){
+                        console.info("raw code lost or not load!");
+                        //停止，等待加载完成, 由于脚本是按顺序添加到队列的，因此这里保证了脚本的执行顺序
+                        break;
+                    }else{//已经加载完成了
+                        defineCode(qScript.key, qScript.response)
+                        if(qScript.onload){
+                            qScript.onload();
+                        }
+                        delete qScript.response;
+                        qScript.done = true;
+                    }
+                }
+            }
+        },
+
+        getXHROject: function(){
+            //创建XMLHttpRequest对象
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+                {
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp=new XMLHttpRequest();
+                } else {
+                    // code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                return xmlhttp;
+        }
+    };        
+
+
+    global.__yue_ls__ = monkeyLoader.loadInjection;    
+    
+    global.__yue_ls__.loader =  function(res_map,resourceList,async,version,prefix)
+    {        
+        var pkgList = [];
+        var async = async || false;        
+        var ls = window.localStorage;
+        var reg = new RegExp(prefix);
+        var resourceMap = res_map;
+
+        var last_resouce_map = getLocalStorage(prefix+'-last_resouce_map');
+        var now_resouce_map = JSON.stringify(resourceMap);
+
+        if(now_resouce_map !== last_resouce_map) 
+        {
+            // 版本不同，全部更新
+            for(var k in ls)
+            {
+                if(reg.test(k))
+                {
+                    clearLocalStorage(k);
+                }
+            }
+
+            clearLocalStorage(prefix+'-last_resouce_map');
+
+        }        
+
+        // 设置版本号
+        setLocalStorage(prefix+'-last_resouce_map',now_resouce_map);
+
+        for(var idx in resourceList)
+        {
+            var resourceItem = resourceList[idx];
+            
+            if(JSON.stringify(resourceMap['pkg']) != '{}')
+            {
+                if(resourceMap['res'][resourceItem]['pkg'])
+                {
+                    var pakItem = resourceMap['pkg'][resourceMap['res'][resourceItem]['pkg']]['uri'];
+                }
+                
+                pkgList[pakItem] =  1;                        
+            }
+            else
+            {
+                var pakItem = resourceMap['res'][resourceItem]['uri'];
+                pkgList[pakItem] = 1;
+            }                            
+        }            
+
+        for(var pkgIdx in pkgList)
+        {
+            // 检查是否存在                
+            if(!async || !monkeyLoader.checkExit(pkgIdx))
+            {                    
+                if(fileType(pkgIdx) === 'js')
+                {                        
+                    document.write('<script src="'+pkgIdx+'" type="text/javascript"></script>');
+                }
+                else if(fileType(pkgIdx) === 'css')
+                {
+                    load_css(pkgIdx);
+                }
+
+                pkgList[pkgIdx] = true;                    
+
+            }
+            else
+            {
+                global.__yue_ls__(pkgIdx,null,true);    
+            }
+            
+        }
+
+        setTimeout(function()
+        {
+            if(async)
+            {
+                for(var pkgIdx in pkgList)
+                {
+                   global.__yue_ls__(pkgIdx,null,true);            
+                }
+            }
+            
+        },1000);
+
+    };
+
+})(window);

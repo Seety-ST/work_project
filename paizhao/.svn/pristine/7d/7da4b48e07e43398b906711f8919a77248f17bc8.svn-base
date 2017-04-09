@@ -1,0 +1,4 @@
+.topic-page .item-wrap {
+  padding: 15px; }
+  .topic-page .item-wrap .no-content-tips {
+    padding: 50px 0px; }

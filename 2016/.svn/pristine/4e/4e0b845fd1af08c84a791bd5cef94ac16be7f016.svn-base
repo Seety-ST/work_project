@@ -1,0 +1,277 @@
+/*  
+Theme Name:poco ued theme
+Author URI:poco.cn
+Description: poco
+*/
+
+/** 清除内外边距 **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote, /* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form,
+fieldset,
+legend,
+button,
+input,
+textarea, /* form elements 表单元素 */
+th,
+td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border:medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body,
+button,
+input,
+select,
+textarea { font:12px/1.5  "SimSun", Tahoma, Arial, sans-serif}
+input,
+select,
+form img,
+button { vertical-align:middle; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-size: 100%; }
+em { font-style:normal; }
+/** 重置列表元素 **/
+ul,
+ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color:#0f0000; }
+a:hover { text-decoration: underline;}
+/** 重置图片元素 **/
+img { border:none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+textarea, input{resize:none}
+a, textarea, input, button{outline:none}
+.clear { clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.coz{ clear:both; overflow:hidden; zoom:1}
+/*** font ***/
+.word_break { white-space:normal; word-wrap:break-word; word-break:break-all; }
+.f14 { font-size:14px; }
+.fb { font-weight:bold; }
+.db{ display:block}
+.dn {display:none}
+.di{ display:inline}
+.tc{ text-align:center;}
+.vam{vertical-align:middle;}
+.lh18 { line-height:18px; }
+.lh20 { line-height:20px; }
+.lh22 { line-height:22px; }
+.lh24 { line-height:24px; }
+.lh26 { line-height:26px; }
+.lh28 { line-height:28px; }
+.lh30 { line-height:30px; }
+.font_wryh{font-family:'微软雅黑','黑体','宋体';}
+/** position **/
+.re { position:relative; z-index:1 }
+.fr { float:right; }
+.fl { float:left; }
+.frdi { float:right; display:inline }
+.fldi { float:left;display:inline }
+.pt5 { padding-top:5px; }
+.pt10 { padding-top:10px; }
+.pt15 { padding-top:15px; }
+.pt20 { padding-top:20px; }
+.pb5 { padding-bottom:5px}
+.pb10 { padding-bottom:10px}
+.pb15 { padding-bottom:15px}
+.pb20 { padding-bottom:20px}
+.pl5 { padding-left:5px; }
+.pl10 { padding-left:10px; }
+.pl15 { padding-left:15px; }
+.pl20 { padding-left:20px; }
+.pr5 { padding-right:5px; }
+.pr10 { padding-right:10px; }
+.pr15 { padding-right:15px; }
+.pr20 { padding-right:20px; }
+.mt5 { margin-top:5px; }
+.mt10 { margin-top:10px; }
+.mt15 { margin-top:15px; }
+.mt20 { margin-top:20px; }
+.mb5 { margin-bottom:5px}
+.mb10 { margin-bottom:10px}
+.mb15 { margin-bottom:15px}
+.mb20 { margin-bottom:20px}
+.ml5 { margin-left:5px; }
+.ml10 { margin-left:10px; }
+.ml15 { margin-left:15px; }
+.ml20 { margin-left:20px; }
+.mr5 { margin-right:5px; }
+.mr10 { margin-right:10px; }
+.mr15 { margin-right:15px; }
+.mr20 { margin-right:20px; }
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+/* ====================== 重置结束 ===================== */
+
+.w1000{margin: 0 auto;width: 1000px;}
+
+body{
+    color: #0f0000;
+}
+
+
+.header{
+    background: url(../images/ll-img-1.jpg?v=2) center top no-repeat;
+    height: 620px;
+}
+.header .logo-item{
+    padding-top: 55px;
+}
+.header .logo-item a{
+    background: url(../images/blank.png) repeat;
+    display: block;
+    width: 377px;
+    height: 55px;
+}
+
+
+.footer{
+    background: url(../images/footer-bg.png) center bottom no-repeat; 
+    width:100%;
+    height:54px; 
+}
+
+
+/* 首页 */
+.index-page{
+    background: url(../images/ll-img-2.jpg?v=1) center top no-repeat;
+    height: 430px;
+    padding-top: 36px;
+}
+.index-page .listItem{
+    background: url(../images/ll-img-3.png) center top no-repeat;
+    height: 27px;
+    padding-bottom: 40px;
+}
+.index-page .form-wrap{
+}
+.index-page .form-wrap .form-item{
+    width: 390px;
+    padding: 0 0 27px 293px;
+}
+.index-page .form-wrap h4.title{
+    width: 68px;
+    height: 27px;
+    line-height: 27px;
+    float: left;
+    font-weight: normal;
+}
+.index-page .form-wrap .input-txt{
+    float: left;
+    border: 1px solid #c2c1bf;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    width: 309px;
+}
+.index-page .form-wrap .input-txt.input-txt-1{
+    width: 182px;
+}
+.index-page .form-wrap .name-item{
+    float: left;
+    width: 262px;
+}
+.index-page .form-wrap .sex-item{
+    float: left;
+    width: 128px;
+}
+.index-page .form-wrap .sex-item label{
+    float: left;
+    padding-left: 17px;
+    width: 47px;
+    height: 27px;
+    line-height: 27px;
+}
+.index-page .form-wrap .sex-item label input{
+    margin-right: 5px;
+}
+.index-page .form-wrap .select-txt{
+    float: left;
+    width: 152px;
+    border: 1px solid #c2c1bf;
+    height: 27px;
+}
+.index-page .form-wrap .tips{
+    padding-left: 305px;
+    line-height: 26px;
+}
+.index-page .form-wrap .btn-item{
+    padding-top: 23px;
+}
+.index-page .form-wrap .btn-item .tjxx-btn{
+    display: block;
+    width: 199px;
+    height: 36px;
+    background: url(../images/ll-img-4.png) no-repeat;
+    margin: 0 auto;
+}
+
+/* 弹出层 */
+.fade { 
+    display:block; 
+    background: #000; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    filter:alpha(opacity:50);
+    opacity: 0.5; 
+    z-index: 9999; 
+    zoom:1; 
+    clear:both; 
+    _height:1000px; 
+    _position:absolute; 
+}
+
+.pop-tips{ 
+    background: url(../images/ll-img-5.png) no-repeat; 
+    width:504px; 
+    height:248px; 
+    z-index:999999; 
+    position:fixed; 
+    _position: absolute; 
+    top:50%; 
+    left:50%; 
+    margin-top:-124px; 
+    margin-left:-252px;
+    _top:expression(eval(document.compatMode &&
+         document.compatMode=='CSS1Compat') ?
+         documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+         document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+    _margin-top:0
+}
+
+.pop-tips .close{
+    display: block;
+    background: url(../images/ll-img-6.png) no-repeat;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+}

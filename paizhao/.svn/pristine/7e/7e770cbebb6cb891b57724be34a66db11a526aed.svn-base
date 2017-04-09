@@ -1,0 +1,36 @@
+.ui-button {
+  cursor: pointer;
+}
+
+.ui-button .ui-button-content {
+  padding: 0 0.2rem;
+}
+
+.ui-button-100per {
+  width: 100%;
+}
+
+.ui-button-block {
+  display: block;
+}
+
+.ui-button-border-24c {
+  background-color: #fff;
+  color: #24c7c7;
+  border: 0.01rem solid #24c7c7;
+}
+
+.ui-button-bg-24c {
+  background-color: #24c7c7;
+  color: #fff;
+}
+
+.ui-button-size-h45 {
+  height: 0.45rem;
+  line-height: 0.45rem;
+}
+
+.ui-button-size-h50 {
+  height: 0.5rem;
+  line-height: 0.5rem;
+}

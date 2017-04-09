@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{%$wap_global_head%}
+        <link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/mine/photos.4190c5f.css">
+	
+    
+</head>
+	<body class="cor-bg-fff" >
+		<div  id="photos-page" >
+
+		</div>
+
+	
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/modules/mine/photos/photos.fa039b6.js"></script>
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/modules/mine/photos/index.762d439.js"></script>
+</body>
+
+</html>
+{%$wap_global_footer%}
+<script>
+ 	(function()
+	{
+		var Photos_Vue = require('wap-kids:mine/photos/index');
+
+		var order_sn = '{%$order_sn%}';
+		var p_vue = Photos_Vue.init({order_sn:order_sn});
+		p_vue.template = Photos_Vue.template;
+
+		new Vue(p_vue);
+	 })();
+</script>
+
+{%$wap_global_tj%}

@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>邀请好友</title>
+    <link href="css/jane-point.css" type="text/css" rel="stylesheet" />
+    <body class="bg-f0f0f0">
+        <section class="invite-page">
+            <div class="pager-top-item"></div>
+            <section class="con-wrap">
+                <div class="invite-num-item">
+                    <div class="listItem">您的邀请码</div>
+                    <div class="num">46849724</div>
+                </div>
+                <div class="btn-wrap">
+                    <a href="#" class="btn share-btn notclick-btn">
+                        <i class="icon share-icon"></i>
+                        <span class="txt">邀请好友，获得100积分</span>
+                    </a>
+                    <a href="#" class="btn text-btn notclick-btn">
+                        <i class="icon text-icon"></i>
+                        <span class="txt">我要填写邀请码</span>
+                    </a>
+                </div>
+                <div class="info-item">
+                    <div class="listItem clearfix">
+                        <h3 class="title">邀请码使用说明</h3>
+                        <i class="icon down-icon"></i>
+                    </div>
+                    <ol class="list">
+                        <li>积分满90分，才能使用邀请好友功能。</li>
+                        <li>注册天数满三天，才能使用验证邀请功能。</li>
+                        <li>将您的邀请码分享给好友，对方在注册后，成功验证您的邀请码，双方将各获得100个积分奖励。</li>
+                        <li>每个新注册的简拼用户在简拼APP内最多可验证一个邀请码。</li>
+                    </ol>
+                </div>
+            </section>
+            <div class="pager-bottom-item"></div>
+        </section>
+        <!-- 分享弹出层 -->
+        <div class="fade"></div>
+        <div class="share-pop">
+            <div class="list clearfix">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="icon weixin-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon friend-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon weibo-icon"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon qq-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-warp">
+                <a href="#" class="btn cancel-btn">取消</a>
+            </div>
+        </div>
+        <!-- 分享弹出层 end -->
+    </body>
+</html>

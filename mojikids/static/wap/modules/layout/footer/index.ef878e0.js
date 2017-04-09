@@ -1,0 +1,1 @@
+define("wap-kids:layout/footer/index",function(e,t,o){"use strict";function u(e){return e&&e.__esModule?e:{"default":e}}var f=e("wap-kids:layout/footer/footer"),r=u(f);o.exports=r.default});

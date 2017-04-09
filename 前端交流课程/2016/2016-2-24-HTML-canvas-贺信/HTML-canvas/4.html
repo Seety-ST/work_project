@@ -1,0 +1,77 @@
+<html>  
+<meta http-equiv="X-UA-Compatible" content="chrome=1">  
+<head>  
+<script>  
+        window.onload = function() {  
+            draw();  
+            var saveButton = document.getElementById("saveImageBtn");  
+            bindButtonEvent(saveButton, "click", saveImageInfo);  
+            var dlButton = document.getElementById("downloadImageBtn");  
+            bindButtonEvent(dlButton, "click", saveAsLocalImage);  
+        };  
+		
+            function draw(){  
+                var canvas = document.getElementById("thecanvas");  
+                var ctx = canvas.getContext("2d");  
+				
+				ctx.globalAlpha=0.2;
+                ctx.fillStyle = "rgba(125, 46, 138, 0.5)";  
+				//设置叠加顺序
+				ctx.globalCompositeOperation="source-over";
+                ctx.fillRect(25,25,100,100);
+				
+                ctx.fillStyle = "#0000ff";  
+                ctx.fillRect(58, 74, 125, 100);  
+				
+                ctx.fillStyle = "red"; 
+                ctx.fillText("Hello world", 50, 50);  
+				
+				
+				// 创建渐变
+				var gradient=ctx.createLinearGradient(0,0,200,0);
+				gradient.addColorStop("0","black");
+				gradient.addColorStop("0.5","blue");
+				gradient.addColorStop("1.0","red");
+				// 用渐变填色
+				ctx.fillStyle=gradient;
+				//设置叠加顺序
+				ctx.globalCompositeOperation="destination-over";
+				ctx.fillRect(0,0,200,200);
+
+            }  
+              
+            function bindButtonEvent(element, type, handler)  
+            {  
+                   if(element.addEventListener) {  
+                      element.addEventListener(type, handler, false);  
+                   } else {  
+                      element.attachEvent('on'+type, handler);  
+                   }  
+            }  
+              
+            function saveImageInfo ()   
+            {  
+                var mycanvas = document.getElementById("thecanvas");  
+                var image    = mycanvas.toDataURL("image/png");
+				
+                var w=window.open('about:blank','image from canvas');  
+                w.document.write("<img src='"+image+"' alt='from canvas'/>");  
+            }  
+  
+            function saveAsLocalImage () {   
+                var myCanvas = document.getElementById("thecanvas");  
+                var image = myCanvas.toDataURL("image/png");  
+				
+				console.log(image);
+				window.location.href=image;
+            }  
+        </script>  
+</head>  
+<body bgcolor="#E6E6FA">  
+    <div>  
+        <canvas width=200 height=200 id="thecanvas"></canvas>  
+        <button id="saveImageBtn">Save Image</button>  
+        <button id="downloadImageBtn">Download Image</button>  
+    </div>  
+</body>  
+</html>  

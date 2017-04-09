@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>VolvoV40V40cc</title>
+	<link href="css/swiper.min.css" type="text/css" rel="stylesheet" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body>
+		<section class="book-page">
+			<hgroup class="mod-btn-wrap">
+				<h2 class="back-btn">
+					<a href="#" class="icon-area">
+						<i class="icon back-icon"></i>
+					</a>
+				</h2>
+				<h1 class="logo">
+					<a href="#" class="icon-area">
+						<i class="icon logo-icon"></i>
+					</a>
+				</h1>
+			</hgroup>
+			<div class="con-item">
+				<div class="listItem"></div>
+				<!-- Swiper -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img data-src="images_8m/light-img/1.jpg" class="swiper-lazy">
+							</div>
+							<div class="text-item">
+								<dl>
+									<dt>亮与暗的极致，让设计迸发创意</dt>
+									<dd>
+										沃尔沃V40&amp;V40 Cross Country 越界车，来自极光的国度，瑞典。家族式雷神之锤徽标设计，源于黑暗中迸发的设计灵感，过目，已难忘。每一寸车身线条皆来自于自然的设计初衷，斯堪的纳维亚美学精髓，简约中透露着力量与坚定。
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img data-src="images_8m/light-img/2.jpg" class="swiper-lazy">
+							</div>
+							<div class="text-item">
+								<dl>
+									<dt>攻守兼备的动力新科技</dt>
+									<dd>
+										“减小引擎优化油耗，同时加多一点智能技术，带给你满满动力。”沃尔沃V40全系搭载Drive-E E驱智能科技，V40搭载T4涡轮增压发动机，搭载手自一体6速手自一体变速箱，输出190匹强劲马力和300牛&bull;米峰值扭矩， 百公里加速6.9秒，综合工况油耗低至5.6升， 更高性能更低能耗，伴您本色前行。
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img data-src="images_8m/light-img/3.jpg" class="swiper-lazy">
+							</div>
+							<div class="text-item">
+								<dl>
+									<dt>全路况越界动力组合</dt>
+									<dd>
+										沃尔沃V40 Cross Country 越界车，搭载Drive-E 2.0L T5涡轮增压发动机+Geartronic手自一体8速变速箱， 瞬间释放245匹峰值马力和350牛&bull;米充沛能量； 更匹配AWD全时四驱系统，按需分配动力， 更让征服全地形成为可能。
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img data-src="images_8m/light-img/6.jpg" class="swiper-lazy">
+							</div>
+							<div class="text-item">
+								<dl>
+									<dt>方位智能安全，你忠实的守护者</dt>
+									<dd>
+										全新V40&amp;V40 Cross Country 越界车均搭载多方位新安全智控系统，包含ACC自适应巡航、city safety城市安全系统、盲点侦测等诸多极为领先的安全创新，真正做到将主动性防护、辅助性防护和预见性防护三位合一。不仅支持日常驾驭，更守护乘客乃至路上行人安全，为每次行车提供充分的安全保障。
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+						</div>	
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img data-src="images_8m/light-img/4.jpg" class="swiper-lazy">
+							</div>
+							<div class="text-item">
+								<dl>
+									<dt>智能人性科技，由你专享</dt>
+									<dd>
+										全新V40&amp;V40 Cross Country 越界车搭载SENSUS智能车载互联系统，创新车联网与技术，将所有安装在云端的功能，无论是娱乐咨询，天气预报，抑或是导航路况，都能实时更新，更有全语音操控系统，实现人机对话。 
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img data-src="images_8m/light-img/5.jpg" class="swiper-lazy">
+							</div>
+							<div class="text-item">
+								<dl>
+									<dt>沃尔沃在乎你的每一口呼吸</dt>
+									<dd>
+										CZIS主动式座舱清洁系统和IAQS车内空气质量控制系统，能自主洁净车内空气，阻隔有害气体侵入，内饰及皮革均经过过敏源和有害物质测试，车内所有金属皆符合珠宝等级贵金属镍的释放标准，让每位V40&amp;V40 Cross Country 越界车车主都感到舒适无负担 。
+									</dd>
+								</dl>
+							</div>
+							<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+						</div>				
+					</div>
+					<!-- Add Pagination -->
+					<div class="swiper-pagination swiper-pagination-white"></div>
+				</div>
+				<section class="btn-wrap">
+					<a href="#" class="btn book-btn"></a>
+				</section>
+			</div>
+		</section>
+		<script src="js/swiper.min.js"></script>
+		<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			// Disable preloading of all images
+			preloadImages: false,
+			// Enable lazy loading
+			lazyLoading: true
+		});
+		</script>
+	</body>
+</html>

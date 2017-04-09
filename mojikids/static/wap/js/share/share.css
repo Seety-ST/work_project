@@ -1,0 +1,63 @@
+@charset 'utf-8';
+
+.share-box {
+	height: 100px;
+}
+.share-fade {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, .7);
+	-webkit-box-pack: center;
+	box-pack: center;
+	display: -webkit-box;
+	display: box;
+	-webkit-box-align: center;
+	box-align: center;
+}
+.share-fade .sharebox {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	width: 90%;
+	background: url('./share-640x336.png') no-repeat center/contain;
+	padding-bottom: 50%;
+}
+.sharebox-rests {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	z-index: 1000;
+	background-color: #e6e6e6;
+	padding-top: 5%;
+	text-align: center;
+}
+.sharebox-rests .share-content {
+}
+.sharebox-rests .share-close {
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 2% 0;
+	margin-top: 5%;
+	color: #000;
+}
+.sharebox-rests .share-content .yueyue_share_icon {
+	width: 10%;
+	padding-bottom: 10%;
+	display: inline-block;
+	margin-left: 5%;
+}
+.sharebox-rests .share-content .yueyue_share_icon:nth-child(odd) {
+	margin-left: 0;
+}
+.sharebox-rests .share-content .sina {
+	background: url('./weibo.png') no-repeat center/cover;
+}
+.sharebox-rests .share-content .qqzone {
+	background: url('./qqzone.png') no-repeat center/cover;
+}

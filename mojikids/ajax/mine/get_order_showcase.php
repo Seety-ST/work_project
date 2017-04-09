@@ -1,0 +1,38 @@
+<?php
+/**
+ * 我的照片入口
+ * @author hudw
+ */
+
+include_once('../../fe_include/common.inc.php');
+
+$order_sn = trim($_INPUT['order_sn']);
+$user_id  = $yue_login_id;
+
+// 获取数据
+$ret = get_api_result('trade/order_showcase.php',array(
+    'user_id' => $user_id,
+    'order_sn'=> $order_sn,
+    'limit'   => '0,99'
+));
+
+if($ret['data']['result'] < 1)
+{
+    mojikids_mobile_output($ret,false);
+    die();
+}
+
+
+if(!$ret['data']['list'])
+{
+    $ret['data']['list'] = array();
+}
+
+foreach($ret['data']['list'] as $key => $val)
+{
+    $ret['data']['list'][$key]['selected'] = false;
+    $ret['data']['list'][$key]['style'] = '';
+}
+
+mojikids_mobile_output($ret,false);
+?>

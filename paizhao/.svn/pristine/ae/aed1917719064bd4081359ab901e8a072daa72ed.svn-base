@@ -1,0 +1,22 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+error_reporting(-1);
+header("Content-type: text/html; charset=utf-8");
+include_once('common.inc.php');
+$consult_button_class = POCO::singleton('pai_paizhao_consult_class');
+$data = array(
+    'name'=>'11',
+    'goods_id'=>1212,
+    'user_id'=>12,
+    'mobile'=>13750509651,
+    'source'=>'PC',
+    'consult_type'=>'goods',
+);
+$result = $consult_button_class->add_consult($data);
+var_dump($result);

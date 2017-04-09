@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>{%$page_title%}</title>
+    <meta name="keywords" content="{%$meta_keywords%}">
+    <meta name="description" content="{%$meta_description%}">
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/search/search-page.scss" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- 头部内容 -->
+{%$pc_global_top_bar%}
+<!-- 页面内容 -->
+<div class="content-wrap w1200">
+    <div class="sort-nav mt20 mb20 clearfix">
+
+        <ul class="sort-nav-list f14 fl">
+            {%foreach $types_photographers_arr as $key => $value%}
+            <a href="{%$value.link%}">
+                <li class="nav-list-li nav-list-li-width-auto {%$value.cur_class%}"><span>{%$value.name%}</span></li>
+            </a>
+            {%/foreach%}
+        </ul>
+
+        <ul class="sort-nav-list f14 fr">
+            {%foreach $sort_photographers_arr as $key => $value%}
+            {%if $value.key neq "location"%}
+            <a href="{%$value.link%}">
+            {%/if%}
+                <li class="nav-list-li {%$value.cur_class%} {%$value.lid_class%} {%if $value.key eq 'location'%}nav-list-li-width-auto{%/if%} " {%if $value.key eq "location"%}data-role="location-li"{%/if%}><span>{%$value.name%}</span>{%if $value.key eq "location"%}<i class="{%$value.sort_arrow_class%}  ml5 mr5 dib"></i>{%elseif $value.key eq "1"%}<i class="icon {%$value.sort_arrow_class%}"></i>{%/if%}
+                    {%if $value.key eq "location"%}
+                    <div class="location-li-list location-li-list-per" data-role="location-li-list">
+                        <i class="location-close-icon" data-role="location-list-close"></i>
+                        <div class="location-select-pop">
+                            <div class="location-select-pop-item">
+                                <div class="item-wrap">
+                                    <ul class="location-tab-list clearfix">
+                                        <li class="li-cur" data-role="province-data" common-data-role="common-data">广东<i class="arrow-icon"></i></li>
+                                        <li data-role="city-data" common-data-role="common-data">广州市<i class="arrow-icon" ></i></li>
+                                        {%if $can_use_district%}
+                                        <li data-role="district-data" common-data-role="common-data">请选择<i class="arrow-icon" ></i></li>
+                                        {%else%}
+                                        <li data-role="district-data" common-data-role="common-data" class="dn">请选择<i class="arrow-icon" ></i></li>
+                                        {%/if%}
+                                    </ul>
+                                    <div class="location-tab-detail-list-wrap" data-role="province-data-list" common-data-role="common-data-list">
+                                    </div>
+                                    <div class="location-tab-detail-list-wrap" data-role="city-data-list" common-data-role="common-data-list">
+                                    </div>
+                                    <div class="location-tab-detail-list-wrap" data-role="district-data-list" common-data-role="common-data-list">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%/if%}
+                </li>
+            {%if $value.key neq "location"%}
+            </a>
+            {%/if%}
+            {%/foreach%}
+        </ul>
+
+    </div>
+    {%if $keyword%}
+    <div class="search-kw mb20">
+            {%if $list_data_count%}
+            <p class="search-kw-nav">搜索关键字<label class="keywords">“{%$keyword%}”</label>摄影师</p>
+            {%/if%}
+    </div>
+    {%/if%}
+    <div class="list-wrap" data-role="list-wrap">
+        {%$list_data_html%}
+
+        {%if $list_data_count%}
+        {%else%}
+        <div class="no-content-tips-mod-1">
+            <div class="img">
+                <img src="../static/pc/image/ui/no-content-icon-59x59.png">
+            </div>
+            <div class="txt color-666 f14 pt10">
+                {%if $keyword%}
+                抱歉！没有找到与“ <span class="color-24c">{%$keyword%} </span>”相关的摄影师 请换一个关键词再试试吧。
+                {%else%}
+                抱歉，暂时没有相关的数据
+                {%/if%}
+            </div>
+        </div>
+        {%/if%}
+    </div>
+    {%if $page_select%}
+    <div class="page-con">
+        <div class="page-mod-1 f14 tc mb10 dib">{%$page_select%}</div>
+        <div class="page-go-module dib mb10">
+            <span class="dib mr5">，到第</span>
+            <input class="page-go-input dib mr5" data-role="page-go-input"/>
+            <span class="mr5">页</span>
+            <span class="page-go-btn dib mr5" data-role="page-go-btn">GO</span>
+        </div>
+    </div>
+    {%/if%}
+
+</div>
+<!-- 底部内容 -->
+{%$pc_global_footer_bar%}
+
+</body>
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+
+<script>
+
+    $(function()
+    {
+
+        // 图片后加载处理
+        var lazyload = require('../../modules/global/lazyload/lazyload');
+        var location_sel = require('../../modules/global/location_sel/location_sel');
+        require('../../modules/global/layer/layer');
+        var lazyload_list_obj = new lazyload({
+            contain: $('[data-role="list-wrap"]'), // 后加载的父容器
+            img_center: {
+                is_open : false,
+                width:'285',
+                height:'114'
+            },
+            flag : 'data-src'
+        });
+
+        //地区选择
+        var location_arr_json = {%$location_arr_json%};
+        var can_use_district = "{%$can_use_district%}";
+
+        var province_id = "{%$province_id%}";
+        var city_id = "{%$city_id%}";
+        var district_id = "{%$district_id%}";
+        //构造条件对象
+        construct_condition = function(){
+            var local_link_url = "./index.php?tp=per&";
+            var local_ev_photographer_str = "{%$ev_photographer_str%}";
+            var local_sort_str = "{%$sort_str%}";
+            var local_order_str = "{%$order_str%}";
+            var local_keyword_str = "{%$keyword_str%}";
+
+            var condition_list_obj = {
+                local_link_url:local_link_url,
+                local_ev_type_str:"",
+                local_ev_style_str:"",
+                local_ev_photographer_str:local_ev_photographer_str,
+                local_sort_str:local_sort_str,
+                local_order_str:local_order_str,
+                local_keyword_str:local_keyword_str
+            }
+            return condition_list_obj;
+        }
+        var condition_list = construct_condition();
+        //console.log(location_arr_json.result_data);
+        //var parse_location_arr_json = JSON.parse(location_arr_json);
+
+        var location_sel_obj = new location_sel({
+            province_id:province_id,
+            city_id:city_id,
+            district_id:district_id,
+            condition_list:condition_list,
+            can_use_district:can_use_district,
+            location_json_obj:location_arr_json.result_data
+        });
+
+        //跳页面处理
+        $("[data-role='page-go-btn']").on("click",function(){
+            var page_go_input = $("[data-role='page-go-input']").val();
+            var lid_str = "{%$lid_str%}";
+            //console.log(layer);
+            //layer.msg('请输入正确页码');
+
+            if(!isNaN(page_go_input) && page_go_input>=1)
+            {
+                var jump_link = "./index.php?tp=per&p="+parseInt(page_go_input)+"&"+condition_list["local_ev_photographer_str"]+condition_list["local_ev_type_str"]+condition_list["local_ev_style_str"]+"&"+condition_list["local_sort_str"]+condition_list["local_order_str"]+lid_str+condition_list["local_keyword_str"]+"s=1"
+                window.location.href=jump_link;
+            }
+            else
+            {
+                layer.msg('请输入正确页码');
+            }
+
+        });
+
+
+
+    });
+</script>
+</html>

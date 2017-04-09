@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>亲子相机</title>
+	<link href="css/wap-ui.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="login-page">
+		<section class="mod-from-warp">
+			<div class="input-warp country-input-warp">
+				<label class="input-label country-label">国家/地区</label>
+				<input type="text" class="iput-item" value="中国" />
+			</div>
+			<div class="input-warp phone-input-warp">
+				<label class="input-label phone-icon"></label>
+				<input type="text" class="area-code" value="+86" />
+				<input type="text" class="iput-item" placeholder="输入手机号码" />
+			</div>
+			<div class="input-warp yzm-input-warp">
+				<label class="input-label yzm-icon"></label>
+				<input type="text" class="iput-item" placeholder="输入验证码" />
+				<div class="btn-tel-yzm" style="display:none">获取验证码</div>
+				<!-- 加上stop 进行倒计时 -->
+				<div class="btn-tel-yzm stop" style="display: ">46s重新获取</div>
+			</div>
+			<div class="btn-warp">
+				<span class="btn-item next-btn">
+					<em class="btn"></em>
+				</span>
+			</div>
+			<div class="mod-tips-item">
+				<p>注册即表示同意<span class="point">《亲子相机用户协议》</span></p>
+			</div>
+		</section>
+		<section class="mod-share-warp">
+			<h4 class="listItem">
+				<b class="line"></b>
+				<span>快速登录</span>
+				<b class="line"></b>
+			</h4>
+			<ul class="list">
+				<li>
+					<span class="area-icon">
+						<i class="icon weixin-icon"></i>
+					</span>
+				</li>
+				<li>
+					<span class="area-icon">
+						<i class="icon weibo-icon"></i>
+					</span>
+				</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>

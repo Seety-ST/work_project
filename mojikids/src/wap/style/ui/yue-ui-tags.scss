@@ -1,0 +1,85 @@
+@import "../../sass/compass";
+
+
+.ui-tags{
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    &.ui-tags-color-ff6a6e{
+        border-color: #ff6a6e;
+        color:#ff6a6e;
+    }
+    &.ui-tags-color-f8b24d{
+        border-color: #f8b24d;
+        color:#ffac35;
+    }
+    &.ui-tags-color-eee{
+        border-color: #eeeeee;
+        color:#555;
+    }
+    &.ui-tags-color-ccc{
+        border-color: #ccc;
+        color:#333;
+    }
+    &.ui-tags-color-ddd{
+        border-color: #ddd;
+        color:#666;
+    }
+    &.ui-tags-bg-fce{
+        background-color: #fce9ea;
+    }
+    &.ui-tags-bg-fdf{
+        background-color: #fdf6e8;
+    }
+    &.ui-tags-bg-eee{
+        background-color: #eee;
+    }
+    &.ui-tags-bg-fff{
+        background-color: #fff;
+    }
+    &.ui-tags-height-15{
+        height: 15px;
+        line-height: 15px;
+        border-radius: 3px;
+        padding:0px 4px;
+        font-size: 10px;
+    }
+    &.ui-tags-height-18{
+        height: 18px;
+        line-height: 18px;
+        border-radius: 18px;
+        padding:0px 10px;
+        font-size: 11px;
+    }
+    &.ui-tags-height-27{
+        height: 27px;
+        line-height: 27px;
+        border-radius: 27px;
+        padding:0px 15px;
+        font-size: 14px;
+    }
+    &.ui-tags-height-25{
+        height: 25px;
+        line-height: 25px;
+        border-radius: 25px;
+        padding:0px 15px;
+        font-size: 13px;
+    }
+    &.ui-tags-bg-eee-active{
+        &:active{
+            background-color: #aaa;
+        }
+    }
+    &.ui-tags-bg-eee-active{
+        &:active{
+            background-color: #aaa;
+        }
+    }
+    &.ui-tags-bg-fff-active{
+        &:active{
+            background-color: #aaa;
+        }
+    }
+
+
+}

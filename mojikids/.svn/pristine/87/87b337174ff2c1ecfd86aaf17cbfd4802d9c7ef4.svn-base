@@ -1,0 +1,45 @@
+// ui 颜色配置
+// 汤圆
+// 2015-7-9
+
+
+.main-color{color:#ffc430;}
+
+.color-555{color:#555;}
+.color-2c2{color:#2c2c2c;}
+.color-aaa{color:#aaa;}
+.color-111{color:#111;}
+.color-ff6{color:#ff6a6e;}
+.color-ffb{color:#ffb4b6;}
+.color-ddd{color:#ddd;}
+.color-000{color:#000;}
+.color-333{color:#333;}
+.color-666{color:#666;}
+.color-999{color:#999;}
+// .color-fe9{color:#fe9220;}
+.color-fff{color:#fff;}
+.color-fe9{color:#fe9920;}
+.color-bbb{color:#bbb;}
+.color-777{color:#777;}
+.color-ffa{color:#ffac35;}
+.color-37a{color:#37aeec;}
+.color-6dc{color:#6dc91c;}
+.color-ff5{color:#ff5959;}
+.color-ccc{color:#ccc;}
+.color-ff9{color:#ff9600;}
+
+
+// 背景色
+.main-bg{background-color: #ffc430;}
+.main_bg{background-color: #ffc430;}
+
+.main-border-color{
+    border-color: #ffc430 !important;
+}
+
+
+
+
+
+
+

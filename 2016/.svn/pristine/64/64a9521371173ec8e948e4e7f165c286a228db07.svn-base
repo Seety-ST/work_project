@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<title>兰蔻H5</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+<link rel="stylesheet" href="css/wap.css">
+
+</head>
+<body class="bodybox">
+
+<div class="wrap lancom-page" id="wrap">
+
+	<div class="item item-1">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/1/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item">
+						<img src="images/img-item/1/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/1/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/1/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item restore-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="mod-animation restore-animation" style="display:none">
+				<span class="path-top"></span>
+				<span class="path-btm"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-2">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/2/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item" >
+						<img src="images/img-item/2/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/2/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/2/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item largen-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键大眼 -->
+			<div class="mod-animation largen-animation" style="display:none"></div>
+			<!-- 一键大眼 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-3">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/3/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item">
+						<img src="images/img-item/3/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/3/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/3/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item restore-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="mod-animation restore-animation" style="display:none">
+				<span class="path-top"></span>
+				<span class="path-btm"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-4">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/4/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item">
+						<img src="images/img-item/4/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/4/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/4/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item largen-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键大眼 -->
+			<div class="mod-animation largen-animation" style="display:none"></div>
+			<!-- 一键大眼 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-5">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/5/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item">
+						<img src="images/img-item/5/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/5/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/5/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item restore-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="mod-animation restore-animation" style="display:none">
+				<span class="path-top"></span>
+				<span class="path-btm"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-6">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/6/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item" >
+						<img src="images/img-item/6/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/6/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/6/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item restore-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="mod-animation restore-animation" style="display:none">
+				<span class="path-top"></span>
+				<span class="path-btm"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-7">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/7/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item">
+						<img src="images/img-item/7/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/7/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/7/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item largen-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键大眼 -->
+			<div class="mod-animation largen-animation" style="display:none"></div>
+			<!-- 一键大眼 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+
+	<div class="item item-8">
+		<div class="box">
+			<div class="show-warp">
+				<div class="img-part">
+					<img src="images/img-item/8/top.jpg" />
+				</div>
+				<!-- 变化区域 -->
+				<div class="img-change">
+					<span class="img-item">
+						<img src="images/img-item/8/mid-normal.jpg" />
+					</span>
+					<span class="img-item cur">
+						<img src="images/img-item/8/mid-change.jpg" />
+					</span>
+				</div>
+				<!-- 变化区域 end -->
+				<div class="img-part">
+					<img src="images/img-item/8/btm.jpg" />
+				</div>
+			</div>
+			<div class="btn-item restore-item">
+				<span class="area-btn"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="mod-animation restore-animation" style="display:none">
+				<span class="path-top"></span>
+				<span class="path-btm"></span>
+			</div>
+			<!-- 一键还原 -->
+			<div class="arrow"></div>
+		</div>
+	</div>
+	<div class="item product-page">
+		<div class="bg-item"></div>
+		<div class="listItem"></div>
+		<div class="tips-item"></div>
+		<i class="point-icon"></i>
+		<!-- product link -->
+		<a href="#" class="product-link"></a>
+		<!-- product link end -->
+		<div class="btn-wrap clearfix">
+			<div class="mod-btn-item buy-btn">
+				<span class="btn-area"></span>
+			</div>
+			<div class="mod-btn-item share-btn">
+				<span class="btn-area"></span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 弹出层 -->
+<div class="fade" style="display:none"></div>
+<div class="share-pop" style="display:none">
+	<div class="star-item">
+		<i class="icon"></i>
+		<i class="icon"></i>
+	</div>
+</div>
+<!-- 弹出层 end -->
+<!-- 加载提示 _S -->
+<div class="mod_loading" id="loading">
+	<div class="content">
+		<div class="progress">
+			<span id="progress_bg" style="width:0;"></span><i id="progress_icon" class="load-icon"></i>
+		</div>
+		<p id="progress_num">0%</p>
+	</div>
+</div>
+<!-- 加载提示 _E -->
+<!-- 音效 -->
+<div class="audio-item">
+	<audio id="audio-restore" src="images/change-normal.mp3">
+	<audio id="audio-big" src="images/change-big.mp3">
+</div>
+<!-- 音效 end -->
+
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/iSlider.js"></script> 
+
+<script>
+	var myslider=new iSlider({
+		wrap:'#wrap',
+		item:'.item',
+		onslide:function (index) {
+		            console.info(index);
+		            var audiorestore = $("#audio-restore")[0];
+		            var audiobig = $("#audio-big")[0];
+		            $(".restore-item").on("click",function(){
+		            	audiorestore.play();	//播放
+		            	$(".play .mod-animation").show().delay(1000).hide(0);	
+		            	$(".play .img-change .cur").delay(600).fadeIn("slow");
+		            	$(".play .btn-item").hide();
+		            	$(".play .arrow").show();		
+		            });
+		            $(".largen-item").on("click",function(){
+		            	audiobig.play();	//播放
+		            	$(".play .mod-animation").show().delay(1000).hide(0);	
+		            	$(".play .img-change .cur").delay(600).fadeIn("slow");
+		            	$(".play .btn-item").hide();
+		            	$(".play .arrow").show();				
+		            });
+		            $(".share-btn").on("click",function(){
+		            	$(".fade").show();
+		            	$(".share-pop").show();				
+		            });
+		},
+		loadingImgs:[
+			'images/img-item/1/top.jpg',
+			'images/img-item/1/mid-normal.jpg',
+			'images/img-item/1/mid-change.jpg',
+			'images/img-item/1/btm.jpg',
+			'images/img-item/2/top.jpg',
+			'images/img-item/2/mid-normal.jpg',
+			'images/img-item/2/mid-change.jpg',
+			'images/img-item/2/btm.jpg',
+			'images/img-item/3/top.jpg',
+			'images/img-item/3/mid-normal.jpg',
+			'images/img-item/3/mid-change.jpg',
+			'images/img-item/3/btm.jpg',
+			'images/img-item/4/top.jpg',
+			'images/img-item/4/mid-normal.jpg',
+			'images/img-item/4/mid-change.jpg',
+			'images/img-item/4/btm.jpg',
+			'images/img-item/5/top.jpg',
+			'images/img-item/5/mid-normal.jpg',
+			'images/img-item/5/mid-change.jpg',
+			'images/img-item/5/btm.jpg',
+			'images/img-item/6/top.jpg',
+			'images/img-item/6/mid-normal.jpg',
+			'images/img-item/6/mid-change.jpg',
+			'images/img-item/6/btm.jpg',
+			'images/img-item/7/top.jpg',
+			'images/img-item/7/mid-normal.jpg',
+			'images/img-item/7/mid-change.jpg',
+			'images/img-item/7/btm.jpg',
+			'images/img-item/8/top.jpg',
+			'images/img-item/8/mid-normal.jpg',
+			'images/img-item/8/mid-change.jpg',
+			'images/img-item/8/btm.jpg'
+		],
+		onloading:function (complete,total) {
+		    this.$('#progress_bg').style.width=complete/total*100+'%';
+		    this.$('#progress_icon').style.left=complete/total*100+'%';
+		    this.$('#progress_num').innerHTML=parseInt(complete/total*100)+'%';
+		    if (complete==total) {
+		        this.$('#loading').style.display="none"
+		    }
+		}
+	});
+</script>
+</body>
+</html>

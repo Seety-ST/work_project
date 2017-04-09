@@ -1,0 +1,177 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+a img{
+	width: 100%;
+}
+.banner_1{
+	width: 300px;
+	height:100px;
+	background-color: #eeeeee;
+	position: relative;
+}
+.banner_1 .bd{
+	width: 300px;
+	height: 100px;
+	overflow: hidden;
+}
+.banner_1 a{
+	display: block;
+	width: 300px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+.banner_1 .btn_prev,.banner_1 .btn_next{
+	position: absolute;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+	background: #000000;
+	cursor: pointer;
+	color: #ffffff;
+	top: 50%;
+	margin-top: -15px;
+}
+.banner_1 .btn_prev{
+	left: 0px;
+}
+.banner_1 .btn_next{
+	right: 0px;
+}
+.banner_2{
+	width: 300px;
+	height:100px;
+	background-color: #eeeeee;
+	position: relative;
+	margin-top: 50px;
+}
+.banner_2 .bd{
+	width: 300px;
+	height: 100px;
+	overflow: hidden;
+	background-color: #000000;
+}
+.banner_2 a{
+	display: block;
+	width: 300px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+.banner_2 .btn_prev,.banner_2 .btn_next{
+	position: absolute;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+	background: #000000;
+	cursor: pointer;
+	color: #ffffff;
+	top: 50%;
+	margin-top: -15px;
+}
+.banner_2 .btn_prev{
+	left: 0px;
+}
+.banner_2 .btn_next{
+	right: 0px;
+}
+.banner_1 .hd{
+	text-align: center;
+}
+.banner_3{
+	width: 300px;
+	height:100px;
+	background-color: #eeeeee;
+	position: relative;
+	margin-top: 50px;
+}
+.banner_3 .bd{
+	width: 300px;
+	height: 100px;
+	overflow: hidden;
+}
+.banner_3 a{
+	display: block;
+	width: 300px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+	background-color: #666666;
+}
+.banner_3 .btn_prev,.banner_3 .btn_next{
+	position: absolute;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+	background: #000000;
+	cursor: pointer;
+	color: #ffffff;
+	top: 50%;
+	margin-top: -15px;
+}
+.banner_3 .btn_prev{
+	left: 0px;
+	z-index: 11;
+}
+.banner_3 .btn_next{
+	right: 0px;
+	z-index: 11;
+}
+.banner_4{
+	width: 300px;
+	height:100px;
+	background-color: #eeeeee;
+	position: relative;
+	margin-top: 50px;
+}
+.banner_4 .bd{
+	width: 300px;
+	height: 100px;
+	overflow: hidden;
+	background-color: #000000;
+}
+.banner_4 a{
+	display: block;
+	width: 300px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
+.banner_4 .btn_prev,.banner_4 .btn_next{
+	position: absolute;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px 10px;
+	background: #000000;
+	cursor: pointer;
+	color: #ffffff;
+	top: 50%;
+	margin-top: -15px;
+}
+.banner_4 .btn_prev{
+	left: 0px;
+}
+.banner_4 .btn_next{
+	right: 0px;
+}
+.banner_1 .hd a{
+	display: inline-block;
+	font-size: 10px;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	line-height: 15px;
+	border-radius: 7.5px;
+	background-color: #333333;
+	color: #ffffff;
+	margin-right: 10px;
+}
+.banner_1 .hd a.now{
+	background-color: #999999;
+}

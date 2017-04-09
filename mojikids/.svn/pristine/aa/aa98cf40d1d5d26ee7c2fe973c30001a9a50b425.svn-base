@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{%$ret.data.title%} - 莫吉照相馆</title>
+		<meta name="keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+		<meta name="description" content="{%$ret.data.description%}">
+		{%$wap_global_head%}
+		<link href="http://www.mojikids.com/static/wap/style/goods/index-page.e7c7bc2.css" type="text/css" rel="stylesheet" />
+	
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/modules/widget/swipe/swipe.4638ca7.css" />
+</head>
+	<body>
+		<div class="good-detail-page" id="good-detail-page" v-cloak>
+
+			<div class="p1th">
+				<div class="item-wrap">
+					<div class="img-item">
+						<div id="swiper-container" class="page-container">
+
+							<!-- 如果你后续需要找到当前实例化后的swiper对象以对其进行一些操作的话，可以自定义配置一个ref属性 -->
+							<swiper :options="swiperOption" ref="mySwiperA" class="swiper-box">
+								<!-- 幻灯内容 -->
+								<swiper-slide v-for="item in banner_list"><img  v-lazy.container="item.value" alt=""></swiper-slide>
+								<!-- ... -->
+								<!-- 以下控件元素均为可选（使用具名slot来确定并应用一些操作控件元素） -->
+								<!-- <div class="swiper-pagination" slot="pagination"></div> -->
+
+							</swiper>
+
+						</div>
+					</div>
+					<div class="txt-item">
+						<div class="box-1 tc color-111 f14">
+							{{total_data.res.title}}
+						</div>
+						<div class="box-2 f18 main-color tc">
+							{{total_data.res.price}}<span class="color-ccc f14">{{total_data.res.unit}}</span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="p2th">
+				<div class="item-wrap">
+					<template v-for="(items,indexs) in total_data.res.store">
+					<div class="ui-edit-user-info-mod " v-for="(item,index) in items.property" @click.stop="click_go_to(item,index)">
+					    <div class="item ui-border-b">
+					        <div class="user-info-item clearfix">
+					            <div class="lbox fl clearfix">
+					                <i class="yue-ui-icon-size-16 store-icon fldi tips-icon" :style="{backgroundImage: 'url(' + item.image + ')'}"></i>
+					                <p class="tips color-666 f14 fldi">{{item.value}}</p>
+					            </div>
+					            <div class="rbox fr">
+					                <i class="icon-allow-grey"></i>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					</template>
+				</div>
+			</div>
+			<div class="p3th">
+				<div class="item-wrap" id="main">
+					<div class="nav-item"  ref="nav_item" :class="{'nav_fixed': nav_fixed}">
+						<ul class="list f14 color-666">
+							<!-- <li class="ui-border-t  border-right tc cur">
+								拍摄样片
+							</li> -->
+							<li class="ui-border-t border-right tc" v-for="(item, index) in content_nav" :class="{'cur': item.active}" @click.stop="nav_change(item, index)">
+								{{item.name}}
+							</li>
+						</ul>
+					</div>
+					<div class="main-con" >
+
+						<div class="item detail-item " v-if="is_show">
+							<div class="content" >
+								<p class="text-pics">
+									{%$ret.data.exhibition%}
+								</p>
+							</div>
+						</div>
+
+
+						<div class="item combo-item " v-else>
+							<div class="content">
+								<ul class="list">
+									<li v-for="(items,indexs) in total_data.res.package">
+										<div class="tips-item clearfix ui-border-b">
+											<div class="box-1 color-333 f16 fldi">
+												 {{items.name}}
+											</div>
+											<div class="box-2 main-color frdi">
+												  {{items.price}}
+											</div>
+										</div>
+
+										<dl>
+
+											<dd v-for="(item,index) in items.package">
+												{{item.title}} {{item.value}}
+											</dd>
+
+
+										</dl>
+
+									</li>
+								</ul>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="order-btn-item">
+				<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg" @click="show_popup">
+					<span class="ui-button-content f16">立即预约</span>
+				</button>
+			</div>
+
+
+			<mt-popup v-model="popupVisible" position="bottom">
+				<div class="order-item-pop">
+					<a href="javascript:;" class="close-btn" @click="close_popup"></a>
+					<div class="item-wrap">
+						<div class="item-1 main-color f16 fb">
+							<span class="f21">{{standard_price}}</span>
+						</div>
+						<div class="item-2">
+							<div class="box-1 f14 color-666">
+								请选择套餐规格：
+							</div>
+							<div class="box-2 ui-border-b">
+
+
+								<button class="ui-button   ui-button-size-x ui-button-bg-fff ui-button-radius-l" v-for="(item, index) in standard_data" @click="choose_standard(item,index)" :class="{'cur': item.active}">
+									<span class="ui-button-content f14">{{item.name}}</span>
+								</button>
+							</div>
+						</div>
+						<div class="item-3 tc clearfix">
+
+								<dl v-for= "(item,index) in standard_content">
+									<dt >
+
+										<i class="afford-icon" v-if="item.image" :style="{backgroundImage: 'url(' + item.image + ')'}"></i>
+										<span class="f23" v-else>{{item.value}}</span>{{item.unit}}
+									</dt>
+									<dd class="color-aaa">
+										{{item.title}}
+									</dd>
+								</dl>
+
+
+
+						</div>
+						<div class="item-4" @click="go_to_schedule()">
+							<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg"><span class="ui-button-content f16">下一步</span></button>
+						</div>
+					</div>
+				</div>
+			</mt-popup>
+			<mt-popup v-model="map_popup" position="bottom">
+				<div id="container"  class="map_pop"></div>
+			</mt-popup>
+
+			<go-top></go-top>
+		</div>
+
+	
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/js/2017215/swipe.a03ccd6.js"></script>
+</body>
+
+</html>
+{%$wap_global_footer%}
+
+<script>
+ 	(function() {
+	 	// 加载轮播图模块
+	 	var Swipe = require('wap-kids:widget/swipe/index');
+	 	var Popup = require.syncLoad('wap-kids:widget/popup/index');
+		var Util  = require.syncLoad('wap-kids:global/util/index');
+		var UA = Util.ua;
+		// 加载lazyload模块
+	    var Lazyload = require.syncLoad('wap-kids:widget/lazyload/index');
+	    	var total_data = {%$json_data%};
+	 	console.log(total_data);
+		var Map = '';
+	 	// 使用轮播图
+	 	Vue.use(Swipe);
+		// 配置使用lazyload
+		Vue.use(Lazyload);
+	 	// 使用popup
+	 	Vue.component(Popup.name, Popup);
+
+	 	// 使用返回顶部
+	 	var go_top  = require.syncLoad('wap-kids:widget/go_top/index');
+	 	Vue.component(go_top.name, go_top);
+	 	// 获取当前的standard_id
+	 	var cur_standard_id = '{%$standard_id%}';
+
+	 	var swiper = new Vue
+	 		({
+	 			el: '#good-detail-page',
+				mounted : function()
+				{
+					var self = this;
+					if (cur_standard_id!="")
+					{
+						if (total_data.res.standard.length>0)
+						{
+
+							for (var i = 0; i < total_data.res.standard.length; i++) {
+
+									if (total_data.res.standard[i].standard_id == cur_standard_id)
+									{
+										self.standard_content = total_data.res.standard[i].property;
+										self.standard_price = total_data.res.standard[i].price;
+										total_data.res.standard[i].active = true;
+										self.popupVisible = true;
+										if (total_data.res.store.length>0)
+										{
+										    self.schedule_data.standard_id = total_data.res.standard[i].standard_id;
+										    self.schedule_data.store_id = total_data.res.store[i].store_id;
+										    self.schedule_data.schedule_id = total_data.res.store[i].schedule_id;
+										}
+
+									}
+									else{
+										total_data.res.standard[i].active = false;
+									}
+
+							};
+						}
+					}
+					else{
+						if (total_data.res.standard.length>0) 
+						{
+						    self.standard_content = total_data.res.standard[0].property;
+						    self.standard_price =  total_data.res.standard[0].price;
+						    total_data.res.standard[0].active = true;
+						}
+						
+					}
+
+					var nav_item_top = self.$refs.nav_item.offsetTop;
+					window.onscroll = function(){
+
+						if (document.body.scrollTop>=nav_item_top)
+						{
+						    self.nav_fixed = true;
+
+						}
+						else{
+							self.nav_fixed = false;
+						}
+					}
+				},
+
+	 			data: {
+					preview_list : [],
+	 				banner_list: total_data.res.cover,
+	 				total_data : total_data,
+	 				swiperOption: {
+	 					prevButton: '.swiper-button-prev',
+	 					nextButton: '.swiper-button-next',
+	 					slidesPerView: 1,
+	 					paginationClickable: false,
+	 					spaceBetween: 30,
+	 					mousewheelControl: false
+	 				},
+	 				content_nav:
+	 				[
+	 					{name:'拍摄样片', active:true},
+	 				 	{name:'套餐内容', active:false},
+
+	 				],
+	 				telephone : window.__MOJIKIDS_GLOBAL['PHONE'],
+	 				is_show : true,
+	 				popupVisible: false,
+	 				map_popup : false,
+	 				standard_data : total_data.res.standard,
+	 				standard_content : 0,
+	 				standard_price : 0,
+	 				schedule_data : {
+	 					goods_id : total_data.res.goods_id,
+	 					standard_id : total_data.res.standard.length>0 && total_data.res.standard[0].standard_id,
+	 					buy_num : 1,
+	 					store_id : total_data.res.store.length>0 &&  total_data.res.store[0].store_id,
+	 					schedule_id : total_data.res.store.length>0 &&  total_data.res.store[0].schedule_id,
+	 				},
+	 				nav_fixed : false,
+
+
+	 			},
+	 			methods : {
+					get_preview_img_list:function()
+					{
+						var self = this;
+
+						var img_arr = self.$el.querySelectorAll('img');
+
+						var preview_list = [];
+
+						for(var i =0;i<img_arr.length;i++)
+						{
+							if(img_arr[i].getAttribute('lazy') == 'loaded')
+							{
+								preview_list.push(img_arr[i].src)
+							}
+						}
+
+						return preview_list;
+					},
+	 				nav_change: function(item, index)
+	 				{
+
+	 					for(var i=0; i<this.content_nav.length;i++)
+	 					{
+	 					 	this.content_nav[i].active = false;
+
+
+	 					}
+	 					this.content_nav[index].active = true;
+
+	 					if (index==0)
+	 					{
+	 					    this.is_show = true;
+	 					}
+	 					else
+	 					{
+	 						this.is_show = false;
+	 					}
+
+	 				},
+	 				show_popup: function()
+	 				{
+	 					this.$data.popupVisible = true;
+
+	 				},
+	 				close_popup :function()
+	 				{
+	 					this.$data.popupVisible = false;
+	 				},
+	 				choose_standard : function(item, index)
+	 				{
+	 					for (var i = 0; i < this.standard_data.length; i++) {
+	 						this.standard_data[i].active = false;
+
+	 					};
+	 					this.standard_content = this.standard_data[index].property;
+	 					this.standard_data[index].active = true;
+	 					this.standard_price =  this.standard_data[index].price;
+	 					this.schedule_data.standard_id = this.standard_data[index].standard_id;
+
+	 				},
+
+	 				click_go_to : function(item, index)
+	 				{
+						var self = this;
+						if (index==0)
+						{
+
+							window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['index']+'about/store_info.php?store_id='+self.schedule_data.store_id;
+						}
+	 					if (index==1)
+	 					{
+							/****************** 定位功能 BEGIN ******************/
+	 						var location_data = item.lng_lat.split(",");//经纬度
+							if(!location_data)
+							{
+								Util.toast
+								({
+									message: '暂无定位数据',
+									position: 'middle',
+									duration: 3000
+								});
+								return;
+							}
+
+				            if(!Map)
+				            {
+								// 使用定位功能
+								Map = Util.open_location
+								({
+									wx_prams :
+									{
+										longitude : location_data[0],
+										latitude : location_data[1],
+										name: self.$data.total_data.res.store[0].property[0].value, // 位置名
+							            address: item.value, // 地址详情说明
+									},
+									gaode_params :
+									{
+										longitude : location_data[0],
+										latitude : location_data[1],
+										el : 'container',
+										zoom : 16,
+										showIndoorMap : true,
+										before_init : function()
+										{
+											self.map_popup = true;
+										}
+									}
+								})
+				           }
+						   else
+						   {
+							   if(Map.type == 'gaode')
+						   	   {
+								   self.map_popup = true;
+							   }
+						   }
+						   Map = null;
+						   /****************** 定位功能 END ******************/
+
+	 					}
+	 					if (index==2)
+	 					{
+	 						window.location.href = "tel:"+this.telephone;
+	 					}
+	 				},
+	 				go_to_schedule : function()
+	 				{
+	 					var self = this;
+	 					Util.request
+	 					({
+	 						url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'auth/get_user_info.php',
+	 						type : 'GET',
+	 						cache : true,
+	 						data : '',
+	 						beforeSend : function()
+	 						{
+
+	 						},
+	 						success : function(respond)
+	 						{
+
+	 							if (respond.res.data.bind_phone!="")
+	 							{
+	 							    var goods_id = self.schedule_data.goods_id;
+	 							    var standard_id = self.schedule_data.standard_id;
+	 							    var buy_num = self.schedule_data.buy_num;
+	 							    var store_id = self.schedule_data.store_id || 0;
+	 							    var schedule_id = self.schedule_data.schedule_id || 0;
+
+	 							    window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['order']+'date.php?goods_id='+goods_id+'&standard_id='+standard_id+'&buy_num='+buy_num+'&store_id='+store_id+'&schedule_id='+schedule_id ;
+	 							}
+	 							else{
+
+	 								var cur_url = encodeURIComponent(window.location.href+'&standard_id='+self.schedule_data.standard_id);
+	 								console.log(cur_url);
+	 								window.location.href =  window.__MOJIKIDS_GLOBAL['PAGE_URL']['auth']+'?r_url='+cur_url;
+	 							}
+
+
+
+	 						},
+	 						error :function()
+	 						{
+
+	 						}
+	 					});
+
+	 				},
+					/**
+					 * 预览图
+					 * @param  {[type]} ev [description]
+					 * @return {[type]}    [description]
+					 */
+					preview : function(ev)
+					{
+						var self = this;
+						var src = ev.target.src;
+						var urls = self.get_preview_img_list();
+
+						if(UA.is_weixin)
+						{
+							wx.previewImage
+							({
+							    current: src, // 当前显示图片的http链接
+							    urls: urls// 需要预览的图片http链接列表
+							});
+						}
+					}
+
+	 			},
+	 			components: {
+
+
+	 			},
+	 			computed : {
+
+	 			},
+
+	 		});
+
+
+	 })();
+</script>
+
+<script type="text/javascript">
+	(function()
+	{
+		var text = JSON.parse('{%$share_text%}');
+		console.log(text);
+		window.__MOJIKIDS_GLOBAL['share_com'].change_share_text(text.res);
+	})();
+</script>
+{%$wap_global_tj%}

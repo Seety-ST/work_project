@@ -1,0 +1,1193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>修改商品</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.yueus.com/js/selectlocal.js"></script>
+    <script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+    <link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+    <script type="text/javascript" src="http://www.yueus.com/js/selectlocal.js"></script>
+    <!--图文编辑器-->
+    <script src="http://static-c.yueus.com/yue_ui/layer/1.0.0/layer/layer.js"></script>
+    <script src="http://static-c.yueus.com/yue_ui/upload/1.0.0/webuploader.js"></script>
+    <script src="http://static.yueus.com/yue_ui/utility/index.js"></script>
+    <!--图文编辑器-->
+    <!--地址三级联动-->
+    <script type="text/javascript" src="http://www.yueus.com/yue_ui/spread/1.0.0/spread-1.0.0.js"></script>
+    <!--地址三级联动-->
+
+    <script src="js/shadowbox/shadowbox.js" type="text/javascript"></script>
+    <link href="js/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        $(function () {
+            $(".ui_timepicker").datetimepicker({
+            });
+            $(".ui_timepicker_time").datetimepicker({
+                //showOn: "button",
+                //buttonImage: "./css/images/icon_calendar.gif",
+                //buttonImageOnly: true,
+                showSecond: true,
+                timeFormat: 'hh:mm',
+                stepHour: 1,
+                stepMinute: 1,
+                stepSecond: 1
+            });
+        })
+    </script>
+
+</head>
+<body>
+<div id="top"></div>
+<a href="#bottom" class="btn_class" style="position:fixed;top:0;right:10px;">↓</a>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+    #img_wid img{
+        width:200px
+    }
+    /**添加样式，避免被重写样式**/
+    fieldset{
+        width:100%
+    }
+    .J_location_sel{
+        display: inline;
+
+    }
+    .J_location_sel_2{
+        display: inline;
+
+    }
+    
+</style>
+{global_header_html}
+<script>
+    /**
+     * hudw 2015.1.23
+     * @param  {[type]} window    [description]
+     * @param  {[type]} seajs     [description]
+     * @param  {[type]} undefined [description]
+     * @return {[type]}           [description]
+     */
+    ;(function(window, seajs, undefined)
+    {
+
+
+        // 配置模块
+        seajs.config
+        ({
+
+            paths:
+            {
+                utility: 'http://cb.poco.cn/utility',
+                matcha: 'http://cb.poco.cn/matcha',
+                yueyue_global : 'http://www.yueus.com/js/global'
+            },
+            alias:
+            {
+                handlebars: 'utility/handlebars/1.0.0/handlebars',
+                jquery: 'utility/jquery/1.11.0/jquery',
+                cookie: 'matcha/cookie/1.0.0/cookie',
+                topbar : 'yueyue_global/topbar/topbar'
+            },
+            comboMaxLength: 5000,
+            charset: 'utf-8'
+        });
+
+        seajs.use(['jquery','topbar'],function($,topbar)
+        {
+            var $user_state = $('#user_state');
+
+            topbar.init
+            ({
+                container : $user_state,
+                custom_logout : "http://www.yueus.com/reg/logout.php",
+                custom_html : '<a href="http://www.yueus.com/reg/login.php?r_url='+encodeURIComponent(window.location.href)+'">登录</a><span class="pr15 pl15">|</span><a href="http://www.yueus.com/reg/register.php?r_url='+encodeURIComponent(window.location.href)+'">免费注册</a>'
+            });
+        });
+
+
+    })(window, seajs);
+</script>
+<script>
+    Shadowbox.init({
+        handleOversize: "drag",
+        overlayColor: '#000',
+        modal: true,
+        displayNav: true,
+        displayCounter: false
+    });
+    Shadowbox.setup();
+    function change_status(id,status)
+    {
+        if(!confirm('是否确认修改状态？'))
+        {
+            return;
+        }
+        $.ajax( {
+            url:'?action=goods_chstatus&id='+id+'&status='+status,
+            type:'post',
+            cache:false,
+            dataType:'json',
+            success:function(data) {
+                alert(data.message);
+                /*
+                 if(data.result==1){
+                 alert('修改成功');
+                 location.reload();
+                 }else{
+                 alert(data.message);
+                 }
+                 */
+            },
+            error : function() {
+                alert("异常！");
+            }
+        });
+    }
+</script>
+<div class="mainbox">
+<div id="tabs" style="margin-top:10px;">
+<div class="tabbox">
+<div class="table-list">
+<div class="table" style="width:100%;">
+<fieldset>
+<legend>修改商品</legend>
+<iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+<form id="form1" name="form1" method="post" action="" target="form_iframe" onsubmit="return check();">
+<table width="90%" align="center">
+<!-- BEGIN default_data -->
+<tr>
+    <td width="26%" height="25">{name}
+    <!-- IF name = "价格" -->
+    <!-- IF top.show_prices = "1" -->
+    (价格ID:0)
+    <!-- ENDIF -->
+    <!-- ENDIF -->
+    </td>
+    <td width="74%" height="25">
+        <!-- IF input="3" -->
+        <input name="default_data[{key}]" type="text" id="default_data[{key}]" value="{value}" size="50" maxlength="50" />
+        <!-- ELSEIF input="5" -->
+        <div>在线编辑器:</div>
+        <textarea name="default_data[{key}]" id="J_content" style="display: none;"></textarea>
+        <script id="container" name="content" type="text/plain">{value}</script>
+        <!--<script type="text/javascript" charset="gbk" src="http://www.yueus.com/yue_ui/ueditor/1.0.0/ueditor.config.js"></script>-->
+        <script type="text/javascript" charset="gbk" src="http://www.yueus.com/yue_ui/ueditor/1.0.0/ueditor.config.v2.js"></script>
+        <!-- 编辑器源码文件 -->
+        <script type="text/javascript" charset="gbk" src="http://www.yueus.com/yue_ui/ueditor/1.0.0/ueditor.all.js"></script>
+        <!-- 实例化编辑器 -->
+
+        <!-- ELSEIF input="8" -->
+
+        <!-- 活动地区代码 -->
+        <input type="radio" name="locate_value_checked" value="0" class="J_locate_select" data-mark="0" <!-- IF value == "0" -->checked="checked"<!-- ENDIF value --> tabindex="1"/>全国
+        <input type="radio" name="locate_value_checked" value="1" class="J_locate_select" data-mark="1" <!-- IF value != "0" -->checked="checked"<!-- ENDIF value --> tabindex="1"/>地区选择
+        <span id="J_locate_select_container" style="display:<!-- IF value == "0" -->none;<!-- ELSE -->inline-block;<!-- ENDIF value -->">
+
+        <div data-role="provice" class="mod-select-item photo-select-item fl mr10 J_location_sel"></div>
+        <div data-role="city" class="mod-select-item photo-select-item fl mr10 J_location_sel"></div>
+        <div data-role="area" class="mod-select-item photo-select-item fl mr10 J_location_sel"></div>
+        <input type="hidden" value="101029001" id="default_location_id" name="default_data[{key}]"/>
+        </span>
+        <script type="">
+            var default_location_id = $("#default_location_id").val();
+            var a = new Spread
+            ({
+                event_change_after : function(obj){
+                    var res = a.result();
+
+                    //alert(JSON.stringify(res));
+                    //console.log(res);
+                    var sel_location_id = res[res.length-1].id;
+                    console.log(sel_location_id);
+                    $("#default_location_id").val(sel_location_id);
+                    //构造地图
+
+
+                },//修改选中值后，obj为选中项
+                parse_stack : 2,//显示层级，默认100级，最少1级
+                random_num : '',//该组别的随机数，可选，用于区分各个组别
+                render_contain_arr : [$('[data-role="provice"]'),$('[data-role="city"]'),$('[data-role="area"]')],
+                render_notice_arr :['请选择省','请选择市','请选择区'],//层级提示语数组，不填默认为空。
+                select_default_id : default_location_id //用于设置默认值，该值对应parse_note，
+            });
+
+
+
+        </script>
+        <style>
+            .plus_span,.x_span {  
+                cursor: pointer;
+                border: 2px solid rgb(75, 171, 54);
+                display: inline-block;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 10px;
+                width: 20px;
+                text-align: center;
+            }
+            .x_span { border:2px solid rgb(184, 52, 82)}
+            .plus_span {margin_right:10px;}
+        </style>
+        <input type="hidden" value="{value}" data-role="{top.goods.goods_data.province_value}" id="location_id"/>
+        
+        <span class="location_id_s">
+                   <span class="plus_span" onclick="get_location_id_to_text();">+</span>&nbsp;&nbsp;
+                    <span class="location_id_ary">
+                         <!-- IF value!="0" -->   
+                            <!-- BEGIN location_ary_new -->
+                            <span class="text_{id}">{text}<input type="hidden" name="location_id_ary[]" value="{id}"/><span class="x_span" onclick="del_text_location_id({id})">X</span>&nbsp;&nbsp;</span>
+                            <!-- END location_ary_new -->
+                         <!-- ENDIF -->
+                    </span>
+        </span>
+              
+        <script>
+            function get_location_id_to_text()
+            {
+                
+                var location_id = $('[data-role="area"] select').val();
+                if(location_id == '' || location_id == undefined)
+                {
+                    location_id = $('[data-role="city"] select').val();
+                    if(location_id == '' || location_id == undefined)
+                    {
+                        alert('请选择地区');
+                        return false;
+                    }
+
+                }
+                if( ! confirm('确定添加?'))
+                {
+                   return false;
+                }
+                var location_text = $("option[value="+location_id+"]").eq(0).text();
+                if($(".location_id_ary span").hasClass("text_"+location_id))
+                {
+                    alert('地区已经有，请不要重复添加');
+                    return false;
+                }
+                $(".location_id_ary").append("<span class='text_"+location_id+"'>"+location_text+" <span class='x_span' onclick='del_text_location_id("+location_id+")'>X</span><input type='hidden' name='location_id_ary[]' value='"+location_id+"'/>&nbsp;&nbsp;</span>");
+                
+            }
+            
+            function del_text_location_id(id)
+            {
+                if( ! confirm('确定删除?'))
+                {
+                   return false;
+                }
+                if( ! id )
+                {
+                    return false;
+                }
+                $(".text_"+id).remove();
+            }
+            
+        </script>
+
+
+
+        <!--<input name="default_data[{key}]" type="hidden" id="default_data[{key}]" value="{value}" />-->
+        <!--{data}-->
+        <!-- ELSEIF input="1" -->
+        <!-- BEGIN child_data -->
+        <input type="radio" name="default_data[{parent.key}]" id="default_data[{parent.key}]" value="{val}" <!-- IF parent.key="service_id" -->disabled<!-- ENDIF --> <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}<br>
+        <!-- IF goods_service_detail -->
+        <!-- BEGIN goods_service_detail -->
+        <!-- BEGIN data -->
+        &nbsp;&nbsp;&nbsp;&nbsp;{name}:<input name="service_detail[{parent.parent.val}][{parent.key}][{key}]" id="service_detail[{parent.parent.val}][{parent.key}][{key}]" value="{value}" /><br>
+        <!-- END data -->
+        <!-- END goods_service_detail -->
+        <br>
+        <!-- ENDIF -->
+        <!-- END child_data -->
+        <!-- ELSEIF input="2" -->
+        <!-- BEGIN child_data -->
+        <input name="default_data[{parent.key}]" type="checkbox" id="default_data[{parent.key}]" value="{val}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}&nbsp;&nbsp;
+        <!-- END child_data -->
+        <!-- ELSE -->
+        <textarea name="default_data[{key}]" cols="50" rows="5" id="default_data[{key}]">{value}</textarea>
+        <!-- ENDIF -->
+    </td>
+</tr>
+<!-- END default_data -->
+<!-- BEGIN system_data -->
+<tr>
+    <td width="26%" height="25">{name}</td>
+    <td width="74%" height="25">
+        <!-- IF input="3" -->
+        <!-- IF id == "381" -->
+
+        <div data-role="provice_2" class="mod-select-item photo-select-item fl mr10 J_location_sel_2"></div>
+        <div data-role="city_2" class="mod-select-item photo-select-item fl mr10 J_location_sel_2"></div>
+        <div data-role="area_2" class="mod-select-item photo-select-item fl mr10 J_location_sel_2"></div>
+        <input type="hidden" value="{value}" id="default_location_id_2" name="system_data[{key}]"/>
+        <script type="">
+            var default_location_id_2 = $("#default_location_id_2").val();
+            var a_2 = new Spread
+            ({
+                event_change_after : function(obj){
+                    var res = a_2.result();
+
+                    //alert(JSON.stringify(res));
+                    //console.log(res);
+                    var sel_location_id = res[res.length-1].id;
+                    console.log(sel_location_id);
+                    $("#default_location_id_2").val(sel_location_id);
+                    //构造地图
+
+
+                },//修改选中值后，obj为选中项
+                parse_stack : 3,//显示层级，默认100级，最少1级
+                random_num : '',//该组别的随机数，可选，用于区分各个组别
+                render_contain_arr : [$('[data-role="provice_2"]'),$('[data-role="city_2"]'),$('[data-role="area_2"]')],
+                render_notice_arr :['请选择省','请选择市','请选择区'],//层级提示语数组，不填默认为空。
+                select_default_id : default_location_id_2 //用于设置默认值，该值对应parse_note，
+            });
+
+
+
+
+        </script>
+        <!-- ELSE -->
+        <input name="system_data[{key}]" type="text" id="system_data[{key}]" value="{value}" size="50" maxlength="50" />
+        <!-- ENDIF id -->
+        <!-- ELSEIF input="4" -->
+        <textarea name="system_data[{key}]" cols="50" rows="5" id="system_data[{key}]">{value}</textarea>
+        <!-- ELSEIF input="9" -->
+        <input name="system_data[{key}]" type="hidden" id="system_data[{key}]" value="{value}" />
+        <!-- BEGIN child_data -->
+        {name}:
+        <!-- IF input="3" -->
+        <input name="system_data[{parent.key}][{key}]" type="text" id="system_data[{parent.key}][{key}]" value="{value}" size="50" maxlength="50" />
+        <!-- ELSEIF input="4" -->
+        <textarea name="system_data[{parent.key}][{key}]" cols="50" rows="5" id="system_data[{parent.key}][{key}]">{value}</textarea>
+        <!-- ELSEIF input="1" -->
+        <!-- BEGIN child_data -->
+        <input type="radio" name="system_data[{parent.parent.key}][{parent.key}]" id="system_data[{parent.parent.key}][{parent.key}]" value="{name}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}&nbsp;&nbsp;
+        <!-- END child_data -->
+        <!-- ELSEIF input="2" -->
+        <!-- BEGIN child_data -->
+        <!-- END child_data -->
+        <!-- ENDIF -->
+        {mess}<br>
+        <!-- END child_data -->
+        <!-- ELSEIF input="6" -->
+        <input id="system_data[{key}]" type="text" size="25" name="system_data[{key}]" readonly="readonly" value="{value}" class="ui_timepicker" />
+        <!-- ELSEIF input="7" -->
+        <input id="system_data[{key}]" type="text" size="25" name="system_data[{key}]" readonly="readonly" value="{value}" class="ui_timepicker_time" />
+        <!-- ELSEIF input="1" -->
+        <!--                         <select name="system_data[{key}]" id="system_data[{key}]">
+                                     <!-- BEGIN child_data -->
+        <option value="{key}" <!-- IF is_select -->selected="selected"<!-- ENDIF -->>{name}</option>
+        <!-- END child_data -->
+        </select>
+        -->
+        <!-- BEGIN child_data -->
+        <input name="system_data[{parent.key}]" class="J_parent_type" data-mark="{id}" type="radio" id="system_data[{parent.key}]" value="{key}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}
+        <!-- IF child_data -->
+        &nbsp;&nbsp;&nbsp;&nbsp;[详情:
+        <!-- IF input="2" -->
+        <!-- BEGIN child_data -->
+        <input name="system_data[{parent.key}][]" class="J_child_type" data-parent="{parent.id}" type="checkbox" id="system_data[{parent.key}][]" value="{key}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}&nbsp;&nbsp;
+        <!-- END child_data -->
+        <!-- ELSEIF input="1" -->
+        <!-- BEGIN child_data -->
+        <input type="radio" name="system_data[{parent.key}]" class="J_child_type" data-parent="{parent.id}" id="system_data[{parent.key}]" value="{key}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}&nbsp;&nbsp;
+        <!-- END child_data -->
+        <!-- ENDIF -->
+        ]
+        <!-- ENDIF -->
+        <br>
+        <!-- END child_data -->
+
+        <!-- ELSEIF input="2" -->
+        <!-- BEGIN child_data -->
+        <input name="system_data[{parent.key}][]" class="J_parent_type" data-mark="{id}" type="checkbox" id="system_data[{parent.key}][]" value="{key}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}
+        <!-- IF child_data -->
+        &nbsp;&nbsp;&nbsp;&nbsp;[详情:
+        <!-- IF input="2" -->
+        <!-- BEGIN child_data -->
+        <input name="system_data[{parent.key}][]" class="J_child_type" data-parent="{parent.id}" type="checkbox" id="system_data[{parent.key}][]" value="{key}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}&nbsp;&nbsp;
+        <!-- END child_data -->
+        <!-- ELSEIF input="1" -->
+        <!-- BEGIN child_data -->
+        <input type="radio" name="system_data[{parent.key}]" class="J_child_type" data-parent="{parent.id}" id="system_data[{parent.key}]" value="{key}" <!-- IF is_select -->checked="checked"<!-- ENDIF --> />{name}&nbsp;&nbsp;
+        <!-- END child_data -->
+        <!-- ENDIF -->
+        ]
+        <!-- ENDIF -->
+<!--        <br><br>-->
+        <!-- END child_data -->
+        <!-- ENDIF -->
+    </td>
+</tr>
+<!-- END system_data -->
+<!-- BEGIN diy_data -->
+<tr>
+    <td width="26%" height="25">{name}</td>
+    <td width="74%" height="25">
+        <!-- IF input="3" -->
+        <input name="diy_data[{key}]" type="text" id="diy_data[{key}]" value="{value}" size="50" maxlength="50" />
+        <!-- ELSE -->
+        <textarea name="diy_data[{key}]" cols="50" rows="5" id="diy_data[{key}]">{value}</textarea>
+        <!-- ENDIF -->
+    </td>
+</tr>
+<!-- END diy_data -->
+
+
+<!-- BEGIN combination_data -->
+<tr>
+    <td width="26%" height="25">标题:</td>
+    <td width="74%" height="25">
+        <input name="combination_data[{name}][titles]" type="text" id="combination_data[{name}][titles]" value="{data.titles}" size="50" maxlength="50" />
+    </td>
+</tr>
+<tr>
+    <td width="26%" height="25">正文:</td>
+    <td width="74%" height="25">
+        <textarea name="combination_data[{name}][content]" cols="50" rows="5" id="combination_data[{name}][content]">{data.content}</textarea>
+    </td>
+</tr>
+<tr>
+    <td width="26%" height="25">图片:</td>
+    <td width="74%" height="25">
+        <!-- BEGIN data.images -->
+        <input name="combination_data[{parent.name}][images][]" type="text" id="combination_data[{parent.name}][images][]" value="{src}" size="50" /><br>
+        <!-- END data.images -->
+    </td>
+</tr>
+<!-- END combination_data -->
+<!-- BEGIN contact_data -->
+<tr>
+    <td width="26%" height="25">联系人:</td>
+    <td width="74%" height="25">
+        <input name="contact_data[{name}][name]" type="text" id="contact_data[{name}][name]" value="{data.name}" size="50" maxlength="50" />
+    </td>
+</tr>
+<tr>
+    <td width="26%" height="25">联系方式:</td>
+    <td width="74%" height="25">
+        <input name="contact_data[{name}][phone]" type="text" id="contact_data[{name}][phone]" value="{data.phone}" size="50" maxlength="50" />
+    </td>
+</tr>
+<!-- END contact_data -->
+
+<!-- BEGIN prices_data_list -->
+<!-- IF top.stock_type="7" -->
+<tr>
+    <td width="26%" height="25">场次:(场次ID:{type_id})</td>
+    <td width="74%" height="25">
+        名称:
+        <input id="prices_diy[{type_id}][name]" type="text" size="14" name="prices_diy[{type_id}][name]" value="{name}"/>
+        <br />
+        时间:
+        <input id="prices_diy[{type_id}][time_s]" type="text" size="28" name="prices_diy[{type_id}][time_s]" value="{time_s}" class="ui_timepicker" readonly="readonly"/>
+        至
+        <input id="prices_diy[{type_id}][time_e]" type="text" size="28" name="prices_diy[{type_id}][time_e]" value="{time_e}" class="ui_timepicker" readonly="readonly"/>
+        <br />
+        名额:
+        <input id="prices_diy[{type_id}][stock_num]" type="text" size="14" name="prices_diy[{type_id}][stock_num]" value="{stock_num_total}"/>&nbsp;&nbsp;已报名：{has_num}&nbsp;&nbsp;剩下：{stock_num}
+        <br />
+        最大购买量:
+        <input id="prices_diy[{type_id}][buy_num]" type="text" size="14" name="prices_diy[{type_id}][buy_num]" value="{buy_num}"/>
+        <br />
+        <!-- BEGIN prices_list_data -->
+        名称:<input id="prices_diy[{parent.type_id}][detail][name][{id}]" type="text" size="24" name="prices_diy[{parent.type_id}][detail][name][{id}]" value="{name}"/>&nbsp;&nbsp;
+        价格:<input id="prices_diy[{parent.type_id}][detail][prices][{id}]" type="text" size="6" name="prices_diy[{parent.type_id}][detail][prices][{id}]" value="{prices}"/>(价格ID:{id})&nbsp;&nbsp;
+        <br />
+        <!-- END prices_list_data -->
+    </td>
+</tr>
+<!-- ELSEIF top.stock_type="5" -->
+<tr>
+    <td width="26%" height="25">自定义价格(价格ID:{type_id}):</td>
+    <td width="74%" height="25">
+        名称:
+        <input id="prices_diy[{type_id}][name]" type="text" size="14" name="prices_diy[{type_id}][name]" value="{name}"/>
+        <br />
+        规格说明:
+        <textarea name="prices_diy[{type_id}][mess]" cols="50" rows="5" id="prices_diy[{type_id}][mess]">{mess}</textarea>
+        <br />
+        <!--
+        时间:
+        <input id="prices_diy[{type_id}][time_s]" type="text" size="24" name="prices_diy[{type_id}][time_s]" value="{time_s}" class="ui_timepicker" readonly="readonly"/>
+        至
+        <input id="prices_diy[{type_id}][time_e]" type="text" size="24" name="prices_diy[{type_id}][time_e]" value="{time_e}" class="ui_timepicker" readonly="readonly"/>
+        <br />
+        -->
+        名额:
+        <input id="prices_diy[{type_id}][stock_num]" type="text" size="14" name="prices_diy[{type_id}][stock_num]" value="{stock_num}"/>
+        <br />
+        最大购买量:
+        <input id="prices_diy[{type_id}][buy_num]" type="text" size="14" name="prices_diy[{type_id}][buy_num]" value="{buy_num}"/>
+        <br />
+        价格:
+        <input id="prices_diy[{type_id}][prices]" type="text" size="14" name="prices_diy[{type_id}][prices]" value="{prices}"/>
+    </td>
+</tr>
+<!-- ELSE -->
+<!-- IF prices_type="1" -->
+<tr>
+    <td width="26%" height="25">{goods_data.stock_type}[价格](价格ID:{key})</td>
+    <td width="74%" height="25">{name}
+        <input id="prices_de[{key}]" type="text" size="14" name="prices_de[{key}]" value="{value}"/>
+        <!-- IF top.stock_type="4" -->
+        <br />库存<input id="prices_de_detail[{key}][stock_num]" type="text" size="14" name="prices_de_detail[{key}][stock_num]" value="{stock_num}"/>
+        <!-- ELSEIF top.stock_type="8" -->
+        <br />库存<input id="prices_de_detail[{key}][stock_num]" type="text" size="14" name="prices_de_detail[{key}][stock_num]" value="{stock_num}"/>
+        <!-- ENDIF -->
+        <br />
+        最大购买量:
+        <input id="prices_de_detail[{key}][buy_num]" type="text" size="14" name="prices_de_detail[{key}][buy_num]" value="{buy_num}"/>
+    </td>
+</tr>
+<!-- ELSEIF prices_type="2" -->
+<tr>
+    <td width="26%" height="25">自定义价格(价格ID:{type_id}):</td>
+    <td width="74%" height="25">
+        名称:
+        <input id="prices_diy[{type_id}][name]" type="text" size="14" name="prices_diy[{type_id}][name]" value="{name}"/>
+        <br />描述:
+        <textarea name="prices_diy[{type_id}][mess]" cols="50" rows="5" id="prices_diy[{type_id}][mess]">{mess}</textarea>
+        <br />库存:
+        <input id="prices_diy[{type_id}][stock_num]" type="text" size="14" name="prices_diy[{type_id}][stock_num]" value="{stock_num}"/>
+        <br />
+        最大购买量:
+        <input id="prices_diy[{type_id}][buy_num]" type="text" size="14" name="prices_diy[{type_id}][buy_num]" value="{buy_num}"/>
+        <br />
+        价格:
+        <input id="prices_diy[{type_id}][prices]" type="text" size="14" name="prices_diy[{type_id}][prices]" value="{prices}"/>
+    </td>
+</tr>
+<!-- ENDIF -->
+<!-- ENDIF -->
+<!-- END prices_data_list -->
+
+<tr>
+    <td width="26%" height="25">{image_data.name}</td>
+    <td width="74%" height="25">
+        <!-- BEGIN image_data.value -->
+        <!--{img_url}<br>-->
+        <!-- END image_data.value -->
+        <div class="model-img-list clearfix">
+            <ul class="J_li_ul" data-mark="0">
+                <!-- IF image_data.value -->
+                <!-- BEGIN image_data.value -->
+                <li class="J_upload_img_li" data-mark="{data_mark}_{ROWCNT}" data-index="SWFUpload_{data_mark}_{ROWCNT}">
+                    <img class="J_upload_img" src="{img_url}" big_src="{big_img_url}" style="width:80px;" data-mark="{data_mark}_{ROWCNT}"/>
+                    <a href="javascript:void(0);" class="cancle" data-class="J_delete_upload_img" data-mark="{data_mark}_{ROWCNT}" data-mark-par="{data_mark}" data-index="SWFUpload_{data_mark}_{ROWCNT}">删除</a>
+                    <input class="J_upload_img_input" type="hidden" name="upload_imgs_{data_mark}[]" value="{img_url}" data-mark="{data_mark}_{ROWCNT}"/>
+                </li>
+                <!-- END image_data.value -->
+                <!-- ENDIF image_data.value -->
+                <li class="add-btn J_add_btn" data-mark="0" <!-- IF fit_swf -->style="width:1px;height:1px;"<!-- ENDIF fit_swf -->>
+                <span id="img_flash_btn_0"></span>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <!-- IF admin_ac -->
+<tr>
+    <td colspan="2" align="center">
+        <input id="user_str" type="text" size="50" name="user_str" value=""/>
+        <input type="button" name="button2" id="button2" value="拷贝" onclick="javascript:$('#form1').attr('action', '?action=goods_copy');$('#form1').submit();"/></td>
+    </td>
+</tr>
+<!-- ENDIF -->
+<td colspan="2" align="center">
+    <input name="goods_id" type="hidden" id="goods_id" value="{id}" />
+    <input name="action" type="hidden" value="goods_edit" />
+    <input type="button" name="button" id="button"  class="btn_class" value="修改资料" style="margin-right:20px;cursor:pointer;" />
+
+    <!-- IF goods.goods_data.seller_status = "1" -->
+    <!-- IF goods.goods_data.status = "0" -->
+    <a href="javascript:change_status({goods.goods_data.goods_id},1)" class="btn_class">通过</a>&nbsp;&nbsp;
+    <a rel="shadowbox[goods_change_{goods.goods_data.goods_id}];height=350;width=420" href="?action=goods_chstatus&id={goods.goods_data.goods_id}&status=2&tpl=show" class="btn_class">不通过</a>&nbsp;&nbsp;
+    <!--<a href="javascript:change_status({goods_id},3)">删除</a>&nbsp;&nbsp;-->
+    <!-- ELSEIF goods.goods_data.status = "1" -->
+    <a rel="shadowbox[goods_change_{goods.goods_data.goods_id}];height=350;width=420" href="?action=goods_chstatus&id={goods.goods_data.goods_id}&status=2&tpl=show" class="btn_class">不通过</a>&nbsp;&nbsp;
+    <!--
+    <a href="javascript:change_status({goods_id},3)">删除</a>&nbsp;&nbsp;
+    -->
+    <!-- ELSEIF goods.goods_data.status = "2" -->
+    <a href="javascript:change_status({goods.goods_data.goods_id},1)" class="btn_class">通过</a>&nbsp;&nbsp;
+    <!--
+    <a href="javascript:change_status({goods_id},3)">删除</a>&nbsp;&nbsp;
+    -->
+    <!-- ENDIF -->
+    <!-- ENDIF -->
+</td>
+</tr>
+</table>
+</form>
+<script>
+    function check()
+    {
+        if(confirm('是否确认修改,如果有多价格,请注意展示价格.'))
+        {
+            return true;
+        }
+        return false;
+    }
+</script>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mainbox">
+    <div id="tabs2" style="margin-top:10px;">
+        <div class="tabbox">
+            <div class="table-list">
+                <div class="table" style="width:100%;">
+                    <fieldset>
+                        <legend>操作记录</legend>
+                        <form id="form2" name="form1" method="post" action="" target="_self">
+                            <table width="90%" align="center">
+                                <tr>
+                                    <td width="26%" height="25" align="center" valign="middle">操作类型</td>
+                                    <td width="18%" height="25" align="center" valign="middle">时间</td>
+                                    <td width="19%" align="center" valign="middle">操作人</td>
+                                    <td width="37%" align="center" valign="middle">备注</td>
+                                </tr>
+                                <!-- BEGIN log_list -->
+                                <tr>
+                                    <td width="26%" height="25" align="center" valign="middle">{type_name}</td>
+                                    <td width="18%" height="25" align="center" valign="middle">{add_time}</td>
+                                    <td width="19%" align="center" valign="middle">{user_name}</td>
+                                    <td width="37%" align="center" valign="middle">{note}</td>
+                                </tr>
+                                <!-- END log_list -->
+                                <tr>
+                                    <td colspan="4" align="center">&nbsp;</td>
+                                </tr>
+                            </table>
+                        </form>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="add_flash_num" value="1"/><!--要增加的falsh数值，页面有一个，则数值为二，同时也作为id标示-->
+
+
+<script>
+
+    $(function(){
+        var len = $("#img_wid img").length;
+        for(var i = 0; i < len;i++)
+        {
+            var src = $("#img_wid img").eq(i).attr("src");
+            $("#img_wid img").eq(i).wrap("<a href='"+src+"' target='_blank' ></a>");
+        }
+
+        var len_small = $(".J_upload_img").length;
+        for(var i = 0; i < len_small ; i++)
+        {
+            var src = $(".J_upload_img").eq(i).attr("big_src");
+            $(".J_upload_img").eq(i).wrap("<a href='"+src+"' target='_blank' ></a>");
+
+        }
+    });
+
+    seajs.use(['jquery','./js/img_upload_flash.js?t=112364651239'], function($,img_upload_flash) {
+        $(document).ready(function(){
+            //初始化上传封面图按钮
+            //construct_flash("cover_img_flash_btn","cover_img_btn",1,0,0);
+            //初始化第一个模特场地上传图按钮
+            var add_flash_num = $("#add_flash_num").val();
+            for(var j=0;j<add_flash_num;j++)
+            {
+                var param_1 = "img_flash_btn_"+j;
+                var param_2 = j;
+                var tmp_len = $(".J_li_ul[data-mark='"+j+"'] > .J_upload_img_li").length;
+                var tmp_param_4 = parseInt(tmp_len);
+                var tmp_param_5 = parseInt(tmp_len);
+                construct_flash(param_1,"img_btn",param_2,tmp_param_4,tmp_param_5);
+            }
+
+            //构造flash函数
+            function construct_flash(_swfPlaceholderId,flash_type,id_num,img_mark,construct_img_mark)
+            {
+                img_upload_flash.get_flash(_swfPlaceholderId,flash_type,id_num,img_mark,construct_img_mark);
+            }
+            //提交校验
+            //封面图是否上传
+            $("#button").click(function(){
+                var res = form_check();
+                //form_summit
+                if(res)
+                {
+                    $("#form1").submit();
+                }
+            });
+            function form_check()
+            {
+                if(($(".J_upload_cover_img[data-mark='1']").length)>0)
+                {
+                    if($(".J_upload_cover_img[data-mark='1']").attr("class").match("J_progress"))
+                    {
+                        alert('封面图在上传中');
+                        return false;
+                    }
+                }
+                //检查图文块
+                if(($(".J_upload_img").length)>0)
+                {
+                    var upload_imgs_len = $(".J_upload_img").length;
+                    for(var i=0;i<upload_imgs_len;i++)
+                    {
+                        var cur_class = $($(".J_upload_img")[i]).attr("class");
+
+                        if(cur_class.match("J_progress"))
+                        {
+                            alert('图片还在上传中，请稍后');
+                            return false;
+                        }
+                    }
+                }
+                //检查图文内容
+                var content = ueditor.editor.getContent();
+                if(!content)
+                {
+                    alert('请填入图文详情');
+                    return
+                }
+                $("#J_content").html(content);
+
+                return true;
+                //检查是否有图片在上传，避免flash不能使用
+            }
+
+
+            /****2015-10-10-星星添加-分类初始化选择交互****/
+            //初始化处理
+            var J_parent_type_len = $(".J_parent_type").length;
+            var cur_checked,cur_data_mark;
+            for(var i=0;i<J_parent_type_len;i++)
+            {
+                cur_checked = $($(".J_parent_type")[i]).prop("checked");
+                if(!cur_checked)
+                {
+                    cur_data_mark = $($(".J_parent_type")[i]).attr("data-mark");
+                    //子分类不能勾选
+                    $(".J_child_type[data-parent='"+cur_data_mark+"']").attr("disabled","disabled");
+
+                }
+            }
+            //选择后处理
+            $(".J_parent_type").on("change",function(){
+
+                var J_parent_type_len = $(".J_parent_type").length;
+                var cur_checked,cur_data_mark;
+                for(var i=0;i<J_parent_type_len;i++)
+                {
+                    cur_checked = $($(".J_parent_type")[i]).prop("checked");
+                    cur_data_mark = $($(".J_parent_type")[i]).attr("data-mark");
+                    if(!cur_checked)
+                    {
+                        //子分类不能勾选
+                        $(".J_child_type[data-parent='"+cur_data_mark+"']").attr("disabled","disabled");
+                        $(".J_child_type[data-parent='"+cur_data_mark+"']").prop("checked",false);
+
+                    }
+                    else
+                    {
+                        $(".J_child_type[data-parent='"+cur_data_mark+"']").removeAttr("disabled");
+                    }
+                }
+
+                /*var new_data_mark =  $(this).attr("data-mark");
+                 $(".J_parent_type").prop("checked",false);
+                 $(this).prop("checked",true);
+                 $(".J_child_type").attr("disabled","disabled");
+                 $(".J_child_type").prop("checked",false);
+                 //选中的可选
+                 $(".J_child_type[data-parent='"+new_data_mark+"']").removeAttr("disabled");*/
+
+
+            });
+
+            /****2015-10-10-星星添加-分类初始化选择交互****/
+        });
+    });
+</script>
+
+</body>
+<script style="text/javascript">
+
+
+
+    //展示地区的切换
+    $(".J_locate_select").on("change",function(e){
+        var target = e.target;
+        var data_mark = $(target).attr("data-mark");
+        if(data_mark==0)
+        {
+            $("#J_locate_select_container").css("display","none");
+            $(".location_id_s").hide();
+        }
+        else
+        {
+            $("#J_locate_select_container").css("display","inline-block");
+            $(".location_id_s").show();
+        }
+
+    });
+</script>
+<!--上传图JS-->
+<script type="text/javascript">
+
+(function()
+{
+    var doc = document;
+    /**
+     * 默认配置
+     */
+    var defaultConfig = {
+                target: '',
+                toolbars: null,
+                autoFocus: false,
+                autoHeight: false,
+                zIndex: 1
+            },
+
+            extendFun = {
+                /**
+                 * 初始化
+                 */
+                _init: function() {
+                    var self = this, cfg = self.config,
+                            editorContainer = doc.createElement('div'),
+                            isImageBtn = $.inArray('simpleupload', cfg.toolbars);
+
+                    self._setup_btn();
+
+
+                    if (cfg.toolbars) {
+
+                        cfg.toolbars = [cfg.toolbars];
+                    }
+
+                    $(editorContainer).insertBefore(cfg.target);
+
+                    if(!cfg.content)
+                    {
+                        cfg.content = $(cfg.target).html();
+                    }
+
+                    self._initEditor(); // 初始化编辑器
+                    self.editor.render(editorContainer); // 显示
+
+                    cfg.target.style.display = 'none';
+
+                    setTimeout(function()
+                    {
+                        self._setup_uploader();
+                    },200);
+
+                },
+                _setup_btn : function()
+                {
+                    var self = this;
+
+                    self._setup_simple_upload_btn();
+                    //self._setup_video_upload_btn();
+
+
+                },
+                _setup_video_upload_btn :  function()
+                {
+                    var self = this;
+
+                    UE.registerUI('video-upload', function(editor, uiName) {
+
+
+                        //注册按钮执行时的command命令，使用命令默认就会带有回退操作
+                        editor.registerCommand(uiName,
+                                {
+                                    execCommand: function()
+                                    {
+
+                                    }
+                                });
+                        //创建一个button
+                        var btn = new UE.ui.Button
+                        ({
+                            //按钮的名字
+                            name: 'videoupload',
+                            //提示
+                            title: '视频上传',
+                            //label : '<div class="editor-upload-btn" style="height: 20px !important;width: 20px !important;position: absolute;top: 0;left: 0;"></div>',
+                            //添加额外样式，指定icon图标，这里默认使用一个重复的icon
+                            //cssRules: 'background-position: -380px 0px;',
+                            //点击时执行的命令
+                            onclick: function()
+                            {
+                                layer.open
+                                ({
+                                    type: 1,
+                                    area: ['600px', '400px'],
+                                    fix: false, //不固定
+                                    title:'上传视频',
+                                    maxmin: false,
+                                    content : '<div class=edit-video-wrapper><div id=videoTab><div id=tabHeads class=tabhead><span tabsrc=video data-content-id=video class=focus>插入视频</span></div><div id=tabBodys class=tabbody><div id=video class="panel focus"><table><tbody><tr><td><label for=videoUrl class=url>视频网址</label><td><input id=videoUrl type=text></table><div id=preview><div class=previewMsg><span>输入的视频地址有误，请检查后再试！</span></div><embed class=previewVideo type=application/x-shockwave-flash pluginspage=http://www.macromedia.com/go/getflashplayer src="" width=420 height=280 wmode=transparent play=true loop=false menu=false allowscriptaccess=never allowfullscreen=true></div><div id=videoInfo><fieldset><legend>视频尺寸</legend><table><tbody><tr><td><label for=videoWidth>宽度</label><td><input class=txt id=videoWidth type=text><tr><td><label for=videoHeight>高度</label><td><input class=txt id=videoHeight type=text></table></fieldset><fieldset><legend>对齐方式</legend><div id=videoFloat><div name=none title=undefined style="background: url(http://ueditor.baidu.com/ueditor/dialogs/video/images/none_focus.jpg);"></div><div name=left title="左浮动" style="background: url(http://ueditor.baidu.com/ueditor/dialogs/video/images/left_focus.jpg);"></div><div name=right title="右浮动" class=focus style="background: url(http://ueditor.baidu.com/ueditor/dialogs/video/images/right_focus.jpg);"></div><div name=center title="独占一行" style="background: url(http://ueditor.baidu.com/ueditor/dialogs/video/images/center_focus.jpg);"></div></div></fieldset></div></div></div></div></div>',
+                                    success : function(index)
+                                    {
+
+                                    },
+                                    cancle : function()
+                                    {
+
+                                    }
+                                });
+
+
+                                var videoAttr = {
+                                    //视频地址
+                                    url: 'http://v.youku.com/v_show/id_XMTI3MjYzNDMzMg==_ev_1.html?from=y1.3-idx-uhome-1519-20887.205805-205902.1-1',
+                                    //视频宽高值， 单位px
+                                    width: 200,
+                                    height: 100
+                                };
+                                //这里可以不用执行命令,做你自己的操作也可
+                                editor.execCommand('insertvideo',videoAttr);
+                            }
+                        });
+
+                        return btn;
+                    });
+                },
+                _setup_simple_upload_btn : function()
+                {
+                    var self = this;
+
+                    UE.registerUI('simple-upload', function(editor, uiName) {
+
+
+                        //注册按钮执行时的command命令，使用命令默认就会带有回退操作
+                        editor.registerCommand(uiName,
+                                {
+                                    execCommand: function()
+                                    {
+
+                                    }
+                                });
+                        //创建一个button
+                        var btn = new UE.ui.Button
+                        ({
+                            //按钮的名字
+                            name: 'simpleupload',
+                            //提示
+                            title: '图片上传',
+                            //label : '<div class="editor-upload-btn" style="height: 20px !important;width: 20px !important;position: absolute;top: 0;left: 0;"></div>',
+                            //添加额外样式，指定icon图标，这里默认使用一个重复的icon
+                            //cssRules: 'background-position: -380px 0px;',
+                            //点击时执行的命令
+                            onclick: function()
+                            {
+                                //这里可以不用执行命令,做你自己的操作也可
+                                editor.execCommand(uiName);
+                            }
+                        });
+
+                        return btn;
+                    });
+                },
+                _setup_uploader : function(options)
+                {
+                    var self = this;
+
+                    $('.edui-for-simpleupload .edui-button-body').prepend('<div class="edui-upload-btn" style="position: absolute;z-index: 999;opacity: 0;"></div>');
+
+                    options = options || {};
+
+                    var default_params =
+                    {
+
+                        swf: './third-party/webuploader/Uploader.swf',
+                        chunked: false,
+                        chunkSize: 512 * 1024,
+                        server: 'http://sendmedia.yueus.com:8079/upload.cgi',
+                        // auto 设置true，选择图片即为自动上传
+                        auto: true,
+                        cover_img : '',
+                        //runtimeOrder: 'flash',
+                        pick :
+                        {
+                            id : '.edui-upload-btn',
+                            label : '选择图片'
+                        },
+                        formData :
+                        {
+                            poco_id : 100000
+                        },
+                        accept:
+                        {
+                            title: 'Images',
+                            extensions: 'gif,jpg,jpeg,bmp,png',
+                            mimeTypes: 'image/*'
+                        },
+                        // 上传表单的name值
+                        fileVal : 'opus',
+                        // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
+                        disableGlobalDnd: true,
+                        formData :
+                        {
+                            poco_id : 100000
+                        },
+                        fileNumLimit: 20,
+                        fileSizeLimit: 200 * 1024 * 1024,    // 200 M
+                        fileSingleSizeLimit: 50 * 1024 * 1024   // 50 M
+
+                    };
+
+
+
+                    var params = $.extend(true,default_params,options);
+
+                    // 实例化
+                    self.uploader = WebUploader.create(params);
+
+
+                    self.uploader.on('fileQueued', function(file)
+                    {
+                        var file_id = file.id;
+
+                        self.editor.execCommand('inserthtml', '<img class="loadingclass" id="' + file_id + '" src="./themes/default/images/spacer.gif" >');
+
+                    });
+
+                    // 文件上传成功。
+                    self.uploader.on( 'uploadSuccess', function(file,response)
+                    {
+                        // response 为服务端返回的数据
+                        console.log(response);
+
+                        var url =  response.url[0];
+
+                        if(url)
+                        {
+                            url =  window.__Util_Tools.matching_img_size(url,'');
+                        }
+
+                        var file_id = file.id;
+
+                        var loader = self.editor.document.getElementById(file_id);
+
+                        var new_img = new Image();
+                        new_img.src = url;
+
+                        new_img.onload = function()
+                        {
+                            loader.setAttribute('src', url);
+                            loader.setAttribute('_src', url);
+                            loader.removeAttribute('id');
+                            $(loader).removeClass('loadingclass');
+                        };
+
+
+
+
+                    });
+
+                },
+                /**
+                 * 初始化编辑器
+                 */
+                _initEditor: function() {
+                    var self = this, cfg = self.config;
+
+                    self.editor = new baidu.editor.ui.Editor({
+                        initialContent:cfg.content, // 初始化编辑器的内容
+                        //initialStyle:WO_STYLE, // 编辑器内部样式
+                        enterTag:'p', // 编辑器回车标签。p或br
+                        toolbars:cfg.toolbars, // 工具栏上的所有的功能按钮和下拉框
+                        initialFrameHeight : 320,
+                        minFrameHeight:300, // 最小高度
+                        autoHeightEnabled:cfg.autoHeight, // 是否自动长高
+                        autoFloatEnabled:true, // 是否保持toolbar的位置不动
+                        serialize: function() { // 配置过滤标签
+                            return self._serializeConfig();
+                        },
+                        elementPathEnabled:false, // 是否启用elementPath
+                        wordCount:false, // 是否开启字数统计
+                        sourceEditor:'textarea', // 源码的查看方式，codemirror 是代码高亮，textarea是文本框
+                        imagePopup:false, // 图片操作的浮层开关，默认打开
+                        focus:cfg.autoFocus, // 初始化时，是否让编辑器获得焦点true或false
+                        zIndex:cfg.zIndex
+                    });
+
+
+                }
+
+
+
+            };
+
+    /**
+     * 内容发布编辑器
+     * @constructor
+     */
+    function Ueditor(config) {
+        var self = this;
+
+        // factory or constructor
+        if (!(self instanceof Ueditor)) {
+            return new Ueditor(config);
+        }
+
+        if (typeof config.target === 'string') {
+            config.target = $(config.target)[0];
+        }
+
+        // mix config
+        self.config = $.extend(true, {}, defaultConfig, config);
+
+        self.editor;
+
+        // 初始化
+        self._init();
+
+    }
+
+    $.extend(Ueditor.prototype, extendFun);
+
+    window.Ueditor = Ueditor;
+})();
+
+var self = this;
+
+// 初始化生成编辑器
+var ueditor = new Ueditor({
+    target:'#container',
+    toolbars:[
+        'fullscreen'//全屏
+    ]
+
+});
+self.editor = ueditor.editor; // save editor obj
+
+
+</script>
+<a href="#top" class="btn_class" style="position:fixed;bottom:0;right:10px;">↑</a>
+<div id="bottom"></div>
+</html>

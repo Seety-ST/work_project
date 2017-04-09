@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>yue-ui</title>
+    
+    <script src="../../lib/lib.js"></script>
+    <script src="../../lib/jquery-1.11.2.min.js"></script>
+    <script src="../../lib/no-use.js"></script>
+    <script src="../../lib/mod.js"></script>
+    <link charset="utf-8" rel="stylesheet" href="../../style/no-use/no-use.scss">
+
+    <!-- 基本 -->
+    <link charset="utf-8" rel="stylesheet" href="../../style/reset.scss">
+
+    <!-- 当前页css  -->
+    <link charset="utf-8" rel="stylesheet" href="../../style/ui-color.scss">
+</head>
+
+<style type="text/css">
+    .model{}
+    .model p{ padding: 5px 0;}
+</style>
+
+
+<body>
+
+    <!-- 返回 -->
+    <div class="pop-back" id="pop-back">
+        <ul class="list clearfix">
+            <li id="go-back">返回首页</li>
+            <li id="go-top">返回顶部</li>
+        </ul>        
+    </div>
+    
+    <div class="pc-ui-frame clearfix font_wryh">
+
+        
+        <div class="ui-frame-content">
+
+            <div class="content">
+                <h3 class="main-title">颜色 ui-color.scss</h3>
+
+                <!-- 模板start -->
+                <div class="model f14">
+   
+                    <p class="color-fe9">文字颜色测试 <span class="ml10">#fe9920</span></p> 
+
+                    <p class="color-666">文字颜色测试 <span class="ml10">#666</span></p> 
+                    <p class="color-999">文字颜色测试 <span class="ml10">#999</span></p> 
+                    <p class="color-333">文字颜色测试 <span class="ml10">#333</span></p> 
+                    <p class="color-aaa">文字颜色测试 <span class="ml10">#aaa</span></p> 
+
+
+                    <p class="color-bbb">文字颜色测试 <span class="ml10">#bbb</span></p> 
+                    <p class="color-111">文字颜色测试 <span class="ml10">#111</span></p> 
+                    <p class="color-49C">文字颜色测试 <span class="ml10">#49CCD4</span></p> 
+                    <p class="color-01C">文字颜色测试 <span class="ml10">#01C0CE</span></p> 
+                    <p class="color-ff6">文字颜色测试 <span class="ml10">#ff6a6e</span></p> 
+                    <p class="color-ff5">文字颜色测试 <span class="ml10">#ff5959</span></p> 
+             
+
+                </div>
+                <!-- 模板end -->
+
+            </div>
+           
+            
+
+            <!-- 页面代码 -->
+ 
+        </div>
+    </div>
+
+</body>
+<script>
+    
+</script>
+</html>
+
+

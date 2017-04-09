@@ -1,0 +1,36 @@
+<div class="global-footer-bar-item ui-border-t">
+    <div class="item-wrap">
+        <ul class="list">
+            <a href="http://www.mojikids.com/index.php">
+            <li class="{%if $current_page_name == 'index'%}cur{%/if%}">
+                <i class="footer-icon footer-index-icon">
+                    
+                </i>
+                <p class="footer-txt color-ff9 tc">
+                    首页
+                </p>
+            </li>
+            </a>
+            <a href="{%$page_url.order_list%}">
+            <li class="{%if $current_page_name == 'order'%}cur{%/if%}">
+                <i class="footer-icon footer-order-icon">
+                    
+                </i>
+                <p class="footer-txt color-ff9 tc">
+                    订单
+                </p>
+            </li>
+            </a>
+            <a href="{%$page_url.mine%}">
+            <li class="{%if $current_page_name == 'mine'%}cur{%/if%}">
+                <i class="footer-icon footer-mine-icon">
+                    
+                </i>
+                <p class="footer-txt color-ff9 tc">
+                    我的
+                </p>
+            </li>
+           </a>
+        </ul>
+    </div>
+</div>

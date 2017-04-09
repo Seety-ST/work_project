@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>输入验证码</title>
+    <link href="css/beauty-point.css" type="text/css" rel="stylesheet" />
+    <body class="bg-f0f0f0">
+        <section class="verify-page">
+            <div class="listItem">
+                成功验证邀请码，可获得100积分
+            </div>
+            <div class="verify-input-wrap">
+                <div class="input-item clearfix">
+                    <input type="text" class="input-txt" placeholder="请输入对方的验证码" />
+                    <!-- 加上loading为加载状态 加上stop 为不可点击状态 -->
+                    <div class="btn-yzm stop loading">验证</div>
+                </div>
+                <!-- 网络超时 -->
+                <div class="tips-item">
+                    <i class="icon note-icon"></i>
+                    <span>网络超时，请检查网络。</span>
+                </div>
+                <!-- 验证错误 -->
+                <div class="tips-item" style="display: none">
+                    <i class="icon note-icon"></i>
+                    <span>邀请ID错误，验证失败！请重新输入。</span>
+                </div>
+                <!-- 已领奖励 -->
+                <div class="tips-item" style="display: none">
+                    <i class="icon note-icon"></i>
+                    <span>您已领取过该奖励。</span>
+                </div>
+            </div>
+        </section>
+        <!-- 成功弹窗 -->
+        <div class="pop-tips">
+            <i class="icon succeed-icon"></i>
+            <p class="txt">验证成功</p>
+        </div>
+        <!-- 成功弹窗 end -->
+    </body>
+</html>

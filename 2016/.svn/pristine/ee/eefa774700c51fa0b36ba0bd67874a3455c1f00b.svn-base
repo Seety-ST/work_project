@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>POCO摄影社区 - 中国领先时尚摄影平台，摄影爱好者分享作品和技巧首选</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+	<meta name="Keywords" content="摄影,拍照,视觉,相片,单反,风景,器材,个人主页,个人空间,相册,图片,潮人,个性">
+	<meta name="Description" content="POCO摄影社区是中国领先时尚摄影平台，汇聚百万摄影与视觉爱好者，和你发现和分享最新最时尚的摄影作品、资讯、潮流、技巧。 ">
+	<meta name="mobile-agent" content="format=xhtml;url=http://m.poco.cn">
+	<link rel="alternate" type="application/vnd.wap.xhtml+xml" media="handheld" href="http://m.poco.cn/">
+	<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/reset.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/global.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/header/header.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/footer/footer.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/layout.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://wwwcdn.poco.cn/css_common/v3/common.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://photo.poco.cn/youxue/css/color_v4.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://my.poco.cn/qing/assets/css/explore/arttools.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://my.poco.cn/qing/assets/css/ui/ui-forward.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://my.poco.cn/qing/assets/css/ui/ui-dialog.css?1451029600">
+	<link rel="stylesheet" type="text/css" href="http://my.poco.cn/qing/assets/css/ui/ui-button.css?1451029600"/>
+
+	<link rel="stylesheet" type="text/css" href="css/photo_v2.css">
+
+	<script type="text/javascript" src="http://www.poco.cn/js_common/??MkQzM0E2MDg=.js&t=2012v201211071022.js"></script> 
+	<script type="text/javascript" language="javascript" src="http://my.poco.cn/manage/js/lib/poco_page_switch_mt.js?v20121107102200"></script>
+	<script type="text/javascript" language="javascript" src="http://photo.poco.cn/like/js/collectInfoSlide_v2.js"></script>
+	<script type="text/javascript" src="http://www.poco.cn/js_common/common/pocoVerifiedUse.js"></script>
+	<script type="text/javascript" src="http://photo.poco.cn/js/jq_ifocus.js"></script>
+</head>
+
+<body style="height:100%">
+
+	<link rel="stylesheet" charset="utf-8" href="http://cb-c.poco.cn/pocoui/channel/photo/header/1.0.9/header.css">
+	<link rel="stylesheet" charset="utf-8" href="http://www.poco.cn/css_common/v3/channel/photo/color_v4.css?201405051539">
+
+	
+
+	
+
+	<!--content-->
+	<div id="content">
+		
+			<!-- 游学院   2016-3-21 -->
+			<div class="mod-youxue">
+				<div class="mod-title border-bottom1 border-color5 clearfix pt20 mod-link-none mt20">
+					<h3 class="Title color1 fl fn_wryh">
+						<a href="http://photo.poco.cn/youxue/" target="_blank">游学院</a>
+					</h3>
+					<ul class="item-nav f14 color2 fr">
+						<li id="J_yxy_weixin_btn">
+							<a href="#this">
+								<i class="icon-yxy"><img src="images/code-s-icon-15x15.png" /></i>扫码优惠
+							</a>
+							<!--二维码-->
+							<div style="display:none" class="code-item clearfix" id="J_yxy_weixin_qcode">
+								<i class="t-icon fl">
+									<span></span>
+								</i>
+								<div class="code circle-3px">
+									<div class="img">
+										<img src="images/test/code-img-140x140.png"></div>
+									<p class="fn_wryh">微信商城独享惊喜优惠</p>
+								</div>
+
+							</div>
+							<!--二维码 end-->
+						</li>
+					</ul>
+				</div>
+				<div class="mod-yxb-item mod-link-none pt20 clearfix">
+					<div class="yxy-info-item fn_wryh">
+						<!-- 焦点图位置 -->
+							<div class="yxy-banner-item">
+								<a href="http://www.yxylife.com/sheying/index" target="_blank">
+									<img src="images/yxy-banner-568x402.jpg" />
+								</a>
+							</div>
+						<!-- 焦点图位置end  -->
+					</div>
+					<div class="yxy-s-list fn_wryh">
+						<div class="tab-choose">
+							<ul>
+								<li class="cur" id="yxy_tab_nav_0">
+									<a href="#this" onmouseover="display_yxy_tab(0)">摄影旅游</a>
+								</li>
+								<li id="yxy_tab_nav_1">
+									<a href="#this" onmouseover="display_yxy_tab(1)">吃货之旅</a>
+								</li>
+								<li id="yxy_tab_nav_2">
+									<a href="#this" onmouseover="display_yxy_tab(2)">文化旅游</a>
+								</li>
+							</ul>
+						</div>
+						<div class="tab-con">
+							<div class="list clearfix" id="yxy_tab_0" style="display:block">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措重点拍摄香巴拉核心精华风光</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="list clearfix" id="yxy_tab_1" style="display:none">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅2</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="list clearfix" id="yxy_tab_2" style="display:none">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>					
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/200x180.jpg" />
+										</div>
+										<a href="#" class="img-infoItem">
+											<div class="info-item">
+												<div class="title-item">
+												<h5 class="title">川西摄影之旅3</h5>
+												</div>
+											</div>
+											<div class="summary-item">
+												<div class="title-item">
+													<h5 class="title">川西摄影之旅3</h5>
+												</div>
+												<div class="text-item">
+													<div class="txt">
+														<p>重点拍摄香巴拉核心精华风光稻城亚丁和巴塘措...</p>
+													</div>
+													<div class="btn-item">MORE</div>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+	</div>
+	<!--content-->
+	<script type="text/javascript">
+
+		$("J_yxy_weixin_btn").onmouseover = function(){$("J_yxy_weixin_qcode").style.display = "block";};
+		            
+		$("J_yxy_weixin_btn").onmouseout = function(){$("J_yxy_weixin_qcode").style.display = "none";};
+
+		function display_yxy_tab(index,count){
+			 
+			 var count  = '3';
+			 for(i=0;i<count;i++){
+				
+				document.getElementById('yxy_tab_nav_'+i).className = '';
+				document.getElementById('yxy_tab_'+i).style.display = 'none';
+			 
+			 }
+			 document.getElementById('yxy_tab_nav_'+index).className = 'cur';
+			 document.getElementById('yxy_tab_'+index).style.display = '';
+		  
+		  }
+
+	</script>
+</body>
+</html>

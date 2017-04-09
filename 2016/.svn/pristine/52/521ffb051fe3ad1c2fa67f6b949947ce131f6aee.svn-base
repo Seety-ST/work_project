@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>小美人儿</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body>
+		<section class="index-page">
+			<article class="con-item">
+				<div class="listItem"></div>
+				<div class="img-wrap">
+					<div class="img-item">
+						<img src="images/test/525x533.jpg" />
+					</div>
+					<div class="text-item">
+						<dl>
+							<dt>英伦复古</dt>
+							<dd>红蓝调调，复古眼镜，绅士帽子，双层巴士...我，就在伦敦！</dd>
+						</dl>
+					</div>
+				</div>
+			</article>
+			<section class="mod-downLoad-item">
+				<a href="#" class="downLoad-btn"></a>
+			</section>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+<?php
+/**
+* @Desc:     清除缓存 
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年12月1日
+* @Time:     上午9:59:51
+* @Version:  
+*/
+$tpl = getSmartyTemplate('index.tpl.htm', '/disk/data/htdocs232/poco/paizhao/templates/pc/ptjs/');
+$tpl->smarty->clearAllCache();
+echo '<script>alert("清除缓存成功!");window.location.href="index.php"</script>';

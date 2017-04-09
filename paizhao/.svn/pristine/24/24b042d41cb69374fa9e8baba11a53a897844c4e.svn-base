@@ -1,0 +1,104 @@
+.index-page{
+	.item-wrap{
+		.search-item{
+			padding:7px 15px;
+			display: -webkit-box;
+			.lbox{
+				position:relative;
+				.item{
+					padding:5px 25px 0px 0px;
+					position:relative;
+					.arrow-icon{
+						width:10px;
+						height: 10px;
+						position: absolute;
+						right:10px;
+						top:10px;
+						display:inline-block;
+						vertical-align: middle;
+						background-image: url(../../image/index/arrow-icon-20x20.png?__sprite);
+						background-size: 10px 10px;
+					}
+					.txt{
+						
+
+					}
+				}
+			
+				.pop-item{
+					background-color: #fff;
+					position:absolute;
+					left: 0;
+					top:37px;
+					.triangle-icon{
+							width: 0;
+							height: 0;
+							border-left: 10px solid transparent;
+							border-right: 10px solid transparent;
+							border-bottom: 10px solid #fff;
+							position: absolute;
+							top: -10px;
+							left: 50%;
+							margin-left: -10px;
+					}
+					.list{
+						padding:0px 10px;
+						li{
+							padding:13px 0px;
+							border-bottom: 1px solid #ddd;
+							&:last-child{
+								border-bottom:none;
+							}
+						}
+					}
+				}
+				
+			}
+			.rbox{
+				-webkit-box-flex:1;
+				.input-txt{
+					padding:0px 5%;
+					width:90%;
+					height:30px;
+					background-color: #eeeeee;
+				}
+			}
+		}
+		.content{
+			.p1th{
+				.swiper-container{
+					position:relative;
+					.swiper-wrapper{
+						.swiper-slide{
+							.img{
+								width:100%;
+								min-height: 160px;
+							}
+						}
+					}
+					
+					.swiper-pagination{
+						width:100%;
+						position:absolute;
+						left:0;
+						bottom:2.667%;
+						text-align: center;
+						.swiper-pagination-bullet{
+							width:8px;
+							height:8px;
+							border-radius: 50%;
+							display:inline-block;
+							margin-right: 3px;
+							background-color: #a8a6aa;
+							border:2px solid #a8a6aa;
+							&.swiper-pagination-bullet-active{
+								border-color:#fff;
+							}
+						}
+					}
+				}
+				
+			}
+		}
+	}
+}

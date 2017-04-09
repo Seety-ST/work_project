@@ -1,0 +1,12 @@
+<?php
+/**
+* @Desc:     摄影师列表      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:39:38
+* @Version:  
+*/
+include_once('common.inc.php');
+$photographers = POCO::singleton('pai_paizhao_photographers_class');
+$photo_list = $photographers->get_photographers_list();
+var_dump($photo_list);

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017224/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+<title>
+    icon规格大小
+</title>
+
+
+    
+</head>
+<style type="text/css">
+    .color-mod p{
+        margin-top: 15px;
+    }
+    .content{
+        padding: 0px 20px 20px 20px;
+    }
+    .mod{
+        margin-top: 15px;
+    }
+    p{padding-top: 3px;}
+
+    .icon-size-demo{
+        display: inline-block;
+        margin-right: 5px;
+        background-color: #999;
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+<!-- YUE-UI VUE 头部返回模块 start -->
+<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+<div class="content f14">
+
+<p >
+    <p class="color-ff6">icon规格大小：</p>
+    <p>yue-ui-icon-size-12 <span class="icon-size-demo yue-ui-icon-size-12"></span></p> 
+    <p>yue-ui-icon-size-13 <span class="icon-size-demo yue-ui-icon-size-13"></span></p> 
+    <p>yue-ui-icon-size-16 <span class="icon-size-demo yue-ui-icon-size-16"></span></p> 
+    <p>yue-ui-icon-size-20 <span class="icon-size-demo yue-ui-icon-size-20"></span></p> 
+    <p>yue-ui-icon-size-22 <span class="icon-size-demo yue-ui-icon-size-22"></span></p>
+    <p>yue-ui-icon-size-27 <span class="icon-size-demo yue-ui-icon-size-27"></span></p>
+    <p>yue-ui-icon-size-30 <span class="icon-size-demo yue-ui-icon-size-30"></span></p>
+    <p>yue-ui-icon-size-32 <span class="icon-size-demo yue-ui-icon-size-32"></span></p>
+    <p>yue-ui-icon-size-40 <span class="icon-size-demo yue-ui-icon-size-40"></span></p>
+    <p>yue-ui-icon-size-43 <span class="icon-size-demo yue-ui-icon-size-43"></span></p>
+    <p>yue-ui-icon-size-60 <span class="icon-size-demo yue-ui-icon-size-60"></span></p>
+    <p>yue-ui-icon-size-80 <span class="icon-size-demo yue-ui-icon-size-80"></span></p>
+</p>
+
+
+<p  class="pt20">
+    <p class="color-ff6">icon字体大小：</p> 
+    <p>icon-font-size-12 </p>
+    <p>icon-font-size-13 </p>
+    <p>icon-font-size-16 </p>  
+    <p>icon-font-size-20 </p>  
+    <p>icon-font-size-22</p> 
+    <p>icon-font-size-30</p> 
+    <p>icon-font-size-32</p> 
+    <p>icon-font-size-43</p> 
+    <p>icon-font-size-60</p> 
+    <p class="pb20">tips：svg icon，图标图片变字体，可根据字体属性更改大小，颜色配置</p>
+</p>
+
+
+
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-msg icon-font-size-16 yue-ui-icon-size-16"></i>
+        <p>16x16</p>
+    </div>
+
+    
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-msg icon-font-size-22 color-ffb"></i>
+        <p>22x22</p>
+    </div>
+
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-msg icon-font-size-32 color-ff6"></i>
+        <p>32x32</p>
+    </div>
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-msg icon-font-size-43 color-fe9"></i>
+        <p>43x43</p>
+    </div>
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-msg icon-font-size-60"></i>
+        <p>60x60</p>
+    </div>
+
+
+
+
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-16"></i>
+        <p>16x16</p>
+    </div>
+
+    
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-22 color-ffb"></i>
+        <p>22x22</p>
+    </div>
+
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-32 color-ff6"></i>
+        <p>32x32</p>
+    </div>
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-43 color-fe9"></i>
+        <p>43x43</p>
+    </div>
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-60"></i>
+        <p>60x60</p>
+    </div>
+
+
+
+    <br />
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-allow icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-back icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-collect-empty icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-collect-solid icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-error icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-home icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-home-active icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-msg icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-my icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-my-active icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-no-data icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-search icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-stars icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-success icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-16"></i>
+        <i class="dib icon-font i-iconfont-close icon-font-size-16"></i>
+    </div>
+
+
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-allow icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-back icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-collect-empty icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-collect-solid icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-error icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-home icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-home-active icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-msg icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-my icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-my-active icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-no-data icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-search icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-stars icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-success icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-32"></i>
+        <i class="dib icon-font i-iconfont-close icon-font-size-32"></i>
+    </div>
+
+
+
+    <div class="mod">
+        <i class="dib icon-font i-iconfont-allow icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-back icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-collect-empty icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-collect-solid icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-error icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-home icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-home-active icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-msg icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-my icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-my-active icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-no-data icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-phone-2 icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-search icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-stars icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-success icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-60"></i>
+        <i class="dib icon-font i-iconfont-close icon-font-size-60"></i>
+    </div>
+</div>
+
+
+
+
+
+</body>
+
+
+</html>

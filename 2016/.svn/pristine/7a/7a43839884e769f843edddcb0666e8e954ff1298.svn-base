@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="gbk" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>和芭姐抢男神</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script src="js/lazysizes.min.js" async=""></script>
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+<body>
+	<section class="index-page">
+		<div class="path1">
+			<img data-sizes="auto" data-src="images/ll-img-1.jpg"  class="lazyload" />
+		</div>
+		<div class="path2 lazyload" data-expand="-30">
+			<img data-sizes="auto" data-src="images/ll-img-2.jpg"  class="lazyload" />
+		</div>
+		<div class="path3 lazyload" data-expand="-30">
+			<img data-sizes="auto" data-src="images/ll-img-3.jpg"  class="lazyload" />
+		</div>
+		<div class="path4 lazyload" data-expand="-30">
+			<div class="item time-item">
+				<h4 class="title">活动时间:</h4>
+				<div class="list">
+					<ul>
+						<li class="clearfix">
+							<i class="icon"></i>
+							<span class="txt fb">
+								<em class="point">2016年11月23日-29日</em>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="item">
+				<h4 class="title">活动规则：</h4>
+				<div class="list">
+					<ul>
+						<li class="clearfix">
+							<i class="icon">1</i>
+							<span class="txt">打开<em class="point">“美人相机”</em>APP拍照。</span>
+						</li>
+						<li class="clearfix">
+							<i class="icon">2</i>
+							<span class="txt">点开<em class="point">“领取小鲜肉”</em>素材专题，添加时尚芭莎的专属贴纸和相框。</span>
+						</li>
+						<li class="clearfix">
+							<i class="icon">3</i>
+							<span class="txt">保存图片到<em class="point">芭莎in“晒”</em>区域晒中发帖，添加话题标签选中<em class="point">#和芭姐抢男神#</em>发布，即可参与。</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn-item">
+				<a href="#" class="join-btn fb">参与活动</a>
+				<a href="#" class="join-btn take-btn fb">领取美妆大奖</a>
+			</div>
+		</div>
+	</section>
+	<script>
+	window.lazySizesConfig = {
+		addClasses: true
+	};
+	</script>
+</body>
+</html>

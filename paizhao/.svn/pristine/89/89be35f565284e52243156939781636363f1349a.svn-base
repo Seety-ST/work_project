@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://www.51snap.cn/static/pc/lib/base.c17f5da.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	
+	
+
+	<link type="text/css" rel="stylesheet" href="http://www.51snap.cn/static/pc/style/ui/no-use/no-use.4f246d1.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://www.51snap.cn/static/pc/style/common/main.63d8aff.css">
+<!-- 当前页css  -->
+	<link type="text/css" rel="stylesheet" href="http://www.51snap.cn/static/pc/style/ui/ui-avatar.af58da9.css">
+<script type="text/javascript" >
+require.resourceMap({"res":{"pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto":{"url":"http://www.51snap.cn/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.c132acb.js"},"pc-huipai:global/cookie/index":{"pkg":"pc-huipai:p0"},"pc-huipai:global/layer/extend/layer.ext":{"pkg":"pc-huipai:p0"},"pc-huipai:global/layer/layer":{"pkg":"pc-huipai:p0"},"pc-huipai:global/lazyload/lazyload":{"deps":["pc-huipai:global/utility/index"],"pkg":"pc-huipai:p0"},"pc-huipai:global/list/list":{"deps":["pc-huipai:global/utility/index","pc-huipai:global/lazyload/lazyload"],"pkg":"pc-huipai:p0"},"pc-huipai:global/location_sel/location_sel":{"pkg":"pc-huipai:p0"},"pc-huipai:global/main":{"pkg":"pc-huipai:p0"},"pc-huipai:global/placeholder/index":{"pkg":"pc-huipai:p0"},"pc-huipai:global/ua/index":{"pkg":"pc-huipai:p0"},"pc-huipai:global/utility/cross_domain_storage":{"pkg":"pc-huipai:p0"},"pc-huipai:global/utility/index":{"deps":["pc-huipai:global/cookie/index","pc-huipai:global/ua/index"],"pkg":"pc-huipai:p0"},"pc-huipai:go_top":{"url":"http://www.51snap.cn/static/pc/modules/go_top/go_top.59702b5.js"},"pc-huipai:header_search/index":{"url":"http://www.51snap.cn/static/pc/modules/header_search/index.472a53a.js"}},"pkg":{"pc-huipai:p0":{"url":"http://www.51snap.cn/static/pc/js/common.dc7b4a2.js"}}});
+</script>
+
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">头像规格 ui-avatar.scss</h3>
+
+				<!-- 模板start -->
+				<div class="model">
+					<p class="f14 pb5">16x16</p>
+					<div class="ui-avatar-icon ui-avatar-icon-16">
+						<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+					</div>
+					<br />
+					<p class="f14 pb5">64x64</p>
+					<div class="ui-avatar-icon ui-avatar-icon-64">
+						<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+					</div>
+
+					<br />
+					<p class="f14 pb5">80x80</p>
+					<div class="ui-avatar-icon ui-avatar-icon-80">
+						<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+					</div>
+					<br />
+					<p class="f14 pb5">90x90</p>
+					<div class="ui-avatar-icon ui-avatar-icon-90">
+						<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+					</div>
+					<br />
+					<p class="f14 pb5">120x120</p>
+					<div class="ui-avatar-icon ui-avatar-icon-120">
+						<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+					</div>
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+	
+</script>
+</html>
+
+

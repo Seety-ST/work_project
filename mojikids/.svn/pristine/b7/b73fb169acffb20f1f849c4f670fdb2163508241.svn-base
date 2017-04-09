@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017120/main.d624110.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.39fdb82.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+    <title>
+        日期选择器 范例
+    </title>
+
+
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/modules/widget/picker/picker-slot.9016375.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/modules/widget/picker/picker.62353f3.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/2017120/widget.d3d8a04.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/modules/widget/datepicker/datepicker.2a79cd5.css" />
+</head>
+
+<body>
+    <header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+    <main role="main">
+        <div id="page-container" class="page-container page-view">
+            <mt-datetime-picker ref="picker1" type="date" v-model="value1" @confirm="confirm1"
+            :start-date="start"
+            :end-date="end"
+            :cur-date="cur_date"
+
+            >
+            </mt-datetime-picker>
+
+            <mt-datetime-picker ref="picker2" type="time" v-model="value2" @confirm="confirm2">
+            </mt-datetime-picker>
+
+
+            <button class="ui-button ui-button-block ui-button-100per ui-button-size-x ui-button-bg-ff6-has-active" @click="open('picker1')">
+  				<span class="ui-button-content f14">年月日选择</span>
+  			</button>
+            <br>
+                <button class="ui-button ui-button-block ui-button-100per ui-button-size-x ui-button-bg-ff6-has-active" @click="open('picker2')">
+  				<span class="ui-button-content f14">时分选择</span>
+  			</button>
+            <br>
+
+
+        </div>
+    </main>
+
+
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/js/2017120/common.83ca090.js"></script>
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/js/2017120/picker.4c39f91.js"></script>
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/js/2017120/widget.eaae718.js"></script>
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/js/2017120/datepicker.09239f8.js"></script>
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+    (function() {
+
+        // 详细文档
+        // http://mint-ui.github.io/docs/#!/zh-cn2/datetime-picker
+
+        var DatetimePicker = require('wap-kids:widget/datepicker/index')
+
+        Vue.component(DatetimePicker.name, DatetimePicker);
+
+        new Vue
+        ({
+            el: '#page-container',
+            created: function() {
+
+            },
+            data: function() {
+                return {
+                    value1 : '',
+                    value2 : '',
+                    start : new Date(new Date().getFullYear() - 8, 0, 1),// 8年前算起
+                    end : new Date(new Date().getFullYear()+1, 0, 31),
+                    cur_date : '2012-12-14',// 设置选中日期
+                    type : 'time',
+
+                }
+            },
+            methods: {
+                open: function(tag)
+                {
+                    var self = this;
+
+                    self.$refs[tag].open();
+                },
+                /**
+                 * 获取选中的值
+                 * @param  {[type]} d [description]
+                 * @return {[type]}   [description]
+                 */
+                confirm1 : function(d)
+                {
+                    // d ==> new Date()
+                    console.log(format_time(d));
+                },
+                confirm2 : function(value)
+                {
+                    console.log(d);
+                }
+            }
+        });
+
+        /**
+         * 简单格式化时间
+         * @param  {[type]} nowDate [description]
+         * @return {[type]}         [description]
+         */
+        function format_time(nowDate)
+        {
+            var str = nowDate.getFullYear() + "-"+ (nowDate.getMonth()+1) + "-" + nowDate.getDate();
+
+            return str
+        }
+    })();
+</script>

@@ -1,0 +1,72 @@
+<!--头部bar-->
+
+<div class="global-header font_wryh">
+	<div class="w1200 item-wrap clearfix">
+		<div class="lbox fldi clearfix">
+			<a href="{%$paizhao_page_url.index%}">
+				<div class="logo-item fldi">
+					<img src="../../image/header/logo-img-64x64.png" />
+				</div>
+			</a>
+			<div class="nav-item fldi">
+				<ul class="list clearfix f14">
+
+					<li class="{%if $params.nav == 'index'%}cur{%/if%}">
+						<a class="text" href="{%$paizhao_page_url.index%}">首页</a>
+					</li>
+					<li class="{%if $params.nav == 'camera'%}cur{%/if%}">
+						<a class="text" href="http://paizhao.yueus.com/search/index.php?tp=per&p=1&pt=0&sort=1&order=2&lid=101029001&kw=%25E6%2591%2584%25E5%25BD%25B1%25E5%25B8%2588&s=1">摄影师</a>
+					</li>
+<!-- 					<li>
+						<a class="text" href="#">平台介绍</a>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+		<div class="rbox frdi clearfix">
+
+
+			<!-- 搜索 -->
+			<div class="seach-area fldi">
+				<span class="search-icon search-icon-first"  header-s-data="click-first"></span>
+				<div class="search fn-hide" data-role="header-s-search">
+					<span class="search-icon "  header-s-data="click"></span>
+					<div class="wbox clearfix" header-s-data="show">
+					    <div class="lbox fldi re" header-s-data="btn">
+					    	<i class="ui-triangle ui-triangle-bottom-mid-gray"></i>
+					    	<p class="p1 color-666 f14"  header-s-data="title">摄影套系</p>
+							<!-- 弹出 -->
+							<div class="pop-sec fn-hide" header-s-data="pop" >
+								<ul class="list clearfix">
+								    <li header-s-data-role="list">服务</li>
+								    <li header-s-data-role="pter">商家</li>
+								</ul>        
+							</div>
+					    </div>
+					    <div class="rbox fldi">
+					    	<input type="text" name=" " id=" " header-s-data="key" placeholder="搜索你想拍的" class="input-text" />
+					    </div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- 搜索 -->
+
+
+
+			<div class="info-item fldi">
+				<button class="ui-button ui-button-bg-24c ui-button-block   ui-button-size-h30">
+				           <span class="ui-button-content f14">摄影师入驻</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--SCRIPT_PLACEHOLDER-->
+<script type="text/javascript">
+$(function() 
+{
+    require('../../modules/header_search/index');
+
+})
+</script>

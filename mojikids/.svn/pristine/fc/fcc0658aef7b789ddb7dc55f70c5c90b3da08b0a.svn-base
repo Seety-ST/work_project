@@ -1,0 +1,44 @@
+@import "../../sass/compass";
+//`iconfont 汤圆 2016-1-18
+
+// 扩展方法
+@mixin yue-ui-icon-font-size($size)
+{
+    font-size: $size !important;
+}
+
+@mixin yue-ui-icon-size($size)
+{
+    width: $size;
+    height: $size;
+    display:  block;
+}
+
+
+.icon-font-size-7{@include yue-ui-icon-font-size(7px)}
+.icon-font-size-10{@include yue-ui-icon-font-size(10px)}
+.icon-font-size-12{@include yue-ui-icon-font-size(12px)}
+.icon-font-size-13{@include yue-ui-icon-font-size(13px)}
+.icon-font-size-16{@include yue-ui-icon-font-size(16px)}
+.icon-font-size-20{@include yue-ui-icon-font-size(20px)}
+.icon-font-size-22{@include yue-ui-icon-font-size(22px)}
+.icon-font-size-30{@include yue-ui-icon-font-size(30px)}
+.icon-font-size-32{@include yue-ui-icon-font-size(32px)}
+.icon-font-size-43{@include yue-ui-icon-font-size(43px)}
+.icon-font-size-60{@include yue-ui-icon-font-size(60px)}
+.icon-font-size-80{@include yue-ui-icon-font-size(80px)}
+
+
+.yue-ui-icon-size-12{@include yue-ui-icon-size(12px)}
+.yue-ui-icon-size-13{@include yue-ui-icon-size(13px)}
+.yue-ui-icon-size-16{@include yue-ui-icon-size(16px)}
+.yue-ui-icon-size-20{@include yue-ui-icon-size(20px)}
+.yue-ui-icon-size-22{@include yue-ui-icon-size(22px)}
+.yue-ui-icon-size-27{@include yue-ui-icon-size(27px)}
+.yue-ui-icon-size-30{@include yue-ui-icon-size(30px)}
+.yue-ui-icon-size-32{@include yue-ui-icon-size(32px)}
+.yue-ui-icon-size-40{@include yue-ui-icon-size(40px)}
+.yue-ui-icon-size-43{@include yue-ui-icon-size(43px)}
+.yue-ui-icon-size-60{@include yue-ui-icon-size(60px)}
+.yue-ui-icon-size-80{@include yue-ui-icon-size(80px)}
+.yue-ui-icon-size-100{@include yue-ui-icon-size(100px)}

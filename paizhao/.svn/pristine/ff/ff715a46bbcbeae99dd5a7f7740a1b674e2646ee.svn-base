@@ -1,0 +1,39 @@
+<!--底部-->
+<div class="global-footer font_wryh">
+	<div class="item-1">
+		<div class="w1200 clearfix">
+			<div class="introduction-item fldi">
+				<div class="logo-item mb5"></div>
+				<div class="introduct-txt f14 color-666">
+					串联消费者、摄影师、影楼等完整产业链的互联网摄影平台。这里汇聚全国富有创造力的摄影师及摄影机构资源，通过重塑丰富多彩的摄影场景和摄影师认证保障机制，让消费者能迅速找到匹配个性需求的摄影师，让摄影变得新鲜、好玩、便捷，提供一站式品质摄影服务。
+				</div>
+			</div>
+			
+			<div class="code-item fldi">
+				<div class="img">
+					<img src="http://www.51snap.cn/static/pc/image/footer/code-img-100x100.648d7ce.jpg" />
+				</div>
+				<div class="txt f14">
+					微信服务号：yueyuephoto
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="item-2">
+		<div class="w1200">
+			<div class="phone-txt color-aaa mb5">
+				约摄客服电话：<span class="color-666">400-890-3040</span>（工作日 10:00 至 19:00）
+			</div>
+			<p class="text">
+				Copyright &copy; 2003-{%$current_year%} YUEUS.COM 
+				<a href="http://www.miibeian.gov.cn/" target="_blank" class="color-666">粤ICP备16105622号-2</a>&nbsp; 
+				<span class="pl5">
+						<img src="http://www.beian.gov.cn/file/ghs.png" style="vertical-align: middle;">
+				</span>
+				<!-- <a target="_blank" class="color-ccc" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402000043">粤公网安备 44010402000043号  </a> --> &nbsp;  
+				<a class="color-ccc" href="{%$paizhao_page_url.index%}">版权所有：广州市约影信息科技有限公司</a>
+			</p>
+		</div>
+	</div>
+	
+</div>

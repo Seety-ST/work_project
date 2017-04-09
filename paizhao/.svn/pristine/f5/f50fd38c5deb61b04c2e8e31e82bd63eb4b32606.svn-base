@@ -1,0 +1,224 @@
+.camera-page{
+	.p1th{
+		padding:50px 0px;
+		border-bottom: 1px solid #eee;
+		.lbox{
+			padding:0px 100px;
+			.address-txt{
+				text-align: center;
+				padding-top: 20px;
+				.icon{
+					vertical-align: middle;
+				}
+				.txt{
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+		.rbox{
+			width: 800px;
+			.item-2{
+				padding-top: 40px;
+				background:url(../../image/camera/txt-bg-67x61.png) no-repeat right bottom;
+				.txt-2{
+					padding-top: 35px;
+					.list{
+						li{
+							float: left;
+							margin-right: 65px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.p2th{
+		padding-bottom: 80px;
+		.item-wrap{
+			.select-list-item{
+				margin:20px 0px;
+				background-color: #fafafa;
+				.classify-item{
+					.list{
+						li{
+							float: left;
+							padding:15px 0px;
+							margin-left: 40px;
+							cursor: pointer;
+							&.li-cur{
+								color:#2bd9d9;
+							}
+							&:hover{
+								color:#2bd9d9;
+							}
+						}
+					}
+				}
+				.sort-item{
+					.list{
+						li{
+							float: left;
+							padding:15px 0px;
+							margin-left: 40px;
+							cursor: pointer;
+							&.li-cur{
+								color:#2bd9d9;
+							}
+							&:hover{
+								color:#2bd9d9;
+								.icon{
+									background-image: url(../../image/camera/up-arrow-12x12.png);
+								}
+								.sort-up-arrow{
+
+									background-image: url(../../image/camera/up-arrow-12x12.png);
+									
+								}
+								.sort-down-arrow{
+									background-image: url(../../image/camera/down-arrow-12x12.png);
+									
+								}
+							}
+							.icon{
+								width:12px;
+								height:12px;
+								display:inline-block;
+								background-repeat: no-repeat;
+								background-size: 100%;
+
+							}
+							.sort-down-arrow{
+								background-image: url(../../image/camera/down-arrow-12x12.png);
+								
+							}
+							
+							.sort-up-arrow{
+								background-image: url(../../image/camera/up-arrow-12x12.png);
+
+							}	
+
+						}
+							
+					}
+				}
+			}
+			.photo-list-item{
+				.pic-list-mod-1{
+					.txt-item{
+						.box-2{
+							height: 42px;
+						}
+					}
+					.img-item{
+						.img{
+							img{
+								height:100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.pop-contact-mod{
+	width: 500px;
+	margin: 0 auto;
+	.p1{
+		text-align: center;
+		line-height: 28px;
+		padding: 0px 0 30px 0;
+	}
+	.it{
+		text-align: center;
+		.input-text{
+			width: 180px;
+			height:24px;
+			line-height: 24px;
+			padding: 3px 10px;
+			border: 1px solid #ddd;
+			margin-right: 10px;
+			font-size: 14px;
+		}
+	}
+	.btn{
+		width: 270px;
+		margin: 0 auto;
+		padding-top: 20px;
+	}
+	.num-box{
+		text-align: center;
+		padding: 10px 0 0 0;
+		.num{
+			padding: 0px 5px;
+		}
+	}
+}
+
+body .pai_zhao_camera_class .layui-layer-content {
+    padding: 20px 20px 35px 20px;
+}
+.pai_zhao_camera_class  .layui-layer-btn1{
+    display:none
+}
+.pai_zhao_camera_class .layui-layer-btn{
+	border-top: none;
+	background-color: #fff;
+	text-align: center;
+	padding: 0px 10px 15px 15px;
+}
+.pai_zhao_camera_class  .layui-layer-title{
+	overflow: visible;
+}
+.pai_zhao_camera_class  .layui-layer-title .title-item{
+	position: relative;
+}
+.pai_zhao_camera_class  .layui-layer-title .title-item .max-code-img{
+	width:100px;
+	height:100px;
+	background:url(../../image/camera/code-img-100x100.jpg) no-repeat center;
+	position:absolute;
+	top:50px;
+	left:-50px;
+}
+.pai_zhao_camera_class  .layui-layer-title .code-icon{
+	width:12px;
+	height:12px;
+	display:inline-block;
+	margin-right: 10px;
+	cursor:pointer;
+	background: url(../../image/camera/code-img-18x18.jpg) no-repeat center;
+}
+// 成功弹窗
+.pop-contact-success-mod{
+    width: 500px;
+    margin: 0 auto;
+    .lbox{
+	   margin-left: 15px;
+	   .img{
+		  background: url(../../image/camera/erweima-182x142.jpg);
+		  width: 182px;
+		  height: 142px;
+	   }
+	   .txt{
+		  margin:-10px 0 0 10px;
+	   }
+    }
+    .rbox{
+	   margin-left: 20px;
+	   width: 280px;
+	   text-align: center;
+	   color: #333;
+	   font-size: 16px;
+	   line-height: 26px;
+	   .img{
+		margin-top: 15px;
+	   }
+	   .txt{
+		  padding-top: 15px;
+	   }
+    }
+}

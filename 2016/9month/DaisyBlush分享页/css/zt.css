@@ -1,0 +1,97 @@
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #fff; }
+a:hover { text-decoration: none }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html { 
+	-ms-touch-action: none;
+}
+body{
+	background: #ecd0cd url(../images/ll-img-1.jpg) center top no-repeat;
+	background-size: 100% auto;
+	color: #fff;
+	font-size: 0.24rem;
+}
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+	height: 100%;
+	width: 100%;
+}
+input,select,button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0; 
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="radio"]:checked,
+button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0;
+}
+
+
+
+
+/* content */
+/* index */
+.share-page{
+	padding: 2.23rem 0.95rem 0.7rem;
+}
+.share-page img{
+	width: 100%;
+	display: block;
+}
+.share-page .con-item{
+	text-align: center;
+}
+.share-page .con-item .img-item{
+	width: 100%;
+	padding-bottom: 0.53rem;
+}
+.share-page .btn-item .more-btn{
+	display: block;
+	width: 100%;
+	height: 0.89rem;
+	background: #ecd0cd url(../images/ll-img-2.png) center top no-repeat;
+	background-size: 100% auto;
+}
+.share-page .btn-item .more-btn:active{
+	opacity: 0.8;
+}

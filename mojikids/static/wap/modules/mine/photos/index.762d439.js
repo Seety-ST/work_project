@@ -1,0 +1,1 @@
+define("wap-kids:mine/photos/index",function(e,t,o){"use strict";function i(e){return e&&e.__esModule?e:{"default":e}}var n=e("wap-kids:mine/photos/photos"),s=i(n);o.exports=s.default});

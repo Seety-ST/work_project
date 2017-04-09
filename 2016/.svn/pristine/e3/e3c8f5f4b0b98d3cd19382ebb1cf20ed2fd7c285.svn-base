@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+
+<title>无标题文档</title>
+</head>
+
+<body>
+	<div class="header">
+		<div class="head w1000 clearfix">
+			<a href="#" class="fl ml20"><img src="images/ll-logo-1.png" /></a>
+			<a href="#" class="fr mr20"><img src="images/ll-logo-2.png" /></a>
+		</div>
+	</div>
+	<div class="content w1000">
+		<div class="nav-content clearfix">
+			<h1 class="logo"><a href="#"></a></h1>
+			<div class="top-login clearfix">
+					<a href="#" class="weibo frdi"></a> 
+					<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+				</div>
+				<ul class="nav clearfix font_wryh">
+					<li class="cur"><a href="#">首页</a></li>
+					<li><a href="#">大赛规则</a></li>
+					<li><a href="#">我要参赛</a></li>
+					<li><a href="#">作品浏览</a></li>
+					<li><a href="#">我的作品</a></li>
+					<li><a href="#">获奖公布</a></li>
+				</ul>
+			</div>		
+			<!-- 模板 -->
+			<div class="hjmd-page w1000">
+				<div class="banner-item">
+					<img src="images/banner-966x100.jpg" />
+				</div>
+				<div class="path1">
+					<h3 class="title font_wryh">POCO-EOS达人月赛<span class="cor">获奖公布</span></h3>
+					<div class="pathA">
+						<ul class="tab-list font_wryh clearfix">
+							<li class="cur" id="on1" ><a href="#this" onclick="tab('on',1,3)">5月</a></li>
+							<li id="on2"><a href="#this"  onclick="tab('on',2,3)">6月</a></li>
+							<li id="on3" ><a href="#this" onclick="tab('on',3,3)">7月</a></li>
+							<li id="on4" ><a href="#this" onclick="tab('on',3,3)">8月</a></li>
+						</ul>
+					</div>
+					<div class="pathB">
+						<div class="item-warp" id="c-on1" style="display:;">
+							<div class="item">
+								<div class="listItem font_wryh clearfix"><i class="icon"></i><span>最佳作品</span></div>
+								<div class="list">
+									<ul>
+										<li class="clearfix">
+											<div class="img-item">
+												<img src="images/300x300.jpg" />
+											</div>
+											<div class="text-item">
+												<dl class="txt-warp">
+													<dt class="t-title font_wryh">点评嘉宾：逆水</dt>
+													<dd class="info">
+														<p>民族的才是世界的，一度我们出现了文化的断层，幸好越来越多的国人意识到了这种断层对民族文化的传承有着多么巨大的破坏。如今的戏曲在众多的现代娱乐方式的围堵渐渐退下光环，生存环境也越来越艰难。每当摄影师将镜头对准这些戏曲元素的时候，一般都会给读者带来一定的思考和遐想。这张片子也不例外，精彩的利用了现场光影氛围和抓拍的自然效果，将戏曲的精彩瞬间展现在了读者的面前，画面极其具有吸引力，给读者一种想去看看的冲动。</p>
+													</dd>
+												</dl>
+												<div class="info-item clearfix">
+													<div class="name-item font_wryh">晨间屹立的树_夏夏</div>
+													<div class="zan-item"><i class="icon"></i><span></span>152</div>
+												</div>
+											</div>
+										</li>
+										<li class="clearfix">
+											<div class="img-item">
+												<img src="images/300x300.jpg" />
+											</div>
+											<div class="text-item">
+												<dl class="txt-warp">
+													<dt class="t-title font_wryh">点评嘉宾：逆水</dt>
+													<dd class="info">
+														<p>民族的才是世界的，一度我们出现了文化的断层，幸好越来越多的国人意识到了这种断层对民族文化的传承有着多么巨大的破坏。如今的戏曲在众多的现代娱乐方式的围堵渐渐退下光环，生存环境也越来越艰难。每当摄影师将镜头对准这些戏曲元素的时候，一般都会给读者带来一定的思考和遐想。这张片子也不例外，精彩的利用了现场光影氛围和抓拍的自然效果，将戏曲的精彩瞬间展现在了读者的面前，画面极其具有吸引力，给读者一种想去看看的冲动。</p>
+													</dd>
+												</dl>
+												<div class="info-item clearfix">
+													<div class="name-item font_wryh">晨间屹立的树_夏夏</div>
+													<div class="zan-item"><i class="icon"></i><span></span>152</div>
+												</div>
+											</div>
+										</li>
+										<li class="clearfix">
+											<div class="img-item">
+												<img src="images/300x300.jpg" />
+											</div>
+											<div class="text-item">
+												<dl class="txt-warp">
+													<dt class="t-title font_wryh">点评嘉宾：逆水</dt>
+													<dd class="info">
+														<p>民族的才是世界的，一度我们出现了文化的断层，幸好越来越多的国人意识到了这种断层对民族文化的传承有着多么巨大的破坏。如今的戏曲在众多的现代娱乐方式的围堵渐渐退下光环，生存环境也越来越艰难。每当摄影师将镜头对准这些戏曲元素的时候，一般都会给读者带来一定的思考和遐想。这张片子也不例外，精彩的利用了现场光影氛围和抓拍的自然效果，将戏曲的精彩瞬间展现在了读者的面前，画面极其具有吸引力，给读者一种想去看看的冲动。</p>
+													</dd>
+												</dl>
+												<div class="info-item clearfix">
+													<div class="name-item font_wryh">晨间屹立的树_夏夏</div>
+													<div class="zan-item"><i class="icon"></i><span></span>152</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="item-warp" id="c-on2" style="display:none;">
+							<div class="please-item"></div>
+						</div>
+						<div class="item-warp" id="c-on3" style="display:none;">
+							<div class="please-item"></div>
+						</div>
+						<div class="item-warp" id="c-on4" style="display:none;">
+							<div class="please-item"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 模板 END -->		
+	</div>
+	<div class="footer">
+		<div class="foot w1000"></div>
+	</div>
+	<script type="text/javascript">
+
+	function tab(name,num,end)
+	{
+			for(i=1;i<=end;i++)
+			{
+					var d=document.getElementById(name+i);
+					var a=document.getElementById("c-"+name+i);
+					d.className=i==num?"cur":"";
+					a.style.display=i==num?"block":"none"
+			}
+	}
+
+	</script>
+</body>
+</html>

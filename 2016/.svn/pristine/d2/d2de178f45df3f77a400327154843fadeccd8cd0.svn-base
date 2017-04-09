@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<title>雪花</title>
+</head>
+<body>
+	<div class="header clearfix">
+		<div class="nav-bar font_wryh">
+			<div class="w1000 clearfix">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+				<div class="nav" id="navItem">
+					<ul>
+						<li class="item active">
+							<a href="#">
+								<span>主赛区</span> <i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>大学生赛区</span> <i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">影展讲座</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>匠心古建</span>
+								<i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">摄影攻略</a>
+								</li>
+								<li>
+									<a href="#">精彩影像</a>
+								</li>
+								<li>
+									<a href="#">户牖百科</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>主题活动</span>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>古建丛书</span>
+								<i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">丛书概览</a>
+								</li>
+								<li>
+									<a href="#">古建地图</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<a href="#" class="btn quit-item" style="display:none">
+						<span class="name">XIAOMING</span><em>退出</em>
+					</a>
+					<a href="#" class="btn login-btn" style="display:">登录</a>
+					<a href="#" class="btn join-btn">我要参赛</a>
+				</div>
+			</div>
+		</div>
+		<div class="header-item">
+			<div class="header-bg">
+				<img src="images/ll-img-1.jpg" />
+			</div>
+			<div class="h-join-bgn">
+				<a href="#">
+					<img src="images/header-join-btn.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="w1000">
+			<div class="dsjxgz-page jxsz-page">			
+				<div class="mod-listItem font_wryh">奖项设置</div>
+				<div class="list-item">
+					<div class="item">
+						<div class="listItem font_wryh">官方主赛区 奖项设置</div>
+						<h4 class="title line-item font_wryh">主赛区</h4>
+						<div class="text-item point">
+							<p>
+								参赛投稿人员年龄应年满18周岁，投稿作品须符合大赛主题要求。<br />
+								奖项设置：
+							</p>
+							<p class="yello-point sub-title fb">【古建&bull;传承奖】</p>
+							<p>
+								中国古建筑艺术是世界上延续历史最长、分布地域最广、风格鲜明的独特建筑艺术体系。古建传承奖旨在将现存的宫殿、陵墓、坛庙、宗教、园林、乡土等类型建筑用
+								影像的方式更好的保存记录下来。【古建&bull;传承奖】题材不局限于建筑本身，更强调建筑与环境、建筑与人文之间的关系（例如建筑四周的环境、建筑内部的家具陈列、
+								使用建筑的人群及牲畜、在建筑环境中举行的民俗活动等等）。
+							</p>
+							<p>
+								<span class="yello-point fb">一等奖</span>
+								5名 每名奖金￥10000元
+								<br />
+								<span class="yello-point fb">二等奖</span>
+								10名 每名奖金￥6000元
+								<br />
+								<span class="yello-point fb">三等奖</span>
+								15名 每名奖金￥3000元
+							</p>
+							<p class="sub-title pt10 pb15">示例图片：</p>
+							<p class="pb20">
+								<img src="images/dssz-img/1.jpg" />
+							</p>
+							<p class="yello-point sub-title fb">【匠心营造&bull;户牖奖】</p>
+							<p>
+								户牖（yǒu），指古建筑中单体建筑的房屋门窗。其中，户为门，牖为窗。户牖按照建筑类别的不同，可分为宫殿户牖、园林户牖、庙堂户牖、民居户牖四类。不同类别的户牖，也随着地域变化显现出丰富多彩的艺术美感。【匠心营造&bull;户牖（yǒu）奖】希望摄影师通过古建筑的细节，去诠释中国古建筑的匠心营造。
+							</p>
+							<p>
+								<span class="yello-point fb">一等奖</span>
+								3名 每名奖金￥10000元
+								<br />
+								<span class="yello-point fb">二等奖</span>
+								5名 每名奖金￥6000元
+								<br />
+								<span class="yello-point fb">三等奖</span>
+								10名 每名奖金￥3000元
+							</p>
+							<p class="sub-title pt10 pb15">示例图片：</p>
+							<p>
+								<img src="images/dssz-img/2.jpg" />
+							</p>
+						</div>
+						<h4 class="title line-item font_wryh">大学生赛区</h4>
+						<div class="text-item point2">
+							<p>
+								只接受<span class="point fb">在校大学生</span>的投稿。<span class="point fb">大学生赛区</span>旨在吸引、鼓励当代大学生对中国古建筑文化的了解与关注，并能够将雪花纯生“匠心营造”的品牌内涵普及传承。
+								<br />
+								奖项设置：
+							</p>
+							<p class="yello-point sub-title fb">【古建&bull;传承奖】</p>
+							<p>
+								中国古建筑艺术是世界上延续历史最长、分布地域最广、风格鲜明的独特建筑艺术体系。古建传承奖旨在将现存的宫殿、陵墓、坛庙、宗教、园林、乡土等类型建筑用
+								影像的方式更好的保存记录下来。【古建&bull;传承奖】题材不局限于建筑本身，更强调建筑与环境、建筑与人文之间的关系（例如建筑四周的环境、建筑内部的家具陈列、
+								使用建筑的人群及牲畜、在建筑环境中举行的民俗活动等等）。
+							</p>
+							<p>
+								<span class="yello-point fb">一等奖</span>
+								3名 大疆精灵3Professional航拍器
+								<br />
+								<span class="yello-point fb">二等奖</span>
+								5名 gopro Hero4 Silver运动摄像机
+								<br />
+								<span class="yello-point fb">三等奖</span>
+								10名 富图宝 C-5C Orange 碳纤三脚架
+							</p>
+							<p class="sub-title pt10 pb15">示例图片：</p>
+							<p class="pb20">
+								<img src="images/dssz-img/3.jpg" />
+							</p>
+							<p class="yello-point sub-title fb">【匠心营造&bull;户牖奖】</p>
+							<p>
+								户牖（yǒu），指古建筑中单体建筑的房屋门窗。其中，户为门，牖为窗。户牖按照建筑类别的不同，可分为宫殿户牖、园林户牖、庙堂户牖、民居户牖四类。不同类
+								别的户牖，也随着地域变化显现出丰富多彩的艺术美感。
+								【匠心营造&bull;户牖（yǒu）奖】希望摄影师通过古建筑的细节，去诠释中国古建筑的匠心营造。
+							</p>
+							<p>
+								<span class="yello-point fb">一等奖</span>
+								2名 大疆精灵3Professional航拍器
+								<br />
+								<span class="yello-point fb">二等奖</span>
+								4名 gopro Hero4 Silver运动摄像机
+								<br />
+								<span class="yello-point fb">三等奖</span>
+								8名 富图宝 C-5C Orange 碳纤三脚架
+							</p>
+							<p class="sub-title pt10 pb15">示例图片：</p>
+							<p class="pb20">
+								<img src="images/dssz-img/4.jpg" />
+							</p>
+							<div class="list">
+								<ol>
+									<li>
+										根据《个人所得税法、个人所得税法实施条例》的规定，获奖者因获奖发生的20%个人所得税由大赛组委会代为办理，税金从奖金中扣除，主办方会将完税证明通过快递形式邮寄给获奖者。
+									</li>
+									<li>获奖作者应得奖金或奖品将于2016年12月31日前完成发放。</li>
+									<li>获奖者需完整填写《获奖信息确认函》，否则将视为放弃获奖资格。</li>
+								</ol>
+							</div>
+						</div>
+						<h4 class="title line-item font_wryh">领奖方式</h4>
+						<div class="text-item">
+							<div class="list">
+								<ul>
+									<li>
+										<p>
+											大赛入围名单将于8月底于“雪花纯生匠心营 造官网”www.archfans.com公布，入围作者按组委会电话及邮件、短信通知信息提交入围作品原文件（及后期处理照片）方可获得继续参评资格，入围作品原稿征集最终截止时间为2016年8月14日上午12:00分，逾期视为弃权。
+										</p>
+									</li>
+									<li>
+										<p>
+											最终评选结束后，主办方将在雪花纯生匠心营造官网 www.archfans.com公布获奖名单。届时获奖作品将在官网公示7个工作日，若作品存在侵权及非本人作品等情况，请异议人联系大赛组委会指定邮箱：archfans@crb.cn（此邮箱不接受任何参赛作品投稿）并提供侵权证明：本人身份证明文件（身份证、或者护照等）、拍摄作品原稿及拍摄说明等。
+										</p>
+									</li>
+									<li>
+										<p>
+											大赛组委会将通过参赛者在雪花纯生匠心营造官网 www.archfans.com以及其他分赛区注册时、以及在参赛报名表中填写的联系方式通知获奖信息。自通知日起5个工作日内未取得获奖作者完整填写的《获奖信息确认函》、或作者未提交作品原稿将视为弃权，主办方将不作任何形式赔偿。
+										</p>
+									</li>
+									<li>
+										<p>
+											大学生赛区获奖作者应在主办方通知时间内，提供盖有大学公章的在校证明。
+										</p>
+									</li>
+									<li>
+										<p>
+											获奖代表将由主办方邀请至北京参加颁奖典礼（往返的交通及住宿事宜由华润雪花啤酒（中国）有限公司统一安排并承担相应费用）。
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="listItem font_wryh">POCO主赛区 奖项设置</div>
+						<h4 class="title line-item font_wryh">POCO主赛区</h4>
+						<div class="text-item">
+							<p>
+								参赛投稿人员年龄应年满18周岁，投稿作品须符合大赛主题要求。
+								<br />
+								奖项设置：
+							</p>
+							<p class="yello-point sub-title fb">【古建&bull;传承奖】</p>
+							<div class="g-list">
+								<ul>
+									<li>
+										<span class="yello-point fb">一等奖</span>
+										1名 每名奖金￥5000元
+									</li>
+									<li>
+										<span class="yello-point fb">二等奖</span>
+										1名 每名奖金￥2500元
+									</li>
+									<li>
+										<span class="yello-point fb">三等奖</span>
+										2名每名奖金￥1500元
+									</li>
+								</ul>
+							</div>
+							<p class="yello-point sub-title fb">【匠心营造&bull;户牖奖】</p>
+							<div class="g-list">
+								<ul>
+									<li>
+										<span class="yello-point fb">一等奖</span>
+										1名 每名奖金￥5000元
+									</li>
+									<li>
+										<span class="yello-point fb">二等奖</span>
+										1名 每名奖金￥2500元
+									</li>
+									<li>
+										<span class="yello-point fb">三等奖</span>
+										2名每名奖金￥1500元
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h4 class="title line-item font_wryh">POCO大学生赛区</h4>
+						<div class="text-item">
+							<p>
+								只接受
+								<span class="fb">在校大学生</span>
+								的投稿。
+								<span class="fb">大学生赛区</span>
+								旨在吸引、鼓励当代大学生对中国古建筑文化的了解与关注，并能够将雪花纯生“匠心营造”的品牌内涵普及传承。
+							</p>
+							<p class="yello-point sub-title fb">【古建&bull;传承奖】</p>
+							<p>
+								<span class="yello-point fb">一等奖</span>
+								1名 GoPro HERO 运动摄像机
+								<br />
+								<span class="yello-point fb">二等奖</span>
+								1名 小蚁（yi）运动相机 基础版
+								<br />
+								<span class="yello-point fb">三等奖</span>
+								2名 360 酷跑 耳挂式专业运动蓝牙耳机
+							</p>
+							<p class="yello-point sub-title fb">【匠心营造&bull;户牖奖】</p>
+							<p>
+								<span class="yello-point fb">一等奖</span>
+								1名 GoPro HERO 运动摄像机
+								<br />
+								<span class="yello-point fb">二等奖</span>
+								1名 小蚁（yi）运动相机 基础版
+								<br />
+								<span class="yello-point fb">三等奖</span>
+								2名 360 酷跑 耳挂式专业运动蓝牙耳机
+							</p>
+						</div>
+						<h4 class="title line-item font_wryh">备注</h4>
+						<div class="text-item">
+							<p>
+								1、根据《个人所得税法、个人所得税法实施条例》的规定，获奖者因获奖发生的。
+								<br />
+								个人所得税由POCO摄影网代为办理，税金从奖金中扣除，POCO摄影网将完税证明通过快递形式邮寄给获奖者。
+								<br />
+								2、获奖作者应得奖金或奖品将于2016年9月30日前完成发放。
+								<br />
+								3、获奖者需完整填写《获奖信息确认函》，否则将视为放弃获奖资格。
+							</p>
+						</div>
+						<h4 class="title line-item font_wryh">领奖方式</h4>
+						<div class="text-item">
+							<div class="list">
+								<ul>
+									<li>
+										1.获奖名单将于9月中旬在http://www1.poco.cn/topic/snowbeer_2016/ 公布。届时获奖作品将公示7个工作日，若作品存在侵权及非本人作品等情况，请异议人联系POCO摄影网客服，QQ：1044859368，并提供侵权证明：本人身份证明文件（身份证、或者护照等）、拍摄作品原稿及拍摄说明等。
+									</li>
+									<li>
+										POCO摄影网将通过参赛者在雪花纯生匠心营造POCO分赛区上传注册时，填写的联系方式（邮箱、电话）通知获奖信息。自通知日起5个工作日内未取得获奖作者完整填写的《获奖信息确认函》、或作者未提交作品原稿将视为弃权，POCO摄影网将不作任何形式赔偿。
+									</li>
+									<li>大学生赛区获奖作者应在POCO摄影网通知时间内，提供盖有大学公章的在校证明。</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer"></div>
+<script src="Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script>
+		$(document).ready(function(){
+			$('#navItem li').hover(function(){
+				if($(this).hasClass('item')){
+					$(this).removeClass('item');
+					$(this).addClass('cur');
+				}else{
+					$(this).removeClass('cur');
+					$(this).addClass('item');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

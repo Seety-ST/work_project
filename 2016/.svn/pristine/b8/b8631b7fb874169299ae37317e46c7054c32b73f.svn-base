@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/mrxx.css" type="text/css" rel="stylesheet" />
+	<title>美人信息</title>
+</head>
+
+<body>
+	<div class="index-page font_wryh">
+		<div class="header animated">
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-icon-145x111.png" />
+				</a>
+			</h1>
+		</div>
+		<div class="content">
+			<div class="banner-warp animated">			
+				<div class="flexslider">
+					<ul class="slides">
+						<li class="item-beauty">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/beauty.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-jane">
+						<div class="con-item">
+							<div class="mod-download-item">
+								<div class="code-item">
+									<img src="images/code-item/jane.png" />
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn-item btn-l"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn-item btn-r"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li class="item-janeplus">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/janeplus.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-yinxiang">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/interphto.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-circle">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/circle.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-facechat">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/facechat.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-baby">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/baby.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-hcq">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/hcq.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="app-warp animated">
+				<div class="list clearfix">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/beauty-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">美人相机</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/jane-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">简 拼</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/janeplus-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">简 客</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/yinxiang-icon-82x82.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">印 象</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/circle-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">在一起</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/facechat-icon-75x74.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">简讯</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/baby-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">亲子相机</dt>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/hcq-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">图片合成器</dt>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer animated">
+			<div class="footer-nav">
+				<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+			</div>
+			<p class="cpoy-txt">
+				<span class="copy-item">&copy;2016 Beauty,Inc.  广州美人信息技术有限公司</span>
+				<br />
+				<span class="icp-item"><a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16016424号-2</a></span>
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/respond.js"></script>
+	<script>
+		$('.flexslider').flexslider({
+			animation: "slide",
+			slideDirection: "horizontal",
+			animationSpeed: 1000,
+			slideshowSpeed: 4000,
+			animationLoop: true,
+			directionNav: false,
+			pauseOnHover: true
+		});
+		$(function(){  
+		    var bannerHight = $(window).resize(function(){
+		    	$('.banner-warp .con-item').height($(window).height()*0.7142 +'px');
+		    }); 
+		    $(bannerHight).resize();
+		});
+	</script>
+</body>
+</html>

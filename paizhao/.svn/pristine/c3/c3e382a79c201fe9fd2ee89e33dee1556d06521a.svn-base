@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>搜索页</title>
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/search/search-page.css">
+</head>
+<body>
+<!-- 头部内容 -->
+{%$pc_global_top_bar%}
+<!-- 页面内容 -->
+<div class="content-wrap w1200">
+    <div class="select-nav">
+        <div class="dib select-nav-text fl"><a href="../">首页</a></div>
+
+        {%if $main_select_condition_arr%}
+        <div class="dib r-arrow  select-nav-text fl">&gt;</div>
+        <div class="main-type dib fl">
+            <div class="main-type-list">
+                <div class="main-select-disable dib">{%$main_type_text%}</div>
+                <div class="main-select-able dib"><a href="{%$all_type_text_link%}">全部</a></div>
+                <div class="main-select-able dib"><a href="{%$second_type_text_link%}">{%$second_type_text%}</a></div>
+            </div>
+            {%foreach $main_select_condition_arr as $key => $value%}
+            <div class="main-type-sel select-nav-tab dib fl">
+                <span class="tab-name f12 fl">{%$value.name%}</span>
+                <i class="tab-arrow"></i>
+            </div>
+            {%/foreach%}
+        </div>
+        {%else%}
+        <div class="dib r-arrow  select-nav-text fl">&gt;</div>
+        <div class="dib select-nav-text fl">全部</div>
+        {%/if%}
+
+        {%if $second_select_condition_arr%}
+            <div class="dib r-arrow select-nav-text fl">&gt;</div>
+            {%foreach $second_select_condition_arr as $key => $value%}
+            <a href="{%$value.link%}">
+                <div class="select-nav-tab select-nav-tab-hover dib fl">
+                    <span class="tab-name f12 fl">{%$value.name%}</span>
+                    <i class="tab-close"></i>
+                </div>
+            </a>
+            {%/foreach%}
+        {%/if%}
+
+
+    </div>
+    <div class="select-list clearfix {%$condition_dn%}">
+        <div class="select-list-tab border-line clearfix {%$type_dn%}">
+            <div class="tab-title dib fb">
+                套系类型：
+            </div>
+            <div class="tab-list" data-role="type-shrink">
+                <ul class="list clearfix">
+                    {%foreach $goods_type_arr as $val%}
+                    <li><a href="{%$val.link%}">{%$val.name%}</a></li>
+                    {%/foreach%}
+                </ul>
+            </div>
+            <div class="tab-btn clearfix" data-role="more-btn" data-type="type">
+                <div class="btn-text dib">多选</div>
+                <i></i>
+            </div>
+            <!--展开模式-->
+            <div class="tab-list tab-list-choose dn" data-role="type-spread">
+                <ul class="list-choose clearfix">
+                    {%foreach $goods_type_arr as $key => $val%}
+                    <li class="list-li" data-role="sel-ele" data-mark="{%$key%}"><i></i>{%$val.name%}</li>
+                    {%/foreach%}
+                </ul>
+                <div class="choose-confirm-btn tc">
+                    <span class="confirm" data-role="list-confirm" data-type="type">确定</span>
+                    <span class="cancel ml10" data-role="list-cancel" data-type="type">取消</span>
+                </div>
+            </div>
+        </div>
+        <div class="select-list-tab border-line clearfix {%$style_dn%}">
+            <div class="tab-title dib fb">
+                风格场景：
+            </div>
+            <div class="tab-list" data-role="style-shrink">
+                <ul class="list clearfix">
+                    {%foreach $goods_style_arr as $val%}
+                    <li><a href="{%$val.link%}">{%$val.name%}</a></li>
+                    {%/foreach%}
+                </ul>
+            </div>
+            <div class="tab-btn clearfix" data-role="more-btn" data-type="style">
+                <div class="btn-text dib">多选</div>
+                <i></i>
+            </div>
+            <!--展开模式-->
+            <div class="tab-list tab-list-choose dn" data-role="style-spread">
+                <ul class="list-choose clearfix">
+                    {%foreach $goods_style_arr as $key => $val%}
+                    <li class="list-li" data-role="sel-ele" data-mark="{%$key%}"><i></i>{%$val.name%}</li>
+                    {%/foreach%}
+                </ul>
+                <div class="choose-confirm-btn tc">
+                    <span class="confirm" data-role="list-confirm" data-type="style">确定</span>
+                    <span class="cancel ml10" data-role="list-cancel" data-type="style">取消</span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="select-list-tab clearfix {%$photographers_dn%}">
+            <div class="tab-title dib fb">
+                摄影师类型：
+            </div>
+            <div class="tab-list tab-list-choose dib">
+                <ul class="list clearfix">
+                    {%foreach $goods_photographers_arr as  $val%}
+                    <li><a href="{%$val.link%}">{%$val.name%}</a></li>
+                    {%/foreach%}
+                </ul>
+            </div>
+        </div>
+        <!--<div class="select-list-tab clearfix">
+            <div class="tab-title dib fb">
+                场景风格：
+            </div>
+            <div class="tab-list tab-list-choose dib">
+                <ul class="list-choose clearfix">
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li"><i></i>摄影机构</li>
+                    <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                    <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                    <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                    <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                    <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                    <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                </ul>
+                <div class="choose-confirm-btn tc">
+                    <span class="confirm">确定</span>
+                    <span class="cancel ml10">取消</span>
+                </div>
+            </div>
+        </div>-->
+
+
+    </div>
+    <div class="sort-nav mt20 mb20 clearfix">
+        <ul class="sort-nav-list f14">
+            {%foreach $sort_arr as $key => $value%}
+            <li class="nav-list-li {%$value.cur_class%} {%$value.lid_class%}"><span>{%$value.name%}</span>{%if $value.key eq "location"%}<i class="{%$value.sort_arrow_class%}"></i>{%elseif $value.key neq "no_key"%}<i class="icon {%$value.sort_arrow_class%}"></i>{%/if%}
+                {%if $value.key eq "location"%}
+                <div class="location-li-list">
+                    <div class="city-select-pop-mod-1">
+                        <div class="city-select-pop-item">
+                            <!--<i class="ui-triangle ui-triangle-bottom-mid-white"></i>-->
+                            <i class="location-arrow"></i>
+                            <div class="item-wrap">
+                                <div class="item tc-item clearfix">
+                                    <p class="title color-aaa fldi">同城：</p>
+                                    <ul class="list fldi">
+                                        <li class="color-2bd">{%$location_name%}</li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul class="list color-aaa clearfix">
+                                        {%foreach $goods_location_array as $k => $v%}
+                                        <li>{%$v.location_name%}</li>
+                                        {%/foreach%}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%/if%}
+            </li>
+            {%/foreach%}
+
+
+            <!--<li class="nav-list-li"><span>综合</span></li>
+            <li class="nav-list-li"><span>人气</span><i class="icon sort-up-arrow"></i></li>
+            <li class="nav-list-li"><span>最新</span><i class="icon sort-down-arrow"></i></li>
+            <li class="nav-list-li"><span>价格</span></li>
+            <li class="nav-list-li"><span>广州</span><i class="ui-triangle ui-triangle-bottom-mid-gray"></i></li>
+            <li class="nav-list-li location-li"><span>广州</span><i class="ui-triangle ui-triangle-bottom-mid-gray-up"></i>
+                <div class="location-li-list">
+
+                    <div class="city-select-pop-mod-1">
+                        <div class="city-select-pop-item">
+                            <i class="ui-triangle ui-triangle-bottom-mid-white"></i>
+                            <div class="item-wrap">
+                                <div class="item tc-item clearfix">
+                                    <p class="title color-aaa fldi">同城：</p>
+                                    <ul class="list fldi">
+                                        <li class="color-2bd">广州</li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul class="list color-aaa clearfix">
+                                        <li>广州</li>
+                                        <li>上海</li>
+                                        <li>北京</li>
+                                        <li>西安</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </li>-->
+        </ul>
+
+
+
+    </div>
+    <div class="list-wrap"></div>
+
+</div>
+<!-- 底部内容 -->
+{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script>
+
+    $(function()
+    {
+
+        //多选点击
+        $("[data-role='more-btn']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            $(this).addClass("dn");
+            $("[data-role='"+data_type+"-shrink']").addClass("dn");
+            $("[data-role='"+data_type+"-spread']").removeClass("dn");
+        });
+
+        //多选-确定按钮
+        $("[data-role='list-confirm']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            console.log("点击了确定");
+            //检查所属列表是否有勾选
+            var has_sel = false;
+            var spread_li = $("[data-role='"+data_type+"-spread']").find("li");
+            var spread_li_len = spread_li.length;
+            var data_mark = "";
+            var data_mark_arr = [];
+            for(var i=0;i<spread_li_len;i++)
+            {
+                if($(spread_li[i]).hasClass("list-li-cur"))
+                {
+                    has_sel = true;
+                    //将选中的模块的ID值记录到数组
+                    data_mark = $(spread_li[i]).attr("data-mark");
+                    data_mark_arr.push(data_mark);
+                }
+            }
+            if(!has_sel)
+            {
+                alert("请勾选一个选项");
+            }
+            var sel_str = data_mark_arr.join("||");//临时处理
+            console.log("选中的分类ID分类与值"+data_type+"-"+sel_str);
+
+        });
+
+        //取消按钮点击
+        $("[data-role='list-cancel']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            $("[data-role='"+data_type+"-shrink']").removeClass("dn");
+            $("[data-role='more-btn'][data-type='"+data_type+"']").removeClass("dn");
+            $("[data-role='"+data_type+"-spread']").addClass("dn");
+            //清理对应的勾选选中
+            var spread_li = $("[data-role='"+data_type+"-spread']").find("li");
+            var spread_li_len = spread_li.length;
+            for(var i=0;i<spread_li_len;i++)
+            {
+
+                $(spread_li[i]).removeClass("list-li");
+                $(spread_li[i]).removeClass("list-li-cur");
+                $(spread_li[i]).addClass("list-li");
+            }
+        });
+
+
+
+
+        //选中点击，样式改变
+        $("[data-role='sel-ele']").on("click",function(){
+            if($(this).hasClass("list-li-cur"))
+            {
+                $(this).removeClass("list-li-cur");
+                $(this).addClass("list-li");
+            }
+            else
+            {
+                $(this).removeClass("list-li");
+                $(this).addClass("list-li-cur");
+            }
+
+        });
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

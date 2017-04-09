@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/mrxx.css" type="text/css" rel="stylesheet" />
+	<title>美人信息</title>
+</head>
+
+<body class="article-bg">
+	<div class="article-page font_wryh">
+		<div class="header clearfix animated">
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-icon-145x111.png" />
+				</a>
+			</h1>
+			<div class="mod-nav-header"  id="mod-nav-bar">
+				<div class="nav-btn-warp">
+					<div class="more-btn" id="header-more-btn">
+						<i class="icon iconfont">&#xe602;</i><span>更多产品</span>
+					</div>
+				</div>
+				<ul class="nav clearfix" id="nav">
+					<li class="nav-li cur">
+						<a href="#">首页</a>
+					</li>
+					<li class="nav-li">
+						<a href="#"> 美人相机</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">简 拼</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">简 客</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">印 象</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">在一起</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">图片合成器</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">亲子相机</a>			
+					</li>
+					<li class="block"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<!-- 翻页 -->
+			<div class="page-btn-warp">
+				<a href="#" class="btn p-l-btn"></a>
+				<a href="#" class="btn p-r-btn"></a>
+			</div>
+			<!-- 翻页 end-->
+			<div class="con-warp clearfix">
+				<div class="aboutus-page">
+					<div class="title-item">
+						<h2 class="title">关于我们</h2>
+						<h3 class="title-en">
+							<span>
+								ABOUT
+								<br />
+								US
+							</span>
+						</h3>
+					</div>
+					<div class="text-warp">
+						<div class="item"> <i class="line-icon"></i>
+							<div class="text-item">
+								<p>
+									从国内第一款女性自拍软件——《美人相机》诞生至今，我们已经先后用心研发了《简拼》、《简客》、《图片合成器》、《亲子相机》等APP，目前累计超过4亿安装下载，每天有接近800万热爱我们用户在使用我们的软件。
+								</p>
+								<p>
+									美人信息的创立初衷，是为了帮助每一位用户更便捷、更专业、更安全的去记录自己，保存自己、分享自己，通过视觉复刻的方式，来分享更多的时刻和人生经验。
+								</p>
+								<p>
+									我们希望通过团队的努力，打造国内最优质的视觉生活储存交互平台。目前公司在广州、上海、北京均设有分公司，并且已经具备良好的商业变现模式，和众多500强品牌有着深度的合作，同时在2016年年初，我们获得了上市公司中南建设的A轮过亿投资。
+								</p>
+								<p>欢迎你加入美人信息，在尊重理解、倡导分享，让用户影像产生价值的理念下共同打造美好的未来！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer animated">
+			<div class="footer-nav">
+				<a href="#">关于我们</a>
+				|
+				<a href="#">联系我们</a>
+				|
+				<a href="#">加入我们</a>
+			</div>
+			<p class="cpoy-txt">
+				<span class="copy-item">&copy;2016 Beauty,Inc.  广州美人信息技术有限公司</span>
+				<span class="icp-item">粤ICP备16016424号-2</span>
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/SuperSlide.2.1.js"></script>
+	<script src="js/modNav.js" type="text/javascript"></script>
+	<script>
+		$("#mod-nav-bar").on("click",function(){
+			$("#mod-nav-bar").find("#header-more-btn").delay(100).animate({
+				opacity: '0',
+				marginRight: '2.5%'
+			}).hide();
+			$("#mod-nav-bar").find("#nav").delay(100).animate({
+				opacity: '1',
+				marginRight: '0'										
+			}).show();
+		});
+		$("#mod-nav-bar").on("mouseleave",function(){
+			$("#mod-nav-bar").find("#header-more-btn").delay(100).animate({
+				opacity: '1',
+				marginRight: '0'
+			}).show();
+			$("#mod-nav-bar").find("#nav").delay(100).animate({
+				opacity: '0',
+				marginRight: '2.5%'							
+			}).hide();
+		});
+	</script>
+</body>
+</html>

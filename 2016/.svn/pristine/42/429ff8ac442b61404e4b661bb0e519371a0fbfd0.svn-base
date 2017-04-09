@@ -1,0 +1,194 @@
+/* Theme Name:poco ued theme
+Author URI:poco.cn
+Description:poco */
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #253161; }
+a:hover { text-decoration: none }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.clear { clear: both; font-size: 0; line-height: 0; height: 0; overflow: hidden; }
+.coz { clear: both; overflow: hidden; zoom: 1 }
+/*** font ***/
+.word_break { white-space: normal; word-wrap: break-word; word-break: break-all; }
+.f14 { font-size: 14px; }
+.fb { font-weight: bold; }
+.db { display: block }
+.dn { display: none }
+.di { display: inline }
+.tc { text-align: center; }
+.vam { vertical-align: middle; }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html { 
+	-ms-touch-action: none;
+}
+body{
+	background: #ffee4c url(../images/letter-bg-750x1400.png) center top no-repeat;
+	background-size: 100% auto;
+}
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+	font-size: 0.2048rem;
+}
+input,select,button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0; 
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="radio"]:checked,
+button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0;
+}
+
+/* content */
+.invitation-page{
+	padding: 0.768rem 0 0.68267rem;
+}
+.invitation-page .logo-item{
+	width: 2.039467rem;
+	height: 2.039467rem;
+	margin: 0 auto 0.452267rem;
+	background: url(../images/logo-icon-239x239.png) center no-repeat;
+	background-size: 100% auto;
+}
+.invitation-page .con-item .user-info{
+	text-align: center;
+	padding-top: 0.8rem;
+}
+.invitation-page .con-item .user-info dt.name{
+	color: #666;
+	font-size: 0.273067rem;
+	padding-bottom: 0.1rem;
+}
+.invitation-page .con-item .user-info dd.num-item{
+	color: #000;
+	font-size: 0.34133rem;
+	padding-bottom: 0.1rem;
+}
+.invitation-page .con-item .user-info dd.num-item .title{
+	padding-right: 0.06rem;
+}
+.invitation-page .con-item .user-info dd.tips{
+	color: #bbb;
+	padding-bottom: 0.34133rem;
+}
+.invitation-page .quota-item{
+	width: 4.52267rem;
+	margin: 0 auto;
+	text-align: center;
+	height: 0.256rem;
+	position: relative;
+	color: #666;
+}
+.invitation-page .quota-item .line-icon{
+	position: absolute;
+	left: 0%;
+	top: 50%;
+	width: 100%;
+	height: 1px;
+	background: #d8d8d8;
+}
+.invitation-page .quota-item .text-item{
+	position: relative;
+	display: inline-block;
+	background: #fff;
+	height: 0.256rem;
+	line-height: 0.256rem;
+	padding: 0 0.128rem;
+}
+.invitation-page .quota-item .text-item h4.title{
+	display: inline-block;
+}
+.invitation-page .btn-wrap{
+	padding-top: 1.27rem;
+	width: 4.267rem;
+	margin: 0 auto;
+}
+.invitation-page .btn-wrap .btn-item{
+	display: block;
+	width: 100%;
+	height: 0.7168rem;
+	line-height: 0.7168rem;
+	background: #11b4ff;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 0.256rem;
+	border-radius: 0.4rem;
+	font-size: 0.256rem;
+}
+.invitation-page .btn-wrap .icon{
+	display: inline-block;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin-right: 0.111rem;
+}
+.invitation-page .btn-wrap .add-icon{
+	background-image: url(../images/add-icon-38x30.png);
+	width: 0.324267rem;
+	height: 0.256rem;
+}
+.invitation-page .btn-wrap .download-icon{
+	background-image: url(../images/down-icon-28x29.png);
+	width: 0.238933rem;
+	height: 0.2547467rem;
+}
+.invitation-page .btn-wrap .btn-item:active{
+	background: #008ecf;
+}
+.invitation-page .mod-tips{
+	padding-top: 0.08533rem;
+	text-align: center;
+	color: #666;
+	font-size: 0.238933rem;
+}
+
+/* share-pop */
+.pop-share-ios{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.7) url(../images/ios-share-750x621.png) center top no-repeat;
+	background-size: 100% auto;
+}

@@ -1,0 +1,46 @@
+// 绑定页面
+// 星星
+// 2017-1-5
+
+.page-container {
+  background-color: #fff;
+  display: -webkit-box;
+  .bind-container {
+    box-flex:1;
+    -webkit-box-flex:1;
+    //输入框
+    .input-con {
+      height: 70px;
+      line-height: 70px;
+      margin-left: 15px;
+      margin-right: 15px;
+      .key-btn {
+        font-size: 16px;
+      }
+      .input-con-detail {
+        width: 100%;
+      }
+    }
+    //按钮
+    .submit-btn-con {
+      margin: 0 auto;
+      width: 90%;
+      margin-top: 20px;
+      display: block;
+    }
+    //底部图片
+    .index-footer-img {
+      background: url("../../image/auth/auth-foot-img-586x386.png") no-repeat;
+      background-size: cover;
+      padding-top: 120px;
+      position: fixed;
+      bottom: 0px;
+      width: 293px;
+      margin:0 auto;
+      margin-left: 47px;
+    }
+  }
+
+}
+
+

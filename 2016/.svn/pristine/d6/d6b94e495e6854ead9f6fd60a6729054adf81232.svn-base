@@ -1,0 +1,93 @@
+#header {
+   height:95px;
+   position:absolute;
+   right:11.08%;
+   top:0;
+   width:100%;
+   line-height:1;
+   z-index:10;
+
+}
+
+#header .gnav {
+   position:absolute;
+   right:25px;
+   top:32px;
+   display:block;
+}
+#header .font {
+   font-family: "Gotham A", "Gotham B";
+   font-style: normal;
+   font-weight: 500;
+   font-size: 20px;
+}
+#header .gnav ul {
+   float:left;
+   position: relative;
+   z-index:1;
+}
+#header .gnav li {
+   float:left;
+   line-height:30px;
+   padding-left:36px;
+   color:#fff;
+}
+#header .gnav li a,#header .gnav li span {
+   display:block;
+   height:40px;
+   text-decoration: none;
+}
+#header.fivnav .gnav li a,#header.fivnav .gnav li span {
+   color:#000 !important;  
+}
+#header.fivnav .gnav .line {
+   background:#000 !important; 
+}
+#header.fivnav h1 a img {
+   margin-top:0 !important;    
+}
+#header .gnav li span {
+   filter:alpha(opacity=35) !important;
+   -moz-opacity:0.35 !important;
+   opacity:0.35 !important;    
+}
+#header .sns_container {
+   margin-left:61px;
+}
+#header .sns_container li {
+   width:32px;
+   line-height:0;  
+   padding:0;
+   text-align:center;
+}
+#header.fivnav .sns_container li img {
+   margin-top:0 !important;    
+}
+
+#header .official_page {
+   width:auto;
+   height:30px;
+   line-height:30px;
+   float:right;
+   margin-left:15px;
+   font-size:9px;
+}
+#header .official_page a {
+   color:#737373;
+}
+#header.fivnav .official_page a {
+   color:#737373 !important;   
+}
+
+#header .spmenu_btn {
+   display:none;
+}
+#header .gnav .line {
+   height:2px;
+   width:0;
+   position:absolute;
+   left:0;
+   bottom:0;
+   background:#000;
+   z-index:0;
+}

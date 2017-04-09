@@ -1,0 +1,83 @@
+.verify-page {
+  padding: 0.3rem;
+}
+
+.verify-page .p1th {
+  padding-top: 0.15rem;
+}
+
+.verify-page .p1th .wbox {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+  font-size: 0.14rem;
+  color: #e6e6e6;
+}
+
+.verify-page .p1th .wbox .icon {
+  width: 0.17rem;
+  height: 0.25rem;
+  display: block;
+  margin: 0 auto;
+  background-size: cover;
+}
+
+.verify-page .p1th .wbox .p1 {
+  padding-top: 0.15rem;
+}
+
+.verify-page .p1th .wbox .lbox {
+  width: 1.3rem;
+  text-align: center;
+  border-right: 0.01rem dashed #e6e6e6;
+  height: 0.55rem;
+}
+
+.verify-page .p1th .wbox .lbox .icon-1 {
+  background-image: url(http://localhost/mojikids/loc/static/wap/image/auth/icon-2-34x50-active.png);
+}
+
+.verify-page .p1th .wbox .cur {
+  color: #999999;
+}
+
+.verify-page .p1th .wbox .rbox {
+  width: 1.3rem;
+  text-align: center;
+  height: 0.55rem;
+}
+
+.verify-page .p1th .wbox .rbox .icon-2 {
+  background-image: url(http://localhost/mojikids/loc/static/wap/image/auth/icon-1-34x50-active.png);
+}
+
+.verify-page .p2th {
+  padding-top: 0.4rem;
+}
+
+.verify-page .p2th .numer {
+  position: absolute;
+  right: 0;
+  top: 0.22rem;
+}
+
+.verify-page .p2th .item {
+  position: relative;
+  padding: 0.2rem 0 0.2rem 0;
+}
+
+.verify-page .p2th .item .input-text {
+  width: 100%;
+  height: 0.24rem;
+  font-size: 0.16rem;
+  color: #666666;
+}
+
+.verify-page .btn {
+  padding-top: 0.2rem;
+}
+
+.verify-page .btn button:disabled {
+  background-color: #ccc !important;
+}

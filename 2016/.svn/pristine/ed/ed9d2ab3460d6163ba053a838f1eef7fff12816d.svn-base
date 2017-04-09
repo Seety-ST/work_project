@@ -1,0 +1,188 @@
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #fff; }
+a:hover { text-decoration: none }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.clear { clear: both; font-size: 0; line-height: 0; height: 0; overflow: hidden; }
+.coz { clear: both; overflow: hidden; zoom: 1 }
+/*** font ***/
+.word_break { white-space: normal; word-wrap: break-word; word-break: break-all; }
+.f14 { font-size: 14px; }
+.fb { font-weight: bold; }
+.db { display: block }
+.dn { display: none }
+.di { display: inline }
+.tc { text-align: center; }
+.vam { vertical-align: middle; }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html { 
+	-ms-touch-action: none;
+}
+body{
+	background: #fff;
+	font-size: 0.3rem;
+}
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+}
+input,select{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0; 
+}
+input[type="submit"],input[type="reset"],input[type="button"],input{-webkit-appearance:none;}
+
+/* lazyload css */
+.lazyload,
+.lazyloading {
+	opacity: 0;
+}
+.lazyloaded {
+	opacity: 1;
+	transition: opacity 300ms;
+}
+
+.lazyload {
+  background: #fff;
+}
+
+.lazyloading {
+  background: #fff;
+  min-height: 60px;
+}
+
+.teaser.lazyload {
+	opacity: 0;
+	transform: scale(0.95);
+}
+
+.teaser.lazyloaded {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 600ms;
+}
+
+.blue-color{
+	color: #4faae3;
+}
+
+
+
+/* content */
+.index-page{}
+.index-page img{
+	width: 100%;
+	display: block;
+}
+.index-page .path4{
+	padding: 0.4rem 0.3rem 1.5rem;
+	color: #0d1117;
+}
+.index-page .path4 .item{
+	padding-bottom: 0.4rem;
+}
+.index-page .path4 li{
+	padding-bottom: 0.23rem;
+}
+.index-page .path4 h4.title{
+	font-size: 0.38rem;
+	padding:  0 0 0.1rem 0.62rem;
+}
+.index-page .path4 .list i.icon{
+	float: left;
+	width: 0.36rem;
+	height: 0.36rem;
+	line-height: 0.36rem;
+	background: #ff7898;
+	border-radius: 0.36rem;
+	text-align: center;
+	color: #fff;
+	font-style: normal;
+	position: relative;
+	margin-top: 0.06rem;
+}
+.index-page .path4 .list .txt{
+	float: left;
+	width: 6.28rem;
+	padding-left: 0.26rem;
+}
+.index-page .path4 .time-item i.icon{
+	margin-top: 0.1rem;
+}
+.index-page .path4 .time-item i.icon::before{
+	content: " ";
+	display: block;
+	width: 0.18rem;
+	height: 0.18rem;
+	border-radius: 0.36rem;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -0.09rem 0 0 -0.09rem;
+}
+.index-page .path4 .time-item .txt{
+	font-size: 0.36rem;
+}
+.index-page .path4 .point{
+	color: #ff7898
+}
+.index-page .path4 .btn-item{
+	padding-top: 0.4rem;
+}
+.index-page .path4 .btn-item .join-btn{
+	display: block;
+	margin: 0 auto;
+	width: 4.85rem;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	border-radius: 0.9rem;
+	color: #fff;
+	font-size: 0.51rem;
+	background: #ff7898;
+	text-align: center;
+	margin-bottom: 0.34rem;
+}
+.index-page .path4 .btn-item .take-btn{
+	background: #68d8ee;
+}
+.index-page .path4 .btn-item .join-btn:active{
+	opacity: 0.8;
+}
+
+
+
+
+

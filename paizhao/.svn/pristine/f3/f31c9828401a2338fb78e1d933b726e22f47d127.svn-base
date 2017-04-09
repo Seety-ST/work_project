@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>{%$ret.title%}</title>    
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/topic/index-page.scss" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	
+
+	<div class="topic-index-page">
+		<div class="w1200">
+			<div class="title-item">
+				
+			</div>
+			{%if $ret.content %}
+			<div class="p1th">
+				{%$ret.content%}
+			</div>
+			{%else%}
+		
+			<div class="no-content-tips-mod-1">
+				<div class="img">
+					<img src="../../image/ui/no-content-icon-59x59.png" />   
+				</div>
+				<div class="txt color-666 f14 pt10">
+					暂无内容！
+				</div>
+			</div>
+			{%/if%}
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	
+
+
+</script>
+
+{%$pc_global_tj%}
+</html>

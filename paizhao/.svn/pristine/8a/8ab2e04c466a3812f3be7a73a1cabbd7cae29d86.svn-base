@@ -1,0 +1,117 @@
+.camera-page{
+	padding-top: 45px;
+	.p1th{
+		.item-wrap{
+			.img-item{
+				width: 100%;
+				padding-top: 40%;
+				position: relative;
+				.img{
+					width: 100%;
+					padding-top: 40%;
+					display: inline-block;
+					position:absolute;
+					left: 0;
+					top:0;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-image: url(../../image/camera/test/750x300.jpg);
+				}
+				.txt{
+					width: 100%;
+					height: 100%;
+					background: rgba(0,0,0,.4);
+					position:absolute;
+					left:0;
+					top:0;
+					
+					.box-1{
+						padding:20% 15px 0px 15px;
+						.lbox{
+							.ui-avatar-icon{
+								i{
+									border:2px solid #fff;
+								}
+							}
+						}
+						.rbox{
+							padding:3% 0px 0px 10px;
+							.number-2{
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+			}
+			.txt-item{
+				padding:15px;
+				background-color: #fff;
+				.box-1{
+					.address-icon{
+						background-image: url(../../image/camera/address-icon-32x32.png);
+						background-size: 100%;
+						background-repeat: no-repeat;
+						display:inline-block;
+						vertical-align: middle;
+					}
+					.txt{
+						display:inline-block;
+						vertical-align: middle;
+					}
+				}
+				.box-2{
+					height:21px;
+					margin-top: 15px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+
+			}
+		}
+	}
+
+}
+.fade{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+	z-index: 999;
+	zoom: 1;
+	clear: both;
+	_height: 1000px;
+	_position: absolute;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99000000', endColorstr='#99000000');
+	background: rgba(0,0,0,.6);
+}
+.filter-item-pop{
+	.item-wrap{
+		width:89%;
+		height:100%;
+		position:fixed;
+		top:0;
+		right:0;
+		z-index: 1000;
+		background-color: #fff;
+		.item{
+			padding:0px 15px 10px 15px;
+			.title-item{
+				padding:20px 0px;
+			}
+			.filter-item{
+				.list{
+					
+					li{
+						float: left;
+						padding:8px 20px;
+						border:1px solid #ddd;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+define("wap-kids:widget/date/index",function(e,t,d){"use strict";function i(e){return e&&e.__esModule?e:{"default":e}}var a=e("wap-kids:widget/date/date"),n=i(a);d.exports=n.default});

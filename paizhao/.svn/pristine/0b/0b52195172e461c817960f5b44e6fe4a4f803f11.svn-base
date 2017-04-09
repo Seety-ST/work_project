@@ -1,0 +1,91 @@
+
+{{#if header_show}}
+	<!-- header start -->
+	<header class="global-header ui-border-b {{className}}" style="{{style}}">
+		<div class="wbox clearfix">
+
+			{{#if left_icon_show}}
+				{{#if left_side_html}}     
+					{{{left_side_html}}}
+				{{else}}
+					<a href="javascript:void(0);" >
+						<div class="back" data-role="page-back">
+							<i class="dib icon-font i-iconfont-back icon-font-size-16 icon-back"></i>
+						</div>
+					</a>
+				{{/if}}
+			{{/if}}
+			
+
+			<h3 class="title">{{title}}</h3>
+
+			{{#if right_icon_show}}
+
+				{{#if share_icon.show}}
+					<!-- 分享按钮 -->
+					<div class="share" data-role="right-btn">
+						<i class="icon-share"></i>
+					</div>
+					<!-- 分享按钮 end -->
+				{{/if}}
+
+				{{#if omit_icon.show}}
+					<!-- 三点 -->
+					<div class="omit" >
+						<div data-role="right-btn" class="icon-omit-item">
+							<i class="icon-omit" ></i>
+						</div>
+						<div class="omit-pop ui-border-radius-5 right012 " data-role="omit-pop">
+							<i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-7 color-2c2 ui-transform-180"></i>
+							<ul class="list">
+								<a href="{{go_index.url}}">
+									<li>
+										<i class="dib icon-font i-iconfont-home icon-font-size-16"></i>
+										<em class="color-fff f15 txt">首页</em>
+									</li>
+								</a>
+								<a href="{{omit_icon.url}}" >
+									<li class="ui-border-t">
+										<i class="dib icon-font i-iconfont-no-data icon-font-size-16"></i>
+										<em class="color-fff f15 txt">举报</em>
+									</li>
+								</a>
+							</ul>
+						</div>
+
+					</div>
+					<!-- 三点 end -->
+				{{/if}}
+		
+				{{#if show_txt.show}}
+					<!-- 文字 -->
+					<div class="side-txt" style="{{show_txt.style}}" data-role="right-btn">
+						{{show_txt.content}}
+					</div>
+					<!-- end -->
+				{{/if}}
+
+				{{#if search_icon.show}}
+					<div class="search" data-role="right-btn">
+						<i class="icon-search"></i>
+					</div>
+				{{/if}}
+
+				{{#if go_index.show}}
+					<div class="go-index" data-role="right-btn">
+						<a href="//51snap.yueus.com/"><i class="dib icon-font i-iconfont-home icon-font-size-20 icon-go-index"></i></a>
+					</div>
+				{{/if}}
+
+				{{#if question.show}}
+					<div class="go-question" data-role="right-btn">
+						<a href="{{question.url}}"><i class="icon-question"></i></a>
+					</div>
+				{{/if}}
+					
+			{{/if}}
+
+		</div>
+	</header>
+	<!-- header end -->
+{{/if}}

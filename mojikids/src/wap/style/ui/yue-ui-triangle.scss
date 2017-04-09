@@ -1,0 +1,24 @@
+//`三角形 汤圆 2016-1-18
+
+@import "../../sass/compass";
+
+
+.icon-allow-grey {
+    background: url(../../image/ui/arrow-icon-32x32.png?__inline) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
+}
+.icon-allow-grey-bottom {
+    @include transform(rotate(90deg));
+}
+.icon-allow-grey-left {
+    @include transform(rotate(180deg));
+}
+.icon-allow-grey-top {
+    @include transform(rotate(270deg));
+}

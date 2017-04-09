@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK" >
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>Magnet Girl</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body class="work-bg">
+	<section class="workList-page">
+		<div class="listItem"></div>
+		<div class="sub-nav">
+			<a href="#" class="cur">最热</a>|<a href="#">最新</a>
+		</div>
+		<div class="list clearfix">
+			<ul>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+				<li>
+					<div class="img-item">
+						<img src="images/test/252x336.jpg" />
+					</div>
+					<div class="text-item">
+						<a href="#">
+							<i class="icon like-icon"></i><span class="poll">1634</span>
+						</a>
+					</div>
+					<div class="name-item">
+						美人1924
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="mod-arrow">
+			<i class="down-icon"></i>
+		</div>
+	</section>
+	<section class="mod-download-bar">
+		<a href="#" class="join-btn">参加活动</a>
+	</section>
+</body>
+</html>

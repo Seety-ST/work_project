@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * MOJI 配置
+ * 
+ * @author willike <chenwb@yueus.com>
+ * @since 2017-01-04
+ */
+return array(
+    // 0待支付，1待确认，2待签到，7已关闭，8已完成
+    'order_status' => array(
+        0 => '待支付',
+        1 => '待到店',
+        2 => '待完成',
+        7 => '已关闭',
+        8 => '已完成'
+    )
+);
+

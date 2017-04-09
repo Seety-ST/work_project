@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>云相册</title>
+	<link href="css/cloud-jane.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="cloud-page">
+		<div class="content">
+			<!-- 预览 -->
+			<div class="scan-warp">
+				<div class="img-item">
+					<!-- 3:4 -->
+					<img src="images/test/750x999.jpg" style="display:" />
+					<!-- 1:1 -->
+					<img src="images/test/246x246.jpg" style="display:none" />
+					<!-- 9:16 -->
+					<img src="images/test/556x988.jpg" style="display:none"  />
+				</div>
+			</div>
+			<!-- 预览 end -->
+		</div>
+		<!-- mod-foot-bar -->
+		<section class="mod-foot-bar clearfix">
+			<!-- 无法点击 unable-area-btn -->
+			<span class="icon-area unable-area-btn">
+				<i class="icon delete-icon"></i>
+			</span>
+			<!-- 无法点击 unable-save-btn -->
+			<div class="btn-item save-btn unable-save-btn">
+				<span>保存到本地</span>
+			</div>
+		</section>
+		<!-- mod-foot-bar end -->
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade" style="display:  "></div>
+	<!-- 好友退出连接 -->
+	<div class="pop-tipsItem two-btn-pop" style="display:  ">
+		<div class="text-item">
+			<p>
+				删除后无法恢复，
+				<br />
+				但不影响本地照片。
+				<br />
+				确认删除选中的照片吗？
+			</p>
+		</div>
+		<div class="btn-item clearfix">
+			<span class="area-btn"> <em>取消</em>
+			</span>
+			<span class="area-btn"> <em>删除</em>
+			</span>
+		</div>
+	</div>
+	<!-- 好友退出连接 end-->
+	<!-- 弹出层 end -->
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="import" href="./g_head.tpl.htm?__inline">
+	<title>
+		YUE-UI VUE 2.0 Form
+	</title>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<link rel="import" href="./g_back.tpl.htm?__inline">
+    <main role="main">
+    	<div id="page-container" class="page-container page-view" >
+            <h1>radio 组件</h1>
+            <mt-radio
+              title="单选框列表"
+              v-model="sex"
+              :options="['选项A', '选项B', '选项C']">
+            </mt-radio>
+    	</div>
+    </main>
+
+</body>
+
+</html>
+<link rel="import" href="./g_footer.tpl.htm?__inline">
+
+<script type="text/javascript">
+	(function()
+    {
+        // 引用Radio 组件
+		var Radio = require.syncLoad(__moduleId('/modules/widget/radio/index'));
+
+        // 安装Radio 模块
+        Vue.component(Radio.name, Radio);
+
+		new Vue
+		({
+			el: '#page-container',
+			created: function()
+			{
+
+			},
+			data:
+			{
+                sex : ""
+			},
+			methods:
+			{
+
+			}
+		});
+	})();
+</script>

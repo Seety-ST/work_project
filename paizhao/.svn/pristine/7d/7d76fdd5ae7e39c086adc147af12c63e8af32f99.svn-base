@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>约摄-POCO旗下的摄影师预约平台</title>   
+    <meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+    <meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+    {%$wap_global_head%}    
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/index/index-page.css" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	
+	<!-- 页面内容 -->
+	
+	</div>
+	
+	<!-- 底部内容 -->
+	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+	
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>

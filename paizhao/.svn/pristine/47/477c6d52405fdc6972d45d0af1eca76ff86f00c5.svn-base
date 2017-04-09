@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>摄影师主页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/camera/index-page.scss" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="camera-page font_wryh">
+		
+		<div class="p1th">
+			<div class="w1200 clearfix">
+				<div class="lbox fldi">
+					<div class="avatar-item">
+						<div class="ui-avatar-icon ui-avatar-icon-120">
+							<i style="background-image:url({%$photographers_info.un_data.avatar%})"></i>
+						</div>
+						<p class="address-txt">
+							<i class="icon icon-circle-address ui-icon-size-16 dib"></i>
+							<em class="txt">{%$photographers_info.un_data.location_name%}</em>
+						</p>
+					</div>
+				</div>
+				<div class="rbox fldi">
+					<div class="item-1 clearfix">
+						<span class="fldi name-txt color-333 fb f24">{%$photographers_info.un_data.name%}</span>
+						<a href="#" data-role="srdz-btn">
+							<button class="ui-button ui-button-bg-fbb ui-button-block  ui-button-size-h40 frdi">
+								<span class="ui-button-content f14">私人订制</span>
+							</button>
+						</a>
+					</div>
+					<div class="item-2">
+						<div class="txt-1 color-666 f14">
+							{%$photographers_info.un_data.introduce%}
+						</div>
+						<div class="txt-2">
+							<ul class="list clearfix f14 color-333">
+								<li>
+									套系数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.goods_num%}</span>
+								</li>
+								<li>
+									咨询数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.consults%}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="item-wrap">
+					<div class="select-list-item clearfix">
+						<div class="classify-item fldi" >
+							<ul class="list clearfix f14 color-666" data-role="filter-item">
+								
+							{%foreach $paizhao_goods_type as $key => $val%}
+								<a href="{%$val.link%}">
+									<li data-key ="{%$key%}" class="{%$val.cur_name%}">
+										{%$val.name%}
+									</li>
+								</a>
+							{%/foreach%}
+							</ul>
+						</div>
+						<div class="sort-item frdi f14 color-666" >
+							<ul class="list clearfix" data-role="sort-item">
+								{%foreach $sort_item as $val%}
+								<a href="{%$val.link%}">
+									<li  sort-type="{%$val.sort_type%}" class="{%$val.cur_name%}">
+										<span>{%$val.name%}</span>
+										{%if $val.has_arrow%} <i class="icon {%$val.sort_arrow_class%}"></i> {%/if%}
+									</li>
+								</a>
+								{%/foreach%}
+								
+							</ul>
+						</div>
+					</div>
+					
+					<div class="photo-list-item" data-role="filter-photo-list">
+						<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+							<ul class="list clearfix">
+								{%foreach $goods_info.data as $val%}
+								<a href="{%$val.link_url%}">
+									<li class="pic-list-width-285">
+										<div class="img-item">
+											<div class="img">
+												<img src="{%$val.images%}">
+											</div>
+											<div class="txt color-fff">{%$val.consults%}</div>
+										</div>
+										<div class="txt-item">
+											<div class="box-1 clearfix">
+												<p class="txt-1 color-fa6 fldi f18 fb">
+													{%$val.prices%}
+												</p>
+												<p class="txt-2  color-999 frdi f14">{%$val.location_name%}</p>
+											</div>
+											<div class="box-2">
+												<p class="txt-1 color-333 f14">
+													{%$val.titles%}
+												</p>
+											</div>
+											
+										</div>
+									</li>
+								</a>
+								{%/foreach%}
+							</ul>
+						</div>
+					</div>
+					
+					<div class="no-data-item tc dn f14" data-role="no-data-item">
+						暂无数据
+					</div>
+					
+				</div>
+				{%if $page%}
+				<div class="page-mod-1 f14 tc">
+					{%$page%}
+				</div>
+				{%/if%}
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		var utility = require('pc-huipai:global/utility/index');  
+		require('pc-huipai:global/layer/layer');  
+		
+		
+	
+		
+
+		// 私人订制按钮点击促发的事件
+		var data={
+			user_id :  {%$user_id%}
+		}
+
+		$('[data-role="srdz-btn"]').on('click', function(event) {
+			utility.ajax_request
+			({
+				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN']+'camera/add_consult_button.php',
+				data : data,
+				cache: false,
+				beforeSend: function()
+				{
+
+				},
+				success: function(data)
+				{
+					
+				},
+				error: function(data)
+				{
+					
+				},
+				complete:function(){
+					
+					
+					
+				}
+			});
+		
+			var index_1 = layer.confirm('<div class="pop-contact-mod"><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text" placeholder="您的称呼" /><input type="text" name=" " id="tel" class="input-text"  placeholder="留下您的电话，方便联系" /></div><div class="btn"><button data-role="submit_info_btn" class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h32"><span class="ui-button-content f14">提交</span></button></div><div class="num-box color-999">已有 <span class="num color-2bd">{%$photographers_info.un_data.consults%}</span> 人咨询此摄影套系</div></div>', 
+				{
+					title:  ['<i class="code-icon"></i>添加摄影顾问微信', 'background-color:#fff;border-bottom:none;'], //不显示标题
+					shade: 0.5,
+					move: false,
+					area: ['600px'],
+					btn: '', //按钮
+					skin : 'pai_zhao_camera_class',
+				}, function(){
+
+				}, function(){
+
+			});
+
+			$('[data-role="submit_info_btn"]').on('click', function(event) {
+
+				var user_name = $.trim($('#user_name').val())
+				var tel = $.trim($('#tel').val())
+				if (!user_name) 
+				{
+					alert('请输入您的称呼');
+					return ;
+				}
+				if (!tel) 
+				{
+					alert('请输入您的电话号码');
+					return ;
+				}
+
+				var phone_len = /^\d{11}$/;
+				if(!phone_len.exec( parseInt(tel)))
+				{ 
+					alert('请输入正确手机号码');
+					return ;
+				}
+
+				utility.ajax_request
+				({
+					url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/add_contact_info.php',
+					data: 
+					{
+						name : user_name,
+						mobile : tel ,
+						user_id : '{%$user_id%}' 
+
+					},
+					dataType: 'json',
+					type: 'POST',
+					cache: false,
+					beforeSend: function() 
+					{
+						console.log("111");
+					},
+					success: function(data)
+					{
+						console.log("222");
+						layer.close(index_1);
+						if (data.result_data.result == 1) 
+						{
+							var index_2 = layer.confirm('<div class="pop-contact-success-mod pop-contact-success-mod-1"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">直接加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+							{
+									title: '提示', //不显示标题
+									shade: 0.5,
+									move: false,
+									area: ['600px', '270px'],
+									btn: ['确定',''], //按钮
+									skin : 'pai_zhao_camera_class',
+								}, function(){
+
+								}, function(){
+							});
+						}
+						else
+						{
+							var index_3 = layer.confirm('<div class="pop-contact-success-mod"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">直接加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+							{
+									title: '提示', //不显示标题
+									shade: 0.5,
+									move: false,
+									area: ['600px', '270px'],
+									btn: ['确定',''], //按钮
+									skin : 'pai_zhao_camera_class',
+								}, function(){
+
+								}, function(){
+									//  取消 do something
+
+							});
+						}
+					},   
+					error: function() 
+					{
+
+					},    
+					complete: function() 
+					{
+
+					} 
+				});
+
+			});
+		});
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

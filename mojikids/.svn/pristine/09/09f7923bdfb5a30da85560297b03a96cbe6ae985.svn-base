@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017123/main.5e8ee97.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.39fdb82.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+	 	按钮
+	</title>
+
+
+    
+</head>
+
+<body>
+
+	<style type="text/css">
+		.des {
+			margin: 3px 0;
+		}
+
+		.ui-button-submit-area {
+			bottom: 70px;
+		}
+
+		.ui-button-tab-bar {
+			bottom: 70px;
+		}
+
+		.page-container {
+			padding-bottom: 95px;
+		}
+
+		.icon-common {
+			background-color: #666
+		}
+	</style>
+	
+	<!-- YUE-UI VUE 头部返回模块 start -->
+	<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+	<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+	<div class="pb20 pl20 pr20 f14">
+
+		<p class="f18 color  color-ff6 ">大小</p>
+		<p class="des">ui-button-block 为block元素</p>
+		<p class="des">ui-button-inline-block 为inline-block元素</p>
+
+		<p class="des">ui-button-100per 为100%</p>
+
+		<p class="des">ui-button-size-x 为高度 30px 按钮 </p>
+		<p class="des">ui-button-size-m 为高度 35px 按钮 </p>
+		<p class="des">ui-button-size-l 为高度 40px 按钮 </p>
+		<p class="des">ui-button-size-xl 为高度 45px 按钮 </p>
+
+
+		<p class="f18 color color-ff6 mt20">配色</p>
+		<p class="des">ui-button-bg-ff6 具体查看实例</p>
+
+	</div>
+
+	<div id="page-container" class="page-container">
+
+
+
+		<div class="p10">
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-x ui-button-bg-ff6">
+				<span class="ui-button-content f14">按钮 无触发色</span>
+			</button>
+
+			<br />
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-x ui-button-bg-ff6-has-active">
+				<span class="ui-button-content f14">按钮 有触发色</span>
+			</button>
+
+			<br />
+
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-x ui-button-bg-ff6-has-active">
+				<span class="ui-button-content f14"><i class="icon-common"></i>按钮 有icon</span>
+			</button>
+
+			<br />
+
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-m ui-button-bg-ff6">
+				<span class="ui-button-content f16">按钮</span>
+			</button>
+
+			<br />
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-l ui-button-bg-ff6">
+				<span class="ui-button-content f16">按钮</span>
+			</button>
+			<br />
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-l ui-button-bg-fff-has-active">
+				<span class="ui-button-content f16">按钮 白色</span>
+			</button>
+			<br />
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl ui-button-bg-ff6">
+				<span class="ui-button-content f16">按钮</span>
+			</button>
+
+			<br />
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl ui-button-bg-ff6 ui-button-radius-l">
+				<span class="ui-button-content f16">按钮 大圆角情况</span>
+			</button>
+
+			<br />
+
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l">
+				<span class="ui-button-content f16">按钮 大圆角情况</span>
+			</button>
+
+			<br />
+			
+			<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl  ui-button-radius-l ui-button-bd-fac main-border-color">
+				<span class="ui-button-content f16">按钮 大圆角情况</span>
+			</button>
+
+			<br />
+			
+			<button class="ui-button  ui-button-block ui-button-100per ui-button-size-xl ui-button-bg-btn-ccc ui-button-radius-l">
+				<span class="ui-button-content f16">禁止点击</span>
+			</button>
+			<br />
+
+			<button class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+				<span class="ui-button-content f12">按钮</span>
+			</button>
+			<br />
+			<br />
+			<button class="ui-button  ui-button-inline-block  ui-button-size-x ui-button-bg-ff6">
+				<span class="ui-button-content f14">按钮</span>
+			</button>
+
+			<button class="ui-button  ui-button-inline-block  ui-button-size-x ui-button-bg-ff6">
+				<span class="ui-button-content f14">按钮</span>
+			</button>
+
+			<br />
+			<br />
+
+
+			<button class="ui-button ui-button-block  ui-button-size-x ui-button-bg-fff">
+				<span class="ui-button-content f14">未选择</span>
+			</button>
+			<br />
+
+			<button class="ui-button ui-button-block  ui-button-size-x ui-button-bg-eee">
+				<span class="ui-button-content f14">已选择</span>
+			</button>
+			<br />
+
+			<button class="ui-button ui-button-block  ui-button-size-x ui-button-bg-555">
+				<span class="ui-button-content f14">按钮</span>
+			</button>
+
+			<br />
+
+
+
+			<button class="ui-button ui-button-block  ui-button-size-x ui-button-bd-555">
+				<span class="ui-button-content f14">关闭</span>
+			</button>
+
+			<br />
+
+			<button class="ui-button  ui-button-block  ui-button-size-x ui-button-bd-aaa">
+				<span class="ui-button-content f14">关闭</span>
+			</button>
+
+			<br />
+
+
+			<button class="ui-button ui-button-block  ui-button-size-x ui-button-bd-ff6">
+				<span class="ui-button-content f14">关闭</span>
+			</button>
+
+			<br />
+			<br />
+
+			<!-- 订单列表 -->
+			<div class="list-button-mod ">
+				<button class="ui-button ui-button-inline-block ui-button-size-x ui-button-bd-aaa mr15 refuse">
+					<span class="ui-button-content f14 ">拒绝接单</span>
+				</button>
+				<button class="ui-button ui-button-inline-block ui-button-size-x ui-button-bd-ff6 mr15 confirm">
+					<span class="ui-button-content f14 ">确认接单</span>
+				</button>
+			</div>
+			<!-- 订单列表 end -->
+
+
+
+			<br />
+			<br />
+
+			<button class="ui-button  ui-button-block ui-button-100per ui-button-size-l ui-button-bg-btn-555">
+				<span class="ui-button-content f16">咨询</span>
+			</button>
+
+			<br />
+
+			<button class="ui-button  ui-button-block ui-button-100per ui-button-size-l ui-button-bg-btn-ccc">
+				<span class="ui-button-content f16">禁止点击</span>
+			</button>
+
+			<br />
+
+			<!--     <button class="ui-button-submit">
+		<span class="ui-button-content">提交订单</span>
+	</button>
+
+	<br /><br /> -->
+
+
+			<button class="ui-button  ui-button-block ui-button-100per ui-button-size-l ui-button-bg-btn-2c2">
+				<span class="ui-button-content f16" >咨询</span>
+			</button>
+
+			<br />
+
+
+		</div>
+
+		<br />
+		<br />
+
+
+		<div class="ui-button-tab-bar ui-border-t">
+			<button class="ui-button ui-button-inline-block ui-button-size-l ui-button-bd-aaa mr15 refuse">
+				<span class="ui-button-content f16 ">拒绝接单</span>
+			</button>
+			<button class="ui-button ui-button-inline-block ui-button-size-l ui-button-bd-ff6 mr15 confirm">
+				<span class="ui-button-content f16 ">确认接单</span>
+			</button>
+		</div>
+
+
+		<div class="ui-button-submit-m f16 ui-border-t">
+			<div class="lbox one">
+				<button class="ui-button  ui-button-block ui-button-100per  ui-button-size-l ui-button-bd-555">
+					<span class="ui-button-content f16">取消</span>
+				</button>
+			</div>
+			<div class="rbox">
+				<button class="ui-button  ui-button-block ui-button-100per  ui-button-size-l ui-button-bg-btn-2c2">
+					<span class="ui-button-content f16">确定</span>
+				</button>
+			</div>
+		</div>
+
+
+	</div>
+
+
+
+
+
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+

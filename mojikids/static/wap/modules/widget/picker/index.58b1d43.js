@@ -1,0 +1,1 @@
+define("wap-kids:widget/picker/index",function(e,i,t){"use strict";function d(e){return e&&e.__esModule?e:{"default":e}}var r=e("wap-kids:widget/picker/picker"),n=d(r);t.exports=n.default});

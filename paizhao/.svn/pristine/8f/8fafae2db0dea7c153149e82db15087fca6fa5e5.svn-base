@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>首页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+    
+    
+</head>
+<body class="index-wrapper" >
+	{%foreach $arr as $val%}
+		<h1>{%$val.txt%}</h1>
+	{%/foreach%}
+
+	{%if $show == 1 %}
+	<h3>{%$show%}</h3>
+	{%elseif $show == 2 %}
+	<div>ssssss</div>
+	{%/if%}
+
+	{%$show%}
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+<script type="text/javascript">	
+	(function()
+	{
+		
+	})();
+</script>
+
+{%$pc_global_tj%}
+</html>

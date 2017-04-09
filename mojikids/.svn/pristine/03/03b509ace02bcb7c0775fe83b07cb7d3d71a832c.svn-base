@@ -1,0 +1,37 @@
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 拍摄须知
+ */
+
+.shot-notice-page{
+	.p1th{
+		
+		.item-wrap{
+			padding:0px 15px;
+
+			dl{
+				margin:20px 0px 5px 0px;
+				dd{
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+	.p2th{
+		.item-wrap{
+			.img-item{
+				width: 100%;
+				height: 120px;
+				i.img{
+					width:100%;
+					height:100%;
+					display:block;
+					background: url(../../image/about/bg-img-690x240.jpg) no-repeat center;
+					background-size: contain;
+				}
+			}
+		}
+	}
+}

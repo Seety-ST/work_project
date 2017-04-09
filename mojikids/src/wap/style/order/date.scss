@@ -1,0 +1,120 @@
+// 选择档期页面
+// 星星
+// 2017-1-5
+
+.page-container {
+  background-color: #fff;
+  .date-container {
+    background-color: #fff;
+    //导航
+    .date-nav {
+      display:-webkit-flex;
+      display:flex;
+      height: 45px;
+      line-height: 45px;
+      .nav-icon {
+        width: 20%;
+        text-align: center;
+      }
+      .nav-text {
+        width: 60%;
+        overflow: hidden;
+        text-align: center;
+      }
+    }
+    //档期内容
+    .content-main {
+      width: 100%;
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+      .weekdays {
+        padding: 15px 0 10px ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      .weekdays li {
+        display: inline-block;
+        width: 13.6%;
+        text-align: center;
+      }
+      .days {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .other-month {
+          display: none;//暂时处理
+        }
+      }
+      .days li {
+        display: inline-block;
+        width: 14.2%;
+        text-align: center;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        color: #ffc430;
+        font-size: 16px;
+      }
+      .days li .active-little {
+        border-radius: 50%;
+        background-color: #ffc430;
+        color: #fff;
+        padding: 6px 11px;
+      }
+      .days li .active-big {
+        border-radius: 50%;
+        background-color: #ffc430;
+        color: #fff;
+        padding: 5px 7px 5px 5px;
+      }
+
+
+      .days li .full {
+        color: #ccc;
+      }
+    }
+    //细分时间
+    .date-detail-list {
+      .detail-list-title {
+        padding: 15px 15px 0px 15px;
+      }
+      .detail-list {
+        //display: flex;
+        //flex-wrap: wrap;
+        //justify-content :space-between;
+        padding-left: 23px;
+        padding-right: 13px;
+        padding-bottom: 50px;
+        .detail-list-item {
+          float: left;
+          margin-right: 8px;
+          text-align: center;
+          height: 28px;
+          line-height: 28px;
+          width: 74px;
+          border: 1px solid #ccc;/*no*/
+          border-radius: 16px;
+          margin-top: 10px;
+        }
+        .detail-list-item-cur {
+          border: 1px solid #FFC430;
+          color: #FFC430;
+        }
+      }
+    }
+
+  }
+
+}
+/*重写弹框按钮样式*/
+/*
+.mint-msgbox-confirm:active {
+  background-color: #fff;
+  color: #46AFFF;
+}
+.mint-msgbox-confirm:hover {
+  background-color: #fff;
+  color: #46AFFF;
+}*/

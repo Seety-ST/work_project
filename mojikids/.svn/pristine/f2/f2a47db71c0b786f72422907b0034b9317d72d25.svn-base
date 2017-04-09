@@ -1,0 +1,470 @@
+@charset "UTF-8";
+
+/*CSS Reset*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+header,
+hgroup,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  font-family: Helvetica,sans-serif;
+  line-height: 1.5;
+  font-size: 0.12rem;
+  color: #000;
+  -webkit-user-select: text;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  user-select: text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  -webkit-appearance: none;
+  outline: 0;
+}
+
+a:link {
+  -webkit-touch-callout: none;
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: #999999;
+}
+
+em,
+i {
+  font-style: normal;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+/*** font ***/
+
+.word_break {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.fb {
+  font-weight: bold;
+}
+
+.db {
+  display: block;
+}
+
+.dn {
+  display: none;
+}
+
+.di {
+  display: inline;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.tc {
+  text-align: center;
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.vam {
+  vertical-align: middle;
+}
+
+.lh18 {
+  line-height: 0.18rem;
+}
+
+.lh20 {
+  line-height: 0.2rem;
+}
+
+.lh22 {
+  line-height: 0.22rem;
+}
+
+.lh24 {
+  line-height: 0.24rem;
+}
+
+.lh26 {
+  line-height: 0.26rem;
+}
+
+.lh28 {
+  line-height: 0.28rem;
+}
+
+.lh30 {
+  line-height: 0.3rem;
+}
+
+.font_wryh {
+  font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+}
+
+.font_arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/** position **/
+
+.re {
+  position: relative;
+  z-index: 1;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.frdi {
+  float: right;
+  display: inline;
+}
+
+.fldi {
+  float: left;
+  display: inline;
+}
+
+.pt5 {
+  padding-top: 0.05rem;
+}
+
+.pt10 {
+  padding-top: 0.1rem;
+}
+
+.pt15 {
+  padding-top: 0.15rem;
+}
+
+.pt20 {
+  padding-top: 0.2rem;
+}
+
+.pb5 {
+  padding-bottom: 0.05rem;
+}
+
+.pb10 {
+  padding-bottom: 0.1rem;
+}
+
+.pb15 {
+  padding-bottom: 0.15rem;
+}
+
+.pb20 {
+  padding-bottom: 0.2rem;
+}
+
+.pl5 {
+  padding-left: 0.05rem;
+}
+
+.pl10 {
+  padding-left: 0.1rem;
+}
+
+.pl15 {
+  padding-left: 0.15rem;
+}
+
+.pl20 {
+  padding-left: 0.2rem;
+}
+
+.pr5 {
+  padding-right: 0.05rem;
+}
+
+.pr10 {
+  padding-right: 0.1rem;
+}
+
+.pr15 {
+  padding-right: 0.15rem;
+}
+
+.pr20 {
+  padding-right: 0.2rem;
+}
+
+.mt5 {
+  margin-top: 0.05rem;
+}
+
+.mt10 {
+  margin-top: 0.1rem;
+}
+
+.mt15 {
+  margin-top: 0.15rem;
+}
+
+.mt20 {
+  margin-top: 0.2rem;
+}
+
+.mb5 {
+  margin-bottom: 0.05rem;
+}
+
+.mb10 {
+  margin-bottom: 0.1rem;
+}
+
+.mb15 {
+  margin-bottom: 0.15rem;
+}
+
+.mb20 {
+  margin-bottom: 0.2rem;
+}
+
+.ml5 {
+  margin-left: 0.05rem;
+}
+
+.ml10 {
+  margin-left: 0.1rem;
+}
+
+.ml15 {
+  margin-left: 0.15rem;
+}
+
+.ml20 {
+  margin-left: 0.2rem;
+}
+
+.mr5 {
+  margin-right: 0.05rem;
+}
+
+.mr10 {
+  margin-right: 0.1rem;
+}
+
+.mr15 {
+  margin-right: 0.15rem;
+}
+
+.mr20 {
+  margin-right: 0.2rem;
+}
+
+.p5 {
+  padding: 0.05rem;
+}
+
+.p10 {
+  padding: 0.1rem;
+}
+
+.p15 {
+  padding: 0.15rem;
+}
+
+.p20 {
+  padding: 0.2rem;
+}
+
+.f10 {
+  font-size: 0.1rem;
+}
+
+.f11 {
+  font-size: 0.11rem;
+}
+
+.f12 {
+  font-size: 0.12rem;
+}
+
+.f13 {
+  font-size: 0.13rem;
+}
+
+.f14 {
+  font-size: 0.14rem;
+}
+
+.f15 {
+  font-size: 0.15rem;
+}
+
+.f16 {
+  font-size: 0.16rem;
+}
+
+.f17 {
+  font-size: 0.17rem;
+}
+
+.f18 {
+  font-size: 0.18rem;
+}
+
+.f19 {
+  font-size: 0.19rem;
+}
+
+.f20 {
+  font-size: 0.2rem;
+}
+
+.f21 {
+  font-size: 0.21rem;
+}
+
+.f22 {
+  font-size: 0.22rem;
+}
+
+.f23 {
+  font-size: 0.23rem;
+}
+
+.f24 {
+  font-size: 0.24rem;
+}
+
+.f26 {
+  font-size: 0.26rem;
+}
+
+.f28 {
+  font-size: 0.28rem;
+}
+
+/* ====================== 重置 ===================== */
+
+/** 清除浮动 **/
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* html .clearfix {
+  zoom: 1;
+}
+
+/* IE6 */
+
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* IE7 */
+
+body.cor-bg-fff {
+  background: #fff;
+}
+
+.mt45 {
+  margin-top: 0.45rem;
+}
+
+.pt45 {
+  padding-top: 0.45rem;
+}
+
+.fn {
+  display: none;
+}
+
+.main-bottom {
+  padding-bottom: 0.55rem;
+}

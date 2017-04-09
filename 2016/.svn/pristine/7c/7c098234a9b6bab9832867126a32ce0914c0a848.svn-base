@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/* collection設定
+   =================================================================== */
+.collection_top_container img {
+}
+
+/* main_container設定
+   =================================================================== */
+.anniversary_container {
+	line-height:0;
+}
+.anniversary_container img {
+	height:auto;
+	width:100%;
+}
+.anniversary_container .anniversary_1 {
+	position:relative;
+	overflow:hidden;
+	background:#000;
+}
+.anniversary_container .coming a,.item_container li.coming a {
+	cursor:inherit;	
+}
+.anniversary_container .anniversary_1 .watch_container {
+	position:absolute;
+	height:100%;
+	width:100%;
+	z-index:5;
+}
+.anniversary_container .anniversary_1 .watch_container img {
+	height:100%;
+	width:auto;
+}
+.anniversary_container .anniversary_1 .watch1 {
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:5;
+}
+.main_link {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:6;	
+}
+.main_link a {
+	display:block;
+	height:100%;	
+}
+.anniversary_container .anniversary_1 .watch1 .watch {
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.anniversary_container .anniversary_1 .watch1 .watch a {
+	display:block;
+	height:100%;	
+}
+.anniversary_container .anniversary_1 .watch2 {
+	height:100%;
+	position:absolute;
+	left:400px;
+	top:0;
+	z-index:12;
+}
+.anniversary_container .anniversary_1 .watch2 .watch {
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.anniversary_container .anniversary_1 .main_bg {
+	width:100%;
+	height:auto;
+}
+
+.anniversary_container dl {
+	position:absolute;
+	right:55px;
+	bottom:40px;
+	z-index:15;
+	line-height:1;
+	color:#fff;
+}
+.anniversary_container .anniversary_1 dt {
+	background:url(../img/common/line_1.gif) no-repeat 1px bottom;
+	position:relative;
+	font-size:15px;
+	margin-bottom:15px;
+	padding-bottom:22px;
+}
+.anniversary_container .anniversary_1 dd {
+	font-size:30px;
+}
+.anniversary_container .anniversary_2 {
+	position:relative;
+	background:#000;
+}
+.anniversary_container .anniversary_2 img {
+	height:auto;
+	width:100%;
+}
+.anniversary_container .anniversary_2 dt {
+	background:url(../img/common/line_2.gif) no-repeat 1px bottom;
+	position:relative;
+	font-size:11px;
+	margin-bottom:15px;
+	padding-bottom:22px;
+}
+.anniversary_container .anniversary_2 dd {
+	font-size:20px;
+}
+.item_container li {
+	float:left;
+	line-height:0;
+}
+.item_container li a {
+	border-top:1px solid #eaeaea;
+	border-right:1px solid #eaeaea;
+	border-bottom:1px solid #eaeaea;
+	position:relative;
+}
+.item_container img {
+	display:block;
+	height:auto;
+	width:100%;
+}
+.aw_container li {
+	width:33.33%;
+}
+.aw_container2 li {
+	width:25%;
+}
+.aw_container dl {
+	border-top:1px solid #eaeaea;
+	line-height:1.5;
+	padding:23px;
+}
+.aw_container dt {
+	font-size:11px;
+}
+.aw_container dd {
+	font-size:15px;
+	min-height: 4em;
+}
+.other_container li {
+	width:25%;
+	position:relative;
+}
+.other_container li p {
+	line-height:1;
+	padding:17px 0 25px 23px;
+	font-size:12px;
+}
+.other_container li p span {
+	display: block;
+    font-size: 10px;
+    margin-bottom: 7px;
+    margin-right: 10px;
+}
+.box{width: 100%; height: 100%; text-align: center; position: relative;}
+.bd div{background: #000; position:absolute;}
+.bd div.bdT{width: 0; height:1px; top:0; left:0;}
+.bd div.bdB{width: 0; height:1px; bottom:0; right:0;}
+.bd div.bdR{height:0; width :1px; right:0; top:0;}
+.bd div.bdL{height:0; width :1px; left:0; bottom:0;}
+
+#contents .item_container .new {
+	display:block;
+	margin-top:4px;
+}
+
+/* side_container設定
+   =================================================================== */
+#contents .side_container {
+	padding-left:30px;
+	top:300px;
+	position:fixed;
+}
+.side_container {
+	font-size:14px;
+}
+.side_container h3 {
+}
+.side_container .side_menu li {
+	height:39px;
+	width:auto;
+	margin-bottom:1px;
+}
+.side_container .side_menu li a {
+	display:block;
+	overflow: inherit;	
+}
+.side_container .side_menu li span {
+	padding-bottom:5px;
+}
+.side_container .side_menu li.selected span {
+	border-bottom:2px #000 solid;	
+}
+@media only screen and (max-width: 768px) {
+.anniversary_container dl {
+    bottom: 20px;
+    right: 20px;
+}
+.anniversary_container .anniversary_1 dt,.anniversary_container .anniversary_2 dt {
+    font-size: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}	
+.anniversary_container .anniversary_1 dd,.anniversary_container .anniversary_2 dd {
+    font-size: 18px;
+}
+.aw_container dt {
+    font-size: 8px;
+}
+.aw_container dd {
+    font-size: 13px;
+	min-height: 5em;
+}
+.other_container {
+	margin-bottom:60px;	
+}
+.other_container li p {
+    font-size: 10px;
+    padding: 12px 0 15px 15px;
+	min-height: 5em;
+}
+.aw_container dl {
+    border-top: 1px solid #eaeaea;
+    line-height: 1.5;
+    padding: 15px;
+}
+}
+@media only screen and (max-width:667px) {
+.aw_container li {
+    width: 50%;
+}
+.other_container li {
+    position: relative;
+    width: 33.333%;
+	min-height: 140px;
+}	
+.anniversary_container .anniversary_1 dd, .anniversary_container .anniversary_2 dd {
+    font-size: 13px;
+}
+#contents .new {
+    display: block;
+    font-size: 8px;
+    margin-right: 0;
+}
+}

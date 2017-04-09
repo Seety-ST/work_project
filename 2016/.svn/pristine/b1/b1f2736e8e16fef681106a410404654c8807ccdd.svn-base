@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="GBK" >
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>邂逅英伦 发现惊喜</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+<body>
+    <section class="index-page">
+       <h1 class="logo-item">
+           <i class="icon"></i>
+       </h1>
+       <section class="con-wrap">
+           <div class="img-item">
+               <div class="img">
+                   <img src="images/test/541x602.jpg" />
+               </div>
+           </div>
+           <div class="text-item">
+               <p>
+                   #邂逅英伦发现惊喜# 英国，一个古典与时尚激烈碰撞的国度。走在这里的城市和乡村，时刻都能感受到传统与现代的交融，令人心向往之。你也赶紧来分享属于你的英伦精彩瞬间吧！！
+               </p>
+           </div>
+       </section>
+       <section class="mod-download-bar">
+           <a href="#" class="btn">马上下载</a>
+       </section>
+    </section> 
+</body>
+</html>

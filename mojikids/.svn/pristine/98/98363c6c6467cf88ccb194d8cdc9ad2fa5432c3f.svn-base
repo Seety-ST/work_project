@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{%$wap_global_head%}
+		<!-- <link rel="import" href="../ui/g_head.tpl.htm?__inline"> -->
+		<title>个人中心 - 莫吉照相馆</title>
+		<link href="../../style/mine/index-page.scss" type="text/css" rel="stylesheet" />
+	</head>
+	<body class="cor-bg-fff" >
+		<div class="mine-page"  id="babycard_list" v-cloak>
+			<div class="p1th ui-border-b">
+				<div class="item-wrap clearfix">
+					<a href="{%$MOJIKIDS_PAGE_ARR.index%}set_up/profile_edit.php">
+						<div class="ui-avatar-icon ui-avatar-icon-40 fldi">
+						          <i :style="{backgroundImage: 'url(' + user_info.avatar + ')'}"></i> 
+						</div>
+						<div class="txt-item fldi">
+							<div class="box-1 f14 color-333 fb">
+								{{user_info.nickname}}
+							</div>
+							<div class="box-2 color-999">
+								{{user_info.phone}}
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="p2th" >
+				<div class="item-wrap">
+					<a href="{%$MOJIKIDS_PAGE_ARR.index%}bb/list">
+						<div class="title-item tc"><span class="text f14 color-666">{{total_data.res.title}}</span><i class="arrow-icon"></i></div>
+					</a>
+					<div class="content">
+						<div class="baby-list-item" v-if="has_data" >
+							<ul class="list">
+								<div v-for = "(item,index) in total_data.res.list" class="con-item">
+									<li >
+
+										
+											<div class="ui-avatar-icon ui-avatar-icon-60">
+											 	<i :style="{backgroundImage: 'url(' + item.baby_image + ')'}"></i>
+											</div>
+											<div class="txt-item">
+												<div class="box-1 color-111 f16 tc">{{item.baby_name}}{{item.baby_sex}}</div>
+												<div class="box-2 color-cccc tc">
+													{{item.baby_birth}}
+												</div>
+											</div>
+											<template v-if="item.is_girl">
+												<i class="li-bg-1 girl-bg-1 ui-avatar-icon-s"></i>
+												<i class="li-bg-2 girl-bg-1 ui-avatar-icon-s"></i>
+											</template>
+											<template v-else>
+												<i class="li-bg-1 boy-bg-1 ui-avatar-icon-s"></i>
+												<i class="li-bg-2 boy-bg-2 ui-avatar-icon-s"></i>
+											</template>
+										
+									</li>
+								</div>
+							</ul>
+						</div>
+						<div class="no-data-item" v-else  @click.stop="set_up_card()">
+							<i class="add-btn-icon"></i>
+							<p class="main-color f16 tc text">为宝宝建立档案</p>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="p3th">
+				<div class="item-wrap">
+					<a href="{%$MOJIKIDS_PAGE_ARR.index%}set_up">
+						<div class="ui-edit-user-info-mod ui-border-b">
+						    <div class="item item-border-bottom-1">
+						        <div class="user-info-item clearfix">
+						            <div class="lbox fl">
+						                <p class="tips color-666 f14">设置</p>
+						            </div>
+						            <div class="rbox fr">
+						                <i class="icon-allow-grey"></i>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</a>
+					<a href="{%$MOJIKIDS_PAGE_ARR.index%}mine/agree.php">
+					<div class="ui-edit-user-info-mod ui-border-b">
+					    <div class="item item-border-bottom-1">
+					        <div class="user-info-item clearfix">
+					            <div class="lbox fl">
+					                <p class="tips color-666 f14">预约协议</p>
+					            </div>
+					            <div class="rbox fr">
+					                <i class="icon-allow-grey"></i>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+					</a>
+					<a href="tel:020-87399543">
+						<div class="ui-edit-user-info-mod ui-border-b">
+						    <div class="item item-border-bottom-1">
+						        <div class="user-info-item clearfix">
+						            <div class="lbox fl">
+						                <p class="tips color-666 f14">致电客服</p>
+						            </div>
+						            <div class="rbox fr">
+						                <i class="icon-allow-grey"></i>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</a>
+					<a href="{%$MOJIKIDS_PAGE_ARR.index%}about">
+						<div class="ui-edit-user-info-mod ui-border-b">
+						    <div class="item item-border-bottom-1">
+						        <div class="user-info-item clearfix">
+						            <div class="lbox fl">
+						                <p class="tips color-666 f14">关于我们</p>
+						            </div>
+						            <div class="rbox fr">
+						                <i class="icon-allow-grey"></i>
+						            </div>
+						        </div>
+						    </div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		{%include file="../webcontrol/global_footer_bar.tpl.htm" current_page_name=$currentKey page_url = $page_url%}
+	</body>
+	
+</html>
+<!-- <link rel="import" href="../ui/g_footer.tpl.htm?__inline"> -->
+{%$wap_global_footer%}
+
+
+
+<script>
+ 	(function() {
+
+	 	var total_data = {%$json_data%};
+	 	var user_info = {%$json_user_info%};
+	 	console.log(user_info.res.data);
+	 	var babycard_list = new Vue
+	 	({
+	 		el: '#babycard_list',
+	 		mounted: function () {
+	 			var self = this;
+	 			var img =new Image();
+	 			img.src = self.user_info.avatar;
+	 			img.onerror=function(){
+	 				self.user_info.avatar = "xxx";
+	 			};
+	 			
+	 		},
+	 		created: function() {
+	 			if (total_data.res.list.length>0) 
+	 			{
+	 			    this.has_data = true;
+	 			    for (var i = 0; i < total_data.res.list.length; i++) {
+	 			    	if (total_data.res.list[i].baby_sex=="小王子") 
+	 			    	{
+						total_data.res.list[i].is_girl = false;
+	 			    	}
+	 			    	else
+	 			    	{
+	 			    		total_data.res.list[i].is_girl = true;
+	 			    	}
+	 			    };
+	 			}
+	 		},
+	 		data: {
+	 			total_data : total_data,
+	 			has_data : false,
+	 			user_info : user_info.res.data,
+	 		},
+	 		computed:{
+	 		          
+	 		},
+	 		methods : {
+	 			set_up_card : function(){
+	 				window.location.href= window.__MOJIKIDS_GLOBAL['PAGE_URL']['index']+'bb/file';
+	 			}
+	 			
+	 		},
+	 		components: {
+	 			
+	 			
+	 		}
+	 	});
+	 })();
+</script>
+{%$wap_global_tj%}

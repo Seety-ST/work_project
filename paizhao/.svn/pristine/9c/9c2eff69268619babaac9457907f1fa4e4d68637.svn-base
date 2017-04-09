@@ -1,0 +1,282 @@
+<?php
+/**
+* @Desc:     公共变量      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:07:36
+* @Version:  
+*/
+require('/disk/data/htdocs232/poco/pai/poco_app_common.inc.php');
+require('/disk/data/htdocs232/poco/paizhao/poco_app_common.inc.php');
+require('/disk/data/htdocs232/poco/paizhao/include/basics.fun.php');
+$user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? strtolower($_SERVER['HTTP_USER_AGENT']) : '';
+if ($user_agent)
+{
+    $is_mobile = preg_match('/(iPod|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP)/i', $user_agent);
+} 
+else
+{
+    $is_mobile = false;
+}
+
+
+define('PAIZHAO_TEMPLATES_ROOT', '/disk/data/htdocs232/poco/paizhao/templates/');
+define('PAIZHAO_SITE_URL', '51snap.cn');
+define('PAIZHAO_ROOT_URL', '/disk/data/htdocs232/poco/paizhao/');
+
+/**hudw 前端使用的define**/
+$user_agent_arr = mall_get_user_agent_arr();
+$ua_fe_arr = array();
+
+$__is__pc = $user_agent_arr['is_pc'];
+if($_INPUT['__moni_mobile_ua__'] == 1)
+{
+        $__is__pc = 0;
+}
+
+if($__is__pc == 1 )
+{
+    $ua_fe_arr['pc'] = 1;
+    $ua_fe_arr['mobile'] = 0;
+    $ua_fe_arr['weixin'] = 0;
+
+}
+else
+{
+    $ua_fe_arr['pc'] = 0;
+    $ua_fe_arr['mobile'] = 1;
+    $ua_fe_arr['weixin'] = 0;
+
+    if($user_agent_arr['is_weixin'] == 1 )
+    {
+        $ua_fe_arr['weixin'] = 1;
+    }
+}
+
+define('MALL_UA_IS_PC',$ua_fe_arr['pc']);
+define('MALL_UA_IS_MOBILE',$ua_fe_arr['mobile']);
+define('MALL_UA_IS_WEIXIN',$ua_fe_arr['weixin']);
+/**hudw 前端使用的define**/
+
+// 前端使用拍照占位图
+define('PAIZHAO_PLACEHOLER_IMG','//www.51snap.cn/static/pc/image/common/paizhao-ph-bgimg-500x500.png');
+ 
+
+function Get($url)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $response =  curl_exec($ch);
+    curl_close($ch);
+    if(empty($response))
+    {
+        return false;
+    }
+    else
+    {
+        return $response;
+    }
+}
+
+function Post($url, $data, $flag = 0)
+{
+
+    $ch = curl_init();
+    if(! $flag) curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)");
+    curl_setopt($ch, CURLOPT_POST, TRUE);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    curl_setopt($ch, CURLOPT_URL, $url);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    if(empty($response))
+    {
+        return false;
+    }
+    else
+    {
+        return $response;
+    }
+}
+
+function array_iconv($data, $in_charset='gbk', $out_charset='utf-8')
+{
+    if(is_array($data))
+    {
+        foreach($data as $k => $v)
+        {
+            $data[$k] = array_iconv($v);
+        }
+        return $data;
+    }
+    else
+    {
+        return mb_convert_encoding($data, $out_charset, $in_charset);
+    }
+}
+function paizhao_resize_act_img_url($img_url, $size = '')
+{
+    if (in_array ( $size, array (32,64,86,100,145,165,260,320,440,468,640 ) ))
+    {
+        $size_str = '_' . $size;
+    }
+    else
+    {
+        $size_str = '';
+    }
+
+
+    if (preg_match ( "/_(32|64|86|100|145|165|260|320|440|468|640).(jpg|png|jpeg|gif|bmp)/i", $img_url ))
+    {
+        $img_url = preg_replace ( "/_(32|64|86|100|145|165|260|320|440|468|640).(jpg|png|jpeg|gif|bmp)/i", "{$size_str}.$2", $img_url );
+    }
+    else
+    {
+        $img_url = preg_replace ( '/.(jpg|png|jpeg|gif|bmp)/i', "{$size_str}.$1", $img_url );
+    }
+
+
+    return $img_url;
+}
+
+/**
+ * 获取配置文件中的地址
+ * @param string $location_id
+ * @return string
+ */
+function get_city_name_by_location_id($location_id)
+{
+    $location_id = mall_city_location_id($location_id);
+    $location_config = pai_mall_load_config('paizhao_goods_location');
+    return $location_config[$location_id];
+}
+
+function paizhao_mobile_output($output_arr,$include_stat = true,$output_bol = false)
+{
+
+    $poco_services_api_obj = POCO::singleton('poco_services_api_class');
+    $poco_services_api_obj->output_bol = $output_bol;
+
+    // 将图片换成bgp线路
+    define('POCO_CONTENT_OUPUT_BGP_PARSER_LINK', 1);
+        
+    if($include_stat)
+    {
+        if (class_exists("poco_run_time_class") && !defined("IGNORE_TPL_RUN_TIME_SCRIPT")) 
+        {
+            $page_totalrun_time = poco_run_time_class::end();
+        }
+
+        $real_output_arr['page_run_time'] = $page_totalrun_time;
+        
+    }
+
+    $real_output_arr['result_data'] = $output_arr;
+
+    $page_type = $output_arr['page_type'];
+
+    //cdn链接替换
+    
+    /*$output_str =  $poco_services_api_obj->output($real_output_arr,$format="json",true,"",array('strip_tags' => false , 'entity' => false,'special_handle' => array('&lt;'=>1,'&gt;'=>1) ));*/
+    
+
+    $output_str = POCO::execute('common.content_output_cdn_parser',$output_str);
+
+    
+    header("Access-Control-Allow-Origin:*");
+    header("Content-Type:application/json;"); 
+    
+    echo json_encode($real_output_arr,false);
+    
+    if(extension_loaded("zlib"))
+    {
+        ob_end_flush(); //输出buffer中的内容
+    }
+}
+
+function paizhao_output_format_data($output_arr)
+{
+    
+    $poco_services_api_obj = POCO::singleton('poco_services_api_class');
+    $poco_services_api_obj->output_bol = $output_bol;
+
+    // 将图片换成bgp线路
+    define('POCO_CONTENT_OUPUT_BGP_PARSER_LINK', 1);
+    
+    
+    
+    if($include_stat)
+    {
+        if (class_exists("poco_run_time_class") && !defined("IGNORE_TPL_RUN_TIME_SCRIPT")) 
+        {
+            $page_totalrun_time = poco_run_time_class::end();
+        }
+
+        $real_output_arr['page_run_time'] = $page_totalrun_time;
+        
+    }
+
+    $real_output_arr['result_data'] = $output_arr;
+
+    $page_type = $output_arr['page_type'];
+
+    //cdn链接替换
+    
+    //$output_str =  $poco_services_api_obj->output($real_output_arr,$format="json",true,"",array('strip_tags' => false , 'entity' => false,'special_handle' => array('&lt;'=>1,'&gt;'=>1) ));
+    
+
+    //$real_output_arr = POCO::execute('common.content_output_cdn_parser',$real_output_arr);
+    
+    return json_encode($real_output_arr,false);    
+    
+    
+}
+
+function get_location_name_by_location_id($location_id, $last = false)
+{
+    $location_id = $last ? $location_id : mall_city_location_id($location_id);
+    require_once('/disk/data/htdocs232/poco/pai/include/pai_mall_zone_class.inc.php');
+    $zone_class = POCO::singleton('pai_mall_zone_class');
+    $location = $zone_class->get_zone_info_by_location_id($location_id);
+    if ($last) return array_iconv($location['name']);
+    $result = '';
+    if ($location)
+    {
+        $location = array_iconv($location);
+        if (mb_strpos($location['parents_name_list'], '市辖') !== false) return str_replace('市', '', $location['parents_list'][0]['name']);
+        $result = str_replace('市', '', $location['name']);
+    }
+    return $result;
+}
+
+/**
+ * 获取榜单数据
+ * @param unknown $rank_id
+ */
+function get_index_data($rank_ids, $limit)
+{
+    include_once ('/disk/data/htdocs232/poco/pai/yue_admin/cms/cms_common.inc.php');
+    $obj = new cms_system_class();
+    $rank_names = pai_mall_paizhao_load_config('paizhao_rank_ids');
+    $rank_ids_config = array_keys($rank_names);
+    $rank_ids = $rank_ids ? $rank_ids : $rank_ids_config;
+    $limit = $limit ? $limit : '0,200';
+    $list = $obj ->get_last_issue_record_list(false, $limit, 'place_number ASC', $rank_ids, '');
+    $result = array();
+    if ($list)
+    {
+        foreach ($list as $k=>$v)
+        {
+            foreach ($v as $m=>$n)
+            {
+                $v[$m] = iconv('gbk', 'utf-8', $n);
+            }
+            $result[$rank_names[$v['rank_id']]][] = $v;
+        }
+    }
+    return $result;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	<link charset="utf-8" rel="stylesheet" href='../../modules/global/swiper/1.0.0/swiper.min.css'>
+	<link href="../../style/index/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body class="bg-color-faf">
+<main role="main">
+	<!-- 头部内容 -->
+	
+	<!-- 页面内容 -->
+	<div class="index-page">
+		<div class="item-wrap">
+			<div class="search-item">
+				<div class="lbox">
+					<div class="item clearfix" data-role="header-classify-btn">
+						<i class="arrow-icon"></i>
+						<em class="txt f14 fldi color-333">摄影套系</em>
+					</div>
+					<div class="pop-item top011" data-role="header-classify-pop">
+						<i class="triangle-icon">
+							
+						</i>
+						<ul class="list f14 color-333" data-role="pop">
+							<li header-s-data-role="list">摄影套系</li>
+							<li header-s-data-role="pter">摄影师</li>
+						</ul>
+					</div>
+				</div>
+				<div class="rbox">
+					<form method="GET" action="search/index.php">
+						<input type="hidden" name="tp" value="list" data-role="tp"/>
+						<input type="search" class="input-txt color-333" header-s-data="key" name="kw" value="" placeholder="搜索你想拍的"/>
+					</form>
+					
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+	var Swiper = require.syncLoad('wap-huipai:global/swiper/1.0.0/swiper3.07.min');
+	var LZ = require.syncLoad('wap-huipai:global/lazyload/lazyload');
+	var go_top = require.syncLoad('wap-huipai:global/go_top/go_top');
+	$(function() 
+	{
+		// banner
+		var mySwiper_1 = new Swiper ('#swiper-container-1',{
+		    direction: 'horizontal',
+		    loop: false,
+		    autoplay : false,
+		    // speed:false,
+		    // 如果需要分页器
+		    pagination: '#swiper-pagination-1'
+		});
+
+		   var mySwiper_2 = new Swiper('#swiper-container-2', {
+
+		   		initialSlide :1,
+		          		effect: 'coverflow',
+		          		grabCursor: true,
+		          		centeredSlides: true,
+		          		loop : true,
+		          		slidesPerView: 'auto',
+		          		
+		          		loopedSlides :3,
+		          		coverflow: {
+		          			rotate: 0,
+		          			stretch: 0,
+		          			depth: 100,
+		          			modifier: 1,
+		          			opacity : 50,
+		          			slideShadows :false
+		          		}
+		   });
+		   
+		
+		$(document).click(function(event){
+			var $tar = $(event.target);
+			if($tar.parents('[data-role="header-classify-btn"]').length)
+			{
+			}
+			else
+			{
+				$('[data-role="header-classify-pop"]').removeClass('top42');
+				$('[data-role="header-classify-pop"]').addClass('top011');
+				$('[data-role="header-classify-btn"]').find('.arrow-icon').removeClass('arrow-icon-hover');
+			}
+		});
+
+		new LZ($('body'),{
+			// size : window.innerWidth
+		});
+
+		// 返回顶部按钮
+		new go_top({
+			render_ele : $('body')
+		});
+
+
+		var header_s_data = "";
+		// 头部搜索分类套系弹窗显示
+		$('[data-role="header-classify-btn"]').on('click', function(event) {
+			
+			if($('[data-role="header-classify-pop"]').hasClass('top011')){
+				$('[data-role="header-classify-pop"]').removeClass('top011');
+				$('[data-role="header-classify-pop"]').addClass('top42');
+				$(this).find('.arrow-icon').addClass('arrow-icon-hover');
+			}
+			else{
+				$('[data-role="header-classify-pop"]').removeClass('top42');
+				$('[data-role="header-classify-pop"]').addClass('top011');
+				$(this).find('.arrow-icon').removeClass('arrow-icon-hover');
+			}
+		});
+
+		$('[data-role="pop"]').find('li').on('click', function(event) {
+			
+			var selct_txt = $(this).html();
+			var select_header_tp = $(this).attr('header-s-data-role');
+			$('[data-role="tp"]').val(select_header_tp);
+			$('[data-role="header-classify-btn"]').find('.txt').html(selct_txt);
+			header_s_data = $(this).attr('header-s-data-role');
+
+		});
+		
+
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>

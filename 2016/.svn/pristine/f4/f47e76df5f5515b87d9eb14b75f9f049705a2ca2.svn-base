@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>无标题文档</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	
+	<div class="honor-index-page">
+		<div class="top-bg">
+			<div class="header">
+				<div class="w1000 clearfix">
+					<div class="lbox fldi">
+						<img src="images/st-img-1.png" />
+					</div>
+					<div class="rbox frdi">
+						<img src="images/st-img-2.png" />
+					</div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="p1th">
+					<div class="w1000">
+						<div class="title">
+							<img src="images/st-img-3.png" />
+						</div>
+						<div class="tab_map" data-role="tab_map">
+							<div class="top_nav" id="show1">
+								<div class="nav"><img src="images/st-img-4.png" border="0" usemap="#mapLink" /></div>
+								<div class="item" data-role="load-img-1">
+									<div class="img-1">
+										<img src="images/st-img-6.png" />
+									</div>
+									<div class="img-2">
+										<img src="images/st-img-7.png" />
+									</div>
+								</div>
+								<a href="javascript:;" class="more-btn" data-role="more-btn-1"></a>
+								<div class="top-btn dn" data-role="top-btn"></div>
+							  </div>
+							<div class="top_nav dn" id="show2" >
+								<div class="nav"><img src="images/st-img-5.png" border="0" usemap="#mapLink" /></div>
+								<div class="item" data-role="load-img-2">
+									<div class="img-1">
+										<img src="images/st-img-8.png" />
+									</div>
+									<div class="img-2">
+										<img src="images/st-img-9.png" />
+									</div>
+								</div>
+								<a href="javascript:;" class="more-btn" data-role="more-btn-2"></a>
+								<div class="top-btn dn" data-role="top-btn"></div>
+							</div>
+							
+						<map name="mapLink" id="mapLink">
+							<area shape="rect" coords="527,13,736,45" href="javascript:void(0)" onclick="showDiv('show',1,2);" />
+							<area shape="rect" coords="295,9,506,46" href="javascript:void(0)" onclick="showDiv('show',2,2);" />
+						</map>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-bg">
+			<div class="content">
+				<div class="p2th">
+					
+						<div class="title"><img src="images/st-img-11.jpg" /></div>
+						<div class="item-wrap clearfix">
+							<div class="item-1 fldi">
+								<ul>
+									<li class="clearfix">
+										<div class="img fldi">
+											<img src="images/st-img-13.jpg" />
+										</div>
+										<div class="txt fldi"><img src="images/st-img-14.jpg" /></div>
+									</li>
+									<li class="clearfix">
+										<div class="txt fldi">
+											<img src="images/st-img-25.jpg" />
+										</div>
+										<div class=" img fldi"><img src="images/st-img-17.jpg" /></div>
+									</li>
+								</ul>
+							</div>
+							<div class="item-2 fldi">
+								<ul>
+									<li>
+										<div class="img">
+											<img src="images/st-img-15.jpg" />
+										</div>
+										<div class="txt"><img src="images/st-img-18.jpg" /></div>
+									</li>
+								</ul>
+							</div>
+							<div class="item-3 fldi">
+								<ul>
+									<li>
+										<div class="txt">
+											<img src="images/st-img-16.jpg" />
+										</div>
+										<div class="img"><img src="images/st-img-21.jpg" /></div>
+									</li>
+								</ul>
+							</div>
+							<div class="item-4 fldi">
+								<ul>
+									<li class="clearfix">
+										<div class="img fldi">
+											<img src="images/st-img-19.jpg" />
+										</div>
+										<div class="txt fldi"><img src="images/st-img-20.jpg" /></div>
+									</li>
+									<li class="clearfix">
+										<div class=" txt fldi">
+											<img src="images/st-img-23.jpg" />
+										</div>
+										<div class="img fldi"><img src="images/st-img-24.jpg" /></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					
+				</div>
+				<div class="p3th w1000">
+					<div class="title"><img src="images/st-img-12.jpg" /></div>
+					<ul class="list">
+						<li>
+							<div class="img">
+								<img src="images/st-img-26.jpg" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="footer"></div>
+
+</body>
+<script type="text/javascript" src="Scripts/jquery-1.4.2.min.js"></script>
+<script langauge="javaScript" type="text/javascript">
+
+function showDiv(name,i,end) 
+{ 
+	for(j=1;j<=end;j++) 
+	{ 
+		document.getElementById(name+j).style.display='none'; 
+	} 
+	
+	document.getElementById(name+i).style.display='block'; 
+}
+
+
+$('[data-role="more-btn-1"]').click(function() {
+        $('[data-role="load-img-1"]').css('height', 'auto');
+        $('[data-role="more-btn-1"]').hide();
+        $('[data-role="top-btn"]').removeClass('dn');
+
+});
+$('[data-role="more-btn-2"]').click(function() {
+        $('[data-role="load-img-2"]').css('height', 'auto');
+        $('[data-role="more-btn-2"]').hide();
+        $('[data-role="top-btn"]').removeClass('dn');
+});
+
+$('[data-role="top-btn"]').click(function() {
+        var top = $('[data-role="tab_map"]').offset().top;
+        $('body').scrollTop(top);
+});
+</script>
+
+
+</html>

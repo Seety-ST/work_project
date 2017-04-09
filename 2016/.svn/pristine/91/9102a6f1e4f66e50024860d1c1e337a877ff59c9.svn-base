@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>Circle</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="circle-page">
+		<div class="section page1">
+			<div class="contain">
+				<div class="con-item">
+					<div class="bg-item animated"></div>
+					<div class="mod-line-item animated">
+						<div class="point-item">
+							<i class="icon icon-1"></i>
+							<i class="icon icon-2"></i>
+							<i class="icon icon-3"></i>
+							<i class="icon icon-4"></i>
+							<i class="icon icon-5"></i>
+							<i class="icon icon-6"></i>
+							<i class="icon icon-7"></i>
+							<i class="icon icon-8"></i>
+							<i class="icon icon-9"></i>
+							<i class="icon icon-10"></i>
+							<i class="icon icon-11"></i>
+							<i class="icon icon-12"></i>
+						</div>
+					</div>
+					<!-- user-header -->
+					<div class="mod-user-item animated" id="mod-user-item">
+						<ul>
+							<li class="item item-1">
+								<img src="images/bg-item/1/user-img/1.png" />
+							</li>
+							<li class="item item-2">
+								<img src="images/bg-item/1/user-img/2.png" />
+							</li>
+							<li class="item item-3">
+								<img src="images/bg-item/1/user-img/3.png" />
+							</li>
+							<li class="item item-4">
+								<img src="images/bg-item/1/user-img/4.png" />
+							</li>
+							<li class="item item-5">
+								<img src="images/bg-item/1/user-img/5.png" />
+							</li>
+							<li class="item item-6">
+								<img src="images/bg-item/1/user-img/6.png" />
+							</li>
+							<li class="item item-7">
+								<img src="images/bg-item/1/user-img/7.png" />
+							</li>
+							<li class="item item-8">
+								<img src="images/bg-item/1/user-img/8.png" />
+							</li>
+							<li class="item item-9">
+								<img src="images/bg-item/1/user-img/9.png" />
+							</li>
+							<li class="item item-10">
+								<img src="images/bg-item/1/user-img/10.png" />
+							</li>
+							<li class="item item-11">
+								<img src="images/bg-item/1/user-img/11.png" />
+							</li>
+							<li class="item item-12">
+								<img src="images/bg-item/1/user-img/12.png" />
+							</li>
+							<li class="item item-13">
+								<img src="images/bg-item/1/user-img/13.png" />
+							</li>
+							<li class="item item-14">
+								<img src="images/bg-item/1/user-img/14.png" />
+							</li>
+							<li class="item item-15">
+								<img src="images/bg-item/1/user-img/15.png" />
+							</li>
+							<li class="item item-16">
+								<img src="images/bg-item/1/user-img/16.png" />
+							</li>
+							<li class="item item-17">
+								<img src="images/bg-item/1/user-img/17.png" />
+							</li>
+							<li class="item item-18">
+								<img src="images/bg-item/1/user-img/18.png" />
+							</li>
+							<li class="item item-19">
+								<img src="images/bg-item/1/user-img/19.png" />
+							</li>
+							<li class="item item-20">
+								<img src="images/bg-item/1/user-img/20.png" />
+							</li>
+						</ul>
+					</div>
+					<!-- user-header end -->
+					<div class="info-warp animated">
+						<div class="info-item">
+							<div class="logo-item clearfix">
+								<i class="icon">
+									<img src="images/logo-icon-109x61.png" />
+								</i>
+								<h1 class="logo">
+									<img src="images/logo-145x61.png" />
+								</h1>
+							</div>
+							<h4 class="title">
+								<img src="images/title-item/title-485x60.png" />
+							</h4>
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<img src="images/test/code-img-160x160.png" />
+								</div>
+								<div class="btn-warp">
+									<a href="#" target="_blank" class="btn btn-iphone clearfix"> 
+										<i class="icon"></i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" target="_blank" class="btn btn-android clearfix"> 
+										<i class="icon"></i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page2">
+			<div class="contain">
+				<div class="con-item">
+					<div class="bg-item animated"></div>
+					<div class="antinode-item animated"></div>
+					<div class="info-item animated"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section page3">
+			<div class="contain">
+				<div class="con-item">
+					<div class="bg-item animated"></div>
+					<div class="antinode-item animated"></div>
+					<div class="info-item animated"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section page4">
+			<div class="contain">
+				<div class="con-item">
+					<div class="bg-item animated"></div>
+					<div class="antinode-item animated"></div>
+					<div class="info-item animated"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section page5">
+			<div class="contain">
+				<div class="con-item animated">
+					<div class="bg-item animated"></div>
+					<div class="antinode-item animated"></div>
+					<div class="info-item animated"></div>
+				</div>
+			</div>
+		</div>
+		<div class="section page6">
+			<div class="contain">
+				<div class="con-item">
+					<div class="bg-item animated"></div>
+					<div class="info-item animated clearfix">
+						<h2 class="logo">
+							<i class="icon"></i>
+						</h2>
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<img src="images/test/code-img-160x160.png" />
+							</div>
+							<div class="btn-warp">
+								<a href="#" class="btn btn-iphone clearfix">
+									<i class="icon"></i>
+									<span>iPhone</span>
+								</a>
+								<a href="#" target="_blank" class="btn btn-android clearfix">
+									<i class="icon"></i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="ba-item">
+				 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502000269" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.adnonstop.com/viewcode/images/ghs.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">沪公网安备 31010502000269号</p></a>
+				 	</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script>
+	useImg();
+	function useImg()
+	{
+	    jQuery(function($){
+	    				var arr = $('#mod-user-item ul li').toArray();
+	    				var len = arr.length;
+	    				var rand = parseInt(Math.random()*(len)); 
+	    				$('#mod-user-item ul li').each(function(i){
+	    						 $('#mod-user-item ul').append($('ul li').eq(rand));
+	    						 rand = parseInt(Math.random()*(len)); 
+	    				});   
+	    });
+	    setTimeout("useImg()", 2000);
+	};	
+	$(document).ready(function() {
+		$(function(){
+			$('#circle-page').fullpage({
+				'navigation' : true,
+				'scrollingSpeed' : 500,
+				'continuousVertical' : false,
+				'css3' : true
+			});
+		});
+	});
+	</script>
+</body>
+</html>

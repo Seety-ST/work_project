@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>玩转简拼</title>
+	<link rel="stylesheet" type="text/css" href="css/listloading.min.css" />
+	<link rel="stylesheet" href="css/wap.css" />
+	<script src="js/require.js"></script>
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<script>
+
+	require(['zepto', 'iscroll', 'listloading'], function(){
+	    var Listloading = require('listloading');
+	    var m = 3;
+	    var n = 0;
+	    var hei = $(window).height();
+	    var arr = ['baby_food', 'carrycot', 'feeding_bottle', 'feeding_bottle2', 'tricycle', 'rattle', 'rattle6', 'mobile', 'pin', 'safety_seat', 'pin']
+	    // 创建iscroll之前必须要先设置父元素的高度，否则无法拖动iscroll
+	    $('#listloading, .listloadingClass').height(hei);
+
+	    // 模板
+	    var createHtml = function(){
+	        var __html = '', now, x;
+	        for(var i = 0; i < 15; i++){
+	            now = new Date().getTime();
+	            now = new Date(now + i*1000000);
+	            x = Math.random().toString().substring(2,3);
+	            __html += '<li><div class="img-item"><a href="www.poco.cn"><img src="images/test/img-710x256.jpg" /></a></div><div class="text-item"><h4 class="title">旅行的意义</h4></div></li>';
+	        }
+	        return __html;
+	    }
+	    // demo
+	    var listloading = new Listloading('#listloading', {
+	        disableTime: true,  // 是否需要显示时间
+	        pullUpAction : function(cb){   // 上拉加载更多
+	            m--;
+	            var flg = false;
+	            var __html = createHtml();
+	            if(m < 1){
+	                flg = true;
+	            }else{
+	                $('#order-list').append(__html);
+	            }
+	            // 数据加载完毕需要返回 end为true则为全部数据加载完毕
+	            cb(flg);
+	            
+	        },
+	        pullDownAction : function(cb, flg){  // 下拉刷新
+	            // true则为默认加载 false为下拉刷新
+	            if (flg) {
+	                console.log('默认加载');
+	            }
+	            m = 3;
+	            var __html = createHtml();
+	            $('#order-list').html(__html);
+	            // 执行完执行方法之后必须执行回调 回调的作用是通知默认加载已经全部执行完毕，程序需要去创建iscroll或者做下拉刷新动作
+	            cb();
+	        },
+	        //Realtimetxt: '官人不要，请放开我！',
+	        //loaderendtxt: '我是有底线的',
+	        // iscroll的API 
+	        iscrollOptions: {
+	            // scrollbars: true   // 显示iscroll滚动条
+	        }
+	    });
+
+	    // 点击事件
+	    listloading.evt('li', 'click', function (dom) {
+	        //dom.remove();
+	        //$('#order-list').append(createHtml());
+	        //listloading.refresh();
+	        location.href = "http://www.poco.cn";
+	    });
+	    
+	    // demo
+	    // var k = 3;
+	    // var listloadingClass = new Listloading('.listloadingClass', {
+	    //     pullUpAction : function(cb){   //上拉加载更多
+	    //         k--;
+	    //         var flg = false;
+	    //         var __html = createHtml();
+	    //         if(k < 1){
+	    //             flg = true;
+	    //         }else{
+	    //             $('#listloadingClass-order-list').append(__html);
+	    //         }
+	    //         // 数据加载完毕需要返回 end为true则为全部数据加载完毕
+	    //         cb(flg);
+	            
+	    //     },
+	    //     pullDownAction : function(cb, flag){  //下拉刷新
+	    //         // flag 为true 第一次加载
+	    //         if (flag) {
+	    //             // dosomething...
+	    //         }
+	    //         k = 3;
+	    //         var __html = createHtml();
+	    //         $('#listloadingClass-order-list').html(__html);
+	    //         // 执行完执行方法之后必须执行回调 回调的作用是通知默认加载已经全部执行完毕，程序需要去创建iscroll
+	    //         cb();
+	    //     }
+	    // });
+	});
+	require.config({
+	    paths: {
+	        "zepto": "js/zepto.min",
+	        "iscroll": "js/iscroll.min",
+	        "listloading": "js/listloading.min"
+	    }
+	});
+	</script>
+</head>
+<body>
+	<section class="playList-page">
+		<div id="listloading">
+		    <div class="list-wrap">
+		        <ul id="order-list"></ul>
+		    </div>
+		</div>
+	</section>	
+</body>
+</html>

@@ -1,0 +1,76 @@
+<?php
+/**
+* @Desc:     商品咨询数编辑      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月18日
+* @Time:     上午9:38:30
+* @Version:  
+*/
+require(dirname(dirname(__FILE__)).'/common.inc.php');
+$goods_obj = POCO::singleton('pai_paizhao_goods_class');
+$goods_id = $_POST['goods_id'];
+$type = $_POST['type'];
+$num = $_POST['num'];
+if ($goods_id && ($type=='add_num' || $type=='add_rand_num') && $num)
+{
+    $reg = '/^\d+-\d+$/';
+    if (is_array($goods_id))
+    {
+        if (!preg_match_all($reg, $num))
+        {
+            echo json_encode(array('result'=>-1,'message'=>'Data illegal'));
+            exit;
+        }
+        $num = explode('-', $num);
+    }
+    $update = $goods_obj->add_consult_num($goods_id, $type, $num);
+    echo $update ? json_encode(array('result'=>1)) : json_encode(array('result'=>-1));
+    exit;
+}
+else if (is_array($goods_id) && $type=='multiply')
+{
+    foreach ($goods_id as $k=>$v)
+    {
+        $goods_obj->add_consult_num($v, 'add_num', $num[$k]);
+    }
+    echo json_encode(array('result'=>1));
+    exit;
+}
+$sort = '';
+$consult_num = $_INPUT['consult_num'] == 1 ? 2 : 1;
+$sort = $consult_num == 2 ? 'consult_num DESC' : 'consult_num ASC';
+$where = '1';
+$condition = $_INPUT['condition'];
+if ($condition)
+{
+    $where = is_numeric($condition) ? $where . " AND goods_id={$condition}" : $where . ' AND title like "%' . mysql_escape_string($condition) . '%"';
+}
+$user_id = $_INPUT['user_id'];
+if ($user_id)
+{
+    $user_id = (int)$user_id;
+    $where = "user_id={$user_id}";
+}
+$total_count = $goods_obj->get_goods_list_count($where);
+$page_obj = new show_page ();
+$show_count = 40;
+$page_obj->setvar(array(
+    'consult_num'=>$consult_num,
+    'condition'=>$condition,
+    'action'=>'goods_consult_edit',
+));
+$page_obj->set($show_count, $total_count);
+$list = $goods_obj->admin_get_goods_list($where, $page_obj->limit(), $sort, 'user_id,titles,is_show,is_black,goods_id,consult_num,add_consult_num,images');
+foreach ($list['data'] as $k=>$v)
+{
+    $list['data'][$k]['titles'] = iconv('utf-8', 'gbk', $v['titles']);
+    $list['data'][$k]['is_show_str'] = $v['is_show'] == 1 ? '上架' : '下架';
+    $list['data'][$k]['is_black_str'] = $v['is_black'] == 0 ? '否' : '是';
+}
+$tpl = new SmartTemplate ( TASK_TEMPLATES_ROOT."/goods/goods_consult_edit.tpl.htm" );
+$tpl->assign('list', $list['data']);
+$tpl->assign('page', $page_obj->output(1));
+$tpl->assign('condition', $condition);
+$tpl->assign('user_id', $user_id);
+$tpl->assign('consult_num', $consult_num);
+$tpl->output();

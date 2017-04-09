@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017124/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+		YUE-UI VUE 2.0 Form
+	</title>
+	<style>
+
+	</style>
+
+    
+</head>
+
+<body>
+	<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+    <main role="main">
+    	<div id="page-container" class="page-container page-view" >
+            <h1>radio 组件</h1>
+            <mt-radio
+              title="单选框列表"
+              v-model="sex"
+              :options="['选项A', '选项B', '选项C']">
+            </mt-radio>
+    	</div>
+    </main>
+
+
+
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+	(function()
+    {
+        // 引用Radio 组件
+		var Radio = require.syncLoad('wap-kids:widget/radio/index');
+
+        // 安装Radio 模块
+        Vue.component(Radio.name, Radio);
+
+		new Vue
+		({
+			el: '#page-container',
+			created: function()
+			{
+
+			},
+			data:
+			{
+                sex : ""
+			},
+			methods:
+			{
+
+			}
+		});
+	})();
+</script>

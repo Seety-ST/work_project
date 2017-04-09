@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+<title>新世相</title>
+</head>
+
+<body>
+	<div class="content">
+		<div class="nav-content clearfix">
+			<h1 class="logo"><a href="#"></a></h1>
+			<h1 class="hc-logo"><a href="#"></a></h1>
+			<div class="top-login clearfix">
+				<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+			</div>
+			<ul class="nav clearfix font_wryh">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">大赛规则</a></li>
+				<li><a href="#">我要参赛</a></li>
+				<li><a href="#">作品浏览</a></li>
+				<li><a href="#">我的作品</a></li>
+				<li><a href="#">获奖公布</a></li>
+				<li class="cur"><a href="#">世博介绍</a></li>
+			</ul>
+		</div>
+		
+		<!-- 模板 -->
+		<div class="sbjs-page font_wryh">
+		<div class="path1">
+			<div class="w1000">
+				<div class="listItem">区域介绍</div>
+				<div class="con-item">
+					<p>
+						自2015年上海自贸区扩区后，目前浦东世博-前滩地区面积共9.93平方公里，
+						<br />区域内涵盖世博、耀华、前滩和白莲泾等重点地块。
+						<br />
+						世博地区位于上海城区中心位置，北接陆家嘴，东临张江，与徐家汇隔江相对，
+						<br />
+						是浦江黄金水道滨水岸线，交通便利，具有稀有的成片滨江可开发用地和优美的滨江临湾景观。
+					</p>
+					<p>
+						<img src="images/info-img/1.jpg" />
+					</p>
+					<p>
+						<img src="images/info-img/5.jpg" />
+					</p>
+					<p>
+						<img src="images/info-img/2.jpg" />
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="path2">
+			<div class="w1000">
+				<div class="listItem">发展定位</div>
+				<div class="con-item">
+					<p>
+						世博地区努力打造具有世界级水准的中央公共活动区。
+						<br />
+						加强区域规划统筹，建设以总部经济、金融投资、专业服务、文化传媒等功能
+						<br />
+						为主的滨江现代服务业集聚带，以文化演艺创意、会展、时尚休闲娱乐
+						<br />
+						为特征的高端文化产业发展带，以慢行慢骑等运动休闲型滨水活动
+						<br />
+						为引领的开放、生态、健康、景观优美的滨水城市生活带。
+					</p>
+					<p>
+						<img src="images/info-img/3.jpg" />
+					</p>
+					<p>
+						<img src="images/info-img/4.jpg" />
+					</p>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- 模板 END -->
+		
+		
+	</div>
+	<div class="footer"></div>
+
+</body>
+</html>

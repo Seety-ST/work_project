@@ -1,0 +1,222 @@
+.index-page {
+  padding-bottom: 1rem;
+}
+
+.index-page .p1th .img img {
+  width: 100%;
+}
+
+.index-page .p2th {
+  padding-top: 0.2rem;
+}
+
+.index-page .p2th .wbox1 {
+  font-size: 0.14rem;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+}
+
+.index-page .p2th .wbox1 .lbox {
+  color: #ef9300;
+  margin-right: 0.05rem;
+}
+
+.index-page .p2th .wbox1 .cbox {
+  border-radius: 0.05rem;
+  background: #8fc247;
+  padding: 0.02rem 0.1rem;
+  color: #fff;
+}
+
+.index-page .p2th .wbox1 .rbox {
+  color: #ef9300;
+  margin: 0 0.05rem 0 0.05rem;
+  font-weight: bold;
+}
+
+.index-page .p2th .wbox1 .end {
+  border-radius: 0.05rem;
+  background: #8fc247;
+  padding: 0.02rem 0.05rem;
+  color: #fff;
+}
+
+.index-page .p2th .wbox2 {
+  color: #ffbc00;
+  text-align: center;
+  padding: 0.15rem 0 0 0;
+}
+
+.index-page .p2th .img {
+  text-align: center;
+  padding: 0.15rem 0 0 0;
+}
+
+.index-page .p2th .img img {
+  width: 1.76rem;
+  margin: 0 auto;
+}
+
+.index-page .p2th .wbox3 {
+  font-size: 0.15rem;
+  color: #444444;
+  padding-top: 0.1rem;
+}
+
+.index-page .p2th .wbox4 {
+  border-radius: 0.2rem;
+  background-color: #fadeb2;
+  font-size: 0.17rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0.1rem 0.4rem 0 0.4rem;
+  text-align: center;
+  padding: 0.1rem 0;
+}
+
+.index-page .p2th .wbox5 {
+  font-size: 0.15rem;
+  margin: 0.2rem 0.4rem 0 0.4rem;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+}
+
+.index-page .p2th .wbox5 .lbox {
+  border: 0.01rem solid #fac636;
+  color: #fac636;
+  padding: 0.1rem 0;
+  border-radius: 0.2rem;
+  text-align: center;
+  width: 1.35rem;
+}
+
+.index-page .p2th .wbox5 .rbox {
+  color: #fff;
+  padding: 0.12rem 0;
+  border-radius: 0.2rem;
+  background-color: #fac636;
+  text-align: center;
+  width: 1.35rem;
+}
+
+.index-page .p3th {
+  padding-top: 0.3rem;
+}
+
+.index-page .p3th .box1 img {
+  width: 100%;
+}
+
+.index-page .p3th .list {
+  text-align: center;
+  color: #000;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+
+.index-page .p3th .list li {
+  padding-top: 0.18rem;
+}
+
+.index-page .p3th .list .icon img {
+  width: 0.47rem;
+  margin: 0 auto;
+}
+
+.index-page .p3th .list .txt {
+  padding-top: 0.02rem;
+}
+
+.index-page .p3th .list .txt2 {
+  padding-top: 0.05rem;
+  color: #444444;
+  font-size: 0.14rem;
+  font-weight: normal;
+}
+
+.index-page .p3th .tips {
+  text-align: center;
+  color: #8fc247;
+  font-size: 0.14rem;
+  line-height: 0.3rem;
+  padding-top: 0.2rem;
+}
+
+.index-page .p4th .box1 {
+  padding-top: 0.35rem;
+}
+
+.index-page .p4th .box1 img {
+  width: 100%;
+}
+
+.index-page .p4th .box2 {
+  color: #ef9300;
+  padding: 0.1rem 0 0.1rem 0;
+  text-align: center;
+}
+
+.index-page .p4th .box3 {
+  color: #444444;
+  padding: 0.1rem 0 0.08rem 0;
+  text-align: center;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+
+.index-page .p4th .list {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+}
+
+.index-page .p4th .list li {
+  margin-right: 0.1rem;
+  color: #444444;
+}
+
+.index-page .p4th .list .circle img {
+  width: 0.05rem;
+  margin-right: 0.05rem;
+}
+
+.index-page .p4th .box4 {
+  padding-top: 0.2rem;
+  text-align: center;
+}
+
+.index-page .p4th .box4 img {
+  width: 2rem;
+  margin: 0 auto;
+}
+
+.index-page .p4th .box5 {
+  padding-top: 0.2rem;
+  text-align: center;
+}
+
+.index-page .p4th .box5 img {
+  width: 1.58rem;
+  margin: 0 auto;
+}
+
+.index-page .p4th .box6 {
+  border: 0.01rem dashed #ef9300;
+  text-align: center;
+  margin: 0.05rem 0.3rem 0 0.3rem;
+  padding: 0.05rem 0 0.18rem 0;
+}
+
+.index-page .p4th .box6 li {
+  padding-top: 0.12rem;
+}
+
+.index-page .p4th .box6 img {
+  width: 0.05rem;
+  margin-right: 0.05rem;
+}

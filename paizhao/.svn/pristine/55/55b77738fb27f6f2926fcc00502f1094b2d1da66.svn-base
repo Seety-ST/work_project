@@ -1,0 +1,33 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+// error_reporting(-1);
+// header("Content-type: text/html; charset=utf-8");
+include_once('common.inc.php');
+// $consult_button_class = POCO::singleton('pai_paizhao_consult_class');
+// $data = array(
+//     'name'=>'11',
+//     'goods_id'=>1212,
+//     'user_id'=>12,
+//     'mobile'=>13750509651,
+//     'source'=>'PC',
+//     'consult_type'=>'goods',
+// );
+// $result = $consult_button_class->add_consult($data);
+// $location_id = $_INPUT['location_id'];
+// $result = get_location_name_by_location_id($location_id, true);
+// var_dump($result);
+// echo iconv('gbk', 'utf-8', get_poco_location_name_by_location_id($location_id));
+// $goods_class = POCO::singleton('pai_paizhao_goods_class');
+// // var_dump($goods_class->init_goods_num(200000358));
+// $arr = array(1, 2, 'dfdsf#%', 4);
+// $s_a = mall_simple_filter(serialize($arr));
+// var_dump($s_a);
+// var_dump(unserialize($s_a));
+$obj = POCO::singleton('pai_paizhao_photographers_class');
+var_dump($obj->update_p_u_v());

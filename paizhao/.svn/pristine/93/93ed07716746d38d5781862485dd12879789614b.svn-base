@@ -1,0 +1,33 @@
+.camera-page{
+	.p1th{
+		padding:50px 0px;
+		border-bottom: 1px solid #eee;
+		.lbox{
+			padding:0px 100px;
+			.address-txt{
+				text-align: center;
+				padding-top: 20px;
+				.icon{
+					vertical-align: middle;
+				}
+				.txt{
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
+		.rbox{
+			width: 800px;
+			.item-2{
+				background:url(../../image/camera/txt-bg-67x61.png) no-repeat right bottom;
+				.list{
+					li{
+						float: left;
+						margin-right: 65px;
+					}
+				}
+			}
+		}
+	}
+}
+

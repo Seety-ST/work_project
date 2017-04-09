@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>简客官网</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/janeplus.css">
+</head>
+<body>
+	<div id="jpdown-page">
+		<div class="section page1">
+			<div class="contain">
+				<div class="bg-item">
+					<img src="images/janeplus/index-bgicon-720x290.png" />
+				</div>
+				<div class="con-item clearfix">
+					<div class="imgSowItem">
+						<!-- 焦点图 -->
+						<div class="device">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="img">
+											<img src="images/janeplus/index-banner/1.jpg" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img">
+											<img src="images/janeplus/index-banner/2.jpg" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img">
+											<img src="images/janeplus/index-banner/3.jpg" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagination"></div>
+						</div>
+						<!-- 焦点图 end -->
+					</div>
+					<div class="info-item">
+						<h4 class="title"></h4>
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<div class="code-img">
+									<img src="images/janeplus/code-index-103x103.png" />
+								</div>
+							</div>
+							<div class="btn-warp">
+								<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone"> 
+									<i class="icon iconfont">&#xe601;</i>
+									<span>iPhone</span>
+								</a>
+								<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android"> 
+									<i class="icon iconfont">&#xe600;</i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page2">
+			<div class="contain">
+				<div class="con-item">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/janeplus/code-img-98x98.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page3">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/janeplus/code-img-98x98.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page4">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/janeplus/code-img-98x98.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page5">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/janeplus/code-img-98x98.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page6">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/janeplus/code-img-98x98.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page7">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="info-item">
+						<h2 class="logo">
+							<i class="icon"></i>
+						</h2>
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<div class="code-img">
+									<img src="images/janeplus/code-img-159x159.png" />
+								</div>
+							</div>
+							<div class="btn-warp">
+								<a href="http://www.apple.com/cn/itunes/charts/" target="_blank" class="btn btn-iphone">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>iPhone</span>
+								</a>
+								<a href="http://jp.poco.cn/k/jack_release_poco_1.0.0_20160108.apk" target="_blank" class="btn btn-android">
+									<i class="icon iconfont">&#xe600;</i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="footer-nav">
+						<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+					</div>
+					<p class="cpoy-txt">
+						<span class="copy-item">&copy;2016 Beauty,Inc.  广州美人信息技术有限公司</span>
+						<span class="icp-item">粤ICP备16016424号-2</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h1 class="mod-logo">
+		<img src="images/janeplus/logo-img-128x78.png" />
+	</h1>
+	<!-- mod header -->
+	<div class="header clearfix">
+		<h1 class="logo">
+			<a href="#">
+				<img src="images/app-mod-item/logo-img-145x111.png" />
+			</a>
+		</h1>
+		<div class="mod-nav-header"  id="mod-nav-bar">
+			<div class="nav-btn-warp">
+				<div class="more-btn" id="header-more-btn">
+					<i class="icon iconfont">&#xe602;</i><span>更多产品</span>
+				</div>
+			</div>
+			<ul class="nav clearfix" id="nav">
+				<li class="nav-li">
+					<a href="#">首页</a>
+				</li>
+				<li class="nav-li">
+					<a href="#"> 美人相机</a>
+				</li>
+				<li class="nav-li">
+					<a href="#">简 拼</a>
+				</li>
+				<li class="nav-li cur">
+					<a href="#">简 客</a>
+				</li>
+				<li class="nav-li">
+					<a href="#">图片合成器</a>
+				</li>
+				<li class="nav-li">
+					<a href="#">亲子相机</a>			
+				</li>
+				<li class="block"></li>
+			</ul>
+		</div>
+	</div>
+	<!-- mod header end -->
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/SuperSlide.2.1.js"></script>
+	<script src="js/modNav.js" type="text/javascript"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/idangerous.swiper.min.js"></script>
+	<script src="js/respond.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(function(){
+			$('#jpdown-page').fullpage({
+				'navigation' : true,
+				'scrollingSpeed' : 800,
+				'continuousVertical' : false,
+				'css3' : true
+			});
+		});
+		var mySwiper = new Swiper('.swiper-container',{
+			 pagination: '.pagination',
+			 paginationClickable: true,
+			 centeredSlides: true,
+			 slidesPerView: 3,
+			 grabCursor : true,
+			 autoplay: 2000,
+			 autoplayDisableOnInteraction : false,
+			 spaceBetween: 30,
+			 speed:300
+		});
+		$("#mod-nav-bar").on("click",function(){
+			$("#mod-nav-bar").find("#header-more-btn").delay(100).animate({
+				opacity: '0',
+				marginRight: '2.5%'
+			}).hide();
+			$("#mod-nav-bar").find("#nav").delay(100).animate({
+				opacity: '1',
+				marginRight: '0'										
+			}).show();
+		});
+		$("#mod-nav-bar").on("mouseleave",function(){
+			$("#mod-nav-bar").find("#header-more-btn").delay(100).animate({
+				opacity: '1',
+				marginRight: '0'
+			}).show();
+			$("#mod-nav-bar").find("#nav").delay(100).animate({
+				opacity: '0',
+				marginRight: '2.5%'							
+			}).hide();
+		});
+	});
+	</script>
+
+</body>
+</html>

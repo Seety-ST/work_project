@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+<title>新世相</title>
+</head>
+<body>
+<div class="content w1000">
+	<div class="nav-content clearfix">
+		<h1 class="logo"><a href="#"></a></h1>
+		<h1 class="hc-logo"><a href="#"></a></h1>
+		<div class="top-login clearfix">
+			<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+		</div>
+		<ul class="nav clearfix font_wryh">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">大赛规则</a></li>
+			<li><a href="#">我要参赛</a></li>
+			<li><a href="#">作品浏览</a></li>
+			<li><a href="#">我的作品</a></li>
+			<li class="cur"><a href="#">获奖公布</a></li>
+			<li><a href="#">世博介绍</a></li>
+		</ul>
+	</div>
+	<!-- 模板 -->
+	<div class="hjgb-page w1000">
+		<div class="p1th">
+			<a href="#">
+				<img src="images/banner-966x100.jpg" />
+			</a>
+		</div>
+		<div class="p2th">
+			<div class="wrap-tabNav">
+				<ul class="font_wryh fb clearfix">
+					<li class="cur" id="jx1" ><a href="#this" onclick="tab('jx',1,2)">相机摄影赛区</a></li>
+					<li id="jx2"><a href="#this"  onclick="tab('jx',2,2)">手机摄影赛区</a></li>
+				</ul>
+			</div>
+			<div class="wrap-con font_wryh">
+				<!-- 相机摄影赛区 -->
+				<div class="wrap-item"  id="c-jx1" style="display:;">
+					<div class="pathB">
+						<div class="item">
+							<div class="jx-list">
+								<div class="jx-item">
+									<div class="listItem">一等奖（1名）</div>
+									<div class="list clearfix">
+										<ul>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="jx-item">
+									<div class="listItem">二等奖（3名）</div>
+									<div class="list clearfix">
+										<ul>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="jx-item">
+									<div class="listItem">三等奖（5名）</div>
+									<div class="list clearfix">
+										<ul>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 手机摄影赛区 -->
+				<div class="wrap-item"  id="c-jx2" style="display:none;">
+					<div class="pathB">
+						<div class="item">
+							<div class="jx-list">
+								<div class="jx-item">
+									<div class="listItem">一等奖（1名）</div>
+									<div class="list clearfix">
+										<ul>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城111</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="jx-item">
+									<div class="listItem">二等奖（3名）</div>
+									<div class="list clearfix">
+										<ul>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="jx-item">
+									<div class="listItem">三等奖（5名）</div>
+									<div class="list clearfix">
+										<ul>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+											<li>
+												<div class="img-item">
+													<img src="images/320x320.jpg" />
+												</div>
+												<div class="text-item">
+													<dl>
+														<dt>美丽羊城</dt>
+														<dd>张晓培</dd>
+													</dl>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<!-- 模板 END -->
+</div>
+<div class="footer"></div>
+<script type="text/javascript">
+
+function tab(name,num,end)
+{
+		for(i=1;i<=end;i++)
+		{
+				var d=document.getElementById(name+i);
+				var a=document.getElementById("c-"+name+i);
+				d.className=i==num?"cur":"";
+				a.style.display=i==num?"block":"none"
+		}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<link rel="import" href="../webcontrol/head.tpl.htm?__inline">
+	<!-- swiper css -->
+	<link href="../../style/camera/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body bgcolor="#fafafa">
+<main role="main">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="camera-page">
+		<div class="p1th">
+			<div class="item-wrap">
+				<div class="img-item">
+					<i class="img">
+						
+					</i>
+					<div class="txt clearfix">
+						<div class="box-1 clearfix">
+							<div class="lbox fldi">
+								<div class="ui-avatar-icon ui-avatar-icon-60">
+									<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+								</div>
+
+							</div>
+							<div class="rbox fldi">
+								<div class="txt-1 color-fff ">
+									<p class="name f16">德兰哈比</p>
+									<p class="number"><span class="number-1">套系数 : 1254</span><span class="number-2">咨询数 : 96</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1">
+						<span class="address-icon yue-ui-icon-size-16"></span>
+						<span class="txt">广州</span>
+					</div>
+					<div class="box-2 f14">
+						落·音乐空间座落在一栋有百年历史的"东山口小洋楼
+					</div>
+					<div class="box-3 tc">
+						<i class="dib icon-font i-iconfont-allow icon-font-size-16"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="item-wrap">
+				<div class="sort-filter-item-tab-1">
+					<div class="item-wrap">
+						<div class="sort-item f14 color-666">
+							<ul class="list">
+								<li>
+									<span class="txt">
+										综合
+									</span>
+								</li>
+								<li>
+									<span class="txt">
+										综合
+									</span>
+								</li>
+								<li>
+									<span class="txt">
+										综合
+									</span>
+								</li>
+								<li class="clearfix">
+									<div class="item">
+										<span class="txt fldi">
+											综合
+										</span>
+										<span class="arrow-item fldi">
+											<i class="icon-font i-iconfont-shixinxiaojiantou shixinxiaojiantou-up cur"></i>
+											<i class="icon-font i-iconfont-shixinxiaojiantou "></i>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="filter-item">
+							<i class="filter-icon yue-ui-icon-size-22"></i>
+						</div>
+					</div>
+				</div>
+				<div class="wap-list-mod-1">
+						<ul class="list clearfix">
+							<li class="pic-list-width-44-percent">
+								<div class="img-item">
+									<i class="img" style="background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)"></i>
+									<div class="txt f12 color-fff">
+										12人咨询
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 color-666">
+										最懂你美丽的高颜值个人写高
+										颜值个人写高颜值个人写高
+									</div>
+									<div class="box-2 clearfix">
+										<div class="txt-1 fldi color-fa6">
+											￥500.00
+										</div>
+										<div class="txt-2 frdi color-ccc">
+											广州
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-44-percent">
+								<div class="img-item">
+									<i class="img" style="background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)"></i>
+									<div class="txt f12 color-fff">
+										12人咨询
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 color-666">
+										最懂你美丽的高颜值个人写高
+										颜值个人写高颜值个人写高
+									</div>
+									<div class="box-2 clearfix">
+										<div class="txt-1 fldi color-fa6">
+											￥500.00
+										</div>
+										<div class="txt-2 frdi color-ccc">
+											广州
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-44-percent">
+								<div class="img-item">
+									<i class="img" style="background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)"></i>
+									<div class="txt f12 color-fff">
+										12人咨询
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 color-666">
+										最懂你美丽的高颜值个人写高
+										颜值个人写高颜值个人写高
+									</div>
+									<div class="box-2 clearfix">
+										<div class="txt-1 fldi color-fa6">
+											￥500.00
+										</div>
+										<div class="txt-2 frdi color-ccc">
+											广州
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-44-percent">
+								<div class="img-item">
+									<i class="img" style="background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)"></i>
+									<div class="txt f12 color-fff">
+										12人咨询
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 color-666">
+										最懂你美丽的高颜值个人写高
+										颜值个人写高颜值个人写高
+									</div>
+									<div class="box-2 clearfix">
+										<div class="txt-1 fldi color-fa6">
+											￥500.00
+										</div>
+										<div class="txt-2 frdi color-ccc">
+											广州
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+	var LZ = require('wap-huipai:global/lazyload/lazyload');
+	var header = require('wap-huipai:global/header/main');
+	$(document).ready(function() {
+
+		// 渲染头部
+		
+
+
+	    
+
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>

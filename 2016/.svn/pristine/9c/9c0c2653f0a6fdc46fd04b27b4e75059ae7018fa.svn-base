@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<title>雪花</title>
+</head>
+<body>
+	<div class="header clearfix">
+		<div class="nav-bar font_wryh">
+			<div class="w1000 clearfix">
+				<h1 class="logo"><a href="#"></a></h1>
+				<div class="nav" id="navItem">
+					<ul>
+						<li class="item active">
+							<a href="#"><span>主赛区</span><i class="icon"></i></a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+								<!-- 新增 -->
+								<li>
+									<a href="#">获奖公布</a>
+								</li>
+								<!-- 新增end -->
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#"><span>大学生赛区</span><i class="icon"></i></a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">影展讲座</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+								<!-- 新增 -->
+								<li>
+									<a href="#">获奖公布</a>
+								</li>
+								<!-- 新增end -->
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#"><span>匠心古建</span><i class="icon"></i></a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">摄影攻略</a>
+								</li>
+								<li>
+									<a href="#">精彩影像</a>
+								</li>
+								<li>
+									<a href="#">户牖百科</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#"><span>主题活动</span></a>
+						</li>
+						<li class="item">
+							<a href="#"><span>古建丛书</span><i class="icon"></i></a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">丛书概览</a>
+								</li>
+								<li>
+									<a href="#">古建地图</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<a href="#" class="btn quit-item" style="display:">
+						<span class="name">XIAOMING</span><em>退出</em>
+					</a>
+					<a href="#" class="btn login-btn" style="display:none">登录</a>
+					<a href="#" class="btn join-btn">我要参赛</a>
+				</div>
+			</div>
+		</div>
+		<div class="header-item">
+			<div class="header-bg"><img src="images/ll-img-1.jpg" /></div>
+			<div class="h-join-bgn">
+				<a href="#"><img src="images/header-join-btn.png" /></a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="w1000">
+			<div class="hjgb-page font_wryh">
+				<div class="mod-listItem font_wryh">POCO分赛区 获奖名单</div>
+				<div class="tips-item">
+					<dl>
+						<dt class="fb point">关于POCO分赛区最终获奖作品公示的公告</dt>
+						<dd>
+							截至2016年8月1日，雪花纯生匠心营造&bull;中国古建筑摄影大赛&bull;户牖（以下简称“大赛”）的作品征集已全面结束。经
+							<br />
+							过大赛评委卢海林和郑建文评选，评出获奖的一二三等奖作品。现将POCO分赛区获奖作品对外公示，公示期为<span class="point">2016年
+							<br />
+							8月30日至9月2日</span>。在公示期内，如对获奖作品有任何异议，请及时与POCO客服联系，联系方式<span class="point">QQ：1044859368</span>
+						</dd>
+					</dl>
+				</div>
+				<div class="tab-wrap">
+					<div class="tab-nav">
+						<ul class="clearfix">
+							<li class="cur" id="on1" ><a href="#this" onclick="tab('on',1,2)">主赛区</a></li>
+							<li id="on2"><a href="#this"  onclick="tab('on',2,2)">POCO大学生赛区</a></li>
+						</ul>
+					</div>
+					<div class="tab-con">
+						<div class="item-warp" id="c-on1" style="display:;">
+							<div class="sub-tab-wrap">
+								<div class="sub-tab-nav">
+									<ul class="clearfix">
+										<li class="cur" id="pocolist1" ><a href="#this" onclick="tab('pocolist',1,2)">古建&bull;传承</a></li>
+										<li id="pocolist2"><a href="#this"  onclick="tab('pocolist',2,2)">匠心营造&bull;户牖</a></li>
+									</ul>
+								</div>
+								<div class="sub-tab-con">
+									<div class="item-warp" id="c-pocolist1" style="display:;">
+										<div class="item">
+											<div class="listItem">一等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=8327&p=13&t=1&f=2&o=0" target="_blank">
+																<img src="images/hjmd-img/poco/1/1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>彝塔风云</dt>
+															<dd>sutangshi</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">二等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=9997" target="_blank">
+																<img src="images/hjmd-img/poco/1/2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>天道轮回</dt>
+															<dd>guangying</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">三等奖（2名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=59&p=3&t=1&f=2&o=0" target="_blank">
+																<img src="images/hjmd-img/poco/1/3-1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>万寿宫掠影</dt>
+															<dd>万诱引力</dd>
+														</dl>
+													</li>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=4367&p=3&t=1&f=2&o=0" target="_blank">
+																<img src="images/hjmd-img/poco/1/3-2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>土楼构造</dt>
+															<dd>446979279</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="item-warp" id="c-pocolist2" style="display:none;">
+										<div class="item">
+											<div class="listItem">一等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=1477" target="_blank">
+																<img src="images/hjmd-img/poco/2/1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>优雅中堂</dt>
+															<dd>西部牛仔</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">二等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=10423" target="_blank">
+																<img src="images/hjmd-img/poco/2/2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>光阴的故事</dt>
+															<dd>江涛视觉</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">三等奖（2名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=8054" target="_blank">
+																<img src="images/hjmd-img/poco/2/3-1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>古镇味道</dt>
+															<dd>root5678</dd>
+														</dl>
+													</li>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=4795" target="_blank">
+																<img src="images/hjmd-img/poco/2/3-2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>山庄门神</dt>
+															<dd>WJ2148</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-warp" id="c-on2" style="display:none;">
+							<div class="sub-tab-wrap">
+								<div class="sub-tab-nav">
+									<ul class="clearfix">
+										<li class="cur" id="uslist1" ><a href="#this" onclick="tab('uslist',1,2)">古建&bull;传承</a></li>
+										<li id="uslist2"><a href="#this"  onclick="tab('uslist',2,2)">匠心营造&bull;户牖</a></li>
+									</ul>
+								</div>
+								<div class="sub-tab-con">
+									<div class="item-warp" id="c-uslist1" style="display:;">
+										<div class="item">
+											<div class="listItem">一等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=7068" target="_blank">
+																<img src="images/hjmd-img/us/1/1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>故宫倒影</dt>
+															<dd>喜欢下雨天</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">二等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=7080&p=131&t=1&f=3&o=1" target="_blank">
+																<img src="images/hjmd-img/us/1/2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>故梦</dt>
+															<dd>汽水</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">三等奖（2名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=274&p=11&t=1&f=3&o=1" target="_blank">
+																<img src="images/hjmd-img/us/1/3-1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>大河沿人</dt>
+															<dd>老墙根儿</dd>
+														</dl>
+													</li>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=10010&p=54&t=1&f=3&o=1" target="_blank">
+																<img src="images/hjmd-img/us/1/3-2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>悯默而别</dt>
+															<dd>Allen-Chen</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="item-warp" id="c-uslist2" style="display:none;">
+										<div class="item">
+											<div class="listItem">一等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=10495&p=49&t=2&f=3&o=0" target="_blank">
+																<img src="images/hjmd-img/us/2/1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>凌云</dt>
+															<dd>suchuanji</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">二等奖（1名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=9814" target="_blank">
+																<img src="images/hjmd-img/us/2/2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>庭台楼阁</dt>
+															<dd>2996457070</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="item">
+											<div class="listItem">三等奖（2名）</div>
+											<div class="list clearfix">
+												<ul>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=9014&p=44&t=2&f=3&o=0" target="_blank">
+																<img src="images/hjmd-img/us/2/3-1.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>门窗上的雕刻工艺</dt>
+															<dd>倩</dd>
+														</dl>
+													</li>
+													<li>
+														<div class="img-item">
+															<a href="http://www1.poco.cn/topic/snowbeer_2016/index.php?r=showlist/showfinal&show_id=4260&p=23&t=2&f=3&o=0" target="_blank">
+																<img src="images/hjmd-img/us/2/3-2.jpg" />
+															</a>
+														</div>
+														<dl>
+															<dt>江南水乡</dt>
+															<dd>雨卡丁车</dd>
+														</dl>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+	<script src="Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+	<script>
+		function tab(name,num,end)
+		{
+				for(i=1;i<=end;i++)
+				{
+						var d=document.getElementById(name+i);
+						var a=document.getElementById("c-"+name+i);
+						d.className=i==num?"cur":"";
+						a.style.display=i==num?"block":"none"
+				}
+		}
+		$(document).ready(function(){
+			$('#navItem li').hover(function(){
+				if($(this).hasClass('item')){
+					$(this).removeClass('item');
+					$(this).addClass('cur');
+				}else{
+					$(this).removeClass('cur');
+					$(this).addClass('item');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

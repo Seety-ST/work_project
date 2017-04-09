@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>问题反馈</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="feedback-page">
+		<div class="mod-search-item clearfix">
+			<input type="text" class="input-text" placeholder="搜索" />
+		</div>
+		<div class="ask-list">
+			<div class="item">
+				<h3 class="title">拍照与录像</h3>
+				<ul>
+					<li>
+						<h4 class="title">
+							<a href="#">如何关闭快门声音?</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">应用提醒“相机授权未开启”，如何开启相机？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">动态贴纸在哪里？怎么玩？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何调整美颜美形的程度？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何设置触屏拍照？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何调整镜头曝光值</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">为什么镜头无法自动识别人脸</a>
+						</h4>
+					</li>
+				</ul>
+			</div>
+			<div class="item">
+				<h3 class="title">照片</h3>
+				<ul>
+					<li>
+						<h4 class="title">
+							<a href="#">如何添加照片水印？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何管理/删除已下载的素材？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何更好地美颜美形？进阶玩法点这里</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何调整美颜美形的程度？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何设置触屏拍照？</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">如何调整镜头曝光值</a>
+						</h4>
+					</li>
+					<li>
+						<h4 class="title">
+							<a href="#">为什么镜头无法自动识别人脸</a>
+						</h4>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mod-feedback-btn">
+		<a href="#" class="btn">我要反馈</a>
+	</div>
+</body>
+</html>

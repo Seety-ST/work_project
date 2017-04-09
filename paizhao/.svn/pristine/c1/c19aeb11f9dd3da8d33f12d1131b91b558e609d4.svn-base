@@ -1,0 +1,48 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+// error_reporting(-1);
+include_once('common.inc.php');
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+$type_id = (int)$_INPUT['type_id'];
+$style_id = (int)$_INPUT['style_id'];
+$like_goods = $goods_class->get_like_goods(array('user_id'=>600175,'type_id'=>$type_id, 'style_id'=>$style_id));
+var_dump($like_goods);
+// $goods_info = $goods_class->get_goods_info(2150627);
+// var_dump(unserialize($goods_info['goods_info']['prices_list']));
+//var_dump($goods_class->add_consult_num(66, 'add_num', 5));
+// $consult_class = POCO::singleton('pai_paizhao_consult_class');
+// var_dump($consult_class);
+// $data = array(
+//     'name' => 'wlq',
+//     'mobile' => '13750509651',
+//     'goods_id' => '1',
+//     'user_id' => '123',
+//     'seller_id' => '12',
+//     'photographers' => 'yt',
+//     'package_info' => 'all',
+//     'consult_type' => 'goods',
+//     'source' => 'PC'
+// );
+// $result = $consult_class->add_consult($data);
+// $result1 = $consult_class->add_consult_button($data);
+// var_dump($result, $result1);
+// $data = array(
+//     'name' => $data['name'],
+//     'mobile' => $data['mobile'],
+//     'seller_id' => $data['seller_id'],
+//     'user_id' => $data['user_id'],
+//     'photographers' => $data['photographers'],
+//     'package_info' => $data['package_info'],
+//     'goods_id' => $data['goods_id'],
+//     'source' => $data['source'] == 'PC' ? 'PC' : 'WAP',
+//     'consult_type' => $data['consult_type'] == 'goods' ? 'goods' : 'seller',
+//     'create_time' => $time,
+//     'update_time' => $time,
+//     'group_time' => strtotime('today'),
+// );

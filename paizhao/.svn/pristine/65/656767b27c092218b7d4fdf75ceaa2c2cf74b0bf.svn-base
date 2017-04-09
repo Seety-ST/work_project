@@ -1,0 +1,154 @@
+@charset "UTF-8";
+.w1200 {
+  width: 1200px;
+  margin: 0 auto; }
+
+.content-wrap {
+  color: #666; }
+  .content-wrap .select-nav {
+    height: 50px; }
+    .content-wrap .select-nav .select-nav-text {
+      line-height: 50px; }
+    .content-wrap .select-nav .r-arrow {
+      margin-left: 15px;
+      margin-right: 15px; }
+    .content-wrap .select-nav .main-type {
+      position: relative; }
+      .content-wrap .select-nav .main-type .main-type-list {
+        position: absolute;
+        top: 35px;
+        left: 10px;
+        width: 196px;
+        display: none;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #49DED7;
+        z-index: 1;
+        background-color: #fff; }
+        .content-wrap .select-nav .main-type .main-type-list .main-select-disable {
+          color: #ddd;
+          padding-left: 10px; }
+        .content-wrap .select-nav .main-type .main-type-list .main-select-able {
+          padding-left: 20px;
+          color: #666; }
+        .content-wrap .select-nav .main-type .main-type-list .main-select-able:hover {
+          color: #49DED7; }
+    .content-wrap .select-nav .main-type-sel {
+      z-index: 2;
+      background-color: #fff;
+      position: relative; }
+    .content-wrap .select-nav .main-type:hover .select-nav-tab {
+      border: 1px solid #49DED7;
+      border-bottom: none; }
+      .content-wrap .select-nav .main-type:hover .select-nav-tab .tab-arrow {background-repeat: no-repeat;}
+    .content-wrap .select-nav .main-type:hover .main-type-sel {
+      border-bottom: 0; }
+    .content-wrap .select-nav .main-type:hover .main-type-list {
+      display: block; }
+    .content-wrap .select-nav .select-nav-tab {
+      height: 22px;
+      border: 1px solid #ddd;
+      margin-left: 10px;
+      margin-top: 13px; }
+      .content-wrap .select-nav .select-nav-tab .tab-name {
+        display: inline-block;
+        padding: 0px 10px;
+        line-height: 22px; }
+      .content-wrap .select-nav .select-nav-tab .tab-close {width: 12px;
+        height: 12px;
+        display: inline-block;
+        
+        margin: 5px 10px 5px 10px;background-repeat: no-repeat;}
+      .content-wrap .select-nav .select-nav-tab .tab-arrow {width: 12px;
+        height: 12px;
+        display: inline-block;
+        
+        margin: 5px 10px 5px 10px;background-repeat: no-repeat;}
+  .content-wrap .select-list {
+    border: 1px solid #ddd; }
+    .content-wrap .select-list .border-line {
+      border-bottom: 1px solid #ddd; }
+    .content-wrap .select-list .select-list-tab .tab-title {
+      float: left;
+      background-color: #FAFAFA; }
+      .content-wrap .select-list .select-list-tab .tab-title .tab-title-text {
+        width: 109px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        padding-right: 21px;
+        float: left;
+        text-align: right; }
+    .content-wrap .select-list .select-list-tab .tab-list {
+      float: left;
+      margin-left: 20px; }
+      .content-wrap .select-list .select-list-tab .tab-list .list li {
+        float: left;
+        line-height: 50px;
+        margin-left: 20px;
+        display: inline-block; }
+    .content-wrap .select-list .select-list-tab .tab-list-choose {
+      margin-left: 20px; }
+      .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn {
+        padding-bottom: 20px; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn .confirm {
+          display: inline-block;
+          background-color: #49DED7;
+          color: #fff;
+          padding: 5px 10px; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn .cancel {
+          border: 1px solid #d3d3d3;
+          background-color: #fff;
+          padding: 5px 10px; }
+      .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose li {
+        cursor: pointer;
+        float: left;
+        line-height: 30px;
+        margin-left: 20px; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose li i {
+          width: 10px;
+          height: 10px;
+          margin-right: 5px;
+          position: relative;
+          display: inline-block;
+          top: 2px; }
+      .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li {
+        color: #333; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li i {
+          background-color: #fff;
+          border: 1px solid #333; }
+      .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li:hover {
+        color: #49DED7; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li:hover i {
+          background-color: #fff;
+          border: 1px solid #49DED7; }
+      .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur {
+        color: #49DED7; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur i {border: 1px solid #49DED7;background-repeat: no-repeat;}
+    .content-wrap .select-list .select-list-tab .tab-btn {
+      width: 60px;
+      float: right; }
+      .content-wrap .select-list .select-list-tab .tab-btn .btn-text {
+        line-height: 50px; }
+      .content-wrap .select-list .select-list-tab .tab-btn i {width: 12px;
+        height: 12px;
+        display: inline-block;
+        
+        margin-left: 4px;
+        margin-top: 24;background-repeat: no-repeat;}
+
+/*公共样式*/
+.color-666 {
+  color: #666; }
+
+.color-ddd {
+  color: #ddd; }
+
+.color-fff {
+  color: #fff; }
+
+.color-fa {
+  color: #FAFAFA; }
+
+.color-d3 {
+  color: #D3D3D3; }
+.content-wrap .select-nav .main-type:hover .select-nav-tab .tab-arrow{background-position:0px 0px}.content-wrap .select-nav .select-nav-tab .tab-close{background-position:0px -22px}.content-wrap .select-nav .select-nav-tab .tab-arrow{background-position:0px -44px}.content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur i{background-position:-2px -66px}.content-wrap .select-list .select-list-tab .tab-btn i{background-position:0px -86px}.content-wrap .select-nav .main-type:hover .select-nav-tab .tab-arrow,.content-wrap .select-nav .select-nav-tab .tab-close,.content-wrap .select-nav .select-nav-tab .tab-arrow,.content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur i,.content-wrap .select-list .select-list-tab .tab-btn i{background-size: 12px 98px;background-image: url(http://paizhao.yueus.com/static/pc/style/search/search-page_1_z.png)}

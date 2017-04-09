@@ -1,0 +1,141 @@
+{YUE_ADMIN_TOP}
+<!--main-->
+<script language="JavaScript"> 
+function myrefresh() 
+{ 
+    var url_1 = "index.php?status=0&get_status_num=1";
+    var url_2 = "index.php?status=0&get_new_status_num=1";
+	$.ajax( {    
+			url:url_1,
+			type:'post',  
+			data:{},  
+			cache:false,    
+			dataType:'json',    
+			success:function(data) {
+                $("#not_do").text("("+data.num+")").css("color","red");
+            },    
+			 error : function() {    
+				  
+			 }			 
+	});  
+	$.ajax( {    
+			url:url_2,
+			type:'post',  
+			data:{},  
+			cache:false,    
+			dataType:'json',    
+			success:function(data) {
+                $("#new_not_do").text("("+data.num+")").css("color","red");
+            },    
+			 error : function() {    
+				  
+			 }			 
+	});  
+}
+
+var pageTimer = {} ; //定义计算器全局变量
+$(".topmenu ul li span").live('click',function(){
+    var menu_id = $(this).attr("id");
+    if(menu_id == "top_menu_2")
+    {
+       myrefresh();
+       pageTimer["timer1"] = setInterval(myrefresh,60000);
+    }else
+    {
+        //全部清除方法
+        for(var each in pageTimer){
+            clearInterval(pageTimer[each]);
+        }
+        
+    }
+});
+
+
+</script>
+<div id="Main_content">
+	<div id="MainBox"> 
+	    <div class="main_box">
+			<iframe name="main" id="Main" src="{f_index}" frameborder="false" scrolling="auto" width="100%" height="auto" allowtransparency="true"></iframe>
+		</div>
+    </div>
+	<div id="leftMenuBox">
+    	<div id="leftMenu" style="height: 231px; display: block;overflow-y:auto;position:absolute;overflow:auto">
+			<div style="padding-left:12px;_padding-left:10px;">
+                <!-- BEGIN list -->
+					<!-- IF is_show="1" -->
+						<dl id="nav_{index_key}" <!-- IF ROWCNT="0" --><!-- ELSE -->style=" display:none"<!-- ENDIF --> class="nav_info">
+							<dt>{name}</dt>
+							<dd>
+							<!-- BEGIN list -->
+								<!-- IF is_show="1" -->
+									<span><a href="{url}" target="main"><strong>{name}</strong></a></span>
+									<!-- BEGIN children_list -->
+										<!-- IF is_show="1" -->
+										<div><a href="{url}" target="main">{name}</a></div>
+										<!-- ENDIF -->
+									<!-- END children_list -->
+								<!-- ENDIF -->
+							<!-- END list -->
+							</dd>	
+						</dl>
+				<!-- ENDIF -->
+				<!-- END list -->
+			</div>
+		</div>
+		<div id="Main_drop">
+			<a href="javascript:toggle_leftbar(1);" class="on" style="display: inline;"><img src="images/admin_barclose.gif" width="11" height="60" border="0"></a>   
+			<a href="javascript:toggle_leftbar(0);" class="off" style="display: none;"><img src="images/admin_baropen.gif" width="11" height="60" border="0"></a>  
+		</div>
+    </div>
+</div>
+<!--main-->
+<script type="text/javascript">
+if(!Array.prototype.map){
+	Array.prototype.map = function(fn,scope) {
+	  var result = [],ri = 0;
+	  for (var i = 0,n = this.length; i < n; i++){
+		if(i in this){
+		  result[ri++]  = fn.call(scope ,this[i],i,this);
+		}
+	  }
+		return result;
+	};
+}
+var getWindowWH = function(){
+	  return ["Height","Width"].map(function(name){
+	  return window["inner"+name] ||
+		document.compatMode === "CSS1Compat" && document.documentElement[ "client" + name ] || document.body[ "client" + name ]
+	});
+}
+
+window.onload = function (){
+	if(!+"\v1" && !document.querySelector) { 
+		//IE6 IE7
+		document.body.onresize = resize;
+		
+	} 
+	else {
+	
+	  window.onresize = resize;
+	  
+	}
+	function resize() {
+	
+		wSize();
+		return false;
+		
+	}
+}
+function wSize(){
+	var str=getWindowWH();
+	var strs= new Array();
+	strs=str.toString().split(","); //字符串分割
+	var h = strs[0] - 95-30;
+	$('#leftMenu').height(h);
+	$('#Main').height(h); 
+}
+wSize();
+
+</script>
+</body>
+</html>

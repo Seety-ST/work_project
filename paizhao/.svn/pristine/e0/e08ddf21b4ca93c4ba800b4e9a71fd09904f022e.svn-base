@@ -1,0 +1,25 @@
+.sygw-page {
+  padding: 15px; }
+  .sygw-page .ewm-item {
+    width: 72%;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 50px auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+    .sygw-page .ewm-item .title-item .rbox {
+      width: 45px;
+      height: 36px; }
+      .sygw-page .ewm-item .title-item .rbox img {
+        width: 100%; }
+    .sygw-page .ewm-item .title-item .lbox .txt {
+      padding-bottom: 10px;
+      background: url(http://www.51snap.cn/static/wap/image/goods/line-img-40x4.png) no-repeat left bottom; }
+  .sygw-page .img-item {
+    margin-top: 20px;
+    width: 100%; }
+    .sygw-page .img-item img {
+      width: 100%; }
+  .sygw-page .txt-item {
+    font-size: 13px;
+    padding: 10px 0px; }

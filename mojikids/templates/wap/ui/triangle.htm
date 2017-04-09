@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/main.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.css">
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/ui/no-use/yue-ui-not.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://mojikids.yueus.com/static/wap/lib/base.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+    <title>
+        三角形
+    </title>
+
+    
+</head>
+<body>
+
+<style type="text/css">
+.ui-button {
+    margin: 5px 0;
+}
+.des{
+    margin: 3px 0;
+}
+html, body{
+    width: auto;
+    height: auto;
+    overflow: auto; 
+}
+.list li{
+    padding-bottom: 20px;
+}
+</style>
+
+
+<!-- YUE-UI VUE 头部返回模块 start -->
+<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+
+<!-- 
+<div  class="p20"><p class="des">三角形icon说明</p></div> -->
+
+
+<div id="page-container" class="p20">
+
+
+<p class="f14 color-ff6 mb10">新版,请尽量使用新版规格：</p>
+<ul class="list clearfix">
+
+    <li>
+        <p>默认</p>
+        <i class="dib icon-font i-iconfont-allow icon-font-size-10 color-aaa"></i>
+    </li>
+
+    <li>
+        <p>ui-transform-90</p>
+        <i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-90 color-aaa"></i>
+    </li>
+
+    <li>
+        <p>ui-transform-180</p>
+        <i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-180 color-aaa"></i>
+    </li>
+
+    <li>
+        <p>ui-transform-270</p>
+        <i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-270 color-aaa"></i>
+    </li>
+
+    <li>
+        <p>ui-transform-360</p>
+        <i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-360 color-aaa"></i>
+    </li>
+</ul>     
+
+
+<p class="f14 color-ff6 mb10">旧版：</p>
+
+<ul class="list clearfix">
+    <li><i class="icon-allow-grey"></i></li>
+    <li><i class="icon-allow-grey icon-allow-grey-bottom"></i></li>
+    <li><i class="icon-allow-grey icon-allow-grey-left"></i></li>
+    <li><i class="icon-allow-grey icon-allow-grey-top"></i></li>
+</ul>        
+
+
+
+
+
+
+</body>
+
+</html>

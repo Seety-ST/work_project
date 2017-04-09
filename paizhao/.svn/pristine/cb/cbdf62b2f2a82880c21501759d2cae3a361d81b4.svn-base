@@ -1,0 +1,270 @@
+@charset "UTF-8";
+.w1200 {
+  width: 1200px;
+  margin: 0 auto; }
+
+.content-wrap {
+  color: #666; }
+  .content-wrap .select-nav {
+    height: 50px; }
+    .content-wrap .select-nav .select-nav-text {
+      line-height: 50px; }
+    .content-wrap .select-nav .r-arrow {
+      margin-left: 15px; }
+    .content-wrap .select-nav .main-type {
+      position: relative; }
+      .content-wrap .select-nav .main-type .main-type-list {
+        position: absolute;
+        top: 35px;
+        left: 15px;
+        width: 196px;
+        display: none;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid #24c7c7;
+        z-index: 1;
+        background-color: #fff; }
+        .content-wrap .select-nav .main-type .main-type-list .main-select-disable {
+          color: #ddd;
+          padding-left: 10px; }
+        .content-wrap .select-nav .main-type .main-type-list .main-select-able {
+          padding-left: 20px;
+          color: #666; }
+        .content-wrap .select-nav .main-type .main-type-list .main-select-able:hover {
+          color: #24c7c7; }
+    .content-wrap .select-nav .main-type-sel {
+      z-index: 2;
+      background-color: #fff;
+      position: relative; }
+    .content-wrap .select-nav .main-type:hover .select-nav-tab {
+      border: 1px solid #24c7c7;
+      border-bottom: none;
+      color: #24c7c7; }
+      .content-wrap .select-nav .main-type:hover .select-nav-tab .tab-arrow {background-repeat: no-repeat;}
+    .content-wrap .select-nav .main-type:hover .main-type-sel {
+      border-bottom: 0; }
+    .content-wrap .select-nav .main-type:hover .main-type-list {
+      display: block; }
+    .content-wrap .select-nav .select-nav-tab {
+      cursor: pointer;
+      height: 22px;
+      border: 1px solid #ddd;
+      margin-left: 15px;
+      margin-top: 13px; }
+      .content-wrap .select-nav .select-nav-tab .tab-name {
+        display: inline-block;
+        padding: 0px 0px 0px 10px;
+        line-height: 22px; }
+      .content-wrap .select-nav .select-nav-tab .tab-close {width: 12px;
+        height: 12px;
+        display: inline-block;
+        
+        margin: 5px 10px 5px 10px;background-repeat: no-repeat;}
+      .content-wrap .select-nav .select-nav-tab .tab-arrow {width: 12px;
+        height: 12px;
+        display: inline-block;
+        
+        margin: 5px 10px 5px 10px;background-repeat: no-repeat;}
+    .content-wrap .select-nav .select-nav-tab-hover:hover {
+      border: 1px solid #24c7c7;
+      color: #24c7c7; }
+      .content-wrap .select-nav .select-nav-tab-hover:hover .tab-close {background-repeat: no-repeat;}
+  .content-wrap .select-list {
+    border: 1px solid #ddd;
+    border-bottom: 0; }
+    .content-wrap .select-list .border-line {
+      border-bottom: 1px solid #ddd; }
+    .content-wrap .select-list .select-list-tab {
+      background-color: #fafafa; }
+      .content-wrap .select-list .select-list-tab .tab-title {
+        width: 109px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-right: 21px;
+        text-align: right;
+        float: left; }
+      .content-wrap .select-list .select-list-tab .tab-list {
+        padding-left: 20px;
+        width: 968px;
+        padding-right: 20px;
+        float: left;
+        background-color: #fff; }
+        .content-wrap .select-list .select-list-tab .tab-list .list li {
+          cursor: pointer;
+          float: left;
+          line-height: 50px;
+          margin-left: 20px;
+          display: inline-block; }
+          .content-wrap .select-list .select-list-tab .tab-list .list li a {
+            color: #666; }
+        .content-wrap .select-list .select-list-tab .tab-list .list li:hover {
+          color: #24c7c7; }
+      .content-wrap .select-list .select-list-tab .tab-list-choose {
+        padding-left: 20px;
+        padding-right: 60px; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn {
+          padding-bottom: 20px;
+          cursor: pointer; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn .confirm {
+            display: inline-block;
+            background-color: #ddd;
+            color: #fff;
+            padding: 5px 10px; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn .confirm-active {
+            background-color: #24c7c7; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .choose-confirm-btn .cancel {
+            border: 1px solid #d3d3d3;
+            background-color: #fff;
+            padding: 5px 10px; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose li {
+          cursor: pointer;
+          float: left;
+          line-height: 40px;
+          margin-left: 20px; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose li i {
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            position: relative;
+            display: inline-block;
+            top: 2px; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li {
+          color: #666; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li i {
+            background-color: #fff;
+            border: 1px solid #666; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li:hover {
+          color: #24c7c7; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li:hover i {
+            background-color: #fff;
+            border: 1px solid #24c7c7; }
+        .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur {
+          color: #24c7c7; }
+          .content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur i {border: 1px solid #24c7c7;background-repeat: no-repeat;}
+      .content-wrap .select-list .select-list-tab .tab-btn {
+        width: 60px;
+        float: right;
+        background-color: #fff;
+        cursor: pointer; }
+        .content-wrap .select-list .select-list-tab .tab-btn .btn-text {
+          line-height: 50px; }
+        .content-wrap .select-list .select-list-tab .tab-btn i {width: 12px;
+          height: 12px;
+          display: inline-block;
+          
+          margin-left: 4px;
+          margin-top: 18px;background-repeat: no-repeat;}
+      .content-wrap .select-list .select-list-tab .tab-btn:hover {
+        color: #24c7c7; }
+        .content-wrap .select-list .select-list-tab .tab-btn:hover i {background-repeat: no-repeat;}
+  .content-wrap .sort-nav {
+    background-color: #FAFAFA; }
+    .content-wrap .sort-nav .sort-nav-list {
+      margin-left: 35px; }
+      .content-wrap .sort-nav .sort-nav-list .nav-list-li {
+        float: left;
+        padding: 15px 0px;
+        width: 50px;
+        margin-right: 60px;
+        cursor: pointer; }
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li span {
+          display: inline-block; }
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li .icon {
+          width: 12px;
+          height: 12px;
+          position: relative;
+          top: 1px;
+          display: inline-block; }
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li .sort-up-arrow {display: none;background-repeat: no-repeat;}
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li .sort-down-arrow {display: none;background-repeat: no-repeat;}
+      .content-wrap .sort-nav .sort-nav-list .nav-list-li:hover {
+        color: #24c7c7; }
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li:hover .sort-up-arrow {display: inline-block;background-repeat: no-repeat;}
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li:hover .sort-down-arrow {display: inline-block;background-repeat: no-repeat;}
+      .content-wrap .sort-nav .sort-nav-list .nav-list-li-cur {
+        color: #24c7c7; }
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li-cur .sort-up-arrow {display: inline-block;background-repeat: no-repeat;}
+        .content-wrap .sort-nav .sort-nav-list .nav-list-li-cur .sort-down-arrow {display: inline-block;background-repeat: no-repeat;}
+      .content-wrap .sort-nav .sort-nav-list .location-li {
+        position: relative; }
+        .content-wrap .sort-nav .sort-nav-list .location-li .location-li-list {
+          position: absolute;
+          display: none;
+          top: 51px;
+          left: -115px;
+          z-index: 10; }
+      .content-wrap .sort-nav .sort-nav-list .nav-list-li-width-auto {
+        width: auto; }
+      .content-wrap .sort-nav .sort-nav-list .location-li:hover {
+        color: #24c7c7; }
+        .content-wrap .sort-nav .sort-nav-list .location-li:hover .location-li-list {
+          display: block; }
+        .content-wrap .sort-nav .sort-nav-list .location-li:hover .ui-triangle-bottom-mid-gray {
+          display: inline-block;
+          border-width: 0px 6px 6px 6px;
+          border-color: transparent transparent #24c7c7 transparent;
+          _border-color: #000 #000 #fff #000;
+          _filter: chroma(color=black); }
+  .content-wrap .list-wrap .search-result-tips .icon {
+    margin: 0 auto; }
+  .content-wrap .list-wrap .search-result-tips .icon-no-data-40 {
+    background-image: url(http://paizhao.yueus.com/static/pc/image/search/no-data-40x40.png);
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .content-wrap .list-wrap .search-result-tips .ui-icon-size-48 {
+    width: 48px;
+    height: 48px; }
+  .content-wrap .list-wrap .search-result-tips .no-data-tips p {
+    margin-top: 15px;
+    font-size: 16px; }
+  .content-wrap .list-wrap .search-result-tips .no-data-tips .keywords {
+    color: #ff5959; }
+  .content-wrap .search-kw .search-kw-nav {
+    background-color: #fffae9;
+    border: 1px solid #ffe6c3;
+    padding: 9px 0 9px 12px;
+    color: #111;
+    font-size: 14px; }
+    .content-wrap .search-kw .search-kw-nav .keywords {
+      color: #ff5959; }
+  .content-wrap .page-mod-1 .click {
+    background-color: #24c7c7; }
+  .content-wrap .page-mod-1 a {
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px; }
+
+/*地址栏样式*/
+/*地址栏样式结束*/
+/*公共样式*/
+.color-666 {
+  color: #666; }
+
+.color-ddd {
+  color: #ddd; }
+
+.color-fff {
+  color: #fff; }
+
+.color-fa {
+  color: #FAFAFA; }
+
+.color-d3 {
+  color: #D3D3D3; }
+
+/*.ui-triangle-bottom-mid-grey {
+  border-width: 0px 6px 6px 6px;
+  border-color: transparent transparent #666 transparent;
+  _border-color: #000 #000 #fff #000;
+  _filter: chroma(color=black);
+}*/
+.location-arrow {
+  width: 300px;
+  height: 12px;
+  top: -12px;
+  position: absolute;
+  background: url(http://paizhao.yueus.com/static/pc/image/search/location-arrow-300x12.png) no-repeat; }
+
+a:hover {
+  text-decoration: none; }
+.content-wrap .select-nav .main-type:hover .select-nav-tab .tab-arrow{background-position:0px 0px}.content-wrap .select-nav .select-nav-tab .tab-close{background-position:0px -22px}.content-wrap .select-nav .select-nav-tab .tab-arrow{background-position:0px -44px}.content-wrap .select-nav .select-nav-tab-hover:hover .tab-close{background-position:0px -66px}.content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur i{background-position:-2px -88px}.content-wrap .select-list .select-list-tab .tab-btn i{background-position:0px -108px}.content-wrap .select-list .select-list-tab .tab-btn:hover i{background-position:0px -130px}.content-wrap .sort-nav .sort-nav-list .nav-list-li .sort-up-arrow{background-position:0px -152px}.content-wrap .sort-nav .sort-nav-list .nav-list-li .sort-down-arrow{background-position:0px -174px}.content-wrap .sort-nav .sort-nav-list .nav-list-li:hover .sort-up-arrow{background-position:0px -196px}.content-wrap .sort-nav .sort-nav-list .nav-list-li-cur .sort-up-arrow{background-position:0px -196px}.content-wrap .sort-nav .sort-nav-list .nav-list-li:hover .sort-down-arrow{background-position:0px -218px}.content-wrap .sort-nav .sort-nav-list .nav-list-li-cur .sort-down-arrow{background-position:0px -218px}.content-wrap .select-nav .main-type:hover .select-nav-tab .tab-arrow,.content-wrap .select-nav .select-nav-tab .tab-close,.content-wrap .select-nav .select-nav-tab .tab-arrow,.content-wrap .select-nav .select-nav-tab-hover:hover .tab-close,.content-wrap .select-list .select-list-tab .tab-list-choose .list-choose .list-li-cur i,.content-wrap .select-list .select-list-tab .tab-btn i,.content-wrap .select-list .select-list-tab .tab-btn:hover i,.content-wrap .sort-nav .sort-nav-list .nav-list-li .sort-up-arrow,.content-wrap .sort-nav .sort-nav-list .nav-list-li .sort-down-arrow,.content-wrap .sort-nav .sort-nav-list .nav-list-li:hover .sort-up-arrow,.content-wrap .sort-nav .sort-nav-list .nav-list-li-cur .sort-up-arrow,.content-wrap .sort-nav .sort-nav-list .nav-list-li:hover .sort-down-arrow,.content-wrap .sort-nav .sort-nav-list .nav-list-li-cur .sort-down-arrow{background-size: 12px 230px;background-image: url(http://paizhao.yueus.com/static/pc/style/search/search-page_1_z.png)}

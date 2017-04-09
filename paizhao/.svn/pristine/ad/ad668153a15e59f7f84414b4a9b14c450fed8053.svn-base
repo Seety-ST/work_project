@@ -1,0 +1,5 @@
+.topic-page{
+	.item-wrap{
+		padding:15px;
+	}
+}

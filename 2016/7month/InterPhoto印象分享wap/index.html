@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>InterPhoto印象</title>
+	<link href="css/iconfont.css" type="text/css" rel="stylesheet" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body>
+		<section class="InterPhoto-share-page">
+			<article class="con-wrap">
+				<div class="img-item">
+					<img src="images/test/750x750.jpg" />
+				</div>
+				<div class="con-item">
+					<div class="user-item">
+						<div class="user-img">
+							<img src="images/test/120x120.jpg" />
+						</div>
+						<dl class="info-item">
+							<dt class="name">陈曼</dt>
+							<dd class="title">POCO特约摄影师</dd>
+						</dl>
+					</div>
+					<div class="text-item">
+						<p>
+							承载着拟真胶片的精髓，拥有自然的色调、微妙的色偏和轻微的暗调。非常实用于室内、肖像和食物摄影。该滤镜免费使用
+						</p>
+					</div>
+				</div>
+				<div class="img-list">
+					<ul>
+						<li>
+							<img src="images/test/750x500.jpg" />
+						</li>
+						<li>
+							<img src="images/test/750x500-2.jpg" />
+						</li>
+						<li>
+							<img src="images/test/750x750.jpg" />
+						</li>
+					</ul>
+				</div>
+				<div class="IP-infoPath">
+					<div class="info-item">
+						<div class="mod-down-btn">
+							<a href="#" class="btn">
+								<i class="icon iconfont">&#xe601;</i><em>立即下载</em>
+							</a>
+						</div>
+						<div class="info-img-item"></div>
+					</div>
+					<div class="con-item">
+						<div class="img-warp">
+							<img src="images/yinxiang/con-img/1.jpg" />
+							<img src="images/yinxiang/con-img/2.jpg" />
+							<img src="images/yinxiang/con-img/3.jpg" />
+							<img src="images/yinxiang/con-img/4.jpg" />
+							<img src="images/yinxiang/con-img/5.jpg" />
+						</div>
+						<div class="mod-down-btn">
+							<a href="#" class="btn">
+								<i class="icon iconfont">&#xe601;</i><em>立即下载</em>
+							</a>
+						</div>
+					</div>
+				</div>
+			</article>
+			<!-- 下载浮层 -->
+			<section class="mod-share-item">
+				<a class="btn download-btn" href="#"></a>
+			</section>
+		</section>
+	</body>
+</html>

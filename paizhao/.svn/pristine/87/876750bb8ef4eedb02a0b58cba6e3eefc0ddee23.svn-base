@@ -1,0 +1,32 @@
+<?php
+/**
+ * @author zhangrz <zhangrz@yueus.com>
+ * 2016.10.27
+ * 搜索商品列表跟搜索商家列表控制
+ */
+
+include_once PAIZHAO_ROOT_URL.'common.inc.php';
+
+//获取列表
+/*
+ * @param
+ * array $data_list //数据数组
+ * str $list_type //数据类型（目前支持goods_list,photographers_list，商品列表，商家列表），配置对应模板
+ *
+*/
+
+function _get_wbc_data_list($list_data,$list_type="goods_list")
+{
+    print_r($list_data);
+        echo $list_type;
+
+
+    $tpl = getSmartyTemplate($list_type.'_control.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/', $caching = true, $clear_cache);
+    $tpl ->assign("list_data",$list_data);
+    $tpl_html = $tpl->fetch();
+
+    return $tpl_html;
+}
+
+
+?>

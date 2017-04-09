@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>九宫格抽奖转盘</title>
+<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<script>
+	(function(doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+</head>
+<body>
+<div id="lottery">
+	<div class="item lottery-unit lottery-unit-0"><img src="images/lot_1.png"></div>
+	<div class="item lottery-unit lottery-unit-1"><img src="images/lot_2.png"></div>
+	<div class="item lottery-unit lottery-unit-2"><img src="images/lot_3.png"></div>
+	<div class="item lottery-unit lottery-unit-7"><img src="images/lot_8.png"></div>
+	<div class="item praise-btn"><a href="#"><img src="images/lerry.jpg"></a></div>
+	<div class="item lottery-unit lottery-unit-3"><img src="images/lot_4.png"></div>
+	<div class="item lottery-unit lottery-unit-6"><img src="images/lot_7.png"></div>
+	<div class="item lottery-unit lottery-unit-5"><img src="images/lot_6.png"></div>
+	<div class="item lottery-unit lottery-unit-4"><img src="images/lot_5.png"></div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+		var lottery={
+				index:0,    //当前转动到哪个位置，起点位置
+				count:9,    //总共有多少个位置
+				timer:0,    //setTimeout的ID，用clearTimeout清除
+				speed:20,    //初始转动速度
+				times:0,    //转动次数
+				cycle:50,    //转动基本次数：即至少需要转动多少次再进入抽奖环节
+				prize:8,    //中奖位置
+				init:function(id){
+						if ($("#"+id).find(".lottery-unit").length>0) {
+								$lottery = $("#"+id);
+								$units = $lottery.find(".lottery-unit");
+								this.obj = $lottery;
+								this.count = $units.length;
+								$lottery.find(".lottery-unit-"+this.index).addClass("active");
+						};
+				},
+				roll:function(){
+						var index = this.index;
+						var count = this.count;
+						var lottery = this.obj;
+						$(lottery).find(".lottery-unit-"+index).removeClass("active");
+						index += 1;
+						if (index>count-1) {
+							index = 0;
+						};
+						$(lottery).find(".lottery-unit-"+index).addClass("active");
+						this.index=index;
+						return false;
+					},
+			  stop:function(index){
+						this.prize=index;
+						return false;
+					}
+		};
+		function roll(){
+			lottery.times += 1;
+			lottery.roll();
+			if (lottery.times > lottery.cycle+10 && lottery.prize==lottery.index) {
+			//alert(111);
+				clearTimeout(lottery.timer);
+				lottery.prize=-1;
+				lottery.times=0;
+				click=false;
+			}else{
+			// alert(222);
+				if (lottery.times<lottery.cycle) {
+					lottery.speed -= 10;
+				}else if(lottery.times==lottery.cycle) {
+					var index = Math.random()*(lottery.count)|0;
+					lottery.prize = index;        
+				}else{
+					if (lottery.times > lottery.cycle+10 && ((lottery.prize==0 && lottery.index==7) || lottery.prize==lottery.index+1)) {
+						lottery.speed += 110;
+					}else{
+						lottery.speed += 20;
+					}
+				}
+				if (lottery.speed<40) {
+					lottery.speed=40;
+				};
+				//console.log(lottery.times+'^^^^^^'+lottery.speed+'^^^^^^^'+lottery.prize);
+				lottery.timer = setTimeout(roll,lottery.speed);
+			}
+			return false;
+		}
+		var click=false;
+		window.onload=function(){
+			lottery.init('lottery');
+			$("#lottery a").click(function(){
+				if (click) {
+					return false;
+				}else{
+					lottery.speed=100;
+					roll();
+					click=true;
+					return false;
+				}
+			});
+		};
+</script>
+
+</body></html>

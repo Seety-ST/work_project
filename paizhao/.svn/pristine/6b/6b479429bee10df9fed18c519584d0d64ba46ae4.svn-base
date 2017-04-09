@@ -1,0 +1,87 @@
+<link rel="dns-prefetch" href="//static-c1.yueus.com">
+<link rel="dns-prefetch" href="//static.yueus.com">
+<link rel="dns-prefetch" href="//goods.yueus.com">
+<link rel="dns-prefetch" href="//topic.yueus.com">
+<link rel="dns-prefetch" href="//list.yueus.com">
+<link rel="dns-prefetch" href="//51snap.yueus.com">
+<link rel="dns-prefetch" href="//yp.yueus.com">
+
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.3, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="wap-font-scale" content="no">
+<!-- 百度统计start -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?d3f6d15244a0b41207c934710304445d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 百度统计end --> 
+
+
+
+<!-- common css -->
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/common/main.css">
+<!-- basejs -->
+<script type="text/javascript" src="http://51snap.yueus.com/static/wap/lib/base.js"></script>
+
+<script type="text/javascript" src="//static-c1.yueus.com/yue_ui/js/zepto.min.js"></script>
+
+
+{%if $use_vue == 1%}
+<script type="text/javascript" src="//static-c1.yueus.com/yue_ui/vue/1.0.2/vue-base.min.19728b0.js"></script>
+{%/if%}       
+
+
+
+<script>
+    // HUIPAI js 全局设置
+    window.__HUIPAI_GLOBAL = {};
+    window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] = '/ajax/';  
+    window.__HUIPAI_GLOBAL['PAGE_URL'] = 
+    {
+       index : '//www.51snap.cn/',//首页
+       goods_list : '//www.51snap.cn/search/?tp=list',//商品列表
+       goods_detail : '//www.51snap.cn/goods/', //商品详情
+       photographer_list : '//www.51snap.cn/search/?tp=per', //摄影师列表
+       photographer_detail : '//www.51snap.cn/camera/'//摄影师详情
+    };  
+
+    document.addEventListener('touchstart',function(){},false);
+</script>
+
+
+<style>
+    .paizhao-ph-bgimg{
+        background-image: url('{%$PAIZHAO_PLACEHOLER_IMG%}');
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+</style>    
+
+{%$get_icon_font%}
+
+
+ 
+ <script>
+     (function(doc, win) {
+         var docEl = doc.documentElement,
+             resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+             recalc = function() {
+                 var clientWidth = docEl.clientWidth;
+                 if (!clientWidth) return;
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+             };
+         if (!doc.addEventListener) return;
+         win.addEventListener(resizeEvt, recalc, false);
+         doc.addEventListener('DOMContentLoaded', recalc, false);
+     })(document, window);
+ </script>
+
+ 

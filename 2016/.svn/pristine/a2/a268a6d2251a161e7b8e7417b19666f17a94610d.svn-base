@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>简客积分</title>
+    <link href="css/janeplus-point.css" type="text/css" rel="stylesheet" />
+    <body class="rudt-bg">
+        <section class="taskhall-page">
+            <div class="mod-tab-wrap">
+                <div class="total-points-item">
+                    <i class="icon points-icon"></i><span class="num">1500</span>
+                </div>
+                <section class="tab-wrap">
+                    <div class="tab-nav clearfix">
+                        <ul>
+                            <li>
+                                <span>任务大厅</span>
+                            </li>
+                            <li class="cur">
+                                <span>积分足迹</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-wrap">
+                        <!-- 切换内容 -->
+                        <section class="footprint-list">
+                            <div class="listItem">您最近一个月的积分足迹</div>
+                            <div class="item-list">
+                                <div class="item">
+                                    <dl>
+                                        <dt class="date-item">2016年4月21日</dt>
+                                        <dd class="operate-item clearfix">
+                                            <span class="title">完善资料</span>
+                                            <span class="points-item">+<em class="num">10</em></span>
+                                        </dd>
+                                        <dd class="operate-item clearfix">
+                                            <span class="title">绑定手机</span>
+                                            <span class="points-item">+<em class="num">50</em></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="item">
+                                    <dl>
+                                        <dt class="date-item">2016年4月20日</dt>
+                                        <dd class="operate-item clearfix">
+                                            <span class="title">云相册导入照片</span>
+                                            <span class="points-item">+<em class="num">10</em></span>
+                                        </dd>
+                                        <dd class="operate-item clearfix">
+                                            <span class="title">连续登陆</span>
+                                            <span class="points-item">+<em class="num">50</em></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="item">
+                                    <dl>
+                                        <dt class="date-item">2016年4月19日</dt>
+                                        <dd class="operate-item clearfix">
+                                            <span class="title">云相册导入照片</span>
+                                            <span class="points-item">+<em class="num">80</em></span>
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- 切换内容 end -->
+                    </div>
+                </section>
+            </div>
+        </section>
+    </body>
+</html>

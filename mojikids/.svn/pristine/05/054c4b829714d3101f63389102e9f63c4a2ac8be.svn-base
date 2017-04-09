@@ -1,0 +1,8 @@
+.index-page .img img {
+  max-width: 100%;
+}
+
+.index-page .txt {
+  text-align: center;
+  padding-top: 0.15rem;
+}

@@ -1,0 +1,170 @@
+/* Theme Name:poco ued theme
+Author URI:poco.cn
+Description:poco */
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #333; }
+a:hover { text-decoration: underline; }
+/** 重置图片元素 **/
+img { border: none; }
+
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+/*** font ***/
+.word_break { white-space: normal; word-wrap: break-word; word-break: break-all; }
+
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html, body { font-family: 'Microsoft YaHei', 'Verdana', 'SimSun'; }
+html { -ms-touch-action: none;  }
+
+/* 用户协议CSS */
+.agreement-page{
+    font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+    padding: 10% 3.8% 3.8%;
+    font-size: 14px;
+    line-height: 22px;
+    color: #4c4c4c;
+}
+.agreement-page .item{
+}
+.agreement-page .item p{
+    padding-bottom: 25px;
+}
+.agreement-page .item p.A-title{
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+.agreement-page .sy-item{
+    text-align: center;
+    padding-top: 23px;
+}
+
+/* 404 */
+.jkerror-page{
+    font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+    font-size: 28px;
+    color: #999;
+    text-align: center;
+}
+.jkerror-page a:hover{
+    text-decoration: none;
+}
+.jkerror-page .tips-item{
+    width: 84%;
+    padding: 9% 8%;
+}
+.jkerror-page .tips-item i.icon{
+    display: block;
+    margin: 0 auto;
+}
+.jkerror-page .tips-item i.error-icon{
+    background: url(../images/icon-404-214x214.png) no-repeat; 
+    width: 214px;
+    height: 214px;
+    margin-bottom: 25px;
+}
+.jkerror-page .tips-item .point-word{
+    font-size: 32px;
+}
+.jkerror-page .more-item{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.jkerror-page .more-item .logo-icon{
+    display: block;
+    margin: 0 auto 20px;
+    background: url(../images/logo-jk-100x132.png) no-repeat; 
+    width: 100px;
+    height: 132px;
+}
+.jkerror-page .more-item .more-btn{
+    width: 214px;
+    height: 64px;
+    line-height: 64px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #95c6a2;
+    border-radius: 34px;
+    text-align: center;
+    font-size: 24px;
+    color: #95c6a2;
+    -webkit-transition: 600ms;
+    transition: 600ms;
+}
+.jkerror-page .more-item .more-btn:active{
+    color: #fff;
+    background: #95c6a2;
+}
+
+@media screen and (max-width: 768px) and (max-height: 1024px) {
+    .jkerror-page .tips-item{
+        padding: 25% 8%;
+    }
+}
+@media screen and (max-width: 621px) and (max-height: 1044px) {
+    .jkerror-page{
+        font-size: 14px;
+    }
+    .jkerror-page .tips-item{
+        padding: 30% 8%;
+    }
+    .jkerror-page .tips-item i.error-icon{
+        background: url(../images/icon-404-214x214.png) no-repeat; 
+        background-size: contain;
+        width: 107px;
+        height: 107px;
+        margin-bottom: 3.33%;
+    }
+    .jkerror-page .tips-item .point-word{
+        font-size: 16px;
+    }
+    .jkerror-page .more-item{
+        padding-bottom: 7.4%;
+    }
+    .jkerror-page .more-item .logo-icon{
+        margin: 0 auto 2.67%;
+        background: url(../images/logo-jk-100x132.png) no-repeat; 
+        background-size: contain;
+        width: 50px;
+        height: 66px;
+    }
+    .jkerror-page .more-item .more-btn{
+        width: 107px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #95c6a2;
+        border-radius: 17px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 360px) and (max-height: 640px) {
+    .jkerror-page .tips-item{
+        padding: 25% 8%;
+    }
+}
+@media screen and (max-width:320px) and (max-height: 480px){
+    .jkerror-page .tips-item{
+        padding: 15% 8%;
+    }
+}

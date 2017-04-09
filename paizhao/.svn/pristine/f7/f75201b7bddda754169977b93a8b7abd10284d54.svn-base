@@ -1,0 +1,28 @@
+.go-top-mod a 
+{
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    // line-height: 18px;
+    // padding: 5px 5px 12px 11px;
+    // background: #4B4949;
+    text-decoration: none;
+    color: #fff;
+    // border-radius: 5px;
+    background: url(../../image/ui/go-top-44x44.jpg?__sprite);
+
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover{
+        background: #3A3939;
+        background: url(../../image/ui/go-top-44x44-hover.jpg?__sprite);
+    }
+    
+}

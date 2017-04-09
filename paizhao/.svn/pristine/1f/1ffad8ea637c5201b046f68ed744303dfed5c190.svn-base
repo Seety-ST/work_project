@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://paizhao.yueus.com/static/pc/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	
+	
+
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/no-use/no-use.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/common/main.css">
+<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/ui-color.css">
+<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/ui-avatar.css">
+<!-- 当前页css  -->
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/ui-list.css">
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">图片列表 ui-list.scss</h3>
+
+				<!-- 模板start -->
+				<div class="model">
+					<p class="f18 tc">列表1</p>
+					<br />
+					<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+						<ul class="list clearfix">
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									<div class="box-3 clearfix">
+										<div class="txt-1 frdi clearfix">
+											<p class="txt fldi color-999">摄影师马叔</p>
+											<div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+												<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									<div class="box-3 clearfix">
+										<div class="txt-1 frdi clearfix">
+											<p class="txt fldi color-999">摄影师马叔</p>
+											<div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+												<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>	
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									<div class="box-3 clearfix">
+										<div class="txt-1 frdi clearfix">
+											<p class="txt fldi color-999">摄影师马叔</p>
+											<div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+												<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>	
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									<div class="box-3 clearfix">
+										<div class="txt-1 frdi clearfix">
+											<p class="txt fldi color-999">摄影师马叔</p>
+											<div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+												<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>	
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									<div class="box-3 clearfix">
+										<div class="txt-1 frdi clearfix">
+											<p class="txt fldi color-999">摄影师马叔</p>
+											<div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+												<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>		
+
+						</ul>
+					</div>
+					<p class="f18 tc">列表2</p>
+					<br />
+					<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+						<ul class="list clearfix">
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+									<div class="txt color-fff">999+人咨询</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									
+								</div>
+							</li>
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+									<div class="txt color-fff">999+人咨询</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									
+								</div>
+							</li>	
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+									<div class="txt color-fff">999+人咨询</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									
+								</div>
+							</li>	
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+									<div class="txt color-fff">999+人咨询</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									
+								</div>
+							</li>	
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+									<div class="txt color-fff">999+人咨询</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									
+								</div>
+							</li>		
+
+						</ul>
+					</div>
+					<p class="f18 tc">列表3</p>
+					<br />
+					<div class="pic-list-mod-1 font_wryh">
+						<ul class="list clearfix">
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fa6 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+													
+						</ul>
+					</div>
+					<p class="f18 tc">列表4</p>
+					<br />
+					<div class="pic-list-mod-2 font_wryh pic-list-mod-w1200">
+						<ul class="list clearfix">
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x114.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">  
+									<div class="box-1">
+										<div class="ui-avatar-icon ui-avatar-icon-64">
+											<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+										</div>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 tc color-333 f14">姆比利</p>
+										<p class="txt-2 tc color-ccc"><span class="color-24c">120</span>人咨询</p>
+									</div>
+									<div class="box-3 pt10">
+										<p class="txt-1 tc color-ccc"><span class="tips color-fff">擅长</span>日常写真、家庭亲子</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x114.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">  
+									<div class="box-1">
+										<div class="ui-avatar-icon ui-avatar-icon-64">
+											<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+										</div>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 tc color-333 f14">姆比利</p>
+										<p class="txt-2 tc color-ccc"><span class="color-24c">120</span>人咨询</p>
+									</div>
+									<div class="box-3 pt10">
+										<p class="txt-1 tc color-ccc"><span class="tips color-fff">擅长</span>日常写真、家庭亲子</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x114.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">  
+									<div class="box-1">
+										<div class="ui-avatar-icon ui-avatar-icon-64">
+											<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+										</div>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 tc color-333 f14">姆比利</p>
+										<p class="txt-2 tc color-ccc"><span class="color-24c">120</span>人咨询</p>
+									</div>
+									<div class="box-3 pt10">
+										<p class="txt-1 tc color-ccc"><span class="tips color-fff">擅长</span>日常写真、家庭亲子</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x114.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">  
+									<div class="box-1">
+										<div class="ui-avatar-icon ui-avatar-icon-64">
+											<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+										</div>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 tc color-333 f14">姆比利</p>
+										<p class="txt-2 tc color-ccc"><span class="color-24c">120</span>人咨询</p>
+									</div>
+									<div class="box-3 pt10">
+										<p class="txt-1 tc color-ccc"><span class="tips color-fff">擅长</span>日常写真、家庭亲子</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="http://paizhao.yueus.com/static/pc/image/ui/285x114.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">  
+									<div class="box-1">
+										<div class="ui-avatar-icon ui-avatar-icon-64">
+											<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+										</div>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 tc color-333 f14">姆比利</p>
+										<p class="txt-2 tc color-ccc"><span class="color-24c">120</span>人咨询</p>
+									</div>
+									<div class="box-3 pt10">
+										<p class="txt-1 tc color-ccc"><span class="tips color-fff">擅长</span>日常写真、家庭亲子</p>
+									</div>
+								</div>
+							</li>
+						
+													
+						</ul>
+					</div>
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+	
+</script>
+</html>
+
+

@@ -1,0 +1,937 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+
+<script src="js/shadowbox/shadowbox.js" type="text/javascript"></script>
+<link href="js/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+<style>
+    #keywords{width:120px ! important;}
+</style>
+
+<script type="text/javascript"> 
+   
+$(function () {
+    
+    $(".ui_timepicker").datetimepicker({
+		//showOn: "button",
+		//buttonImage: "./css/images/icon_calendar.gif",
+		//buttonImageOnly: true,
+		showSecond: true,
+		timeFormat: '',
+		stepHour: 1,
+		stepMinute: 1,
+		stepSecond: 1
+	});
+	
+	var post = {post};
+	
+    var type_id = '';
+    
+    var property_content_id = '';
+    
+    if(post['type_id'] > 0 )
+    {
+       type_id = post['type_id'];
+    }else
+	{
+		type_id = {type_id};
+	}
+    
+    $("#first").empty();
+    $("#first").append("<option value=''>全部</option>");
+    $.each({json_data},function(i,item){
+        $("#first").append("<option id='"+item.id+"' value='"+item.id+"'>"+item.name+"</option>");
+
+    });
+    
+    get_second("",type_id,post);
+
+   
+});
+
+function get_second(obj,type_id,post)
+{
+		$(".lian_dong select:eq(0)").siblings().remove();
+        $(".lian_dong span").remove();
+        var property = {json_data};
+        var id = type_id >0 ? type_id : $(obj).val();
+        if(id > 0 && property[id].hasOwnProperty('property') )
+        {
+            $.each(property[id]['property'],function(i,item)
+            {
+                $(".lian_dong").append("<span>"+item.name+":</span>"+"<select class='"+item.id+"' name='detail["+item.id+"]' onchange='get_child(this)'></select><div style='display:inline;'  class='"+item.id+"_div'></div>"+"<span>&nbsp;&nbsp;</span>");
+                
+				if( count(item['property_content']) > 0 )
+				{
+					$("."+item.id+"_div").remove();
+					$("."+item.id).append("<option value='0' class='0' >请选择</option>");
+					$.each(item['property_content'],function(i2,item2){
+						$("."+item.id).append("<option class='"+item2['id']+"' value='"+item2['id']+"'>"+item2['name']+"</option>");
+					});
+				}else
+				{
+					
+					$("."+item.id).remove();
+					
+					var input_val = '';
+					
+					if(type_id > 0)
+					{
+						
+						if( typeof(post['detail'][item.id]) !='undefined' )  
+						{
+							var input_val = post['detail'][item.id];
+						}
+					}
+					$("."+item.id+"_div").html("<input type='text' name='detail["+item.id+"]'  value='"+input_val+"'/>");
+				}
+				
+			});
+        }
+        if( type_id > 0 )
+        {
+			$("#"+type_id).attr("selected","selected");
+			
+			if(typeof(post['detail']) !='undefined')
+			{
+				$.each(post['detail'],function(i,item){
+					if( item !=0 )
+					{
+						$("."+item).attr("selected","selected");
+                        get_child(false,i,item,type_id,post);
+					}
+					
+				});
+			}	
+		}
+}
+    
+function get_child(obj,third_id,parent_id,type_id,post)
+{
+    var json_data = {json_data};
+	//alert(type_id);
+	//return false;
+	//alert(json_data['40']['property']['90']['property_content']['112']['id']);
+	//return false;
+	
+	
+	var id = $(obj).val();
+	
+	if(id)
+	{
+		var property_id = $(obj).attr("class");
+	
+		var parent_id = $(obj).val();
+		
+		var type_id = $("#first").val();
+		
+		var third_id = property_id;
+	}
+	
+	if( ! obj)
+	{
+		var id = parent_id;
+	}
+	
+	if( ! id )
+	{
+		return false;
+	}
+	
+	//
+	//var count_third = (count(json_data[type_id]['property'][third_id]['property_content'][parent_id]['property_content_third']));
+	
+	if( parent_id )
+	{
+        if(count(json_data[type_id]['property'][third_id]['property_content'][parent_id]['property_content_third']))
+        {
+            var html = "<select id='"+id+"' name='third["+parent_id+"]'><option value='"+parent_id+"'>请选择</option></select>";
+            if(obj)
+            {
+                $(obj).next().html(html);
+            }
+            if(third_id)
+            {
+                $("."+third_id).next().html(html);
+            }
+
+            $("#"+id).empty();
+            $("#"+id).append("<option value='"+parent_id+"'>请选择</option>");
+            $.each(json_data[type_id]['property'][third_id]['property_content'][parent_id]['property_content_third'], function(i,item){
+              $("#"+id).append("<option class='"+item.id+"' value='"+item.id+"'>"+item.name+"</option>");
+            });
+
+            //第三级回选
+            if(typeof(post['third']) !='undefined' )
+            {
+                $.each(post['third'],function(i2,item2){
+                    $("."+item2).attr("selected","selected");
+                });
+            }
+        }else
+        {
+            var html = '';
+            $(obj).next().html(html);
+        }
+	}else
+	{
+		var html = '';
+		$(obj).next().html(html);
+	}
+	
+}
+	
+function count(o)
+{
+	var t = typeof o;
+	if(t == 'string')
+	{
+		return o.legnth;
+	}else if( t == 'object')
+	{
+		var n = 0;
+		for( var i in o)
+		{
+			n++;
+		}
+		return n;
+	}
+	
+	return false;
+	
+}
+
+
+
+Shadowbox.init({ 
+    handleOversize: "drag", 
+	overlayColor: '#000',
+    modal: true,
+    displayNav: true,
+	displayCounter: false
+}); 
+Shadowbox.setup();
+</script>
+<script type="text/javascript">
+    
+function ajax_auto_action(goods_id,auto_status,auto_type)
+{
+    if(!confirm('是否确认操作'))
+	{
+	   return;
+	}
+    
+    if(auto_type == 'sign')
+    {
+        var url = '?action=goods_auto_action&goods_id='+goods_id+'&is_auto_sign='+auto_status
+    }else if(auto_type == 'accept')
+    {
+         var url = '?action=goods_auto_action&goods_id='+goods_id+'&is_auto_accept='+auto_status
+    }else if(auto_type == 'black')
+    {
+         var url = '?action=goods_add_black&goods_id='+goods_id;
+    }else if(auto_type == 'self')
+	{
+		var url = '?action=goods_auto_action_for_self&goods_id='+goods_id+'&self_is_auto_accept='+auto_status
+	}
+	
+	$.ajax( {    
+			url:url,
+			type:'post',    
+			cache:false,    
+			dataType:'json',    
+			success:function(data) {    
+			    alert(data.message);
+			    /*   
+				if(data.result==1){    
+					alert('修改成功');
+					location.reload();
+				}else{    
+					alert(data.message);  
+				}
+				*/    
+			 },    
+			 error : function() {    
+				  alert("异常！");
+			 }    
+	});  
+}
+    
+function change_status(id,status)
+{
+	if(!confirm('是否确认修改状态？'))
+	{
+	   return;
+	}
+	$.ajax( {    
+			url:'?action=goods_chstatus&id='+id+'&status='+status,
+			type:'post',    
+			cache:false,    
+			dataType:'json',    
+			success:function(data) {    
+			    alert(data.message);
+			    /*   
+				if(data.result==1){    
+					alert('修改成功');
+					location.reload();
+				}else{    
+					alert(data.message);  
+				}
+				*/    
+			 },    
+			 error : function() {    
+				  alert("异常！");
+			 }    
+	});  
+}
+function change_show(id,status)
+{
+	var $con_var = '是否确定上架?';
+	if(status==2)
+	{
+		$con_var = '是否确定下架?';
+	}
+	if(!confirm($con_var))
+	{
+	   return;
+	}
+	$.ajax( {    
+			url:'?action=goods_chshow&id='+id+'&status='+status,
+			type:'post',    
+			cache:false,    
+			dataType:'json',    
+			success:function(data) {    
+			    alert(data.message);
+			    /*   
+				if(data.result==1){    
+					alert('修改成功');
+					location.reload();
+				}else{    
+					alert(data.message);  
+				}
+				*/    
+			 },    
+			 error : function() {    
+				  alert("异常！");
+			 }    
+	});  
+}
+
+
+</script>
+
+<title>OA</title>
+</head>
+<body>
+<div id="top"></div>
+<a href="#bottom" class="btn_class" style="position:fixed;top:0;right:10px;">↓</a>
+<div class="mainbox">
+<table class="search_table" width="100%">
+	<tbody>
+		
+        <tr>
+			<td class="search">
+              <form action="" method="post">
+					
+                  <div>
+                     商品属性: 
+                  </div>
+                 <div class="lian_dong" style="text-indent:2em;">
+						分类:
+						<select id="first" name="type_id" onchange="get_second(this)" disabled="disabled">
+							
+						</select>
+                        
+				  </div>
+                  <!-- IF type_id=="12" -->
+                    <style>
+                        .lian_dong{display: inline-block;}
+                    </style>
+                    <div style="display: inline-block;">
+                         <font>影棚面积:</font>
+                          <select name="name_19">
+                                  <option value="">请选择</option>
+                                  <option value="0,100" <!-- IF name_19=="0,100" -->selected="selected"<!-- ENDIF -->>100平方米含以下</option>
+                                  <option value="101,300" <!-- IF name_19=="101,300" -->selected="selected"<!-- ENDIF -->>101-300平方米</option>
+                                  <option value="301,500" <!-- IF name_19=="301,500" -->selected="selected"<!-- ENDIF -->>301-500平方米</option>
+                                  <option value="501,1000" <!-- IF name_19=="501,1000" -->selected="selected"<!-- ENDIF --> >501-1000平方米</option>
+                                  <option value="1000,99999999" <!-- IF name_19=="1000,99999999" -->selected="selected"<!-- ENDIF --> >1000平方米以上</option>
+                          </select>
+                    </div>
+                 <!-- ELSEIF type_id="42" --> 
+                     <style>
+                        .lian_dong{display: inline-block;}
+                    </style>
+                    <div style="display: inline-block;">
+                         <font>组织者:</font>
+                          <select name="is_official">
+                                  <option value="-1">请选择</option>
+                                  <option value="1" <!-- IF is_official=="1" -->selected="selected"<!-- ENDIF -->>官方</option>
+                                  <option value="0" <!-- IF is_official=="0" -->selected="selected"<!-- ENDIF -->>非官方</option>
+                          </select>
+                         &nbsp;&nbsp;&nbsp;&nbsp;是否周末:
+                         <input name="week" type="checkbox" value="6|7" <!-- IF week -->checked="checked"<!-- ENDIF --> />
+                      &nbsp;&nbsp;&nbsp;&nbsp;活动开始
+                      <input id="huo_add_time_s" type="text" size="10" name="huo_add_time_s" value="{huo_add_time_s}" class="ui_timepicker" readonly="readonly">
+					  
+					  ~
+					  <input id="huo_add_time_e" type="text" size="10" name="huo_add_time_e" value="{huo_add_time_e}" class="ui_timepicker" readonly="readonly"/>
+                    </div>
+                 
+                 <!-- ENDIF -->
+                <div>
+                  商家属性：  
+                </div>  
+                  <div class='person' style="text-indent:2em;">						
+							<!-- IF type_id=="31" -->
+                                <span>性别:</span>
+                                <select name="m_sex">
+                                    <option value=''>请选择</option>
+                                    <option value='男' <!-- IF m_sex=="男" -->selected="selected"<!-- ENDIF --> >男</option>
+                                    <option value='女' <!-- IF m_sex=="女" -->selected="selected"<!-- ENDIF --> >女</option>
+                                </select>
+								<span>身高:</span>
+								<select name='m_height'>
+									<option value=''>请选择</option>
+									<option value='150,160' <!-- IF m_height=="150,160" -->selected="selected"<!-- ENDIF --> >150-160cm</option>
+									<option value='160,170' <!-- IF m_height=="160,170" -->selected="selected"<!-- ENDIF --> >160-170cm</option>
+									<option value='170,180' <!-- IF m_height=="170,180" -->selected="selected"<!-- ENDIF --> >170-180cm</option>
+									<option value='180,190' <!-- IF m_height=="180,190" -->selected="selected"<!-- ENDIF --> >180-190cm</option>
+									<option value='190,200' <!-- IF m_height=="190,200" -->selected="selected"<!-- ENDIF --> >190-200cm</option>
+									<option value='200' <!-- IF m_height=="200" -->selected="selected"<!-- ENDIF --> >200cm以上</option>
+								</select>
+								<span>CUP:</span>
+								<select name="m_cups">
+									<option value="">请选择</option>
+									<option value="30" <!-- IF m_cups=="30" -->selected="selected"<!-- ENDIF --> >30</option>
+									<option value="32" <!-- IF m_cups=="32" -->selected="selected"<!-- ENDIF --> >32</option>
+									<option value="34" <!-- IF m_cups=="34" -->selected="selected"<!-- ENDIF --> >34</option>
+									<option value="36" <!-- IF m_cups=="36" -->selected="selected"<!-- ENDIF --> >36</option>
+									<option value="38" <!-- IF m_cups=="38" -->selected="selected"<!-- ENDIF --> >38</option>
+								</select>
+								<select name="m_cup">
+									<option value="">请选择</option>
+									<option value="A" <!-- IF m_cup=="A" -->selected="selected"<!-- ENDIF --> >A</option>
+									<option value="B" <!-- IF m_cup=="B" -->selected="selected"<!-- ENDIF -->>B</option>
+									<option value="C" <!-- IF m_cup=="C" -->selected="selected"<!-- ENDIF -->>C</option>
+									<option value="D" <!-- IF m_cup=="D" -->selected="selected"<!-- ENDIF -->>D</option>
+									<option value="E+"  <!-- IF m_cup=="E+" --> selected="selected" <!-- ENDIF -->>E+</option>
+								</select>                               
+							<!-- ELSEIF type_id=="40" --> 
+								<span>从业年限:</span>
+								<select name='p_experience'>
+									<option value=''>请选择</option>
+									<!-- BEGIN p_experience_list -->
+                                        <option value="{val}" <!-- IF selected = "1" -->selected="selected"<!-- ENDIF -->>{val}</option>
+                                    <!-- END p_experience_list -->
+								</select>
+<!--                                <span>摄影团队:</span>
+                                <select name="p_team">
+                                    <option value=''>请选择</option>
+                                    <option value='独立摄影师'  IF p_team=="独立摄影师" selected="selected" ENDIF  >独立摄影师</option>
+                                    <option value='5人以下摄影团队'  IF p_team=="5人以下摄影团队" selected="selected" ENDIF  >5人以下摄影团队</option>
+                                    <option value='6-10人摄影团队'  IF p_team=="6-10人摄影团队" selected="selected" ENDIF  >6-10人摄影团队</option>
+                                    <option value='其它'  IF p_team=="其它" selected="selected" ENDIF >其它</option>
+                                </select>
+                                <span>每月交易额:</span>
+                                <select name="p_order_income">
+                                    <option value=''>请选择</option>
+                                    <option value='3000元以下'  IF p_order_income=="3000元以下" selected="selected" ENDIF  >3000元以下</option>
+                                    <option value='3000-6000元'  IF p_order_income=="3000-6000元" selected="selected" ENDIF  >3000-6000元</option>
+                                    <option value='6000-10000元'  IF p_order_income=="6000-10000元" selected="selected" ENDIF  >6000-10000元</option>
+                                    <option value='10000-15000元'  IF p_order_income=="10000-15000元" selected="selected" ENDIF >10000-15000元</option>
+                                    <option value='15000-20000元'  IF p_order_income=="15000-20000元" selected="selected" ENDIF >15000-20000元</option>
+                                    <option value='20000元以上'  IF p_order_income=="20000元以上" selected="selected" ENDIF >20000元以上</option>
+                                </select>-->
+								<span>擅长类型:</span>
+								<select name="p_goodat">
+									<option value="">请选择</option>
+									<option value="个性写真" <!-- IF p_goodat=="个性写真" -->selected="selected"<!-- ENDIF -->>个性写真</option>
+									<option value="婚纱摄影" <!-- IF p_goodat=="婚纱摄影" -->selected="selected"<!-- ENDIF -->>婚纱摄影</option>
+									<option value="儿童写真" <!-- IF p_goodat=="儿童写真" -->selected="selected"<!-- ENDIF -->>儿童写真</option>
+									<option value="商业摄影" <!-- IF p_goodat=="商业摄影" -->selected="selected"<!-- ENDIF -->>商业摄影</option>
+									<option value="美食摄影"<!-- IF p_goodat=="美食摄影" -->selected="selected"<!-- ENDIF -->>美食摄影</option>
+								</select>
+                            <!-- ELSEIF type_id=="41" --> 
+<!--								<span>从业年限:</span>
+                                <select name="ms_experience">
+                                    <option value=''>请选择</option>
+                                    <option value='初入江湖'  IF ms_experience=="初入江湖" selected="selected" ENDIF  >初入江湖</option>
+                                    <option value='三五年间'  IF ms_experience=="三五年间" selected="selected" ENDIF  >三五年间</option>
+                                    <option value='五到十年'  IF ms_experience=="五到十年" selected="selected" ENDIF  >五到十年</option>
+                                    <option value='资深'  IF ms_experience=="资深" selected="selected" ENDIF >资深</option>
+                                </select>
+                                <span>转发量:</span>
+                                <select name="ms_forwarding">
+                                    <option value="">请选择</option>
+                                    <option value="几百次"  IF ms_forwarding=="几百次" selected="selected" ENDIF >几百次</option>
+                                    <option value="几千次"  IF ms_forwarding=="几千次" selected="selected" ENDIF >几千次</option>
+                                    <option value="几万次"  IF ms_forwarding=="几万次" selected="selected" ENDIF >几万次</option>
+                                    <option value="十万以上"  IF ms_forwarding=="十万以上" selected="selected" ENDIF >十万以上</option>
+                                </select>
+                                <span>身份认证:</span>
+                                <select name="ms_certification">
+                                    <option value="">请选择</option>
+                                    <option value="媒体从业者"  IF ms_certification=="媒体从业者" selected="selected" ENDIF >媒体从业者</option>
+                                    <option value="网络大V"  IF ms_certification=="网络大V" selected="selected" ENDIF >网络大V</option>
+                                    <option value="专栏作家"  IF ms_certification=="专栏作家" selected="selected" ENDIF >专栏作家</option>
+                                    <option value="餐饮名人"  IF ms_certification=="餐饮名人" selected="selected" ENDIF >餐饮名人</option>
+                                </select>-->
+							<!-- ELSEIF type_id=="5" -->
+								<span>老师类型:</span>
+								<select name="t_teacher">
+									<option value="">请选择</option>
+									<!-- BEGIN t_teacher_list -->
+                                        <option value="{val}" <!-- IF selected = "1" -->selected="selected"<!-- ENDIF -->>{val}</option>
+                                    <!-- END t_teacher_list -->
+								</select>
+								<span>培训经验:</span>
+								<select name='t_experience'>
+									<option value=''>请选择</option>
+									 <!-- BEGIN t_experience_list -->
+                                        <option value="{val}" <!-- IF selected = "1" -->selected="selected"<!-- ENDIF -->>{val}</option>
+                                    <!-- END t_experience_list -->
+								</select>
+                            <!-- ELSEIF type_id=="43" -->
+<!--                                <span>身份标签:</span>
+                                <select name="ot_label">
+                                    <option value="">请选择</option>
+                                    <option value="运动塑身"  IF ot_label=="个人培训师" selected="selected" ENDIF >个人培训师</option>
+                                    <option value="音乐舞蹈"  IF ot_label=="音乐舞蹈" selected="selected" ENDIF >音乐舞蹈</option>
+                                    <option value="艺术收工"  IF ot_label=="艺术收工" selected="selected" ENDIF  >艺术收工</option>
+                                    <option value="情调小资"  IF ot_label=="情调小资" selected="selected" ENDIF  >情调小资</option>
+                                    <option value="传统技艺"  IF ot_label=="传统技艺" selected="selected" ENDIF  >传统技艺</option>
+                                    <option value="商务协助"  IF ot_label=="商务协助" selected="selected" ENDIF  >商务协助</option>
+                                    <option value="创业导师"  IF ot_label=="创业导师" selected="selected" ENDIF  >创业导师</option>
+                                    <option value="婚礼策划"  IF ot_label=="婚礼策划" selected="selected" ENDIF  >婚礼策划</option>
+                                    <option value="营养规划"  IF ot_label=="营养规划" selected="selected" ENDIF  >营养规划</option>
+                                    <option value="情感咨询"  IF ot_label=="情感咨询" selected="selected" ENDIF  >情感咨询</option>
+                                    <option value="派对策划"  IF ot_label=="派对策划" selected="selected" ENDIF  >派对策划</option>
+                                    <option value="命理占星"  IF ot_label=="命理占星" selected="selected" ENDIF  >命理占星</option>
+                                    <option value="陪玩"  IF ot_label=="陪玩" selected="selected" ENDIF  >陪玩</option>
+                                    <option value="陪吃"  IF ot_label=="陪吃" selected="selected" ENDIF  >陪吃</option>
+                                    <option value="陪运动"  IF ot_label=="陪运动" selected="selected" ENDIF  >陪运动</option>
+                                    <option value="陪读书"  IF ot_label=="陪读书" selected="selected" ENDIF  >陪读书</option>
+                                    <option value="陪玩"  IF ot_label=="陪玩" selected="selected" ENDIF  >陪玩</option>
+                                    <option value="其他"  IF ot_label=="其他" selected="selected" ENDIF  >其他</option>
+                                </select>-->
+                            <!-- ELSEIF type_id=="12" -->
+                                
+<!--                                <span>拍摄背景:</span>
+                                <select name="yp_background">
+                                    <option value=''>请选择</option>
+                                    <option value='实景'  IF yp_background=="实景" selected="selected" ENDIF >实景</option>
+                                    <option value='布景'  IF yp_background=="布景" selected="selected" ENDIF >布景</option>
+                                </select>
+                                <span>可拍摄类型:</span>
+                                <select name="yp_can_photo">
+                                    <option value=''>请选择</option>
+                                    <option value='摄影创作'  IF yp_can_photo=="摄影创作" selected="selected" ENDIF >摄影创作</option>
+                                    <option value='商业拍摄'  IF yp_can_photo=="商业拍摄" selected="selected" ENDIF >商业拍摄</option>
+                                    <option value='大型拍摄汽车类'  IF yp_can_photo=="大型拍摄汽车类" selected="selected" ENDIF >大型拍摄汽车类</option>
+                                </select>
+                                <span>灯光设备:</span>
+                                <select name="yp_lighter">
+                                    <option value=''>请选择</option>
+                                    <option value='基础灯光'  IF yp_lighter=="基础灯光" selected="selected" ENDIF >基础灯光</option>
+                                    <option value='智能灯光'  IF yp_lighter=="智能灯光" selected="selected" ENDIF >智能灯光</option>
+                                </select>
+                                <span>其他配套:</span>
+                                <select name="yp_other_equitment">
+                                    <option value=''>请选择</option>
+                                    <option value='化妆间'  IF yp_other_equitment=="化妆间" selected="selected" ENDIF >化妆间</option>
+                                    <option value='停车场'  IF yp_other_equitment=="停车场" selected="selected" ENDIF >停车场</option>
+                                    <option value='工作人员帮助调试设备'  IF yp_other_equitment=="工作人员帮助调试设备" selected="selected" ENDIF >工作人员帮助调试设备</option>
+                                </select>-->
+                              
+                                <!-- ELSEIF type_id=="3" -->
+<!--                                    <span>接单方式</span>
+                                    <select name="hz_order_way">
+                                        <option value="">请选择</option>
+                                        <option value="独立承接"  IF hz_order_way=="独立承接" selected="selected" ENDIF >独立承接</option>
+                                        <option value="合作承接"  IF hz_order_way=="合作承接" selected="selected" ENDIF >合作承接</option>
+                                        <option value="外包承接"  IF hz_order_way=="外包承接" selected="selected" ENDIF  >外包承接</option>
+                                    </select>
+                                    <span>团队规模:</span>
+                                    <select name="hz_team">
+                                        <option value=''>请选择</option>
+                                        <option value='1人'  IF hz_team=="1人" selected="selected" ENDIF >1人</option>
+                                        <option value='5人以下'  IF hz_team=="5人以下" selected="selected" ENDIF >5人以下</option>
+                                        <option value='5~10人'  IF hz_team=="5~10人" selected="selected" ENDIF >5~10人</option>
+                                        <option value='10人以上'  IF hz_team=="10人以上" selected="selected" ENDIF >10人以上</option>
+                                    </select>
+                                    <span>化妆场地:</span>
+                                    <select name="hz_place">
+                                        <option value=''>请选择</option>
+                                        <option value='有'  IF hz_place=="有" selected="selected" ENDIF >有</option>
+                                        <option value='没有'  IF hz_place=="没有" selected="selected" ENDIF >没有</option>
+                                    </select>
+                                    <span>入行年限:</span>
+                                    <select name="hz_experience">
+                                        <option value=''>请选择</option>
+                                        <option value='1年以内'  IF hz_experience=="1年以内" selected="selected" ENDIF >1年以内</option>
+                                        <option value='2~3年'  IF hz_experience=="2~3年" selected="selected" ENDIF >2~3年</option>
+                                        <option value='4~5年'  IF hz_experience=="4~5年" selected="selected" ENDIF >4~5年</option>
+                                        <option value='6~7年'  IF hz_experience=="6~7年" selected="selected" ENDIF >6~7年</option>
+                                        <option value='8~10年'  IF hz_experience=="8~10年" selected="selected" ENDIF >8~10年</option>
+                                        <option value='10年以上'  IF hz_experience=="10年以上" selected="selected" ENDIF >10年以上</option>
+                                    </select>
+                                    <span>擅长妆容:</span>
+                                    <select name="hz_goodat">
+                                        <option value=''>请选择</option>
+                                        <option value='生活妆'  IF hz_goodat=="生活妆" selected="selected" ENDIF >生活妆</option>
+                                        <option value='宴会妆'  IF hz_goodat=="宴会妆" selected="selected" ENDIF >宴会妆</option>
+                                        <option value='舞台妆'  IF hz_goodat=="舞台妆" selected="selected" ENDIF >舞台妆</option>
+                                        <option value='商业拍摄妆面'  IF hz_goodat=="商业拍摄妆面" selected="selected" ENDIF >商业拍摄妆面</option>
+                                        <option value='新娘妆'  IF hz_goodat=="新娘妆" selected="selected" ENDIF >新娘妆</option>
+                                        <option value='古董妆容'  IF hz_goodat=="古董妆容" selected="selected" ENDIF >古董妆容</option>
+                                        <option value='戏剧妆容'  IF hz_goodat=="戏剧妆容" selected="selected" ENDIF >戏剧妆容</option>
+                                        <option value='影视妆容'  IF hz_goodat=="影视妆容" selected="selected" ENDIF >影视妆容</option>
+                                        <option value='主题特技妆容'  IF hz_goodat=="主题特技妆容" selected="selected" ENDIF >主题特技妆容</option>
+                                        <option value='其他'  IF hz_goodat=="其他" selected="selected" ENDIF >其他</option>
+                                    </select>-->
+                                  
+                             <!-- ENDIF --> 					
+				  </div>
+                  通用:
+				  <div style="text-indent:2em;">
+					  商品状态:
+                      <select name="status" id="status">                      
+                       <!-- BEGIN goods_status_list -->
+                       <option value="{key}" <!-- IF selected -->selected="selected"<!-- ENDIF -->>{name}</option>
+                       <!-- END goods_status_list -->
+		          	  </select>
+                      {top.basic_type_html}
+					上下架:
+					<select name="is_show" id="is_show">
+					   <option value="0" <!-- IF status="0" -->selected="selected"<!-- ENDIF -->>全部</option>
+                         <!-- BEGIN show_list -->
+                         <option value="{key}" <!-- IF selected -->selected="selected"<!-- ENDIF -->>{name}</option>
+                         <!-- END show_list -->
+ 			        </select>
+                    <!-- IF type_id=="42" -->
+                    修改审核:
+					<select name="edit_status" id="edit_status">
+					   <option value='0' <!-- IF edit_status=="0" -->selected="selected"<!-- ENDIF -->>全部</option>
+                       <option value='1' <!-- IF edit_status=="1" -->selected="selected"<!-- ENDIF -->>修改未审核</option>
+                       <option value='2' <!-- IF edit_status=="2" -->selected="selected"<!-- ENDIF -->>修改审核通过</option>
+                       <option value='3' <!-- IF edit_status=="3" -->selected="selected"<!-- ENDIF -->>修改审核不通过</option>
+ 			        </select>
+                    <!-- ENDIF -->
+                    区域:
+                    <!--地区组件-->
+<!--                        <script src="http://static-c1.yueus.com/yue_ui/mod/1.0.0/mod.js"></script>-->
+                    {widget_location}
+                    <script>
+                        //切换回调处理
+                        $(function()
+                        {
+                            var input_name_id = "{input_name_id}";
+                            window.__yue_location_widget__[input_name_id].$el.on('change_province_callback',function(ev,data)
+                            {
+                                console.log(data);
+                            });
+
+                            window.__yue_location_widget__[input_name_id].$el.on('change_city_callback',function(ev,data)
+                            {
+                                console.log(data);
+                            });
+
+                            window.__yue_location_widget__[input_name_id].$el.on('change_district_callback',function(ev,data)
+                            {
+                                console.log(data);
+                            });
+                        });
+                    </script>
+                    <!--地区组件end-->
+                   
+                    <!--
+					等级:
+					<select name="level" id="level">
+					   <option value="">全部</option>
+                       <option value='1' <!-- IF level=="1" -->selected="selected"<!-- ENDIF -->>1级</option>
+					   <option value='2' <!-- IF level=="2" -->selected="selected"<!-- ENDIF -->>2级</option>
+ 			        </select>
+                    
+					综合评分:
+					<select name="total_point" id="total_point">
+					   <option value="">全部</option>
+                       <option value='1-100' <!-- IF total_point=="1-100" -->selected="selected"<!-- ENDIF -->>1-100分</option>
+					   <option value='101-200' <!-- IF total_point=="101-200" -->selected="selected"<!-- ENDIF -->>101-200分</option>
+ 			        </select>
+					</br>
+					&nbsp;&nbsp;&nbsp;总交易次数:
+					<select name="total_times" id="total_times">
+					   <option value="">全部</option>
+                       <option value='1-100' <!-- IF total_times=="1-100" -->selected="selected"<!-- ENDIF -->>1-100次</option>
+					   <option value='101-200' <!-- IF total_times=="101-200" -->selected="selected"<!-- ENDIF -->>101-200次</option>
+ 			        </select>
+					总交易金额:
+					<select name="total_money" id="total_money">
+					   <option value="">全部</option>
+                       <option value='1-100' <!-- IF total_money=="1-100" -->selected="selected"<!-- ENDIF -->>1-100元</option>
+					   <option value='101-200' <!-- IF total_money=="101-200" -->selected="selected"<!-- ENDIF -->>101-200元</option>
+ 			        </select>
+					-->
+                    <!-- IF show_black -->
+                    商品屏蔽:
+					<select name="is_black" id="is_black">
+					   <option value="10" <!-- IF is_black=="10" -->selected="selected"<!-- ENDIF -->>全部</option>
+					   <option value='0' <!-- IF is_black=="0" -->selected="selected"<!-- ENDIF -->>未屏蔽显示</option>
+                       <option value='1' <!-- IF is_black=="1" -->selected="selected"<!-- ENDIF -->>屏蔽显示</option>
+ 			        </select>
+                    <!-- ENDIF -->
+                    合作商家:
+					<select name="is_cooperation" id="is_cooperation">
+					   <option value="10" <!-- IF is_cooperation=="10" -->selected="selected"<!-- ENDIF -->>全部</option>
+                       <option value='1' <!-- IF is_cooperation=="1" -->selected="selected"<!-- ENDIF -->>是</option>
+					   <option value='0' <!-- IF is_cooperation=="0" -->selected="selected"<!-- ENDIF -->>不是</option>
+                    </select>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布时间:
+				    <input type="text" id="add_time_s" size="10" name="add_time_s" value="{add_time_s}" class="ui_timepicker" readonly="readonly"/>
+                    至		
+				    <input type="text" id="add_time_e" size="10" name="add_time_e" value="{add_time_e}" class="ui_timepicker" readonly="readonly"/>		
+					&nbsp;&nbsp;&nbsp;&nbsp;上架时间:
+                      <input id="begin_time" type="text" size="10" name="begin_time" value="{begin_time}" class="ui_timepicker" readonly="readonly">
+					  至
+					  <input id="end_time" type="text" size="10" name="end_time" value="{end_time}" class="ui_timepicker" readonly="readonly"/>				
+					
+                   &nbsp;&nbsp;&nbsp;&nbsp;审核时间:
+                      <input id="audit_time_s" type="text" size="10" name="audit_time_s" value="{audit_time_s}" class="ui_timepicker" readonly="readonly">
+					  至
+					  <input id="audit_time_e" type="text" size="10" name="audit_time_e" value="{audit_time_e}" class="ui_timepicker" readonly="readonly"/>				
+                    <input type='button' onClick="if( ! confirm('确定清除?')){return false;} var len = $('.ui_timepicker').length;for(var i = 0;i<=len;i++){$('.ui_timepicker').eq(i).val('');}" value='清除时间选项'/>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关键字:
+                    <input name="keywords" type="text" id="keywords" value="{keywords}" placeholder="商品id/商品名称/描述" size="20" maxlength="50" />
+                     &nbsp;&nbsp;&nbsp;&nbsp;用户ID:<input name="user_id" type="text" id="user_id" value="{user_id}" size="10" maxlength="50" />
+				     &nbsp;&nbsp;&nbsp;&nbsp;价钱： 
+				     <!-- IF price_list_arys -->
+                        <select name="prices_list">
+                                <option value="0">请选择</option>  
+                              <!-- BEGIN price_list_arys -->  
+                                <option value="{id}" <!-- IF selected_one -->selected="selected"<!-- ENDIF --> >{name}</option>
+                              <!-- END price_list_arys -->
+                        </select>
+                     <!-- ENDIF -->
+                     &nbsp;&nbsp;&nbsp;&nbsp;排序:
+					<select name="orderby" id="orderby">
+					   <option value='0' <!-- IF orderby=="0" -->selected="selected"<!-- ENDIF -->>综合排序</option>
+                       <option value='1' <!-- IF orderby=="1" -->selected="selected"<!-- ENDIF -->>销量高到低</option>
+                       <option value='3' <!-- IF orderby=="3" -->selected="selected"<!-- ENDIF -->>价格高到低</option>
+                       <option value='4' <!-- IF orderby=="4" -->selected="selected"<!-- ENDIF -->>价格低到高</option>
+                       <option value='5' <!-- IF orderby=="5" -->selected="selected"<!-- ENDIF -->>人气高到低</option>
+                       <option value='7' <!-- IF orderby=="7" -->selected="selected"<!-- ENDIF -->>评分高到低</option>
+                       <option value='9' <!-- IF orderby=="9" -->selected="selected"<!-- ENDIF -->>入库时间</option>
+ 			        </select>
+					<input type="button" name="button" class="btn_class" id="button" onclick="this.form.target='_self';$('#action').attr('value','goods_list_search');this.form.submit();" value="查询" />
+                    <input type="button" name="button3" class="btn_class" id="button3" value="榜单代码" onclick="$('#post_dataformat').toggle()"; />
+                    <input type="button" name="button2" class="btn_class" id="button2" value="导出数据" onclick="if( ! confirm('每次最多导1万条,超过联系技术,确定导出吗?') ){return false;}this.form.target='_blank';$('#action').attr('value','goods_list_search_export');this.form.submit();"/>
+					<a rel="shadowbox[goods_log_list]" class="btn_class" href="goods.php?action=goods_log_list">操作纪录</a>
+                    <input name="action" type="hidden" id="action" value="" />
+                    <input name="type_id" type="hidden" value="{type_id}"/>
+					<input name="store_id" type="hidden" id="store_id" value="{store_id}" />
+					<input name="page" type="hidden" id="page" value="1" />
+				  </div>
+            </form>
+		  </td>
+		</tr>
+
+	</tbody>
+</table>
+	<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" id="post_dataformat" style=" display:none">
+		  <tr>
+			<td height="30" align="center">          
+            <textarea name="demo" cols="100" rows="5" id="demo">{new_post_dataformat}</textarea>
+            <input name="new_demo" type="hidden" value="{post_dataformat}" /></td>
+	  </tr>
+	</table> 
+    <div id="tabs">
+    <div class="tabbox">
+      <div class="table-list">
+        <table width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th width="10%">商家信息</th>
+              <th>商品封面</th>
+              <th width="15%">商品信息</th>
+              <th width="6%">上架状态</th>
+              <th width="8%">审核状态</th>
+              <th>评分</th>			  
+			  <!-- IF type_id=="3" -->
+				<th>类型</th>
+			  <!-- ELSEIF type_id=="31" -->
+				<th>管理员</th>
+				<th>身高</th>
+				<th>罩杯</th>
+			  <!-- ELSEIF type_id=="40" -->
+				<th>拍摄类型-子类型</th>
+              <!-- ELSEIF type_id=="12" -->
+				<th>面积</th>
+			  <!-- ELSEIF type_id=="5" -->
+				<th>老师类型</th>
+				<th>培训经验</th>
+              <!-- ELSEIF type_id=="42" -->
+				<th>活动类型</th>
+			  <!-- ENDIF --> 
+              <th width="15%">时间</th>
+              <th width="10%">操作</th>
+            </tr>
+          </thead>
+            <script type="text/javascript">
+            $(function(){
+                $(".cur_type_rating").hover(function(){
+                    $(this).next("").show();
+                    
+                },function(){
+                    $(this).next("").hide();   
+                })
+            })
+            </script>
+            <style>
+                .rating_ul,.rating_li{margin:0;padding:0;background-color:rgb(140, 130, 130);color:white;}
+            </style>
+          <tbody>
+            <!-- BEGIN list -->
+            <tr>
+                
+                <td width="10%" align="left" title="{scalping_titile}" style="position:relative;">
+                    {user_name}
+                    <!-- IF is_flush="1" --><font class="is_flush"></font> <!-- ENDIF --></br>
+                    {last_login_text}</br>
+                    <span style="cursor:pointer;" class='cur_type_rating'>{cur_type_rating}</span>
+                    <ul class='rating_ul' style="position:absolute;display:none;bottom:0px;left:100px;width:120px;border-radius:5px;border:2px solid rgb(140, 130, 130);">
+                        <!-- BEGIN all_type_rating -->
+                           <li class='rating_li'>{type_name}:{rating_name}</li>
+                        <!-- END all_type_rating -->
+                    </ul>
+                </td>
+              <td align="center">
+              <a rel="shadowbox[goods_modbile_{goods_id}];height=736;width=414;" style="background:none;" title="yueyue://goto?type=inner_app&pid={goods_pid}&goods_id={goods_id}" href="http://www.yueus.com/mall/user/goods/service_detail.php?goods_id={goods_id}" >
+              <img src='{images}' width='200px'/>
+              </a>
+              </td>
+              <td width="8%" align="left">
+                商品id:{goods_id}<br />
+                名称:{titles}</br>
+                城市:{location_name}</br>
+                类型:{type_name}</br>
+                分类:{first_cate_name}</br>
+                职业：{profession_name}</br>
+                <span style="color:red;">价格:{prices}</span></br>
+                <!-- IF is_black = "1" -->
+                    <font color="#FF0000">[ 屏蔽显示 ]</font><br>
+                <!-- ENDIF -->
+              </td>
+              <td width="6%">{show_name}</td>  
+              <td width="8%" align="center">
+                {status_name}<br>
+                {edit_status_text}</br>
+                <!-- IF top.type_id = "42" -->
+                    {activity_not_start_status}
+                    {activity_is_end_status}
+                    {activity_ing_status}
+                <!-- ENDIF -->
+              </td>
+                
+              <td width="5%" align="center">{score}</td>
+			  
+			  <!-- IF type_id=="3" -->
+				<td align="center">{goods_att.68}</td>
+			  <!-- ELSEIF type_id=="31" -->
+				<td width="5%" align="center">{belong_user}</td>
+				<td width="5%" align="center">{profile_data.0.att_data_format.m_height.value}CM</td>
+				<td width="5%" align="center">{profile_data.0.att_data_format.m_cups.value} {profile_data.0.att_data_format.m_cup.value}</td>
+			  <!-- ELSEIF type_id=="40" -->
+				<td align="center">{goods_att.90}</td>
+              <!-- ELSEIF type_id=="12" -->
+				<td width="5%" align="center">{goods_att.19}平方</td>
+			  <!-- ELSEIF type_id=="5" -->
+				<td width="5%" align="center">{profile_data.0.att_data_format.t_teacher.value}</td>
+				<td width="5%" align="center">{profile_data.0.att_data_format.t_experience.value}</td>
+              <!-- ELSEIF type_id=="42" -->
+				<td width="5%" align="center">{goods_att.270}</td>
+			  <!-- ENDIF --> 
+			  
+			  <td width="15%" align="left">
+                添加:</br>{add_time}</br>
+                审核:</br>{audit_time}</br>
+                上架:</br>{onsale_time}</br>
+              </td>
+              <td width="10%" align="center">
+                    <!-- IF can_status = "1" -->  
+                      <!-- IF goods_status = "0" -->
+                            <a href="javascript:change_status({goods_id},1)" class="btn_class">通过</a><br>
+                            <a rel="shadowbox[goods_change_{goods_id}];height=350;width=420" href="?action=goods_chstatus&id={goods_id}&status=2&tpl=show" class="btn_class">不通过</a><br>
+                            <!-- ELSEIF goods_status = "1" -->
+                            <a rel="shadowbox[goods_change_{goods_id}];height=350;width=420" href="?action=goods_chstatus&id={goods_id}&status=2&tpl=show" class="btn_class">不通过</a><br>
+                            <!-- ELSEIF goods_status = "2" -->
+                            <a href="javascript:change_status({goods_id},1)" class="btn_class">通过</a><br>
+                      <!-- ENDIF -->
+                    <!-- ENDIF --> 
+                  
+                    <!-- IF can_show_status = "1" -->
+                        <!-- IF is_show = "1" -->
+                        <a rel="shadowbox[goods_show_{goods_id}];height=240;width=420" href="?action=goods_chshow&id={goods_id}&status=2&tpl=show" class="btn_class">下架</a></br>
+                        <!-- ELSE -->
+                        <a href="javascript:change_show({goods_id},1)" class="btn_class">上架</a></br>
+                        <!-- ENDIF -->
+                    <!-- ENDIF --> 
+                  <a rel="shadowbox[goods_edit_{goods_id}]" href="?action=goods_edit&id={goods_id}" class="btn_class">编辑</a></br>
+                  <!-- IF top.del_goods  = "1" -->
+                    <a href="javascript:change_status({goods_id},3)" class="btn_class">删除</a><br>
+                  <!-- ENDIF -->
+                  <!-- IF type_id = "42" -->
+                    <a rel="shadowbox[order_management_{goods_id}]" style="color:#FF0004" href="?action=goods_order_management&id={goods_id}" class="btn_class">管理场次订单</a></br>
+                  <!-- ENDIF -->
+                  <!-- IF edit_status_real = "1" -->
+                    <a rel="shadowbox[goods_edit_status_{goods_id}]" href="?action=goods_edit_status&goods_id={goods_id}" class="btn_class"><font color="#FF0000">修改没审核</font></a><br>
+                  <!-- ENDIF -->
+                  
+                  <!-- IF is_auto_sign = "1" -->
+                        <a  href="javascript:ajax_auto_action({goods_id},0,'sign')"  class="btn_class">取消自动签到</a><br>
+                    <!-- ELSE -->
+                        <a  href="javascript:ajax_auto_action({goods_id},1,'sign')" class="btn_class">自动签到</a><br>
+                    <!-- ENDIF -->
+
+                    <!-- IF is_auto_accept = "1" -->
+                        <a href="javascript:ajax_auto_action({goods_id},0,'accept')" class="btn_class">取消自动接受</a><br>
+                    <!-- ELSE -->
+                        <a href="javascript:ajax_auto_action({goods_id},1,'accept')" class="btn_class">自动接受</a><br>
+                    <!-- ENDIF -->
+
+                    <!-- IF is_black = "0" -->
+                        <a href="javascript:ajax_auto_action({goods_id},10,'black')" class="btn_class">屏蔽商品</a><br>
+                    <!-- ENDIF -->
+					
+					<!-- IF top.show_self = "1" -->
+                        <!-- IF is_auto_accept = "1" -->
+							<!--<a href="javascript:ajax_auto_action({goods_id},0,'self')" class="btn_class">取消自营自动接单</a><br>-->
+						<!-- ELSE -->
+							<a href="javascript:ajax_auto_action({goods_id},1,'self')" class="btn_class">自营自动接单</a><br>
+						<!-- ENDIF -->
+                    <!-- ENDIF -->
+                  
+              </td>
+            </tr>
+            <!-- END list -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="pages" class="page"> {page} </div>  
+</div>
+<a href="#top" class="btn_class" style="position:fixed;bottom:0;right:10px;">↑</a>
+<div id="bottom"></div>
+</body>
+</html>

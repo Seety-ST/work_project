@@ -1,0 +1,16 @@
+.page-mod-1 a {
+  padding: 4px 11px;
+  display: inline-block;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+  margin-right: 10px; }
+  .page-mod-1 a:hover {
+    text-decoration: none;
+    background-color: #24c7c7;
+    border-color: #24c7c7;
+    color: #fff; }
+  .page-mod-1 a.click {
+    background-color: #24c7c7;
+    border-color: #24c7c7;
+    color: #fff; }

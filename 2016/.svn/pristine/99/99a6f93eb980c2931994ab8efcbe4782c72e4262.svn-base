@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Circle</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bgfff">
+	<!--内容-->
+	<section class="content">
+		<article class="directions-page">
+			<div class="item info-item">
+				<p>CC币是Circle系统虚拟货币，可以在Circle内置换大礼（即将上线，敬请期待）、解锁表情包等。</p>
+			</div>
+			<div class="item">
+				<p>当前版本Circle如何获得CC币:</p>
+				<p>1.用户粉丝增长获得CC币</p>
+				<table cellpadding="0" cellspacing="0" class="item-table table-row-2">
+					<tr>
+						<th>获得第x个粉丝</th>
+						<th>奖励cc币</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td>200</td>
+						<td>50</td>
+					</tr>
+					<tr>
+						<td>500</td>
+						<td>100</td>
+					</tr>
+					<tr>
+						<td>1000</td>
+						<td>150</td>
+					</tr>
+					<tr>
+						<td>5000</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>10000</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>15000</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>20000</td>
+						<td>200</td>
+					</tr>
+					<tr>
+						<td>每增加5000</td>
+						<td>200</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<p>2.作为圈主,圈子内粉丝增长获得CC币</p>
+				<table cellpadding="0" cellspacing="0" class="item-table table-row-2">
+					<tr>
+						<th>获得第x个成员</th>
+						<th>奖励cc币</th>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>200</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>500</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>1000</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>5000</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>10000</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>每增加5000</td>
+						<td>10</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<p>3.用户秀获赞从而获得CC币</p>
+				<table cellpadding="0" cellspacing="0" class="item-table table-row-2">
+					<tr>
+						<th>获得第x个赞</th>
+						<th>奖励cc币</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>200</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>500</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>1000</td>
+						<td>5</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<p>4.圈子内帖子（发帖或回帖）获赞从而获得CC币</p>
+				<table cellpadding="0" cellspacing="0" class="item-table table-row-2">
+					<tr>
+						<th>获得第x个赞</th>
+						<th>奖励cc币</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>50</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>200</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>500</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>1000</td>
+						<td>5</td>
+					</tr>
+				</table>
+			</div>
+		</article>
+	</section>
+</body>
+</html>

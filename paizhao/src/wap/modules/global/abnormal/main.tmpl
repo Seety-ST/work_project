@@ -1,0 +1,19 @@
+<!-- <div style="padding-top: 150px;"> -->
+
+<div  class="stream-abnormal-mod">
+    <div {{#if broken_network}}data-role="refresh-page"{{/if}} class="stream-abnormal {{#if broken_network}}stream-network-error{{else}}stream-empty{{/if}}" data-role="tap-screen" >
+        <i class="dib {{#if broken_network}}icon-stream-network-error{{else}}icon-font i-iconfont-no-data icon-font-size-60{{/if}}  icon mb15 color-999"></i>
+        <p class="color-666 icon-font-size-16">
+        {{#if broken_network}}
+            当前网络不可用
+        {{else}}
+            {{#if message}}
+                {{{message}}}
+            {{else}}
+                暂无数据
+            {{/if}}
+        {{/if}}
+        </p>
+        {{#if broken_network}}<p>请检查网络后，轻触屏幕重新加载</p>{{/if}}
+    </div>
+</div>

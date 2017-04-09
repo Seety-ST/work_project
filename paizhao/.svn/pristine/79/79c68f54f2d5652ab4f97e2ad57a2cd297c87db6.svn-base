@@ -1,0 +1,7 @@
+@font-face { 
+font-family: "mfont";
+src: url("http://51snap.yueus.com//static/iconfont/style/fonts/iconfont.eot");
+src: url("http://51snap.yueus.com//static/iconfont/style/fonts/iconfont.eot?#iefix") format("embedded-opentype"),
+url("http://51snap.yueus.com//static/iconfont/style/fonts/iconfont.woff") format("woff"),
+url("http://51snap.yueus.com//static/iconfont/style/fonts/iconfont.ttf") format("truetype");}
+.icon-font{font-family:"mfont";font-size:16px;font-style:normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;position: relative;-webkit-font-smoothing: antialiased;}

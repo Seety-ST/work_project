@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/base.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/common/main.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-no-use.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-not.css">
+	<script src="http://51snap.yueus.com//static/wap/lib/base.js"></script>  
+   
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/paizhao-ui-dialog.css">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+	<link rel="stylesheet" type="text/css" href="http://51snap.yueus.com//static/wap/style/fonts/font.css" />
+
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "wap-huipai:iconfont_js/index.js": {
+            "url": "http://51snap.yueus.com//static/wap/iconfont_js/index.js"
+        },
+        "wap-huipai:global/abnormal/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/abnormal/index.js"
+        },
+        "wap-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"
+        },
+        "wap-huipai:global/go_top/go_top": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/go_top/go_top.js"
+        },
+        "wap-huipai:global/header/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/header/main.js"
+        },
+        "wap-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"
+        },
+        "wap-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "wap-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"
+        },
+        "wap-huipai:global/list/list": {
+            "deps": [
+                "wap-huipai:global/utility/index",
+                "wap-huipai:global/abnormal/index",
+                "wap-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/list/list.js"
+        },
+        "wap-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/location_sel/location_sel.js"
+        },
+        "wap-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/main.js"
+        },
+        "wap-huipai:global/swiper/1.0.0/swiper3.07.min": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"
+        },
+        "wap-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/ua/index.js"
+        },
+        "wap-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/cross_domain_storage.js"
+        },
+        "wap-huipai:global/utility/index": {
+            "deps": [
+                "wap-huipai:global/cookie/index",
+                "wap-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"></script>
+
+</head>
+
+
+<header class="global-header " >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">弹窗</h3>
+	</div>
+</header>
+  
+
+
+<!-- 页面内容start -->
+	<div class="model f14">
+
+		<div id="test-1" class="f16 cp mt20 dib">点击测试（常规）</div>
+
+		<br />
+
+	</div>
+<!-- 页面内容end -->
+
+</body>
+
+
+<script>
+	require('wap-huipai:global/layer/layer');	  
+	$('#test-1').on('click', function(event) {
+
+		console.log(layer);
+
+		var index = layer.open({
+			  style: 'border:none; background-color:#78BA32; color:#fff;',
+			  content:'内容'
+
+		});
+
+	});
+</script>
+
+</html>

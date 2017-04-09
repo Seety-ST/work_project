@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>{%$ret.goods_info.goods_data.titles%}-约摄，互联网摄影平台</title>   
+	<meta name="keywords" content="{%$ret.goods_info.new_type_name%}，摄影师，拍照，预约">
+	<meta name="description" content="约摄精选专业摄影师，提供海量优质拍摄服务，{%$ret.goods_info.goods_data.titles%} 正在等你来。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	
+	<link href="../../style/topic/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body bgcolor="#fafafa">
+<main role="main">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="topic-page">
+		<div class="item-wrap">
+			
+		</div>
+	</div>
+
+
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+
+	var header = require('wap-huipai:global/header/main');
+	$(document).ready(function() {
+
+		// 渲染头部
+		var header_obj = header.init({
+			ele : $("#global-header"), //头部渲染的节点
+			title:"提交成功！",
+			header_show : true , //是否显示头部
+			mt_0_ele : $('#seller-detail-page'), //如果头部隐藏，要把当前页节点margin-top改为0
+			left_icon_show : false,
+			right_icon_show : true, //是否显示右边的按钮
+			share_icon : 
+			{
+				show :false,  //是否显示分享按钮icon
+				content:""
+			},
+			omit_icon :
+			{
+				show :false,  //是否显示三个圆点icon
+				content:""
+			},
+			show_txt :
+			{
+				show :false,  //是否显示文字
+				content:"编辑"  //显示文字内容
+			},
+			search_icon : 
+			{
+				show :false,  //是否搜索icon
+				content:""  //显示文字内容
+			},
+			go_index :
+			{
+				show :true,  //是否搜索icon
+			}
+		});
+			  
+		
+		
+	    	
+		
+
+	 
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>
+
+
+
+
+
+

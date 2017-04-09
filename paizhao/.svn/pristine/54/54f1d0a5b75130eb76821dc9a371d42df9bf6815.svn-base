@@ -1,0 +1,126 @@
+.icon{
+	background-repeat: no-repeat;
+}
+// icon的规格大小
+.ui-icon-size-12{
+	width: 12px;
+	height: 12px;
+}
+.ui-icon-size-14{
+	width: 14px;
+	height: 14px;
+}
+.ui-icon-size-16{
+	width: 16px;
+	height: 16px;
+}
+.ui-icon-size-44{
+	width: 44px;
+	height: 44px;
+}
+//icon背景
+.icon-search{
+	background-image: url(../../image/ui/search-icon-16x16.png);
+
+}
+.icon-add{
+	background-image: url(../../image/ui/add-icon-12x12.png);
+
+}
+
+.icon-close{
+	background-image: url(../../image/ui/close-icon-16x16.png);
+}
+.icon-circle-right{
+	background-image: url(../../image/ui/circle-right-icon-16x16.png);
+}
+.icon-circle-address{
+	background-image: url(../../image/ui/address-icon-14x14.png);
+}
+.icon-normal-face{
+	background-image: url(../../image/ui/normal-face-icon-44x44.png);
+}
+.icon-smile-face{
+	background-image: url(../../image/ui/smile-face-icon-44x44.png);
+}
+
+
+// 三角型样式
+.ui-triangle {
+
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    line-height: 0px;
+    border-style: solid;
+    -webkit-transition: -webkit-transform .2s ease-in;
+    -moz-transition: -webkit-transform .2s ease-in;
+    -o-transition: -webkit-transform .2s ease-in;
+    transition: -webkit-transform .2s ease-in;
+}
+
+.ui-triangle-bottom-mid-gray {
+    border-width: 6px 6px 0px 6px;
+    border-color: #666 transparent transparent transparent;
+    _border-color: #666 #fff #fff #fff;
+    _filter: chroma(color=white);
+}
+.ui-triangle-bottom-mid-white {
+	border-width: 0px 6px 6px 6px;
+	border-color: transparent transparent #ffffff transparent;
+	_border-color: #000 #000 #fff #000;
+	_filter: chroma(color=black);
+}
+.city-select-pop-mod-1{
+	position:absolute;
+	left:0;
+	top:0;
+	.city-select-pop-item{
+		position:relative;
+		width:300px;
+		.ui-triangle{
+			position: absolute;
+			left: 50%;
+			margin-left: -6px;
+			top:-6px;
+		}
+		.item-wrap{
+			background-color: #fff;
+			padding:10px 20px;
+			.item{
+				padding: 10px 0px;
+				.list{
+					li{
+						float: left;
+						margin-right: 10px;
+						cursor: pointer;
+						&:hover{
+							color:#2bd9d9;
+						}
+					}
+				}
+			}
+			.tc-item{
+				border-bottom: 1px solid #ddd;
+			}
+		}
+	}
+}
+
+
+// 加载按钮样式
+.loading-icon-mod-1{
+	.item-wrap{
+		.item{
+			
+
+
+		}
+		
+	}
+}
+
+// 列表数据没内容时，提示模块
+.no-content-tips-mod-1{
+	padding:40px 0px 100px 0px;
+}

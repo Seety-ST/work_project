@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/201726/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+		Lazyload 范例
+	</title>
+
+
+    
+</head>
+
+<body >
+	<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+	<div id="page-container" class="page-container p10" >
+
+        <div class="yue-ui-list-double-pic p15 clearfix"  >
+        	<div class="item" v-for="item in list">
+        		<div class="item-area">
+        			<div class="img-item">
+        				<i class="img" v-lazy:background-image="{img:'http://www.51snap.cn/static/pc/image/common/paizhao-ph-bgimg-500x500.png'}"></i>
+        			</div>
+        			<div class="text-item">
+        				<p class="p1">
+        					￥300.00 起
+        				</p>
+        				<p class="p2">
+        					动漫-游戏&amp;cosplay展会
+        				</p>
+
+        			</div>
+        		</div>
+        	</div>
+        </div>
+
+	</div>
+
+
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+
+
+<code style="display:none;">
+    //背景图使用方式
+    <div v-lazy:background-image="img" ></div>
+
+    //img 使用方式
+    <ul id="container">
+      <li v-for="img in list">
+        <img v-lazy.container="img">
+      </li>
+    </ul>
+
+    // 加载lazyload模块
+    var Lazyload = require('/modules/widget/lazyload/index');
+
+    // 配置使用lazyload
+    Vue.use(Lazyload);
+</code>
+
+
+
+<script type="text/javascript">
+	(function() {
+
+        // 加载lazyload模块
+        var Lazyload = require.syncLoad('wap-kids:widget/lazyload/index');
+		var util =require.syncLoad('wap-kids:global/util/index');
+
+        // 配置使用lazyload
+        Vue.use(Lazyload);
+
+        // 范例数据，供参考
+        var json_data = {"result_data":{"page":1,"has_next_page":true,"list":[{"seller_id":"307620","user_id":"194511","goods_id":"2123014","consults":"0","titles":"\u7537\u58eb\u5185\u8863\u62cd\u6444","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>1800.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20151015\/20151015165504_724692_194511_13941_260.jpg?1530x1530_120","location_id":"101029001","seller_name":"\u5e7f\u5dde\u4e09\u5143\u6620\u50cf\u6444\u5f71\u8bbe\u8ba1","avatar":"http:\/\/seller-icon-d.yueus.com\/19\/194511_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2123014","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=194511"},{"seller_id":"308991","user_id":"363336","goods_id":"2133507","consults":"1","titles":"\u5b9e\u666f\u68da\u62cd \u6dd8\u5b9d\u6444\u5f71","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>50.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20151218\/20151218141952_432141_363336_29077_260.jpg?490x336_120","location_id":"101029001","seller_name":"355PS.COM \u6dd8\u5b9d\u6444\u5f71","avatar":"http:\/\/seller-icon-d.yueus.com\/36\/363336_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2133507","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=363336"},{"seller_id":"308198","user_id":"214355","goods_id":"2151428","consults":"0","titles":"\u540d\u5a9b\u98ce     \u7535\u5546\u62cd\u6444","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>80.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20160825\/20160825150500_506367_214355_120955_260.jpg?930x1406_130","location_id":"101029001","seller_name":"I8\u89c6\u89c9\u00b7\u963f\u5e73JON","avatar":"http:\/\/seller-icon-d.yueus.com\/21\/214355_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2151428","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=214355"},{"seller_id":"308198","user_id":"214355","goods_id":"2151442","consults":"0","titles":"\u5c0f\u6e05\u65b0    \u7535\u5546\u7eaf\u80cc\u666f\u68da\u62cd","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>80.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20160825\/20160825161559_284095_214355_121105_260.jpg?930x1449_130","location_id":"101029001","seller_name":"I8\u89c6\u89c9\u00b7\u963f\u5e73JON","avatar":"http:\/\/seller-icon-d.yueus.com\/21\/214355_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2151442","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=214355"},{"seller_id":"307383","user_id":"105966","goods_id":"2122283","consults":"0","titles":"\u6a21\u7279\u6f14\u5458\u827a\u4eba\u5f62\u8c61\u7167","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>1500.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20150923\/20150923202942_764630_105966_14681_260.jpg?750x750_120","location_id":"101029001","seller_name":"Kogobe","avatar":"http:\/\/seller-icon-d.yueus.com\/10\/105966_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2122283","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=105966"},{"seller_id":"309707","user_id":"374078","goods_id":"2137704","consults":"1","titles":"\u4e2a\u4eba\u5f62\u8c61\u62cd\u6444","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>399.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20160309\/20160309095729_215228_374078_73351_260.JPG?500x750_120","location_id":"101029002","seller_name":"\u9f99\u5927\u5de5\u4f5c\u5ba4","avatar":"http:\/\/seller-icon-d.yueus.com\/37\/374078_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2137704","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=374078"},{"seller_id":"306930","user_id":"126143","goods_id":"2118656","consults":"17","titles":"\u670d\u88c5\u4f01\u4e1a\u4ea7\u54c1\u5f62\u8c61\u62cd\u6444","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>60.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20150829\/20150829133650_870219_126143_53949_260.jpg?900x600_120","location_id":"101029001","seller_name":"\u9648\u5fd7\u52c7","avatar":"http:\/\/seller-icon-d.yueus.com\/12\/126143_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2118656","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=126143"},{"seller_id":"308198","user_id":"214355","goods_id":"2151424","consults":"23","titles":"\u6e05\u65b0     \u7535\u5546\u6444\u5f71","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>338.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20160825\/20160825141456_630055_214355_120745_260.jpg?1110x1110_130","location_id":"101029001","seller_name":"I8\u89c6\u89c9\u00b7\u963f\u5e73JON","avatar":"http:\/\/seller-icon-d.yueus.com\/21\/214355_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2151424","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=214355"},{"seller_id":"308198","user_id":"214355","goods_id":"2151426","consults":"0","titles":"\u8f7b\u719f\u65f6\u5c1a    \u7535\u5546\u68da\u62cd","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>80.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20160825\/20160825145301_869792_214355_120851_260.jpg?930x1396_130","location_id":"101029001","seller_name":"I8\u89c6\u89c9\u00b7\u963f\u5e73JON","avatar":"http:\/\/seller-icon-d.yueus.com\/21\/214355_86.jpg?2016110411","link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2151426","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=214355"},{"seller_id":"310443","user_id":"110783","goods_id":"2141187","consults":"0","titles":"\u590f\u65e5\u5c0f\u6e05\u65b0\u7eaf\u5916\u666f\u62cd\u6444","prices":"<span class=\"money_symbol\">\u00a5<\/span><span class='money_num'>900.00<\/span>","images":"http:\/\/image19-d.yueus.com\/yueyue\/20160420\/20160420225101_101987_110783_43775_260.jpg?530x535_130","location_id":"101004001","seller_name":null,"avatar":null,"link_url":"\/\/www.51snap.cn\/goods\/?goods_id=2141187","seller_link_url":"\/\/www.51snap.cn\/camera\/?user_id=110783"}]}};
+
+		util.request
+		({
+			url : 'http://www.51snap.cn/ajax/camera/get_list_info.php',
+			type : 'GET',
+			cache : true,
+			data :
+			{
+				type_id:'',
+				user_id:100076,
+				sort:'',
+				order:'',
+				page:1,
+			},
+			beforeSend : function()
+			{
+				console.log('请求中...')
+			},
+			success : function(res)
+			{
+				console.log(res)
+			}
+		});
+
+		new Vue
+		({
+			el: '#page-container',
+			created: function()
+			{
+
+			},
+			data:function()
+            {
+                var list = json_data.result_data.list;
+
+                list = list.concat(list);
+                list = list.concat(list);
+                list = list.concat(list);
+                list = list.concat(list);
+
+                return {
+                    list : list
+                };
+            },
+			methods:
+			{
+
+			}
+		});
+	})();
+</script>

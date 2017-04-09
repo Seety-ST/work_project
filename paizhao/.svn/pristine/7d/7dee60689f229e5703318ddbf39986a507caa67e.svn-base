@@ -1,0 +1,64 @@
+.ptjs-page{
+	background-color: #f7f9fc;
+	.p1th{
+		padding:200px 275px 144px 275px;
+		.item-wrap{
+			width:670px;
+			margin:0 auto;
+			.logo-item{
+				padding-right: 60px;
+				background:url(../../image/ptjs/line-img-1x92.jpg) no-repeat center right;
+			}
+			.txt-item{
+				padding-left: 50px;
+				.en-title{
+					font-size: 11px;
+				}
+				.cn-title{
+					font-size: 42px;
+				}
+				.tips-txt{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.p2th{
+		.list{
+			li{
+				width:370px;
+				float: left;
+				margin:0px 15px;
+				position: relative;
+				background-color: #fff;
+				box-shadow: 0 0 20px rgba(0,0,0,.2);
+				.img-item{
+					width:92px;
+					height:92px;
+					position:absolute;
+					left:50%;
+					top:-46px;
+					margin-left: -46px;
+					border-radius: 50%;
+					box-shadow: 0 0 20px rgba(68,209,209,.5);
+					img{
+						width:100%;
+					}
+				}
+				.txt-item{
+					padding:100px 0px 62px 0px;
+					text-align: center;
+					.title-txt{
+						padding-bottom: 30px;
+						color: #444;
+						font-size: 18px;
+					}
+					.txt{
+						line-height: 30px;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}

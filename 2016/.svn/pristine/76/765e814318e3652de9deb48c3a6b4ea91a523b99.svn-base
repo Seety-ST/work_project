@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+<title>无标题文档</title>
+</head>
+<body>
+<div class="header">
+	<div class="head w1000 clearfix"><a href="#" class="fl ml20"><img src="images/ll-logo-1.png" /></a><a href="#" class="fr mr20"><img src="images/ll-logo-2.png" /></a></div>
+</div>
+<div class="content w1000">
+	<div class="nav-content clearfix">
+		<h1 class="logo"><a href="#"></a></h1>
+		<div class="top-login clearfix">
+			<a href="#" class="weibo frdi"></a> 
+			<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+		</div>
+		<ul class="nav clearfix font_wryh">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">大赛规则</a></li>
+			<li class="cur"><a href="#">我要参赛</a></li>
+			<li><a href="#">作品浏览</a></li>
+			<li><a href="#">我的作品</a></li>
+			<li><a href="#">获奖公布</a></li>
+		</ul>
+	</div>
+	<!-- 我要参赛  -->
+	<div class="want-play">
+		<div class="bg-cen">
+			<div class="form">
+				<div class="box clearfix">
+					<div class="fldi txt-1">常用邮箱</div>
+					<div class="text-box fldi">
+						<input type="text" class="input-class"/>
+						<ul class="listnew clearfix">
+							<li><span class="num">1</span>请务必正确填写常用邮箱</li>
+							<li><span class="num">2</span>该邮箱作为佳能Photowoo官方赛区登陆帐号</li>
+							<li><span class="num">3</span>作品获奖后，该邮箱作为主办方与您的唯一联络方式</li>
+							<li><span class="num">4</span>一经填写，邮箱不可修改</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box clearfix" style="padding-top:40px">
+					<div class="fldi txt-1">填写信息 (必填)</div>
+					<div class="text-box fldi">
+						<select class="mr20">
+							<option>性别</option>
+						</select>
+						<select class="mr20">
+							<option>年龄</option>
+						</select>
+						<select class="mr20">
+							<option>所有省份</option>
+						</select>
+						<select>
+							<option>所在市</option>
+						</select>
+					</div>
+				</div>
+				<div class="box clearfix boxzt">
+					<div class=" font_wryh f14 ">
+						<div class="txt-1">参赛主题 (单选)</div>
+						<ul class="list3 clearfix">
+							<li> 
+								<img src="images/upload-img/s/1.jpg"/>
+							</li>
+							<li> 
+								<img src="images/upload-img/s/2.jpg" />
+							</li>
+							<li> 
+								<img src="images/upload-img/s/3.jpg" />
+							</li>
+							<li class="cur"> 
+								<img src="images/upload-img/s/4.jpg" />
+								<div class="oldman-pop">
+									<p>
+										选择“<span class="color6">老年组</span>”<br />
+										并投稿作品的参<br />
+										赛者，作品仅参<br />
+										加佳能摄影大赛<br />
+										Photowoo官方赛<br />
+										区老年组的评选。
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box pt20 clearfix">
+					<div class="fldi txt-1">上传图片</div>
+					<div class="text-box fldi">
+						<div class="input-box clearfix">
+							<input type="text" class="input-class input-class2 fl"/>
+							<a href="#" class="fl ml15"><img src="images/ll-img-1.jpg" /></a><a href="#" class="fl ml10"><img src="images/ll-img-2.jpg" /></a> </div>
+						<div class="txt pt10 pl3 lh18">
+							<p class="color1">仅限佳能EOS系列相机拍摄并带有EXIF信息的作品参赛</p>
+							<p class="color5 pt5">你已上传10张，还可以上传0张</p>
+						</div>
+						<div class="list-img-box pt10 color1">
+							<ul class="clearfix">
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box"><img src="images/120x120.jpg" /></div>
+									<a href="#" class="delect-btn">删除</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="box pt20 pb20 clearfix">
+					<div class="fldi txt-1">图片标题</div>
+					<div class="text-box fldi">
+						<input type="text" class="input-class"/>
+					</div>
+				</div>
+				<div class="box pt20 clearfix">
+					<div class="fldi txt-1">图片描述</div>
+					<div class="text-box fldi">
+						<textarea name=""></textarea>
+					</div>
+				</div>
+				<p class="color6 tigs lh20">*如果您获得佳能感动典藏摄影大赛奖项，获奖信息将会由佳能感动典藏摄影大赛活动人员与您联系。</p>
+				<div class="btn-box tc"><a href="#"><img src="images/ll-img-3.jpg" /></a><a href="#"><img src="images/ll-img-4.jpg" /></a></div>
+			</div>
+			<div class="banner"><img src="images/banner-960x100.jpg" /></div>
+		</div>
+		<div class="bg-btm"></div>
+	</div>
+	<!-- 我要参赛 end  -->
+</div>
+<div class="footer">
+	<div class="foot w1000"></div>
+</div>
+</body>
+</html>

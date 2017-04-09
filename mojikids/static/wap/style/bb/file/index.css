@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+.index-page {
+  /*uploader 修改*/
+  padding: 0.15rem 0.3rem;
+}
+
+.index-page .webuploader-container {
+  position: relative;
+}
+
+.index-page .webuploader-element-invisible {
+  position: absolute !important;
+  clip: rect(0.01rem 0.01rem 0.01rem 0.01rem);
+  /* IE6, IE7 */
+  clip: rect(0.01rem, 0.01rem, 0.01rem, 0.01rem);
+}
+
+.index-page .webuploader-pick {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.03rem;
+}
+
+.index-page .webuploader-pick-disable {
+  pointer-events: none;
+}
+
+.index-page .p1th {
+  padding-top: 0.25rem;
+}
+
+.index-page .p1th .box1 {
+  text-align: center;
+}
+
+.index-page .p1th .box2 {
+  padding-top: 0.15rem;
+  font-size: 0.16rem;
+}
+
+.index-page .p1th .user {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 0.8rem;
+}
+
+.index-page .p1th .ui-avatar-icon {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/bb/file/user-img.png);
+  background-size: cover;
+  position: relative;
+  border-radius: 50%;
+}
+
+.index-page .p1th .icon-photo {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/bb/file/icon-photo.png);
+  width: 0.22rem;
+  height: 0.22rem;
+  background-size: cover;
+  position: absolute;
+  bottom: 0.05rem;
+  right: -0.05rem;
+}
+
+.index-page .p2th {
+  padding-top: 0.2rem;
+}
+
+.index-page .p2th .item {
+  padding: 0.08rem 0 0.08rem 0;
+}
+
+.index-page .p2th .item .input-text {
+  width: 100%;
+  text-align: center;
+  height: 0.24rem;
+  font-size: 0.16rem;
+}
+
+.index-page .p3th .wbox {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: center;
+  box-pack: center;
+  padding-top: 0.25rem;
+  font-size: 0.14rem;
+  color: #ccc;
+}
+
+.index-page .p3th .wbox .active {
+  color: #ffc430;
+}
+
+.index-page .p3th .wbox .p1 {
+  padding: 0.1rem 0;
+}
+
+.index-page .p3th .wbox .el-radio-input {
+  position: relative;
+  display: inline-block;
+}
+
+.index-page .p3th .wbox .el-radio-input .radio-inner {
+  width: 0.1rem;
+  height: 0.1rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.index-page .p3th .wbox .el-radio-input .radio-inner:after {
+  width: 0.06rem;
+  height: 0.06rem;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  background-color: #ffc430;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.15s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+}
+
+.index-page .p3th .wbox .el-radio-input .el-radio-original {
+  width: 0.14rem;
+  height: 0.14rem;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.index-page .p3th .wbox .el-radio-input .el-radio-label {
+  padding-left: 0.05rem;
+  vertical-align: middle;
+}
+
+.index-page .p3th .wbox .active .radio-inner {
+  border-color: #ffc430;
+}
+
+.index-page .p3th .wbox .active .radio-inner:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.index-page .p3th .wbox .lbox {
+  margin-right: 0.5rem;
+  text-align: center;
+}
+
+.index-page .p3th .wbox .lbox .img {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/bb/file/boy-94.png);
+  width: 0.47rem;
+  height: 0.47rem;
+  background-size: cover;
+}
+
+.index-page .p3th .wbox .rbox {
+  text-align: center;
+}
+
+.index-page .p3th .wbox .rbox .img {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/bb/file/girl-94.png);
+  width: 0.47rem;
+  height: 0.47rem;
+  background-size: cover;
+}
+
+.index-page .btn {
+  padding-top: 0.3rem;
+}
+
+.index-page .btn button:disabled {
+  background-color: #ccc !important;
+}

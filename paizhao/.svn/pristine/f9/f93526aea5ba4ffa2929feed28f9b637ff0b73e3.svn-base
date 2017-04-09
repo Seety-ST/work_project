@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="gbk">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/base.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-no-use.scss">
+
+	
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+</head>
+
+
+<body class="yue-ui">
+	<div class="page">
+		<div class="hd">
+			<h1 class="page-title">paizhao-ui</h1>
+			<p class="page-desc pt5">为约摄Web服务量身设计</p>
+		</div>
+		<div class="bd">
+			<div class="weui-cells weui-cells-access global-navs">
+
+				<a class="weui-cell js_cell" href="color.htm" >
+
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>颜色配置 paizhao-ui-color</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+
+   
+				<a class="weui-cell js_cell" href="border.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>边框 paizhao-ui-border</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+
+
+				<a class="weui-cell js_cell" href="list.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>列表 paizhao-ui-list</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+			
+
+				
+
+
+
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
+
+

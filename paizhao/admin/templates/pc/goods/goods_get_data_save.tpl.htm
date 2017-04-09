@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<title>数据调用添加/编辑</title>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+</style>
+<style>
+    #img_wid img{
+        width:200px
+    }
+    /**添加样式，避免被重写样式**/
+    fieldset{
+        width:100%;
+    }
+</style>
+</head>
+<body>
+ {global_header_html}
+ <script>
+    /**
+     * hudw 2015.1.23
+     * @param  {[type]} window    [description]
+     * @param  {[type]} seajs     [description]
+     * @param  {[type]} undefined [description]
+     * @return {[type]}           [description]
+     */
+    ;(function(window, seajs, undefined)
+    {
+
+
+        // 配置模块
+        seajs.config
+        ({
+
+            paths:
+            {
+                utility: 'http://cb.poco.cn/utility',
+                matcha: 'http://cb.poco.cn/matcha',
+                yueyue_global : 'http://www.yueus.com/js/global'
+            },
+            alias:
+            {
+                handlebars: 'utility/handlebars/1.0.0/handlebars',
+                jquery: 'utility/jquery/1.11.0/jquery',
+                cookie: 'matcha/cookie/1.0.0/cookie',
+                topbar : 'yueyue_global/topbar/topbar'
+            },
+            comboMaxLength: 5000,
+            charset: 'utf-8'
+        });
+
+        seajs.use(['jquery','topbar'],function($,topbar)
+        {
+            var $user_state = $('#user_state');
+
+            topbar.init
+            ({
+                container : $user_state,
+                custom_logout : "http://www.yueus.com/reg/logout.php",
+                custom_html : '<a href="http://www.yueus.com/reg/login.php?r_url='+encodeURIComponent(window.location.href)+'">登录</a><span class="pr15 pl15">|</span><a href="http://www.yueus.com/reg/register.php?r_url='+encodeURIComponent(window.location.href)+'">免费注册</a>'
+            });
+        });
+
+
+    })(window, seajs);
+</script>
+ <div class="mainbox">
+  <div id="tabs" style="margin-top:10px;">
+    <div class="tabbox">
+      <div class="table-list">
+        <div class="table" style="width:100%;">          
+          <fieldset style="width:100%;">
+            <legend>数据调用添加与编辑</legend>
+                <form method="post" action="" onSubmit="return check();">
+                    <table width="100%" align="center">
+                            <tr>
+                                <td width="26%" height="25">数据调用_页面类型</td>
+                                <td width="74%" height="25">
+                                   <input type="text" name="page_type" value="{one.page_type}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="26%" height="25">标题</td>
+                                <td width="74%" height="25">
+                                   <input type="text" name="title" value="{one.title}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="26%" height="25">内容</td>
+                                <td width="74%" height="25">
+                                    <textarea name="content" rows="10" cols="50" id="J_content" style="display:none;"></textarea>
+                                    <script id="container" name="content" type="text/plain">{one.content}</script>
+          <!--                          <script type="text/javascript" charset="gbk" src="http://www.yueus.com/yue_ui/ueditor/1.0.0/ueditor.config.js"></script>-->
+                                    <script type="text/javascript" charset="gbk" src="http://www.yueus.com/yue_ui/ueditor/1.0.0/ueditor.config.v2.js"></script>
+                                      <!-- 编辑器源码文件 -->
+                                      <script type="text/javascript" charset="gbk" src="http://www.yueus.com/yue_ui/ueditor/1.0.0/ueditor.all.js"></script>
+                                      <!-- 实例化编辑器 -->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="26%" height="25"></td>
+                                <td width="74%" height="25">
+                                   <input type="hidden" name="action" value="{action}"/>
+                                   <input type="hidden" name="id" value="{one.id}"/>
+                                   <input type="submit" value="提交"/>
+                                </td>
+                            </tr>
+                    </table>
+                </form>
+           </fieldset>
+        </div>
+      </div>
+    </div>   
+</div>
+</div>
+
+</body>
+</html>
+<script>
+   
+    function check()
+    {
+        //检查图文内容
+        var content = ueditor.editor.getContent();
+        $("#J_content").html(content);
+        
+        if($("input[name='page_type']").val()=='')
+        {
+            alert("数据调用_页面类型不能为空");
+            return false;
+        }
+        if($("select[name='title']").val()=='')
+        {
+            alert("标题不能为空");
+            return false;
+        }
+        
+        return true;
+    }
+</script>
+<!--图文编辑器-->
+<script src="http://static-c.yueus.com/yue_ui/layer/1.0.0/layer/layer.js"></script>
+<script src="http://static-c.yueus.com/yue_ui/upload/1.0.0/webuploader.js"></script>
+<script src="http://static.yueus.com/yue_ui/utility/index.js"></script>
+<script type="text/javascript" src="js/admin_ueditor.js"></script>
+<!--图文编辑器-->
+

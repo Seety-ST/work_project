@@ -1,0 +1,30 @@
+<?php
+
+include_once('../common.inc.php');
+// 引用头部、底部、统计
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/head.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/footer.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/tj.php';
+
+
+// 获取头、底部、统计结构
+$wap_global_head = _get_wbc_head(array('use_vue'=>1));
+$wap_global_footer = _get_wbc_footer();
+$wap_global_tj = _get_wbc_tj();
+
+$result = trim($_INPUT['res']);
+
+// 读取模板
+$tpl = getSmartyTemplate('succeed.htm', PAIZHAO_TEMPLATES_ROOT.'wap/goods/');   
+
+
+// 输出数据
+$tpl->assign('result',$result);
+$tpl->assign('wap_global_head',$wap_global_head);
+$tpl->assign('wap_global_footer',$wap_global_footer);
+$tpl->assign('wap_global_tj',$wap_global_tj);
+
+$tpl->display();
+
+
+?>

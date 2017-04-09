@@ -1,0 +1,20 @@
+<?php
+/**
+* @authors huangst
+* @date    2016-10-26 15:35:39
+* 获取摄影师主页列表
+*/
+include_once('../common.inc.php');
+$sort = $_INPUT['sort'];
+$order = $_INPUT['order'];
+$type_id = $_INPUT['type_id'];
+$user_id = $_INPUT['user_id'];
+$order = $_INPUT['order'];
+// 判断type_id是否存在，如果组合$where $where为了摄影师筛选条件
+
+
+
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+$goods_info = $goods_class->get_goods_list(false, array('type_id'=>$type_id, 'sort'=>$sort, 'user_id'=>$user_id, 'order_id'=>$order) ,'0,40');
+
+paizhao_mobile_output($goods_info,false);

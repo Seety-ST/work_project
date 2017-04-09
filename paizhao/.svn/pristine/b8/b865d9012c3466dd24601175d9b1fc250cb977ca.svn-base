@@ -1,0 +1,7 @@
+.index-page{
+	.item-wrap{
+		.search-item{
+			padding:7px 15px;
+		}
+	}
+}

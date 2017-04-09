@@ -1,0 +1,129 @@
+<?php
+return array(
+			 40=>array(
+                 'title'=>'约摄影',
+                 'text'=>'证件照、街拍、小清新写真，商业拍摄、年会拍摄……只有你想不到，没有我们约不到！
+名家摄影师私人定制，超低价量贩式约拍让你1元秒杀！',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-photography-120x90.png',
+                 'back_ground_color'=>'#f9fbff'
+                ),
+			 31=>array(
+                 'title'=>'约模特',
+                 'text'=>'高效约拍全国红模，每天海量新模入驻，每年打造顶级新模。
+这里不仅能约到平面模特，还能约到商业活动模特，摄影、走秀、车展、淘宝各类模特应有尽有。
+约约在手，正妹我有！',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-model-120x90.png',
+                 'back_ground_color'=>'#fffafc'
+                ),
+			 3=>array(
+                 'title'=>'约化妆',
+                 'text'=>'想一键变白富美吗？想化了妆也像素颜美女吗？
+约约平台拥有大量资深化妆服务提供商，为你打造各类专业造型。
+在约约，一瞬间变美，就是这么简单。',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-makeup-120x90.png',
+                 'back_ground_color'=>'#fffbfd'
+                ),
+			 12=>array(
+                 'title'=>'约场地',
+                 'text'=>'各类影棚，特色场地任你挑选。
+几十到几千平方应有尽有，上万种配套满足你的创作拍摄需求，一站式打包拍摄服务按需选择，约约在手，场地不愁。',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-place-120x90.png',
+                 'back_ground_color'=>'#f9feff'
+                ),
+			 5=>array(
+                 'title'=>'约培训',
+                 'text'=>'新入手了单反还没搞懂光圈快门和点测光吗？
+想用一部手机就拍出时尚大片吗？快来约培训！
+拍摄、后期，零基础、技术提升、大师班，应有尽有。',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-train-120x90.png',
+                 'back_ground_color'=>'#fdfcf8'
+                ),
+			 41=>array(
+                 'title'=>'约美食',
+                 'text'=>'约约携手美食达人闫涛、DJ凯莉等，为你量身订造特色佳肴，外面根本吃不到！
+私人定制，饕客力推，无需等位，快来一起享受味蕾之旅吧！',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-food-120x90.png',
+                 'back_ground_color'=>'#fefbfb'
+                ),
+			 42=>array(
+                 'title'=>'约活动',
+                 'text'=>'想知道早春三月，哪里桃花开满山谷吗？想要集齐一众美女模特，用镜头打造视觉盛宴吗？
+约活动为你提供千奇百怪的拍摄、旅拍、户外活动。',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-activity-120x90.png',
+                 'back_ground_color'=>'#fffbf9'
+                ),
+			 43=>array(
+                 'title'=>'约有趣',
+                 'text'=>'既不想吃饭逛街，又不想一个人发霉？无聊的时候就要约有趣！Roberu大师弟子教你做皮艺，童星胡钰佳的老师们教你弹起尤克里里，明星达人陪你度过有趣时光！',
+                 'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-funny-120x90.png',
+                 'back_ground_color'=>'#fcfdf7'
+                ),
+            991=>array(
+                'title'=>'周末',
+                'text'=>'周末就要出去浪，约起来~推荐最IN的周边玩乐，既有趣味的手工课程，也有欢乐的聚会活动，郊游撒欢、约摄拍照，你感兴趣的热门活动都在这！',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'#fefafa',
+            ),
+            992=>array(
+                'title'=>'手工',
+                'text'=>'教你做最精品的手工课程、独一无二的DIY。激发想象、锻炼动手能力，感受双手创造的乐趣。这可能是一次愉悦的体验，或是一份最有心意的礼物，但肯定是你对品质生活的态度。',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'#f8fdfe',
+            ),
+            993=>array(
+                'title'=>'达人说',
+                'text'=>'学技能找不到好教程？网上“伪”教程鱼龙混杂，纷繁复杂看不懂？来这里约约星级摄影、烘焙、手绘、PS后期达人为你图文解说技能教程。',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'#f8fdfe',
+            ),
+            995=>array(
+                'title'=>'分享会',
+                'text'=>'氛围轻松的微信群线上授课，与大咖导师语音亲密互动，在线解答你的疑惑。留个邮箱，就可以拿到大师的独家教程。',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'#f8fdfe',
+            ),
+            999=>array(
+                'title'=>'亲子乐园',
+                'text'=>'和孩子到户外尽情奔跑，感受大自然；或者坐下来，陪他玩玩游戏，让专业摄影师记录你们的温馨一刻。亲子乐园为你打造独特的同乐时光。',
+                'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-parent-120x90.png',
+                'back_ground_color'=>'#fdfaf5',
+            ),
+            998=>array(
+                'title'=>'白领有约',
+                'text'=>'与城中大型商厦合作的大型楼梯马拉松，与美食达人合作推荐犒劳大餐，为你短暂而珍贵的周末订制短途旅程……一切的一切，都为了让你从办公室里解放出来!',
+                'back_ground_img'=>'http://yp.yueus.com/list/static/pc/images/test/yue-ui-collar-120x90.png',
+                'back_ground_color'=>'#fcfafc',
+            ),
+            996=>array(
+                'title'=>'五星服务',
+                'text'=>'这里是品类的简短介绍，这里是品类的简短介绍。这里是品类的简短介绍这里是品类的简短介绍这里是品类的简短介绍这里是品类的简短介绍，这里是品类。',
+                'back_ground_img'=>'http://yueus.com/list/static/pc/images/test/yue-ui-five-star-120x90.png',
+                'back_ground_color'=>'#fffdf8',
+            ),
+            987=>array(
+                'title'=>'寻开心',
+                'text'=>'漫漫长夜怕无聊，美眉约你陪聊天；游戏菜鸟难升级,大神代练帮你晋级；还有更刺激的美女直播爆照，有寻开心不怕不开心！',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'',
+            ),
+            990=>array(
+                'title'=>'咨询',
+                'text'=>'最齐全的行业大牛云集于此，就业困惑、职场疑虑、技能提升、健康问题···任何咨询通通可以丢过来，导师为你一对一解答。',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'',
+            ),
+            989=>array(
+                'title'=>'占卜',
+                'text'=>'塔罗看运势、星盘解水逆、星座查性格、更有测字手相窥探命运的秘密。在这里，占卜大师带你探索另一个神秘的世界。',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'',
+            ),
+            988=>array(
+                'title'=>'舞蹈运动',
+                'text'=>'下班跳舞2小时，轻松甩掉赘肉，还能塑造身形，给你最优美曲线。拉丁舞、现代舞、街舞、爵士舞、古巴舞···星级舞蹈老师带你领略舞蹈运动的力与美。',
+                'back_ground_img'=>'',
+                'back_ground_color'=>'',
+            ),
+    
+);
+?>

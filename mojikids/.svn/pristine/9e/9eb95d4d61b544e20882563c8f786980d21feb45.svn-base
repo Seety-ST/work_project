@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="import" href="./g_head.tpl.htm?__inline">
+	<title>
+		Layout 范例
+	</title>
+
+</head>
+
+<body >
+	<link rel="import" href="./g_back.tpl.htm?__inline">
+	<div id="page-container" class="page-container p10" >
+        <moji-footer index="0" >
+
+        </moji-footer>
+	</div>
+
+</body>
+
+</html>
+<link rel="import" href="./g_footer.tpl.htm?__inline">
+
+
+
+
+<script type="text/javascript">
+	(function()
+    {
+        var Footer =  require('/modules/layout/footer/index');
+
+		var Toast  =  require.syncLoad(__moduleId('/modules/widget/toast/index'));
+
+        Vue.component(Footer.name, Footer);
+		Vue.$toast = Vue.prototype.$toast = Toast;
+		Vue.$toast({
+			message: '提示',
+			position: 'middle',
+			duration: 5000
+		});
+		new Vue
+		({
+			el: '#page-container',
+			created: function()
+			{
+
+			},
+			data:function()
+            {
+                return {
+                    cur : 0
+                }
+            },
+			methods:
+			{
+
+			}
+		});
+	})();
+</script>

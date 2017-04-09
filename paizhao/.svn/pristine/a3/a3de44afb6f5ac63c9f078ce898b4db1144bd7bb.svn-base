@@ -1,0 +1,43 @@
+
+/**
+    by 汤圆
+    头部搜索
+    2016.10.28
+ **/
+
+// ========= 模块引入 ========= 
+
+var _self = $({});
+
+/**
+ * 构造函数
+ * @param options
+ * @param matter 
+ * @param event
+ */
+
+var header_s_data ;
+var $header_s_data_pop = $('[header-s-data="pop"]');
+var $header_s_data_title = $('[header-s-data="title"]');
+
+
+$('[header-s-data="btn"]').hover(function() {
+    $header_s_data_pop.removeClass('fn-hide');
+}, function() {
+    $header_s_data_pop.addClass('fn-hide');
+});
+
+$header_s_data_pop.find('li').on('click', function(event) {
+    header_s_data = $(this).attr('header-s-data-role');
+    $header_s_data_pop.addClass('fn-hide');
+    var txt = $(this).html();
+    $header_s_data_title.html(txt);
+});
+
+
+
+
+
+
+
+

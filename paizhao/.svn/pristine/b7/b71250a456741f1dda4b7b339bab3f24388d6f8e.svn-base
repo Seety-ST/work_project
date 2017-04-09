@@ -1,0 +1,41 @@
+<?php
+
+
+// 引用头部、底部、统计
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/head.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/footer.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/tj.php';
+
+// 公共头部和底部
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/global-footer-bar.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/global-top-bar.php';
+
+
+// 读取模板
+$tpl = getSmartyTemplate('index.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'wap/goods/');   
+
+// 获取头、底部、统计结构
+$wap_global_head = _get_wbc_head(array('use_vue'=>1));
+$wap_global_footer = _get_wbc_footer();
+$wap_global_tj = _get_wbc_tj();
+
+
+$paizhao_goods_obj = POCO::singleton('pai_paizhao_goods_class');
+$ret = $paizhao_goods_obj->get_goods_info($goods_id,true,true);
+
+print_r($ret);
+
+
+
+
+// 输出数据
+
+
+$tpl->assign('wap_global_head',$wap_global_head);
+$tpl->assign('wap_global_footer',$wap_global_footer);
+$tpl->assign('wap_global_tj',$wap_global_tj);
+
+
+
+
+?>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="import" href="./no-use.htm?__inline">
+	
+	
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/no-use.scss">
+
+	<!-- 基本 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/ui-color.scss">
+	<!-- 当前页css  -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/ui-list.scss">
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">图片列表 ui-list.scss</h3>
+
+				<!-- 模板start -->
+				<div class="model">
+					<p class="f18 tc">分类列表1</p>
+					<br />
+					<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+						<ul class="list clearfix">
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="../../image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fe9 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f14">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-333 f14">
+											金寂寞人生爱无休金寂寞人生爱无休金寂
+											寞人生爱无休金寂寞人生爱无休金寂寞人
+										</p>
+									</div>
+									<div class="box-3 clearfix">
+										<div class="txt-1 frdi">
+											<p class="txt fldi color-999">摄影师马叔</p>
+
+										</div>
+									</div>
+								</div>
+							</li>	
+
+						</ul>
+					</div>
+					<p class="f18 tc">分类列表2</p>
+					<br />
+					<div class="pic-list-mod-1 font_wryh">
+						<ul class="list clearfix">
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="../../image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fe9 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+							<li class="pic-list-width-200">
+								<div class="img-item">
+									<div class="img">
+										<img src="../../image/ui/285x285.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<p class="txt-1 color-fe9 fldi f18 fb">
+											￥2600.00
+										</p>
+										<p class="txt-2  color-999 frdi f12">12人咨询</p>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666 f14">
+											华义乌幸福湖国际户外
+										</p>
+									</div>
+								</div>
+							</li>
+													
+						</ul>
+					</div>
+					<p class="f18 tc">分类列表3</p>
+					<br />
+					<div class="pic-list-mod-2 font_wryh">
+						<ul class="list clearfix">
+							<li class="pic-list-width-285">
+								<div class="img-item">
+									<div class="img">
+										<img src="../../image/ui/285x114.jpg" />
+									</div>
+								</div>
+								<div class="txt-item">
+									
+								</div>
+							</li>
+						
+													
+						</ul>
+					</div>
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+	
+</script>
+</html>
+
+

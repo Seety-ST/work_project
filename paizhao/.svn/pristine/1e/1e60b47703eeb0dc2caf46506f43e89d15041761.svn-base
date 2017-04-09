@@ -1,0 +1,33 @@
+<div class="pic-list-mod-2 font_wryh pic-list-mod-w1200">
+    <ul class="list clearfix">
+        {%foreach $list_data as $key => $value%}
+        <a href="{%$value.link_url%}" target="_blank">
+        <li class="pic-list-width-285">
+            <div class="img-item">
+                <div class="img">
+                    <img data-src="{%yueusv2_img_resize img_url=$value.cover size="320"%}">
+                </div>
+            </div>
+            <div class="txt-item">
+                <div class="box-1">
+                    <div class="ui-avatar-icon ui-avatar-icon-64">
+                        <i style="background-image:url({%$value.avatar%})"></i>
+                    </div>
+                </div>
+                <div class="box-2">
+                    <p class="txt-1 tc color-333 f14">{%$value.seller_name%}</p>
+                    <p class="txt-2 tc color-ccc">{%if $value.consults lt 1%}&nbsp;{%else%}<span class="color-24c">{%$value.consults%}</span>人咨询{%/if%}</p>
+                </div>
+                <div class="box-3 pt10">
+                    {%if $value.goods_num gt 0%}
+                    <p class="txt-1 tc color-ccc"><span class="tips color-fff">擅长</span>{%$value.goods_at%}</p>
+                    {%else%}
+                    <p class="txt-1 tc color-ccc">&nbsp;</p>
+                    {%/if%}
+                </div>
+            </div>
+        </li>
+        </a>
+        {%/foreach%}
+    </ul>
+</div>

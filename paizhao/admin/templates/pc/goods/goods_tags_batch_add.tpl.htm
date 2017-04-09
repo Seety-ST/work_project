@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gbk">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+<title>批量加商品标签</title>
+</head>
+<body>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+    #start_time,#end_time {width:200px;}
+    .J_location_sel{
+        display: inline;
+
+    }
+    .J_location_sel_2{
+        display: inline;
+
+    }
+    
+    input[type="text"]{width:150px;}
+</style>
+<style>
+    #img_wid img{
+        width:200px
+    }
+    /**添加样式，避免被重写样式**/
+    fieldset{
+        width:100%
+    }
+    .green{ display:inline-block;color:green;margin-left:10px;border:1px solid rgb(71, 187, 103);border-radius:10px;}
+    .red{display:inline-block;color:red;margin-left:10px;border:1px solid rgb(244, 15, 58);border-radius:10px;}
+    fieldset {margin-bottom:20px;}
+    
+</style>
+<script>
+    $(function () {
+            $(".ui_timepicker").datetimepicker({
+                //showOn: "button",
+                //buttonImage: "./css/images/icon_calendar.gif",
+                //buttonImageOnly: true,
+                showSecond: true,
+                timeFormat: 'hh:mm:ss',
+                stepHour: 1,
+                stepMinute: 1,
+                stepSecond: 1
+            });
+    });
+
+</script>
+<div class="mainbox">
+  <div id="tabs" style="margin-top:10px;">
+    <div class="tabbox">
+      <div class="table-list">
+        <div class="table" style="width:100%;">
+        <iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+        <form id="the_form" name="form1" method="post" action="" target='form_iframe'>
+          <fieldset class="filter">
+            <legend>商品标签</legend>
+                <table width="90%" align="center">
+                  <tr>
+                      <td width="26%" height="25">商品标签</td>
+					  <td width="74%" height="25">
+                         <!-- BEGIN tags_list -->
+                            <!-- IF level=="0" -->
+                                    <!-- IF id !="1" --></br><!-- ENDIF -->&nbsp;&nbsp;<input name="tags[]" type="checkbox" <!-- IF selected -->checked<!-- ENDIF --> class="{id}" value="{id}" onClick="show_property_checkbox(this)" /><b>{name}:</b>
+                            <!-- ELSE -->        
+                                    &nbsp;&nbsp;<input type="checkbox" name="tags[]"  <!-- IF selected -->checked<!-- ENDIF -->  class="{parents_id}" value="{id}"/>{name}
+                            <!-- ENDIF -->
+                         <!-- END tags_list -->
+                      </td>
+                  </tr>
+                </table>
+                <script>
+                    function show_property_checkbox(obj)
+                    {
+                        var p_id = $(obj).attr('class');
+                        if($(obj).attr("checked") == 'checked')
+                        {
+                            $("."+p_id).attr("checked",true);
+                        }else
+                        {
+                            $("."+p_id).attr("checked",false);
+                        }
+                    }
+                </script>
+          </fieldset>  
+          <fieldset class="self">
+            <style>
+                .info_class,.button_class,.img_class {display:inline-block;margin-right:10px;}
+                .img_class img {width:100px;}
+                .img_class {vertical-align: top;}
+                .every_goods{border-bottom:1px solid rgb(196, 196, 216);margin-bottom:10px;padding-bottom:5px;width:400px;}
+                .add_all {width:500px;text-align:center;}
+                .result_list,.has_select_goods {display:inline-block;vertical-align: top;width:40%;height:500px;overflow: scroll;}
+                .goods_name {color:rgb(44, 47, 240);}
+                .goods_prices{color:red;}
+                .select_text{display:inline-block;margin-right:30px;margin-bottom:10px;color:green;}
+                .has_selected_goods_num{color:blue;}
+            </style>
+            <legend>自定义商品</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="100%" height="25">
+                            <span>商品ID:&nbsp;&nbsp;</span><input type="text" name="goods_id_str" placeholder="2124075,XXXX"/></br>
+                            <span>商家ID:&nbsp;&nbsp;</span><input type="text" name="user_id_str" placeholder="115203,XXXX" />
+                            &nbsp;&nbsp;<input type="button" onClick="search_goods();" class="btn_class" value="搜索"/>
+                            &nbsp;&nbsp;<span onClick="del_all_result_list();" class="btn_class">移除全部</span>
+                            &nbsp;&nbsp;<span onClick="add_all_to_selected();" class="btn_class">全部添加</span>
+                            </br>
+                            <div class="result_list">
+                               
+                            </div>
+                            <div class="has_select_goods">
+                                <span class="select_text">已选商品</span><span onClick="del_all_selected();" class="btn_class">移除全部</span>
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <script>
+                        function del_all_result_list()
+                        {
+                            if(confirm('确定操作'))
+                            {
+                                $(".result_list div").remove();
+                            }
+                        }
+                        function search_goods()
+                        {
+                            var goods_id_str = $("input[name='goods_id_str']").val();
+                            var user_id_str = $("input[name='user_id_str']").val();
+                            $.ajax( {
+                                url:'?action=goods_tags_batch_add&is_search=1&goods_id_str='+goods_id_str+"&user_id_str="+user_id_str,
+                                type:'post',
+                                cache:false,
+                                dataType:'json',
+                                success:function(data) {
+                                    if(data.result != 1)
+                                    {
+                                        alert(data.message);
+                                        return false;
+                                    }else if(data.result == 1)
+                                    {
+                                        //$(".result_list").html(data.data);
+                                        var html = '';
+                                        $.each(data.data, function(i, item){    
+                                            html += "<div class='every_goods' goods_id='"+item.goods_id+"'>";
+                                                html += "<div class='img_class'>"
+                                                    html += "<a href='"+item.images+"' target='_blank'><img src='"+item.images+"' /></a>";
+                                                html += "</div>";
+                                                html += "<div class='info_class'>"
+                                                    html += "<span class='goods_name'>"+item.titles+"</span>";
+                                                    html += "</br>";
+                                                    html += "<span>goods_id:"+item.goods_id+"</span>";
+                                                    html += "</br>";
+                                                    html += "<span class='goods_prices'>价格:"+item.prices+"</span>";
+                                                html += "</div>";
+                                                html += "<div class='button_class'>"
+                                                    html += "<span class='btn_class' onclick='add_to_selected(this);'>添加</span>";
+                                                html += "</div>";
+                                            html += "</div>";
+                                        });
+                                        $(".result_list").html(html);
+
+                                    }
+                                },
+                                error : function() {
+                                    //alert("异常！");
+                                }
+                            });
+                            
+                        }
+                        
+                        function add_to_selected(obj)
+                        {
+                            var goods_id = $(obj).parent().parent().attr("goods_id");
+                            if($(".has_select_goods div").hasClass(goods_id))
+                            {
+                                alert("goods_id:"+goods_id+"已经添加过了,不要重复添加");
+                                return false;
+                            }
+                            var html = "<div class='every_goods "+goods_id+" '>";
+                            var img_html = $(obj).parent().siblings().eq(0).html();
+                            var info_html = $(obj).parent().siblings().eq(1).html();
+                            html += "<div class='img_class'>"+img_html+"</div>";
+                            html += "<div class='info_class'>"+info_html+"</div>";
+                            html += "<div class='button_class'><span class='btn_class' onClick='del_selected(this);'>删除</span></div>";
+                            html += "<input type='hidden' name='goods_id[]' value='"+goods_id+"'/>";
+                            html += "</div>";
+                            $(".has_select_goods").append(html);
+                        }
+                        
+                        function del_selected(obj)
+                        {
+                            if(confirm('确定操作'))
+                            {
+                                $(obj).parent().parent().remove();
+                            }
+                            
+                        }
+                        
+                        function add_all_to_selected()
+                        {
+                            var $obj = $(".result_list .every_goods");
+                            var html = '';
+                            for(var i = 0; i < $obj.length;i++)
+                            {
+                                var goods_id = $obj.eq(i).attr("goods_id");
+                                if($(".has_select_goods div").hasClass(goods_id))
+                                {
+                                    alert("goods_id:"+goods_id+"已经添加过了,不要重复添加");
+                                    return false;
+                                }
+                                var img_html = $(".img_class").eq(i).html();
+                                var info_html = $(".info_class").eq(i).html();
+                                html += "<div class='every_goods "+goods_id+" '>";
+                                    html += "<div class='img_class'>";
+                                        html += img_html;
+                                    html += "</div>";
+                                    html += "<div class='info_class'>";
+                                        html += info_html;
+                                    html += "</div>";
+                                    html += "<div class='button_class'><span class='btn_class' onClick='del_selected(this);'>删除</span></div>";
+                                    html += "<input type='hidden' name='goods_id[]' value='"+goods_id+"'/>";
+                                html += "</div>";
+                                
+                            }
+                            $(".has_select_goods").append(html);
+                        }
+                        function del_all_selected()
+                        {
+                            if(confirm('确定操作'))
+                            {
+                                $(".has_select_goods div").remove();
+                            }
+                        }
+                        
+                    </script>
+                </table>
+          </fieldset>
+          <fieldset class="public">
+            <legend>操作</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="26%" height="25">&nbsp;</td>
+                        <td width="74%" height="25">
+                            <input type="submit" value="提交" />
+                            &nbsp;&nbsp;
+                            <a class="btn_class" href="javascript:void(0);" onClick="jump();">返回</a>
+                        </td>
+                    </tr>
+                </table>
+          </fieldset>
+        </form>
+        </div>
+      </div>
+    </div>   
+    </div>
+</div>
+<script>
+    function jump()
+    {
+        window.parent.location.href = "goods.php?action=goods_tags_goods_list";
+    }
+</script>
+</body>
+</html>

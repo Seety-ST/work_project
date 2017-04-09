@@ -1,0 +1,26 @@
+// 字体颜色
+// 重要提示，颜色规范
+// .color-xxx{color: #xxx}
+
+
+
+.cor-fe9,.color-fe9{color: #fe9920;}
+.cor-666,.color-666{color: #666;}
+.cor-999,.color-999{color: #999;}
+.cor-333,.color-333{color: #333;}
+.cor-aaa,.color-aaa{color: #aaaaaa;}
+.color-fff{color: #fff;}
+.color-bbb{color: #bbb;}
+.color-111{color: #111;}
+.color-49C{color: #49CCD4;}
+.color-01C{color: #01C0CE;}
+.color-ff6{color: #ff6a6e;}
+.color-ff5{color: #ff5959;}
+
+
+// 背景颜色
+.bg-color-f2f{background-color: #f2f2f2}
+.bg-color-fff{background-color: #fff}
+.bg-color-000{background-color: #000}
+.bg-color-faf{background-color: #fafafa}
+

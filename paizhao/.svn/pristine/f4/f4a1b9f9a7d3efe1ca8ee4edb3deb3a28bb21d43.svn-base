@@ -1,0 +1,1 @@
+define("pc-huipai:global/main",function(){});

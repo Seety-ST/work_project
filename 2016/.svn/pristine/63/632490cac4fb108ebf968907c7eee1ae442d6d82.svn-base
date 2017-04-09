@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>荣威e950</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script src="Scripts/lazysizes.min.js" async=""></script>
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body class="change-bg">
+		<section class="change-page">
+			<div class="listItem"></div>
+			<div class="tab-wrap">
+				<div class="tab-item" style="display:block;" id="showphoto1">
+					<div class="tab-nav clearfix">
+						<ul>
+							<li class="cur">
+								<span class="nav-tab hours" onclick="showDiv('showphoto',1,2);"></span>
+							</li>
+							<li>
+								<span class="nav-tab km" onclick="showDiv('showphoto',2,2);"></span>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-con">
+						<div class="img-item">
+							<img data-sizes="auto" data-src="images-wap/tab-img/8hours/1.jpg"  class="lazyload" />
+							<img data-sizes="auto" data-src="images-wap/tab-img/8hours/2.jpg"  class="lazyload" />
+							<img data-sizes="auto" data-src="images-wap/tab-img/8hours/3.jpg"  class="lazyload" />
+							<img data-sizes="auto" data-src="images-wap/tab-img/8hours/4.jpg"  class="lazyload" />
+						</div>
+						<section class="btn-item clearfix">
+							<a href="#" class="back-item">返回顶部</a>
+							<a href="#" class="tab-link" onclick="showDiv('showphoto',2,2);">100公里外的美好</a>
+						</section>
+					</div>
+				</div>
+				<div class="tab-item" style="display:none;" id="showphoto2">
+					<div class="tab-nav clearfix">
+						<ul>
+							<li>
+								<span class="nav-tab hours" onclick="showDiv('showphoto',1,2);"></span>
+							</li>
+							<li class="cur">
+								<span class="nav-tab km" onclick="showDiv('showphoto',2,2);"></span>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-con">
+						<div class="img-item">
+							<img data-sizes="auto" data-src="images-wap/tab-img/100km/1.jpg"  class="lazyload" />
+							<img data-sizes="auto" data-src="images-wap/tab-img/100km/2.jpg"  class="lazyload" />
+							<img data-sizes="auto" data-src="images-wap/tab-img/100km/3.jpg"  class="lazyload" />
+							<img data-sizes="auto" data-src="images-wap/tab-img/100km/4.jpg"  class="lazyload" />
+						</div>
+						<section class="btn-item clearfix">
+							<a href="#" class="back-item">返回顶部</a>
+							<a href="#" class="tab-link" onclick="showDiv('showphoto',1,2);">新商务人生的8小时</a>
+						</section>
+					</div>
+				</div>
+			</div>
+			<section class="btn-wrap">
+				<a href="#" class="btn-item btn-ly"></a>
+				<a href="#" class="btn-item btn-ssj"></a>
+			</section>
+		</section>
+		<script>
+		window.lazySizesConfig = {
+			addClasses: true
+		};
+		function showDiv(name,i,end) 
+		{ 
+			for(j=1;j<=end;j++) 
+			{ 
+				document.getElementById(name+j).style.display='none'; 
+			} 
+			
+			document.getElementById(name+i).style.display='block'; 
+		}
+		</script>
+	</body>
+</html>

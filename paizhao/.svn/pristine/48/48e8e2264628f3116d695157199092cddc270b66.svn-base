@@ -1,0 +1,142 @@
+<?php
+require(dirname(dirname(__FILE__)).'/common.inc.php');
+set_time_limit(0);
+$consult_obj = POCO::singleton('pai_paizhao_consult_class');
+$button_where = '1';
+$where = '1';
+$start_time = $_INPUT['start_time'];
+if ($start_time)
+{
+    $s_time = strtotime($start_time);
+    $where .= " AND create_time > {$s_time}";
+    $button_where .= " AND create_time > {$s_time}";
+}
+$end_time = $_INPUT['end_time'];
+if ($end_time)
+{
+    $e_time = strtotime($end_time);
+    $where .= " AND create_time < {$e_time}";
+    $button_where .= " AND create_time < {$e_time}";
+}
+$goods_type_id = $_INPUT['goods_type_id'];
+if ($goods_type_id)
+{
+    $goods_type_id = (int)$goods_type_id;
+    $button_where .= " AND `goods_type_id` = {$goods_type_id}";
+}
+$goods_style_id = $_INPUT['goods_style_id'];
+if ($goods_style_id)
+{
+    $goods_style_id = (int)$goods_style_id;
+    $button_where .= " AND `goods_style_id` = {$goods_style_id}";
+}
+// $search_id = $_INPUT['search_id'];
+// $search_word = $_INPUT['search_word'];
+// if ($search_word)
+// {
+//     switch ($search_id)
+//     {
+//         case 0:
+//             $where .= " AND (`photographers` LIKE '%{$search_word}%' OR " . '`seller_id`=' . (int)$search_word . ' OR `goods_id`=' . (int)$search_word . ')';
+//             $button_where .= " AND `goods_name` LIKE '%{$search_word}%'";
+//             break;
+//         case 1:
+//             $where .= " AND `photographers` LIKE '%{$search_word}%'";
+//             break;
+//         case 2:
+//             $where .= ' AND `seller_id`=' . (int)$search_word;
+//             break;
+//         case 3:
+//             $button_where .= " AND `goods_name` LIKE '%{$search_word}%'";
+//             break;
+//         case 4:
+//             $where .= ' AND goods_id=' . (int)$search_word;
+//             $button_where .= ' AND goods_id=' . (int)$search_word;
+//             break;
+//     }
+// }
+$consult_type = $_INPUT['consult_type'];
+if ($consult_type == 'goods' || $consult_type == 'seller')
+{
+    $where .= " AND consult_type='{$consult_type}'";
+    $button_where .= " AND consult_type='{$consult_type}'";
+}
+$source = $_INPUT['source'];
+if ($source == 'PC' || $source == 'WAP')
+{
+    $where .= " AND source='{$source}'";
+    $button_where .= " AND source='{$source}'";
+}
+
+$goods_type_config = pai_mall_load_config('goods_type');
+$goods_style_config = pai_mall_load_config('goods_style');
+
+$page = $_INPUT['page'] ? (int)$_INPUT['page'] : 1;
+$per_page = 10000;
+
+$filename = '咨询按钮转化列表_' . date('Y_m_d_h_i_s');
+header("Content-type: application/vnd.ms-excel; charset=gbk");
+header("Content-type:text/csv");
+header('Cache-Control:must-revalidate,post-check=0,pre-check=0');
+header('Expires:0');
+header('Pragma:public');
+header("Content-Disposition: attachment; filename=$filename.xls");
+
+$headArr =array(
+                '日期',
+                '商品名称',
+                '价格',
+                '商品类型',
+                '场景风格',
+                '商家名字',
+                '咨询次数',
+                '提交次数',
+                '转化',
+                '来源',
+                );
+
+//表头
+$data ='';
+$data .= "<table border='1'>";
+$data .= "<tr>";
+foreach ($headArr as $key => $val)
+{
+    $data .= "<th>" . iconv("GB2312", "utf-8", $val) . "</th>";
+}
+$data .= "</tr>";
+
+while(true)
+{
+    $start_num = ($page-1)*$per_page;
+    $list = $consult_obj->get_consult_button_list($button_where, $where, "$start_num,$per_page");
+    if( ! $list )
+    {
+        break;
+    }
+    foreach($list as $key => $val)
+    {
+        $val['create_time'] = date("Y-m-d H:i:s",$val['create_time']);
+        $val['ratio'] = round($val['consult_num'] / $val['consult_click_num'], 2);
+
+        $data .= "<tr>";
+            $data.="<td>".$val['create_time']."</td>";
+            $data.="<td>".iconv("GB2312", "utf-8", $val['goods_name'])."</td>";
+            $data.="<td>".$val['price']."</td>";
+            $data.="<td>".$goods_type_config[$val['goods_type_id']]['name']."</td>";
+            $data.="<td>".$goods_type_config[$val['goods_style_id']]['name']."</td>";
+            $data.="<td>".iconv("GB2312", "utf-8", $val['photographers'])."</td>";
+            $data.="<td>".$val['consult_click_num']."</td>";
+            $data.="<td>".$val['consult_num']."</td>";
+            $data.="<td>".$val['ratio'];
+            $data.="<td>".$val['source'];
+        $data .= "</tr>";
+        
+    }
+    
+    echo $data . "\t";
+    unset($data);
+    $page++;
+}
+
+exit;
+?>

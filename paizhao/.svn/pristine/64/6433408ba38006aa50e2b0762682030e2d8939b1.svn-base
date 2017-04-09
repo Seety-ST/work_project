@@ -1,0 +1,328 @@
+.index-page .item-wrap .search-item {
+  padding: 7px 15px;
+  display: -webkit-box; }
+  .index-page .item-wrap .search-item .lbox {
+    position: relative; }
+    .index-page .item-wrap .search-item .lbox .item {
+      padding: 5px 25px 0px 0px;
+      position: relative; }
+      .index-page .item-wrap .search-item .lbox .item .arrow-icon {width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: inline-block;
+        vertical-align: middle;background-repeat: no-repeat;}
+    .index-page .item-wrap .search-item .lbox .pop-item {
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      top: 37px; }
+      .index-page .item-wrap .search-item .lbox .pop-item .triangle-icon {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -10px; }
+      .index-page .item-wrap .search-item .lbox .pop-item .list {
+        padding: 0px 10px; }
+        .index-page .item-wrap .search-item .lbox .pop-item .list li {
+          padding: 13px 0px;
+          border-bottom: 1px solid #ddd; }
+          .index-page .item-wrap .search-item .lbox .pop-item .list li:last-child {
+            border-bottom: none; }
+  .index-page .item-wrap .search-item .rbox {
+    -webkit-box-flex: 1; }
+    .index-page .item-wrap .search-item .rbox .input-txt {
+      padding: 0px 5%;
+      width: 90%;
+      height: 30px;
+      background-color: #eeeeee; }
+.index-page .item-wrap .content .p1th .swiper-container {
+  position: relative; }
+  .index-page .item-wrap .content .p1th .swiper-container .swiper-wrapper .swiper-slide .img {
+    width: 100%;
+    min-height: 160px;
+    display: block; }
+  .index-page .item-wrap .content .p1th .swiper-container .swiper-pagination {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 2.667%;
+    text-align: center; }
+    .index-page .item-wrap .content .p1th .swiper-container .swiper-pagination .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 3px;
+      background-color: #a8a6aa;
+      border: 2px solid #a8a6aa; }
+      .index-page .item-wrap .content .p1th .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        border-color: #fff; }
+.index-page .item-wrap .content .p2th {
+  background-color: #fff; }
+  .index-page .item-wrap .content .p2th .list li {
+    width: 23.5%;
+    float: left;
+    position: relative;
+    margin: 1.33% 0px 0px 1.05%; }
+    .index-page .item-wrap .content .p2th .list li .img {
+      width: 100%;
+      height: 100%; }
+      .index-page .item-wrap .content .p2th .list li .img img {
+        width: 100%;
+        min-height: 88px;
+        display: block; }
+    .index-page .item-wrap .content .p2th .list li .txt-item {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4); }
+      .index-page .item-wrap .content .p2th .list li .txt-item .txt {
+        width: 100%;
+        height: 100%;
+        display: table; }
+        .index-page .item-wrap .content .p2th .list li .txt-item .txt span {
+          display: table-cell;
+          vertical-align: middle; }
+    .index-page .item-wrap .content .p2th .list li.all-list-style {
+      width: 23%;
+      border: 2px solid #24c7c7; }
+      .index-page .item-wrap .content .p2th .list li.all-list-style .img img {
+        min-height: 84px; }
+      .index-page .item-wrap .content .p2th .list li.all-list-style .txt-item {
+        color: #24c7c7;
+        background: rgba(255, 255, 255, 0.9); }
+        .index-page .item-wrap .content .p2th .list li.all-list-style .txt-item .txt span {
+          padding-right: 12px;
+          background: url(http://51snap.yueus.com//static/wap/image/index/arrow-icon-24x24.png) no-repeat center;
+          background-size: 12px 12px; }
+.index-page .item-wrap .content .p3th {
+  padding: 10px 0px;
+  background-color: #fff; }
+  .index-page .item-wrap .content .p3th .list li {
+    width: 33.33%;
+    float: left; }
+    .index-page .item-wrap .content .p3th .list li.even {
+      width: 50%; }
+    .index-page .item-wrap .content .p3th .list li.odd {
+      width: 33.33%; }
+    .index-page .item-wrap .content .p3th .list li .img-item {
+      width: 35.2%;
+      margin: 10px auto; }
+      .index-page .item-wrap .content .p3th .list li .img-item img {
+        width: 100%; }
+    .index-page .item-wrap .content .p3th .list li .txt-item {
+      text-align: center;
+      margin-bottom: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical; }
+.index-page .item-wrap .content .p4th {
+  padding: 15px 0px;
+  margin-top: 10px;
+  background-color: #fff; }
+  .index-page .item-wrap .content .p4th .title-item {
+    padding: 0px 15px; }
+    .index-page .item-wrap .content .p4th .title-item .lbox .en-txt {
+      padding-bottom: 7px;
+      background: url(http://51snap.yueus.com//static/wap/image/index/line-img-40x4.png) no-repeat left bottom;
+      background-size: 20px 2px; }
+    .index-page .item-wrap .content .p4th .title-item .lbox .cn-txt {
+      padding-top: 7px; }
+    .index-page .item-wrap .content .p4th .title-item .rbox {
+      padding-top: 30px; }
+      .index-page .item-wrap .content .p4th .title-item .rbox .jiantou-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(http://51snap.yueus.com//static/wap/image/index/jiantou-icon-32x32.png) no-repeat center;
+        background-size: 100%; }
+      .index-page .item-wrap .content .p4th .title-item .rbox .more {
+        display: inline-block;
+        vertical-align: middle; }
+  .index-page .item-wrap .content .p4th .item-wrap {
+    padding-top: 25px; }
+    .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide {
+      width: 50%;
+      margin-bottom: 20px;
+      margin-right: 8%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      opacity: .3; }
+      .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .img-item {
+        width: 100%; }
+        .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .img-item .img {
+          width: 100%; }
+          .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .img-item .img img {
+            width: 100%; }
+      .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item {
+        padding: 10px;
+        display: -webkit-box; }
+        .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .lbox {
+          width: 45px;
+          height: 45px; }
+          .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .lbox .avatar-icon {
+            width: 100%; }
+            .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .lbox .avatar-icon img {
+              width: 100%;
+              display: block; }
+        .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .rbox {
+          -webkit-box-flex: 1;
+          padding: 0px 3%;
+          text-align: center; }
+          .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .rbox .box-1 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical; }
+          .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .rbox .box-2 {
+            padding-top: 5px; }
+            .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide .txt-item .rbox .box-2 .tips-txt {
+              padding: 2px;
+              background-color: #24c9c9;
+              color: #fff; }
+      .index-page .item-wrap .content .p4th .item-wrap .swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active {
+        opacity: 1; }
+.index-page .item-wrap .content .p5th {
+  padding: 15px 0px 0px 0px;
+  margin-top: 10px;
+  background-color: #fff; }
+  .index-page .item-wrap .content .p5th .title-item {
+    padding: 0px 15px; }
+    .index-page .item-wrap .content .p5th .title-item .lbox .en-txt {
+      padding-bottom: 7px;
+      background: url(http://51snap.yueus.com//static/wap/image/index/line-img-40x4.png) no-repeat left bottom;
+      background-size: 20px 2px; }
+    .index-page .item-wrap .content .p5th .title-item .lbox .cn-txt {
+      padding-top: 7px; }
+    .index-page .item-wrap .content .p5th .title-item .rbox {
+      padding-top: 30px; }
+      .index-page .item-wrap .content .p5th .title-item .rbox .jiantou-icon {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(http://51snap.yueus.com//static/wap/image/index/jiantou-icon-32x32.png) no-repeat center;
+        background-size: 100%; }
+      .index-page .item-wrap .content .p5th .title-item .rbox .more {
+        display: inline-block;
+        vertical-align: middle; }
+  .index-page .item-wrap .content .p5th .item-wrap {
+    padding-top: 25px;
+    padding: 25px 0px 20px 15px;
+    overflow-x: auto; }
+    .index-page .item-wrap .content .p5th .item-wrap .list {
+      display: -webkit-box; }
+      .index-page .item-wrap .content .p5th .item-wrap .list li {
+        width: 37.3%;
+        margin-right: 2.6%; }
+        .index-page .item-wrap .content .p5th .item-wrap .list li .img-item {
+          width: 100%; }
+          .index-page .item-wrap .content .p5th .item-wrap .list li .img-item img {
+            width: 100%;
+            display: block; }
+        .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item {
+          position: relative; }
+          .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item .box-1 {
+            padding-top: 24px; }
+            .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item .box-1 .ui-avatar-icon-45 {
+              width: 45px;
+              height: 45px; }
+            .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item .box-1 .ui-avatar-icon {
+              position: absolute;
+              top: -23px;
+              left: 50%;
+              margin-left: -23px; }
+              .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item .box-1 .ui-avatar-icon i {
+                width: 100%;
+                height: 100%;
+                display: block;
+                background-size: cover;
+                border-radius: 50%;
+                border: 2px solid #fff; }
+          .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item .box-2 .txt-1 {
+            padding: 12px 0px 6px 0px;
+            background: url(http://51snap.yueus.com//static/wap/image/index/line-img-40x2.jpg) no-repeat center bottom;
+            background-size: 20px 1px; }
+          .index-page .item-wrap .content .p5th .item-wrap .list li .txt-item .box-3 .txt-1 {
+            padding-top: 7px; }
+.index-page .item-wrap .content .p6th {
+  padding-top: 15px;
+  margin-top: 10px;
+  background-color: #fff; }
+  .index-page .item-wrap .content .p6th .title-item {
+    padding: 0px 15px; }
+    .index-page .item-wrap .content .p6th .title-item .lbox .en-txt {
+      padding-bottom: 7px;
+      background: url(http://51snap.yueus.com//static/wap/image/index/line-img-40x4.png) no-repeat left bottom;
+      background-size: 20px 2px; }
+    .index-page .item-wrap .content .p6th .title-item .lbox .cn-txt {
+      padding-top: 7px; }
+  .index-page .item-wrap .content .p6th .more-item {
+    padding: 15px 0px;
+    text-align: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd; }
+    .index-page .item-wrap .content .p6th .more-item .jiantou-icon {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url(http://51snap.yueus.com//static/wap/image/index/jiantou-icon-32x32.png) no-repeat center;
+      background-size: 100%; }
+    .index-page .item-wrap .content .p6th .more-item .more {
+      display: inline-block;
+      vertical-align: middle; }
+  .index-page .item-wrap .content .p6th .item-wrap {
+    padding: 20px 0px 0px 15px; }
+    .index-page .item-wrap .content .p6th .item-wrap .list {
+      overflow: hidden; }
+      .index-page .item-wrap .content .p6th .item-wrap .list li {
+        padding-bottom: 20px;
+        margin-right: 4%;
+        float: left; }
+        .index-page .item-wrap .content .p6th .item-wrap .list li .img-item {
+          width: 100%;
+          position: relative; }
+          .index-page .item-wrap .content .p6th .item-wrap .list li .img-item .img {
+            width: 100%; }
+            .index-page .item-wrap .content .p6th .item-wrap .list li .img-item .img img {
+              width: 100%;
+              display: block; }
+          .index-page .item-wrap .content .p6th .item-wrap .list li .img-item .txt {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 1.4%; }
+        .index-page .item-wrap .content .p6th .item-wrap .list li .txt-item .box-1 .txt-1 {
+          padding-top: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical; }
+        .index-page .item-wrap .content .p6th .item-wrap .list li .txt-item .box-2 .txt-1 {
+          padding-top: 5px; }
+        .index-page .item-wrap .content .p6th .item-wrap .list li.max-size {
+          width: 96%; }
+          .index-page .item-wrap .content .p6th .item-wrap .list li.max-size .txt-item .box-1 {
+            text-align: center; }
+          .index-page .item-wrap .content .p6th .item-wrap .list li.max-size .txt-item .box-2 {
+            text-align: center; }
+        .index-page .item-wrap .content .p6th .item-wrap .list li.min-size {
+          width: 46%; }
+.index-page .item-wrap .search-item .lbox .item .arrow-icon{background-position:0px 0px}.index-page .item-wrap .search-item .lbox .item .arrow-icon{background-size: 10px 10px;background-image: url(http://51snap.yueus.com//static/wap/style/index/index-page_0.5_z.png)}

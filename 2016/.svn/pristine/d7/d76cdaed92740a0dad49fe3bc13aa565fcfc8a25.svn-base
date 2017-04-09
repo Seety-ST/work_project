@@ -1,0 +1,148 @@
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+
+body{
+	font-size: 0.24rem;
+	color: #000;
+}
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+}
+body.article-bg{
+	background: #fff;
+}
+
+
+/* content */
+/* 玩法列表 */
+.playList-page{
+	padding: 0.2rem;
+}
+.playList-page img{
+	width: 100%;
+	display: block;
+}
+.playList-page .list-wrap li{
+	position: relative;
+	border-radius: 0.16rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+}
+.playList-page .list-wrap li .text-item{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255, 255, 255 ,.9);
+	padding: 0.2rem 0.16rem;
+	box-sizing: border-box;
+}
+.playList-page .list-wrap li .text-item::after{
+	display: block;
+	content:"";
+	background-image: url(../images/icon-14x24.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 0.14rem;
+	height: 0.24rem;
+	position: absolute;
+	right: 0.24rem;
+	top: 50%;
+	margin-top: -0.12rem;
+}
+.playList-page .list-wrap li:active .text-item::after{
+	background-image: url(../images/icon-hover-14x24.png);
+}
+.playList-page .list-wrap li .text-item h4.title{
+	font-weight: normal;
+	font-size: 0.26rem;
+}
+
+/* 玩法详细 */
+.article-page{
+	color: #333;
+}
+.article-page img{
+	display: block;
+	width: 100%;
+}
+.article-page .con-wrap{
+	padding: 0.56rem 0.28rem 1rem;
+}
+.article-page .text-wrap{
+	font-size: 0.28rem;
+}
+.article-page .banner-item{
+	padding-bottom: 0;
+}
+.article-page .text-wrap h3.title{
+	font-size: 0.44rem;
+	line-height: 0.6rem;
+	padding: 0.7rem 0.28rem 0;
+	font-weight: bold;
+}
+.article-page .text-wrap h4.title{
+	font-size: 0.36rem;
+	line-height: 0.2rem;
+	padding: 0.98rem 0 0.56rem;
+}
+.article-page .text-wrap p{
+	margin-bottom: 0.48rem;
+	line-height: 0.48rem;
+	color: #2e2e2e;
+}
+.article-page .text-wrap p.remark{
+	color: #929191;
+}
+.article-page .text-wrap .image-package{
+	margin: 0.2rem 0;
+}
+/*.article-page .text-wrap .image-package img{*/
+	/*border: 1px solid #e3e3e3;*/
+/*}*/
+
+/* 提示弹出层 */
+.tips-pop{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	font-size: 0.26rem;
+	color: #fff;
+	background: rgba(0,0,0,.8);
+	padding: 0.2rem 0.6rem;
+	border-radius: 0.76rem;
+}
+
+/* 状态模块 */
+.noticle-item{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	text-align: center;
+	font-size: 0.3rem;
+	line-height: 0.48rem;
+}
+.noticle-item i.icon{
+	display: block;
+	margin: 0 auto;
+	background-size: contain;
+	background-repeat: repeat;
+	margin-bottom: 0.38rem;
+}
+.noticle-item p{
+	color: #fff;
+	opacity: 0.6;
+}
+.nowifi-item i.icon{
+	background-image: url(../images/nowifi-icon-155x111.png);
+	width: 1.55rem;
+	height: 1.11rem;
+}

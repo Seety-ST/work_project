@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK" >
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>自拍杆H5</title>
+	<link rel="stylesheet" href="css/wap.css" />
+</head>
+
+<body>
+
+	<div class="zpgpage" id="zpgpage">
+
+		<div class="page section1 current">
+			<div class="contain">
+				<div class="con-item">
+					<h4 class="title animated">
+						<img src="images/page-item/1/title-img-750x283.png" />
+					</h4>
+					<div class="author-item animated">
+						<img src="images/page-item/1/author-img-750x47.png" />
+					</div>
+				</div>
+				<div class="mod-down-btn">
+					<i class="icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="page section2">
+			<div class="contain">
+				<div class="con-item">
+					<h4 class="title animated">
+						<img src="images/page-item/2/title-img-750x346.png" />
+					</h4>
+					<div class="phone-item">
+						<i class="wifi-icon">
+							<img src="images/page-item/2/wifi/blank.png" />
+						</i>
+						<div class="hand-item">
+							<img src="images/page-item/2/hand-img/blank.png" />
+							<div class="l-item"></div>
+							<div class="r-item"></div>
+						</div>
+					</div>
+				</div>
+				<div class="mod-down-btn">
+					<i class="icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="page section3">
+			<div class="contain">
+				<div class="con-item">
+					<div class="cj-item">
+						<div class="s3bg-item animated">
+							<img src="images/page-item/3/bg-img.jpg" />
+						</div>
+						<div class="girl-item animated">
+							<img src="images/page-item/3/p-img-451x943.png" />
+						</div>
+						<div class="boy-item animated">
+							<img src="images/page-item/3/p-img-312x591.png" />
+						</div>
+					</div>
+					<h4 class="title animated">
+						<img src="images/page-item/3/title-img-750x308.png" />
+					</h4>
+				</div>
+				<div class="mod-down-btn">
+					<i class="icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="page section4">
+			<div class="contain">
+				<div class="con-item">
+					<h4 class="title animated">
+						<img src="images/page-item/4/title-img-750x278.png" />
+					</h4>
+					<div class="bg-warp">
+						<div class="bg-l animated"></div>
+						<div class="bg-r animated"></div>
+					</div>
+					<div class="hand-item animated">
+						<img src="images/page-item/4/hand-img-750x793.png" />
+					</div>
+				</div>
+				<div class="mod-down-btn">
+					<i class="icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="page section5">
+			<div class="contain">
+				<div class="con-item">
+					<h4 class="title animated">
+						<img src="images/page-item/5/title-img-750x223.png" />
+					</h4>
+					<div class="phone-item animated">
+						<img src="images/page-item/5/phone-img-750x951.png" />
+					</div>
+				</div>
+				<div class="mod-down-btn">
+					<i class="icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="page section6">
+			<div class="contain">
+				<div class="con-item">
+					<h4 class="title animated">
+						<img src="images/page-item/6/title-img-750x219.png" />
+					</h4>
+					<h5 class="title animated">
+						<img src="images/page-item/6/title-img-750x88.png" />
+					</h5>
+				</div>
+				<div class="mod-down-btn">
+					<i class="icon"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="page section7">
+			<div class="contain">
+				<div class="con-item">
+					<h4 class="title animated">
+						<img src="images/page-item/7/title-647x76.png" />
+					</h4>
+					<div class="qa-List animated">
+						<ul>
+							<li>
+								<div class="item">
+									<span class="qa">Q:</span>
+									<div class="txt-item">什么手机可以使用虚拟自拍杆功能？</div>
+								</div>
+								<div class="item">
+									<span class="qa">A:</span>
+									<div class="txt-item">现阶段只支持iOS 7.0以上系统版本的iPhone设备使用</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<span class="qa">Q:</span>
+									<div class="txt-item">如何使用虚拟自拍杆功能？</div>
+								</div>
+								<div class="item">
+									<span class="qa">A:</span>
+									<div class="txt-item">两部手机同时开启WIFI，并进入美人相机虚拟自拍杆功能页面，手机A搜索手机B并申请连接，手机B选择同意连接。配对成功后，开启虚拟自拍杆功能。</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<span class="qa">Q:</span>
+									<div class="txt-item">在户外想使用虚拟自拍杆功能，没有WIFI可以用么？</div>
+								</div>
+								<div class="item">
+									<span class="qa">A:</span>
+									<div class="txt-item">两部手机只需点亮手机WIFI设置即可使用虚拟自拍杆。WIFI不需要连接任何热点，也不会浪费自身流量。</div>
+								</div>
+							</li>
+							<li>
+								<div class="item">
+									<span class="qa">Q:</span>
+									<div class="txt-item">开启虚拟自拍杆功能后，如何关闭？</div>
+								</div>
+								<div class="item">
+									<span class="qa">A:</span>
+									<div class="txt-item">一方手机退出连接即可关闭功能。</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="btn-item animated" style="padding-top:20%">
+						<a href="#" class="btn" style="display:none">
+							<img src="images/page-item/7/btn-img/blank.png" />
+						</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+
+</div>
+<script type="text/javascript" src="js/fullPage.min.js"></script>
+<script type="text/javascript">
+	
+	var runSection,
+		interval,
+		autoPlay;
+
+
+	
+	runSection = new FullPage({
+
+		id : 'zpgpage',                            // id of contain
+		slideTime : 500,                               // time of slide
+		effect : {                                     // slide effect
+			transform : {
+				translate : 'Y',                       // 'X'|'Y'|'XY'|'none'
+				scale : [1, 1],                    // [scalefrom, scaleto]
+				rotate : [0, 0]                    // [rotatefrom, rotateto]
+			},
+			opacity : [0, 1]                           // [opacityfrom, opacityto]
+		},                           
+		mode : 'touch,wheel',               // mode of fullpage
+		easing :'ease'
+	});
+
+	</script>
+
+</body>
+</html>

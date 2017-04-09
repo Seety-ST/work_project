@@ -1,0 +1,14 @@
+@import "../../sass/compass";
+.index-page{
+	.img{
+        img{
+            max-width: 100%
+        }
+        
+    }
+
+    .txt{
+        text-align: center;
+        padding-top: 15px;
+    }
+}

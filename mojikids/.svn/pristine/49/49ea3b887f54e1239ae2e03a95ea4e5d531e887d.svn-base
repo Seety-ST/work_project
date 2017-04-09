@@ -1,0 +1,153 @@
+<?php
+
+/**
+ * 公共方法
+ * 
+ * @author willike<chenwb@yueus.com>
+ * @since 2017-01-03
+ */
+
+/**
+ * html实例 转编译
+ *
+ * @param string $str
+ * @return string
+ */
+function moji_html_decode($str) {
+    $reg = array(
+        '&lt;', '&gt;', '&quot;', '&nbsp;',
+        '&#160;', '&#032', '&#124;', '&#036;',
+        '&#33;', '&#39;', '&#092;', '&#60;', '&#62;',
+        '&#160;',
+    );
+    $rpl = array(
+        '<', '>', '"', ' ',
+        ' ', ' ', '|', '$',
+        '!', '\'', '\\', '<', '>',
+        '*',
+    );
+    $str = str_replace($reg, $rpl, $str);
+    return trim($str);
+}
+
+/**
+ * 截取 内容 部分
+ *
+ * @param string $contents
+ * @param int $size 截取大小 ( 2个字符 )
+ * @return string
+ */
+function moji_content_strip($contents, $size = 300) {
+    $contents = trim($contents);
+    if (empty($contents)) {
+        return '';
+    }
+    $contents = html_entity_decode($contents, ENT_QUOTES, 'GB2312');  // 转编译
+    $contents = strip_tags($contents);
+    $size = intval($size);
+    if ($size < 1) {
+        return $contents;
+    }
+    $contents = mb_strimwidth($contents, 0, $size, '...', 'GB2312');  // 截取前150
+    $contents = trim(moji_html_decode($contents));   // html 残留标签 转编译
+    return $contents;
+}
+
+/**
+ * 获取 MOJI配置
+ * 
+ * @param string $name 配置名称
+ * @param mixed $subname 子配置名 (配置项)
+ * @return mixed
+ */
+function moji_get_config($name, $subname = '') {
+    $moji_config = include('moji_config.con.php');
+    if (empty($moji_config) || empty($name) || !isset($moji_config[$name])) {
+        return NULL;
+    }
+    $moji_items = $moji_config[$name];
+    if ($subname == '' || is_null($subname)) {
+        return $moji_items;
+    }
+    if (!isset($moji_items[$subname])) {
+        return null;
+    }
+    return $moji_items[$subname];
+}
+
+/**
+ * 订单按钮
+ * 
+ * @param int $status 订单状态 待付款 0, 待到店 1, 待完成 2, 已关闭 7, 已完成 8
+ * @param array $more_info 更多信息
+ * @return array
+ */
+function moji_trade_button($status, $more_info = array()) {
+    // 按钮文案
+    $button_keymap = array(
+        0 => '支付.pay',
+        1 => '查看门店地图.showmap|致电客服.oncall',
+        2 => '致电客服.oncall',
+        7 => '致电客服.oncall',
+        8 => '查看照片.exhibit',
+    );
+    if (!isset($button_keymap[$status])) {
+        return array();
+    }
+    if ($more_info['from'] == 'order_info') {
+        $button_keymap[1] = '致电客服.oncall';
+        $button_keymap[2] = '';
+        $button_keymap[7] = '';
+    }
+    $button_str = explode('|', $button_keymap[$status]);
+    $button = array();
+    foreach ($button_str as $value) {
+        if (empty($value)) {
+            continue;
+        }
+        list($name, $action) = explode('.', $value);
+        if (empty($name) || empty($action)) {
+            continue;
+        }
+        $btn_info = array(
+            'title' => $name,
+            'action' => $action,
+        );
+        if ($action == 'showmap') {
+            // 查看门店, 经纬度
+            $btn_info['value'] = $more_info['lng_lat'];
+        } elseif ($action == 'oncall') {
+            // 客服
+            $btn_info['value'] = $more_info['hotline'];
+        }
+        $button[] = $btn_info;
+    }
+    return $button;
+}
+
+/**
+ * 获取跳转链接
+ * 
+ * @param int $target_info 目标ID
+ * @param string $type 跳转类型
+ * @param string $platform 平台
+ * @return string
+ */
+function moji_redirect_url($target_info, $type, $platform = 'app') {
+    if (empty($target_info) || empty($type)) {
+        return '';
+    }
+    // url 页面集合
+    $page_urls = include(G_MOJIKIDS_ROOT_PATH . '/config/page_url_config.inc.php');
+    $target_params = is_array($target_info) ? http_build_query($target_info) : $target_info;
+    switch ($type) {
+        case 'goods':  // 商品详情
+            if ($platform != 'app') {
+                return $page_urls['goods'] . '?goods_id=' . $target_params;
+            }
+            break;
+        default:
+            break;
+    }
+    return '';
+}

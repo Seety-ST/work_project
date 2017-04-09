@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/201732/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+	    UI库通用配置
+	</title>
+
+    
+</head>
+
+<body>
+	
+<style type="text/css">
+	.border-radius-demo{
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #666
+	}
+	p{margin-bottom: 5px;}
+	.content{
+		padding: 0px 20px 20px 20px;
+	}
+	.list{
+  
+	}
+	.list li{
+		padding-bottom: 20px;
+	}
+	.ui-hot-tips-mod .ui-hot-tips-item{
+
+	}
+</style>
+
+<!-- YUE-UI VUE 头部返回模块 start -->
+<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+<div class="content">
+
+	<p class="mb10 f18">常用样式，例如旋转,圆角</p>
+
+
+
+	<div class="mb20">
+
+		<p class="mb10 color-ff6 f18">旋转</p>
+
+		<ul class="list clearfix">
+
+		    <li>
+		    	<p>默认</p>
+		    	<i class="dib icon-font i-iconfont-allow icon-font-size-10 color-aaa"></i>
+		    	<i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-7 color-2c2"></i>
+		    </li>
+
+		    <li>
+		    	<p>ui-transform-90</p>
+		    	<i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-90 color-aaa"></i>
+		    	<i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-7 color-2c2 ui-transform-90"></i>
+		    </li>
+
+		    <li>
+		    	<p>ui-transform-180</p>
+		    	<i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-180 color-aaa"></i>
+		    	<i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-7 color-2c2 ui-transform-180"></i>
+		    </li>
+
+		    <li>
+		    	<p>ui-transform-270</p>
+		    	<i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-270 color-aaa"></i>
+		    	<i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-7 color-2c2 ui-transform-270"></i>
+		    </li>
+
+		    <li>
+		    	<p>ui-transform-360</p>
+		    	<i class="dib icon-font i-iconfont-allow icon-font-size-10 ui-transform-360 color-aaa"></i>
+		    	<i class="dib icon-font i-iconfont-shixinxiaojiantou icon-font-size-7 color-2c2 ui-transform-360"></i>
+		    </li>
+		</ul>        
+		
+
+	</div>
+	
+
+	<div class="mb20">
+		<p class="color-ff6">圆角5px：ui-border-radius-5</p>
+		<div class="border-radius-demo  ui-border-radius-5"></div>
+	</div>
+
+
+	<div class="mb20">
+		<p>左上圆角：ui-border-top-left-radius-5</p>
+		<div class="border-radius-demo  ui-border-top-left-radius-5"></div>
+	</div>
+
+
+
+	<div class="mb20">
+		<p>右上圆角：ui-border-top-right-radius-5</p>
+		<div class="border-radius-demo  ui-border-top-right-radius-5"></div>
+	</div>
+
+
+	<div class="mb20">
+		<p>左下圆角：ui-border-bottom-left-radius-5</p>
+		<div class="border-radius-demo  ui-border-bottom-left-radius-5"></div>
+	</div>
+
+
+	<div class="mb20">
+		<p>右下圆角：ui-border-bottom-right-radius-5</p>
+		<div class="border-radius-demo  ui-border-bottom-right-radius-5"></div>
+	</div>
+
+	<br />
+	<br />
+	<p style="color:red;font-size:16px">热门、官方、推荐的样式大小</p>
+	<p>ui-hot-tips-size-s 为高度 15px 按钮</p>
+	<p>ui-hot-tips-size-m 为高度 20px 按钮</p>
+	<p>ui-hot-tips-size-l 为高度 30px 按钮</p>
+	<br />
+	<p style="color:red;font-size:16px">热门 官方 推荐图标样式一</p>
+	<!-- 热门 官方 推荐图标样式一开始 -->
+		<p>ui-hot-tips-size-s 为高度 15px 按钮</p>
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ff6 ui-hot-tips-size-s dib">
+				<span class="ui-hot-tips-content  color-fff">官方</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			
+		</div>
+		<br />
+  		<div class="ui-hot-tips-mod">
+  			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-49c ui-hot-tips-size-s dib">
+  				<span class="ui-hot-tips-content  color-fff">热销</span>
+  				<span class="ui-hot-tips-triangle"></span>
+  			</div>
+  			   
+  		</div>
+  		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ffa ui-hot-tips-size-s dib">
+				<span class="ui-hot-tips-content  color-fff">推荐</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			
+		</div>
+		<br />
+
+		<p>ui-hot-tips-size-m 为高度 20px 按钮</p>
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-49c ui-hot-tips-size-m dib">
+				<span class="ui-hot-tips-content  color-fff">热销</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			   
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ff6 ui-hot-tips-size-m dib">
+				<span class="ui-hot-tips-content  color-fff">官方</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ffa ui-hot-tips-size-m dib">
+				<span class="ui-hot-tips-content  color-fff">推荐</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			
+		</div>
+		<br />
+
+		<p>ui-hot-tips-size-l 为高度 30px 按钮</p>
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-49c ui-hot-tips-size-l dib">
+				<span class="ui-hot-tips-content  color-fff">热销</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			   
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ff6 ui-hot-tips-size-l dib">
+				<span class="ui-hot-tips-content  color-fff">官方</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ffa ui-hot-tips-size-l dib">
+				<span class="ui-hot-tips-content  color-fff">推荐</span>
+				<span class="ui-hot-tips-triangle"></span>
+			</div>
+			
+		</div>
+		<br />
+	<!-- 热门 官方 推荐图标样式一结束 -->
+
+	<br />
+	<p style="color:red;font-size:16px">热门 官方 推荐图标样式二</p>
+	<!-- 热门 官方 推荐图标样式二开始 -->
+		<p>ui-hot-tips-size-s 为高度 15px 按钮</p>
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ff6 ui-hot-tips-size-s dib">
+				<span class="ui-hot-tips-content  color-fff">官方</span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-49c ui-hot-tips-size-s dib">
+				<span class="ui-hot-tips-content  color-fff">热销</span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ffa ui-hot-tips-size-s dib">
+				<span class="ui-hot-tips-content  color-fff">推荐</span>
+			</div>
+			
+		</div>
+		<br />
+		<p>ui-hot-tips-size-m 为高度 20px 按钮</p>
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ff6 ui-hot-tips-size-m dib">
+				<span class="ui-hot-tips-content  color-fff">官方</span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-49c ui-hot-tips-size-m dib">
+				<span class="ui-hot-tips-content  color-fff">热销</span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ffa ui-hot-tips-size-m dib">
+				<span class="ui-hot-tips-content  color-fff">推荐</span>
+			</div>
+			
+		</div>
+		<br />
+		<p>ui-hot-tips-size-l 为高度 30px 按钮</p>
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ff6 ui-hot-tips-size-l dib">
+				<span class="ui-hot-tips-content  color-fff">官方</span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-49c ui-hot-tips-size-l dib">
+				<span class="ui-hot-tips-content  color-fff">热销</span>
+			</div>
+			
+		</div>
+		<br />
+		<div class="ui-hot-tips-mod">
+			<div class="ui-hot-tips-item ui-hot-tips-mod-bg-ffa ui-hot-tips-size-l dib">
+				<span class="ui-hot-tips-content  color-fff">推荐</span>
+			</div>
+			
+		</div>
+		<br />
+	<!-- 热门 官方 推荐图标样式一结束 -->
+	
+
+	<p style="color:red;font-size:16px">五星公共样式</p>
+	<!-- 五星公共样式开始 -->
+		<p>ui-hot-tips-size-s 为24*24 星星</p>
+		<div class="five-star-mod five-star-size-s">
+			<div class="ui-star-gray-icon"></div>
+			<div class="ui-star-yellow-icon" style="width:20%"></div>
+		</div>
+		<br />
+		<p>ui-hot-tips-size-m 为32*32 星星</p>
+		<div class="five-star-mod five-star-size-m">
+			<div class="ui-star-gray-icon"></div>
+			<div class="ui-star-yellow-icon" style="width:40%"></div>
+		</div>
+		<br />
+		<p>ui-hot-tips-size-l 为40*40 星星</p>
+		<div class="five-star-mod five-star-size-l">
+			<div class="ui-star-gray-icon"></div>
+			<div class="ui-star-yellow-icon" style="width:50%"></div>
+		</div>
+		<br />
+		
+
+	<!-- 五星公共样式结束 -->
+	
+</div>
+
+
+
+</body>
+
+
+
+</html>

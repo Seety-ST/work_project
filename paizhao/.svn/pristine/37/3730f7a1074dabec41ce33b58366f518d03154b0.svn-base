@@ -1,0 +1,6 @@
+<?php
+$PAIZHAO_PAGE_URL_ARR = array(
+    'detail'=>'//goods/index.php',
+    'photoer'=>'//'
+);
+?>

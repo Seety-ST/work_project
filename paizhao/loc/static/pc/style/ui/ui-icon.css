@@ -1,0 +1,89 @@
+.icon {
+  background-repeat: no-repeat; }
+
+.ui-icon-size-12 {
+  width: 12px;
+  height: 12px; }
+
+.ui-icon-size-14 {
+  width: 14px;
+  height: 14px; }
+
+.ui-icon-size-16 {
+  width: 16px;
+  height: 16px; }
+
+.ui-icon-size-44 {
+  width: 44px;
+  height: 44px; }
+
+.icon-search {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/search-icon-16x16.png); }
+
+.icon-add {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/add-icon-12x12.png); }
+
+.icon-close {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/close-icon-16x16.png); }
+
+.icon-circle-right {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/circle-right-icon-16x16.png); }
+
+.icon-circle-address {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/address-icon-14x14.png); }
+
+.icon-smile-green {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/smile-green-icon-44x44.png); }
+
+.icon-smile-yellow {
+  background-image: url(http://localhost/paizhao/loc/static/pc/image/ui/smile-yellow-icon-44x44.png); }
+
+.ui-triangle {
+  width: 0px;
+  height: 0px;
+  font-size: 0px;
+  line-height: 0px;
+  border-style: solid;
+  -webkit-transition: -webkit-transform .2s ease-in;
+  -moz-transition: -webkit-transform .2s ease-in;
+  -o-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in; }
+
+.ui-triangle-bottom-mid-gray {
+  border-width: 6px 6px 0px 6px;
+  border-color: #666 transparent transparent transparent;
+  _border-color: #666 #fff #fff #fff;
+  _filter: chroma(color=white); }
+
+.ui-triangle-bottom-mid-white {
+  border-width: 0px 6px 6px 6px;
+  border-color: transparent transparent #ffffff transparent;
+  _border-color: #000 #000 #fff #000;
+  _filter: chroma(color=black); }
+
+.city-select-pop-mod-1 {
+  position: absolute;
+  left: 0;
+  top: 0; }
+  .city-select-pop-mod-1 .city-select-pop-item {
+    position: relative;
+    width: 300px; }
+    .city-select-pop-mod-1 .city-select-pop-item .ui-triangle {
+      position: absolute;
+      left: 50%;
+      margin-left: -6px;
+      top: -6px; }
+    .city-select-pop-mod-1 .city-select-pop-item .item-wrap {
+      background-color: #fff;
+      padding: 10px 20px; }
+      .city-select-pop-mod-1 .city-select-pop-item .item-wrap .item {
+        padding: 10px 0px; }
+        .city-select-pop-mod-1 .city-select-pop-item .item-wrap .item .list li {
+          float: left;
+          margin-right: 10px;
+          cursor: pointer; }
+          .city-select-pop-mod-1 .city-select-pop-item .item-wrap .item .list li:hover {
+            color: #2bd9d9; }
+      .city-select-pop-mod-1 .city-select-pop-item .item-wrap .tc-item {
+        border-bottom: 1px solid #ddd; }
+

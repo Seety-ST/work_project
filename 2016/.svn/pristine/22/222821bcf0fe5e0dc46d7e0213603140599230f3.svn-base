@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+<title>新世相</title>
+</head>
+<body>
+<div class="content w1000">
+	<div class="nav-content clearfix">
+		<h1 class="logo"><a href="#"></a></h1>
+		<h1 class="hc-logo"><a href="#"></a></h1>
+		<div class="top-login clearfix">
+			<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+		</div>
+		<ul class="nav clearfix font_wryh">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">大赛规则</a></li>
+			<li class="cur"><a href="#">我要参赛</a></li>
+			<li><a href="#">作品浏览</a></li>
+			<li><a href="#">我的作品</a></li>
+			<li><a href="#">获奖公布</a></li>
+			<li><a href="#">世博介绍</a></li>
+		</ul>
+	</div>
+	<!-- 我要参赛  -->
+	<div class="want-play">
+		<div class="bg-cen">
+			<div class="form">
+				<div class="box clearfix">
+					<div class="fldi txt-1">上传图片</div>
+					<div class="text-box fldi">
+						<div class="input-box clearfix">
+							<input type="text" class="input-class input-class2 fl"/>
+							<a href="#" class="fl ml10"><img src="images/ll-img-1.jpg" /></a><a href="#" class="fl ml5"><img src="images/ll-img-2.jpg" /></a> </div>
+						<div class="txt pt15 pl3 lh18">
+							<p>
+								仅限相机类器材所拍摄的单图作品参赛<br />
+								*摄影作品必须以广州市为拍摄地点，或画面能体现广州市元素<br />
+								*作品大小不超过5M
+							</p>
+						</div>
+						<div class="list-img-box pt20 color1">
+							<ul class="clearfix">
+								<li>
+									<div class="img-box">
+										<img src="images/120x120.jpg" />
+									</div>
+									<a href="#" class="delete-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box">
+										<img src="images/120x120.jpg" />
+									</div>
+									<a href="#" class="delete-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box">
+										<img src="images/120x120.jpg" />
+									</div>
+									<a href="#" class="delete-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box">
+										<img src="images/120x120.jpg" />
+									</div>
+									<a href="#" class="delete-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box">
+										<img src="images/120x120.jpg" />
+									</div>
+									<a href="#" class="delete-btn">删除</a>
+								</li>
+								<li>
+									<div class="img-box">
+										<img src="images/120x120.jpg" />
+									</div>
+									<a href="#" class="delete-btn">删除</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="box pt20 pb10 clearfix">
+					<div class="fldi txt-1">图片标题</div>
+					<div class="text-box fldi">
+						<input type="text" class="input-class"  />
+					</div>
+				</div>
+				<div class="box pt20 clearfix">
+					<div class="fldi txt-1">图片描述</div>
+					<div class="text-box fldi">
+						<textarea name="" placeholder="必填，如可说明作品的拍摄地、拍摄时间等。限300字。。"></textarea>
+					</div>
+				</div>
+				<div class="box pt20 pb20 clearfix">
+					<div class="fldi txt-1">常用邮箱(必填)</div>
+					<div class="text-box fldi">
+						<input type="text" class="input-class input-class3"/>
+					</div>
+				</div>
+				<div class="box pt20 pb20 clearfix">
+					<div class="fldi txt-1">手机号码(选填)</div>
+					<div class="text-box fldi">
+						<input type="text" class="input-class input-class3"/>
+						<p class="txt pt10">*资料仅作获奖时联系通知作者本人之用途</p>
+					</div>
+				</div>
+				<div class="btn-box tc"><a href="#"><img src="images/ll-img-3.jpg" /></a><a href="#"><img src="images/ll-img-4.jpg" /></a></div>
+			</div>
+		</div>
+		<div class="banner"><img src="images/banner-960x100.jpg" /></div>
+	</div>
+	<!-- 我要参赛 end  -->
+</div>
+<div class="footer"></div>
+</body>
+</html>

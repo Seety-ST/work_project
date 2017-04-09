@@ -1,0 +1,121 @@
+.page-container {
+  background-color: #faf8f8;
+  font-size: 0.14rem;
+}
+
+.page-container .order-detail-info {
+  padding-bottom: 0.65rem;
+}
+
+.page-container .order-detail-info .common-info-section {
+  background-color: #fff;
+  margin-bottom: 0.1rem;
+}
+
+.page-container .order-detail-info .common-info-section .order-time-address {
+  line-height: 0.45rem;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}
+
+.page-container .order-detail-info .common-info-section .order-time-address .detail-value {
+  width: 2.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.page-container .order-detail-info .order-info-section {
+  background-color: #fdfdfd;
+  margin-bottom: 0.1rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-info {
+  padding: 0.12rem 0.15rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-info .info-img {
+  background: url("http://localhost/mojikids/loc/static/wap/image/order/order-info-img-160x160.png") no-repeat;
+  background-size: cover;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-info .info-content {
+  padding-left: 0.9rem;
+  padding-top: 0.03rem;
+  line-height: 0.23rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-info .info-content-price {
+  color: #666666;
+  line-height: 0.23rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-info .info-content-type {
+  margin-top: 0.03rem;
+  color: #aaaaaa;
+}
+
+.page-container .order-detail-info .order-info-section .order-price {
+  background-color: #fff;
+  line-height: 0.45rem;
+  padding: 0 0.15rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-price .price-title {
+  color: #666;
+}
+
+.page-container .order-detail-info .order-info-section .order-price .order-total-price {
+  font-size: 0.16rem;
+}
+
+.page-container .order-detail-info .order-info-section .order-price .price-value {
+  color: #666;
+}
+
+.page-container .order-detail-info .order-info-section .order-price .main-color {
+  color: #ffc430;
+}
+
+.page-container .order-detail-info .customer-info-section {
+  background-color: #fff;
+}
+
+.page-container .order-detail-info .customer-info-section input {
+  width: 2.5rem;
+}
+
+.page-container .order-detail-info .customer-info-section .customer-info-item {
+  line-height: 0.55rem;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}
+
+.page-container .order-detail-info .customer-info-section .customer-info-item-more {
+  padding: 0.15rem;
+}
+
+.page-container .order-detail-info .customer-info-section .customer-info-item-more .item-title {
+  padding-bottom: 0.15rem;
+}
+
+.page-container .order-detail-info .customer-info-section .customer-info-item-more .item-more {
+  height: 1.2rem;
+  width: 100%;
+}
+
+.page-container .order-detail-info .submit-btn {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  display: -webkit-box;
+  display: box;
+  width: 100%;
+}
+
+.page-container .order-detail-info .submit-btn .ui-button {
+  border-radius: 0;
+}

@@ -1,0 +1,317 @@
+<?php
+$s=microtime(true);
+set_time_limit(0);
+ignore_user_abort(true);
+ini_set('memory_limit', '512M');
+//include_once 'cron/common.inc.php';
+function fsockopen_curl($hostname, $url)
+{
+	echo $url.'<br>';
+    $fp = fsockopen($hostname, 80, $errno, $errstr, 5);  
+    if (!$fp) {  
+        echo "$errstr ($errno)";  
+        return false;  
+    }
+    stream_set_blocking($fp,0);//非阻塞模式  
+    $header = "GET $url HTTP/1.1\r\n";  
+    $header.="Host: $hostname\r\n";  
+    $header.="Connection: Close\r\n\r\n";//长连接关闭  
+    fwrite($fp, $header);  
+    fclose($fp);  
+}
+require_once('common.inc.php');
+require_once('/disk/data/htdocs232/poco/pai/yue_admin/authority.php');
+require_once('/disk/data/htdocs232/poco/pai/yue_admin/task/include/basics.fun.php');
+
+print_r($_INPUT);
+//echo $_SERVER['DOCUMENT_ROOT'];
+//exit;
+//print_r($_SERVER);
+//$a='gg_1:42|gd_:270,274|gt_:274,371|gg_29:1|go_1:6%7C7|go_2:2016-03-11|go_3:2016-03-24|gg_28:1|gg_4:101029001|gg_6:2016-03-12|gg_7:2016-03-18|gg_8:2016-03-11|gg_9:2016-03-19|gg_10:2016-03-10|gg_11:2016-03-19|gg_12:%BB%EE%B6%AF|gg_13:0|gg_14:40|gg_15:9|gg_30:goods';
+//echo $a;
+//print_r(mall_search_url_decode($a));
+//exit;
+
+/*$file_array = array(
+                    'member_rule.php',
+                    'property.php',
+                    'search_url.php',
+                    'seller_piliang.php',
+                    'verification.php',
+					);
+foreach($file_array as $key)
+{
+	$ex_file = 'svn info /disk/data/htdocs232/poco/pai/yue_admin/task/'.$key;
+	echo $ex_file;
+	$output = array();
+	exec($ex_file,$output);
+	//print_r($output);
+	$v = explode(':',$output[5]);
+	echo '->'.$v[1]."<br>";
+}
+//print_r($output);
+exit;
+*/
+//$list = mall_get_admin_menu(365394);
+//$list = mall_get_admin_goodstype(365394);
+//print_r($list);
+
+//$p = mall_check_admin_goodstype_permissions(365394,41,true);
+//var_dump($p);
+//$p = mall_check_admin_permissions_test(365394,'default','/disk/data/htdocs232/poco/pai/yue_admin/oa/oa',false);
+//print_r($p);
+//exit;
+
+$class = array(
+               'pai_mall_goods_type_class',
+			   'pai_mall_goods_class',
+			   'pai_mall_seller_class',
+			   'pai_mall_goods_type_attribute_class',
+			   'pai_mall_statistical_class',
+			   'pai_mall_order_class',
+			   'pai_gearman_class',
+			   'pai_mall_member_level_and_point_class',
+			   'pai_mall_integral_class',
+			   'pai_mall_admin_user_class',
+               'pai_mall_goods_pool_class',
+               'pai_mall_goods_detail_data_move_class',
+			   );
+$seller_obj = POCO::singleton($_GET['a'] == 'setcon'?$class[2]:$class[$_GET['c']?$_GET['c']:1]);
+//$type_list=$seller_obj->change_goods_att_49("0,1000");
+//$type_list=$seller_obj->change_goods_att_31(0);
+//exit('over');
+//echo md5($_GET['token']);
+if($_GET['a'] == 'setcon')
+{
+	$name=$_GET['n'];
+	$value=$_GET['v'];
+	echo $name ."=>".$value;
+	$seller_obj->set_system_config(array($name=>$value));
+	exit;
+}
+
+
+
+/*		include_once("/disk/data/htdocs233/mypoco/fulltext_search_helper/lucoservice/real_search_client.class.php");
+		$querys["prices_prices"] = $_GET['p_s'].",".$_GET['p_e'];
+		$querys["limit"] = "0,20";
+		$lucoclient_server_conf = $GLOBALS['LUCOCLIENT_SERVER_CONFIG']['test'];
+		$client = new LucoClient($lucoclient_server_conf['host'], $lucoclient_server_conf['port']);
+		$res = $client ->searchFun("actions.MallFunction.searchMallModelTest",$querys);
+		print_r($res);
+		exit;
+*/
+$data=array(
+            'pv'=>10,
+			'bill_finish_num'=>2,
+			);
+
+		$type_id = array(3,5,12,31,40,41,42,43);
+		$querys["keywords"] = "巽寮湾海王子学习型度假酒店双人2日奢华套餐";//$_GET['k'];//"2140950";//关键字 titles,content,introduction,keyword
+		//$querys["user_id"] = 100031;//关键字 titles,content,introduction,keyword
+		$querys["type_id"] = $_GET['t'];//类型
+		//$querys["service_id"] = $_GET['s'];//类型
+		//$querys["tags"] = '321';//类型
+		//$querys["edit_status"] = 1;//类型
+		//$querys["orderby"] = rand(1,2);//
+		//$querys["location_id"] = 101003001;
+		//$querys["start_time"] = "2015-08-10";//上架
+		//$querys["end_time"] = "2015-08-26 23:59:59";//上架
+		//$querys["audit_time_s"] = "2015-08-10";//上架
+		//$querys["audit_time_e"] = "2015-08-10";//上架
+		//$querys["is_black"] = "0";//上架
+		//$querys["is_show"] = "1";//上架
+		//$querys["keywords"] = "2115309";//上架
+		//$querys["seller_onsale_num"] = 1;//上架
+		//$querys["name_46"] = "47";//上架
+		//$querys["is_black"] = "0";//上架
+		//$querys["user_id"] = "110482";//用户
+		//$querys["brand_id"] = "0";//品牌
+		//$querys["keywords"] = "114072";//审核
+//		$querys["goods_status"] = "1";//审核
+//
+//		$querys["seller_user_id"] = "2104677";//审核
+//		$querys["goods_id"] = "2104677";//审核
+//		$querys["is_show"] = "1";//上架
+//		$querys["is_black"] = "0";//黑名单
+//		$querys["seller_id"] = "203898";//商家
+//		$querys["store_id"] = "203898";//店铺
+//		$querys["user_id"] = "100519";//用户
+		//$querys["location_id"] = "101029001";//地区
+//		$querys["prices_prices"] = "700,1000";//价格
+//		$querys["add_time"] = "2015/7/14";//添加时间
+//		$querys["begin_time"] = "2015/7/13";//上架时间
+//		$querys["end_time"] = "2015/7/15";//上架时间
+//		//////////////模特
+		//$querys["name_46"] = "47";
+//		//$querys["name_58"] = "1,3";
+//		$querys["m_bwh"] = "85-67-90";
+//		$querys["m_cup"] = "B";
+		//$querys["m_cups"] = "30";
+		///$querys["m_height"] = "160,170";
+//		$querys["m_level"] = "1,3";
+//		$querys["m_weight"] = "45,52";
+//		//////////////
+//		$querys["profile_sex"] = "2";
+//		//$querys["order"] = "";
+		//$querys["order"] = 2;//排序方法 默认请填写
+		//$querys["order"] = "seller_id DESC 4";//排序方法 默认请填写
+		$querys["limit"] = "0,20";
+		$querys["debug"] = true;
+		
+
+		
+
+$type_id = rand(153,155);
+$data['prices_de'][$type_id] = rand(100,99999);
+$data['prices_de_detail'][$type_id]['stock_num'] = rand(10000,99999);
+$data['prices_de_detail'][$type_id]['buy_num'] = 3;
+$user_id = array();
+$goods_id = rand(1066577,1067577);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//foreach($user_id as $val)
+//{
+//	$type_id = 31;
+	//
+	//
+	//$type_list=$seller_obj->add_goods_for_batch($goods_id,109650,3,$data);
+	//$goods_id+=1;
+//}
+//$type_list=$seller_obj->synchronous_pool_to_rank_by_id(13);
+//$type_list=$seller_obj->synchronous_pool_goods_list();
+
+//$type_list=$seller_obj->add_goods_for_batch(rand(1065569,1365569),109650,3,$data);
+//$data['is_auto_accept']=$_GET['t'];
+//$data['is_auto_sign']=$_GET['t'];
+//$type_list=$seller_obj->update_goods_auto_action(2138881,$data);
+//$seller_obj->synchronous_shownum();
+//$seller_obj->synchronous_goodsnum();
+//$type_list=$seller_obj->user_search_goods_list($querys,$querys["limit"]);
+//$type_list=$seller_obj->search_goods_list_by_fulltext($querys,$querys["limit"]);
+//$type_list1=$seller_obj->check_can_buy(2124194,array('type_id'=>'144539960137777','num'=>10));
+//$type_list1=$seller_obj->synchronous_goods();
+//$type_list1=$seller_obj->synchronous_seller();
+//1
+//$type_list=$seller_obj->change_goods_att_5();
+//2
+//$type_list=$seller_obj->synchronous_goods($_GET['type_id']);//5,43
+//3
+
+//$type_list=$seller_obj->synchronous_goods_42();
+/*for($i=1;$i<=100;$i++)
+{
+	$type_list=$seller_obj->del_acl_user_cache($i);
+}
+*/
+//$data=unserialize('a:8:{s:8:"store_id";s:2:"68";s:7:"type_id";i:5;s:3:"img";a:1:{i:0;a:1:{s:7:"img_url";s:97:"http://image19-d.yueus.com/yueyue/20160309/20160309112443_431344_129338_73553_260.jpg?640x640_120";}}s:14:"service_detail";a:1:{i:1;a:1:{i:0;a:1:{s:7:"message";s:2:"咯";}}}s:12:"default_data";a:3:{s:6:"titles";s:4:"呵呵";s:7:"content";s:9:"<p>莫</p>";s:10:"service_id";s:1:"1";}s:11:"system_data";a:7:{s:32:"4f6ffe13a5d75b2d6a3923922b3922e5";s:32:"beed13602b9b0e6ecb5b568ff5058f07";s:32:"beed13602b9b0e6ecb5b568ff5058f07";s:32:"c86a7ee3d8ef0b551ed58e354a836f2b";s:32:"9431c87f273e507e6040fcb07dcb4509";s:3:"366";s:32:"2a38a4a9316c49e5a833517c45d31070";s:6:"尽可能";s:32:"7647966b7343c29048673252e490f736";s:2:"55";s:32:"caf1a3dfb505ffed0d024130f58c5cfa";s:2:"88";s:32:"bbf94b34eb32268ada57a3be5062fe7d";s:16:"2016-03-09 11:25";}s:16:"prices_de_detail";a:1:{i:523;a:1:{s:9:"stock_num";i:66;}}s:9:"prices_de";a:1:{i:523;s:3:"669";}}');
+//$type_list=$seller_obj->add_goods($data);
+//$aa = pai_mall_load_config("goods_service_detail");
+//print_r($aa);
+//exit;
+
+//$type_list=$seller_obj->show_goods_data(5);
+//$type_list=$seller_obj->get_goods_bill_inputdata($type_list);
+//$type_list=$seller_obj->user_show_goods_data(31);
+
+//$type_list=$seller_obj->add_goods_update_log(2121884,5,2,true,true);
+
+
+//$type_list=$seller_obj->synchronous_goods($_GET['type_id']);
+//$type_list2=$seller_obj->synchronous_user_login_session(109650);
+//$type_list2=$seller_obj->get_goods_v_img();
+//$type_list2=$seller_obj->del_goods_cache_for_type_id(40);
+//$type_list=$seller_obj->get_seller_info(1);
+//$data = array(
+//		                 'bill_finish_num'=>1000,
+//		                 'prices'=>99999,
+//			  );
+//$seller_obj->update_seller_statistical_for_oa(109650,$data);
+//$type_list2=$seller_obj->get_seller_info(109650,2);
+//$type_list=mall_check_admin_permissions($yue_login_id);
+//$type_list=$seller_obj->check_goods_prices_type_id($_GET['id']);
+//$type_list=$seller_obj->get_seller_info(109650,2);
+//$type_list=$seller_obj->member_level();
+//$type_list=$seller_obj->get_log_list_for_front(109650,"0,100");
+//$type_list=$seller_obj->synchronous_goods();
+//$seller_obj->set_limit_and_level_and_point_cache(131432);
+//$type_list=$seller_obj->synchronous_goods_finish();
+/*$p = array('prices'=>rand(1000,3049));
+print_r($p);
+$type_list=$seller_obj->update_member_point_for_front(109650,$_GET['id']?$_GET['id']:4,$p);
+*///////////////////////////////////////
+/*$type_list=$seller_obj->get_task_all_list();
+echo '<table width="90%" border="1" cellspacing="1" cellpadding="1">';
+foreach($type_list as $val)
+{
+	$mess = json_decode($val);
+	if($mess->task_id)
+	{
+		echo '
+		  <tr>
+			<td>'.$mess->task_id .'</td>
+			<td>'.$mess->message .'</td>
+			<td>'.$mess->command .'</td>
+		  </tr>
+		';
+	}
+}
+echo '</table>';
+exit;
+*/////////////////////////////////////////
+//$type_list = $seller_obj->goods_data_for_front_packing($type_list);
+//print_r($querys);
+//$type_list=$seller_obj->search_goods_list_by_fulltext($querys,$querys["limit"]);
+//$type_list=$seller_obj->user_change_goods_show_status(2131674,2,214380);
+//$type_list=$seller_obj->change_goods_stock(2126336,123,2323434,2342424);
+//$type_list=$seller_obj->synchronous_goods($_GET['type_id']?$_GET['type_id']:3);
+//$type_list=$seller_obj->member_level();
+//$type_list=$seller_obj->property_for_search_get_data($_GET['type_id']?$_GET['type_id']:3);
+//$seller_obj->synchronous_goods(41);//同步商品
+
+//$type_list = $seller_obj->batch_insert_or_update_goods_type_id_tbl($_GET['goods_id']);
+//$type_list = $seller_obj->show_goods_data_for_temp('10000420160530053022');
+
+//print_r($type_list);
+//$type_list=$seller_obj->search_seller_list_by_fulltext($querys,$querys["limit"]);
+
+print_r($type_list);
+print_r($type_list2);
+
+
+/*
+$type_list=$seller_obj->search_seller_list_by_fulltext($querys,$querys["limit"]);
+$type_list2 = $seller_obj->search_seller_list_by_sql($querys["type_id"]);
+$t1=array();
+foreach($type_list['data'] as $val)
+{
+	$t1[$val['seller_id']] = $val;
+}
+$t2=array();
+foreach($type_list2 as $val)
+{
+	$t2[$val['seller_id']] = $val;
+}
+echo count($t1)."<br>";
+echo count($t2)."<br>";
+$in=1;
+foreach($t2 as $val)
+{
+	echo $in."==".$val['seller_id']."-->".$val['type_id'];
+	if($t1[$val['seller_id']])
+	{
+		echo "=======ok";
+	}
+	else
+	{
+		echo "=======bad[".$t1[$val['seller_id']]['profile_id']."]";
+	}
+	echo "<br>";
+	$in++;
+}
+*/
+
+$e=microtime(true);
+pai_log_class::add_log(($e-$s), 'time', 'koko_change');
+echo "<br>time:".($e-$s);
+?>

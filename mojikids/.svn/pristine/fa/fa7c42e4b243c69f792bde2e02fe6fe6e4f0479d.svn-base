@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {%$page_title%}
+    </title>
+    {%$wap_global_head%}
+
+    
+</head>
+
+<body >
+
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/order/index.css">
+<main role="main">
+    <div class="resubmit_contianer dn"><!--用作防止重复提交-->
+        <input type="text" id="resubmit_check" value="" />
+    </div>
+    <div id="page-container" class="page-container" v-cloak>
+        <div class="order-detail-info" v-show="page_show_message == '1' ? true:false">
+            <div class="common-info-section">
+                {%foreach $property_arr as $key => $val%}
+                <div class="order-time-address clearfix {%$val.border_class%}">
+                    <div class="fl">{%$val.title%}</div>
+                    <div class="detail-value fr">{%$val.value%}</div>
+                </div>
+                {%/foreach%}
+            </div>
+            <div class="order-info-section">
+                <div class="order-info clearfix">
+                    <div class="info-img fl clearfix" style="background-image:url({%$cover.value%})">
+
+                    </div>
+                    <div class="info-content">
+                        <div class="info-content-name dib">{%$title%}</div>
+                        <div class="info-content-price dib fr">{%$price%}</div>
+                        <div class="info-content-type">{%$standard_name%}</div>
+                    </div>
+                </div>
+
+                {%foreach $bill_arr as $key => $val%}
+                <div class="order-price ui-border-t clearfix">
+                    <div class="price-title {%$val.total_class%} fl">{%$val.title%}</div>
+                    <div class="price-value {%$val.total_class%} {%$val.total_font_color%} fr">{%$val.value%}</div>
+                </div>
+                {%/foreach%}
+
+            </div>
+            <div class="customer-info-section">
+                <div class="customer-info-item ui-border-b clearfix">
+                    <div class="item-title fl">{%$order_booker_title%}</div>
+                    <input class="dib ml10" type="text" placeholder="{%$order_booker_title_placeholder%}" v-model="username" @focus="input_textarea_focus" @blur="input_textarea_blur"/>
+                </div>
+                <div class="customer-info-item ui-border-b clearfix">
+                    <div class="item-title fl">{%$order_baby_age_title%}</div>
+                    <input class="dib ml10" type="text" placeholder="{%$order_baby_age_title_placeholder%}" v-model="baby_age" @focus="input_textarea_focus" @blur="input_textarea_blur"/>
+                </div>
+                <div class="customer-info-item ui-border-b clearfix">
+                    <div class="item-title fl">{%$order_phone_title%}</div>
+                    <input class="dib ml10" type="tel" placeholder="{%$order_phone_title_placeholder%}" v-model="phone" @focus="input_textarea_focus" @blur="input_textarea_blur"/>
+                </div>
+                <div class="customer-info-item ui-border-b clearfix">
+                    <div class="item-title fl">{%$order_email_title%}</div>
+                    <input class="dib ml10" type="email" placeholder="{%$order_email_title_placeholder%}" v-model="email" @focus="input_textarea_focus" @blur="input_textarea_blur"/>
+                </div>
+                <div class="customer-info-item-more">
+                    <div class="item-title">{%$order_more_text_title%}</div>
+                    <textarea class="item-more" type="text" placeholder="{%$order_more_text_title_placeholder%}" v-model="description" @focus="input_textarea_focus" @blur="input_textarea_blur"></textarea>
+                </div>
+
+            </div>
+            <div class="submit-btn">
+                <button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg" @click="submit_form" v-show="submit_form_btn_show">
+                    <span class="ui-button-content f16">确认并支付</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+</html>
+
+{%$wap_global_footer%}
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+        /*记录重复提交*/
+        var resubmit_check_obj = document.getElementById("resubmit_check");
+        /*记录重复提交*/
+
+
+        // 加载util
+        var Util = require.syncLoad('wap-kids:global/util/index');
+
+        //相关传递内容提交
+        var __service_time = "{%$service_time%}";
+        var __goods_id = "{%$goods_id%}";
+        var __standard_id = "{%$standard_id%}";
+        var __buy_num = "{%$buy_num%}";
+        var __store_id = "{%$store_id%}";
+        var __timezone_id = "{%$timezone_id%}";
+
+        //异常问题处理
+        var page_show_message = "{%$page_show_message%}";
+        var page_show_result = "{%$page_show_result%}";
+        var page_refer_link = "{%$page_refer_link%}";
+
+        var vm = new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return {
+                    username : "{%$username%}",
+                    baby_age : "{%$baby_age%}",
+                    phone : "{%$phone%}",
+                    email : "{%$email%}",
+                    description : "{%$description%}",
+                    btn_lock :false,//提交按钮锁
+                    submit_form_btn_show : true,
+                    page_show_result : page_show_result,
+                    page_refer_link : page_refer_link
+                }
+            },
+            methods:
+            {
+                check_exit : function(input_value){
+                    if (input_value!="")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                },
+                check_email : function(email){
+                    //判断手机号是否满11位
+                    var email_reg = new RegExp(/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g);
+                    var email_check = email_reg.test(email); //
+                    if (!email_check)
+                    {
+                        Util.toast({
+                            message: '请填入正确邮箱地址',
+                            position: 'middle',
+                            duration: 3000
+                        });
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                },
+                check_phone : function(phone){
+                    //判断手机号是否满11位
+                    var phone_reg = new RegExp(/^[0-9]{11}$/);
+                    var phone_check = phone_reg.test(phone); //
+                    if (!phone_check)
+                    {
+                        Util.toast({
+                            message: '请填入正确手机号',
+                            position: 'middle',
+                            duration: 3000
+                        });
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                },
+                check_age : function(baby_age){
+                    //检查宝宝年龄，是否有数字
+                    var age_check = baby_age.match(/\d+/g);
+                    if (age_check)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        Util.toast({
+                            message: '请输入宝宝年龄，为数字，使用逗号隔开',
+                            position: 'middle',
+                            duration: 3000
+                        });
+                        return false;
+                    }
+                },
+                input_textarea_focus:function(){
+                    if(Util.ua.isIDevice)
+                    {
+                        this.submit_form_btn_show = false;
+                    }
+                },
+                input_textarea_blur:function(){
+                    if(Util.ua.isIDevice)
+                    {
+                        this.submit_form_btn_show = true;
+                    }
+                },
+                submit_form : function(){
+                    var phone = this.phone;
+                    var username = this.username;
+                    var baby_age = this.baby_age;
+                    var email = this.email;
+                    var description = this.description;
+                    var self = this;
+
+
+                    //调用异步
+                    //按钮锁
+                    var btn_lock = this.btn_lock;
+                    if(btn_lock)
+                    {
+                        Util.toast({
+                            message: '请勿连续点击',
+                            position: 'middle',
+                            duration: 3000
+                        });
+                        return;
+                    }
+
+                    /*******相关校验*******/
+                    //预约人名字
+                    var username_check = this.check_exit(username);
+                    if(!username_check)
+                    {
+                        Util.toast({
+                            message: '请输入您的名字',
+                            position: 'middle',
+                            duration: 3000
+                        });
+                        return;
+                    }
+                    //宝宝年龄，//判断年龄是否带有数字
+                    var baby_age_check = this.check_age(baby_age);
+                    if(!baby_age_check)
+                    {
+                        return;
+                    }
+                    //判断手机号
+                    var phone_check = this.check_phone(phone);
+                    if(!phone_check)
+                    {
+                        return;
+                    }
+                    //邮箱检测
+                    var email_check = this.check_exit(email);
+                    if(email_check)
+                    {
+                        //对邮箱格式进行格式检测
+                        var email_style_check = this.check_email(email);
+                        if(!email_style_check)
+                        {
+                            return;
+                        }
+                    }
+                    /*******相关校验*******/
+
+
+                    /*记录重复提交*/
+                    var check_value = resubmit_check_obj.value;
+                    if(check_value!="")
+                    {
+                        //提示提交了新的订单
+                        Util.dialog({
+                            title:"提示",
+                            message:"请勿重复提交订单",
+                            confirmButtonText:"返回首页"
+                        },function(value){
+                            if(value=="confirm")
+                            {
+                                var home_page_jump_link = window.__MOJIKIDS_GLOBAL['PAGE_URL']['index'];
+                                window.location.href = home_page_jump_link;
+                            }
+
+                        });
+                        return;
+                    }
+                    /*记录重复提交*/
+
+
+                    //异步提交处理
+                    console.log("异步提交处理");
+
+
+                    var data_obj = {
+                        //输入内容提交
+                        phone:phone,
+                        username:username,
+                        baby_age:baby_age,
+                        email:email,
+                        description:description,
+                        //相关内容提交
+                        service_time:__service_time,
+                        goods_id:__goods_id,
+                        standard_id: __standard_id,
+                        store_id:__store_id,
+                        buy_num:__buy_num,
+                        timezone_id:__timezone_id
+
+                    }
+
+
+                    //按钮锁定
+                    this.btn_lock = true;
+                    // 异步请求
+                    Util.request
+                    ({
+                        url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'order/submit_order.php',
+                        type : 'POST',
+                        cache : true,
+                        data : data_obj,
+                        beforeSend : function()
+                        {
+                            Util.loading.open
+                            ({
+                                text : '提交订单中...',
+                                timeout:1000
+                            });
+
+                        },
+                        success : function(respond)
+                        {
+
+                            if(respond.res.data.result=="20000")
+                            {
+                                //跳转处理
+                                Util.toast({
+                                    message: "订单提交成功，请去支付",
+                                    position: 'middle',
+                                    duration: 1000
+                                });
+
+                                //获取order_sn，order_id，进行跳转
+                                var order_sn = respond.res.data.order_sn;//订单号
+
+                                //下单成功后跳转
+                                var pay_jump_link = window.__MOJIKIDS_GLOBAL['PAGE_URL']['pay']+"index.php?order_sn="+order_sn;
+
+                                /*记录重复提交*/
+                                var time_value = (new Date()).valueOf();
+                                resubmit_check_obj.value = time_value;
+                                /*记录重复提交*/
+
+                                //跳转
+                                setTimeout(function(){
+                                    window.location.href = pay_jump_link;
+                                },1000);
+
+                            }
+                            else
+                            {
+                                Util.toast({
+                                    message: respond.res.data.message,
+                                    position: 'middle',
+                                    duration: 3000
+                                });
+                                //开锁
+                                self.btn_lock = false;
+                            }
+
+                        },
+                        error :function()
+                        {
+                            Util.toast({
+                                message: "订单提交失败，请再试",
+                                position: 'middle',
+                                duration: 3000
+                            });
+                            //开锁
+                            self.btn_lock = false;
+                        }
+                    });
+
+                }
+            }
+        });
+
+        if(vm.page_show_result=="0")
+        {
+            Util.dialog({
+                title:"提示",
+                message:page_show_message,
+                confirmButtonText:"确定"
+            },function(value){
+                if(value=="confirm")
+                {
+                    var home_page_jump_link = page_refer_link;
+                    window.location.href = home_page_jump_link;
+                }
+
+            });
+        }
+
+
+        if(Util.ua.isAndroid)
+        {
+            //处理安卓点击输入框，缩小屏幕处理
+            window.onresize=function(){
+                if(vm.submit_form_btn_show)
+                {
+                    vm.submit_form_btn_show = false;
+                }
+                else
+                {
+                    vm.submit_form_btn_show = true;
+                }
+            }
+        }
+
+    })();
+</script>
+
+{%$wap_global_tj%}

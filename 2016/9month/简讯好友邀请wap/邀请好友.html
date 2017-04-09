@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="GBK" >
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>简讯</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+<body>       
+    <section class="invitation-page">
+        <h1 class="logo-item"></h1>
+        <div class="con-item">
+            <dl class="user-info">
+                <dt class="name">詹森叔叔</dt>
+                <dd class="num-item"><span class="title">邀请号</span><em class="num">1687</em></dd>
+                <dd class="tips">长按复制</dd>
+            </dl>
+            <div class="quota-item">
+                <i class="line-icon"></i>
+                <span class="text-item">
+                    <h4 class="title">剩余邀请名额</h4>
+                    <span class="quota"><em class="now">1</em>/<em class="total">3</em></span>
+                </span>
+            </div>
+            <div class="btn-wrap">
+                <a href="#" class="btn-item">
+                    <i class="icon add-icon"></i><span>加我为好友</span>
+                </a>
+                <a href="#" class="btn-item">
+                    <i class="icon download-icon"></i><span>下载FaceChat</span>
+                </a>
+            </div>
+            <p class="mod-tips">搜索邀请号1687加我为好友</p>
+        </div>
+    </section>
+    <!-- ios分享提示层 -->
+    <div class="pop-share-ios"></div>
+</body>
+</html>

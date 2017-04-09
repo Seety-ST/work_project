@@ -1,0 +1,28 @@
+@import "./style/reset.scss";
+@import "./style/base.scss";
+@import "./style/common.scss";
+@import "./style/vue.scss";
+
+@import "./style/ui/yue-ui-avatar.scss";
+@import "./style/ui/yue-ui-border.scss";
+@import "./style/ui/yue-ui-button.scss";
+@import "./style/ui/yue-ui-color.scss";
+@import "./style/ui/yue-ui-dialog.scss";
+@import "./style/ui/yue-ui-loading.scss";
+@import "./style/ui/yue-ui-icon-size.scss";
+@import "./style/ui/yue-ui-list.scss";
+@import "./style/ui/yue-ui-tab.scss";
+@import "./style/ui/yue-ui-tags.scss";
+@import "./style/ui/yue-ui-triangle.scss";
+@import "./style/ui/yue-ui-cell.scss";
+@import "./style/ui/yue-ui-widget.scss";
+@import "./style/ui/yue-ui-animation.scss";
+@import "./style/ui/yue-ui-poptips.scss";
+@import "./style/ui/yue-ui-iconfont.scss";
+
+// @import "../modules/global/widget/go_top/go_top.scss";
+// @import "../modules/global/widget/header/header.scss";
+// @import "../modules/global/widget/abnormal/main.scss";
+// @import "../modules/global/widget/footer/footer.scss";
+// @import "../modules/global/widget/add_reduction/add_reduction.scss";
+// @import "../modules/global/list/list.scss";

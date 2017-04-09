@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>VolvoV40V40cc</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body class="index-bg">
+		<section class="index-page">
+			<hgroup class="mod-btn-wrap">
+				<h2 class="back-btn" style="display:none">
+					<a href="#" class="icon-area">
+						<i class="icon back-icon"></i>
+					</a>
+				</h2>
+				<h1 class="logo">
+					<a href="#" class="icon-area">
+						<i class="icon logo-icon"></i>
+					</a>
+				</h1>
+			</hgroup>
+			<div class="con-item">
+				<section class="btn-wrap animated">
+					<div class="path1">
+						<a href="#" class="btn test-btn"></a>
+					</div>
+					<div class="path2 clearfix">
+						<a href="#" class="btn light-btn"></a>
+						<a href="#" class="btn book-btn"></a>
+					</div>
+				</section>
+			</div>
+		</section>
+	</body>
+</html>

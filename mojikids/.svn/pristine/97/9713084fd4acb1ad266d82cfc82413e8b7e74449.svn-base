@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+       {%$type_str%}宝宝档案 - 莫吉照相馆
+    </title>
+    <meta name="Keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+    <meta name="Description" content="MOJIKIDS莫吉照相馆，专注3-7岁儿童亲子摄影。我们一直坚持对细节及品质的极致追求，用镜头记录孩子的纯真笑颜。">
+    {%$wap_global_head%}
+    <!-- <link rel="import" href="../../ui/g_head.tpl.htm?__inline"> -->
+
+    <link charset="utf-8" rel="stylesheet" href="/style/bb/file/index.scss">
+</head>
+
+<body  class="cor-bg-fff">
+
+<main role="main">
+    <div id="page-container" class="page-container"  v-cloak>
+
+        <div class="index-page">
+
+            <div class="p1th">
+                <div class="box1">
+                        <!-- <i :style="{ backgroundImage: 'url(' + user_img_up + ')' } "></i> -->
+                        <div class="user" id="upload-btn"  @click="fetch_upload">
+                            <div class="ui-avatar-icon ui-avatar-icon-l" data-role="user-icon" {%if $ret.data.baby_image%}style="background-image: url({%$ret.data.baby_image%});"{%/if%}></div>
+                            <i class="icon-photo"></i>
+                        </div>
+                        <div class="box2 color-666">
+                            设置宝宝头像
+                        </div>
+                </div>
+            </div>
+
+
+            <div class="p2th">
+                    <div class="item-wrap">
+                        <div class="item ui-border-b">
+                            <input type="text" name=" " id=" " v-model="user_name" class="input-text" placeholder="宝宝小名" />
+                        </div>
+                        <div class="item ui-border-b">
+                            <mt-datetime-picker ref="picker1" type="date" v-model="value1" @confirm="confirm1"
+                            :start-date="start"
+                            :end-date="end"
+                            :cur-date="cur_date"
+                            year-format="{value} 年"
+                            month-format="{value} 月"
+                            date-format="{value} 日"
+                            >
+                            </mt-datetime-picker>
+
+                            <input readonly="readonly"  @click="open('picker1')" type="text" name=" "   v-model="birth"   id=" " class="input-text"  placeholder="宝宝生日" />
+                        </div>
+
+                    </div>
+
+            </div>
+
+            <div class="p3th">
+                <div class="wbox ">
+
+                    <div class="lbox">
+                        <label for="boy">
+                            <div class="img"></div>
+                            <p  v-bind:class="{ active: boy_is_active }"   @click="event_click('boy')" class="p1">
+
+
+                                <span class="el-radio-input ">
+                                    <span class="radio-inner"></span>
+                                    <input v-model="sex" type="radio" value="男" name="sex" id="boy" class="input-radio el-radio-original" />
+                                </span>
+                                小王子
+
+                            </p>
+                        </label>
+
+
+                    </div>
+                    <div class="rbox ">
+                        <label for="girl">
+                            <div class="img"></div>
+                            <p class="p1"  v-bind:class="{ active: girl_is_active }"  @click="event_click('girl')" >
+
+                                <span class="el-radio-input ">
+                                    <span class="radio-inner"></span>
+                                    <input v-model="sex"  type="radio" value="女" name="sex" id="girl" class="input-radio el-radio-original"  />
+                                </span>
+                                小公主
+
+                            </p>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn">
+                <button  :disabled="!is_submit"  @click="save_data" class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l">
+                    <span class="ui-button-content f16">保存并生成宝宝卡片</span>
+                </button>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</main>
+
+</body>
+
+{%if $is_wap%}
+{%/if%}
+<script type="text/javascript" src="//static.yueus.com/yue_ui/upload/1.0.2/webuploader.zepto.min.js"></script>
+{%$wap_global_footer%}
+
+
+</html>
+<!-- <link rel="import" href="../../ui/g_footer.tpl.htm?__inline"> -->
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+
+        // 加载util
+        var Util = require.syncLoad(__moduleId('/modules/global/util/index'));
+        // 加载uploader
+        var Uploader = require('/modules/upload/index');
+
+        var DatetimePicker = require('/modules/widget/datepicker/index');
+
+        Vue.component(DatetimePicker.name, DatetimePicker);
+
+        // ES6 模板字符串
+
+        var view = new Vue
+        ({
+            el: '#page-container',
+
+            mounted: function()
+            {
+                var self = this;
+                // 判断初始状态
+                if ( self.sex == '男')
+                {
+                    self.boy_is_active = true ;
+                    self.girl_is_active = false ;
+                }
+                else
+                {
+                    self.boy_is_active = false ;
+                    self.girl_is_active = true ;
+                }
+
+                // 加载传图组件
+                self._uploader = Uploader.init_com
+                ({
+                    $el : $('#upload-btn'),
+                    wx_params :
+                    {
+                     choose_count : 1,
+                     upload_success : function()
+                     {
+                        // 传图到微信成功的时候
+                        Util.loading.open
+                        ({
+                            text : '正在获取图片...',
+                        });
+                     },
+                     upload_fail : function()
+                     {
+                         // 传图到微信失败的时候
+                         Util.loading.close();
+                     },
+                     get_imgUrl_success : function(data)
+                     {
+                         // 成功获取微信的图片到自己服务器的时候
+
+                         var list_data = data;
+
+                         Util.loading.close();
+
+                         if (list_data.obj_list && list_data.obj_list[0].server_url)
+                         {
+                             if(list_data.obj_list[0] && list_data.obj_list[0].server_url[0])
+                             {
+                                var url = list_data.obj_list[0].server_url[0];
+
+                                url = url.replace('-d','');
+
+                                self.user_icon = Util.matching_img_size(url,260);
+
+                                $('[data-role="user-icon"]').css('background-image','url('+ self.user_icon +')');
+
+
+                                self.user_img_up =  self.user_icon;
+                             }
+
+                             // 添加图片
+                             is_upload = 1;
+
+                         }
+
+                     },
+                     get_imgUrl_error : function()
+                     {
+                        // 失败获取微信的图片到自己服务器的时候
+                        Util.toast({
+                            message: '传图失败',
+                            position: 'middle',
+                            duration: 2000
+                        });
+
+                     }
+                    },
+                    app_params :
+                    {
+                    },
+                    web_params :
+                    {
+                       // web 实例化后，不代表传图就成功，还要主动触发action方法
+                       ready_ok : function(upload_obj)
+                       {
+                           // 安装上传组件的各种事件
+                           var selected_img_arr = "";
+                           var selected_img_arr
+                           upload_obj.on('startUpload',function()
+                           {
+                               //self.$loading = $.loading({content:"正在获取上传图片"});
+                               Util.loading.open
+                               ({
+                                    text : '正在获取上传图片',
+                               });
+                           })
+                           .on('fileQueued',function(file)
+                           {
+
+                               //self.upload_head_obj = [];
+                               console.log(file)
+                           })
+                           .on('filesQueued',function(arr)
+                           {
+
+                               console.log(arr)
+                           })
+                           .on('fileDequeued',function(file)
+                           {
+                               console.log(file)
+                           })
+
+                           .on('uploadComplete',function(err)
+                           {
+                               Util.loading.close();
+                           })
+                           .on('error',function(err)
+                           {
+                               Util.loading.close();
+                           })
+                           .on('uploadSuccess',function(file,response)
+                           {
+                                // response 服务端返回数据
+                                Util.loading.close();
+                                console.log(response);
+                                if(response.code == 0 && response.url.length>0)
+                                {
+                                    var url = Util.matching_img_size(response.url[0],260);
+
+                                    url = url.replace('-d','');
+
+                                    $('[data-role="user-icon"]').css('background-image','url('+ url +')');
+
+                                    self.user_img_up =  url;
+                                    console.log(self.user_img_up);
+                                }
+
+
+
+                           })
+                           .on('uploadError',function(file,reason)
+                           {
+                               Util.loading.close();
+
+                               console.log(reason);
+                           })
+                           .on('uploadFinished',function()
+                           {
+
+                           })
+                        }
+                    }
+                });
+
+                // console.log(self._uploader)
+            },
+
+
+            data:function()
+            {
+                var sex =  '{%$ret.data.baby_gender%}' ? '{%$ret.data.baby_gender%}' : '男';
+                // 扩展
+                return {
+                    user_name : '{%$ret.data.baby_name%}',
+                    birth : '{%$ret.data.baby_birth%}',
+                    sex : sex ,
+                    is_submit : '',
+                    user_img_up : '{%$ret.data.baby_image%}',
+
+                    boy_is_active: true,
+                    girl_is_active: false,
+
+
+                    value1 : '',
+                    value2 : '',
+                    start : new Date(new Date().getFullYear() - 8, 0, 1),// 8年前算起
+                    end : new Date(),
+                    type : 'time',
+                    cur_date : '{%$ret.data.baby_birth%}'// 设置选中日期
+                }
+            },
+
+            computed :
+            {
+                is_submit : function()
+                {
+                    var ret;
+                    this.user_name == "" || this.birth == "" ? ret = false : ret = true;
+                    return ret;
+                }
+            },
+
+            methods:
+            {
+                /**
+                 * 触发传图
+                 * @return {[type]} [description]
+                 */
+                fetch_upload : function()
+                {
+                    var self = this;
+                    self._uploader.action();
+
+
+                },
+
+                // 传图
+                open: function(tag)
+                {
+                    var self = this;
+
+                    self.$refs[tag].open();
+                },
+
+                confirm1 : function(d)
+                {
+                    var self = this;
+                    console.log(format_time(d));
+                    self.birth = format_time(d);
+                },
+
+
+                event_click : function(param){
+                    var self = this;
+                    if ( param == 'boy')
+                    {
+                        self.boy_is_active = true ;
+                        self.girl_is_active = false ;
+                    }
+                    else
+                    {
+                        self.boy_is_active = false ;
+                        self.girl_is_active = true ;
+                    }
+                },
+
+                save_data : function()
+                {
+                    var self = this;
+                    console.log('上传');
+                    var user_name = self.user_name;
+                    var birth = self.birth;
+                    var sex = self.sex;
+                    var user_img_upload = self.user_img_up;
+                    var sex_key ;
+
+                    console.log();
+
+                    switch (sex)
+                    {
+                        case '男':
+                            sex_key = 1;
+                        break;
+
+                        case '女':
+                            sex_key = 2;
+                        break;
+                    }
+
+                    if (!user_img_upload)
+                    {
+                        Util.toast({
+                            message: '请上传宝宝照片哦',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+
+                    if (!user_name)
+                    {
+                        Util.toast({
+                            message: '请输入宝宝小名哦',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+                    if (user_name.length > 20)
+                    {
+                        Util.toast({
+                            message: '宝宝小名在20字数以内哦',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+
+                    if (!birth)
+                    {
+                        Util.toast({
+                            message: '请选择宝贝生日哦',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+
+                    // 异步请求
+                    Util.request
+                    ({
+                        url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN'] + 'bb/bb_file.php',
+                        type : 'POST',
+                        cache : true,
+                        data :
+                        {
+                            baby_image : user_img_upload,
+                            baby_name : user_name,
+                            baby_sex : sex,
+                            baby_birth : birth,
+                            baby_id : "{%$baby_id%}",
+                        },
+                        beforeSend : function()
+                        {
+                            Util.loading.open
+                            ({
+                                text : '加载中...',
+                                timeout:2000
+                            });
+
+                            console.log('请求中...')
+                        },
+                        success : function(result)
+                        {
+                            Util.loading.close();
+                            console.log(result);
+                            var ret = result.res.data;
+                            if (ret.result == 1 )
+                            {
+                                Util.toast({
+                                    message: ret.message,
+                                    position: 'middle',
+                                    duration: 2000
+                                });
+
+                                var age = 1;
+                                var birth = self.birth;
+                                var birthday=new Date(birth.replace(/-/g, "\/"));
+                                var d=new Date();
+                                var sex_str = '';
+                                switch (sex_key) {
+                                    case 0:
+                                        sex_str = '小王子';
+                                        break;
+                                    default:
+                                        sex_str = '小公主';
+                                }
+
+                                age = d.getFullYear()-birthday.getFullYear()-((d.getMonth()<birthday.getMonth()|| d.getMonth()==birthday.getMonth() && d.getDate()<birthday.getDate())?1:0);
+
+                                var name = user_name + ' ' + sex_str + ' ' + age + '岁';
+
+                                window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['bb'] + 'index.php?img=' + encodeURIComponent(user_img_upload) + '&sex_key=' + sex_key + '&name=' + name;
+
+                            }
+                            else if( ret.result == -10)
+                            {
+
+
+                                console.log('非登陆情况');
+                                var b_data = self.birth
+                                var birth  = new Date().getFullYear() - b_data.toString().substring(0,4);
+                                Util.storage.set('bb_file',{
+                                    baby_image : user_img_upload,
+                                    baby_name : user_name,
+                                    baby_sex : sex,
+                                    baby_birth : birth,
+                                    baby_id : ""
+                                })
+
+
+                                window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['bb'] + 'index.php?img=' + encodeURIComponent(user_img_upload) + '&sex_key=' + sex_key + '&name=' + user_name ;
+
+                            }
+                            else
+                            {
+                                Util.toast({
+                                    message: ret.message,
+                                    position: 'middle',
+                                    duration: 2000
+                                });
+                                return ;
+                            }
+                        }
+                    });
+
+                }
+
+
+            }
+        });
+
+        /**
+         * 简单格式化时间
+         * @param  {[type]} nowDate [description]
+         * @return {[type]}         [description]
+         */
+        function format_time(nowDate)
+        {
+            var str = nowDate.getFullYear() + "-"+ (nowDate.getMonth()+1) + "-" + nowDate.getDate();
+
+            return str
+        }
+
+
+    })();
+</script>
+
+{%$wap_global_tj%}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {%$page_title%}
+    </title>
+    {%$wap_global_head%}
+
+    
+</head>
+
+<body >
+
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/pay/index.css">
+<main role="main">
+    <div id="page-container" class="page-container" v-cloak>
+        <div class="banner-section main-bg">
+            <div class="banner-text color-fff fl">
+                <div class="text-tips">支付提交成功啦~</div>
+                <div class="text-money-tips">实付金额<span class="money">{%$price%}</span></div>
+            </div>
+            <div class="banner-img fl"></div>
+        </div>
+        <div class="link-btn-section">
+            <a href="{%$order_detail_link%}">
+                <button class="ui-button ui-button-block ui-button-50per ui-button-size-xl  ui-button-radius-l ui-button-bd-fac main-border-color mr10">
+                    <span class="ui-button-content f16">查看订单详情</span>
+                </button>
+            </a>
+            <a href="{%$bb_list_link%}">
+                <button class="ui-button ui-button-block ui-button-50per ui-button-size-xl  ui-button-radius-l ui-button-bd-fac main-border-color ml10">
+                    <span class="ui-button-content f16">完善宝宝档案</span>
+                </button>
+            </a>
+        </div>
+        <div class="order-info-section">
+            {%foreach $pay_info_array as $key => $val%}
+            <div class="order-info-item ui-border-b clearfix">
+                <div class="item-title color-333 fl">{%$val.title%}</div>
+                <div class="item-value color-666 fr">{%$val.value%}</div>
+            </div>
+            {%/foreach%}
+        </div>
+    </div>
+</main>
+
+</body>
+
+</html>
+
+{%$wap_global_footer%}
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+
+        // 加载util
+        var Util =require.syncLoad('wap-kids:global/util/index');
+
+        // 加载toast组件
+        var Toast  =  require.syncLoad('wap-kids:widget/toast/index');
+
+
+
+
+        new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return {
+
+                }
+            },
+            methods:
+            {
+
+            }
+        });
+
+    })();
+</script>
+
+{%$wap_global_tj%}

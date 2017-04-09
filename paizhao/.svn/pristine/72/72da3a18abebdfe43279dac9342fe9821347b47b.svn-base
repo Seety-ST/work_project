@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{%$page_title%}</title>
+    <meta name="keywords" content="{%$meta_keywords%}">
+    <meta name="description" content="{%$meta_description%}">
+    {%$wap_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+    <!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+    <link href="../../style/search/search-page.scss" type="text/css" rel="stylesheet" />
+</head>
+<body class="cor-bg-fff" style="overflow: auto">
+    <div class="search-page">
+        <form method="GET" action="./index.php">
+            <div class="keyword-search ui-border-b">
+                <i class="search-icon"></i>
+                <input type="hidden" name="tp" value="list"/>
+                <input type="text" class="search-input" value="{%$decode_kw%}" name="kw" placeholder="搜索摄影套系"/>
+            </div>
+        </form>
+        <div class="nav-search">
+            <div class="sort-filter-item-tab-1">
+                <div class="item-wrap ui-border-b">
+                    <div class="sort-item f14 color-666">
+                        <ul class="list">
+                            {%foreach $sort_arr as $key => $value%}
+                                {%if $value.key eq "3" %}
+
+                                <li class="clearfix {%$value.cur_class%}">
+                                    <div class="item">
+                                        <a href="{%$value.link%}"><span class="txt fldi">{%$value.name%}</span></a>
+                                        <span class="arrow-item fldi">
+                                            <i class="icon-font i-iconfont-shixinxiaojiantou shixinxiaojiantou-up {%$value.sort_up_class%}"></i>
+                                            <i class="icon-font i-iconfont-shixinxiaojiantou {%$value.sort_down_class%}"></i>
+                                        </span>
+                                    </div>
+                                </li>
+
+                                {%else%}
+                                <li class="{%$value.cur_class%}"><a href="{%$value.link%}"><span class="txt">{%$value.name%}</span></a></li>
+                                {%/if%}
+                            {%/foreach%}
+                        </ul>
+                    </div>
+                    <div class="ui-border-l filter-item" data-role="show-condition-list">
+                        <i class="filter-icon yue-ui-icon-size-22"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-search clearfix wap-list-mod-1" id="data-list-wrap"></div>
+    </div>
+
+
+
+    <div class="fade fn-hide" style="z-index:10;" data-role="fade"></div>
+    <div class="popup-wrap f14" data-role="search-popup-wrap">
+        <div class="popup popup-hide">
+            <div class="popup-content clearfix ui-border-b">
+                <div class="content-title">套系类型</div>
+                <div class="content-list">
+                    <ul>
+                        {%foreach $goods_type_arr as $key =>$val%}
+                        <li class="{%$val.class_type%}" data-role="type-condition-li" common-data-role="condition-li" data-mark="{%$key%}">{%$val.name%}</li>
+                        {%/foreach%}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="popup-content clearfix ui-border-b">
+                <div class="content-title">风格场景</div>
+                <div class="content-list">
+                    <ul>
+                        {%foreach $goods_style_arr as $key => $val%}
+                        <li class="{%$val.class_type%}" data-role="style-condition-li" common-data-role="condition-li" data-mark="{%$key%}">{%$val.name%}</li>
+                        {%/foreach%}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="popup-content clearfix ui-border-b">
+                <div class="content-title">商家类型</div>
+                <div class="content-list">
+                    <ul>
+                        {%foreach $goods_photographers_arr as $key => $val%}
+                        <li class="{%$val.class_type%}" data-role="photographers-condition-li" common-data-role="condition-li" data-mark="{%$key%}">{%$val.name%}</li>
+                        {%/foreach%}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="popup-content clearfix ui-border-b">
+                <div class="content-title">地区<span class="location-name ml5" data-role="location-name">{%$location_name%}</span></div>
+                <div class="content-list">
+                </div>
+            </div>
+
+            <div class="clearfix location-sel ui-border-b">
+                <div class="sel border-r sel-cur" data-role="province-data" common-data-role="common-data"><span data-role="province-data-text">广东</span><i class="ui-triangle arrow-icon ml5 mr5"></i></div>
+                <div class="sel" data-role="city-data" common-data-role="common-data"><span data-role="city-data-text">选择城市</span><i class="ui-triangle arrow-icon ml5 mr5"></i></div>
+            </div>
+
+            <div class="popup-content clearfix content-bottom" data-role="province-data-list-wrap" common-data-role="common-data-list-wrap">
+                <div class="content-list" data-role="province-data-list" common-data-role="common-data-list">
+                    <!--添加内容-->
+                </div>
+            </div>
+            <div class="popup-content clearfix content-bottom" data-role="city-data-list-wrap" common-data-role="common-data-list-wrap">
+                <div class="content-list" data-role="city-data-list" common-data-role="common-data-list">
+                    <!--添加内容-->
+                </div>
+            </div>
+
+        </div>
+        <div class="popup-footer ui-border-t popup-hide">
+            <div class="popup-footer-btn reset fb" data-role="reset">重置</div>
+            <div class="popup-footer-btn confirm fb" data-role="confirm">确定</div>
+        </div>
+    </div>
+</body>
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+    var LZ = require('wap-huipai:global/lazyload/lazyload');
+    var go_top = require('wap-huipai:global/go_top/go_top');
+    var location_localstorage = require('../../modules/global/location_sel/location_localstorage');
+    var list_item_class = require('wap-huipai:global/list/list');
+    var template  = __inline('./list.tmpl');
+
+    $(function(){
+        //链接构造结构
+        var parent_se = "{%$parent_se%}";
+        var child_se = "{%$child_se%}";
+        //条件记录，用作页面跳转或者异步加载数据
+        var type_id_str = "{%$type_id_str%}";
+        var style_id_str = "{%$style_id_str%}";
+        var photographers_type_id = "{%$photographers_type_id%}";
+        var type_condition_start = "";
+        var style_condition_start = "";
+        var photographers_condition_start = "";
+        //排序相关条件
+        var sort = "{%$sort%}";
+        var order = "{%$order%}";
+        var kw = "{%$kw%}";
+        var lid = "{%$lid%}";
+
+
+
+
+        new LZ($('body'),{
+            // size : window.innerWidth
+        });
+
+        // 返回顶部按钮
+        new go_top({
+            render_ele : $('body')
+        });
+
+
+        //加载数据
+        var _page_params = {
+            sort : sort,
+            order : order,
+            kw : kw,
+            type_id_str : type_id_str,
+            style_id_str : style_id_str,
+            photographers_type_id : photographers_type_id,
+            lid : lid
+        }
+
+        var list_obj = new list_item_class(
+                {
+                    //渲染目标
+                    ele : $('#data-list-wrap'),
+                    //请求地址
+                    url :  window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'search/get_list.php',
+                    //传递参数
+                    params : _page_params,
+                    //模板
+                    template : template,
+                    //lz是否开启参数
+                    is_open_lz_opts : true
+
+                });
+        //加载数据end
+
+
+        //地区处理
+        //地区选择
+        //var location_arr_json = {%$location_arr_json%};
+        var province_id = "{%$province_id%}";
+        var city_id = "{%$city_id%}";
+        var version = "{%$version%}";//地址版本
+
+        var location_localstorage_obj = new location_localstorage({
+            province_id:province_id,
+            city_id:city_id,
+            version:version
+            //location_json_obj:location_arr_json.result_data
+        });
+
+
+        //条件选中处理
+        $("[common-data-role='condition-li']").on("click",function(){
+            var self = $(this);
+            var data_mark = self.attr("data-mark");
+            var data_role = self.attr("data-role");
+            if(data_role)
+            {
+                //商家类型不能多选
+                if(data_role=="photographers-condition-li")
+                {
+                    if(self.hasClass("li-cur"))
+                    {
+
+                        self.removeClass("li-cur");
+                    }
+                    else
+                    {
+
+                        $("[data-role='photographers-condition-li']").each(function(){
+                            $(this).removeClass("li-cur");
+
+                        });
+                        self.addClass("li-cur");
+                    }
+                }
+                else
+                {
+                    //判断有没有选中样式，没有则添加上
+                    if(self.hasClass("li-cur"))
+                    {
+                        self.removeClass("li-cur");
+                    }
+                    else
+                    {
+                        self.addClass("li-cur");
+                    }
+                }
+
+            }
+        });
+
+
+        //确定按钮
+        $("[data-role='confirm']").on("click",function(){
+           //设置条件
+            set_condition_str("type-condition-li");
+            set_condition_str("style-condition-li");
+            set_condition_str("photographers-condition-li");
+
+           //获取相关的条件，做跳转处理
+           var ev_str = "";
+           if(type_condition_start!="" || style_condition_start!="" || photographers_condition_start!="")
+           {
+               ev_str = photographers_condition_start+type_condition_start+style_condition_start;
+           }
+           //地区组件筛选的地区ID
+           var obj_lid = 0;
+           $("[data-role='city-data-list']").find(".li-cur").each(function(){
+               obj_lid = $(this).attr("data-id");
+           });
+
+           var jump_link = "./index.php?tp=list&ev="+ev_str+"&sort="+sort+"&order="+order+"&lid="+obj_lid+"&kw="+kw+"&s=1";
+           console.log("跳转链接："+jump_link);
+            window.location.href=jump_link;
+
+        });
+
+        //显示筛选模块
+        $("[data-role='show-condition-list']").on("click",function(){
+            var fade = $("[data-role='fade']");
+            var search_popup_wrap = $("[data-role='search-popup-wrap']");
+            if(fade.hasClass("fn-hide"))
+            {
+                fade.removeClass("fn-hide");
+            }
+            search_popup_wrap.find(".popup").removeClass("popup-hide");
+            search_popup_wrap.find(".popup").addClass("popup-show");
+            search_popup_wrap.find(".popup-footer").removeClass("popup-hide");
+            search_popup_wrap.find(".popup-footer").addClass("popup-show");
+            $(".cor-bg-fff").css("overflow","hidden");
+        });
+
+        //隐藏筛选模块
+        $("[data-role='fade']").on("click",function(){
+            var search_popup_wrap = $("[data-role='search-popup-wrap']");
+            if(!$(this).hasClass("fn-hide"))
+            {
+                $(this).addClass("fn-hide");
+            }
+
+            search_popup_wrap.find(".popup").removeClass("popup-show");
+            search_popup_wrap.find(".popup").addClass("popup-hide");
+            search_popup_wrap.find(".popup-footer").removeClass("popup-show");
+            search_popup_wrap.find(".popup-footer").addClass("popup-hide");
+            $(".cor-bg-fff").css("overflow","auto");
+        });
+
+
+        //获取条件的筛选
+        function set_condition_str(data_role)
+        {
+            //临时数组，记录选中的值
+            var tmp_arr = [];
+            switch(data_role)
+            {
+                case "type-condition-li":
+                    var cur_obj = $(".li-cur[data-role='type-condition-li']");
+                    cur_obj.each(function(){
+                        var cur_data_mark = $(this).attr("data-mark");
+                        tmp_arr.push(cur_data_mark);
+                    });
+                    if(tmp_arr.length>0)
+                    {
+                        type_condition_start = "11_"+tmp_arr.join(child_se)+parent_se;
+                    }
+                    break;
+                case "style-condition-li":
+                    var cur_obj = $(".li-cur[data-role='style-condition-li']");
+                    cur_obj.each(function(){
+                        var cur_data_mark = $(this).attr("data-mark");
+                        tmp_arr.push(cur_data_mark);
+                    });
+                    if(tmp_arr.length>0)
+                    {
+                        style_condition_start = "22_"+tmp_arr.join(child_se)+parent_se;
+                    }
+                    break;
+                case "photographers-condition-li":
+                    var cur_obj = $(".li-cur[data-role='photographers-condition-li']");
+                    cur_obj.each(function(){
+                        var cur_data_mark = $(this).attr("data-mark");
+                        tmp_arr.push(cur_data_mark);
+                    });
+                    if(tmp_arr.length>0)
+                    {
+                        photographers_condition_start = "33_"+tmp_arr.join(child_se)+parent_se;
+                    }
+                    break;
+            }
+        }
+
+
+
+    });
+
+</script>
+
+</html>

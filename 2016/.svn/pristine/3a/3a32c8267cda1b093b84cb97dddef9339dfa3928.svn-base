@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>volvoV40</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/wap_6m.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="volvo-page">
+		<div class="path1 clearfix">
+			<div class="bg-item">
+				<img src="images_6m/blank-84x118.png" />
+			</div>
+			<h1 class="logo">
+				<a href="#">
+					<img src="images_6m/logo-img.png" />
+				</a>
+			</h1>
+			<!--金融政策-->
+			<div class="jr-item">
+				<a href="#"></a>
+			</div>
+			<!--金融政策 end-->
+		</div>
+		<div class="path2">
+			<div class="fromList">
+				<div class="item clearfix">
+					<h3 class="title">
+						姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名
+					</h3>
+					<input type="text" class="input-txt"/>
+				</div>
+				<div class="item clearfix">
+					<div class="sex-item">
+						<label>
+							<input type="radio" name="RadioGroup1" value="男" id="RadioGroup1_0" checked="checked">
+							先生
+						</label>
+						<label>
+							<input type="radio" name="RadioGroup1" value="女" id="RadioGroup1_1">
+							女士
+						</label>
+					</div>
+				</div>
+				<div class="item clearfix">
+					<h3 class="title">
+						电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话
+					</h3>
+					<input type="text" class="input-txt" />
+				</div>
+				<div class="item address-item clearfix">
+					<div class="title-item">
+						<h3 class="title">
+							省&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份
+						</h3>
+						<h3 class="title">
+							城&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市
+						</h3>
+					</div>
+					<div id="sel">
+						<select class="input-txt">
+							<option>广东</option>
+							<option>河北</option>
+						</select>
+						<select class="input-txt" >
+							<option>广州</option>
+							<option>其他</option>
+						</select>
+					</div>
+				</div>
+				<div class="tips-item">
+					<img src="images_6m/ll-img-4.png" />
+				</div>
+				<div class="btn-item">
+					<img src="images_6m/ll-img-2.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="path4">
+			<!-- Swiper -->
+			<div class="swiper-container banner-warp">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images_6m/point-img/1.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>亮与暗的极致，让设计迸发创意</dt>
+								<dd>
+									沃尔沃V40及V40 CrossCountry越界车，<br /> 
+									来自极光的国度，瑞典。家族式雷神之锤徽标设计， <br /> 
+									源于黑暗中迸发的设计灵感，过目，已难忘。 <br /> 
+									每一寸车身线条皆来自于自然的设计初衷， <br /> 
+									斯堪的纳维亚美学精髓，简约中透露着力量与坚定。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images_6m/point-img/2.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>攻守兼备的动力新科技</dt>
+								<dd>
+								“减小引擎优化油耗，同时加多一点智能技术，带给你满满动力。”沃尔沃V40全系搭载Drive-E E驱智能科技，V40搭载T4涡轮增压发动机，搭载手自一体6速手自一体变速箱，输出190匹强劲马力和300牛&bull;米峰值扭矩，百公里加速6.9秒，综合工况油耗低至5.6升， 更高性能更低能耗，伴您本色前行。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images_6m/point-img/3.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>全路况越界动力组合</dt>
+								<dd>
+									沃尔沃V40 Cross Country 越界车， <br /> 
+									搭载Drive-E 2.0L <br /> T5涡轮增压发动机+Geartronic手自一体8速变速箱，<br />  
+									瞬间释放245匹峰值马力和350牛&bull;米充沛能量； <br /> 
+									更匹配AWD全时四驱系统，按需分配动力， <br /> 
+									更让征服全地形成为可能。 
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images_6m/point-img/4.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>智能人性科技，由你专享</dt>
+								<dd>
+									全新V40与V40cross<br />
+									country搭载SENSUS智能车载互联系统，<br />
+									创新车联网与技术，将所有安装在云端的功能，<br /> 
+									无论是娱乐咨询，天气预报，抑或是导航路况，<br /> 
+									都能实时更新，更有全语音操控系统，实现人机对话 
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images_6m/point-img/5.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>沃尔沃在乎你的每一口呼吸</dt>
+								<dd>
+									CZIS主动式座舱清洁系统和IAQS车内空气质量控制系统，能自主洁净车内空气，阻隔有害气体侵入，内饰及皮革均经过过敏源和有害物质测试，车内所有金属皆符合珠宝等级贵金属镍的释放标准，让每位V40和V40cross country车主都感到舒适无负担 
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="img-item">
+							<img src="images_6m/point-img/6.jpg"></div>
+						<div class="txt">
+							<dl>
+								<dt>方位智能安全，你忠实的守护者</dt>
+								<dd>
+									全新V40与V40cross country均搭载多方位新安全智控系统，包含ACC自适应巡航、city safety城市安全系统、盲点侦测等诸多极为领先的安全创新，真正做到将主动性防护、辅助性防护和预见性防护三位合一。不仅支持日常驾驭，更守护乘客乃至路上行人安全，为每次行车提供充分的安全保障。 
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- Swiper end-->
+		</div>
+		<div class="path5">
+			<div class="list clearfix">
+				<ul>
+					<li>
+						<a href="#">
+							<img src="images_6m/list-img/s/1.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images_6m/list-img/s/2.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images_6m/list-img/s/3.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images_6m/list-img/s/4.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images_6m/list-img/s/5.jpg" />
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="images_6m/list-img/s/6.jpg" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--弹出层-->
+	<div class="fade" style="display:"></div>
+	<!--大图弹出层-->
+	<div class="pop-img" style="display:">
+		<div class="img-item">
+			<img src="images_6m/list-img/b/1.jpg" />
+		</div>
+	</div>
+	<!--大图弹出层 end-->
+	<!--正在提交弹出层-->
+	<div class="pop-tjing" style="display:none">
+		<p>正在提交，请稍后...</p>
+	</div>
+	<!--正在提交弹出层 end-->
+	<!--弹出层 end-->
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper1 = new Swiper('.banner-warp', {
+			pagination : '.swiper-pagination',
+			preloadImages: true,
+			lazyLoading: true,
+			loop : true,
+			speed: 700,
+			autoplay : 5000,
+			autoplayDisableOnInteraction : false
+		});
+	</script>
+</body>
+</html>

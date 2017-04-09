@@ -1,0 +1,28 @@
+
+
+
+<ul class="list clearfix">
+	{{#each list}}
+	<li class="pic-list-width-44-percent">
+		<div class="img-item">
+			<i class="img" style="background-image:url({{images}})"></i>
+			<div class="txt f12 color-fff">
+				{{consults}}
+			</div>
+		</div>
+		<div class="txt-item">
+			<div class="box-1 color-666">
+				{{titles}}
+			</div>
+			<div class="box-2 clearfix">
+				<div class="txt-1 fldi color-fa6">
+					{{{prices}}}
+				</div>
+				<div class="txt-2 frdi color-ccc">
+					{{location_name}}
+				</div>
+			</div>
+		</div>
+	</li>
+	{{/each}}
+</ul>

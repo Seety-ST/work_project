@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        更换手机号
+    </title>
+    {%$wap_global_head%}
+</head>
+<body class="cor-bg-fff">
+
+<!-- <link rel="import" href="../ui/g_head.tpl.htm?__inline"> -->
+
+<link charset="utf-8" rel="stylesheet" href="../../style/auth/bind_phone.scss">
+<main role="main">
+
+    <div id="page-container" class="page-container" v-cloak>
+
+        <div class="bind-phone">
+            <div class="p1th">
+                <div class="wbox ">
+                    <div class="lbox  ">
+                        <div class="icon icon-1"></div>
+                        <p class="p1">验证身份</p>
+                    </div>
+                    <div class="rbox cur">
+                        <div class="icon icon-2"></div>
+                        <p class="p1">绑定新号码</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="p2th">
+                <div class="item-wrap">
+                    <div class="item ui-border-b">
+                        <div class="f16 main-color numer"  @click="get_v_num" v-html="code_btn_html"></div>
+                        <input type="text" v-model="phone"  name=" " id=" " placeholder="请填写新手机号码" class="input-text">
+                    </div> 
+
+                    <div class="item ui-border-b">
+                       <input type="text" name=" " id=" "  v-model="v_num"   placeholder="请填写验证码" class="input-text">
+                    </div> 
+                    
+                </div>     
+            </div>
+
+            <div class="btn">
+                <button  :disabled="!is_submit"  @click="save_data" class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l"><span class="ui-button-content f16">确定</span></button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</main>
+
+</body>
+
+</html>
+
+{%$wap_global_footer%} 
+
+<!-- <link rel="import" href="../ui/g_footer.tpl.htm?__inline"> -->
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+    (function()
+    {
+        // 加载util
+        var Util = require.syncLoad(__moduleId('/modules/global/util/index'));
+
+        new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                // 倒计时秒数
+                var num = 10 ;
+                return{
+                    is_submit : '',
+                    phone : '',
+                    v_num : '',
+                    count_down_sec : num,
+                    count_down_sec_static : num,
+                    code_btn_html : '获取验证码',
+                    code_btn_lock : false,
+                    code : ''
+
+                }
+            },
+            computed :
+            {
+                is_submit : function()
+                {
+                    var self = this;
+                    var ret;
+                    self.phone == "" || self.v_num == "" ? ret = false : ret = true;
+                    return ret;
+                }
+            },
+            methods:
+            {
+                
+                get_v_num : function()
+                {
+                    var self = this;
+
+
+                    if (self.code_btn_lock) 
+                    {
+                        return ;
+                    }
+
+                    if (!self.phone) 
+                    {
+                        Util.toast({
+                            message: '请填写手机号码',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+                    var phone_len = /^\d{11}$/;
+                    if(!phone_len.exec( parseInt(self.phone)))
+                    { 
+                        Util.toast({
+                            message: '请输入正确手机号码',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+                    
+                    // 异步请求
+                    Util.request
+                    ({
+                        url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN'] + 'auth/get_ver_code.php',
+                        type : 'POST',
+                        cache : true,
+                        data :
+                        {
+                            phone : self.phone,
+                            phone_type : 'new'
+                        },
+                        beforeSend : function()
+                        {
+                            console.log('请求中...')
+                        },
+                        success : function(back_data)
+                        {
+                            console.log(back_data);
+                            var ret = back_data.res.data;
+                            if (ret.result == 1) 
+                            {
+                                
+                            }
+                            else
+                            {
+                                Util.toast({
+                                    message: ret.message,
+                                    position: 'middle',
+                                    duration: 2000
+                                });
+
+                                return ;
+                            }
+
+
+                        }
+                    });
+
+                    // 开关
+                    self.code_btn_lock = true;
+                    self.interval_value = setInterval(function(){
+                        self.count_down_sec--;
+                        if(self.count_down_sec == 0)
+                        {
+                            clearInterval(self.interval_value);
+                            self.count_down_sec = self.count_down_sec_static;
+                            self.code_btn_html = "获取验证码";
+                            self.code_btn_lock = false;
+                        
+                        }
+                        else
+                        {
+                            //html结构显示
+                            self.code_btn_html = self.count_down_sec+"s";
+                        }
+                    },1000);
+
+
+                },
+
+                save_data : function()
+                {
+                    
+                    var self = this;
+                    if (!self.phone) 
+                    {
+                        Util.toast({
+                            message: '请填写手机号码',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+                    var phone_len = /^\d{11}$/;
+                    if(!phone_len.exec( parseInt(self.phone)))
+                    { 
+                        Util.toast({
+                            message: '请输入正确手机号码',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+                    if (!self.v_num) 
+                    {
+                        Util.toast({
+                            message: '请填写验证码',
+                            position: 'middle',
+                            duration: 2000
+                        });
+                        return ;
+                    }
+
+
+                    Util.request
+                    ({
+                        url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN'] + 'auth/send_ver_code.php',
+                        type : 'POST',
+                        cache : true,
+                        data :
+                        {
+                            phone : self.phone,
+                            code : self.v_num,
+                            phone_type : 'new'
+                        },
+                        beforeSend : function()
+                        {
+                            console.log('请求中...')
+                        },
+                        success : function(back_data)
+                        {
+                            console.log(back_data);
+                            var ret = back_data.res.data;
+                            if (ret.result == 1) 
+                            {
+                                window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['mine']
+                            }
+                            else
+                            {
+
+                                Util.toast({
+                                    message: ret.message,
+                                    position: 'middle',
+                                    duration: 2000
+                                });
+                                return ;
+                            }
+
+                        }
+                    });
+
+                }
+
+                
+            }
+        });
+
+    })();
+</script>
+
+{%$wap_global_tj%} 

@@ -1,0 +1,27 @@
+<html>  
+<body style="margin:0">  
+
+<img src="images/1.jpg" />
+<!-- 画图 -->
+<canvas id="myCanvas" width="300" height="400"></canvas>
+<script type="text/javascript">
+    var canvasDom = document.getElementById("myCanvas");
+    var context = canvasDom.getContext("2d");
+	
+    var image = new Image();//创建一张图片
+    image.src = "images/1.jpg";//设置图片的路径
+    image.onload = function() {//当图片加载完成后
+	
+		context.drawImage(image, 0, 0);
+		
+		//context.drawImage(image,150,100,80,120,20,20,80,120);
+		
+		
+		//for (var i = 0; i < 10; i++) {
+        //    context.drawImage(image, 100 + i * 20, 100 + i * 20);
+        //}
+    };
+</script>
+
+</body>  
+</html>  

@@ -1,0 +1,39 @@
+require.resourceMap({
+    "res": {
+        "wap-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"
+        },
+        "wap-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/extend/layer.ext.js"
+        },
+        "wap-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"
+        },
+        "wap-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "wap-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"
+        },
+        "wap-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/main.js"
+        },
+        "wap-huipai:global/swiper/1.0.0/swiper3.07.min": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"
+        },
+        "wap-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/ua/index.js"
+        },
+        "wap-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/cross_domain_storage.js"
+        },
+        "wap-huipai:global/utility/index": {
+            "deps": [
+                "wap-huipai:global/cookie/index",
+                "wap-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});

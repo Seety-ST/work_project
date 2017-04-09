@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>关于我们 - 莫吉照相馆</title>
+		{%$wap_global_head%}
+		<link href="../../style/about/index-page.scss" type="text/css" rel="stylesheet" />
+	</head>
+	<body class="cor-bg-fff">
+		<div class="about-index-page" >
+			<div class="item-wrap">
+				<a href="./store_info.php?store_id=210300">
+					<div class="ui-edit-user-info-mod ui-border-b">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl">
+									<p class="tips color-666 f14">门店信息</p>
+								</div>
+								<div class="rbox fr">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="./shot_notice.php">
+					<div class="ui-edit-user-info-mod ui-border-b">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl">
+									<p class="tips color-666 f14">拍摄须知</p>
+								</div>
+								<div class="rbox fr">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				
+				<a href="./feedback.php">
+					<div class="ui-edit-user-info-mod ui-border-b">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl">
+									<p class="tips color-666 f14">意见反馈</p>
+								</div>
+								<div class="rbox fr">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+	</body>
+	
+</html>
+{%$wap_global_footer%}
+
+
+
+
+<script>
+ 	(function() {
+	 	
+
+	 	
+	 })();
+</script>
+{%$wap_global_tj%}

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gbk">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+<title>标签关联</title>
+</head>
+<body>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+    #start_time,#end_time {width:200px;}
+    .J_location_sel{
+        display: inline;
+
+    }
+    .J_location_sel_2{
+        display: inline;
+
+    }
+    
+    input[type="text"]{width:150px;}
+</style>
+<style>
+    #img_wid img{
+        width:200px
+    }
+    /**添加样式，避免被重写样式**/
+    fieldset{
+        width:100%
+    }
+    .green{ display:inline-block;color:green;margin-left:10px;border:1px solid rgb(71, 187, 103);border-radius:10px;}
+    .red{display:inline-block;color:red;margin-left:10px;border:1px solid rgb(244, 15, 58);border-radius:10px;}
+    fieldset {margin-bottom:20px;}
+    
+</style>
+<script>
+    $(function () {
+            $(".ui_timepicker").datetimepicker({
+                //showOn: "button",
+                //buttonImage: "./css/images/icon_calendar.gif",
+                //buttonImageOnly: true,
+                showSecond: true,
+                timeFormat: 'hh:mm:ss',
+                stepHour: 1,
+                stepMinute: 1,
+                stepSecond: 1
+            });
+    });
+
+</script>
+<div class="mainbox">
+  <div id="tabs" style="margin-top:10px;">
+    <div class="tabbox">
+      <div class="table-list">
+        <div class="table" style="width:100%;">
+        <iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+        <form id="the_form" name="form1" method="post" action="" target='form_iframe'>
+          <fieldset class="filter">
+            <legend>标签关联</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="26%" height="25">主标签</td>
+                        <td width="74%" height="25">{tags_info.name}<input type="hidden" name="master_tags_id" value="{tags_info.id}"/></td>
+                    </tr>  
+                  <tr>
+                      <td width="26%" height="25">从标签</td>
+					  <td width="74%" height="25">
+                          <ul>
+                            <!-- BEGIN tags_list -->
+                               <!-- IF level=="0" -->
+                                   <li>{shuo_jing}<input name="slave_tags_id[]" type="checkbox" <!-- IF selected -->checked<!-- ENDIF --> value="{id}" id="{id}" parents_id = "{parents_id}" onClick="show_property_checkbox({id})" /><b>{name}:</b></li>
+                               <!-- ELSE -->        
+                                   <li>{shuo_jing}<input type="checkbox" name="slave_tags_id[]"  <!-- IF selected -->checked<!-- ENDIF -->  value="{id}" id="{id}" parents_id = "{parents_id}" onClick="show_property_checkbox({id})" />{name}</li>
+                               <!-- ENDIF -->
+                            <!-- END tags_list -->
+                          </ul>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td width="26%" height="25">&nbsp;</td>
+                    <td width="74%" height="25">
+                        <input type="submit" class="btn_class" value="提交" />
+                        &nbsp;&nbsp;
+                        <a class="btn_class" href="javascript:void(0);" onClick="jump();">返回</a>
+                    </td>
+                  </tr>
+                </table>
+                <script>
+                    
+                    function show_property_checkbox(id)
+                    {
+                        var $this_obj = $("input[id="+id+"]");
+                        var is_checked = $this_obj.attr("checked") == 'checked' ? true : false;
+                        var this_parent_id = $this_obj.attr("parents_id");
+                        if(is_checked && this_parent_id != 0 )
+                        {
+                            var $this_parent_obj = $("input[id="+this_parent_id+"]");
+                            $this_parent_obj.attr("checked",true);
+                            var this_parent_parent_id = $this_parent_obj.attr("parents_id");
+                            if(this_parent_parent_id != 0)
+                            {
+                                $this_parent_parent_obj = $("input[id="+this_parent_parent_id+"]");
+                                $this_parent_parent_obj.attr("checked",true);
+                            }
+                        }
+                        var $obj = $("input[parents_id="+id+"]");
+                        var len = $obj.length;
+                        if(len > 0)
+                        {
+                            for(var i = 0;i<len;i++)
+                            {
+                                if(is_checked)
+                                {
+                                    $obj.eq(i).attr("checked",true);
+                                }else
+                                {
+                                    $obj.eq(i).attr("checked",false);
+                                }
+                                var son_id = $obj.eq(i).attr("id");
+                                show_property_checkbox(son_id);
+                            }
+                        }
+                        
+                        
+                        
+                        
+                    }
+                </script>
+          </fieldset>  
+        </form>
+        </div>
+      </div>
+    </div>   
+    </div>
+</div>
+<script>
+    function jump()
+    {
+        window.parent.location.href = "goods.php?action=goods_tags_list";
+    }
+</script>
+</body>
+</html>

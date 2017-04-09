@@ -1,0 +1,181 @@
+<?php
+
+/**
+ * 订单 详情
+ *
+ * @author willike <chenwb@yueus.com>
+ * @since 2017-01-10
+ */
+require(dirname(dirname(__FILE__)) . '/moji_input.inc.php');
+
+$order_sn = $client_data['data']['param']['order_sn'];
+if (empty($order_sn)) {
+    $options['data'] = array(
+        'result' => 0,
+        'message' => '订单号为空',
+    );
+    return $cp->output($options);
+}
+$mall_order_api_obj = POCO::singleton('snap_mall_order_api_class');
+$order_result = $mall_order_api_obj->get_order_full_info($order_sn, $user_id);
+if ($location_id == 'test') {
+    $options['data'] = array(
+        '$user_id' => $user_id,
+        '$order_sn' => $order_sn,
+        '$order_result' => $order_result,
+    );
+    return $cp->output($options);
+}
+if (empty($order_result)) {
+    $options['data'] = array(
+        'result' => 0,
+        'message' => '没有该订单',
+    );
+    return $cp->output($options);
+}
+if ($order_result['buyer_user_id'] != $user_id &&
+        $order_result['seller_user_id'] != $user_id) {
+    $options['data'] = array(
+        'result' => -1,
+        'message' => '非本人订单,无法查看',
+    );
+    return $cp->output($options);
+}
+// 状态
+$status = $order_result['status'];
+$status_str = moji_get_config('order_status', $status);
+$pay_time_left_str = 0;
+// 待付款 0, 待到店 1, 待完成 2, 已关闭 7, 已完成 8
+if ($status == 0) {  // 待支付
+    $pay_time_left_str = $order_result['pay_time_left'];  // 剩余支付时间
+    $time_left = $pay_time_left_str;   // 剩余时间
+    if ($time_left > 0) {
+        // 分
+        $minute = floor($time_left / 60);
+        if ($minute > 0) {
+            $new_time_left = $minute . '分';
+        }
+        $second = $time_left % 60;
+        if ($second > 0) {
+            $new_time_left .= $second . '秒';
+        }
+        if (empty($new_time_left)) {  // 超过限定时间
+            $new_time_left = '尽快';
+        } else {
+            $new_time_left .= '内';
+        }
+    } else {
+        $new_time_left = '尽快';
+    }
+    if ($os_type == 'web') {  // web 添加颜色
+        $new_time_left = '<label id="djs" style="color:#fff;font-weight: bold;">' . $new_time_left . '</label>';
+    }
+    $status_description = str_replace('{pay_time_left}内', $new_time_left, $order_result['tips']);
+} elseif ($status == 1) {  // 待到店
+    $details_info = $order_result['details'][0];
+    $scheduled_time_str = $details_info['scheduled_time_str'];
+    if (empty($scheduled_time_str)) {
+        $scheduled_time_str = date('Y-m-d', $details_info['service_time']);
+    }
+    $time_left = $scheduled_time_str;   // 服务时间
+    if ($os_type == 'web') {  // web 添加颜色
+        $new_time_left = '<label style="color:#fff;font-weight: bold;">' . $new_time_left . '</label>';
+    }
+    $status_description = str_replace('{schedule_time}', $scheduled_time_str, $order_result['tips']);
+} else {
+    $status_description = $order_result['tips'];
+}
+// 店铺
+$consignee = $order_result['consignee'];
+//$store_location_id = $consignee['location_id'];  // 门店所在地区ID
+//$store_location_name = get_poco_location_name_by_location_id($store_location_id);
+$lng_lat = str_replace('-', ',', $order_result['properties']['lng_lat']);
+$store = array(
+    array(
+        'image' => 'http://image19-d.yueus.com/yueyue/20170107/20170107105339_623663_10002_53511.png?32x32_130',
+        'title' => '', 'value' => $order_result['properties']['store_name'],
+        'lng_lat' => $lng_lat,
+    ),
+    array(
+        'image' => 'http://image19-d.yueus.com/yueyue/20170107/20170107105230_754041_10002_53509.png?32x32_130',
+        'title' => '', 'value' => $consignee['address'],
+        'lng_lat' => $lng_lat,
+    ),
+    array(
+        'image' => 'http://image19-d.yueus.com/yueyue/20170107/20170107105324_210681_10002_53510.png?32x32_130',
+        'title' => '', 'value' => $order_result['hotline']
+    ),
+);
+// 商品信息
+$order_details = $order_result['details'];
+$scheduled_time = '';  // 预约时间
+$goods = array();
+foreach ($order_details as $value) {
+    // 服务时间
+    $scheduled_time .= $value['scheduled_time_str'] . ',';
+    // 商品
+    $goods[] = array(
+        'goods_id' => $value['goods_id'],
+        'title' => $value['goods_name'],
+        'cover' => $value['goods_images'],
+        'standard_id' => $value['prices_type_id'],
+        'standard_name' => $value['prices_spec'],
+        'price' => '￥' . $value['original_prices'],
+    );
+}
+// 服务属性
+$property = array(
+    array('title' => '预约人:', 'value' => $consignee['consignee'] . ' ' . $consignee['cellphone']),
+    array('title' => '拍摄时间:', 'value' => trim($scheduled_time, ',')),
+);
+// 订单属性
+$order_trade = array(
+    array('title' => '订单号：', 'value' => $order_result['order_sn']),
+    array('title' => '下单时间：', 'value' => $order_result['add_time_str']),
+);
+// 付款时间
+if (!empty($order_result['pay_time'])) {
+    $pay_time = empty($order_result['pay_time']) ? '--' : date('Y-m-d H:i:s', $order_result['pay_time']);
+    $order_trade[] = array('title' => '付款时间：', 'value' => $pay_time,);
+}
+// 待付款 0, 待到店 1, 待完成 2, 已关闭 7, 已完成 8
+if ($status == 7) {
+    $order_trade[] = array('title' => '关闭时间：', 'value' => $order_result['close_time_str'],);
+} else if ($status == 2 || $status == 8) {
+    $order_trade[] = array('title' => '到店时间：', 'value' => $order_result['accept_time_str'],);
+    if ($status == 8) {
+        $order_trade[] = array('title' => '完成时间：', 'value' => date('Y-m-d H:i:s', $order_result['sign_time']),);
+    }
+}
+$order_info = array(
+    'title' => '订单详情',
+    'order_sn' => $order_result['order_sn'],
+    'status' => $status,
+    'status_str' => $status_str,
+    'status_icon' => moji_get_config('order_info_icon', $status),
+    'pay_time_left' => $pay_time_left_str,
+    'status_description' => $status_description,
+    'price' => '￥' . $order_result['pending_amount'], // 合计
+    'store' => $store,
+    'property' => $property,
+    'goods' => $goods,
+    'bill' => array(
+        array('title' => '订单金额：', 'value' => '￥' . $order_result['total_amount']),
+//        array('title' => '优惠券', 'value' => '-￥' . $order_result['discount_amount']),
+        array('title' => '合计金额：', 'value' => '￥' . $order_result['pending_amount']),
+    ),
+    'trade' => $order_trade,
+    'add_time' => $order_result['add_time_str'], // 下单时间
+    'button' => moji_trade_button($status, array('from' => 'order_info')),
+);
+// 是否改价
+if ($order_result['is_change_price'] == 1) {
+    // original_subtotal最原始价格，pending_amount实际支付价格，discount_amount优惠券价格，total_amount总金额（订单改价后的金额）,original_amount促销后的订单金额（订单改价前的金额）
+    $order_info['promo_title'] = '改价信息';
+    $order_info['promo'] = array(
+        array('title' => '订单原价：', 'value' => '￥' . $order_result['original_amount']),
+//        array('title' => '改价原因：', 'value' => $order_result['change_price_reason']),
+    );
+}
+$options['data'] = $order_info;
+return $cp->output($options);

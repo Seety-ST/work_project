@@ -1,0 +1,916 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<title>POCO全系列APP产品活动</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<body class="list-bg">
+	<div class="list-page">
+		<!-- 装饰 -->
+		<div class="day-deck">
+			<i class="flower-icon">
+				<img src="images/flower-icon-164x156.png" />
+			</i>
+		</div>
+		<div class="day-warp">
+			<div class="day-img-item">
+				<!-- Swiper -->
+				<!-- 日期 -->
+				<div class="swiper-container gallery-thumbs">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide day7">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day8">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day9">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day10">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day11">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day12">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day13">
+							<img src="images/day-item/blank.png" />
+						</div>
+						<div class="swiper-slide day14">
+							<img src="images/day-item/blank.png" />
+						</div>
+					</div>
+				</div>
+				<!-- 内容 -->
+				<div class="swiper-container gallery-top">
+					<div class="swiper-wrapper">
+						<!-- day7 除夕 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model7">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/7/1.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">POCO相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													9款猴年相框
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/7/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													素材中心4款拜年专题<br />
+													6款毛玻璃、2款马赛克
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/7/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新5款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/7/4.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">图片合成器</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													春节年味新玩法
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/7/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													合家团圆模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-7"></div>
+							<div class="swiper-button-prev prev-7"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav7">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-poco" >
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-hcq">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+						<!-- day8 初一 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model8">
+							    <div class="swiper-wrapper">
+							    		<div class="swiper-slide" style="background-image: url(images/model-img/8/1.jpg)">
+							    			<img src="images/model-img/blank.png" />
+							    			<div class="app-txt-item">
+							    				<h4 class="title">
+							    					<span class="point">POCO相机</span>
+							    				</h4>
+							    				<div class="txt-item">
+							    					<p>
+							    						10款全新光效
+							    					</p>
+							    				</div>
+							    			</div>
+							    		</div>
+							    		<div class="swiper-slide"  style="background-image: url(images/model-img/8/2.jpg)">
+							    			<img src="images/model-img/blank.png" />
+							    			<div class="app-txt-item">
+							    				<h4 class="title">
+							    					<span class="point">美人相机</span>
+							    				</h4>
+							    				<div class="txt-item">
+							    					<p>
+							    						素材中心专题上新2款、5款毛玻璃<br />
+							    						2款马赛克、2款指尖魔法
+							    					</p>
+							    				</div>
+							    			</div>
+							    		</div>
+							    		<div class="swiper-slide" style="background-image: url(images/model-img/8/3.jpg)">
+							    			<img src="images/model-img/blank.png" />
+							    			<div class="app-txt-item">
+							    				<h4 class="title">
+							    					<span class="point">简&nbsp;&nbsp;拼</span>
+							    				</h4>
+							    				<div class="txt-item">
+							    					<p>
+							    						首页上新5款模板
+							    					</p>
+							    				</div>
+							    			</div>
+							    		</div>
+							    		<div class="swiper-slide" style="background-image: url(images/model-img/8/4.jpg)">
+							    			<img src="images/model-img/blank.png" />
+							    			<div class="app-txt-item">
+							    				<h4 class="title">
+							    					<span class="point">图片合成器</span>
+							    				</h4>
+							    				<div class="txt-item">
+							    					<p>
+							    						聚财有道新玩法
+							    					</p>
+							    				</div>
+							    			</div>
+							    		</div>
+							    		<div class="swiper-slide" style="background-image: url(images/model-img/8/5.jpg)">
+							    			<img src="images/model-img/blank.png" />
+							    			<div class="app-txt-item">
+							    				<h4 class="title">
+							    					<span class="point">简&nbsp;&nbsp;拼</span>
+							    				</h4>
+							    				<div class="txt-item">
+							    					<p>
+							    						辞旧迎新模板
+							    					</p>
+							    				</div>
+							    			</div>
+							    		</div>
+							    </div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-8"></div>
+							<div class="swiper-button-prev prev-8"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav8">
+							    <div class="swiper-wrapper">
+								       <div class="swiper-slide n-poco" >
+								       	<img src="images/tab-nav/blank.png" />
+								       </div>
+								       <div class="swiper-slide n-mr">
+								       	<img src="images/tab-nav/blank.png" />
+								       </div>
+								       <div class="swiper-slide n-jp">
+								       	<img src="images/tab-nav/blank.png" />
+								       </div>
+								       <div class="swiper-slide n-hcq">
+								       	<img src="images/tab-nav/blank.png" />
+								       </div>
+								       <div class="swiper-slide n-jk">
+								       	<img src="images/tab-nav/blank.png" />
+								       </div>
+							    </div>
+							</div>
+						</div>
+						<!-- day9 初二 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model9">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/9/1.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">POCO相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													24款文字素材
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/9/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													素材中心开运吉祥猴专题
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/9/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新4款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/9/4.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">图片合成器</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													梦幻派对新玩法
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/9/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													家宴邀请模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-9"></div>
+							<div class="swiper-button-prev prev-9"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav9">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-poco" >
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-hcq">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+						<!-- day10 初三 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model10">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/10/1.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">POCO相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													24款文字素材
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/10/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													素材中心新年猴专题
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/10/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新4款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/10/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													亲朋聚会模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-10"></div>
+							<div class="swiper-button-prev prev-10"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav10">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-poco" >
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+						<!-- day11 初四 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model11">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/11/1.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">POCO相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													24款文字素材
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/11/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													素材中心大话西游专题
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/11/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新2款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/11/4.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">图片合成器</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													甜蜜恋曲新玩法
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/11/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													感恩主题模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-11"></div>
+							<div class="swiper-button-prev prev-11"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav11">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-poco" >
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-hcq">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+						<!-- day12 初五 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model12">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/12/1.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">POCO相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													24款文字素材
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/12/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													财神驾到专题、<br />
+													招财猫毛玻璃及马赛克
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/12/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新4款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/12/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													亲子主题模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-12"></div>
+							<div class="swiper-button-prev prev-12"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav12">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-poco" >
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+						<!-- day13 初六 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model13">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/13/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													2款情人节素材专题
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/13/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新1款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/13/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													约会邀请模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-13"></div>
+							<div class="swiper-button-prev prev-13"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav13">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+						<!-- day14 初七 -->
+						<div class="swiper-slide" >
+							<!-- 切换内容 -->
+							<div class="swiper-container apptab model14">
+							    <div class="swiper-wrapper">
+									<div class="swiper-slide" style="background-image: url(images/model-img/14/2.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">美人相机</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													唇印马赛克、指尖蜜语等
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/14/3.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;拼</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													首页上新1款模板
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide" style="background-image: url(images/model-img/14/5.jpg)">
+										<img src="images/model-img/blank.png" />
+										<div class="app-txt-item">
+											<h4 class="title">
+												<span class="point">简&nbsp;&nbsp;客</span>
+											</h4>
+											<div class="txt-item">
+												<p>
+													爱情点滴模板
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next next-14"></div>
+							<div class="swiper-button-prev prev-14"></div>
+							<!-- apptab -->
+							<div class="swiper-container apptabnav modelnav14">
+							    <div class="swiper-wrapper">
+								        <div class="swiper-slide n-mr">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jp">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+								        <div class="swiper-slide n-jk">
+								        	<img src="images/tab-nav/blank.png" />
+								        </div>
+							    </div>
+							</div>
+							<!-- 切换内容 end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="share-btn">
+			<a href="#">
+				<img src="images/share-btn-528x155.png" />
+			</a>
+		</div>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade" style="display:none"></div>
+	<!-- 分享弹出层  -->
+	<div class="pop-share" style="display:none ">
+		<i class="top-icon">
+			<img src="images/top-icon-64x97.png" />
+		</i>
+		<div class="pop-con">
+			<img src="images/share-img-750x503.png" />
+		</div>
+	</div>
+	<!-- 弹出层 end -->
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+	var galleryTop = new Swiper('.gallery-top', {
+			spaceBetween: 0,
+			effect : 'fade',
+			fade: {
+			  crossFade: true,
+			},
+			initialSlide :2 //定位日期，从0开始
+	});
+	var galleryThumbs = new Swiper('.gallery-thumbs', {
+			spaceBetween: 0,
+			centeredSlides: true,
+			slidesPerView: 'auto',
+			touchRatio: 0.2,
+			slideToClickedSlide: true,
+			initialSlide :2 //定位日期，从0开始
+	});
+	galleryTop.params.control = galleryThumbs;
+	galleryThumbs.params.control = galleryTop;
+	
+	//day7
+	var model7 = new Swiper('.model7', {
+		    nextButton: '.next-7',
+		    prevButton: '.prev-7',  
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav7 = new Swiper('.modelnav7', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model7.params.control = modelnav7;
+	modelnav7.params.control = model7;
+
+	//day8
+	var model8 = new Swiper('.model8', {
+		    nextButton: '.next-8',
+		    prevButton: '.prev-8', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav8 = new Swiper('.modelnav8', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model8.params.control = modelnav8;
+	modelnav8.params.control = model8;
+
+	//day9
+	var model9 = new Swiper('.model9', {
+		    nextButton: '.next-9',
+		    prevButton: '.prev-9', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav9 = new Swiper('.modelnav9', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model9.params.control = modelnav9;
+	modelnav9.params.control = model9;
+
+	//day10
+	var model10 = new Swiper('.model10', {
+		    nextButton: '.next-10',
+		    prevButton: '.prev-10', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav10 = new Swiper('.modelnav10', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model10.params.control = modelnav10;
+	modelnav10.params.control = model10;
+
+	//day11
+	var model11 = new Swiper('.model11', {
+		    nextButton: '.next-11',
+		    prevButton: '.prev-11', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav11 = new Swiper('.modelnav11', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model11.params.control = modelnav11;
+	modelnav11.params.control = model11;
+
+	//day12
+	var model12 = new Swiper('.model12', {
+		    nextButton: '.next-12',
+		    prevButton: '.prev-12', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav12 = new Swiper('.modelnav12', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model12.params.control = modelnav12;
+	modelnav12.params.control = model12;
+
+	//day13
+	var model13 = new Swiper('.model13', {
+		    nextButton: '.next-13',
+		    prevButton: '.prev-13', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav13 = new Swiper('.modelnav13', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model13.params.control = modelnav13;
+	modelnav13.params.control = model13;
+
+	//day14
+	var model14 = new Swiper('.model14', {
+		    nextButton: '.next-14',
+		    prevButton: '.prev-14', 
+		    autoplay : 3000,
+		    autoplayDisableOnInteraction : false
+	});
+	var modelnav14 = new Swiper('.modelnav14', {
+		    spaceBetween: 0,
+		    centeredSlides: true,
+		    slidesPerView: 'auto',
+		    touchRatio: 0.2,
+		    slideToClickedSlide: true
+	});
+	model14.params.control = modelnav14;
+	modelnav14.params.control = model14;
+	
+	</script>
+</body>
+</html>

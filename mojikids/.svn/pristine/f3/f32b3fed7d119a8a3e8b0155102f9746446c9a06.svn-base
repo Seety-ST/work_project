@@ -1,0 +1,42 @@
+.page-container {
+  background-color: #fff;
+  display: -webkit-box;
+}
+
+.page-container .bind-container {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+}
+
+.page-container .bind-container .input-con {
+  height: 0.7rem;
+  line-height: 0.7rem;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+
+.page-container .bind-container .input-con .key-btn {
+  font-size: 0.16rem;
+}
+
+.page-container .bind-container .input-con .input-con-detail {
+  width: 100%;
+}
+
+.page-container .bind-container .submit-btn-con {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 0.2rem;
+  display: block;
+}
+
+.page-container .bind-container .index-footer-img {
+  background: url("http://mojikids.yueus.com/static/wap/image/auth/auth-foot-img-586x386.png") no-repeat;
+  background-size: cover;
+  padding-top: 1.2rem;
+  position: fixed;
+  bottom: 0;
+  width: 2.93rem;
+  margin: 0 auto;
+  margin-left: 0.47rem;
+}

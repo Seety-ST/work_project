@@ -1,0 +1,4 @@
+require.resourceMap({
+    "res": {},
+    "pkg": {}
+});

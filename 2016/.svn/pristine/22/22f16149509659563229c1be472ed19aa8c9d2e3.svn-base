@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>虾壳</title>
+	<link rel="stylesheet" type="text/css" href="css/supe.css">
+	</script>
+</head>
+<body>
+	<div class="supe-page">
+		<div class="contain">
+			<div class="bg-item animated"></div>
+			<div class="con-item">
+				<div class="show-item animated">
+					<div class="scrollBox">
+						<!-- 放图片或者背景都可以 -->
+						<ul class="img_list clearfix" id="foo2">
+							<li style="background-image: url( images/banner-img/banner-1.jpg)"></li>
+							<li style="background-image: url( images/banner-img/banner-2.jpg)"></li>
+							<li style="background-image: url( images/banner-img/banner-3.jpg)"></li>
+						</ul>
+						<!-- 渐变切换 -->
+						<div class="page-wrap clearfix">
+							<div class="page-box fl" id="pager2">
+								<a href="#"></a>
+								<a href="#"></a>
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="info-warp animated">
+					<i class="logo-item"></i>
+					<dl class="text-item">
+						<dt class="title"></dt>
+						<dd>
+							你会跳舞，来这里展示你的魅力<br />
+							你会讲故事，这里是你的自己的深夜电台<br />
+							你是学霸，来这里，给你发挥的空间<br />
+							你会打游戏，来这里，展示你的游戏技能
+						</dd>
+						<dd>
+							你总有出色的那一面！
+						</dd>
+					</dl>
+					<div class="info-item">
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<img src="images/test/148x148.png" />
+							</div>
+							<div class="btn-warp" style="margin-top:40px">
+								<a href="#" target="_blank" class="btn btn-iphone clearfix " style="display:none"> 
+									<i class="icon"></i>
+									<span>iPhone版下载</span>
+								</a>
+								<a href="#" target="_blank" class="btn btn-android clearfix" > 
+									<i class="icon"></i>
+									<span>Android版下载</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.carouFredSel-5.5.0.js"></script>
+	<script type="text/javascript">
+		//  Scrolled by user interaction
+		$('#foo2').carouFredSel({
+			pagination: "#pager2",
+			auto: true,
+			responsive: true,
+				items: 1,
+				scroll: {
+					fx: "crossfade"
+				}
+		});
+	</script>
+</body>
+</html>

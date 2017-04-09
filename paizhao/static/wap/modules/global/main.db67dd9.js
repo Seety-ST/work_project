@@ -1,0 +1,1 @@
+define("wap-huipai:global/main",function(){});

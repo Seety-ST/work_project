@@ -1,0 +1,37 @@
+<?php
+/**
+* @Desc:     商品咨询数编辑      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月18日
+* @Time:     上午9:38:30
+* @Version:  
+*/
+require(dirname(dirname(__FILE__)).'/common.inc.php');
+$consult_obj = POCO::singleton('pai_paizhao_consult_class');
+$sort = '';
+$consult_num = $_INPUT['consult_num'];
+if ($consult_num)
+{
+    $sort = $consult_num == 1 ? 'consult_num DESC' : 'consult_num ASC';
+}
+
+$list = $consult_obj->get_goods_list('0, 20', $sort);
+$status_list = $consult_obj->get_consult_status();
+foreach ($list as $k=>$v)
+{
+    $list[$k]['status_desc'] = $status_arr[$v['status_id']];
+    $list[$k]['create_time'] = date('Y-m-d H:i:s', $v['create_time']);
+    $list[$k]['work_time'] = date('Y-m-d', $v['work_time']);
+}
+$tpl = new SmartTemplate ( TASK_TEMPLATES_ROOT."/consult/consult_list.tpl.htm" );
+$tpl->assign('list', $list);
+$tpl->assign('page', $page_obj->output(1));
+$tpl->assign('status_arr', $status_list);
+$tpl->assign('start_time', $start_time);
+$tpl->assign('end_time', $end_time);
+$tpl->assign('mobile', $mobile);
+$tpl->assign('photographers', $photographers);
+$tpl->assign('work_start_time', $work_start_time);
+$tpl->assign('work_end_time', $work_end_time);
+$tpl->assign('order_id', $order_id);
+$tpl->output();

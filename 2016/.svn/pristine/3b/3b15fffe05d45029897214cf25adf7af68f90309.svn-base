@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>云相册</title>
+	<link href="css/cloud-hcq.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="cloud-page">
+		<!-- mod-tool-bar -->
+		<section class="mod-tool-bar clearfix">
+			<div class="batch-warp">
+				<span class="choose-num">
+					已选择 <em class="num">10</em>
+					张
+				</span>
+				<!-- none-btn-area 为无法点击状态 -->
+				<div class="btn-area none-btn-area">
+					<span>取消</span>
+				</div>
+			</div>
+		</section>
+		<!-- mod-tool-bar end -->
+		<div class="content">
+			<!-- 云相册 -->
+			<div class="cloud-imgList-item">
+				<div class="item-warp">
+					<div class="item">
+						<dl>
+							<dt class="date-item">2016年01月21日</dt>
+							<dd class="list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date21-1" name="" checked="checkbox" />
+											<label for="checkimg-date21-1"></label>
+										</div>
+									</li>
+									<li class="active">
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date21-2" name="" />
+											<label for="checkimg-date21-2"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date21-3" name="" />
+											<label for="checkimg-date21-3"></label>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="item">
+						<dl>
+							<dt class="date-item">2016年01月20日</dt>
+							<dd class="list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date20-1" name="" />
+											<label for="checkimg-date20-1"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date20-2" name="" />
+											<label for="checkimg-date20-2"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date20-3" name="" />
+											<label for="checkimg-date20-3"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date20-4" name="" />
+											<label for="checkimg-date20-4"></label>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="item">
+						<dl>
+							<dt class="date-item">2016年01月19日</dt>
+							<dd class="list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date19-1" name="" />
+											<label for="checkimg-date19-1"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date19-2" name="" />
+											<label for="checkimg-date19-2"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date19-3" name="" />
+											<label for="checkimg-date19-3"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date19-4" name="" />
+											<label for="checkimg-date19-4"></label>
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+										<div class="mod-checkbox-item">
+											<input type="checkbox" value="1" id="checkimg-date19-5" name="" />
+											<label for="checkimg-date19-5"></label>
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- mod-foot-bar -->
+		<section class="mod-foot-bar clearfix">
+			<span class="icon-area"> <i class="icon delete-icon"></i>
+			</span>
+			<!-- 无法点击 unable-save-btn -->
+			<div class="btn-item save-btn unable-save-btn">
+				<span>保存到本地</span>
+			</div>
+		</section>
+		<!-- mod-foot-bar end -->
+	</div>
+</body>
+</html>

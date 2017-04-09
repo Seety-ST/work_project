@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            YUE-UI VUE 2.0
+        </title>
+        <style media="screen">
+            .vue-color{
+                color:rgb(66, 185, 131) !important;
+                font-weight: bolder !important;;
+            }
+            .vue-bg-color{
+                background-color :rgb(66, 185, 131) !important;
+            }
+        </style>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017124/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+    
+    
+</head>
+    <body class="yue-ui">
+    	<div class="page">
+    		<div class="hd">
+    			<h1 class="page-title">YUE-UI VUE 2.0</h1>
+    			<p class="page-desc pt5">为约约Web服务量身设计 2.0</p>
+    		</div>
+            <div class="bd">
+    			<div class="weui-cells weui-cells-access global-navs">
+
+
+    				<a class="weui-cell js_cell" href="button.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>按钮 yue-ui-button</p>
+    					</div>
+
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+
+
+    				<a class="weui-cell js_cell" href="cell.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>输入框 yue-ui-cell</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="demo.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue Demo 页面</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="com.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue交互组件 范例</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="form.tpl.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue Form 页面</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="datepicker.tpl.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue 日期选择 页面</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="area.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue 地区选择 页面</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="lazyload.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue懒加载 范例</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="layout.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue Layout 范例</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+					<a class="weui-cell js_cell vue-color" href="list.tpl.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue List 范例</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+                    <a class="weui-cell js_cell vue-color" href="swipe.htm" >
+    					<span class="weui_cell_hd vue-bg-color"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>Vue轮播图 范例</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+
+
+
+
+    				<a class="weui-cell js_cell" href="triangle.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>三角形  yue-ui-triangle</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+    				<a class="weui-cell js_cell" href="border.htm" >
+
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>1px边框 yue-ui-border</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+    				<a class="weui-cell js_cell" href="color.htm" >
+
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>颜色配置 yue-ui-color</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+
+    				<a class="weui-cell js_cell" href="list.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>列表 yue-ui-list</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+    				<a class="weui-cell js_cell" href="icon-size.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>iconfont与icon规格大小 </p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+    				<a class="weui-cell js_cell" href="tab.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>切换tab  yue-ui-tab</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+    				<a class="weui-cell js_cell" href="widget.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>UI库通用配置  yue-ui-widget</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+    				<a class="weui-cell js_cell" href="avatar.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>头像规格 yue-ui-avatar</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+
+    				<a class="weui-cell js_cell" href="tags.htm" >
+    					<span class="weui_cell_hd"></span>
+    					<div class="weui-cell-bd weui-cell-primary">
+    						<p>tags标签 yue-ui-tags</p>
+    					</div>
+    					<div class="weui-cell-ft">
+    					</div>
+    				</a>
+
+
+
+    			</div>
+    		</div>
+    	</div>
+    
+
+</body>
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+

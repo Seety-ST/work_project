@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="import" href="./g_head.tpl.htm?__inline">
+	<title>
+		List组件 范例
+	</title>
+
+</head>
+
+<body >
+	<link rel="import" href="./g_back.tpl.htm?__inline">
+    <main role="main">
+    	<div id="page-container" class="page-container page-view" >
+            <moji-list-com1 ref="list1" @success="list_com1_success"></moji-list-com1>
+    	</div>
+    </main>
+
+</body>
+
+</html>
+<link rel="import" href="./g_footer.tpl.htm?__inline">
+
+
+
+<script type="text/javascript">
+	(function()
+    {
+        // 加载util
+        var Util = require.syncLoad(__moduleId('/modules/global/util/index'));
+        // 加载list
+        var List = require('/modules/layout/list/index');
+		new Vue
+		({
+			el: '#page-container',
+			data:function()
+            {
+                return {
+
+                }
+            },
+            mounted : function()
+            {
+                // 主动去刷新当前列表
+                var self = this;
+                // 获取对应列表子组件并调用刷新方法
+                self.$refs.list1.refresh();
+
+            },
+            components :
+            {
+                'moji-list-com1' : List.init
+	    		({
+	    			url : url : 'http://www.51snap.cn/ajax/search/get_list.php',
+	    			template : __inline('./item.tpl.htm'),
+	    			data : function()
+	    			{
+	    				var obj =
+	    				{
+	    					ajax_params :
+                            {
+                                sort:'',
+                                order:2,
+                                kw:'%E6%A8%A1%E7%89%B9',
+                                type_id_str:'',
+                                style_id_str:'',
+                                photographers_type_id:'',
+                                lid:0,
+                                page:1
+                            },
+	    					data :
+	    					{
+	    						code : 1,
+		    					list : [],
+		    					msg : '',
+		    					page : 1,
+		    					has_next_page:true
+	    					}
+	    				};
+
+	    				return obj
+	    			},
+                    methods :
+                    {
+                        show_title : function(title)
+                        {
+                            console.log(title)
+                        },
+                    },
+
+	    		}),
+            },
+			methods:
+			{
+                // 监听列表组件1的回调
+                // 注意，一定是父组件监听子组件的event
+                list_com1_success : function(res)
+                {
+                    console.log(res);
+                }
+			},
+
+		});
+	})();
+</script>

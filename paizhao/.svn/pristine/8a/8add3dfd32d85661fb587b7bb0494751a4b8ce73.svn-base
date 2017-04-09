@@ -1,0 +1,127 @@
+<?php
+/**
+* @Desc:     咨询按钮转化报表      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月13日
+* @Time:     上午13:58:30
+* @Version:  
+*/
+//error_reporting(E_ALL ^ E_NOTICE);
+require(dirname(dirname(__FILE__)).'/common.inc.php');
+$action = $_INPUT['action'];
+if ($action == 'consult_button_export')
+{
+    mall_load_action($action);
+    exit;
+}
+$consult_obj = POCO::singleton('pai_paizhao_consult_class');
+$button_where = '1';
+$where = '1';
+$start_time = $_INPUT['start_time'];
+if ($start_time)
+{
+    $s_time = strtotime($start_time);
+    $where .= " AND create_time > {$s_time}";
+    $button_where .= " AND create_time > {$s_time}";
+}
+$end_time = $_INPUT['end_time'];
+if ($end_time)
+{
+    $e_time = strtotime($end_time);
+    $where .= " AND create_time < {$e_time}";
+    $button_where .= " AND create_time < {$e_time}";
+}
+$goods_type_id = $_INPUT['goods_type_id'];
+if ($goods_type_id)
+{
+    $goods_type_id = (int)$goods_type_id;
+    $button_where .= " AND `goods_type_id` = {$goods_type_id}";
+}
+$goods_style_id = $_INPUT['goods_style_id'];
+if ($goods_style_id)
+{
+    $goods_style_id = (int)$goods_style_id;
+    $button_where .= " AND `goods_style_id` = {$goods_style_id}";
+}
+// $search_id = $_INPUT['search_id'];
+// $search_word = $_INPUT['search_word'];
+// if ($search_word)
+// {
+//     switch ($search_id)
+//     {
+//         case 0:
+//             $where .= " AND (`photographers` LIKE '%{$search_word}%' OR " . '`seller_id`=' . (int)$search_word . ' OR `goods_id`=' . (int)$search_word . ')';
+//             $button_where .= " AND `goods_name` LIKE '%{$search_word}%'";
+//             break;
+//         case 1:
+//             $where .= " AND `photographers` LIKE '%{$search_word}%'";
+//             break;
+//         case 2:
+//             $where .= ' AND `seller_id`=' . (int)$search_word;
+//             break;
+//         case 3:
+//             $button_where .= " AND `goods_name` LIKE '%{$search_word}%'";
+//             break;
+//         case 4:
+//             $where .= ' AND goods_id=' . (int)$search_word;
+//             $button_where .= ' AND goods_id=' . (int)$search_word;
+//             break;
+//     }
+// }
+$consult_type = $_INPUT['consult_type'];
+if ($consult_type == 'goods' || $consult_type == 'seller')
+{
+    $where .= " AND consult_type='{$consult_type}'";
+    $button_where .= " AND consult_type='{$consult_type}'";
+}
+$source = $_INPUT['source'];
+if ($source == 'PC' || $source == 'WAP')
+{
+    $where .= " AND source='{$source}'";
+    $button_where .= " AND source='{$source}'";
+}
+
+$goods_type_config = pai_mall_load_config('paizhao_goods_type');
+$goods_type_arr = array();
+foreach ($goods_type_config as $k=>$v)
+{
+    $selected = $goods_type_id == $k ? 1 : 0;
+    $goods_type_arr[] = array('id'=>$k, 'name'=>iconv('utf-8', 'gbk', $v['name']), 'selected'=>$selected);
+}
+$goods_style_config = pai_mall_load_config('paizhao_goods_style');
+$goods_style_arr = array();
+foreach ($goods_style_config as $k=>$v)
+{
+    $selected = $goods_style_id == $k ? 1 : 0;
+    $goods_style_arr[] = array('id'=>$k, 'name'=>iconv('utf-8', 'gbk', $v['name']), 'selected'=>$selected);
+}
+$total_count = $consult_obj->get_consult_button_list_count($button_where);
+$page_obj = new show_page ();
+$show_count = 40;
+$page_obj->setvar ( array (
+    'start_time'=>$start_time,
+    'end_time'=>$end_time,
+    'goods_type_id'=>$goods_type_id,
+    'goods_style_id'=>$goods_style_id,
+    'consult_type'=>$consult_type,
+) );
+$page_obj->set($show_count, $total_count);
+$list = $consult_obj->get_consult_button_list($button_where, $where, $page_obj->limit());
+foreach ($list as $k=>$v)
+{
+    $list[$k]['goods_name'] = iconv('utf-8', 'gbk', $v['goods_name']);
+    $list[$k]['goods_type'] = iconv('utf-8', 'gbk', $goods_type_config[$v['goods_type_id']]['name']);
+    $list[$k]['goods_style'] = iconv('utf-8', 'gbk', $goods_type_config[$v['goods_style_id']]['name']);
+    $list[$k]['create_time'] = date('Y-m-d H:i:s', $v['create_time']);
+    $list[$k]['ratio'] = round($v['consult_num'] / $v['consult_click_num'], 2);
+}
+$tpl = new SmartTemplate ( TASK_TEMPLATES_ROOT."/consult/consult_button.tpl.htm" );
+$tpl->assign('list', $list);
+$tpl->assign('page', $page_obj->output(1));
+$tpl->assign('goods_type_arr', $goods_type_arr);
+$tpl->assign('start_time', $start_time);
+$tpl->assign('end_time', $end_time);
+$tpl->assign('goods_style_arr', $goods_style_arr);
+$tpl->assign('consult_type', $consult_type);
+$tpl->assign('source', $source);
+$tpl->output();

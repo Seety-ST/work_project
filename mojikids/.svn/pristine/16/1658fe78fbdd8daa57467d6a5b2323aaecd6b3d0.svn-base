@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>门店信息 - 莫吉照相馆  </title>
+
+		{%$wap_global_head%}
+		<link href="http://mojikids.yueus.com/static/wap/style/about/store-info.css" type="text/css" rel="stylesheet" />
+	
+    
+</head>
+	<body>
+		<div class="store-info-page" id="store-info-page" v-cloak>
+			<div class="p1th">
+				<div class="item-wrap">
+					<div class="img-item">
+						<i class="img" style="background-image:url({%$ret.data.image%})"></i>
+					</div>
+				</div>
+			</div>
+			<div class="p2th">
+				<div class="item-wrap">
+
+					<div class="ui-edit-user-info-mod ui-border-b" v-for="(item,index) in total_data.res.store" @click="click_go_to(item,index)">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl clearfix">
+									<i class="yue-ui-icon-size-16 store-icon fldi tips-icon" :style="{backgroundImage: 'url(' + item.image + ')'}"></i>
+									<p class="tips color-666 f14 fldi">{{item.value}}</p>
+								</div>
+								{{item.has_arrow}}
+								<div class="rbox fr" :class="{'dn': item.has_arrow}">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="p3th">
+				<div class="item-wrap">
+
+
+					<dl v-for="(item,index) in total_data.res.property">
+						<dt class="color-333 f14">
+							{{item.title}}
+						</dt>
+						<dd class="f14 color-666">
+							{{item.value}}
+
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<mt-popup v-model="map_popup" position="bottom">
+				<div id="container"  class="map_pop"></div>
+			</mt-popup>
+		</div>
+
+	
+
+</body>
+
+</html>
+{%$wap_global_footer%}
+
+
+
+
+<script>
+ 	(function() {
+	 	var json_data = '{%$json_data%}';
+	 	var total_data = JSON.parse(json_data);
+	 	var Util  = require.syncLoad('wap-kids:global/util/index');
+	 	var Popup = require.syncLoad('wap-kids:widget/popup/index');
+	 	var Map = '';
+	 	var show_map = '{%$show_map%}';
+	 	// 使用popup
+	 	Vue.component(Popup.name, Popup);
+	 	console.log(total_data);
+ 		var store_info_page = new Vue
+ 			({
+ 				el: '#store-info-page',
+
+ 				created: function() {
+
+ 				},
+ 				mounted : function(){
+ 					var self = this;
+ 					if (show_map==1)
+ 					{
+ 						for (var i = 0; i < total_data.res.store.length; i++) {
+ 							if (i==1)
+ 							{
+ 								var location_data = total_data.res.store[i].lng_lat.split(",");//经纬度
+ 								// 使用定位功能
+ 								Map = Util.open_location
+ 								({
+ 									gaode_params :
+ 									{
+ 										longitude : location_data[0],
+ 										latitude : location_data[1],
+ 										el : 'container',
+ 										zoom : 16,
+ 										showIndoorMap : true,
+ 										before_init : function()
+ 										{
+ 											self.map_popup = true;
+ 										}
+ 									}
+ 								})
+ 							}
+ 						};
+ 					}
+ 					if (total_data.res.store.length>0) 
+ 					{
+ 					     	for (var i = 0; i < total_data.res.store.length; i++) {
+ 					     		if (i==0) 
+ 					     		{
+ 					    			total_data.res.store[i].has_arrow=false;
+ 					     		}
+ 					     		else
+ 					     		{
+ 					     			total_data.res.store[i].has_arrow=true;
+ 					     		}
+ 					     	};
+ 					}
+ 					
+ 				},
+ 				data: {
+
+ 					total_data : total_data,
+ 					map_popup : false,
+
+ 				},
+ 				methods : {
+ 					click_go_to : function(item,index){
+ 						if (index==0)
+ 						{
+ 						    
+ 						}
+ 						if (index==1)
+ 						{
+ 							var self = this;
+ 						    	/****************** 定位功能 BEGIN ******************/
+ 						    	var location_data = item.lng_lat.split(",");//经纬度
+ 						    	if(!location_data)
+ 						    	{
+ 						    		Util.toast
+ 						    		({
+ 						    			message: '暂无定位数据',
+ 						    			position: 'middle',
+ 						    			duration: 3000
+ 						    		});
+ 						    		return;
+ 						    	}
+
+ 						    	if(!Map)
+ 						    	{
+ 						    		// 使用定位功能
+ 						    		Map = Util.open_location
+ 						    		({
+ 						    			wx_prams :
+ 						    			{
+ 						    				longitude : location_data[0],
+ 						    				latitude : location_data[1],
+ 						    				name: self.total_data.res.store[0].value, // 位置名
+ 						    				address: item.value, // 地址详情说明
+ 						    			},
+ 						    			gaode_params :
+ 						    			{
+ 						    				longitude : location_data[0],
+ 						    				latitude : location_data[1],
+ 						    				el : 'container',
+ 						    				zoom : 16,
+ 						    				showIndoorMap : true,
+ 						    				before_init : function()
+ 						    				{
+ 						    					self.map_popup = true;
+ 						    				}
+ 						    			}
+ 						    		})
+ 						       }
+ 						       else
+ 						       {
+ 						    	   if(Map.type == 'gaode')
+ 						    	   {
+ 						    		   self.map_popup = true;
+ 						    	   }
+								   else
+								   {
+									   Map = null;
+								   }
+ 						       }
+ 						       /****************** 定位功能 END ******************/
+ 						}
+ 						if (index==2)
+ 						{
+ 						   window.location.href = "tel:"+window.__MOJIKIDS_GLOBAL['PHONE'];
+ 						}
+ 					},
+
+ 				},
+ 				components: {
+
+
+ 				}
+ 			});
+
+	 })();
+</script>
+{%$wap_global_tj%}

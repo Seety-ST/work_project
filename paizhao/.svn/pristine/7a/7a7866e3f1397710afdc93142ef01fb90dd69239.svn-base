@@ -1,0 +1,79 @@
+<!--底部-->
+
+<script>
+(function()
+{   
+    var run_status = 'DEV' == 'DEV' ? false : true ;
+    
+    if(window.__RESOURCE_MAP__)
+    {
+        var version = '2016-10-31 9:34:3';
+
+        // __yue_ls__.loader(window.__RESOURCE_MAP__,
+        // [            
+        //     'wap-yypay:global/I_APP/I_APP',
+        //     'wap-yypay:global/I_WX_SDK/I_WX_SDK',
+        //     'wap-yypay:global/cookie/index',
+        //     'wap-yypay:global/frozen/frozen',
+        //     'wap-yypay:global/lazyload/lazyload',
+        //     'wap-yypay:global/list/list',
+        //     'wap-yypay:global/ua/index',
+        //     'wap-yypay:global/utility/cross_domain_storage',
+        //     'wap-yypay:global/main',
+        //     'wap-yypay:global/utility/index',
+        // ],run_status,version,'yypay');    
+        
+    }
+    
+
+})();
+</script>
+
+<!-- 判断当前浏览器是否为ie9以下 start -->
+<div class="fade dn"></div>
+<div class="pop-ie9-fade font_wryh dn">
+    <a href="#" class="close-btn"></a>
+    <div class="item-wrap">
+        <p class="tips-item f16 color-333">
+            你当前的浏览器版本过低，可能会存在风险
+            建议升级到最新版本或使用其他浏览器
+        </p>
+        <div class="btn-item">
+            <a href="#" class="browser-btn">
+                <img src="http://paizhao.yueus.com/static/pc/image/footer/google-btn-133x30.png" />
+            </a>
+            <a href="#" class="browser-btn">
+                <img src="http://paizhao.yueus.com/static/pc/image/footer/sogo-btn-133x30.jpg" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    (function(){
+       var default_version = "9.0";
+       var userAgent = navigator.userAgent.toLowerCase();
+       var isIE = userAgent.indexOf("msie")>-1;
+       var safariVersion;
+       if(isIE){
+           safariVersion =  userAgent.match(/msie ([\d.]+)/)[1];
+           if(parseFloat(safariVersion) < default_version ){
+               $(".pop-ie9-fade").removeClass('dn');
+               $(".fade").removeClass('dn');
+           }
+       }
+
+       $(".pop-ie9-fade .close-btn").on("click",function(){
+           $(".pop-ie9-fade").addClass('dn');
+           $(".fade").addClass("dn");
+       });
+
+   })();
+
+   
+
+
+</script>
+
+<!-- 判断当前浏览器是否为ie9以下 end -->

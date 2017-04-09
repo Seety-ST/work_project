@@ -1,0 +1,20 @@
+<?php
+/**
+* @authors huangst
+* @date    2016-10-26 15:35:39
+* 获取摄影师主页列表
+*/
+include_once('../../common.inc.php');
+
+$type_id = trim($_INPUT['user_id']);
+$source = strval($_INPUT['source'])?strval($_INPUT['source']) : 'PC';
+$data = array(
+    'goods_id'=>'0',
+    'user_id'=>$type_id ,
+    'source'=>$source,
+    'consult_type'=>'seller',
+);
+
+$consult_button_class = POCO::singleton('pai_paizhao_consult_class');
+$a = $consult_button_class->add_consult_button($data);
+paizhao_mobile_output($a);

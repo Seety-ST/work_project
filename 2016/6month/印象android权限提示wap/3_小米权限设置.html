@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>小米权限设置</title>
+	<link href="css/photo-purview.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+				var docEl = doc.documentElement;
+				var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+				var recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if(clientWidth>=640)
+					{
+						docEl.style.fontSize = '100px';
+					}
+					else
+					{
+						docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+					}
+				};
+				recalc();
+				if (!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+			})(document, window);
+	</script>
+</head>
+	<body>
+		<section class="purview-page">
+			<article class="item-list xm-list">
+				<div class="item item-1">
+					<div class="img-item"></div>
+					<h3 class="title">第一步：打开安全中心 - <span class="point">授权管理</span></h3>
+				</div>
+				<div class="item item-2">
+					<div class="img-item"></div>
+					<h3 class="title">第二步：打开<span class="point">应用权限管理</span> - 选择<span class="point">印象</span></h3>
+				</div>
+				<div class="item item-3">
+					<div class="img-item"></div>
+					<h3 class="title">第三步：勾选<span class="point">相机</span></h3>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

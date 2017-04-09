@@ -1,0 +1,19 @@
+@import "../ui/paizhao-ui-color.scss";
+@import "../ui/paizhao-ui-avatar.scss";
+@import "../ui/paizhao-ui-border.scss";
+@import "../ui/paizhao-ui-button.scss";
+@import "../ui/paizhao-ui-icon-size.scss";
+@import "../ui/paizhao-ui-list.scss";
+@import "../ui/paizhao-ui-dialog.scss";
+@import "../ui/paizhao-ui-tab.scss";
+@import "../ui/layer.css";
+
+
+
+
+
+
+
+
+
+

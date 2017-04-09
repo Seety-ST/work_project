@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+
+<title>醉美广州网络摄影大赛</title>
+</head>
+
+<body>
+	<div class="content w1000 semi-finals-page">
+		<div class="nav-content clearfix">
+			<h1 class="logo"><a href="#"></a></h1>
+			<h1 class="hc-logo"><a href="#"></a></h1>
+			<div class="top-login clearfix">
+				<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+			</div>
+			<div class="title-item tc font_wryh">
+				复赛作品投票
+			</div>
+		</div>
+		
+		<!-- 模板 -->
+		<div class="w990 font_wryh">
+			<div class="p1th">
+				<a href="#" class="title f18">投票规则</a>
+			</div>
+			<div class="p2th">
+				<div class="item-wrap">
+					<div class="nav-item">
+						<ul class="list f18 clearfix">
+							<li class="cur">
+								<em>相机摄影赛区</em>
+								<i class="arrow-icon"></i>
+
+							</li>
+							<li >
+								
+								<em>手机摄影赛区</em>
+								<i class="arrow-icon"></i>
+							</li>
+						</ul>
+					</div>
+					<div class="main-content">
+						<div class="second-nav-item">
+							<ul class="list clearfix">
+								<li class="cur">
+									<em>城市发展</em>
+									<i class="line-icon"></i>
+								</li>
+								<li>
+									<em>花城拍花</em>
+									<i class="line-icon"></i>
+								</li>
+								<li>
+									<em>岭南文化</em>
+									<i class="line-icon"></i>
+								</li>
+							</ul>
+						</div>
+						<div class="list-item">
+							<ul class="list clearfix">
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/192x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi cur">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x193.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/192x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x193.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/192x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x193.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<div class="img">
+											<img src="images/240x240.jpg" />
+										</div>
+									</div>
+									<div class="txt-item">
+										<div class="box-1 clearfix">
+											<div class="txt-1 fldi f16">
+												美丽羊城
+											</div>
+											<div class="txt-2 frdi cur">
+												<i class="good-icon">
+													
+												</i>
+												<em class="txt">11</em>
+											</div>
+										</div>
+										<div class="box-2">
+											张晓培
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="page-item">
+							<a href="#" class="selected"><</a>
+							<a href="#">1</a>
+							<a href="#" class="selected">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#" class="selected">></a>
+							<a href="#" class="selected">>|</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p3th">
+				<div class="item-wrap">
+					<div class="item">
+						<img src="images/st-img-3.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 模板 END -->
+		
+		
+	</div>
+	<div class="footer"></div>
+
+</body>
+</html>

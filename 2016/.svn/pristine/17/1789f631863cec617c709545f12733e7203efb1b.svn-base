@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>ýU«Âe950</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body class="index-bg">
+		<section class="index-page">
+			<hgroup class="logo-wrap">
+				<h1 class="ry-logo-item"><a href="#"></a></h1>
+				<h2 class="e950-logo-item"><a href="#"></a></h2>
+			</hgroup>
+			<section class="btn-wrap">
+				<a href="#" class="btn-item btn-yy"></a>
+				<a href="#" class="btn-item btn-ly"></a>
+				<a href="#" class="btn-item btn-ssj"></a>
+			</section>
+		</section>
+	</body>
+</html>

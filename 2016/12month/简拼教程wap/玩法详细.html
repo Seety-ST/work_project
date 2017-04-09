@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>玩转简拼</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body class="article-bg">
+	<section class="article-page">
+		<article class="text-wrap">
+			<h3 class="title">大标题，简拼却不简单...离上放也是78px</h3>
+			<p>从现在开始，简拼君每周都会挑选出优秀的作品，收录到每周精选中。那些：</p>
+			<div class="image-package">
+				<img src="images/test/img-702x423.jpg" />
+			</div>
+			<div class="image-package">
+				<img src="images/test/img-702x423.jpg" />
+			</div>
+			<p class="remark">图片备注</p>
+			<p>从现在开始，<strong>简拼君每周都会挑选出优秀的作品</strong>，收录到每周精选中。那些：</p>
+			<p>从现在开始，简拼君每周都会挑选出优秀的作品，收录到每周精选中。那些：</p>
+			<p>从现在开始，简拼君每周都会挑选出优秀的作品，收录到每周精选中。那些：</p>
+			<div class="image-package">
+				<img src="images/test/img-702x423.jpg" />
+			</div>
+			<h4 class="title">副标题</h4>
+			<p>从现在开始，简拼君每周都会挑选出优秀的作品，收录到每周精选中。那些：</p>
+			<p>从现在开始，简拼君每周都会挑选出优秀的作品，收录到每周精选中。那些：</p>
+			<p>从现在开始，简拼君每周都会挑选出优秀的作品，收录到每周精选中。那些：</p>
+		</article>
+	</section>
+	<!-- 下载栏 -->
+	<section class="mod-download-item jane-donload-item">
+		<div class="btn-wrap">
+			<a href="#" class="btn-item">
+				<em>立即下载</em>
+			</a>
+		</div>
+		<a href="#" class="close-btn">
+			<i class="close-icon"></i>
+		</a>
+	</section>
+	<!-- 提示 -->
+	<div class="tips-pop">
+		<p>已复制链接</p>
+	</div>
+</body>
+
+</html>

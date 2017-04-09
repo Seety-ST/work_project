@@ -1,0 +1,210 @@
+.camera-page{
+	padding-bottom: 70px;
+	.p1th{
+		.item-wrap{
+			.img-item{
+				width: 100%;
+				padding-top: 40%;
+				position: relative;
+				.img{
+					width: 100%;
+					padding-top: 40%;
+					display: inline-block;
+					position:absolute;
+					left: 0;
+					top:0;
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-image: url(../../image/camera/test/750x300.jpg);
+				}
+				.txt{
+					width: 100%;
+					height: 100%;
+					
+					background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.4) 98%, rgba(0, 0, 0, 0.5) 100%);
+					background-image:  -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.4) 98%, rgba(0, 0, 0, 0.5) 100%);
+					position:absolute;
+					left:0;
+					top:0;
+					
+					.box-1{
+						padding:20% 15px 0px 15px;
+						.lbox{
+							.ui-avatar-icon{
+								i{
+									border:2px solid #fff;
+								}
+							}
+						}
+						.rbox{
+							padding:3% 0px 0px 10px;
+							.number-2{
+								margin-left: 20px;
+							}
+						}
+					}
+				}
+			}
+			.txt-item{
+				padding:15px;
+				background-color: #fff;
+				.box-1{
+					.address-icon{
+						background-image: url(../../image/camera/address-icon-32x32.png);
+						background-size: 100%;
+						background-repeat: no-repeat;
+						display:inline-block;
+						vertical-align: middle;
+					}
+					.txt{
+						display:inline-block;
+						vertical-align: middle;
+					}
+				}
+				.box-2{
+					
+					margin-top: 15px;
+					
+					&.txt-overflow{
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						height:21px;
+					}
+				}
+				.box-3{
+					margin-top: 15px;
+					.i-iconfont-allow{
+						color: #44454a;
+					}
+				}
+
+			}
+		}
+	}
+	.p2th{
+		margin-top: 10px;
+		.content{
+			.wap-list-mod-1{
+				background-color: #fff;
+			}
+			.sort-filter-item-tab-1{
+				margin-bottom: 1px solid #d9d9d9;
+			}
+		}
+		
+	}
+	.consult-item{
+		width:100%;
+		position:fixed;
+		left:0;
+		bottom:0;
+		.srdz-btn:active{
+			background-color: #22bdbd;
+		}
+	}
+
+}
+.fade{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .6;
+	z-index: 999;
+	zoom: 1;
+	clear: both;
+	_height: 1000px;
+	_position: absolute;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#99000000', endColorstr='#99000000');
+	background: rgba(0,0,0,.6);
+}
+.filter-item-pop{
+	.item-wrap{
+		width:89%;
+		height:100%;
+		position:fixed;
+		top:0;
+		right:0;
+		z-index: 1000;
+		background-color: #fff;
+		.item{
+			padding:0px 5px 10px 15px;
+			.title-item{
+				padding:20px 0px;
+			}
+			.filter-item{
+				.list{
+					
+					li{
+						float: left;
+						width:27%;
+						padding:8px 0px;
+						text-align: center;
+						border:1px solid #ddd;
+						margin-bottom: 10px;
+						margin-right: 5.5%;
+						&.cur{
+							border-color: #24c7c7;
+							color:#24c7c7;
+						}
+						
+					}
+				}
+			}
+		}
+		.button-item{
+			width:100%;
+			display:-webkit-box;
+			position:absolute;
+			left:0;
+			bottom:0;
+			z-index: 1;
+			.tdn{
+				-webkit-box-flex:1;
+				display:block;
+				text-decoration: none;
+			}
+			.reset-btn{
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+
+.layui-m-layer-pai_zhao_goods_class{
+	position:relative;
+	.pop-contact-mod{
+		.it{
+			margin:10px 0px;
+			.input-text{
+				width:92%;
+				padding:12px 4%;
+				border:1px solid #ddd;
+				margin-top: 15px;
+			}
+		}
+		.ui-button{
+			margin-top: 15px;
+		}
+		.num-box{
+			margin-top: 15px;
+		}
+		.close-btn{
+			width:22px;
+			height:22px;
+			display:inline-block;
+			position:absolute;
+			top:11px;
+			right:15px;
+			background: url(../../image/goods/close-btn-44x44.jpg) no-repeat center;
+			background-size: contain;
+		}
+	}
+}
+
+body .layui-m-layer .layui-m-layer-msg{
+	bottom:50%;
+}

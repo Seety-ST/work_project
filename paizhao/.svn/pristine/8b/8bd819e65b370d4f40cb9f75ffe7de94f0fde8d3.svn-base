@@ -1,0 +1,50 @@
+<?php
+/**
+* @authors huangst
+* @date    2016-10-26 15:35:39
+* 获取摄影师主页列表
+*/
+include_once('../../common.inc.php');
+$sort = trim($_INPUT['sort']);
+$order = trim($_INPUT['order']);
+$type_id = trim($_INPUT['type_id']);
+$user_id = trim($_INPUT['user_id']);
+$order = trim($_INPUT['order']);
+$page  = 2 ;
+if(empty($page))
+{
+    $page = 1;
+}
+
+// 分页使用的page_count
+$page_count = 6;
+if($page > 1)
+{
+    $limit_start = ($page - 1)*($page_count - 1);
+}
+else
+{
+    $limit_start = ($page - 1)*$page_count;
+}
+
+$limit = "{$limit_start},{$page_count}";
+
+
+
+
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+$goods_info = $goods_class->get_goods_list(false, array('t'=>$type_id, 'sr'=>$sort, 'u'=>$user_id, 'o'=>$order) ,$limit);
+
+$rel_page_count = 5;
+
+$has_next_page = (count($goods_info)>$rel_page_count);
+
+
+$output_arr['page'] = $page;
+
+$output_arr['has_next_page'] = $has_next_page;
+
+$output_arr['data'] = $goods_info;
+
+
+paizhao_mobile_output($output_arr,false);

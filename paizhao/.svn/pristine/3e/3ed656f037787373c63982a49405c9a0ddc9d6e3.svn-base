@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	<link charset="utf-8" rel="stylesheet" href='../../modules/global/swiper/1.0.0/swiper.min.css'>
+	<link href="../../style/index/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body class="bg-color-faf">
+<main role="main">
+	<!-- 头部内容 -->
+	
+	<!-- 页面内容 -->
+	<div class="index-page">
+		<div class="item-wrap">
+			<div class="search-item">
+				<div class="lbox">
+					<div class="item" data-role="header-classify-btn">
+						<i class="arrow-icon"></i>
+						<em class="txt f14 fldi color-333">摄影套系</em>
+					</div>
+					<div class="pop-item top011" data-role="header-classify-pop">
+						<i class="triangle-icon">
+							
+						</i>
+						<ul class="list f14 color-333" data-role="pop">
+							<li header-s-data-role="list">摄影套系</li>
+							<li header-s-data-role="pter">摄影师</li>
+						</ul>
+					</div>
+				</div>
+				<div class="rbox">
+					<input type="text" class="input-txt color-666" header-s-data="key" placeholder="搜索摄影套系"/>
+				</div>
+			</div>
+			<div class="content">
+				<div class="p1th">
+					<div class="pics_container" >
+						<div class="swiper-container" id="swiper-container-1" data-role="swiper-container-1">
+							<div class="swiper-wrapper">
+							{%foreach $paizhao_goods_info.banner as $val%}
+								<div class="swiper-slide"  data-role="swipe" >
+									<a href="{%if $val.link_url%}  {%$val.link_url%} {%else%} javascript:; {%/if%}"><img  class="img min-height"  src="{%yueusv2_img_resize img_url=$val.img_url size="640"%}"/></a>
+								</div>
+								
+							{%/foreach%}	
+							
+							</div>
+							<!-- 如果需要分页器 -->
+							<div class="swiper-pagination" id="swiper-pagination-1">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="p2th">
+					<ul class="list clearfix f14">
+						{%foreach $paizhao_goods_info.styles as $val%}
+						<li class="{%if $val.all_list_style%}{%$val.all_list_style%}{%/if%}">
+							<a href="{%$val.link_url%}">
+								<div class="con-item">
+									<div class="img">
+										<img src="{%yueusv2_img_resize img_url=$val.img_url size="165"%}" />
+									</div>
+									<div class="txt-item">
+										<p class="txt"><span>{%$val.title%} <i class="arrow-icon"></i></span></p>
+									</div>
+								</div>
+							</a>
+						</li>
+						{%/foreach%}	
+					</ul>
+				</div>
+				<div class="p3th">
+					<ul class="list clearfix">
+						
+						{%foreach $paizhao_goods_info.package_type as $val%}
+						<a href="{%$val.link_url%}">
+							<li class="{%$val.even_or_odd%}">
+								<div class="img-item">
+									<!-- <img src="{%$val.img_url%}" /> -->
+									<i class="img paizhao-ph-bgimg" data-lazyload-url="{%$val.img_url%}"></i>
+								</div>
+								<div class="txt-item">
+									{%$val.title%}
+								</div>
+							</li>
+						</a>
+						{%/foreach%}	
+						
+					</ul>
+				</div>
+				<div class="p4th">
+					<div class="title-item clearfix">
+						<div class="lbox fldi">
+							<div class="en-txt color-24c">PHOTOGRAPHY STUDIO</div>
+							<div class="cn-txt f16 color-24c">
+								摄影机构
+							</div>
+						</div>
+						<div class="rbox frdi">
+							<a class="more f14 color-24c" href="{%$paizhao_page_url.photographer_list%}">更多</a>
+							<i class="jiantou-icon"></i>
+						</div>
+					</div>
+					<div class="item-wrap">
+						<div class="swiper-container" id="swiper-container-2" data-role="swiper-container-2">
+							<div class="swiper-wrapper">
+							
+								{%foreach $paizhao_goods_info.organization as $val%}
+										{%if $val.seller_id%}
+										<a href="{%$val.link_url%}">
+											<div class="swiper-slide"  data-role="swipe">
+												<div class="con-item">
+													<div class="img-item">
+														<div class="img">
+														
+															<img src="{%$val.img_url%}" />
+														</div>
+													</div>
+													<div class="txt-item">
+														<div class="lbox">
+															<div class="avatar-icon">
+																<img src="{%$val.avatar%}" />
+															</div>
+														</div>
+														<div class="rbox">
+															<div class="box-1  color-333">
+																{%$val.seller_name%}
+															</div>
+															<div class="box-2">
+																<span class="tips-txt">擅长</span><span class="color-aaa pl5">{%$val.remark%}</span>
+															</div>
+														</div>
+													</div>
+
+												</div>
+										</a>
+										</div>   
+										{%/if%}
+								{%/foreach%}
+								
+								
+								
+								
+							
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="p5th">
+					<div class="title-item clearfix">
+						<div class="lbox fldi">
+							<div class="en-txt color-24c">INDIE PHOTOGRAPHER</div>
+							<div class="cn-txt f16 color-24c">
+								独立摄影师
+							</div>
+						</div>
+						<div class="rbox frdi">
+							<a class="more f14 color-24c" href="{%$paizhao_page_url.photographer_list%}">更多</a>
+							<i class="jiantou-icon"></i>
+						</div>
+					</div>
+					<div class="item-wrap">
+						<ul class="list">
+							{%foreach $paizhao_goods_info.photographers as $val%}
+								<li>
+								<a href="{%$val.link_url%}" class="dib">
+									<div class="con-item">
+										<div class="img-item">
+											<i class="img paizhao-ph-bgimg" data-lazyload-url="{%$val.img_url%}"></i>
+										</div>
+										<div class="txt-item">
+											<div class="box-1">
+												<div class="ui-avatar-icon ui-avatar-icon-45">
+												           <i style="background-image:url({%$val.avatar%})"></i>
+												</div>
+											</div>
+											<div class="box-2">
+												<p class="txt-1 color-333 tc">
+													{%$val.seller_name%}
+												</p>
+												
+											</div>
+											<div class="box-3">
+												<p class="txt-1 color-666 tc">
+													
+													{%$val.goods_info%}<span class="color-24c">{%$val.goods_num%}</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								</li>
+							
+							{%/foreach%}
+						</ul>
+					</div>
+				</div>
+				<div class="p6th">
+					<div class="title-item clearfix">
+						<div class="lbox fldi">
+							<div class="en-txt color-24c">HOT PHOTOGRAPHY</div>
+							<div class="cn-txt f16 color-24c">
+								热门约摄
+							</div>
+						</div>
+						
+					</div>
+					<div class="item-wrap">
+						<ul class="list">
+							{%foreach $paizhao_goods_info.hot_goods as $val%}
+							<a href="{%$val.link_url%}">
+								<li class="{%$val.img_size%}">
+									<div class="img-item">
+										<i class="img paizhao-ph-bgimg" data-lazyload-url="{%$val.img_url%}">
+											
+										</i>
+										<div class="txt color-fff">{%$val.consults%}</div>
+									</div>	
+									<div class="txt-item">
+										<div class="box-1">
+											<div class="txt-1 color-666 f14">
+												<span class="color-333">{%$val.type_name%}</span>{%$val.title%}
+											</div>
+										</div>
+										<div class="box-2">
+											<div class="txt-1 color-fa6 f14">
+												{%$val.prices%}
+											</div>
+										</div>
+									</div>
+								</li>
+							</a>
+							{%/foreach%}
+							
+						</ul>
+					</div>
+					<div class="more-item">
+						<a class="more f14 color-24c" href="{%$paizhao_page_url.goods_list%}">查看更多</a>
+						<i class="jiantou-icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+<script type="text/javascript" src="../../modules/global/swiper/1.0.0/swiper3.07.min.js"></script>
+<script type="text/javascript">
+	var Swiper = require('wap-huipai:global/swiper/1.0.0/swiper3.07.min');
+	var LZ = require('wap-huipai:global/lazyload/lazyload');
+	var go_top = require('wap-huipai:global/go_top/go_top');
+	$(function() 
+	{
+		// banner
+		var mySwiper_1 = new Swiper ('#swiper-container-1',{
+		    direction: 'horizontal',
+		    loop: false,
+		    autoplay : false,
+		    // speed:false,
+		    // 如果需要分页器
+		    pagination: '#swiper-pagination-1'
+		});
+
+		   var mySwiper_2 = new Swiper('#swiper-container-2', {
+
+		   		initialSlide :1,
+		          		effect: 'coverflow',
+		          		grabCursor: true,
+		          		centeredSlides: true,
+		          		loop : true,
+		          		slidesPerView: 'auto',
+		          		
+		          		loopedSlides :3,
+		          		coverflow: {
+		          			rotate: 0,
+		          			stretch: 0,
+		          			depth: 100,
+		          			modifier: 1,
+		          			opacity : 50,
+		          			slideShadows :false
+		          		}
+		   });
+		   
+		
+		$(document).click(function(event){
+			var $tar = $(event.target);
+			if($tar.parents('[data-role="header-classify-btn"]').length)
+			{
+			}
+			else
+			{
+				$('[data-role="header-classify-pop"]').removeClass('top42');
+				$('[data-role="header-classify-pop"]').addClass('top011');
+			}
+		});
+
+		new LZ($('body'),{
+			// size : window.innerWidth
+		});
+
+		// 返回顶部按钮
+		new go_top({
+			render_ele : $('body')
+		});
+
+
+		var header_s_data = "";
+		// 头部搜索分类套系弹窗显示
+		$('[data-role="header-classify-btn"]').on('click', function(event) {
+			
+			if($('[data-role="header-classify-pop"]').hasClass('top011')){
+				$('[data-role="header-classify-pop"]').removeClass('top011');
+				$('[data-role="header-classify-pop"]').addClass('top42');
+			}
+			else{
+				$('[data-role="header-classify-pop"]').removeClass('top42');
+				$('[data-role="header-classify-pop"]').addClass('top011');
+			}
+		});
+
+		$('[data-role="pop"]').find('li').on('click', function(event) {
+			
+			var selct_txt = $(this).html();
+
+			$('[data-role="header-classify-btn"]').find('.txt').html(selct_txt);
+			header_s_data = $(this).attr('header-s-data-role');
+
+		});
+		// 首页搜索
+		document.onkeydown = function(e){
+			var e = e || window.event;  
+			var currKey=e.keyCode||e.which||e.charCode;
+			if(currKey==13)
+			{
+			    search();
+			}
+		}
+
+		// 搜索事件
+		function search()
+		{
+			var val = $.trim($('[header-s-data="key"]').val());
+			if (!val) 
+			{
+				return ;
+			}
+			if (!header_s_data) 
+			{
+			    header_s_data = 'list';
+			}
+			window.location.href = window.__HUIPAI_GLOBAL['PAGE_URL'].index + 'search/?tp=' + header_s_data + '&kw=' + encodeURIComponent(val);
+		}
+
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>

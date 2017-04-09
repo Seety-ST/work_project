@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/mrxx.css" type="text/css" rel="stylesheet" />
+	<title>美人信息</title>
+</head>
+
+<body class="article-bg">
+	<div class="article-page font_wryh">
+		<div class="header animated">
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-icon-145x111.png" />
+				</a>
+			</h1>
+			<div class="mod-nav-bar"  id="mod-nav-bar">
+				<div class="nav-btn-warp">
+					<div class="more-btn" id="header-more-btn"> <i class="icon iconfont">&#xe602;</i>
+						<span>更多产品</span>
+					</div>
+				</div>
+				<div class="nav" id="nav">
+					<ul>
+						<li>
+							<a href="#">
+								<span>首页</span> <em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>美人相机</span> <em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   拼</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   客</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>印   象</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>图片合成器</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<!-- 翻页 -->
+			<div class="page-btn-warp">
+				<a href="#" class="btn p-l-btn"></a>
+				<a href="#" class="btn p-r-btn"></a>
+			</div>
+			<!-- 翻页 end-->
+			<div class="con-warp clearfix">
+				<div class="join-page clearfix">
+					<div class="title-item">
+						<h2 class="title">加入我们</h2>
+						<h3 class="title-en">
+							<span>
+								JOIN
+								<br />
+								US
+							</span>
+						</h3>
+					</div>
+					<div class="mod-con-item">
+						<div class="choose-item">
+							<div class="select-nav">
+								<div class="item">
+									<dl class="clearfix">
+										<dt class="title">工作地点：</dt>
+										<dd class="oneLine">
+											<ul>
+												<li>
+													<a href="#">
+														<span>广州</span>
+													</a>
+												</li>
+												<li class="active">
+													<a href="#">
+														<span>上海</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>北京</span>
+													</a>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								<div class="item">
+									<dl class="clearfix">
+										<dt class="title">所属部门：</dt>
+										<dd class="oneLine">
+											<ul>
+												<li>
+													<a href="#">
+														<span>全部</span>
+													</a>
+												</li>
+												<li class="active">
+													<a href="#">
+														<span>总经办</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>市场部</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>产品部</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>运营部</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>内容部</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>营销中心</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span>职能部门</span>
+													</a>
+												</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<i class="line-icon"></i>
+							<div class="listItem clearfix">
+								<div class="item job-item">职位</div>
+								<div class="item department-item">部门</div>
+								<div class="item salary-item">薪酬</div>
+							</div>
+						</div>
+						<div class="results-item scroll-item">
+							<div class="list">
+								<ul>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+									<li class="clearfix">
+										<a href="#">
+											<div class="item job-item">总经理办公室助理</div>
+											<div class="item department-item">总经办</div>
+											<div class="item salary-item">5K-8K /月</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer animated">
+			<div class="footer-nav">
+				<a href="#">关于我们</a>
+				|
+				<a href="#">联系我们</a>
+				|
+				<a href="#">加入我们</a>
+			</div>
+			<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$("#mod-nav-bar").each(function() {
+			$(this).hover(function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+			},
+			function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+			});
+		 });
+	</script>
+</body>
+</html>

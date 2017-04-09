@@ -1,0 +1,7 @@
+.ui-list-load-more-btn {
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  text-align: center;
+  padding: 0.15rem 0;
+  color: #555555;
+}

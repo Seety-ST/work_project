@@ -1,0 +1,542 @@
+(function() {
+
+
+    function Emitter() {
+        this._listener = []; //_listener[自定义的事件名] = [所用执行的匿名函数1, 所用执行的匿名函数2]
+    }
+    //注册事件
+    Emitter.prototype.bind = function(eventName, callback) {
+            var listener = this._listener[eventName] || []; //this._listener[eventName]没有值则将listener定义为[](数组)。
+            
+            listener.push(callback);
+            this._listener[eventName] = listener;
+        } //触发事件
+    Emitter.prototype.trigger = function(eventName) {
+        var args = Array.prototype.slice.apply(arguments).slice(1); //atgs为获得除了eventName后面的参数(注册事件的参数)
+       
+        var listener = this._listener[eventName];
+        if (!Array.isArray(listener)) return; //自定义事件名不存在
+        
+        listener.forEach(function(callback) {
+            try {
+                callback.apply(this, args);
+            } catch (e) {
+                console.error(e);
+            }
+        })
+    }
+
+	function trim (string) {
+	  return (string || '').replace(/^[\s\uFEFF]+|[\s\uFEFF]+$/g, '');
+	};
+
+	function hasClass (el, cls) 
+	{
+	  if (!el || !cls) return false;
+	  if (cls.indexOf(' ') != -1) throw new Error('className should not contain space.');
+	  if (el.classList) {
+		return el.classList.contains(cls);
+	  } else {
+		return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+	  }
+	};
+
+    /**
+     * 增加样式
+     * @param {[type]} el  [description]
+     * @param {[type]} cls [description]
+     */
+    function addClass(el, cls) {
+        if (!el) return;
+        var curClass = el.className;
+        var classes = (cls || '').split(' ');
+
+        for (var i = 0, j = classes.length; i < j; i++) {
+            var clsName = classes[i];
+            if (!clsName) continue;
+
+            if (el.classList) {
+                el.classList.add(clsName);
+            } else {
+                if (!hasClass(el, clsName)) {
+                    curClass += ' ' + clsName;
+                }
+            }
+        }
+        if (!el.classList) {
+            el.className = curClass;
+        }
+
+    };
+
+    /**
+     * 删除样式
+     * @param  {[type]} el  [description]
+     * @param  {[type]} cls [description]
+     * @return {[type]}     [description]
+     */
+    function removeClass(el, cls) {
+        if (!el || !cls) return;
+        var classes = cls.split(' ');
+        var curClass = ' ' + el.className + ' ';
+
+        for (var i = 0, j = classes.length; i < j; i++) {
+            var clsName = classes[i];
+            if (!clsName) continue;
+
+            if (el.classList) {
+                el.classList.remove(clsName);
+            } else {
+                if (hasClass(el, clsName)) {
+                    curClass = curClass.replace(' ' + clsName + ' ', ' ');
+                }
+            }
+        }
+        if (!el.classList) {
+            el.className = trim(curClass);
+        }
+    };
+
+    /**
+     * 绑定事件
+     * @type {[type]}
+     */
+    var bindEvent = (function() {
+        if (document.addEventListener) {
+            return function(element, event, handler) {
+                if (element && event && handler) {
+                    element.addEventListener(event, handler, false);
+                }
+            };
+        } else {
+            return function(element, event, handler) {
+                if (element && event && handler) {
+                    element.attachEvent('on' + event, handler);
+                }
+            };
+        }
+    })();
+
+
+    /**
+     * 移除事件
+     * @type {[type]}
+     */
+    var unbindEvent = (function() {
+        if (document.removeEventListener) {
+            return function(element, event, handler) {
+                if (element && event) {
+                    element.removeEventListener(event, handler, false);
+                }
+            };
+        } else {
+            return function(element, event, handler) {
+                if (element && event) {
+                    element.detachEvent('on' + event, handler);
+                }
+            };
+        }
+    })();
+
+
+
+
+
+    /*
+     * @param {Object} target 目标对象。
+     * @param {Object} source 源对象。
+     * @param {boolean} deep 是否复制(继承)对象中的对象。
+     * @returns {Object} 返回继承了source对象属性的新对象。
+     */
+    var extend = function(target, /*optional*/ source, /*optional*/ deep) {
+        target = target || {};
+        var sType = typeof source,
+            i = 1,
+            options;
+        if (sType === 'undefined' || sType === 'boolean') {
+            deep = sType === 'boolean' ? source : false;
+            source = target;
+            target = this;
+        }
+        if (typeof source !== 'object' && Object.prototype.toString.call(source) !== '[object Function]')
+            source = {};
+        while (i <= 2) {
+            options = i === 1 ? target : source;
+            if (options != null) {
+                for (var name in options) {
+                    var src = target[name],
+                        copy = options[name];
+                    if (target === copy)
+                        continue;
+                    if (deep && copy && typeof copy === 'object' && !copy.nodeType)
+                        target[name] = this.extend(src ||
+                            (copy.length != null ? [] : {}), copy, deep);
+                    else if (copy !== undefined)
+                        target[name] = copy;
+                }
+            }
+            i++;
+        }
+        return target;
+    };
+
+    var load_js = function(url,callback)
+    {
+        var script = document.createElement('script');
+        callback = callback || function(){};
+        script.type = 'text/javascript';
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
+
+        script.onload = callback;
+    };
+
+
+    function yueyue_share_class(option) {
+        var self = this;
+        var option = option || {};
+        self.$ele = option.ele;
+        self.wx_json = option.wx_json || {};
+        self.__SHARE_TEXT = option.share_text;
+        self.App = option.App;
+        self.UA = option.UA;
+
+        self.showtopmenu = option.showtopmenu == null ? true : false;
+        self.init();
+
+    }
+
+
+    yueyue_share_class.prototype = {
+        init: function() {
+            var self = this;
+            //ua判断
+            self.__SHARE_TEXT.pic = self.__SHARE_TEXT.img;
+            if (!self.__SHARE_TEXT.img || !self.__SHARE_TEXT.url || !self.__SHARE_TEXT.qrcodeurl || !self.__SHARE_TEXT.url_v3) {
+                alert('缺少分享参数');
+            }
+
+            self.emitter = new Emitter();
+
+            if (self.UA.is_weixin) {
+                var htmlCodes = [
+                    '<div class="share-fade fn-hide" data-role="share-fade">',
+                    '    <div class="sharebox" data-role="sharebox"></div>',
+                    '</div>'
+                ].join("");
+                var dom = document.createElement('div');
+                dom.innerHTML = htmlCodes;
+                document.body.appendChild(dom);
+                self.wx_event();
+            } else if (self.UA.is_yue_app || self.UA.is_yue_seller) {
+                self.app_event();
+            } else if (/MQQBrowser\/(\/[\d\.]+)*/i.test(window.navigator.userAgent)) {
+                load_js('http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js',function()
+                {
+                    self.qq_event();
+                })
+            } else {
+                var htmlCodes = [
+                    '<div class="sharebox-rests fn-hide" data-role="sharebox-rests">',
+                    '            <div class="share-content">',
+                    '                <span class="yueyue_share_icon sina" data-role="sina"></span>',
+                    '                <span class="yueyue_share_icon qqzone" data-role="qzone"></span>',
+                    '            </div>',
+                    '            <div class="share-close" data-role="share-close">取消</div>',
+                    '        </div>'
+                ].join("");
+                var dom = document.createElement('div');
+                dom.innerHTML = htmlCodes;
+                document.body.appendChild(dom);
+                self.wap_event();
+            }
+            self.includeLinkStyle("//static.yueus.com/yue_ui/share/share.css");
+
+        },
+        wx_event: function() {
+            var self = this;
+            if (self.UA.is_weixin) {
+                var $share_fade = document.querySelector('[data-role="share-fade"]');
+                bindEvent($share_fade, 'click', function() {
+                    self.hide_layer();
+                })
+                var __wx_common_share = {};
+                var __wx_common_timeline = {};
+                var loc = window.location;
+                var share_text = self.__SHARE_TEXT;
+                __wx_common_share = {
+                    title: share_text.title, // 分享标题
+                    desc: share_text.content, // 分享描述
+                    link: share_text.url,
+                    imgUrl: share_text.img + new Date().getTime(), // 分享图标
+                    type: 'link', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function(data) {
+                        console.log(data)
+                        self.action(data.errMsg);
+                    },
+                    cancel: function(data) {
+                        // 用户取消分享后执行的回调函数
+                    }
+                };
+                __wx_common_timeline = {
+                    title: share_text.title, // 分享标题
+                    desc: share_text.content, // 分享描述
+                    link: share_text.url,
+                    imgUrl: share_text.img + new Date().getTime(), // 分享图标
+                    type: 'link', // 分享类型,music、video或link，不填默认为link
+                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                    success: function(data) {
+
+                        self.action(data.errMsg);
+                    },
+                    cancel: function() {
+                        // 用户取消分享后执行的回调函数
+                    }
+                };
+
+                window.__wx_common_share = __wx_common_share;
+                window.__wx_common_timeline = __wx_common_timeline
+
+                wx.ready(function() {
+                    wx.onMenuShareAppMessage(window.__wx_common_share);
+
+                    wx.onMenuShareTimeline(window.__wx_common_timeline);
+
+                    wx.onMenuShareQQ(window.__wx_common_share);
+
+                    wx.onMenuShareQZone(window.__wx_common_share);
+
+
+                });
+            }
+
+        },
+        app_event: function(share_text_data) {
+            var self = this;
+
+            if (!share_text_data) {
+                var share_text = self.__SHARE_TEXT;
+            }
+
+            if (self.App && self.App.isPaiApp) {
+                window.$_AppCallJSObj = document.body;
+
+                bindEvent(window.$_AppCallJSObj, 'onShare', function(event, data) {
+                    // 处理分享增加抽奖次数的请求
+                    if (data) {
+                        self.action(data.share_type);
+                    }
+                });
+
+                bindEvent(self.$ele, 'click', function() {
+                    share_text = extend(share_text, {
+                        jscbfunc: 'onShare'
+                    });
+                    self.App.share_card(share_text,
+                        function(data) {
+
+                        }
+                    )
+                })
+
+                // app分享回调
+                window.__YUEYUE__APP__ = {};
+                window.__YUEYUE__APP__.SHARE_INFO = share_text;
+                window.__YUEYUE__APP__.SHARE_INFO.success = function(data) {
+                    self.action(data.share_type);
+
+                    console.log(data)
+                }
+
+                //右上角
+                self.App.showtopmenu(self.showtopmenu);
+            }
+
+        },
+        wap_event: function(share_text_data) {
+            var self = this;
+            //分享弹层的显隐
+            var $sharebox_rests = document.querySelector('[data-role="sharebox-rests"]');
+            var $share_close = document.querySelector('[data-role="share-close"]');
+
+            var $sina = document.querySelector('[data-role="sina"]');
+            var $qzone = document.querySelector('[data-role="qzone"]');
+            if (share_text_data) {
+                var share_text = share_text_data;
+            } else {
+                var share_text = self.__SHARE_TEXT;
+            }
+
+            self.pic = encodeURI(share_text.img);
+            self.content = share_text.content;
+            self.title = share_text.title;
+            self.url = encodeURI(share_text.url);
+
+            bindEvent($sina, 'click', function() {
+                self.action('wap_sina');
+                self.hide_layer();
+                window.open('http://www.yueus.com/action/send_share.php?url=' + self.url + '&title=' + self.title + '&content=' + self.title + '&pic=' + self.pic + '&sign=sina');
+            })
+            bindEvent($qzone, 'click', function() {
+                self.action('wap_qzone');
+                self.hide_layer();
+                window.open('http://www.yueus.com/action/send_share.php?url=' + self.url + '&title=' + self.title + '&content=' + self.title + '&pic=' + self.pic + '&sign=qzone');
+            })
+
+            bindEvent($share_close,'click',function()
+            {
+                self.hide_layer();
+            })
+        },
+        qq_event: function(share_text_data) {
+            var self = this;
+            if (share_text_data) {
+                var share_text = share_text_data;
+            } else {
+                var share_text = self.__SHARE_TEXT;
+            }
+
+            setShareInfo({
+                title: share_text.title,
+                summary: share_text.content,
+                pic: share_text.img + new Date().getTime(),
+                url: window.location.href
+            });
+        },
+        action: function(type) {
+            var self = this;
+            var share_type = ''
+
+            switch (type) {
+                case "shareTimeline:ok":
+                    share_type = "wx_timeline";
+                    break;
+                case "sendAppMessage:ok":
+                    share_type = "wx_friend";
+                    break;
+                case "shareQQ:ok":
+                    share_type = "wx_qq";
+                    break;
+                case "shareQZone:ok":
+                    share_type = "wx_qzone";
+                    break;
+                case "wxsession":
+                    share_type = "app_wx_friend";
+                    break;
+                case "wxsession":
+                    share_type = "app_wx_friend";
+                    break;
+                case "wxtimeline":
+                    share_type = "app_wx_timeline";
+                    break;
+                case "qq":
+                    share_type = "app_qq";
+                    break;
+                case "qzone":
+                    share_type = "app_qzone";
+                    break;
+                case "sina":
+                    share_type = "app_sina";
+                    break;
+                case "wap_sina":
+                    share_type = "wap_sina";
+                    break;
+                case "wap_qzone":
+                    share_type = "wap_qzone";
+                    break;
+            }
+
+            //$('body').trigger('share_success',[share_type]);
+            self.emitter.trigger('share_success', share_type);
+
+        },
+        change_share_text: function(change_share_text, callback) {
+            //改变分享内容
+            var self = this;
+            var share_text = change_share_text;
+
+            if (self.App && self.App.isPaiApp) {
+                bindEvent(window.$_AppCallJSObj, 'onShare', function(event, data) {
+                    // 处理分享增加抽奖次数的请求
+                    if (data) {
+                        self.action(data.share_type);
+                    }
+                });
+                if (callback) {
+                    self.App.share_card(share_text,
+                        function(data) {
+
+                        }
+                    )
+                }
+
+            } else if (self.UA.is_weixin) {
+                var share_text = change_share_text;
+                var wx_common_share = window.__wx_common_share;
+                var wx_common_timeline = window.__wx_common_timeline;
+
+                wx_common_share.title = share_text.title;
+                wx_common_share.desc = share_text.content;
+                wx_common_share.imgUrl = share_text.img;
+
+                wx_common_timeline.title = share_text.title;
+                wx_common_timeline.desc = share_text.content;
+                wx_common_timeline.imgUrl = share_text.img;
+
+                wx.onMenuShareAppMessage(wx_common_share);
+
+                wx.onMenuShareTimeline(wx_common_timeline);
+
+                wx.onMenuShareQQ(wx_common_share);
+
+                wx.onMenuShareQZone(wx_common_share);
+            } else if (self.UA.is_qq) {
+                self.qq_event(share_text);
+            } else {
+                self.wap_event(share_text);
+            }
+        },
+        includeLinkStyle: function(url) {
+            var link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.href = url;
+            document.getElementsByTagName("head")[0].appendChild(link);
+        },
+        show_layer : function()
+        {
+            var self = this;
+            var $share_fade = document.querySelector('[data-role="share-fade"]');
+            var $sharebox_rests = document.querySelector('[data-role="sharebox-rests"]');
+            if (self.UA.is_weixin)
+            {
+                removeClass($share_fade,'fn-hide');
+            }
+            else
+            {
+                removeClass($sharebox_rests, 'fn-hide');
+            }
+
+        },
+        hide_layer : function()
+        {
+            var self = this;
+            var $sharebox_rests = document.querySelector('[data-role="sharebox-rests"]');
+            var $share_fade = document.querySelector('[data-role="share-fade"]');
+
+            if (self.UA.is_weixin)
+            {
+                addClass($share_fade,'fn-hide');
+            }
+            else
+            {
+                addClass($sharebox_rests, 'fn-hide');
+            }
+
+        }
+    }
+
+    window.yueyue_share_class = yueyue_share_class;
+
+})();

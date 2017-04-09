@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/mrxx.css" type="text/css" rel="stylesheet" />
+	<title>美人信息</title>
+</head>
+
+<body class="article-bg">
+	<div class="article-page font_wryh">
+		<div class="header animated">
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-icon-145x111.png" />
+				</a>
+			</h1>
+			<div class="mod-nav-bar"  id="mod-nav-bar">
+				<div class="nav-btn-warp">
+					<div class="more-btn" id="header-more-btn"> <i class="icon iconfont">&#xe602;</i>
+						<span>更多产品</span>
+					</div>
+				</div>
+				<div class="nav" id="nav">
+					<ul>
+						<li>
+							<a href="#">
+								<span>首页</span> <em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>美人相机</span> <em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   拼</span> <em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   客</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>印   象</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>图片合成器</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<!-- 翻页 -->
+			<div class="page-btn-warp">
+				<a href="#" class="btn p-l-btn"></a>
+				<a href="#" class="btn p-r-btn"></a>
+			</div>
+			<!-- 翻页 end-->
+			<div class="con-warp clearfix">
+				<div class="contact-page">
+					<div class="title-item">
+						<h2 class="title">联系我们</h2>
+						<h3 class="title-en">
+							<span>
+								CONTACT
+								<br />
+								US
+							</span>
+						</h3>
+					</div>
+					<div class="text-warp">
+						<div class="item">
+							<i class="line-icon"></i>
+							<h4 class="listItem">广州美人信息技术有限公司</h4>
+							<div class="text-item">
+								<dl class="add-item clearfix">
+									<dt>广州总公司</dt>
+									<dd>地址：广州市天河区珠江新城高德置地广场A座2703A室</dd>
+								</dl>
+								<dl class="add-item clearfix">
+									<dt>上海分公司</dt>
+									<dd>地址：上海市长宁区长宁路546号尚街会馆1302室</dd>
+								</dl>
+								<dl class="add-item clearfix">
+									<dt>北京分公司</dt>
+									<dd>地址：北京市朝阳区朝阳门北大街乙12号天辰大厦2009室</dd>
+								</dl>
+							</div>
+						</div>
+						<div class="item">
+							<i class="line-icon"></i>
+							<h4 class="listItem">广告合作 联系电话</h4>
+							<div class="text-item">
+								<p>华东地区（上海）：021-32528390</p>
+								<p>华南地区（广州）：020-38692317</p>
+								<p>华北地区（北京）：010-65528781</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer animated">
+			<div class="footer-nav">
+				<a href="#">关于我们</a>
+				|
+				<a href="#">联系我们</a>
+				|
+				<a href="#">加入我们</a>
+			</div>
+			<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$("#mod-nav-bar").each(function() {
+			$(this).hover(function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+			},
+			function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+			});
+		 });
+	</script>
+</body>
+</html>

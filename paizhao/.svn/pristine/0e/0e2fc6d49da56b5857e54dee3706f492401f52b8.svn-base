@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/ui/no-use/base.b1408e9.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/common/main.e6d008a.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.265f1a7.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-not.f3cc546.css">
+<script src="http://51snap.yueus.com/static/wap/lib/base.c17f5da.js"></script>  
+
+	
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+
+<script type="text/javascript" >
+require.resourceMap({"res":{"wap-huipai:global/abnormal/index":{"pkg":"wap-huipai:p0"},"wap-huipai:global/cookie/index":{"pkg":"wap-huipai:p0"},"wap-huipai:global/go_top/go_top":{"pkg":"wap-huipai:p0"},"wap-huipai:global/header/main":{"pkg":"wap-huipai:p0"},"wap-huipai:global/layer/layer":{"pkg":"wap-huipai:p0"},"wap-huipai:global/lazyload/lazyload":{"pkg":"wap-huipai:p0"},"wap-huipai:global/list/list":{"pkg":"wap-huipai:p0"},"wap-huipai:global/location_sel/location_localstorage":{"pkg":"wap-huipai:p0"},"wap-huipai:global/main":{"pkg":"wap-huipai:p0"},"wap-huipai:global/swiper/1.0.0/swiper3.07.min":{"pkg":"wap-huipai:p0"},"wap-huipai:global/ua/index":{"pkg":"wap-huipai:p0"},"wap-huipai:global/utility/cross_domain_storage":{"pkg":"wap-huipai:p0"},"wap-huipai:global/utility/index":{"pkg":"wap-huipai:p0"}},"pkg":{"wap-huipai:p0":{"url":"http://51snap.yueus.com/static/wap/js/common.96f3480.js"}}});
+</script>
+
+</head>
+
+
+<header class="global-header" >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">边框</h3>
+	</div>
+</header>
+  
+
+<!-- 页面内容start -->
+	<ul class="ui-list-text border-list">
+	    <li class="ui-border-t">上边框</li>
+	    <li class="ui-border">边框</li>
+	    <li class="ui-border-b">下边框</li>
+	    <li class="ui-border-tb">上下边框</li>
+	    <li class="ui-border-l">左边框</li>
+	    <li class="ui-border-r">右边框</li>
+	    <li class="border">
+	        xxx
+	    </li>
+	</ul>
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

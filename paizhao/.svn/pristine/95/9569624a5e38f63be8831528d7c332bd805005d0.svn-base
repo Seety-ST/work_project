@@ -1,0 +1,91 @@
+<!--底部-->
+
+<script>
+(function()
+{   
+    var run_status = 'DEV' == 'DEV' ? false : true ;
+    
+    if(window.__RESOURCE_MAP__)
+    {
+<<<<<<< .mine
+<<<<<<< .mine
+<<<<<<< .mine
+        var version = '2016-11-4 9:10:11';
+=======
+        var version = '2016-11-8 11:6:20';
+=======
+        var version = '2016-11-8 12:13:47';
+=======
+        var version = '2016-11-17 12:11:16';
+>>>>>>> .r3835
+>>>>>>> .r3520
+>>>>>>> .r3487
+
+        // __yue_ls__.loader(window.__RESOURCE_MAP__,
+        // [            
+        //     'wap-yypay:global/I_APP/I_APP',
+        //     'wap-yypay:global/I_WX_SDK/I_WX_SDK',
+        //     'wap-yypay:global/cookie/index',
+        //     'wap-yypay:global/frozen/frozen',
+        //     'wap-yypay:global/lazyload/lazyload',
+        //     'wap-yypay:global/list/list',
+        //     'wap-yypay:global/ua/index',
+        //     'wap-yypay:global/utility/cross_domain_storage',
+        //     'wap-yypay:global/main',
+        //     'wap-yypay:global/utility/index',
+        // ],run_status,version,'yypay');    
+        
+    }
+    
+
+})();
+</script>
+
+<!-- 判断当前浏览器是否为ie9以下 start -->
+<div class="fade dn"></div>
+<div class="pop-ie9-fade font_wryh dn">
+    <a href="javascript:;" class="close-btn"></a>
+    <div class="item-wrap">
+        <p class="tips-item f16 color-333">
+            你当前的浏览器版本过低，可能会存在风险
+            建议升级到最新版本或使用其他浏览器
+        </p>
+        <div class="btn-item">
+            <a target="_blank" href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8&rsv_pq=999f976b0001c226&rsv_t=90a06hBym76JusrEVSuov1yR7o1x6U2NRUT9HuPXG9uq%2BllGjk8j9KAEbkI&rsv_enter=1&rsv_sug3=4&rsv_sug1=1&rsv_sug7=100" class="browser-btn">
+                <img src="http://51snap.yueus.com//static/pc/image/footer/google-btn-133x30.png" />
+            </a>
+            <a target="_blank" href="https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=0&rsv_idx=1&tn=baidu&wd=%E6%90%9C%E7%8B%97%E6%B5%8F%E8%A7%88%E5%99%A8&rsv_pq=cd5b35140001946e&rsv_t=14fd5QdbMGg%2Bjv2XYsnG9m%2FZxJza8dks%2BqGJPd%2B6woF3uLoyTEBLuu%2BQVjk&rsv_enter=1&rsv_sug3=4&rsv_sug1=1&rsv_sug7=100"class="browser-btn">
+                <img src="http://51snap.yueus.com//static/pc/image/footer/sogo-btn-133x30.jpg" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    (function(){
+       var default_version = "9.0";
+       var userAgent = navigator.userAgent.toLowerCase();
+       var isIE = userAgent.indexOf("msie")>-1;
+       var safariVersion;
+       if(isIE){
+           safariVersion =  userAgent.match(/msie ([\d.]+)/)[1];
+           if(parseFloat(safariVersion) < default_version ){
+               $(".pop-ie9-fade").removeClass('dn');
+               $(".fade").removeClass('dn');
+           }
+       }
+
+       $(".pop-ie9-fade .close-btn").on("click",function(){
+           $(".pop-ie9-fade").addClass('dn');
+           $(".fade").addClass("dn");
+       });
+
+   })();
+
+   
+
+
+</script>
+
+<!-- 判断当前浏览器是否为ie9以下 end -->

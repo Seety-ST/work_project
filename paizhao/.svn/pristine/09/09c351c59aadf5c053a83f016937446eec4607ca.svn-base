@@ -1,0 +1,39 @@
+define('pc-huipai:global/location_sel/location_sel', function(require, exports, module){ /**
+ *  //约摄地区选择模块，目前在约摄使用
+ * @authors 星星
+ */
+
+function Location_sel(options)
+{
+    var self = this;
+    var options = options || {};
+    self.can_use_city = options.can_use_city || true;//能否使用第二级城市数据
+    self.can_use_district = options.can_use_district || true;//能否使用第三级地区数据
+    self.default_location_id = options.default_location_id || 101029001;//地区ID，默认为广州
+    self.$province_data = options.$province_data || $("[data-role='province-data']");//省按钮
+    self.$city_data = options.$city_data || $("[data-role='city-data']");//市按钮
+    self.$district_data = options.$district || $("[data-role='district-data']");//区按钮
+    self.$province_data_list = options.$province_data || $("[data-role='province-data-list']");//省数据容器
+    self.$city_data_list = options.$city_data || $("[data-role='city-data-list']");//市数据容器
+    self.$district_data_list = options.$district || $("[data-role='district-data-list']");//区数据容器
+
+
+
+
+    self.img_center = options.img_center || {};
+    self.img_center_width = options.img_center.width || 0;
+    self.img_center_height = options.img_center.height || 0;
+    self.pre_load_165 = options.pre_load_165 || false;
+    self.flag = options.flag || 'data-lazyload-url';
+    self.distance = options.distance || 0;
+
+    var contain = options.contain ;
+
+    if(!contain)
+    {
+        throw '尚未初始化化lazyload的父容器';
+    }
+    self.init(contain,options);
+    return self;
+} 
+});

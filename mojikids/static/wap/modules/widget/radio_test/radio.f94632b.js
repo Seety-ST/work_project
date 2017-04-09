@@ -1,0 +1,5 @@
+define('wap-kids:widget/radio_test/radio', function(require, exports, module) {
+
+  "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default={name:"my-radio",props:{options:{type:Array,required:!0},defalueval:String},data:function(){return{currentValue:this.defalueval}},watch:{defalueval:function(e){this.currentValue=e},currentValue:function(e){this.$emit("input",e),console.log(e)}}},function(e){module&&module.exports&&(module.exports.template=e),exports&&exports.default&&(exports.default.template=e)}('<div>\n    <label class="radio-mod-1 " v-for="option in options" @change="$emit(\'change\', currentValue)" :class="{\'is-checked\': option.value === currentValue}">\n        <span class="el-radio-input ">\n            <span class="radio-inner"></span>\n            <input type="radio" class="el-radio-original" v-model="currentValue" :disabled="option.disabled" :value="option.value || option">\n        </span>\n        <span class="el-radio-label f14 color-ccc" v-text="option.value"></span>\n    </label>\n</div>');
+
+});

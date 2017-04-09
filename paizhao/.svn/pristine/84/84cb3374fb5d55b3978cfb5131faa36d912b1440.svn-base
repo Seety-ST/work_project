@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="import" href="./no-use.htm?__inline">
+	
+	
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/no-use.scss">
+
+	<!-- 基本 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/ui-color.scss">
+	<!-- 当前页css  -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/ui-nav.scss">
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">分页 ui-page.scss</h3>
+
+				<!-- 模板start -->
+				<div class="model f14">
+					<p class="f18">分页样式一</p>
+					<br />
+					<div class="nav-mod-1">
+						<a href="#" class="color-666">摄影师马叔</a> >
+						<a href="#" class="color-666">摄影师马叔</a>
+					</div>
+
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+	
+</script>
+</html>
+
+

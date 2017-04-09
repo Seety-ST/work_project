@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>简客积分</title>
+    <link href="css/janeplus-point.css" type="text/css" rel="stylesheet" />
+    <body class="rudt-bg">
+        <section class="taskhall-page">
+            <div class="mod-tab-wrap">
+                <div class="total-points-item">
+                    <i class="icon points-icon"></i><span class="num">1500</span>
+                </div>
+                <section class="tab-wrap">
+                    <div class="tab-nav clearfix">
+                        <ul>
+                            <li class="cur">
+                                <span>任务大厅</span>
+                            </li>
+                            <li>
+                                <span>积分足迹</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-wrap">
+                        <!-- 切换内容 -->
+                        <section class="banner-list clearfix">
+                            <ul>
+                                <li style="background-image:url(images/test/346x256.jpg)">
+                                    <div class="text-item">
+                                        <span class="text-bg"></span>
+                                        <dl>
+                                            <dt class="title">体验某功能得积分</dt>
+                                            <dd class="info-item">
+                                                <i class="icon points-icon"></i>
+                                                <span class="points-item">
+                                                    <b class="add">+</b>
+                                                    <em class="num">3</em>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li style="background-image:url(images/test/346x256-2.jpg)">
+                                    <div class="text-item">
+                                        <span class="text-bg"></span>
+                                        <dl>
+                                            <dt class="title">体验某功能得积分</dt>
+                                            <dd class="info-item">
+                                                <i class="icon points-icon"></i>
+                                                <span class="points-item">
+                                                    <b class="add">+</b>
+                                                    <em class="num">3</em>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li style="background-image:url(images/test/346x256-2.jpg)">
+                                    <div class="text-item">
+                                        <span class="text-bg"></span>
+                                        <dl>
+                                            <dt class="title">体验某功能得积分</dt>
+                                            <dd class="info-item">
+                                                <i class="icon points-icon"></i>
+                                                <span class="points-item">
+                                                    <b class="add">+</b>
+                                                    <em class="num">3</em>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li style="background-image:url(images/test/346x256.jpg)">
+                                    <div class="text-item">
+                                        <span class="text-bg"></span>
+                                        <dl>
+                                            <dt class="title">体验某功能得积分</dt>
+                                            <dd class="info-item">
+                                                <i class="icon points-icon"></i>
+                                                <span class="points-item">
+                                                    <b class="add">+</b>
+                                                    <em class="num">3</em>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li style="background-image:url(images/test/346x256.jpg)">
+                                    <div class="text-item">
+                                        <span class="text-bg"></span>
+                                        <dl>
+                                            <dt class="title">体验某功能得积分</dt>
+                                            <dd class="info-item">
+                                                <i class="icon points-icon"></i>
+                                                <span class="points-item">
+                                                    <b class="add">+</b>
+                                                    <em class="num">3</em>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li style="background-image:url(images/test/346x256-2.jpg)">
+                                    <div class="text-item">
+                                        <span class="text-bg"></span>
+                                        <dl>
+                                            <dt class="title">体验某功能得积分</dt>
+                                            <dd class="info-item">
+                                                <i class="icon points-icon"></i>
+                                                <span class="points-item">
+                                                    <b class="add">+</b>
+                                                    <em class="num">3</em>
+                                                </span>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- 切换内容 end -->
+                    </div>
+                </section>
+            </div>
+        </section>
+    </body>
+</html>

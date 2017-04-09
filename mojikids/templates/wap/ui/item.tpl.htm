@@ -1,0 +1,25 @@
+<div class="wap-list-mod-1">
+    <ul class="list" >        
+        <li class="clearfix" v-for="$item in data.list">
+            <div class="avator-item fldi">
+                <div class="ui-avatar-icon ui-avatar-icon-60">
+                           <i :style="{backgroundImage:'url('+$item.images+')'}"></i>
+                </div>
+                <i class="mark-icon girl-mark-icon"></i>
+            </div>
+            <div class="txt-item fldi">
+                <p class="box-1 tc">
+                    {{$item.titles}}
+                </p>
+                <p class="box-2 f14 color-666 tc">
+                    {{$item.titles}}
+                </p>
+            </div>
+            <div class="btn-item">
+                <button @click="show_title($item.titles)" class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+                    <span class="ui-button-content f12">修改</span>
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>兰蔻H5</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<body>
+	<section class="txtInfo-page">
+		<div class="listItem"></div>
+		<div class="tips-item"></div>
+		<div class="icon-wrap">
+			<i class="h-icon"></i>
+			<i class="w-icon"></i>
+		</div>
+		<div class="txt-wrap">
+			<dl class="txt">
+				<dt>请正确填写您的联系方式</dt>
+				<dd>我们会将奖品快递给您</dd>
+			</dl>
+			<div class="input-wrap">
+				<div class="input-item clearfix">
+					<label>姓名：</label><input type="text" class="input-txt">
+				</div>
+				<div class="input-item clearfix">
+					<label>联系电话：</label><input type="text" class="input-txt" >
+				</div>
+				<div class="input-item clearfix">
+					<label>地址：</label><input type="text" class="input-txt"  placeholder="请填写准确的地址!">
+				</div>
+			</div>
+		</div>
+		<div class="btn-wrap clearfix">
+			<div class="mod-btn-item tj-btn">
+				<span class="btn-area"></span>
+			</div>
+		</div>
+	</section>
+	<!-- 弹出层 -->
+	<div class="fade" style="display: none"></div>
+	<!-- 成功 -->
+	<div class="mod-txt-pop" style="display: none">
+		<div class="listItem">提交成功</div>
+		<div class="txt-item">
+			您的兰蔻大眼精华已在路上<br />
+			~请耐心等待哦~
+		</div>
+		<div class="btn-wrap clearfix">
+			<div class="mod-btn-item close-btn">
+				<span class="btn-area"></span>
+			</div>
+		</div>
+	</div>
+	<!-- 成功 end -->
+	<!-- 失败 -->
+	<div class="mod-txt-pop" style="display: none">
+		<div class="listItem">提交失败</div>
+		<div class="txt-item">
+			请您返回正确填写信息
+		</div>
+		<div class="btn-wrap">
+			<div class="mod-btn-item back-btn">
+				<span class="btn-area"></span>
+			</div>
+		</div>
+	</div>
+	<!-- 失败 end -->
+	<!-- 弹出层 end -->
+</body>
+</html>

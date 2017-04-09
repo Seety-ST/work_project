@@ -1,0 +1,521 @@
+/** 清除内外边距 **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote, /* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form,
+fieldset,
+legend,
+button,
+input,
+textarea, /* form elements 表单元素 */
+th,
+td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border:medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body,
+button,
+input,
+select,
+textarea { font:12px/1.5  "SimSun", Tahoma, Arial, sans-serif}
+input,
+select,
+form img,
+button { vertical-align:middle; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-size: 100%; }
+em { font-style:normal; }
+/** 重置列表元素 **/
+ul,
+ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color:#333; }
+a:hover { text-decoration: underline;}
+/** 重置图片元素 **/
+img { border:none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+textarea, input{resize:none}
+a, textarea, input, button{outline:none}
+.clear { clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.coz{ clear:both; overflow:hidden; zoom:1}
+/*** font ***/
+.word_break { white-space:normal; word-wrap:break-word; word-break:break-all; }
+.f14 { font-size:14px; }
+.fb { font-weight:bold; }
+.db{ display:block}
+.dn {display:none}
+.di{ display:inline}
+.tc{ text-align:center;}
+.vam{vertical-align:middle;}
+.lh18 { line-height:18px; }
+.lh20 { line-height:20px; }
+.lh22 { line-height:22px; }
+.lh24 { line-height:24px; }
+.lh26 { line-height:26px; }
+.lh28 { line-height:28px; }
+.lh30 { line-height:30px; }
+.font_wryh{font-family:'微软雅黑','黑体','宋体';}
+/** position **/
+.re { position:relative; z-index:1 }
+.fr { float:right; }
+.fl { float:left; }
+.frdi { float:right; display:inline }
+.fldi { float:left;display:inline }
+.pt5 { padding-top:5px; }
+.pt10 { padding-top:10px; }
+.pt15 { padding-top:15px; }
+.pt20 { padding-top:20px; }
+.pb5 { padding-bottom:5px}
+.pb10 { padding-bottom:10px}
+.pb15 { padding-bottom:15px}
+.pb20 { padding-bottom:20px}
+.pl5 { padding-left:5px; }
+.pl10 { padding-left:10px; }
+.pl15 { padding-left:15px; }
+.pl20 { padding-left:20px; }
+.pr5 { padding-right:5px; }
+.pr10 { padding-right:10px; }
+.pr15 { padding-right:15px; }
+.pr20 { padding-right:20px; }
+.mt5 { margin-top:5px; }
+.mt10 { margin-top:10px; }
+.mt15 { margin-top:15px; }
+.mt20 { margin-top:20px; }
+.mb5 { margin-bottom:5px}
+.mb10 { margin-bottom:10px}
+.mb15 { margin-bottom:15px}
+.mb20 { margin-bottom:20px}
+.ml5 { margin-left:5px; }
+.ml10 { margin-left:10px; }
+.ml15 { margin-left:15px; }
+.ml20 { margin-left:20px; }
+.mr5 { margin-right:5px; }
+.mr10 { margin-right:10px; }
+.mr15 { margin-right:15px; }
+.mr20 { margin-right:20px; }
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+/* ====================== 重置结束 ===================== */
+.w1000{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+body { 
+	font: 14px "Microsoft Yahei",Arial,Helvetica,sans-serif; 
+	color: #fff;
+	background-color: #f4f4f4;
+}
+
+.footer{
+	color: #8f8f8f;
+}
+.footer a{
+	color: #8f8f8f;
+}
+
+
+
+.page { 
+	background-repeat: no-repeat;
+}
+.contain { 
+	position: relative; 
+	width: 100%;
+	height: 100%;
+
+}
+.
+.page .con-item{
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#navBar { 
+	z-index: 3; 
+	position: absolute; 
+	top: 40%; 
+	right: 24px;
+}
+#navBar .active { 
+	background: url(../images/beauty/page-icon-active-12x12.png) no-repeat;
+}
+#navBar li { 
+	cursor: pointer; 
+	margin-bottom: 16px; 
+	transition: all .7s ease; 
+	line-height: 0px; 
+	font-size: 0;
+	text-align: center; 
+	width: 12px; 
+	height: 12px;
+	background: url(../images/beauty/page-icon-12x12.png) no-repeat;
+}
+
+
+.mod-logo{
+	width: 8.125%;
+	position: fixed;
+	top: 0;
+	left: 5.5208%;
+	z-index: 9;
+}
+.mod-logo img{
+	display: block;
+	width: 100%;
+}
+
+
+.mod-download-item{
+	width: 39%;
+}
+.mod-download-item .code-item{
+	float: left;
+	width: 33.3%;
+}
+.mod-download-item .code-item .code-img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+.mod-download-item .code-item .code-img img{
+	width: 100%;
+}
+.mod-download-item .btn-warp{
+	float: left;
+	width: 58%;
+	padding-left: 5%;
+}
+.mod-download-item .btn-warp .btn{
+	display: block;
+	margin-bottom: 12px;
+	background: #18cea7;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 26px;
+	-webkit-transition: 600ms;
+	-moz-transition: 600ms;
+	-ms-transition: 600ms;
+	-o-transition: 600ms;
+	transition: 600ms;
+}
+.mod-download-item .btn-warp .btn:hover{
+	background: #13b08e;
+	text-decoration: none;
+}
+.mod-download-item .btn-warp .btn .icon{
+	font-size: 35px;
+	display: block;
+	float: left;
+	width: 25%;
+	padding:4.4% 0px;
+	text-align: center;
+	
+}
+
+.mod-download-item .btn-warp .btn span{
+	float: left;
+	width: 73%;
+	padding:5% 0px;
+	display: block;
+	border-left: 1px solid #fff;
+	cursor: pointer;
+}
+
+#jpdown-page{
+	min-width: 1024px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: url(../images/beauty/page-icon-active-12x12.png) no-repeat;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: url(../images/beauty/page-icon-12x12.png) no-repeat;
+}
+
+
+.page2,
+.page3,
+.page4,
+.page5{
+	overflow: hidden;
+}
+
+/* -- 第一屏 -- */
+
+.page1 .bg-item{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/beauty/bg-item/section-1-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.page1 .move-item{
+	width: 100%;
+	height: 950px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -475px;
+}
+.page1 .info-item{
+	width: 53%;
+	height: 132px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	margin: -7% 0 0 -26%;
+}
+.page1 .mod-download-item{
+	float: right;
+	margin: 32% 10% 0 0;
+}
+
+
+
+/* -- 第二屏 -- */
+.page2 .bg-item{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/beauty/bg-item/section-2-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.page2 .move-item{
+	width: 100%;
+	height: 950px;
+	position: absolute;
+	left: 0;
+	top: 65%;
+	margin-top: -475px;
+
+}
+.page2 .info-item{
+	width: 53%;
+	height: 132px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -66px 0 0 -512px;
+}
+.page2 .info-item .mod-download-item{
+	float: left;
+	padding: 100px 0 0 22px;
+}
+
+/* -- 第三屏 -- */
+.page3 .bg-item{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/beauty/bg-item/section-3-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.page3 .move-item{
+	width: 100%;
+	height: 950px;
+	position: absolute;
+	left: 0;
+	top: 65%;
+	margin-top: -475px;
+}
+.page3 .info-item{
+	width: 53%;
+	height: 132px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	margin: -7% 0 0 -26%;
+}
+.page3 .mod-download-item{
+	float: right;
+	margin: 10% 10% 0 0;
+}
+
+
+/* -- 第四屏 -- */
+.page4 .bg-item{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/beauty/bg-item/section-4-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.page4 .move-item{
+	width: 100%;
+	height: 950px;
+	position: absolute;
+	left: 0;
+	top: 65%;
+	margin-top: -475px;
+}
+.page4 .info-item{
+	width: 53%;
+	height: 132px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	margin: -66px 0 0 -512px;
+}
+.page4 .mod-download-item{
+	float: left;
+	padding: 100px 0 0 22px;
+}
+
+
+/* -- 第五屏 -- */
+.page5 .bg-item{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/beauty/bg-item/section-5-bg.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.page5 .move-item{
+	width: 100%;
+	height: 950px;
+	position: absolute;
+	left: 0;
+	top: 65%;
+	margin-top: -475px;
+}
+.page5 .info-item{
+	width: 53%;
+	height: 132px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	margin: -7% 0 0 -26%;
+}
+.page5 .mod-download-item{
+	float: left;
+	margin: 10% 0% 0 53%;
+}
+
+
+
+/* -- 第六屏 -- */
+.page6 .con-item{
+	width: 42%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -96px 0 0 -21%;
+}
+.page6 .info-item{
+	width: 100%;
+}
+.page6 .info-item h2.logo{
+	float: left;
+	width: 41%;
+	background: url(../images/beauty/line-bg-7x160.png) right bottom no-repeat;
+}
+.page6 .info-item h2.logo i.icon{
+	display: block;
+	width: 100%;
+	padding:22% 0px;
+	background: url(../images/beauty/logo-img-332x160.png) no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+.page6 .info-item .mod-download-item{
+	float: left;
+	padding:13px 0 0 9%;
+	width: 50%;
+}
+.page6 .info-item .mod-download-item .code-item{
+	
+}
+.page6 .info-item .mod-download-item .code-item .code-img{
+	
+	padding: 0px;
+}
+.page6 .info-item .mod-download-item .code-item .code-img img{
+	width: 100%;
+}
+.page6 .info-item .mod-download-item .btn-warp{
+	padding: 0 0 0 7%;
+	
+}
+.page6 .info-item .mod-download-item .btn-warp .btn{
+	float: none;
+	margin:0 0 9px 0;
+
+
+}
+.page6 .info-item .mod-download-item .btn-warp .btn span{
+
+}
+
+
+
+
+
+
+@media screen and (min-width:1920px) {
+	
+
+}
+@media screen and (max-width:1440px) and (max-height: 900px){
+
+
+}
+@media screen and (max-width:1366px) and (max-height: 768px){
+
+	.page2 .mod-download-item .btn-warp .btn span,
+	.page3 .mod-download-item .btn-warp .btn span,
+	.page4 .mod-download-item .btn-warp .btn span,
+	.page5 .mod-download-item .btn-warp .btn span{
+		border-left: 2px solid #fff;
+	}
+	.mod-download-item .btn-warp .btn{
+		font-size: 20px;
+	}
+	.mod-download-item .btn-warp .btn .icon{
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width:1055px) {
+	
+	.page2 .mod-download-item .btn-warp .btn span,
+	.page3 .mod-download-item .btn-warp .btn span,
+	.page4 .mod-download-item .btn-warp .btn span,
+	.page5 .mod-download-item .btn-warp .btn span{
+		border-left: 1px solid #fff;
+	}
+	.mod-download-item .btn-warp .btn{
+		font-size: 20px;
+	}
+	.mod-download-item .btn-warp .btn .icon{
+		font-size: 20px;
+	}
+}
+

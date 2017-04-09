@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>简客</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript">
+		document.body.addEventListener('touchstart', function () { //...空函数即可}); 
+	</script>
+<body>
+	<div class="jpwx-page">
+		<div class="jpheader">
+			<div class="text-item">
+				<h4 class="title">制造生活的仪式感</h4>
+				<div class="txt">
+					<p>
+						来吧，用简客！将音乐、心情、照片汇聚成册。
+						<br />
+						让更多人遇见你，你的时光，你的故事，你的美好。
+					</p>
+				</div>
+			</div>
+			<div class="mod-down-btn">
+				<a href="#" class="btn">
+					<i class="icon"></i><em>立即下载</em>
+				</a>
+			</div>
+			<div class="img-item">
+				<img src="images-wap/bg-750x826.jpg" />
+			</div>
+		</div>
+		<div class="content">
+			<div class="con-item">
+				<img src="images-wap/con-img/1.jpg" />
+				<img src="images-wap/con-img/2.jpg" />
+				<img src="images-wap/con-img/3.jpg" />
+				<img src="images-wap/con-img/4.jpg" />
+				<img src="images-wap/con-img/5.jpg" />
+			</div>
+			<div class="mod-down-btn">
+				<a href="#" class="btn">
+					<i class="icon"></i><em>立即下载</em>
+				</a>
+			</div>
+		</div>
+		<div class="sy-item">&copy;Beaty,Inc.</div>
+	</div>
+</body>
+</html>

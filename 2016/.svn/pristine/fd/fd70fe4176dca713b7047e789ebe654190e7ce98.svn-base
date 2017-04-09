@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/s7-cj.css" type="text/css" rel="stylesheet" />
+
+	<title>POCO授权</title>
+</head>
+<style type="text/css">
+	body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea, th,td, img{ border:medium none; margin: 0; padding: 0; }
+	body,button,input,select,textarea { font:12px/1.5  "SimSun", Tahoma, Arial, sans-serif}
+	input,select,form img,button { vertical-align:middle; }
+	h1,h2,h3,h4,h5,h6 { font-size: 100%; }
+	em { font-style:normal; }
+	ul,ol { list-style: none; }
+	/** 重置超链接元素 **/
+	a { text-decoration: none; color:#000; }
+	a:hover { text-decoration: underline;}
+	/** 重置图片元素 **/
+	img { border:none; }
+	/** 重置表格元素 **/
+	table { border-collapse: collapse; border-spacing: 0; }
+	/** 清楚浮动 **/
+	.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+	* html .clearfix { zoom: 1; } /* IE6 */
+	*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+	textarea, input{resize:none}
+	a, textarea, input, button{outline:none}
+	.clear { clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+	.coz{ clear:both; overflow:hidden; zoom:1}
+	/*** font ***/
+	.word_break { white-space:normal; word-wrap:break-word; word-break:break-all; }
+	.font_wryh{font-family:'Microsoft YaHei','SimHei','SimSun';}
+	.fr { float:right; }
+	.fl { float:left; }
+	.frdi { float:right; display:inline }
+	.fldi { float:left;display:inline }
+	.w1000{width:1000px; margin:0 auto;}
+	body{ color:#666; background: #f2f2f2;}
+	html,body{
+		height: 100%;
+		overflow:hidden;
+	}
+	.authorize-page{
+		height: 100%;
+		overflow: hidden
+	}
+	.authorize-page .header{
+		background: #282828;
+		height: 41px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.authorize-page .header h1.logo a{
+		display: block;
+		background: url(images-pc/logo-icon-116x41.png) no-repeat;
+		width: 116px;
+		height: 41px;
+	}
+	.authorize-page .content{
+		height: 100%;
+		display: table;
+		width: 1000px;
+		margin: 0 auto;
+		position:relative;
+	}
+	.authorize-page .con-wrap{
+		display: table-cell;
+		vertical-align: middle;  
+		width: 1000px;
+		height: 86%;
+		padding: 8% 0 6%;
+		*position: absolute;  
+		*top: 50%;  
+	}
+	.authorize-page .con-wrap .item-warp{
+		background: #fff;
+		height: 100%;
+		*position: relative;  
+		*top: -50%;  
+	}
+	.authorize-page .con-wrap .listItem{
+		height: 60px;
+		width: 900px;
+		background:#fff url(images-pc/title-bg-3x60.png) left bottom repeat-x;
+		padding: 0 50px;
+	}
+	.authorize-page .con-wrap .listItem h3.title{
+		height: 57px;
+		line-height: 57px;
+		color: #6ac334;
+		font-size: 18px;
+		border-bottom: 3px solid #6ac334;
+		float: left;
+		font-weight: normal;
+	}
+	.authorize-page .con-wrap .con-item{
+		text-align: center;
+		padding-top: 10%;
+	}
+	.authorize-page .con-wrap .con-item .text-item{
+		font-size: 14px;
+		line-height: 24px;
+		padding-bottom: 55px;
+	}
+	.authorize-page .con-wrap .con-item .btn-warp .btn{
+		display: inline-block;
+		*+display: inline;
+		*+zoom:1;
+		_display: inline;
+		_zoom:1;
+		background: url(images-pc/btn-greenbg-153x38.png) no-repeat;
+		width: 153px;
+		height: 38px;
+		line-height: 38px;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 18px;
+		font-weight: bold;
+		color: #fff;
+		margin: 0 22px;
+	}
+	.authorize-page .con-wrap .con-item .btn-warp .btn:hover{
+		text-decoration: none;
+		opacity: 0.8;
+	}
+</style>
+<body>
+	<div class="authorize-page font_wryh">
+		<div class="header">
+			<div class="w1000">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+			</div>
+		</div>
+		<div class="content">
+			<div class="con-wrap">
+				<div class="item-warp">
+					<div class="listItem clearfix">
+						<h3 class="title">poco 授权</h3>
+					</div>
+					<div class="con-item">
+						<div class="text-item">
+							<p>
+								授权后将允许“三星 盖乐世社区”链接你的POCO账号同步网站个人资料，请信任“三星 盖乐世社区”
+								<br />
+								再点击“授权”按钮，不会获得你的POCO账号/密码。
+							</p>
+						</div>
+						<div class="btn-warp">
+							<input type="button" class="btn font_wryh" value="授权">
+							<input type="button" class="btn font_wryh" value="拒绝">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

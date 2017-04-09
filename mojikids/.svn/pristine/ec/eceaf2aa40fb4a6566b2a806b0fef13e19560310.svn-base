@@ -1,0 +1,67 @@
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 用户信息编辑
+ */
+
+.profile-edit-page{
+	.item-wrap{
+		.img-item{
+			background-color: #fff;
+			margin-bottom: 10px;
+			padding:35px 0px 25px;
+			.ui-avatar-icon{
+				position: relative;
+				margin: 0 auto;
+				i{
+					background-size: 100%;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-image: url(../../image/set_up/user-img-defalut.png);
+				}
+			}
+			.webuploader-pick{
+				width:80px;
+				height:80px;
+			}
+			.webuploader-element-invisible{
+				position: absolute !important;
+				clip: rect(0.01rem 0.01rem 0.01rem 0.01rem);
+			}
+			.txt{
+				padding-top: 10px;
+			}
+			.cammer-icon{
+				width: 22px;
+				height: 22px;
+				display:block;
+				position:absolute;
+				bottom:0;   
+				right:0;
+				background: url(../../image/set_up/camera-icon-44x44.png?__inline) no-repeat center;
+				background-size: 100%;
+			}
+		}
+		.txt-item{
+			.item{
+				padding: 15px;
+				display:-webkit-box;
+				background-color: #fff;
+				.title{
+					margin-right: 15px;
+				}
+				.info-con{
+					padding-top: 1px;
+					.ui-title-info{
+						width:100%;
+					}
+				}
+			}
+		}
+		.btn-item{
+			padding:20px 30px;
+		}
+
+	}
+}

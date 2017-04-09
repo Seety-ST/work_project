@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>雪花</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script src="Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="Scripts/scroll_080828.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#navItem li').hover(function(){
+				if($(this).hasClass('item')){
+					$(this).removeClass('item');
+					$(this).addClass('cur');
+				}else{
+					$(this).removeClass('cur');
+					$(this).addClass('item');
+				}
+			});
+		});				
+	</script>
+</head>
+<body>
+	<div class="header clearfix">
+		<div class="nav-bar font_wryh">
+			<div class="w1000 clearfix">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+				<div class="nav" id="navItem">
+					<ul>
+						<li class="item active">
+							<a href="#">
+								<span>主赛区</span> <i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>大学生赛区</span> <i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">影展讲座</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>匠心古建</span>
+								<i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">摄影攻略</a>
+								</li>
+								<li>
+									<a href="#">精彩影像</a>
+								</li>
+								<li>
+									<a href="#">户牖百科</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>主题活动</span>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>古建丛书</span>
+								<i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">丛书概览</a>
+								</li>
+								<li>
+									<a href="#">古建地图</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<a href="#" class="btn quit-item" style="display:none">
+						<span class="name">XIAOMING</span><em>退出</em>
+					</a>
+					<a href="#" class="btn login-btn" style="display:">登录</a>
+					<a href="#" class="btn join-btn">我要参赛</a>
+				</div>
+			</div>
+		</div>
+		<div class="header-item">
+			<div class="header-bg">
+				<img src="images/ll-img-1.jpg" />
+			</div>
+			<div class="h-join-bgn">
+				<a href="#">
+					<img src="images/header-join-btn.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="w1000">
+			<div class="my_work">
+				<div class="listItem">
+					<h4 class="title font_wryh">我的作品</h4>
+					<a href="#" class="back">返 回</a>
+				</div>
+				<div class="picshow-block clearfix">
+					<div class="min_pic_left">
+						<div class="user_box">
+							<div class="img_box">
+								<img src="images/100x100.jpg" />
+							</div>
+							<div class="info_box">
+								<p>好吃的拉面</p>
+							</div>
+						</div>
+						<div class="btn_top">
+							<a href="javascript:void(0)">
+								<img src="images/ll-img-5.jpg" id="gotop" />
+							</a>
+						</div>
+						<!-- 上按钮 -->
+						<div class="showbox" id="showArea">
+							<!-- 左边滚动小图 -->
+							<ul>
+								<li>
+									<div class="img_box">
+										<table cellpadding="0" cellspacing="0" width="163">
+											<tr>
+												<td height="163" valign="middle">
+													<img src="images/165x165.jpg"  class="thumb_img"  rel="images/500x500.jpg"  />
+												</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="img_box">
+										<table cellpadding="0" cellspacing="0" width="163">
+											<tr>
+												<td height="163" valign="middle">
+													<img src="images/st-img-9_06.jpg"  class="thumb_img"  rel="images/st-img-10_03.jpg"  />
+												</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="img_box">
+										<table cellpadding="0" cellspacing="0" width="163">
+											<tr>
+												<td height="163" valign="middle">
+													<img src="images/165x165.jpg"  class="thumb_img"  rel="images/500x500.jpg"  />
+												</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div class="img_box">
+										<table cellpadding="0" cellspacing="0" width="163">
+											<tr>
+												<td height="163" valign="middle">
+													<img src="images/165x165.jpg"  class="thumb_img"  rel="images/500x500.jpg"  />
+												</td>
+											</tr>
+										</table>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="btn_bottom">
+							<a href="javascript:void(0)">
+								<img src="images/ll-img-6.jpg" id="gobottom" />
+							</a>
+						</div>
+						<!-- 下按钮 -->
+					</div>
+					<div class="max_pic_right">
+						<div class="img-info-item">
+							<div class="big-img">
+								<div class="scroUpload">
+									<div class="scrollList">
+										<div class="photo">
+											<table cellspacing="0" cellpadding="0" width="500">
+												<tr>
+													<td height="500" valign="middle">
+														<img src="images/500x397.jpg" />
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="txt_box clearfix">
+								<dl class="txt-item">
+									<dt class="fb f14 pb5">古建筑</dt>
+									<dd>
+										中国著名摄影师、影像艺术家、MV短片电影导演，曾获中国摄影界个人成就最高奖金像奖、中国摄影艺术大展金奖、奥地利超级巡回大展金奖、中国人像摄影大展金奖等诸多荣誉。至今在韩国、香港、北京、深圳、成都、上海等美术馆及画廊屡次举办艺术作品展。
+									</dd>
+								</dl>
+								<div class="btn_box clearfix">
+									<a href="#" class="fr">
+										<img src="images/ll-img-8.png" />
+									</a>
+									<a href="#" class="tp-btn fr">投票（12345）</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- 右大图 -->
+				</div>
+				<script>
+					function $(e) {return document.getElementById(e);}
+					document.getElementsByClassName = function(cl) {
+						var retnode = [];
+						var myclass = new RegExp('\\b'+cl+'\\b');
+						var elem = this.getElementsByTagName('*');
+						for (var i = 0; i < elem.length; i++) {
+							var classes = elem[i].className;
+							if (myclass.test(classes)) retnode.push(elem[i]);
+						}
+						return retnode;
+					}
+					var MyMar;
+					var speed = 1; //速度，越大越慢
+					var spec = 1; //每次滚动的间距, 越大滚动越快
+					var ipath = 'images/'; //图片路径
+					var thumbs = document.getElementsByClassName('thumb_img');
+					for (var i=0; i<thumbs.length; i++) {
+						var obj=thumbs[i];
+						//obj.onmouseover = function () {$('main_img').src=this.getAttribute('rel'); $('main_img').link=this.getAttribute('link');};
+						//thumbs[i].onclick = function () {window.location.href= this.getAttribute('rel');}
+					}
+					//$('main_img').onclick = function () {window.location.href= this.getAttribute('link');}
+					$('gotop').onmouseover = function() {this.src = ipath + 'll-img-5.jpg'; MyMar=setInterval(gotop,speed);} //向上鼠标经过时按钮图片
+					$('gotop').onmouseout = function() {this.src = ipath + 'll-img-5.jpg'; clearInterval(MyMar);}//向上鼠标离开按钮图片
+					$('gobottom').onmouseover = function() {this.src = ipath + 'll-img-6.jpg'; MyMar=setInterval(gobottom,speed);}//向下鼠标经过时按钮图片
+					$('gobottom').onmouseout = function() {this.src = ipath + 'll-img-6.jpg'; clearInterval(MyMar);}//向下鼠标离开按钮图片
+					function gotop() {$('showArea').scrollTop-=spec;}
+					function gobottom() {$('showArea').scrollTop+=spec;}						
+				</script>
+				<div class="path2">
+					<div class="titleItem font_wryh">留言评论</div>
+					<div class="commentBlock">
+
+						<div class="comList">
+							<ul class="list">
+								<li>
+									<div class="userImg fldi">
+										<img src="images/userImg.jpg"></div>
+									<div class="desBox fldi">
+										<p>
+											<span class="fr">#123楼 10-07-23 5:28</span>
+											<span class="fb">姗姗来迟：</span>
+											正在加载作品...
+										</p>
+										<p>作品很棒！</p>
+										<p>
+											<a href="#">[回复]</a>
+											<a href="#">[引用]</a>
+											<a href="#">[举报]</a>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="userImg fldi">
+										<img src="images/userImg.jpg"></div>
+									<div class="desBox fldi">
+										<p>
+											<span class="fr">#123楼 10-07-23 5:28</span>
+											<span class="fb">姗姗来迟：</span>
+											正在加载作品...
+										</p>
+										<p>作品很棒！</p>
+										<p>
+											<a href="#">[回复]</a>
+											<a href="#">[引用]</a>
+											<a href="#">[举报]</a>
+										</p>
+									</div>
+								</li>
+								<li>
+									<div class="userImg fldi">
+										<img src="images/userImg.jpg"></div>
+									<div class="desBox fldi">
+										<p>
+											<span class="fr">#123楼 10-07-23 5:28</span>
+											<span class="fb">姗姗来迟：</span>
+											正在加载作品...
+										</p>
+										<p>作品很棒！</p>
+										<p>
+											<a href="#">[回复]</a>
+											<a href="#">[引用]</a>
+											<a href="#">[举报]</a>
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="liuyan_box">
+							<div class="textareaBox">
+								<textarea></textarea>
+							</div>
+							<div class="iconBar clearfix">
+								<div class="fldi">
+									<a href="#">
+										<img src="images/smile.jpg" />
+									</a>
+									表情
+								</div>
+								<div class="frdi btn">
+									<a href="#">
+										<img src="images/ll-img-10.png" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

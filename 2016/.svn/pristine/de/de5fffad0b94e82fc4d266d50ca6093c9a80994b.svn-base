@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<title>雪花</title>
+	<script src="Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="header clearfix">
+		<div class="nav-bar font_wryh">
+			<div class="w1000 clearfix">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+				<div class="nav" id="navItem">
+					<ul>
+						<li class="item">
+							<a href="#">
+								<span>主赛区</span><i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>大学生赛区</span><i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">大赛赛制</a>
+								</li>
+								<li>
+									<a href="#">奖项设置</a>
+								</li>
+								<li>
+									<a href="#">评委阵容</a>
+								</li>
+								<li>
+									<a href="#">作品展示</a>
+								</li>
+								<li>
+									<a href="#">影展讲座</a>
+								</li>
+								<li>
+									<a href="#">入围作品</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>匠心古建</span><i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">摄影攻略</a>
+								</li>
+								<li>
+									<a href="#">精彩影像</a>
+								</li>
+								<li>
+									<a href="#">户牖百科</a>
+								</li>
+							</ul>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>主题活动</span>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<span>古建丛书</span><i class="icon"></i>
+							</a>
+							<ul class="sub-nav clearfix">
+								<li>
+									<a href="#">丛书概览</a>
+								</li>
+								<li>
+									<a href="#">古建地图</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<a href="#" class="btn quit-item" style="display:none">
+						<span class="name">XIAOMING</span><em>退出</em>
+					</a>
+					<a href="#" class="btn login-btn" style="display:">登录</a>
+					<a href="#" class="btn join-btn">我要参赛</a>
+				</div>
+			</div>
+		</div>
+		<div class="header-item">
+			<div class="header-bg">
+				<img src="images/ll-img-1.jpg" />
+			</div>
+			<div class="h-join-bgn">
+				<a href="#">
+					<img src="images/header-join-btn.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="index-page">
+			<div class="path1 font_wryh">
+				<div class="mod-listItem">
+					<span>大赛概述</span>
+				</div>
+				<div class="pathA">
+					<div class="w1000">
+						<div class="text-item font_wryh">
+							<p>
+								“雪花纯生匠心营造”中国古建筑摄影大赛&bull;户牖由华润雪花啤酒（中国）有限公司主办，清华大学建筑学院协办，是中国规模较大的以中国古建筑为题材的摄影赛事。</p>
+							<p>2016年大赛设立<span class="point">主赛区</span>与<span class="point">大学生赛区</span>，每个赛区分别设立【古建&bull;传承奖】和【匠心营造&bull;户牖奖】，共计80个奖项，且本次大赛开通手机端官方征稿平台。同时，获奖选手代表将有机会参加于9月份举行的【雪花纯生匠心营造&bull;户牖】年度大型主题外拍活动，届时将从该外拍活动中产生出十名【雪花纯生匠心营造年度摄影师】。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="pathB clearfix">
+					<ul>
+						<li class="i-n-1"><a href="#"></a></li>
+						<li class="i-n-2"><a href="#"></a></li>
+						<li class="i-n-3"><a href="#"></a></li>
+						<li class="i-n-4"><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="path4">
+				<div class="mod-listItem font_wryh">
+					<span>作品展示</span>
+				</div>
+				<div class="w1000">
+					<div class="wrapbox">
+						<div class="wbox clearfix" style="display:block;" id="showphoto1">
+							<div class="tab-choose">
+								<ul>
+									<li class="cur">
+										<a href="#this" onclick="showDiv('showphoto',1,2);">古建·传承</a>
+									</li>
+									<li>
+										<a href="#this" onclick="showDiv('showphoto',2,2);">匠心营造·户牖</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tab-con">
+								<div class="list clearfix">
+									<ul>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="more-btn font_wryh">
+								<a href="#">查看更多</a>
+							</div>
+						</div>
+						<div class="wbox clearfix" style="display:none;" id="showphoto2">
+							<div class="tab-choose  font_wryh">
+								<ul>
+									<li>
+										<a href="#this" onclick="showDiv('showphoto',1,2);">古建·传承</a>
+									</li>
+									<li class="cur">
+										<a href="#this" onclick="showDiv('showphoto',2,2);">匠心营造·斗拱</a>
+									</li>
+								</ul>
+							</div>
+							<div class="tab-con">
+								<div class="list clearfix">
+									<ul>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑2</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑22</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<a href="#">
+													<img src="images/230x230.jpg" />
+												</a>
+											</div>
+											<div class="text-item">
+												<h4 class="title">古建筑</h4>
+												<p>作者：好吃的拉面</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="more-btn font_wryh">
+								<a href="#">查看更多</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="footer"></div>
+	<!-- 雪花公告弹出层 -->
+	<div class="fade" style="display:"></div>
+	<!--用户协议弹框-->
+	<div class="pop-rules" style="display:">
+		<div class="close">
+			<input type="image" src="images/ll-img-46.png">
+		</div>
+		<div class="listItem font_wryh">用户协议</div>
+		<div class="scroll-box">
+			<div class="table">
+				<table>
+					<tr>
+						<td>1.</td>
+						<td>
+							参赛作品须为参赛者本人独立完成的原创作品，并且不存在以下情形：
+							<div class="info-item">
+								<p>a.已经在其他任何形式比赛中有获奖项；</p>
+								<p>b.在本摄影大赛期间同时是其他任何形式的摄影比赛的参赛作品；</p>
+								<p>c.已经许可他人使用，或者是著作权许可使用商谈中的标的图片；</p>
+								<p>d.参赛作品著作权已经转让给他人或是正在商谈中著作权转让的标的图片；</p>
+								<p>e.联合创作的作品；</p>
+								<p>f.参赛作品不得抄袭、拷贝、仿冒他人作品；</p>
+								<p>g.他人委托创作作品和职务作品。评审后如参赛作品被检举不符合本赛制要求的，经主办方查证属实者，主办方有权取消该作品的获奖资格，取消之奖项不再替补。如已领取奖项者，主办方有权追回原奖项。</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>
+							主赛区投稿作品必须保留数码照片拍摄信息（EXIF），上传格式为jpg，保证能够提供不少于300dpi原稿，否则视为无效作品。
+						</td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>传统照片参赛作品尺寸不小于10英寸，必须保证能够提供作品原始底片，否则视为无效作品。</td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>
+							参赛者不得为参赛作品进行人为后期处理画框，不得在作品上出现与任何本次大赛无关的商业信息（如促销信息、其他品牌logo、个人网页链接等），否则视为无效作品。
+						</td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>本次大赛不接受多幅照片拼贴、剪辑等过度PS的作品；</td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td>每个ID每天单张作品的投稿数量不得超过8张（组图作品即为1张）；每个ID每天组图作品不得超过8组（其中每组作品应包含3到8张照片）</td>
+					</tr>
+					<tr>
+						<td>7.</td>
+						<td>
+							参赛者须拥有作品完整的著作权，并获得参赛照片中所包含人物肖像权的使用许可以及其它必要的许可，同时须保证上传的照片不侵犯任何第三人的著作权、肖像权、名誉权、隐私权、商标权、商号权及其他合法权益；作品涉及的肖像权、名誉权、著作权等法律责任均由参赛者本人承担，主办方不承担由此引起的一切法律后果。
+						</td>
+					</tr>
+					<tr>
+						<td>8.</td>
+						<td>任何人发现本次大赛参赛照片有侵权嫌疑，请及时与大赛组委会联系。主办方任何时候一经接到包括有关照片肖像权、著作权等相关投诉的，或者发现投稿作品违反第7条时，将立即删除相关照片并把相关投诉转送至上传人（即参赛者），由参赛者自行解决相关投诉并承担费用；
+						</td>
+					</tr>
+					<tr>
+						<td>9.</td>
+						<td>因参赛照片侵犯任何第三方的合法权益等情形使主办方遭受损失的，主办方有权要求上传照片者（即参赛者）承担主办方全部损害。</td>
+					</tr>
+					<tr>
+						<td>10.</td>
+						<td>
+							参赛者同意主办方在与本赛事的相关活动中公布和免费使用参赛作品、作者姓名和其他必要信息。使用形式包括但不限于大赛广告片、摄影作品展、作品集、网络宣传、促销礼品等各种商业性利用。华润雪花啤酒（中国）有限公司在使用过程中有权根据实际使用情况决定是否标注作者姓名、对作品进行必要的修改等。
+						</td>
+					</tr>
+					<tr>
+						<td>11.</td>
+						<td>大赛征集作品如均不能达到某类奖项评审标准，大赛组委会有权保持此项奖项空缺；</td>
+					</tr>
+					<tr>
+						<td>12.</td>
+						<td>
+							所有参赛者上传的照片和文字不得违反中华人民共和国法律法规、违背公共秩序和善良风俗以及道德标准之内容，不得上传具有色情、暴力等不健康内容的照片和文字，一经发现，主办方将不予上传并有权提交相关部门处理。
+						</td>
+					</tr>
+					<tr>
+						<td>13.</td>
+						<td>主办方对此次摄影大赛参赛者提交的个人信息将仅在处理获奖作品使用相关事宜的必要范围内使用；</td>
+					</tr>
+					<tr>
+						<td>14.</td>
+						<td>参赛者填报信息和提交参赛作品之行为，应视为该参赛者充分理解本赛制之内容，并承诺接受本赛制约束。</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="btn tc">
+			<a href="#">
+				<img src="images/ll-img-48.png" />
+			</a>
+			<a href="#">
+				<img src="images/ll-img-49.png" />
+			</a>
+		</div>
+	</div>
+	<!-- 用户协议弹出层 end -->
+	<script src="Scripts/jquery-1.4.2.min.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function(){
+			$('#navItem li').hover(function(){
+				if($(this).hasClass('item')){
+					$(this).removeClass('item');
+					$(this).addClass('cur');
+				}else{
+					$(this).removeClass('cur');
+					$(this).addClass('item');
+				}
+			});
+		});
+		function showDiv(name,i,end) 
+		{ 
+			for(j=1;j<=end;j++) 
+			{ 
+				document.getElementById(name+j).style.display='none'; 
+			} 
+			
+			document.getElementById(name+i).style.display='block'; 
+		}
+	</script>
+</body>
+</html>

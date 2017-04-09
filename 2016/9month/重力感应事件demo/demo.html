@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>test</title>
+<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<style type="text/css" media="screen">
+	.camera{
+		width:2rem;
+		height:2rem;
+		perspective-origin:center center;
+		-moz-perspective-origin:center center;
+		-webkit-perspective-origin:center center;
+		perspective:5rem;
+		-moz-perspective:5rem;
+		-webkit-perspective:5rem;
+		margin: 0 auto;
+	}
+	.space{
+		position:relative;
+		width:100%;
+		height:100%;
+		border:1px dashed #000;
+		transform-style:preserve-3d;
+		-moz-transform-style:preserve-3d;
+		-webkit-transform-style:preserve-3d;
+	}
+	.space div{
+		position:absolute;
+		width:1rem;
+		height:1rem;
+		font-size:0.5rem;
+		text-align:center;
+		line-height:1rem;
+	}
+	.box1{
+		background:rgba(255,0,0,.2);
+		-webkit-transform:translateX(0.5rem) translateY(0.5rem);
+	}
+	.box2{
+		background:rgba(255,255,0,.2);
+		-webkit-transform-origin:left top;
+		-webkit-transform:translateX(1.5rem) translateY(0.5rem) rotateY(90deg);
+	}
+	.box3{
+	      background:rgba(0,255,0,.2);
+	      -webkit-transform:translateX(0.5rem) translateY(0.5rem) translateZ(-1rem) rotateY(180deg);
+	}
+	.box4{
+	      background:rgba(255,0,255,.2);
+	      -webkit-transform-origin:right top;
+	      -webkit-transform:translateX(-0.5rem) translateY(0.5rem) rotateY(-90deg);
+	}
+	.box5{
+	      background:rgba(0,0,255,.2);
+	      -webkit-transform-origin:center bottom;
+	      -webkit-transform:translateX(0.5rem) translateY(-0.5rem) rotateX(90deg);
+	 }
+	.box6{
+		background:rgba(0,255,255,.2);
+		-webkit-transform-origin:center top;
+		-webkit-transform:translateX(0.5rem) translateY(1.5rem) rotateX(-90deg);
+	}
+</style>
+</head>
+<body>
+	<div class="camera">
+	    <div class="space">
+	        <div class="box1">1</div>
+	        <div class="box2">2</div>
+	        <div class="box3">3</div>
+	        <div class="box4">4</div>
+	        <div class="box5">5</div>
+	        <div class="box6">6</div>
+	    </div>
+	</div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	var space = document.querySelectorAll('.space');
+	if(window.DeviceOrientationEvent) {
+
+	  window.addEventListener('deviceorientation', function(event) {
+	  var alpha = event.alpha,
+	      beta = event.beta,
+	     gamma = event.gamma;
+
+	    space[0].style.webkitTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
+	    space[0].style.transform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
+	    space[0].style.mozTransform = 'rotateX('+beta+'deg) rotateY('+gamma+'deg) rotateZ('+alpha+'deg)';
+
+	      }, false);
+	}else{
+	  document.querySelector('body').innerHTML = '你的浏览器不支持';
+	}
+</script>
+
+</body></html>

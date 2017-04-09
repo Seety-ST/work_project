@@ -1,0 +1,83 @@
+@import "../../sass/compass";
+.list-wrapper{
+
+    .list-page {
+        padding-bottom: 30px;
+        .fixed{
+            position:fixed;
+            width: 100%;
+            @include box-sizing(border-box);
+            left: 0px;
+            top:0;
+            z-index: 1
+        }
+        .item-wrap{
+            padding: 20px 15px 15px 15px;
+            .item{
+                margin-bottom: 20px;
+                font-size: 14px;
+                padding: 15px 15px 15px 15px;
+                // box-shadow: 0 0 10px rgba(0,0,0,.2);
+                box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.15);
+                background-color: #fff;
+                border-radius: 5px;
+                .wbox1{
+                    padding: 0px 0 0px 0;
+                    .state{
+                    }
+                }
+                .des{
+                    padding: 5px 0 10px 0;
+                    p{
+                        padding-top: 9px;
+                    }
+                    .t-title{
+                        margin-right: 10px;
+                    }
+                    
+                    .w{
+                        @include flexbox((
+                            display: box,  // 盒子模型 子元素默认水平左对齐
+                           
+                            box-flex: 1 //占有空间比例
+                        ));
+                        padding-top: 9px;
+                    }
+                    .r{
+                        @include flexbox((
+                       
+                            box-flex: 1 //占有空间比例
+                        ));
+                    }
+                }
+                .total{
+                    text-align: right;
+                    padding:12px 0 10px 0;
+                    .price{
+                    }
+                }
+                .submit{
+                    padding-top: 15px;
+                    @include flexbox((
+                        display: box,  // 盒子模型 子元素默认水平左对齐
+                        box-pack: end,  // 水平居中方式  start | center | end | justify
+
+                        box-flex: 1 //占有空间比例
+                    ));
+                    .ui-button{
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+    .mint-popup{
+        width: 100%;
+    }
+    .global-map-pop{
+        width:100%;
+        height:500px;
+        margin: 0 auto;
+    }
+}

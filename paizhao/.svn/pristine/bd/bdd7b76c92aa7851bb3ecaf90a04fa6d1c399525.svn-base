@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<link rel="import" href="./no-use.htm?__inline">
+	
+	
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/no-use.scss">
+
+	<!-- 基本 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+
+	<!-- 当前页css  -->
+	<!-- <link charset="utf-8" rel="stylesheet" href="../style/xxxx.scss"> -->
+</head>
+
+<body>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		<div class="ui-frame-nav ">
+			<ul class="list" id="list">
+
+
+				<div class="title">基本</div>
+				<a href="color.htm" class="link"><li>颜色 color</li></a>
+				<a href="avatar.htm" class="link"><li>头像规格 avatar</li></a>
+				<a href="button.htm" class="link"><li>按钮 button</li></a>
+				<a href="icon.htm" class="link"><li>图标 icon</li></a>
+
+				<div class="title">通用模块</div>
+				<a href="layer.htm" class="link"><li>layer 弹出组件</li></a>
+				<a href="list.htm" class="link"><li>列表</li></a>
+				<a href="page.htm" class="link"><li>分页</li></a>
+				<a href="nav.htm" class="link"><li>列表</li></a>
+				
+
+			</ul>
+		</div>
+
+		<div class="ui-frame-content">
+			<div class="main">拍照UI规范库</div>
+		</div>
+
+	</div>
+
+</body>
+
+
+<script type="text/javascript">
+$(function() {
+
+	$('#list > .link').on('click', function(event) {
+		var href = $(this).attr('href').toString();
+		localStorage.setItem('value', href);
+	});
+
+	var is_value = localStorage.getItem('value') ;
+	if (is_value) 
+	{
+		$('#list').find('.link').each(function(index, el) {
+			if ($(this).attr('href').toString() == is_value ) 
+			{
+			    $(this).find('li').addClass('cur');
+			}
+		});
+	}
+
+});
+
+</script>
+
+
+
+</html>
+

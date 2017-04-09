@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>我用美人相机拍了段好玩的视频</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/share_wx.js?v=7"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+	<style type="text/css">
+	body {
+		padding:0;
+		margin:0;
+		width:100%;
+		font-family: 'STHeitiSC','Helvetica';
+		background-color: black;
+	}
+	.div_hover {
+		font-size:1rem;
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:100%;
+		height:2.5rem;
+		z-index:1000;
+		background:rgba(0,0,0,.7);		
+		color:white;
+	}
+	.div_img_center {
+		display:table-cell;
+		vertical-align:middle;
+	}
+	i {
+		display:inline-block;
+		height:100%;
+		vertical-align:middle
+	}
+	.div_hover i.icon{
+		width: 89.56%;
+		height: auto;
+	}
+	.div_hover i.icon img{
+		display: block;
+		width: 100%;
+		margin-top: 0.45rem;
+	}
+	.div_hover span{
+		display: inline-block;
+		vertical-align:middle;
+	}
+	.div_img_center img {
+		vertical-align:middle;
+	}
+
+</style>
+
+	<script>
+
+
+wx.ready(function () {
+	wx.onMenuShareTimeline({
+		title : "我用美人相机拍了段好玩的视频",
+		desc : "时尚女生必备",
+		link : wx_link_url,
+		imgUrl : "http://img2.poco.cn/camera_common/20160128/14539705835230.jpg",
+		success : function () {}
+	});
+	wx.onMenuShareAppMessage({
+		title : "我用美人相机拍了段好玩的视频",
+		desc : "时尚女生必备",
+		link : wx_link_url,
+		imgUrl : "http://img2.poco.cn/camera_common/20160128/14539705835230.jpg",
+		type : 'link',
+		success : function () {}
+	});
+	wx.onMenuShareQQ({
+		title : "我用美人相机拍了段好玩的视频",
+		desc : "时尚女生必备",
+		link : wx_link_url,
+		imgUrl : "http://img2.poco.cn/camera_common/20160128/14539705835230.jpg",
+		success : function () {}
+	});		
+	
+	wx.onMenuShareQZone({
+		title: "我用美人相机拍了段好玩的视频",
+		link: wx_link_url,
+		imgUrl: "http://img2.poco.cn/camera_common/20160128/14539705835230.jpg",
+		success: function () {}
+	});
+	
+
+
+});
+
+</script>
+
+</head>
+	<script>__pocoStieStat={prt:'0.01435',pst:new Date().getTime()};</script>
+
+<body>
+
+	<div id="div_hover" class="div_hover">
+		<div style="float:left;height:2.5rem;padding-left:1rem; width:60%;"> <i class="icon"><img src="images/logo-img-402x50.png" /></i>
+		</div>
+		<div style="float:right;height:2.5rem;padding-right:1rem;">
+			<div class="div_img_center" id="div_download" style="float:left;margin-right:1rem;height:2.5rem;"> <i></i><img class="download-btn" style="height:1.5rem;" src="images/download.png"></img>
+			</div>
+			<div class="div_img_center" id="div_cancel" style="float:right;height:2.5rem;"><i></i><img style="height:0.9rem;" src="images/cancel.png"></img>
+			</div>
+		</div>
+	</div>
+
+<div style="position:relative;text-align:center;background-color: black;">
+<script type="text/javascript">
+	document.title = '';
+	var w = $(window).width();
+	document.documentElement.style.fontSize = 30 * (w / 750) + 'px';
+	
+				var videoWidth = '376.000000';
+				var videoHeight = '610.000000';
+				var elementWidth = w;
+		
+		
+	$("#div_download").click(function(){                                                                                                                                         
+		window.location.href = 'http://a.app.qq.com/o/simple.jsp?pkgname=my.beautyCamera';
+				});
+		
+	$("#div_cancel").click(function(){                                                                                                                                         
+		$("#div_hover").css("display", "none");
+				});
+
+				var videoHtml = '<div style="position:relative;">' + '<video id="alt-player-ios" width="$WIDTH$" height="$HEIGHT$" src="' + 'http://beauty-camera.oss-cn-shenzhen.aliyuncs.com/0A842784-CC5E-48FB-929C-1F0AE60689D8.mp4' + '" poster="' + 'http://img2.poco.cn/camera_common/20160128/14539705835230.jpg' + '" loop controls webkit-playsinline></video>';
+		
+				if (navigator.userAgent.indexOf("OS 8_1") != -1) {
+						videoHtml += '<div id="play-on-click" style="position:absolute;left:0px;top:0px;width:100%;height:100%;background:transparent url(\'images/play.png\') center center no-repeat;background-size:62px 62px;" onclick="this.style.display=\'none\'; this.previousElementSibling.play();"></div>'
+				}
+				videoHtml += '</div>';
+		
+				if (elementWidth > 80 && elementWidth <= 480 && videoWidth > 0 && videoHeight > 0) {
+						var width = elementWidth + 'px';
+						var height = parseInt(elementWidth * videoHeight / videoWidth) + 'px';
+						document.write(videoHtml.replace('$WIDTH$', width).replace('$HEIGHT$', height));
+				}
+				else if (elementWidth > 480) {
+						var width = elementWidth + 'px';
+						$("#div_hover").css("display", 'none');
+						document.write(videoHtml.replace('$WIDTH$', '480px').replace('$HEIGHT$', 'auto'));
+				}	
+				else {
+						document.write(videoHtml.replace('$WIDTH$', '100%').replace('$HEIGHT$', 'auto'));
+				}
+	</script>
+</div>
+</body>
+</html>

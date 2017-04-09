@@ -1,0 +1,267 @@
+<html>
+<head>
+	<title>
+		莫吉照相馆开放内测
+	</title>
+	<meta name="Keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+	<meta name="Description" content="MOJIKIDS莫吉照相馆，专注3-7岁儿童亲子摄影。我们一直坚持对细节及品质的极致追求，用镜头记录孩子的纯真笑颜。">
+	 {%$wap_global_head%} 
+	<!-- <link rel="import" href="../../ui/g_head.tpl.htm?__inline">  -->
+
+	<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/topic/open_store/index.24f9c75.css">
+
+    
+</head>
+
+<body >
+
+<main role="main">
+	
+	<div class="open-store-index" id="open-store-page" v-cloak>
+		<div class="item-wrap">
+			<div class="p1th">
+				<div class="title f15 color-fff tc">
+					莫急，好时光<br>
+					好时光双倍奉送给你的宝贝！
+				</div>
+			</div>
+			<div class="p2th">
+				<ul class="list clearfix">
+					<li v-for="(item,index) in total_data.res.baby_list">
+						<div class="img-item">
+							<img  v-lazy.container="item.img" />
+						</div>
+						<div class="txt-item color-fff tc">
+							{{item.txt}}
+						</div>
+					</li>
+					
+					<li class="else-li">
+						<div class="img-item">
+							<img src="http://www.mojikids.com/static/wap/image/topic/open_store/img-3.2ee3d73.png" />
+						</div>
+						
+					</li>
+				</ul>
+			</div> 
+			<div class="p3th">
+				<div class="title-item f13 color-fff clearfix">
+					<div class="title tc">任意购买Fun或Smile套餐，赠四宫格Emoji套餐</div>
+					
+				</div>
+				
+				<div class="tips-btn f14 tc">购买以下套餐</div>
+				<ul class="list clearfix">
+					<li v-for="(item,index) in total_data.res.buy_list">
+						<div class="img-item" :class="item.style">
+							<div class="img">
+								<img  v-lazy.container="item.img" />
+							</div>
+							<div class="logo-img">
+								<img src="http://www.mojikids.com/static/wap/image/topic/open_store/img-2-185x122.9f718ec.png" />
+							</div>
+						</div>
+						<div class="txt-item">
+							<div class="box-1 clearfix">
+								<div class="txt-1 f15 fldi">{{item.txt}}</div>
+								<div class="txt-2 frdi"><span class="f14 pr5">{{item.unit}}</span>{{item.money}}</div>
+							</div>
+							<div class="box-2 tc color-fff f15 tc">
+								<a :href="item.url" class="btn">名额有限，立即购买</a>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="p4th">
+				<div class="tips-btn f14 tc">免费送Emoji套餐</div>
+				<ul class="list clearfix">
+					<li v-for="(item,index) in total_data.res.send_list">
+						<div class="img-item img-item-style-2">
+							<div class="img">
+								<img  v-lazy.container="item.img" />
+							</div>
+							<div class="logo-img">
+								<img src="http://www.mojikids.com/static/wap/image/topic/open_store/img-2-185x122.9f718ec.png" />
+							</div>
+						</div>
+						<div class="txt-item">
+							
+							<div class="box-2 tc color-fff f15 tc">
+								<a :href="item.url" class="btn">查看套餐详情</a>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+			<div class="p5th">
+				<div class="time-item tc">
+					时间：2017/3/4---2017/3/31
+				</div>
+				<div class="code-item">
+					<div class="img">
+						<img src="http://www.mojikids.com/static/wap/image/topic/open_store/code-img-224x224.5e2fc92.jpg" />
+					</div>
+					<div class="txt tc f10">
+						长按识别二维码，<br>
+						添加小助手领取Emoji免费套餐
+					</div>
+				</div>
+				<div class="btn-item f15 color-fff tc" @click="receive_explain()">
+					如何免费领取Emoji四宫格套餐
+				</div>
+				<div class="logo-item">
+					<img src="http://www.mojikids.com/static/wap/image/topic/open_store/logo-img-308x96.2ce050c.png" />
+				</div>
+			</div>
+		</div>
+		<div class="loading-item">
+			<img src="http://www.mojikids.com/static/wap/image/topic/open_store/loading.53dfa88.png" />
+		</div>
+		<mt-popup v-model="map_popup" position="center">
+			<div class="receive-explain-pop">
+				<a href="javascript:;" class="close-btn" @click="close_receive_explain()"></a>
+				<div class="item-wrap">
+					<div class="title-item f20 color-fff tc">
+						<p class="title">
+							免费领取<br />
+							Emoji四宫格套餐
+						</p>
+					</div>
+					<div class="item-1">
+						<ul class="list">
+							
+							<li class="first-li">
+								<div class="line"></div>
+								<div class="txt-item ">
+									<div class="cicle-item ">1</div>
+									
+									<div class="txt-1">
+										<p class="txt">购买指定套餐</p>
+										<p class="txt">店内指定套餐FUN、SMILE皆可</p>
+									</div>
+								</div>
+
+							</li>
+							<li class="">
+								<div class="line"></div>
+								<div class="txt-item ">
+									<div class="cicle-item ">2</div>
+									
+									<div class="txt-1">
+										<p class="txt">拍摄完成后分享</p>
+										<p class="txt">分享朋友圈、微博、大众点评等媒体平台</p>
+									</div>
+								</div>
+							</li>
+							<li class="">
+								<div class="line"></div>
+								<div class="txt-item ">
+									
+									<div class="cicle-item ">3</div>
+									
+									<div class="txt-1">
+										<p class="txt">加微信发送截图</p>
+										<p class="txt">加小助手微信（ID：MOJIKIDS）发送分享截图</p>
+									</div>
+								</div>
+							</li>
+							<li class="last-li">
+								<div class="line"></div>
+								<div class="txt-item ">
+									
+									<div class="cicle-item ">4</div>
+									<div class="txt-1">
+										<p class="txt">领取免费名额</p>
+										<p class="txt">小助手会发送免费体验名额，领取即可使用</p>
+									</div>
+								</div>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</mt-popup>
+	</div>
+	
+	
+
+	
+</main>
+
+
+
+</body>
+
+<!-- 分享组件 -->
+<script src="//static-c1.yueus.com/yue_ui/share/yueyue_share_v4.min.js" ></script> 
+
+ {%$wap_global_footer%}  
+
+
+</html>
+<!--  <link rel="import" href="../../ui/g_footer.tpl.htm?__inline">  -->
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+	
+	(function() {
+			// 加载lazyload模块
+			var Lazyload = require.syncLoad('wap-kids:widget/lazyload/index');
+			// 配置使用lazyload
+			Vue.use(Lazyload);
+			var Popup = require.syncLoad('wap-kids:widget/popup/index');
+			Vue.component(Popup.name, Popup);
+			var total_data = {%$json_data%};
+			console.log(total_data);
+		 	var open_store = new Vue
+		 	({
+		 		el: '#open-store-page',
+				mounted : function()
+				{
+					
+				},
+		 		data: {
+		 			map_popup : false,
+		 			total_data : total_data
+		 		},
+		 		methods : {
+					receive_explain: function(){
+						var self = this;
+						self.map_popup = true;
+					},
+					close_receive_explain:function(){
+						var self = this;
+						self.map_popup = false;
+					}
+
+		 		},
+		 		components: {
+
+
+		 		},
+		 		computed : {
+
+		 		},
+
+		 	});
+		 	// 分享内容
+		 	var text = JSON.parse('{%$share_text%}');
+		 	console.log(text);
+		 	window.__MOJIKIDS_GLOBAL['share_com'].change_share_text(text.res);
+	})();
+</script>
+
+ {%$wap_global_tj%}  

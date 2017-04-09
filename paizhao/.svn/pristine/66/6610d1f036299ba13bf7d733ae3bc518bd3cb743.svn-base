@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>约摄创意个性摄影师-{%$photographers_info.un_data.name%}，{%$photographers_info.un_data.name%}拍摄服务</title>   
+    <meta name="keywords" content="认证摄影师，摄影套系，预约摄影师，拍摄服务">
+    <meta name="description" content="预约{%$photographers_info.un_data.name%}，满足您喜欢的各种摄影风格，清新，浪漫，时尚摩登，文艺青年，复古情怀，性感私房，日系，校园...">    
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/camera/index-page.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/modules/global/layer/skin/layer.css">
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	
+
+	<div class="camera-page font_wryh">
+		
+		<div class="p1th">
+			<div class="w1200 clearfix">
+				<div class="lbox fldi">
+					<div class="avatar-item">
+						<div class="ui-avatar-icon ui-avatar-icon-120">
+							<i style="background-image:url({%$photographers_info.un_data.avatar%})"></i>
+						</div>
+						<p class="address-txt">
+							<i class="icon icon-circle-address ui-icon-size-16 dib"></i>
+							<em class="txt">{%$photographers_info.un_data.location_name%}</em>
+						</p>
+					</div>
+				</div>
+				<div class="rbox fldi">
+					<div class="item-1 clearfix">
+						<span class="fldi name-txt color-333 fb f24">{%$photographers_info.un_data.name%}</span>
+						<a href="#" data-role="srdz-btn">
+							<button class="ui-button ui-button-bg-fbb ui-button-block  ui-button-size-h40 frdi">
+								<span class="ui-button-content f14">私人订制</span>
+							</button>
+						</a>
+					</div>
+					<div class="item-2">
+						<div class="txt-1 color-666 f14">
+						1111
+							{%$photographers_info.un_data.introduce|strip_tags|truncate:150:"...":true %}
+
+						</div>
+						<div class="txt-2">
+							<ul class="list clearfix f14 color-333">
+								<li>
+									套系数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.goods_num%}</span>
+								</li>
+								<li>
+									咨询数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.consults%}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="item-wrap">
+					{%if $paizhao_goods_type%}
+					<div>
+						<div class="select-list-item clearfix">
+							<div class="classify-item fldi" >
+								<ul class="list clearfix f14 color-666" data-role="filter-item">
+									
+								{%foreach $paizhao_goods_type as $key => $val%}
+									<a href="{%$val.link%}">
+										<li data-key ="{%$val.type_id%}" class="{%$val.cur_name%}">
+											{%$val.name%}
+										</li>
+									</a>
+								{%/foreach%}
+								</ul>
+							</div>
+							<div class="sort-item frdi f14 color-666" >
+								<ul class="list clearfix" data-role="sort-item">
+									{%foreach $sort_item as $val%}
+									<a href="{%$val.link%}">
+										<li  sort-type="{%$val.sort_type%}" class="{%$val.cur_name%}">
+											<span>{%$val.name%}</span>
+											<!-- {%if $val.has_arrow%} <i class="icon {%$val.sort_arrow_class%}"></i> {%/if%} -->
+										</li>
+									</a>
+									{%/foreach%}
+									
+								</ul>
+							</div>
+						</div>
+
+						<div class="photo-list-item" data-role="filter-photo-list">
+							<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+								<ul class="list clearfix" data-role="img_cen1">
+									{%foreach $goods_info.data as $val%}
+									<a href="{%$val.link_url%}">
+										<li class="pic-list-width-285">
+											<div class="img-item">
+												<div class="img">
+
+													<img data-src="{%$val.images%}" class="paizhao-ph-bgimg">
+												</div>
+												<div class="txt color-fff">{%$val.consults%}</div>
+											</div>
+											<div class="txt-item">
+												<div class="box-1 clearfix">
+													<p class="txt-1 color-fa6 fldi f18 fb">
+														{%$val.prices%}
+													</p>
+													<p class="txt-2  color-999 frdi f14">{%$val.location_name%}</p>
+												</div>
+												<div class="box-2">
+													<p class="txt-1 color-333 f14">
+														{%$val.titles%}
+													</p>
+												</div>
+												
+											</div>
+										</li>
+									</a>
+									{%/foreach%}
+								</ul>
+							</div>
+						</div>
+					</div>
+					{%else%}
+					<div class="no-content-tips-mod-1">
+						<div class="img">
+							<img src="http://51snap.yueus.com//static/pc/image/ui/no-content-icon-59x59.png">
+						</div>
+						<div class="txt color-666 f14 pt10">
+							抱歉，该摄影师暂时未提供摄影服务！
+						</div>
+					</div>
+					{%/if%}
+				</div>
+				{%if $page%}
+				<div class="page-mod-1 f14 tc">
+					{%$page%}
+				</div>
+				{%/if%}
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/ua/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/utility/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"></script>
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		var utility = require('pc-huipai:global/utility/index');  
+		require('pc-huipai:global/layer/layer');  
+		
+		
+	
+		
+
+		// 私人订制按钮点击促发的事件
+		var data={
+			user_id :  {%$user_id%}
+		}
+
+		$('[data-role="srdz-btn"]').on('click', function(event) {
+			utility.ajax_request
+			({
+				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN']+'camera/add_consult_button.php',
+				data : data,
+				cache: false,
+				beforeSend: function()
+				{
+
+				},
+				success: function(data)
+				{
+					
+				},
+				error: function(data)
+				{
+					
+				},
+				complete:function(){
+					
+					
+					
+				}
+			});
+		
+			var index_1 = layer.confirm('<div class="pop-contact-mod"><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text" placeholder="您的称呼" /><input type="text" name=" " id="tel" class="input-text"  placeholder="留下您的电话，方便联系" /></div><div class="btn"><button data-role="submit_info_btn" class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h32"><span class="ui-button-content f14">提交</span></button></div><div class="num-box color-999">已有 <span class="num color-2bd">{%$photographers_info.un_data.consults%}</span> 人咨询TA</div></div>', 
+				{
+					title:  ['<div class="title-item" data-role="min-erweima"><i class="code-icon"></i>添加摄影顾问微信<div class="max-code-img dn" data-role="max-code-img"></div></div>', 'background-color:#fff;border-bottom:none;'], //不显示标题
+					shade: 0.5,
+					move: false,
+					area: ['600px'],
+					btn: '', //按钮
+					skin : 'pai_zhao_camera_class',
+				}, function(){
+
+				}, function(){
+
+			});
+			// 鼠标放上小二维码时，出现大的二维码
+			$('[data-role="min-erweima"]').hover(function() {
+				$('[data-role="max-code-img"]').removeClass('dn');
+			}, function() {
+				$('[data-role="max-code-img"]').addClass('dn');
+			});
+
+			$('[data-role="submit_info_btn"]').on('click', function(event) {
+
+				var user_name = $.trim($('#user_name').val())
+				var tel = $.trim($('#tel').val())
+				if (!user_name) 
+				{
+					alert('请输入您的称呼');
+					return ;
+				}
+				if (!tel) 
+				{
+					alert('请输入您的电话号码');
+					return ;
+				}
+
+				var phone_len = /^\d{11}$/;
+				if(!phone_len.exec( parseInt(tel)))
+				{ 
+					alert('请输入正确手机号码');
+					return ;
+				}
+
+				utility.ajax_request
+				({
+					url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/add_contact_info.php',
+					data: 
+					{
+						name : user_name,
+						mobile : tel ,
+						user_id : '{%$user_id%}' 
+
+					},
+					dataType: 'json',
+					type: 'POST',
+					cache: false,
+					beforeSend: function() 
+					{
+						
+					},
+					success: function(data)
+					{
+						
+						layer.close(index_1);
+						if (data.result_data.result == 1) 
+						{
+							var index_2 = layer.confirm('<div class="pop-contact-success-mod pop-contact-success-mod-1"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">你也可以加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"><i class="icon  icon-smile-face ui-icon-size-44 dib"></i></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+							{
+									title: ['', 'background-color:#fff;border-bottom:none;'], //不显示标题
+									shade: 0.5,
+									move: false,
+									area: ['600px'],
+									btn: '', //按钮
+									skin : 'pai_zhao_camera_class',
+								}, function(){
+
+								}, function(){
+							});
+						}
+						else
+						{
+							var index_3 = layer.confirm('<div class="pop-contact-success-mod"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">你也可以加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"><i class="icon icon-normal-face ui-icon-size-44 dib"></i></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+							{
+									title: ['', 'background-color:#fff;border-bottom:none;'], //不显示标题
+									shade: 0.5,
+									move: false,
+									area: ['600px'],
+									btn: '', //按钮
+									skin : 'pai_zhao_camera_class',
+								}, function(){
+
+								}, function(){
+									//  取消 do something
+
+							});
+						}
+					},   
+					error: function() 
+					{
+						
+					},    
+					complete: function() 
+					{
+
+					} 
+				});
+
+			});
+		});
+		var lazyload = require('pc-huipai:global/lazyload/lazyload');
+		var lazyload_obj1 = new lazyload({
+			contain: $('[data-role="img_cen1"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false,
+				width : '285',
+				height : '285'
+			},
+			flag : 'data-src'
+		});
+
+		
+		
+
+	});
+
+
+</script>
+
+{%$pc_global_tj%}
+</html>

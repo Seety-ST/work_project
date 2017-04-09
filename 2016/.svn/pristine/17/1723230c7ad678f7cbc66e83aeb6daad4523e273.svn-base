@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>简客</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<article class="jk-page">
+		<section class="listItem">
+			<h1 class="title"><img src="images/ll-img-3.png" /></h1>
+			<p class="info">将音乐 心情 照片汇聚成册</p>
+		</section>
+		<section class="img-item">
+			<div class="con-item">
+				<picture>
+					<img src="images/test/516x515.jpg" />
+				</picture>
+				<dl class="text-item">
+				    <dt class="title">来吧！用简客</dt>
+				    <dd>让更多人遇见你，你的时光，你的故事 你的美好</dd>
+				</dl>
+			</div>
+		</section>
+	</article>
+	<article class="jk-download-item">
+		<div class="bg-item">
+			<img src="images/ll-img-6.png" />
+		</div>
+		<a href="#" class="btn">
+			<img src="images/ll-img-7.png" />
+		</a>
+	</article>
+</body>
+</html>

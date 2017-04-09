@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>摄影师主页</title>    
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/camera/index-page.css">
+<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/modules/global/layer/skin/layer.css">
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="camera-page font_wryh">
+		
+		<div class="p1th">
+			<div class="w1200 clearfix">
+				<div class="lbox fldi">
+					<div class="avatar-item">
+						<div class="ui-avatar-icon ui-avatar-icon-120">
+							<i style="background-image:url({%$photographers_info.un_data.avatar%})"></i>
+						</div>
+						<p class="address-txt">
+							<i class="icon icon-circle-address ui-icon-size-16 dib"></i>
+							<em class="txt">{%$photographers_info.un_data.location_name%}</em>
+						</p>
+					</div>
+				</div>
+				<div class="rbox fldi">
+					<div class="item-1 clearfix">
+						<span class="fldi name-txt color-333 fb f24">{%$photographers_info.un_data.name%}</span>
+						<a href="#" data-role="srdz-btn">
+							<button class="ui-button ui-button-bg-fbb ui-button-block  ui-button-size-h40 frdi">
+								<span class="ui-button-content f14">私人订制</span>
+							</button>
+						</a>
+					</div>
+					<div class="item-2">
+						<div class="txt-1 color-666 f14">
+							{%$photographers_info.un_data.introduce%}
+						</div>
+						<div class="txt-2">
+							<ul class="list clearfix f14 color-333">
+								<li>
+									套系数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.goods_num%}</span>
+								</li>
+								<li>
+									咨询数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.consults%}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="item-wrap">
+					<div class="select-list-item clearfix">
+						<div class="classify-item fldi" >
+							<ul class="list clearfix f14 color-666" data-role="filter-item">
+								
+							{%foreach $paizhao_goods_type as $key => $val%}
+								<li data-key ="{%$key%}">
+									{%$val.name%}
+								</li>
+							{%/foreach%}
+							</ul>
+						</div>
+						<div class="sort-item frdi f14 color-666" >
+							<ul class="list clearfix" data-role="sort-item">
+								{%foreach $sort_item as $val%}
+								<li  sort-type="{%$val.sort_type%}">
+									{%$val.name%}
+								</li>
+								{%/foreach%}
+								
+							</ul>
+						</div>
+					</div>
+					<div class="photo-list-item" data-role="filter-photo-list">
+						
+					</div>
+					<div class="no-data-item tc dn f14" data-role="no-data-item">
+						暂无数据
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"></script>
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		var utility = require('pc-huipai:global/utility/index');  
+		require('pc-huipai:global/layer/layer');  
+		
+		var tpl  = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n		<a href=\"";
+  if (helper = helpers.link_url) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.link_url); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n			<li class=\"pic-list-width-285\">\n				<div class=\"img-item\">\n					<div class=\"img\">\n						<img src=\"";
+  if (helper = helpers.images) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.images); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n					</div>\n					<div class=\"txt color-fff\">";
+  if (helper = helpers.consults) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.consults); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</div>\n				</div>\n				<div class=\"txt-item\">\n					<div class=\"box-1 clearfix\">\n						<p class=\"txt-1 color-fa6 fldi f18 fb\">\n							";
+  if (helper = helpers.prices) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.prices); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n						</p>\n						<p class=\"txt-2  color-999 frdi f14\">";
+  if (helper = helpers.location_name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.location_name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n					</div>\n					<div class=\"box-2\">\n						<p class=\"txt-1 color-333 f14\">\n							";
+  if (helper = helpers.titles) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.titles); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n						</p>\n					</div>\n					\n				</div>\n			</li>\n		</a>\n		";
+  return buffer;
+  }
+
+  buffer += "<div class=\"pic-list-mod-1 pic-list-mod-w1200 font_wryh\">\n	<ul class=\"list clearfix\">\n		";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.data), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n	</ul>\n</div>";
+  return buffer;
+  });
+		function camera_sort_list(obj){
+			utility.ajax_request
+			({
+				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN']+'/camera/get_camera_list.php',
+				data : obj.data,
+				cache: false,
+				beforeSend: function()
+				{
+
+				},
+				success: function(data)
+				{
+					// console.log(data);
+					
+					if (data.result_data.result ==1) 
+					{
+					     $('[data-role="no-data-item"]').addClass('dn');
+					    
+					}
+					else{
+						$('[data-role="no-data-item"]').removeClass('dn');
+
+					}
+					$('[data-role="filter-photo-list"]').html(tpl(data.result_data));
+				},
+
+				error: function()
+				{
+
+				},
+				complete:function(){
+
+				}
+			});
+		}
+		camera_sort_list({
+			data : {
+				user_id : '{%$user_id%}',
+				sort : '',
+				type_id : '',
+				order : 'DESC'
+			}
+
+		});
+		// 筛选
+		$('[data-role="filter-item"]').find("li").on('click',  function(event) {
+			var type_id = $(this).attr('data-key');
+			$(this).addClass('li-cur').siblings('li').removeClass('li-cur');
+			var sort = '' ;
+			$('[data-role="sort-item"]').find('li').each(function() {
+
+
+				if ($(this).hasClass('li-cur')) 
+				{
+				    sort = $(this).attr('sort-type');
+				}
+			});
+			camera_sort_list({
+				data : {
+					user_id : '{%$user_id%}',
+					sort : sort,
+					type_id : type_id,
+					order : 'DESC'
+				}
+
+			});
+			
+		});
+		// 排序
+		$('[data-role="sort-item"]').find("li").on('click',  function(event) {
+			var sort_type = $(this).attr('sort-type');
+			$(this).addClass('li-cur').siblings('li').removeClass('li-cur');
+			var type_id = '' ;
+			$('[data-role="filter-item"]').find('li').each(function() {
+				if ($(this).hasClass('li-cur')) 
+				{
+				    type_id = $(this).attr('data-key');
+				}
+			});
+			camera_sort_list({
+				data : {
+					user_id : '{%$user_id%}',
+					sort : sort_type,
+					type_id : type_id,
+					order : 'DESC'
+				}
+
+			});
+			
+		});
+
+		// 私人订制按钮点击促发的事件
+		
+		$('[data-role="srdz-btn"]').on('click', function(event) {
+
+			var index = layer.confirm('<div class="pop-contact-mod"><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id=" " class="input-text" placeholder="您的称呼" /><input type="text" name=" " id=" " class="input-text"  placeholder="留下您的电话，方便联系" /></div><div class="num-box color-999">已有 <span class="num color-2bd">2345</span> 人咨询此摄影套系</div></div>', {
+
+			        title: ['添加摄影顾问微信', 'background-color:#fff;border-bottom:none;'], //不显示标题
+			        shade: 0.5,
+			        move: false,
+			        area: ['600px', 'auto'],
+			        btn: ['确定',''], //按钮
+			        skin : 'pai_zhao_camera_class',
+			    }, function(){
+			        // 确定 do something
+			        // layer.msg('的确很重要', {icon: 1});
+			        layer.msg('点击了确定');
+
+			    }, function(){
+			        //  取消 do something
+			        layer.msg('点击了取消');
+			        // layer.msg('也可以这样', {
+			        //  time: 20000, //20s后自动关闭
+			        //  btn: ['明白了', '知道了']
+			        // });
+			});
+		});
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

@@ -1,0 +1,119 @@
+<div class="el-render">
+            <div class="p1th">
+                <div class="wbox ">
+                    <div class="lbox ">
+                        <p class="p1">{%$ret.data.status_str%}</p>
+                        <p class="p2">{%$ret.data.status_description%}</p>
+                    </div>
+                    <div class="rbox ">
+                        <img src="http://mojikids.yueus.com/static/wap/image/order/icon-168x168.png" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="p2th">
+                <div class="item-wrap">
+                    {%foreach $ret.data.store as $key => $val%}
+                        <div class="item ui-border-b" {%if $key eq "2"%}onclick="tel_phone()"{%/if%}>
+                            <div class="lbox">
+                                <span class="icon home" style="background-image: url({%$val.image%});}"></span> {%$val.value%}
+                            </div>
+                            <div class="rbox"   >
+                                <i class="dib ui-transform-180 icon-font i-iconfont-back icon-font-size-13"></i>
+                            </div>
+                        </div>
+                    {%/foreach%}
+
+
+
+                </div>
+            </div>
+
+
+            <div class="p3th">
+                <div class="item-wrap">
+                    {%foreach $ret.data.property as $val%}
+                        <div class="item ui-border-b">
+                            <div class="lbox color-333">
+                                {%$val.title%}
+                            </div>
+                            <div class="rbox color-666">
+                                {%$val.value%}
+                            </div>
+                        </div>
+                    {%/foreach%}
+
+
+                </div>
+            </div>
+
+            <div class="p4th">
+                <div class="item-wrap">
+                    {%foreach $ret.data.goods as $val%}
+                        <a href="{%$MOJIKIDS_PAGE_ARR.goods%}?goods_id={%$val.goods_id%}">
+                            <div class="item">
+                                <div class="wbox1 ">
+                                    <div class="lbox ">
+                                        <img src="{%$val.cover%}" />
+                                    </div>
+                                    <div class="cbox ">
+                                        <p class="p1 f14 color-333">{%$val.title%}</p>
+                                        <p class="p2 f12 color-aaa">{%$val.standard_name%}</p>
+                                    </div>
+                                    <div class="rbox f14 color-666 f14 ">{%$val.price%}</div>
+                                </div>
+                            </div>
+                        </a>
+
+                    {%/foreach%}
+
+                    {%foreach $ret.data.bill as $val%}
+                        <div class="item ui-border-b item-line">
+                            <div class="lbox color-666 f14">
+                                {%$val.title%}
+                            </div>
+                            <div class="rbox color-666">
+                                {%$val.value%}
+                            </div>
+                        </div>
+                    {%/foreach%}
+
+                </div>
+
+            </div>
+
+            {%if $ret.data.promo%}
+                <div class="p5th ">
+                    <div class="title color-333">{%$ret.data.promo_title%}</div>
+                    {%foreach $ret.data.promo as $val%}
+                        <div class="wbox  color-333 f14">
+                            <div class="lbox ">{%$val.title%}</div>
+                            <div class="rbox ">{%$val.value%}</div>
+                        </div>
+                    {%/foreach%}
+
+                </div>
+            {%/if%}
+
+            <div class="p6th">
+                <div class="wbox clearfix">
+                    {%foreach $ret.data.trade as $val%}
+                        <p class="p1">{%$val.title%} {%$val.value%}</p>
+                    {%/foreach%}
+
+                </div>
+            </div>
+
+            {%foreach $ret.data.button as $val%}
+                <div class="submit " :click="operation_tyle({%$val.action%},{%$ret.data.order_sn%})">
+                    {%$val.title%}
+                </div>
+            {%/foreach%}
+
+
+            <mt-popup v-model="map_popup" position="bottom">
+                <div id="container"  class="global-map-pop"></div>
+            </mt-popup>
+
+
+        </div>

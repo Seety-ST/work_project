@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>remember the future</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+
+<body>
+	<section class="index-page">
+		<h1 class="logo-item">
+			<a href="#">
+				<i class="logo-icon animated"></i>
+			</a>
+		</h1>
+		<section class="con-wrap">
+			<div class="bg-item animated"></div>
+			<div class="person-item animated"></div>
+			<div class="mod-btn-wrap">
+				<div class="btn-item more-btn">
+						<a href="#">
+							<i class="icon animated"></i>
+							<span class="btn animated"></span>
+						</a>
+				</div>
+				<div class="btn-item creat-btn">
+						<a href="#">
+							<i class="icon animated"></i>
+							<span class="btn animated"></span>
+						</a>
+				</div>
+			</div>
+		</section>
+		<h2 class="f-icon-item animated"></h2>
+	</section>
+</body>
+
+</html>

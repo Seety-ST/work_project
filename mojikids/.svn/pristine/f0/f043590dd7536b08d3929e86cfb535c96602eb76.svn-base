@@ -1,0 +1,51 @@
+<div class="item-wrap">
+   
+
+
+        <div class="item color-666" v-for="$item in data.list" @click="go_detail($item.order_sn)" >
+            <div class="wbox1 clearfix ui-border-b">
+                <div class="lbox fl">{{$item.title}}</div>
+                <div class="rbox fr main-color state">{{$item.status_str}}</div>
+            </div>
+            <div class="des ui-border-b">
+                <p v-for="$s_item in $item.property" class=""><span class="fb color-333 t-title">{{$s_item.title}}</span>{{$s_item.value}}</p>
+            </div>
+            <div class="total  ui-border-b fb" v-for="$s_item in $item.bill">{{$s_item.title}}<span class="price main-color">{{$s_item.value}}</span></div>
+            <div class="submit">
+                <button  v-for="$s_item in $item.button"  @click="operation_tyle($s_item.action,$event,$item.order_sn,$s_item.value)"  class="ui-button ui-button-block  ui-button-size-x  ui-button-radius-l ui-button-bd-fac main-border-color">
+                    <span class="ui-button-content f14" >{{$s_item.title}}</span>
+                </button>
+            </div>
+        </div> 
+
+    
+</div>     
+
+
+<!-- 
+<div class="wap-list-mod-1">
+    <ul class="list" >        
+        <li class="clearfix" v-for="$item in data.list">
+            <div class="avator-item fldi">
+                <div class="ui-avatar-icon ui-avatar-icon-60">
+                           <i :style="{backgroundImage:'url('+$item.images+')'}"></i>
+                </div>
+                <i class="mark-icon girl-mark-icon"></i>
+            </div>
+            <div class="txt-item fldi">
+                <p class="box-1 tc">
+                    {{$item.titles}}
+                </p>
+                <p class="box-2 f14 color-666 tc">
+                    {{$item.titles}}
+                </p>
+            </div>
+            <div class="btn-item">
+                <button @click="show_title($item.titles)" class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+                    <span class="ui-button-content f12">修改</span>
+                </button>
+            </div>
+        </li>
+    </ul>
+</div>
+ -->

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        选择档期
+    </title>
+    {%$wap_global_head%}
+</head>
+
+<body >
+
+<link charset="utf-8" rel="stylesheet" href="../../style/order/date.scss">
+<main role="main">
+    <div id="page-container" class="page-container" >
+        <moji-date ref="child_date" :show_date="parent_show_date" :schedule_id="parent_schedule_id" :canbook_days_list="parent_canbook_days_list" v-on:pick_detail="parent_pick_detail"></moji-date>
+    </div>
+</main>
+
+</body>
+
+</html>
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+
+        // 加载util
+        var Util = require.syncLoad(__moduleId('/modules/global/util/index'));
+
+        // 加载档期组件
+        var Date_component  =  require('/modules/widget/date/index');
+
+        // 安装Date
+        Vue.component(Date_component.name, Date_component);
+
+        //同步初始化日期数据，第一次加载快
+
+        //第一次同步显示可选择日期
+        var result_list = '{%$result_list%}';
+        var result_list_obj = JSON.parse(result_list);
+        var canbook_days_list_array = [];
+        var address_value = "{%$address_value%}";
+
+        //传递的参数
+        var __goods_id = "{%$goods_id%}";
+        var __standard_id = "{%$standard_id%}";
+        var __buy_num = "{%$buy_num%}";
+        var __store_id = "{%$store_id%}";
+        var __schedule_id = "{%$schedule_id%}";
+
+
+
+        if(!result_list_obj["res"])
+        {
+            result_list_obj["res"] = {};
+        }
+        var result_list_obj_len = result_list_obj["res"].length;
+        for(var i=0;i<result_list_obj_len;i++)
+        {
+            canbook_days_list_array.push(result_list_obj["res"][i]);
+        }
+
+
+        var parent_date = new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return {
+                    parent_show_date : true,//是否显示当前模块
+                    parent_canbook_days_list: canbook_days_list_array,//可以选择的档期
+                    parent_schedule_id : __schedule_id
+                }
+            },
+            methods:
+            {
+                parent_pick_detail : function(ymd_value,value,value_format){
+                    console.log("父组件年月日："+ymd_value);
+                    console.log("父组件精确时间对应的值："+value);
+
+
+                    var service_time = ymd_value;
+                    //转换成时间戳
+                    service_time = service_time.replace(/-/g,'/');
+                    console.log(service_time);
+
+                    service_time = new Date(service_time);
+                    service_time = (service_time.getTime()/1000);//转换成时间戳
+
+                    console.log(service_time);
+                    //转换成时间戳end
+
+                    var timezone_id = value;
+
+                    //弹框提示
+                    var message = value_format+"<br/>"+address_value;
+                    var title = "请确认你选择的档期";
+                    Util.dialog({
+                        title:title,
+                        message:message,
+                        showCancelButton:true,
+                        confirmButtonText:"确认"
+                    },function(value){
+                        //访问子组件，处理子组件数据
+                        console.log(parent_date.$refs.child_date.date_detail_list.length);
+                        var child_date_detail_list_len = parent_date.$refs.child_date.date_detail_list.length;
+                        for(var i=0;i<child_date_detail_list_len;i++)
+                        {
+                            parent_date.$refs.child_date.date_detail_list[i]["click_cur"] = "";
+                        }
+
+                        if(value=="confirm")
+                        {
+                            console.log("点击了确定");
+                            //跳转
+                            var jump_link = window.__MOJIKIDS_GLOBAL['PAGE_URL']['order']+"index.php?goods_id="+__goods_id+"&standard_id="+__standard_id+"&buy_num="+__buy_num+"&service_time="+service_time+"&store_id="+__store_id+"&timezone_id="+timezone_id;
+                            //跳转
+                            window.location.href=jump_link;
+
+
+                        }
+
+
+                    });
+
+
+
+                }
+            }
+        });
+
+        //判断storage的值，如果没有值，弹须知提示。
+        var date_must_know = Util.storage.get("date_must_know");
+        if(!date_must_know || date_must_know!="1")
+        {
+            //没有这个缓存弹提示
+            var message = '<div style="text-align:left;"><p class="mb5">1.预约成功后，如需取消请至少提前三天联系客服。</p><p class="mb5">2.改约次数只有1次哦，如需改约请联系客服，拍摄当天不可改约。</p><p class="mb5">3.如需联系微信客服，请添加微信号:MOJIKIDS</p></div>';
+            Util.dialog({
+                title:"预约须知",
+                message:message,
+                showCancelButton:true,
+                cancelButtonText:"不再提示",
+                confirmButtonText:"我知道了"
+            },function(value){
+                if(value=="cancel")
+                {
+                    //设置storage
+                    Util.storage.set("date_must_know","1");
+                }
+
+            });
+
+        }
+
+
+    })();
+</script>
+
+{%$wap_global_tj%}

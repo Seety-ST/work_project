@@ -1,0 +1,5 @@
+define('wap-kids:widget/radio/radio', function(require, exports, module) {
+
+  "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default={name:"mt-radio",props:{title:String,align:String,options:{type:Array,required:!0},value:String},data:function(){return{currentValue:this.value}},watch:{value:function(t){this.currentValue=t},currentValue:function(t){this.$emit("input",t)}}},function(t){module&&module.exports&&(module.exports.template=t),exports&&exports.default&&(exports.default.template=t)}('<div class="mint-radiolist" @change="$emit(\'change\', currentValue)">\n    <label class="mint-radiolist-title" v-text="title"></label>\n    <div v-for="option in options">\n        <label class="mint-radiolist-label" slot="title">\n        <span :class="{\'is-right\': align === \'right\'}" class="mint-radio">\n          <input class="mint-radio-input" type="radio" v-model="currentValue" :disabled="option.disabled" :value="option.value || option">\n          <span class="mint-radio-core"></span>\n        </span>\n        <span class="mint-radio-label" v-text="option.label || option"></span>\n      </label>\n  </div>\n</div>');
+
+});

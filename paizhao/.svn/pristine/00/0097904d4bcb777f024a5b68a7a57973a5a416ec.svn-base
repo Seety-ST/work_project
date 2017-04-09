@@ -1,0 +1,15 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+include_once('common.inc.php');
+$tpl = getSmartyTemplate('index.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'pc/ptjs/', true, true);
+if ($tpl->isCached('index.tpl.htm'))
+{
+    echo 'is cached';
+}
+print_r($tpl);

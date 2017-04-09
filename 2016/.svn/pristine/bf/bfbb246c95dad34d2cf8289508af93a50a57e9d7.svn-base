@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>VolvoV40V40cc</title>
+    <link href="css/swiper.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/zt.css" type="text/css" rel="stylesheet" />
+    <script>
+            (function (doc, win) {
+                      var docEl = doc.documentElement,
+                        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                        recalc = function () {
+                          var clientWidth = docEl.clientWidth;
+                          if (!clientWidth) return;
+                          docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                        };
+
+                      if (!doc.addEventListener) return;
+                      win.addEventListener(resizeEvt, recalc, false);
+                      doc.addEventListener('DOMContentLoaded', recalc, false);
+                    })(document, window);
+    </script>
+</head>
+    <body>
+        <section class="theme-page">
+            <div class="con-item">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- 时尚复古 -->
+                        <div class="swiper-slide">
+                            <div class="img-item">
+                                <img data-src="images_8m/theme/choose/1.jpg" class="swiper-lazy">
+                            </div>
+                            <div class="btn-item">
+                                <a href="#" class="btn"></a>
+                            </div>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <!-- 自由 -->
+                        <div class="swiper-slide">
+                            <div class="img-item">
+                                <img data-src="images_8m/theme/choose/2.jpg" class="swiper-lazy">
+                            </div>
+                            <div class="btn-item">
+                                <a href="#" class="btn"></a>
+                            </div>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <!-- 运动 -->
+                        <div class="swiper-slide">
+                            <div class="img-item">
+                                <img data-src="images_8m/theme/choose/3.jpg" class="swiper-lazy">
+                            </div>
+                            <div class="btn-item">
+                                <a href="#" class="btn"></a>
+                            </div>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>
+                        <!-- 精致优雅 -->
+                        <div class="swiper-slide">
+                            <div class="img-item">
+                                <img data-src="images_8m/theme/choose/4.jpg" class="swiper-lazy">
+                            </div>
+                            <div class="btn-item">
+                                <a href="#" class="btn"></a>
+                            </div>
+                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </div>      
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <hgroup class="mod-btn-wrap">
+                <h2 class="back-btn">
+                    <a href="#" class="icon-area">
+                        <i class="icon back-icon"></i>
+                    </a>
+                </h2>
+                <h1 class="logo">
+                    <a href="#" class="icon-area">
+                        <i class="icon logo-icon"></i>
+                    </a>
+                </h1>
+            </hgroup>
+        </section>
+    </body>
+    <script src="js/swiper.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        // Disable preloading of all images
+        preloadImages: false,
+        // Enable lazy loading
+        lazyLoading: true
+    });
+    </script>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>首页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+    <link href="../../style/index/index-page.css" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	<div class="global-header font_wryh">
+		<div class="w1200 clearfix">
+			<div class="lbox fldi clearfix">
+				<div class="logo-item fldi">
+					<img src="../../image/index/logo-img-64x64.png" />
+				</div>
+				<div class="nav-item fldi">
+					<ul class="list clearfix f14">
+						<li class="cur">
+							<a class="text" href="#">首页</a>
+						</li>
+						<li>
+							<a class="text" href="#">摄影师</a>
+						</li>
+						<li>
+							<a class="text" href="#">平台介绍</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="rbox frdi clearfix">
+				<div class="seach-item fldi">
+					<a href="#" class="search-icon"></a>
+				</div>
+				<div class="info-item fldi">
+					<a href="#" class="sj-text f14">摄影师入驻</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 页面内容 -->
+	
+	<div class="index-page font_wryh">
+		<div class="p1th">
+			<div class="scrollBox" id="scrollBox">
+				<ul class="img_list clearfix font_wryh" id="foo2">
+					{%foreach $paizhao_goods_info.banner as $banner%}
+						<li class="banner1" style="background-image:url({%$banner.img_url%})">
+							
+						</li>
+					{%/foreach%}
+					
+				</ul>
+
+				<div class="page-wrap">
+					<a href="javascript:;" class="pre fl " id="prev2" ></a>
+					<div class="page-box fl" id="pager2">
+						<a href="javascript:;" class="selected"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</div>
+				   <a href="javascript:;" class="next fl " id="next2" ></a>
+				</div>
+			</div>
+
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="classify-item">
+					<ul class="list clearfix">
+						{%foreach $paizhao_goods_info.package_type as $package_type%}
+						<a href="{%$package_type.link_url%}">
+							<li>
+								<div class="img-icon" style="background-image:url({%$package_type.img_url%})"></div>
+								<div class="title color-333 f14">{%$package_type.title%}</div>
+							</li>
+						</a>
+						{%/foreach%}
+					</ul>
+				</div>
+				<div class="img-item clearfix">
+					<ul class="list clearfix">
+						{%foreach $paizhao_goods_info.custom_recommend as $custom_recommend%}
+						<li class="{%$custom_recommend.img_width%}">
+							<i class="img" style="background-image:url({%$custom_recommend.img_url%})">
+								
+							</i>
+						</li>
+						{%/foreach%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="p3th">
+			<div class="w1200">
+				<div class="title-item">
+					<p class="cn-title">
+						摄影机构
+					</p>
+					<p class="en-title">
+						PHOTOGRAPtHY STUDIO
+					</p>
+				</div>
+				<div class="item-wrap clearfix">
+					<a href="#" class="left-btn fldi" id="prev3"></a>
+					<ul class="list fldi clearfix" id="foo3">
+						{%foreach $paizhao_goods_info.organization as $organization%}
+						<li class="clearfix">
+							{%if $organization.seller%}
+							<div class="txt-item fldi">
+								<div class="img">
+									<img src="{%$organization.seller.avatar%}" />
+								</div>
+								<div class="txt-con">
+									<p class="txt f16 color-333">{%$organization.seller.seller_name%}</p>
+									<p class="f16"><em class="tips f12">擅长</em>{%$organization.seller.remark%}</p>
+								</div>
+							</div>
+							{%elseif $organization.goods %}
+							<div class="img-item fldi">
+								{%foreach $organization.goods as $val %}
+								<div class="item">
+									<div class="img">
+										<img src="{%$val.img_url%}" />
+									</div>
+									<div class="txt">
+										{%$val.place_number%}
+									</div>
+								</div>
+								{%/foreach%}
+							</div>
+							{%/if%}
+						</li>
+						{%/foreach%}
+						
+					</ul>
+					<a href="#" class="right-btn fldi" id="next3"></a>
+				</div>
+				<div class="more-item">
+					<a href="#" class="more-btn f14 color-333">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="p4th">
+			<div class="w1200">
+				<div class="title-item">
+					<p class="cn-title">
+						独立摄影师
+					</p>
+					<p class="en-title">
+						INDIE PHOTOGRAPHER
+					</p>
+				</div>
+				<div class="item-wrap">
+					<ul class="list clearfix">
+						<li>
+							<div class="img">
+								<img src="../../image/index/285x285.jpg" />
+							</div>
+							<div class="txt-item clearfix">
+								<div class="lbox fldi">
+									<i class="avator-icon"></i>
+								</div>
+								<div class="rbox fldi">
+									<p class="txt-1 f14 color-333">
+										甲丙象艺
+									</p>
+									<p class="txt-2 f14">
+										摄影套系：129
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="../../image/index/285x285.jpg" />
+							</div>
+							<div class="txt-item clearfix">
+								<div class="lbox fldi">
+									<i class="avator-icon"></i>
+								</div>
+								<div class="rbox fldi">
+									<p class="txt-1 f14 color-333">
+										甲丙象艺
+									</p>
+									<p class="txt-2 f14">
+										摄影套系：129
+									</p>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="img">
+								<img src="../../image/index/285x285.jpg" />
+							</div>
+							<div class="txt-item clearfix">
+								<div class="lbox fldi">
+									<i class="avator-icon"></i>
+								</div>
+								<div class="rbox fldi">
+									<p class="txt-1 f14 color-333">
+										甲丙象艺
+									</p>
+									<p class="txt-2 f14">
+										摄影套系：129
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="../../image/index/285x285.jpg" />
+							</div>
+							<div class="txt-item clearfix">
+								<div class="lbox fldi">
+									<i class="avator-icon"></i>
+								</div>
+								<div class="rbox fldi">
+									<p class="txt-1 f14 color-333">
+										甲丙象艺
+									</p>
+									<p class="txt-2 f14">
+										摄影套系：129
+									</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="more-item">
+					<a href="#" class="more-btn f14 color-333">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="p5th">
+			<div class="w1200">
+				<div class="title-item">
+					<p class="cn-title">
+						热门拍摄
+					</p>
+					<p class="en-title">
+						HOT PHOTOGRAPHY
+					</p>
+				</div>
+				<div class="item-wrap">
+					<ul class="list clearfix">
+						<li class="max-size">
+							<div class="img-item">
+								<i class="img"></i>
+							</div>
+							<div class="txt-item">
+								<div class="box-1 clearfix">
+									<span class="txt-1 fldi">￥2600.00</span>
+									<span class="txt-2 frdi">12人咨询</span>
+								</div>
+								<div class="box-2">
+									<p class="txt-1 color-666">[日常写真]最懂你美丽的高颜值个人写真</p>
+								</div>
+							</div>
+						</li>
+						<li class="min-size">
+							<div class="img-item">
+								<i class="img"></i>
+							</div>
+							<div class="txt-item">
+								<div class="box-1 clearfix">
+									<span class="txt-1 fldi">￥2600.00</span>
+									<span class="txt-2 frdi">12人咨询</span>
+								</div>
+								<div class="box-2">
+									<p class="txt-1 color-666">[日常写真]最懂你美丽的高颜值个人写真</p>
+								</div>
+							</div>
+						</li>
+						<li class="min-size">
+							<div class="img-item">
+								<i class="img"></i>
+							</div>
+							<div class="txt-item">
+								<div class="box-1 clearfix">
+									<span class="txt-1 fldi">￥2600.00</span>
+									<span class="txt-2 frdi">12人咨询</span>
+								</div>
+								<div class="box-2">
+									<p class="txt-1 color-666">[日常写真]最懂你美丽的高颜值个人写真</p>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<div class="more-item">
+					<a href="#" class="more-btn f14 color-333">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="p6th">
+			<div class="w1200">
+				<ul class="list clearfix">
+					<li>
+						<div class="img-item">
+							<img src="../../image/index/128x128.jpg" />
+						</div>
+						<div class="text-item">
+							<p class="title">
+								更多选择
+							</p>
+							<p class="txt f14 color-666">
+								海量拍摄套系，记录不一样的你
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img-item">
+							<img src="../../image/index/128x128.jpg" />
+						</div>
+						<div class="text-item">
+							<p class="title">
+								更多选择
+							</p>
+							<p class="txt f14 color-666">
+								海量拍摄套系，记录不一样的你
+							</p>
+						</div>
+					</li>
+					<li>
+						<div class="img-item">
+							<img src="../../image/index/128x128.jpg" />
+						</div>
+						<div class="text-item">
+							<p class="title">
+								更多选择
+							</p>
+							<p class="txt f14 color-666">
+								海量拍摄套系，记录不一样的你
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="p7th">
+			<div class="w1200 clearfix">
+				<div class="introduction-item fldi">
+					<div class="introduct-txt f14 color-666">
+						荟拍，隶属于Walker+摄影产业链创客联盟，是国内第一原创图片社区POCO和第一时间电商约约APP孵化的垂直类互联网摄影平台，汇聚全国富有创造力的摄影师及摄影机构资源，搭建线上线下融合的垂直类电子商务服务平台，提供一站式品质摄影服务。
+					</div>
+				</div>
+				<div class="phone-item fldi">
+					<p class="txt f14">客服电话</p>
+					<p class="phone-txt">
+						400-0368-163
+					</p>
+					<p class="time-txt f14">
+						工作时间：10:00-18:00
+					</p>
+				</div>
+				<div class="code-item fldi">
+					<div class="img">
+						<img src="../../image/index/code-img-100x100.jpg" />
+					</div>
+					<div class="txt f14">
+						扫一扫，进入微信版
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 脚部内容 -->
+	<div class="global-footer font_wryh">
+		<div class="w1200">
+			<p class="text">
+				Copyright &copy; 2003-2016 YUEUS.COM 粤ICP备14072290号-1 &nbsp; 粤公网安备 44010402000043号   &nbsp;  版权所有：广州摩幻时信息技术有限公司
+			</p>
+		</div>
+	</div>
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		// var carouFredSel = require('../../modules/carouFredSel/jquery.carouFredSel-5.5.0');
+		// $('#foo2').carouFredSel({
+		// 	prev: '#prev2',
+		// 	next: '#next2',
+		// 	pagination: "#pager2",
+		// 	auto: true
+		//  });
+
+		// $('#foo3').carouFredSel({
+		// 	prev: '#prev3',
+		// 	next: '#next3',
+		// 	auto: false
+		//  });
+
+		require.async('pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0',function()
+		{
+			$('#foo2').carouFredSel({
+				prev: '#prev2',
+				next: '#next2',
+				pagination: "#pager2",
+				auto: true,
+				scroll:
+				{
+					fx: "crossfade"
+				}
+			 });
+
+			$('#foo3').carouFredSel({
+				prev: '#prev3',
+				next: '#next3',
+				auto: false
+			 });
+		});
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

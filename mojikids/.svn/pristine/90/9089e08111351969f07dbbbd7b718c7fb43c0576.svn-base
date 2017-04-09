@@ -1,0 +1,85 @@
+@import "../../sass/compass";
+
+
+
+// 文字cut字 过长的文字显示...
+.txt-long-cut{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin txt-long-cut()
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+//  页面宽度控制
+.pc-w640{
+    width: 640px;
+    margin: 0 auto;
+    .global-header{
+        width: 640px;
+        left:inherit;
+    }
+    .ui-button-submit-m {
+        width: 640px;
+        margin: 0 auto;
+        left:inherit;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+    .pc-w640{
+        width:100%;
+        margin: auto;
+        .global-header{
+            width: 100%;
+            left:0;
+        }
+        .ui-button-submit-m {
+            width: 100%;
+            left:0;
+        }
+    }
+}
+
+
+
+// 圆角
+.ui-border-radius-5{
+    border-radius: 5px;
+}
+
+.ui-border-top-left-radius-5{
+    border-top-left-radius:5px;
+}
+
+.ui-border-top-right-radius-5{
+    border-top-right-radius:5px;
+}
+
+.ui-border-bottom-right-radius-5{
+    border-bottom-right-radius:5px;
+}
+
+.ui-border-bottom-left-radius-5{
+    border-bottom-left-radius:5px;
+}
+
+// 旋转
+.ui-transform-90{
+    @include transform(rotate(90deg));
+}
+.ui-transform-180{
+    @include transform(rotate(180deg));
+}
+.ui-transform-270{
+    @include transform(rotate(270deg));
+}
+.ui-transform-360{
+    @include transform(rotate(360deg));
+}

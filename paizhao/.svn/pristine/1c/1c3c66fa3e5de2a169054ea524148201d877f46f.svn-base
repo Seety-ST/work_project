@@ -1,0 +1,24 @@
+<?php
+/**
+* @authors huangst
+* @date    2016-10-26 15:35:39
+* 获取私人订制信息
+*/
+include_once('../../common.inc.php');
+$name = trim($_INPUT['name']);
+$mobile = intval($_INPUT['mobile']);
+$user_id = intval($_INPUT['user_id']);
+
+
+
+$consult_class = POCO::singleton('pai_paizhao_consult_class');
+$data = array(
+    'name'=> $name,
+    'mobile'=>$mobile,
+    'goods_id'=>0,
+    'user_id'=>$user_id,
+    'source'=>'PC',
+    'consult_type'=>'goods' or 'seller',
+);
+$consult_button_class->add_consult($data);
+paizhao_mobile_output($consult_button_class);

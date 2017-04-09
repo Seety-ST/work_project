@@ -1,0 +1,59 @@
+/**
+ *  //约摄地区选择模块，目前在约摄使用
+ * @authors 星星
+ */
+
+
+
+/**
+ * 地区数据切换
+ *
+ *
+ */
+function Location_sel(options)
+{
+    var self = this;
+    var options = options || {};
+    self.can_use_city = options.can_use_city || true;//能否使用第二级城市数据
+    self.can_use_district = options.can_use_district || true;//能否使用第三级地区数据
+    self.default_location_id = options.default_location_id || 101029001;//地区ID，默认为广州
+    self.$province_data = options.$province_data || $("[data-role='province-data']");//省按钮
+    self.$city_data = options.$city_data || $("[data-role='city-data']");//市按钮
+    self.$district_data = options.$district || $("[data-role='district-data']");//区按钮
+    self.$province_data_list = options.$province_data || $("[data-role='province-data-list']");//省数据容器
+    self.$city_data_list = options.$city_data || $("[data-role='city-data-list']");//市数据容器
+    self.$district_data_list = options.$district || $("[data-role='district-data-list']");//区数据容器
+    self.condition_list = options.condition_list || {};//构造链接时候的条件数组
+    self.location_json_obj = options.location_json_obj || {};//地区数据对象
+    //关闭按钮，待加上
+
+    self.init(options);
+    return self;
+}
+
+Location_sel.prototype = {
+
+    init:function(){
+        var self = this;
+        //做相应渲染模板处理处理
+    },
+    //通过location_id获取对应的数据对象
+    _get_list_by_id:function(location_id){
+
+    },
+    //渲染数据
+    /*
+      type //渲染的类型，分为province,city,district，三种渲染
+      location_id //地址ID，
+    */
+    _render_list:function(type,location_id){
+
+    },
+    //事件绑定处理
+    _event_bind:function(){
+
+    }
+}
+
+
+module.exports = Location_sel;

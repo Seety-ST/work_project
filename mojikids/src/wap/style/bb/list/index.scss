@@ -1,0 +1,72 @@
+@import "../../../sass/compass";
+.index-page{
+	padding: 15px 18px;
+	.p1th{
+		padding-top: 5px;
+		.item{
+			border-radius: 12px;
+			padding: 20px  15px;
+			// box-shadow: 0 0 12px #cdcdcd;
+			box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.12);
+			background-color: #fff;
+			margin-bottom: 20px;
+			@include flexbox((
+			    display: box,  // 盒子模型 子元素默认水平左对齐
+			    box-pack: justify  // 水平居中方式  start | center | end | justify
+
+			));
+			.lbox{
+				position: relative;
+				.icon-com{
+					width: 27px;
+					height: 27px;
+					background-size: cover;
+					display: block;
+					position: absolute;
+					top:-10px;
+					left: 0px;
+				}
+				.icon-boy{
+					background-image: url(/image/bb/list/boy-mark-54x54.png);
+				
+				}
+				.icon-girl{
+					background-image: url(/image/bb/list/girl-mark-54x54.png);
+				}
+				.ui-avatar-icon{
+					margin-left: 20px;
+
+				}
+			}
+			.cbox{
+				@include flexbox((
+				    display: box,  // 盒子模型 子元素默认水平左对齐
+				    box-flex: 1 //占有空间比例
+
+				  
+				));
+				-webkit-box-orient: block-axis;
+				text-align: center;
+				.box1{
+					font-size: 17px;
+					padding-top: 5px;
+				}
+				.box2{
+					padding-top: 10px;
+					font-size: 14px;
+				}
+			}
+			.rbox{
+				padding-top: 18px;
+			}
+		}
+
+		.btn{
+
+			padding: 5px 10px 0 10px;
+		}
+
+		
+	}
+}
+

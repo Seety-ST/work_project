@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK" >
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>Magnet Girl</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<section class="index-page" id="indexpage">
+		<div class="page section1 current">
+			<div class="contain">
+				<div class="item show-page">
+					<div class="con-item">
+						<div class="listItem"></div>
+						<div class="con-wrap">
+							<div class="img-item">
+								<img src="images/test/402x536.jpg" />
+							</div>
+							<div class="btn-wrap clearfix">
+								<a href="#" class="btn-item like-btn">
+									<i class="icon like-icon"></i>
+									<span>投票(1634)</span>
+								</a>
+								<a href="#" class="btn-item join-btn">
+									<span>参加活动</span>
+								</a>
+							</div>
+							<dl class="text-item">
+								<dt>
+									本美人要成为最具吸引力的Magnet Girl，<br />
+									快来给我点赞！
+								</dt>
+								<dd>
+									即日起至2017年1月13日，每个ID可为一副作品投票；<br />
+									票数前10的作品，将在美人相机开机画面中做展示；<br />
+									本页面所有作品都来自于美人相机APP Magnet Girl活动。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="mod-arrow">
+						<i class="down-icon"></i>
+						<em>进入排行榜</em>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page section2">
+			<div class="contain">
+				<div class="item product-page">
+					<div class="listItem"></div>
+					<div class="list clearfix">
+						<ul>
+							<li class="item-1">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-2">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-3">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924美人1924
+								</div>
+							</li>
+							<li class="item-4">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-3">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-6">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="more-btn">
+						<a href="#" class="btn">查看更多作品</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 弹出层 -->
+	<div class="fade" style="display:none"></div>
+	<!-- 投票成功 -->
+	<div class="mod-pop succeed-pop" style="display:none">
+		<div class="text-item">
+			<p>投票成功</p>
+		</div>
+		<div class="btn-item">
+			<a href="#" class="btn close-btn">关 闭</a>
+		</div>
+	</div>
+	<!-- 已投票 -->
+	<div class="mod-pop had-pop" style="display:none">
+		<div class="text-item">
+			<p>您已为TA投过票了</p>
+		</div>
+		<div class="btn-item">
+			<a href="#" class="btn close-btn">关 闭</a>
+		</div>
+	</div>
+	<!-- 弹出层 end -->
+
+<script type="text/javascript" src="js/fullPage.min.js"></script>
+<script type="text/javascript">
+	
+	var runPage;
+
+	runSection = new FullPage({
+
+	    id : 'indexpage',                            // id of contain
+	    slideTime : 800,                               // time of slide
+	    effect : {                                     // slide effect
+	        transform : {
+	            translate : 'Y',                       // 'X'|'Y'|'XY'|'none'
+	            scale : [1, 1],                    // [scalefrom, scaleto]
+	            rotate : [0, 0]                    // [rotatefrom, rotateto]
+	        },
+	        opacity : [0, 1]                           // [opacityfrom, opacityto]
+	    },                           
+	    mode : 'touch,wheel',               // mode of fullpage
+	    easing :'ease'
+	});
+
+
+	</script>
+
+</body>
+</html>

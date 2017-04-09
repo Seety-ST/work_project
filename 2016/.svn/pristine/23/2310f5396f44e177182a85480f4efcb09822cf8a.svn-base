@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="gbk" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>马赛克推广</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script src="js/lazysizes.min.js" async=""></script>
+<body>
+	<section class="beautyinfo-page">
+		<section class="header-item">
+			<div class="item">
+				<img  src="images/topic-header-750x937.jpg">
+			</div>
+		</section>
+		<section class="mod-item teaser lazyload" data-expand="-50">
+			<div class="item">
+				<div class="listItem">|<span>艺术马赛克</span>|</div>
+				<div class="txt">新笔触画风，照片品味一秒进阶！</div>
+			</div>
+			<div class="item-con">
+				<img data-sizes="auto" data-src="images/con-item/1.jpg"  class="lazyload" />
+			</div>
+		</section>
+		<section class="mod-item teaser lazyload" data-expand="-50">
+			<div class="item">
+				<div class="listItem">|<span>实时滤镜</span>|</div>
+				<div class="txt">
+					<p>11款滤镜，任意搭配你的心情</p>
+				</div>
+			</div>
+			<div class="item-con">
+				<img data-sizes="auto" data-src="images/con-item/2.jpg"  class="lazyload" />
+			</div>
+		</section>
+		<section class="mod-item teaser lazyload" data-expand="-50">
+			<div class="item">
+				<div class="listItem">|<span>贴纸素材</span>|</div>
+				<div class="txt">
+					<p>
+						朋克部落、复古趴、旅行记、梦游仙境、<br />
+						……所有时下最热ICON，聚合在此！
+					</p>
+				</div>
+			</div>
+			<div class="item-con">
+				<img data-sizes="auto" data-src="images/con-item/3.jpg"  class="lazyload" />
+			</div>
+		</section>
+		<section class="mod-item teaser lazyload" data-expand="-50">
+			<div class="item">
+				<div class="listItem">|<span>高级美颜</span>|</div>
+				<div class="txt">
+					<p>
+						大眼高鼻梁，瘦出自然弧度脸型，<br />
+						拉出完美微笑曲线。<br />
+						智能定位五官，一键大牌套妆，<br />
+						走在潮流最前端。
+					</p>
+				</div>
+			</div>
+			<div class="item-con">
+				<img data-sizes="auto" data-src="images/con-item/4.jpg"  class="lazyload" />
+			</div>
+		</section>
+		<section class="mod-item teaser lazyload" data-expand="-50">
+			<div class="item">
+				<h3 class="title">让我们一起为美丽代言！</h3>
+			</div>
+		</section>
+	</section>
+	<script>
+	window.lazySizesConfig = {
+		addClasses: true
+	};
+	</script>
+</body>
+</html>

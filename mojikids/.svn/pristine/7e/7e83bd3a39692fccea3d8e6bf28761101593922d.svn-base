@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        本地开发配置
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    <link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/main.css">
+    <!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+    <link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.css">
+    <link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.css">
+
+    <!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+    <!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+    <script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+    <script src="http://www.mojikids.com/static/wap/lib/base.js" charset="utf-8"></script>
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                   var clientWidth = docEl.clientWidth;
+                   if (!clientWidth) return;
+
+                   if(clientWidth<=768)
+                   {
+                     docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+                   }
+                   else
+                   {
+                     docEl.style.fontSize = 100*(768/375) + 'px';
+                   }
+
+
+                };
+                recalc();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+    <style media="screen">
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body >
+
+<main role="main">
+    <div id="page-container" class="page-container p10">
+
+        <h1 class="tc f28" :class="class_name" v-cloak>当前模式是[{{mode}}]</h1>
+        <div class="btn" >
+            <div class="ui-input-info-mod mb10">
+               <div class="item border-bottom-left-radius-0 border-bottom-right-radius-0 ui-input-border-bottom">
+                       <input type="text" class="ui-input-info" placeholder="本地域名，如 http://localhost/moji_kids_dev/" v-model="local">
+               </div>
+               <div class="item border-top-left-radius-0 border-top-right-radius-0">
+                   <input type="text" class="ui-input-info" placeholder="线上域名 如 http://www.mojikids.com/" v-model="online">
+              </div>
+            </div>
+
+            <div class="pl10 pr10">
+                <button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l" @click="save">
+    				<span class="ui-button-content f16">保存</span>
+    			</button>
+            </div>
+            <br>
+            <div class="pl10 pr10">
+                <button class="ui-button ui-button-block ui-button-100per ui-button-size-xl  ui-button-radius-l ui-button-bd-fac main-border-color" @click="clear">
+				<span class="ui-button-content f16">清空</span>
+			    </button>
+            </div>
+        </div>
+        <br>
+        <div class="pr10 pl10">
+            <p>注意：本地机器一定要搭建http服务，就是本地服务器，可以使用localhost访问</p>
+            <p>本地开发实质只是把入口文件的域名进行替换，目前只适用modules模块的css和js，请务必清楚</p>
+            <p><a href="http://image19-d.yueus.com/yueyue/20170109/20170109163028_120483_100002_10599.png?1282x480_130" target="_blank">点击我看图片</a></p>
+        </div>
+
+    </div>
+</main>
+
+</body>
+
+</html>
+
+<script src="http://www.mojikids.com/templates/wap/ui/head.js" charset="utf-8"></script>
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+    (function()
+    {
+        // 加载util
+        var Util = require.syncLoad('wap-kids:global/util/index');
+        var storage = window.localStorage;
+        var localinfo = storage.getItem('mojikids-localinfo');
+
+        if(localinfo)
+        {
+            localinfo = JSON.parse(localinfo);
+
+        }
+        else {
+            localinfo =
+            {
+                local : '',
+                online : ''
+            }
+        }
+
+        new Vue
+        ({
+            el : '#page-container',
+            mounted : function()
+            {
+                var self = this;
+
+                if(self.local && self.online)
+                {
+                    self.mode = '本地开发';
+                    self.type = 'local';
+
+                    self.class_name ='color-6dc' ;
+                }
+                else
+                {
+                    self.mode = '在线开发';
+                    self.type = 'online';
+
+                    self.class_name = 'color-37a';
+                }
+            },
+            data : function()
+            {
+                return {
+                    local : localinfo.local,
+                    online : localinfo.online,
+                    mode : '',
+                    type : '',
+                    class_name : ''
+                };
+            },
+            methods :
+            {
+                save : function()
+                {
+                    var self = this;
+
+
+                    var params = {};
+
+                    if(!self.local)
+                    {
+                        Util.toast('本地域名不能为空',2000);
+                        return;
+                    }
+                    if(!self.online)
+                    {
+                        Util.toast('线上域名域名不能为空',2000);
+                        return;
+                    }
+
+                    params['local'] = self.local;
+                    params['online'] = self.online;
+
+                    storage.setItem('mojikids-localinfo',JSON.stringify(params));
+
+                    Util.toast('保存成功',2000);
+
+                    window.location.href = window.location.href;
+                },
+                clear : function()
+                {
+                     storage.removeItem('mojikids-localinfo');
+
+                     Util.toast('清除成功',2000);
+
+                     window.location.href = window.location.href;
+                }
+            },
+
+        });
+
+    })();
+</script>

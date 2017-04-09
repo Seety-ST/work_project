@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+
+<script src="js/shadowbox/shadowbox.js" type="text/javascript"></script>
+<link href="js/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+<style>
+    table th {text-align: left;}
+</style>
+<script type="text/javascript"> 
+Shadowbox.init({ 
+    handleOversize: "drag", 
+	overlayColor: '#000',
+    modal: true,
+    displayNav: true,
+//	onClose: function(){location.reload();},
+	displayCounter: false
+}); 
+Shadowbox.setup();
+</script>
+<title>商品咨询数编辑列表</title>
+</head>
+<body>
+<div class="mainbox">
+<table class="search_table" width="100%">
+	<tbody>
+		
+        <tr>
+			<td width="81%" class="search">
+			  <form action="" method="post">
+			 	<input  type='submit' name='button' value='真实咨询数排序' />
+			 	<input type='hidden' name='consult_num' id='consult_num' value="{consult_num}" > 
+			  搜索:
+			   <input placeholder='商品id/标题' type='text' name='condition' value="{condition}" />
+			   &nbsp;&nbsp;
+			   <input placeholder='用户user_id' type='text' name='user_id' value="{user_id}" />
+               &nbsp;&nbsp;
+                                     是否上架:
+               <select name='is_show'>
+               	<option value="1" <!-- IF is_show="1" -->selected<!-- ENDIF -->>上架</option>
+               	<option value="0" <!-- IF is_show="0" -->selected<!-- ENDIF -->>下架</option>
+               </select>
+               &nbsp;&nbsp;
+                                    是否是黑名单:
+               <select name='is_black'>
+               	<option value="0" <!-- IF is_black="1" -->selected<!-- ENDIF -->>否</option>
+               	<option value="1" <!-- IF is_black="0" -->selected<!-- ENDIF -->>是</option>
+               </select>
+               <input type="hidden" id="action" name="action" value="goods_consult_edit"/>
+               <input type="submit" class="btn_class" name="button" id="button" value="查询" />&nbsp;&nbsp;&nbsp;&nbsp;
+              </form>
+			</td>
+			
+		</tr>
+	</tbody>
+</table>
+&nbsp;&nbsp;
+<button id='chose_all'>全选</button>
+<button id='multiply' onclick="multiply_add_num()">批量增加</button>
+<button id='cancel_all'>取消全选</button>
+<input type='text' id='rand_num' name='rand_num' placeholder='增加随机数量如10-20' />&nbsp;&nbsp;<button onclick="add_rand_num();">随机增加</button>
+    <div id="tabs">
+    <div class="tabbox">
+      <div class="table-list">
+        <table width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>选择</th>  
+                        <th>用户user_id</th>
+                        <th>商品id</th>
+                        <th>商品标题</th>
+                        <th>上下架情况</th>
+                        <th>是否黑名单</th>
+                        <th>真实咨询数</th>
+                        <th>虚拟咨询数</th>
+                        <th>封面</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- BEGIN list -->
+                      <tr>
+                          <td><input name='chose' type='checkbox' value="{goods_id}"></td>
+                          <td>{user_id}</td>
+                          <td>{goods_id}</td>
+                          <td>{titles}</td>
+                          <td>{is_show_str}</td>
+                          <td>{is_black_str}</td>
+                          <td>{consult_num}</td>
+                          <td><span id="a_c_n_{goods_id}">{add_consult_num}</span> - <input placeholder='增加数量' type='text'  name='add_num_{goods_id}' id="add_num_{goods_id}">
+                          	   <button onclick="add_num({goods_id});">增加</button>
+                          </td>
+                          <td><img src="{images}" height='60px' width='80px'></td>
+                      </tr>
+                      <!-- END list -->
+                    </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="pages" class="page"> {page} </div>  
+</div>
+</body>
+</html>
+<script>
+$("#chose_all").click(function(){
+	$('input[name="chose"]').attr('checked',true);   
+});
+$("#cancel_all").click(function(){
+    $('input[name="chose"]').attr('checked',false); 
+});
+function add_num(goods_id)
+{
+	var num = $('#add_num_' + goods_id).val();
+	if(isNaN(num)) return false;
+	var old_num = $('#a_c_n_' + goods_id).html();
+	var new_num;
+	$.ajax({
+		data: {goods_id: goods_id, num: num, type: 'add_num'},
+		dataType: 'JSON',
+		type: 'POST',
+		url: 'goods.php?action=goods_consult_edit',
+		success: function(msg)
+		{
+			if(msg.result==1)
+			{
+				new_num = parseInt(old_num) + parseInt(num);
+				$('#a_c_n_' + goods_id).html(new_num);
+			}
+			else
+			{
+				alert('添加失败!');
+			}
+		}
+	});
+}
+function add_rand_num()
+{
+	var rand_num = $('#rand_num').val();
+	var reg = /^\d+-\d+$/;
+	if (!reg.exec(rand_num))
+	{
+		alert('请输入格式为数字-数字如1-10');
+		return false;
+	}
+    if( confirm('确定增加吗？'))
+    {
+        var chose_arr = new Array();
+        $('input[name="chose"]').each(function(){
+            if($(this).attr("checked")){
+            	chose_arr.push($(this).val());
+            }
+        });
+        if ( chose_arr.length > 0 )
+       	{
+        	$.ajax({
+       		    type: "POST",
+       		    dataType: 'JSON',
+       		    url: 'goods.php?action=goods_consult_edit',
+       		    data: {goods_id: chose_arr, num: rand_num, type: 'add_rand_num'},
+			    success: function(msg){
+			    	if(msg.result===-1)
+		    		{
+						alert(msg.message);
+						return false;
+		    		}
+			    	alert('操作成功!');
+			    	window.location.href=window.location.href;
+       			},
+       			error: function(){
+       				alert('操作失败,请重试!');
+       			}
+
+       		});
+       	}
+        else
+       	{
+       		alert('没有选择');
+       		return false;
+       	}
+    }
+    return false;
+}
+function multiply_add_num()
+{
+    if( confirm('确定批量增加吗？'))
+    {
+        var chose_arr = new Array();
+        var num_arr = new Array();
+        $('input[name="chose"]').each(function(){
+            if($(this).attr("checked")){
+            	chose_arr.push($(this).val());
+            	num_arr.push($('#add_num_'+$(this).val()).val());
+            }
+        });
+        if ( chose_arr.length > 0 )
+       	{
+        	
+        	$.ajax({
+       		    type: "POST",
+       		    dataType: 'JSON',
+       		    url: 'goods.php?action=goods_consult_edit',
+       		    data: {goods_id: chose_arr, num: num_arr, type: 'multiply'},
+			    success: function(msg){
+			    	if(msg.result===-1)
+		    		{
+						alert(msg.message);
+						return false;
+		    		}
+			    	alert('操作成功!');
+			    	window.location.href=window.location.href;
+       			},
+       			error: function(){
+       				alert('操作失败,请重试!');
+       			}
+
+       		});
+       	}
+        else
+       	{
+       		alert('没有选择');
+       		return false;
+       	}
+    }
+    return false;
+}
+</script>

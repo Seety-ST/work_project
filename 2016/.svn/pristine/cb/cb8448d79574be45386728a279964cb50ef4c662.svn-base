@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>简拼官网</title>
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/jane.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="jane-page">
+		<header class="header" id="header">
+			<div class="mod-bar-item">
+				<h1 class="logo">
+					<img src="images/app-mod-item/logo-img-145x115.png" />
+				</h1>
+				<div class="nav-btn-warp">
+					<div class="icon-area more-btn" id="header-more-btn">
+						<i class="icon iconfont">&#xe602;</i>
+					</div>
+					<div class="icon-area close-btn" id="header-close-btn">
+						<i class="icon iconfont">&#xe600;</i>
+					</div>
+				</div>
+			</div>
+			<nav class="nav animated" id="nav">
+				<div class="nav-list">
+					<ul>
+						<li>
+							<a href="#">
+								<span>美人相机</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">
+								<span>简   拼</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   客</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>印   象</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>图片合成器</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="content">
+			<div class="info-item">
+				<div class="text-item">
+					<h4 class="title"></h4>
+					<div class="txt">
+						<p>
+							文艺的留白拼图，贴心的便签设计，强大的文字编辑，
+							<br />
+							简拼，总能让你发现图片分享的极致乐趣。
+						</p>
+					</div>
+				</div>
+				<div class="mod-down-btn">
+					<a href="#" class="btn">
+						<i class="icon iconfont">&#xe601;</i><em>立即下载</em>
+					</a>
+				</div>
+				<div class="img-item"></div>
+			</div>
+			<div class="con-item">
+				<div class="img-warp">
+					<img src="images/jane/con-img/1.jpg" />
+					<img src="images/jane/con-img/2.jpg" />
+					<img src="images/jane/con-img/3.jpg" />
+					<img src="images/jane/con-img/4.jpg" />
+					<img src="images/jane/con-img/5.jpg" />
+				</div>
+				<div class="mod-down-btn">
+					<a href="#" class="btn">
+						<i class="icon iconfont">&#xe601;</i><em>立即下载</em>
+					</a>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<nav class="f-nav">
+				<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+			</nav>
+			<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#nav').height($(window).height() +'px');
+			$('#header-more-btn').click(function(){
+				if($('#header').hasClass('header-nav-active')){
+					$('#header').removeClass('header-nav-active');
+				}else{
+					$('#header').addClass('header-nav-active');
+				}
+			});
+			$('#header-close-btn').click(function(){
+				if($('#header').hasClass('header-nav-active')){
+					$('#header').removeClass('header-nav-active');
+				}else{
+					$('#header').addClass('header-nav-active');
+				}
+			});
+		})
+	</script>
+</body>
+</html>

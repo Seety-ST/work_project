@@ -1,0 +1,39 @@
+<ul class="list clearfix">
+           {{#each list}}
+			<li>
+			    <a href="{{link_url}}">
+				<div class="txt-item clearfix">
+					<div class="box-1 fldi clearfix">
+						<div class="ui-avatar-icon ui-avatar-icon-32 fldi">
+							<i style="background-image:url({{avatar}})"></i>
+						</div>
+						<div class="txt fldi">
+							<p class="txt-1 f14 color-333">
+								{{seller_name}}
+							</p>
+							<p class="txt-2">
+								<span class="skill-txt color-fff">ÉÃ³¤</span>
+								<span class="type-txt color-aaa">{{goods_at}}</span>
+							</p>
+						</div>
+					</div>
+					{{#if consults}}
+					<div class="box-2 frdi">
+						<div class="txt-1 color-666">
+							<span class="f24 color-24c">{{consults}}</span>ÈË×ÉÑ¯
+						</div>
+					</div>
+					{{/if}}
+				</div>
+				</a>
+				<div class="img-item">
+				    {{#each goods_info}}
+					<div class="item">
+						<a href="{{link_url}}"><i class="img" style="background-image:url({{images}})"></i></a>
+						<div class="txt color-fff">£¤{{prices}}</div>
+					</div>
+					{{/each}}
+				</div>
+			</li>
+			{{/each}}
+		</ul>

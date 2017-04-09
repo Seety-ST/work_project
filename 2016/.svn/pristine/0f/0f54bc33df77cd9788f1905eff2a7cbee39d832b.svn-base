@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <link href="css/zt.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.carouFredSel-5.5.0.js"></script>
+    <title>新世相</title>
+</head>
+<body class="index-bg">
+    <div class="content">
+        <div class="w1000 re">
+            <div class="nav-content clearfix">
+                <h1 class="logo"><a href="javascript:;"></a></h1>
+                <h1 class="hc-logo"><a href="javascript:;"></a></h1>
+                <div class="top-login clearfix">
+                    <div class="login frdi"><a href="javascript:;">登录</a>|<a href="javascript:;">注册</a></div>
+                </div>
+                <ul class="nav clearfix font_wryh">
+                    <li class="cur"><a href="javascript:;">首页</a></li>
+                    <li><a href="javascript:;">大赛规则</a></li>
+                    <li><a href="javascript:;">我要参赛</a></li>
+                    <li><a href="javascript:;">作品浏览</a></li>
+                    <li><a href="javascript:;">我的作品</a></li>
+                    <li><a href="javascript:;">获奖公布</a></li>
+                    <li><a href="javascript:;">世博介绍</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="index-page">
+            <div class="p1th clearfix">
+                <div class="pathA w1000">
+                    <div class="code-item">
+                        <img src="images/code-img-92x92.png" />
+                    </div>
+                </div>
+                <div class="pathB">
+                    <div class="w1000 re">
+                        <div class="smb-btn">
+                            <a href="javascript:;"></a>
+                        </div>
+                        <div class="more-nav">
+                            <ul class="clearfix">
+                                <li class="join-0">
+                                    <a href="javascript:;"></a>
+                                </li>
+                                <li class="join-1">
+                                    <a href="javascript:;"></a>
+                                </li>
+                                <li class="join-2">
+                                    <a href="javascript:;"></a>
+                                </li>
+                                <li class="join-3">
+                                    <a href="javascript:;"></a>
+                                </li>
+                                <li class="join-4">
+                                    <a href="javascript:;"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w1000">
+                <div class="p2th clearfix">
+                    <div class="left fldi font_wryh">
+                        <div class="pathA fldi">
+                            <div class="com-item">大赛介绍</div>
+                            <p class="des f14 pb20">
+                                为展示浦东世博-前滩地区推进落实上海自贸试验区建设以来的相关成果和形象，突出世博地区“多元”“包容”“创新”“年轻”的发展理念，上海自贸区管委会世博管理局特举办2016年“新世相”摄影网络大赛。
+                                <br />
+                                大赛面向全国摄影爱好者征集作品，只要你的摄影作品视角够独特、创意够崭新，就可以投稿给我们！照片内容需与浦东世博相关，相机、手机拍摄作品都可以参赛。
+                            </p>
+                        </div>
+                        <div class="pathB fldi">
+                            <div class="com-item">大赛流程</div>
+                            <div class="list f16">
+                                <ul>
+                                    <li class="clearfix">
+                                        <span class="txt">1.选择上传主题</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="txt">2.上传参赛作品</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="txt">3.接受网友投票</span>
+                                    </li>
+                                    <li class="clearfix">
+                                        <span class="txt">4.赢取大奖</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right frdi">
+                        <div class="com-item font_wryh">奖品设置</div>
+                        <div class="path2-list">
+                            <div class="scrollBox list1">
+                                <ul class="img_list clearfix" id="foo2">
+                                    <li><img src="images/jp-img/xj/1.jpg"></li>
+                                    <li><img src="images/jp-img/xj/1.jpg"></li>
+                                </ul>
+                                <div class="page-wrap clearfix">
+                                    <a href="javascript:;" class="pre fl" id="prev2"></a>
+                                    <div class="page-box fl" id="pager2">
+                                        <a href="javascript:;"></a>
+                                        <a href="javascript:;"></a>
+                                    </div>
+                                    <a href="javascript:;" class="next fl" id="next2"></a>
+                                </div>
+                            </div>
+                            <div class="scrollBox list2">
+                                <ul class="img_list clearfix" id="foo3">
+                                    <li><img src="images/jp-img/sj/1.jpg"></li>
+                                    <li><img src="images/jp-img/sj/1.jpg"></li>
+                                </ul>
+                                <div class="page-wrap clearfix">
+                                    <a href="javascript:;" class="pre fl" id="prev3"></a>
+                                    <div class="page-box fl" id="pager3">
+                                        <a href="javascript:;"></a>
+                                        <a href="javascript:;"></a>
+                                    </div>
+                                    <a href="javascript:;" class="next fl" id="next3"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p3th">
+                <div class="com-item">
+                    <div class="code-item">
+                        <img src="images/code-img-165x165.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="p4th w1000 font_wryh">
+                <div class="com-item">
+                    “新世相”网络摄影大赛作品征集
+                    <p class="tips">
+                        仅限相机类器材所拍摄的单图作品参赛
+                    </p>
+                </div>
+                <div class="more-wrap clearfix">
+                    <div class="img-item">
+                        <a href="javascript:;">
+                            <img src="images/ll-img-15.jpg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="btn-item">
+                    <a href="javascript:;" class="btn" onclick="sign_locat(1);"></a>
+                </div>
+            </div>
+            <div class="p5th font_wryh">
+                <div class="w1000">
+                    <div class="com-item">美图欣赏
+                        <p class="tips"><a href="javascript:;" class="more f14 mt10">查看更多作品&gt;&gt;</a></p>
+                    </div>
+                    <div class="img-list">
+                        <div class="item item-1">
+                            <div class="img-ilist clearfix">
+                                <ul>
+                                    <li>
+                                        <div class="li-warp">
+                                            <img src="images/indexshow-img/1/320x320-1.jpg" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="li-warp">
+                                            <img src="images/indexshow-img/1/320x320-2.jpg" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="li-warp">
+                                            <img src="images/indexshow-img/1/320x160-1.jpg" />
+                                            <img src="images/indexshow-img/1/320x160-2.jpg" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="javascript:;" class="mod-link"></a>
+                        </div>
+                        <div class="item item-2">
+                            <div class="img-ilist clearfix">
+                                <ul>
+                                    <li>
+                                        <div class="li-warp">
+                                            <img src="images/indexshow-img/2/320x320-1.jpg" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="li-warp">
+                                            <img src="images/indexshow-img/2/320x160-1.jpg" />
+                                        </div>
+                                        <div class="li-warp li-160">
+                                            <img src="images/indexshow-img/2/160x160-1.jpg" />
+                                            <img src="images/indexshow-img/2/160x160-2.jpg" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="li-warp">
+                                            <img src="images/indexshow-img/2/320x320-2.jpg" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="javascript:;" class="mod-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script type="text/javascript">
+        //  Scrolled by user interaction
+        $('#foo2').carouFredSel({
+            prev: '#prev2',
+            next: '#next2',
+            pagination: "#pager2",
+            auto: true
+        });
+        //  Scrolled by user interaction
+        $('#foo3').carouFredSel({
+            prev: '#prev3',
+            next: '#next3',
+            pagination: "#pager3",
+            auto: true
+        });
+    </script>
+</body>
+</html>

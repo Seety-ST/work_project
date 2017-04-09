@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/mrxx.css" type="text/css" rel="stylesheet" />
+	<title>美人信息</title>
+</head>
+
+<body class="article-bg">
+	<div class="article-page font_wryh">
+		<div class="header animated">
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-icon-145x111.png" />
+				</a>
+			</h1>
+			<div class="mod-nav-header"  id="mod-nav-bar">
+				<div class="nav-btn-warp">
+					<div class="more-btn" id="header-more-btn">
+						<i class="icon iconfont">&#xe602;</i><span>更多产品</span>
+					</div>
+				</div>
+				<ul class="nav clearfix" id="nav">
+					<li class="nav-li cur">
+						<a href="#">首页</a>
+					</li>
+					<li class="nav-li">
+						<a href="#"> 美人相机</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">简 拼</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">简 客</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">图片合成器</a>
+					</li>
+					<li class="nav-li">
+						<a href="#">亲子相机</a>			
+					</li>
+					<li class="block"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<!-- 翻页 -->
+			<div class="page-btn-warp">
+				<a href="#" class="btn p-l-btn"></a>
+				<a href="#" class="btn p-r-btn"></a>
+			</div>
+			<!-- 翻页 end-->
+			<div class="con-warp clearfix">
+				<div class="join-page clearfix">
+					<div class="title-item">
+						<h2 class="title">加入我们</h2>
+						<h3 class="title-en">
+							<span>
+								JOIN
+								<br />
+								US
+							</span>
+						</h3>
+					</div>
+					<div class="detail-con-warp">
+						<div class="listItem">
+							<h4 class="title">
+								<span>初级IOS开发工程师</span>
+								<em class="sub-clasee">—— 擅长拍照，文案精细，整理资源，处变不惊</em>
+							</h4>
+							<ul class="clearfix">
+								<li>工作地点：广州</li>
+								<li>部门：软件技术部</li>
+								<li>招聘人数：2位</li>
+								<li>薪酬：4K-6K /月</li>
+							</ul>
+						</div>
+						<div class="detial-item scroll-item">
+							<table cellspacing="0" cellpadding="0" class="job-claim-item">
+								<tr>
+									<td class="title" valign="top">岗位职责：</td>
+									<td class="claim-item">
+										<p>
+											1. 在项目经理带领下开发SNS、O2O、工具类app；
+											<br />
+											2. 负责基于ios平台应用软件的界面和功能模块开发；
+											<br />
+											3. 参与产品相关单元测试；
+											<br />
+											4. 按照项目计划，按时提交高质量的代码，完成开发任务；
+											<br />
+											5. 规范的技术文档的编写、维护；
+											<br />
+											6. 积极沟通与解决开发当中遇到的问题，积极参与产品、功能与技术架构的改进；
+											<br />
+											7. 积极参与工作相关技术的研究。
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="title" valign="top">任职要求：</td>
+									<td class="claim-item">
+										<p>
+											1. 计算机相关专业，大专以上学历，欢迎应届生投；
+											<br />
+											2. 熟悉iOS开发架构和API调用，熟练掌握UITableView、UIWebView等常用性控件，并掌握AFNetworking、SDWebImage等第三方框架；
+											<br />
+											3. 熟悉HTTP、TCP/IP通讯协议，熟悉面向对象编程，图形界面开发；
+											<br />
+											4. 熟练掌握Objective-C语言，熟悉iOS平台下的高性能编程及性能调优；
+											<br />
+											5. 强烈的工作热情，追求代码稳定性、渴望自己开发的app受欢迎；
+											<br />
+											6. 具备良好的职业素养和团队协作精神，以及较强的学习和交流能力；
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="email-item">
+							欢迎加入我们，简历请投递到：
+							<span class="mail"> <a href="mailto:hr@adnonstop.com"><i class="icon"><img src="images/email-icon-23x16.png" /></i><em>hr@adnonstop.com</em></a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer animated">
+			<div class="footer-nav">
+				<a href="#">关于我们</a>
+				|
+				<a href="#">联系我们</a>
+				|
+				<a href="#">加入我们</a>
+			</div>
+			<p class="cpoy-txt">
+				<span class="copy-item">&copy;2016 Beauty,Inc.  广州美人信息技术有限公司</span>
+				<span class="icp-item">粤ICP备16016424号-2</span>
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/SuperSlide.2.1.js"></script>
+	<script src="js/modNav.js" type="text/javascript"></script>
+	<script>
+		$("#mod-nav-bar").on("click",function(){
+			$("#mod-nav-bar").find("#header-more-btn").delay(100).animate({
+				opacity: '0',
+				marginRight: '2.5%'
+			}).hide();
+			$("#mod-nav-bar").find("#nav").delay(100).animate({
+				opacity: '1',
+				marginRight: '0'										
+			}).show();
+		});
+		$("#mod-nav-bar").on("mouseleave",function(){
+			$("#mod-nav-bar").find("#header-more-btn").delay(100).animate({
+				opacity: '1',
+				marginRight: '0'
+			}).show();
+			$("#mod-nav-bar").find("#nav").delay(100).animate({
+				opacity: '0',
+				marginRight: '2.5%'							
+			}).hide();
+		});
+	</script>
+</body>
+</html>

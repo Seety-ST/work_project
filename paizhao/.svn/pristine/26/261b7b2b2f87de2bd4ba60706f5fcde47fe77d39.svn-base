@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>首页</title>
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/index/index-page.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- 头部内容 -->
+    {%$pc_global_top_bar%}
+    <!-- 页面内容 -->
+        <div>我是页面内容</div>
+    <!-- 底部内容 -->
+    {%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->

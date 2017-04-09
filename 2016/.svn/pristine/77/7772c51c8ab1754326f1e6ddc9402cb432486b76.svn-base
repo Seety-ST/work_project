@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>图片合成器</title>
+	<link href="css/wap-ui.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="login-page">
+		<section class="mod-from-warp">
+			<div class="input-warp country-input-warp">
+				<label class="input-label country-label">国家/地区</label>
+				<input type="text" class="iput-item" value="中国" />
+			</div>
+			<div class="input-warp phone-input-warp">
+				<label class="input-label phone-icon"></label>
+				<input type="text" class="area-code" value="+86" />
+				<input type="text" class="iput-item" placeholder="手机号" />
+			</div>
+			<div class="input-warp password-input-warp">
+				<label class="input-label password-icon"></label>
+				<input type="password" class="iput-item" placeholder="密码" />
+				<span class="area-icon">
+					<!-- 可视为see-icon 不可视为no-see-icon -->
+					<i class="icon no-see-icon"></i>
+				</span>
+			</div>
+			<div class="btn-warp">
+				<!-- un-btn-item 为无法点击 -->
+				<span class="btn-item">
+					<i class="load-icon" style="display: none"></i>
+					<em style="display: ">登录</em>
+				</span>
+			</div>
+			<div class="more-op-item">
+				<span class="area-link forget-link"><em>忘记密码</em></span>
+				<span class="area-link creat-link"><em>创建账号</em></span>
+			</div>
+		</section>
+		<section class="mod-share-warp">
+			<h4 class="listItem">
+				<b class="line"></b>
+				<span>快速登录</span>
+				<b class="line"></b>
+			</h4>
+			<ul class="list">
+				<li>
+					<span class="area-icon">
+						<i class="icon weixin-icon"></i>
+					</span>
+				</li>
+				<li>
+					<span class="area-icon">
+						<i class="icon weibo-icon"></i>
+					</span>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade"></div>
+	<!-- 提示层 -->
+	<div class="pop-tipsItem">
+		<div class="text-item">
+			<p>您输入的密码不正确，请重新输入。</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 提示层 end-->
+	<!-- 弹出层 end -->
+</body>
+</html>

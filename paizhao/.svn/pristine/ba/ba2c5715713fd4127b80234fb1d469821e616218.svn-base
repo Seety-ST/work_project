@@ -1,0 +1,40 @@
+<?php
+/**
+* @Desc:     摄影师详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午11:12:31
+* @Version:  
+*/
+include_once('common.inc.php');
+$user_id = 121047;
+$photographers_class = POCO::singleton('pai_paizhao_photographers_class');
+$photographers = $photographers_class->get_photographers_info($user_id);
+var_dump($photographers);
+$sort = $_INPUT['sort'];
+$order = $_INPUT['order'];
+
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+$where = 'user_id='.(int)$user_id;
+$type_id = $_INPUT['type_id'];
+if ($type_id)
+{
+    $type_id = (int)$type_id;
+    $where .= " AND type_id={$type_id}";
+}
+$sort = $_INPUT['sort'];
+$order = $_INPUT['order'];
+if ($sort == 'consult' || $sort == 'prices' || $sort == 'new')
+{
+    $order = $order == 'DESC' ? $order : 'ASC';
+    $sort_filed = $sort == 'consult' ? "(consult_num+add_consult_num)" : ($sort=='new'?'update_time':'prices');
+    $sort_filed .= " {$order}";
+}
+else
+{
+    $sort_filed = '((consult_num*0.5)+(pv*0.05)+(uv*0.45)) DESC';
+}
+$sort = '1=>人气，2=>最新，3=>价格，0=>综合'
+$goods_info = $goods_class->get_goods_list(false, array('type_id'=>$type_id, 'user_id'=>$user_id, 'sort'=>$sort,'order'=>$order), '0,40');
+var_dump($goods_info);
+$tpl = new Smarty(PAIZHAO_TEMPLATES_ROOT . 'photographers_detail.tpl.html');

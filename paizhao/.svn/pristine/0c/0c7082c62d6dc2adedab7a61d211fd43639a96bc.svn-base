@@ -1,0 +1,7 @@
+.global-nav-mod-1{
+            padding:18px 0px;
+	a{
+		text-decoration: none;
+		color:#24c7c7;
+	}
+}

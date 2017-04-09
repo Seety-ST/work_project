@@ -1,0 +1,91 @@
+.ui-border-t {
+    border-top: 1px solid #e0e0e0;/*no*/
+}
+.ui-border-b {
+    border-bottom: 1px solid #e0e0e0;/*no*/
+}
+.ui-border-tb {
+    border-top: #e0e0e0 1px solid;/*no*/
+    border-bottom: #e0e0e0 1px solid;/*no*/
+    background-image: none
+}
+.ui-border-l {
+    border-left: 1px solid #e0e0e0;/*no*/
+}
+.ui-border-r {
+    border-right: 1px solid #e0e0e0;/*no*/
+}
+.ui-border {
+    border: 1px solid #e0e0e0;/*no*/
+}
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+    .ui-border {
+        position: relative;
+        border: 0
+    }
+    .ui-border-t, .ui-border-b, .ui-border-l, .ui-border-r, .ui-border-tb {
+        border: 0
+    }
+    .ui-border:before {
+        content: "";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #e0e0e0;/*no*/
+        -webkit-transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        padding: 1px;/*no*/
+        -webkit-box-sizing: border-box
+    }
+    .ui-border-t {
+        background-position: left top;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+
+    
+
+
+    //  处理头部单独颜色
+    .global-header.ui-border-b{
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #ccc), to(#ccc))
+    }
+
+    .ui-border-b {
+        background-position: left bottom;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+    .ui-border-t, .ui-border-b {
+        background-repeat: repeat-x;
+        -webkit-background-size: 100% 1px;/*no*/
+    }
+    .ui-border-tb {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0)) left top repeat-x, -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0)) left bottom repeat-x
+    }
+    .ui-border-tb {
+        -webkit-background-size: 100% 1px;/*no*/
+    }
+    .ui-border-l {
+        background-position: left top;
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+    .ui-border-r {
+        background-position: right top;
+        background-image: -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+    .ui-border-l, .ui-border-r {
+        background-repeat: repeat-y;
+        -webkit-background-size: 1px 100%;/*no*/
+    }
+}
+.ui-list-active>li:active, .ui-list-link>li:active, .ui-list-active>li:active .ui-border-t, .ui-list-link>li:active .ui-border-t, .ui-list-active>li:active+li.ui-border-t, .ui-list-link>li:active+li.ui-border-t, .ui-list-active>li:active+.ui-border-t, .ui-list-link>li:active+.ui-border-t, li.ui-list-item-link:active, li.ui-list-item-link:active .ui-border-t, li.ui-list-item-link:active+li.ui-border-t, li.ui-list-item-link:active+.ui-border-t {
+    background-image: none;
+    border-top-color: #e5e6e7
+}
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+    .ui-list-active>li:active, .ui-list-link>li:active, .ui-list-active>li:active .ui-border-t, .ui-list-link>li:active .ui-border-t, .ui-list-active>li:active+li.ui-border-t, .ui-list-link>li:active+li.ui-border-t, .ui-list-active>li:active+.ui-border-t, .ui-list-link>li:active+.ui-border-t, li.ui-list-item-link:active, li.ui-list-item-link:active .ui-border-t, li.ui-list-item-link:active+li.ui-border-t, li.ui-list-item-link:active+.ui-border-t {
+        background-image: none
+    }
+}
+

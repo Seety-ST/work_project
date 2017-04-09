@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 用户信息编辑
+ */
+
+.profile-edit-page .item-wrap .img-item {
+  background-color: #fff;
+  margin-bottom: 0.1rem;
+  padding: 0.38rem 0 0.3rem;
+}
+
+.profile-edit-page .item-wrap .img-item .ui-avatar-icon {
+  position: relative;
+  margin: 0 auto;
+}
+
+.profile-edit-page .item-wrap .img-item .ui-avatar-icon i {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profile-edit-page .item-wrap .img-item .webuploader-pick {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.profile-edit-page .item-wrap .img-item .webuploader-element-invisible {
+  position: absolute !important;
+  clip: rect(0.01rem 0.01rem 0.01rem 0.01rem);
+}
+
+.profile-edit-page .item-wrap .img-item .txt {
+  padding-top: 0.15rem;
+}
+
+.profile-edit-page .item-wrap .img-item .cammer-icon {
+  width: 0.22rem;
+  height: 0.22rem;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyM2JmOWU5Ny0wZjFkLTc2NDEtYjAyZi1hZjI4M2U5YzJmNGIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkNFQUIxRThEQTIxMTFFNkEwRUREQTQ4OEQ2OTdBMTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkNFQUIxRTdEQTIxMTFFNkEwRUREQTQ4OEQ2OTdBMTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NDc5ZDYxOTgtNzllMC03YTQ5LWIzMzEtZDJmZTQzOWY4YjkwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIzYmY5ZTk3LTBmMWQtNzY0MS1iMDJmLWFmMjgzZTljMmY0YiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsJQdJIAAASmSURBVHjazFlrbFRVEJ7dbrW02wp9yaM2UZ6WVSv+IBHSqvERgxoChkeIxPLDUgg/1QItFgwEAuEHYGqNxiZGwZRq6yNAIFEov0igoamNtVRCG6APispKn7TrN55Zutbee/fes9vtJF/O7r1zZ749d86cObOusrIyciofvFiThGEpkA/kAPOAhwGvqPwNdAK/AU3AOaBu55nld536dNklDJIuDK8ABcDrwBSbPvuA74HPgVMgH7DzsNsm2RUY6oETwCoHZEmeWSU26mFzuZ2HPWESnY2hHHiJIitPAd/C/mmMRZjtVu0ZhrHVGC5FgWyosO1L8LXG8QxLrH4IbKeJkRTgKPz6MJYaxbbbhOzhCSQbKuyzXDiEHRJ7gM0UOykUDtaEJY6KKfZSDC5rTWNYskGFLbPJTxA99h5REvYNl8kaHuohuvk1Uftn+DISrvUKcLoQmj3GeiiX4A9PHkgnWohHvD5zsizxaUTZm4hmrbM1HcLp/yEhm4K91DX9TaK4JHsveuY66x83JuUJt9GtWVZkvSRy45Sd9jxRah5mNkN99z6OoEqxH53+y0TDvUSD3US3UV70/GQVJg1ALqe6YAy/bErWFU+0YD/I5kdmOSWHuMp8A6TPEv36LlFgyOiJJ6V+ORl8NwWmDrI2RI7seMK2s9620vpXwRU4n8tBeAtIMFR95gfcnRXdJNZ/nejia6YaQLpH6tkEU2MJM8JzOvQnXu/PRL2ShRJnq7j3PGT9rLUP5rjUI8W3fhV64wuito/VYgqVq4j97I3IDm9FotLNZ8I+7dfZhlTZ/oma0Uewq6YsUtfvoMhrxz509SDRPRw+sot0PfmY8FwtE3ebQepTtXn4QC4ucfReOtL6tCVEjYVKJ+0F7IjzdbzN5feQoUW447jKoXNK/0s2KHxtTonS6ajSneEMt2x/zsWPnP7gdMzcPGMdnlXWYV3NDO7Wjt+RAayXhDDWLXRGBrXdMWG/loUpjyJDtiOl/WGS7nCvv03p6omfCXdrmchEsg8ME107ZKzD9wIjSldPuplwi5YJXvlTFxN11hC17kb6+mv0Hn/ma3yPdVhXT1o4rTVKQ8RpLwaF0QGi5vdVxuisVfmYhXc8LmimPUs0f5/S1ZNGj7SPtmqZifMS5RxRVVfXj0R9v48WNZnLpHDSJstyjgnXSWFhvNT51VrWAyCU+pyCEwkNJePip84tjblaU9XbddE/clr7+I65BvNwpakqr/KBjuiRZdvXDltpVYaWSKfkGDK+8FGmAdVWF17EYE/kiLItttmwHp+7rI5IJ+8f8/mshHPdTnysNjaOGr+lLFY9il3B1tX9rRkXvsFwmiafnAG3aqOquUh7q46s+IXT+GW+dFjemUSEC8Hpium5BArHMOydBGT3gsvRcA9S24CPYki2QjiEd/KTFbkF2B0DsuyzyKihbdiBlwdKkO6ayG6T0JncATbB75daZ2sY+IpbKZxeopm62IcV2WDnx47hlcAO6XVFQi6T+h+l2s4RyY6wYf6FrwJVUkHZbkrJs2zjaTtknczwWPFKqytPGjLc4xj71y0XCfzX7S8ACmY6L9cdyT8CDACxBFY8le4eQAAAAABJRU5ErkJggg==) no-repeat center;
+  background-size: 100%;
+}
+
+.profile-edit-page .item-wrap .txt-item .item {
+  padding: 0.15rem;
+  display: -webkit-box;
+  background-color: #fff;
+}
+
+.profile-edit-page .item-wrap .txt-item .item .title {
+  margin-right: 0.15rem;
+}
+
+.profile-edit-page .item-wrap .txt-item .item .info-con .ui-title-info {
+  width: 100%;
+}
+
+.profile-edit-page .item-wrap .btn-item {
+  padding: 0.2rem 0.3rem;
+}

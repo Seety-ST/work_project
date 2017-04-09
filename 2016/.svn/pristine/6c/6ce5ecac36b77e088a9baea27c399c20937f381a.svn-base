@@ -1,0 +1,474 @@
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #333; }
+a:hover { text-decoration: underline; }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.clear { clear: both; font-size: 0; line-height: 0; height: 0; overflow: hidden; }
+.coz { clear: both; overflow: hidden; zoom: 1 }
+/*** font ***/
+.word_break { white-space: normal; word-wrap: break-word; word-break: break-all; }
+.f14 { font-size: 14px; }
+.fb { font-weight: bold; }
+.db { display: block }
+.dn { display: none }
+.di { display: inline }
+.tc { text-align: center; }
+.vam { vertical-align: middle; }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun'; 
+}
+html { 
+	-ms-touch-action: none; 
+	font-size: 62.5%; 
+}
+input,select,button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0; 
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input{
+	-webkit-appearance:none;
+}
+
+body { 
+	background: #f0f0f0;
+	font-size: 1.4rem;
+	min-width: 320px;
+	max-width: 640px;
+	margin: 0 auto;
+	position: relative;
+}
+em{
+	font-style: normal;
+}
+
+
+/* 分享帖子 */
+.header{
+	background-color: #fff;
+	height: 48px;
+	margin-bottom: 10px;
+}
+.header h1.logo{
+	float: left;
+	padding: 14px 15px;
+}
+.header h1.logo i.logo-icon{
+	display: block;
+	background: url(../images/logo-img-126x38.png) center top no-repeat;
+	background-size: contain;
+	width: 63px;
+	height: 19px;
+}
+.header .r-btn-item{
+	float: right;
+}
+.header .r-btn-item .btn-area{
+	float: right;
+	padding: 0 15px;
+}
+.header .r-btn-item .btn-area:active{
+	opacity: 0.8;
+}
+.header .r-btn-item .btn-area em.txt{
+	height: 48px;
+	line-height: 48px;
+	display: inline-block;
+	color: #96a8d0;
+	font-size: 1.6rem;
+}
+.header .r-btn-item .btn-area i.icon{
+	display: inline-block;
+	vertical-align: middle;
+}
+.header .r-btn-item .btn-area i.more-icon{
+	background: url(../images/icon-more-14x24.png);
+	background-size: contain;
+	width: 7px;
+	height: 12px;
+}
+
+/* 公共 */
+body.bgfff{
+	background-color: #fff;
+}
+/* 性别icon */
+.male-icon{
+	background-image: url(../images/icon-boy-24x24.png);
+}
+.female-icon{
+	background-image: url(../images/icon-girl-24x24.png);
+}
+.mod-sex-icon{
+	width: 12px;
+	height: 12px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: block;
+}
+/* 等级 */
+.mod-level-icon{
+	font-size: 1.2rem;
+	-webkit-transform:scale(0.75);
+	color: #fff;
+	border-radius: 5px;
+	display: block;
+	font-style: normal;
+	padding: 1px 8px;
+}
+.mod-level-icon.LV1 {
+	background-color: #eadc65
+}
+/* 公共列表 */
+.mod-s-item-list .item{
+	margin-bottom: 10px;
+	padding-bottom: 9px;
+	background-color: #fff;
+}
+.mod-s-item-list .user-item{
+	padding: 15px 15px 0;
+	display: -webkit-flex;
+}
+.mod-s-item-list .user-item .img-item{
+	width: 35px; 
+	height: 35px;
+	border-radius: 35px;
+	background: #ccc;
+	display: table;
+	margin-right: 8px;
+}
+.mod-s-item-list .user-item .img-item .img-area{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 35px;
+	height: 35px;
+}
+.mod-s-item-list .user-item .img-item img{
+	border-radius: 35px;
+	max-width: 35px;
+	max-height: 35px;
+	display: block;
+}
+.mod-s-item-list .user-item .text-item{
+	line-height: 1.3;
+}
+.mod-s-item-list .user-item .text-item .name{ padding-right: 5px;}
+.mod-s-item-list .user-item .text-item .mod-sex-icon{
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.mod-s-item-list .user-item .text-item .mod-level-icon{
+	display: inline-block;
+	vertical-align: top
+}
+.mod-s-item-list .user-item .text-item .time-item{
+	color: #bbbbbd;
+	font-size: 1.2rem;
+}
+.mod-s-item-list .user-item .text-item .time-item .icon-time{
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../images/icon-time-18x18.png) no-repeat;
+	background-size: contain;
+	width: 9px;
+	height: 9px;
+}
+.mod-s-item-list .con-item .text-item{
+	padding: 9px 15px 10px;
+	line-height: 1.75;
+}
+.mod-s-item-list .con-item .img-list picture{
+	display: block;
+	padding-bottom: 6px;
+}
+.mod-s-item-list .con-item .img-list picture:last-child{
+	padding-bottom: 0;
+}
+.mod-s-item-list .con-item .img-list img{
+	display: inline-block;
+	width: 100%;
+}
+.mod-s-item-list .btn-item{
+	padding-top: 7px;
+}
+.mod-s-item-list .btn-item .date-btn{
+	display: inline-block;
+	vertical-align: middle;
+	color: #999;
+	padding: 7px 15px;
+}
+.mod-s-item-list .btn-item .date-btn:active{
+	opacity: 0.8;
+}
+.mod-s-item-list .btn-item .btn-love .icon{
+	background-image: url(../images/icon-like-18x19.png);
+}
+.mod-s-item-list .btn-item .btn-comment .icon{
+	background-image: url(../images/icon-review-18x18.png);
+}
+.mod-s-item-list .btn-item .date-btn .icon{
+	display: inline-block;
+	width: 11.4px;
+	height: 11.4px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* 下载浮动层 */
+.mod-download-item{
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+	width: 100%;
+	min-width: 320px;
+	max-width: 640px;
+	height: 48px;
+	background-color: #fff;
+	padding: 8px 0;
+}
+.mod-download-item .info-item{
+	display: -webkit-flex;
+	font-size: 1.2rem;
+	color: #666;
+	padding-left: 15px;
+}
+.mod-download-item .info-item .img-item{
+	width: 48px;
+	height: 48px;
+	padding-right: 10px;
+}
+.mod-download-item .info-item .img-item img{
+	max-width: 48px;
+	border-radius: 10px;
+}
+.mod-download-item .info-item .text-item{
+	padding-top: 8px;
+}
+.mod-download-item .info-item .text-item .icon-logo{
+	display: inline-block;
+	background-image: url(../images/logo-img-102x31.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 61px;
+	height: 15.5px;
+}
+.mod-download-item .info-item .text-item .apply-item .icon-iphone{
+	background-image: url(../images/icon-iphone-17x22.png);
+}
+.mod-download-item .info-item .text-item .apply-item .icon-android{
+	background-image: url(../images/icon-android-17x22.png);
+}
+.mod-download-item .info-item .text-item .apply-item i.icon{
+	display: inline-block;
+	width: 8.5px;
+	height: 11px;
+	background-size: contain;
+}
+.mod-download-item .download-btn{
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	-webkit-transform: translate(0%,-50%);
+	background-color: #96a8d0;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun'; 
+	padding: 0 15px;
+	border-radius: 5px;
+	font-size: 1.4rem
+}
+.mod-download-item .download-btn:active{
+	opacity: 0.8
+}
+
+/* 分享帖子 */
+.list-page,
+.article-page{
+	font-size: 1.4rem;
+	padding-bottom: 107px;
+}
+
+/* 分享单个帖子 */
+.article-page .mod-s-item-list .con-item .text-item{
+	padding: 4px 0;
+	line-height: 24px;
+}
+.article-page .mod-s-item-list .con-item .text-item img{
+	max-width: 100%;
+}
+.article-page .mod-s-item-list .con-item .text-item p{
+	padding: 0 15px 6px;
+}
+.article-page .mod-s-item-list .con-item .text-item p.img{
+	padding: 0 0 6px;
+	text-align: center;
+}
+.article-page .more-warp{
+	background-color: #fff;
+	margin-bottom: 10px;
+	padding: 15px;
+	font-size: 1.4rem;
+	position: relative;
+}
+.article-page .more-warp:active{
+	opacity: 0.8;
+}
+.article-page .more-warp h4.title{
+	font-weight: normal;
+}
+.article-page .more-warp i.icon{
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	-webkit-transform: translate(0%,-50%);
+}
+.article-page .more-warp .more-icon{
+	background-image: url(../images/icon-more-14x22.png);
+	background-size: contain;
+	width: 7px;
+	height: 11px;
+}
+
+/* 用户协议 */
+.agreement-page{
+	padding: 15px;
+	font-size: 1.4rem;
+	line-height: 22px;
+	color: #4c4c4c;
+}
+.agreement-page .item p{
+	padding-bottom: 20px;
+}
+.agreement-page .item p.A-title{
+	font-size: 1.6rem;
+	color: #000;
+	font-weight: bold;
+}
+.agreement-page .item dl li{
+	padding-bottom: 20px;
+}
+.agreement-page .item dl dd{
+	padding-left: 20px;
+}
+
+/* cc币说明 */
+.directions-page{
+	padding: 25px 15px;
+	font-size: 1.6rem;
+	line-height: 1.75;
+}
+.directions-page .item{
+	padding-bottom: 20px;
+}
+.directions-page .info-item{
+	text-indent: 2em;
+	padding-bottom: 25px;
+}
+.directions-page .item-table{
+	border: 1px solid #9a9a9a;
+	border-collapse: collapse;
+	box-sizing: border-box;
+	width: 100%;
+	color: #4c4c4c;
+	margin-top: 7px;
+}
+.directions-page .item-table th,
+.directions-page .item-table td{
+	font-weight: normal;
+	text-align: center;
+	border: 1px solid #9a9a9a;
+	border-collapse: collapse;
+	box-sizing: border-box;
+}
+.directions-page .table-row-2 th,
+.directions-page .table-row-2 td{
+	width: 50%;
+}
+.directions-page .item-num-table th,
+.directions-page .item-num-table td{
+	width: 40%;
+}
+.directions-page .item-num-table td:nth-of-type(1),
+.directions-page .item-num-table th:nth-of-type(1){
+	width: 20%;
+	text-align: left;
+	padding-left: 1%;
+}
+.directions-page .info-list li{
+	list-style: disc;
+	margin-left: 5%;
+}
+.directions-page .info-list .card-name{
+	display: inline-block;
+	width: 30%;
+}
+
+
+
+
+/* ---分辨率--- */
+@media screen and (max-width: 375px) and (max-height: 627px) {
+    .directions-page{
+    	font-size: 1.45rem;
+    }
+}
+@media screen and (max-width: 360px) and (max-height: 640px) {
+    .directions-page{
+    	font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 320px) and (max-height: 568px) {
+    .directions-page{
+    	font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+

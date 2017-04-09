@@ -1,0 +1,76 @@
+@import "../../sass/compass";
+
+
+
+.bind-phone{
+    padding: 30px;
+    .p1th{
+        padding-top: 15px;
+        .wbox{
+
+            @include flexbox((
+                display: box,  // 盒子模型 子元素默认水平左对齐
+                box-pack: center  // 水平居中方式  start | center | end | justify
+            
+            ));
+            font-size: 14px;
+            color: #e6e6e6;
+            .icon{
+                width: 17px;
+                height: 25px;
+                display: block;
+                margin: 0 auto;
+                background-size: cover
+            }
+            .p1{
+                padding-top: 15px;
+            }
+            .lbox{
+                width: 130px;
+                text-align: center;
+                .icon-1{
+                    background-image: url(/image/auth/icon-1-34x50.png);
+                }
+                border-right:1px dashed #e6e6e6;
+                height:55px;
+            }
+            .cur{
+                color: #999;
+            }
+            .rbox{
+                width: 130px;
+                text-align: center;
+                .icon-2{
+                    background-image: url(/image/auth/icon-2-34x50.png);
+                }
+                height:55px;
+            }
+        }
+    }
+
+    .p2th{
+        padding-top:40px;
+        .numer{
+            position: absolute;
+            right:0px;
+            top:22px;
+        }
+        .item{
+            position: relative;
+            padding: 20px 0 20px 0;
+            .input-text{
+                width: 100%;
+                height:24px;
+                font-size: 16px;
+                color: #666666;
+            }
+        }
+    }
+
+    .btn{
+        padding-top: 20px;
+    }
+    .btn button:disabled {
+        background-color: #ccc !important;
+    }
+}

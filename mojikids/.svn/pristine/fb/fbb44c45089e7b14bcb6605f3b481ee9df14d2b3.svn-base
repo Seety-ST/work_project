@@ -1,0 +1,47 @@
+@import "../../sass/compass";
+
+
+// list 样式
+.wap-list-mod-1{
+	.list{
+		li{
+			margin:20px 15px 0px 15px;
+			padding:20px 15px 20px 30px;
+			background-color: #fff;
+			border-radius: 8px;
+			box-shadow: 0 0 20px rgba(0,0,0,.2);
+			.avator-item{
+				position: relative;
+				.mark-icon{
+					width: 27px;
+					height: 27px;
+					position:absolute;
+					top:-10px;
+					left: -20px;
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: center;
+				}
+				.girl-mark-icon{
+					background-image: url(../../image/ui/girl-mark-54x54.png);
+				}
+				.boy-mark-icon{
+					background-image: url(../../image/ui/boy-mark-54x54.png);
+				}
+			}
+			.txt-item{
+				width:190px;
+				.box-1{
+					font-size: 17px;
+					margin-top: 4px;
+				}
+				.box-2{
+					margin-top: 8px;
+				}
+			}
+			.btn-item{
+				margin-top: 20px;
+			}
+		}
+	}
+}

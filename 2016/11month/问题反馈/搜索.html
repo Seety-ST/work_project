@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>问题反馈</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="search-page">
+		<div class="mod-search-item">
+			<input type="text" class="input-text" placeholder="搜索" />
+		</div>
+		<div class="list">
+			<ul>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="mod-btn feedback-btn">
+		<a href="#">我要反馈</a>
+	</div>
+	<!-- 弹出层 -->
+	<div class="pop-infoDetail" style="display: none">
+		<!-- 关闭按钮 -->
+		<a href="#" class="close-btn"></a>
+		<!-- 关闭按钮 end -->
+		<div class="listItem">常见问题解决方案</div>
+		<h4 class="title">为何没有弹出没有获取相机权</h4>
+		<div class="con-wrap">
+			<div class="item">
+				<dl>
+					<dt>iPhone用户：</dt>
+					<dd>
+						<p>请打开手机中本身的设置—滑到屏幕下方找到“InterPhoto”开启相机，麦克风等权限即可。</p>
+					</dd>
+					<dd>
+						<p><img src="images/show-img-690x410.jpg" /></p>
+					</dd>
+				</dl>
+			</div>
+			<div class="item">
+				<dl>
+					<dt>安卓用户：</dt>
+					<dd>
+						<p>
+							请进入手机本身的设置—应用程序—找到“InterPhoto”—权限—开启相机，麦克风，录音等权
+						</p>
+					</dd>
+					<dd class="tips">
+						<p>
+							温馨提示：由于安卓机型较多，部分手机可能不一样，如果尝试上述方法无效，请自行百度搜索“XX手机 应用程序权限”。
+						</p>
+					</dd>
+				</dl>
+			</div>
+			<div class="more-item">
+				<p>
+					<a href="#">未解决？</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- 弹出层 end -->
+</body>
+
+</html>

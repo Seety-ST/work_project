@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gbk">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+<title>商品池添加与更新</title>
+</head>
+<body>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+    #start_time,#end_time {width:200px;}
+    .J_location_sel{
+        display: inline;
+
+    }
+    .J_location_sel_2{
+        display: inline;
+
+    }
+    
+    input[type="text"]{width:150px;}
+</style>
+<style>
+    #img_wid img{
+        width:200px
+    }
+    /**添加样式，避免被重写样式**/
+    fieldset{
+        width:100%
+    }
+    .green{ display:inline-block;color:green;margin-left:10px;border:1px solid rgb(71, 187, 103);border-radius:10px;}
+    .red{display:inline-block;color:red;margin-left:10px;border:1px solid rgb(244, 15, 58);border-radius:10px;}
+    fieldset {margin-bottom:20px;}
+    
+</style>
+<script>
+    $(function () {
+            $(".ui_timepicker").datetimepicker({
+                //showOn: "button",
+                //buttonImage: "./css/images/icon_calendar.gif",
+                //buttonImageOnly: true,
+                showSecond: true,
+                timeFormat: 'hh:mm:ss',
+                stepHour: 1,
+                stepMinute: 1,
+                stepSecond: 1
+            });
+    });
+
+</script>
+<div class="mainbox">
+  <div id="tabs" style="margin-top:10px;">
+    <div class="tabbox">
+      <div class="table-list">
+        <div class="table" style="width:100%;">
+        <iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+        <form id="the_form" name="form1" method="post" action="" target='form_iframe'>
+         <fieldset class="public">
+            <legend>新建商品池方式</legend>
+                <table width="90%" align="center">
+				  <tr>
+					  <td width="26%" height="25">新建商品池方式</td>
+					  <td width="74%" height="25">
+                          <input type="radio" class="type_id_for_radio_filter" name="type_id_for_radio"  <!-- IF goods_pool_info.type_id=="1" --> checked <!-- ENDIF --> value="1" onClick="show_class(this);"/>按筛选规则&nbsp;&nbsp;
+                          <input name="type_id_for_radio" type="radio" <!-- IF goods_pool_info.type_id=="2" --> checked <!-- ENDIF --> value="2" onClick="show_class(this);"/>自定义商品
+                          <input type="hidden" name="type_id" value="{goods_pool_info.type_id}" />
+                      </td>
+                      <script>
+                          function show_class(obj)
+                          {
+                              var value = $(obj).val();
+                              if(value == 1)
+                              {
+                                  $("input[name='type_id']").val(value);
+                                  $(".filter").show();
+                                  $(".self").hide();
+                              }else if(value == 2)
+                              {
+                                  $("input[name='type_id']").val(value);
+                                  $(".self").show();
+                                  $(".filter").hide();
+                              }
+                          }
+                          //初始化
+                          $(function(){
+                             var value = $("input[name='type_id_for_radio']:checked").attr('value');
+                             if(value== 1)
+                             {
+                                 $("input[name='type_id_for_radio']").attr('disabled','disabled');
+                                 $(".filter").show();
+                                 $(".self").hide();
+                             }else if(value == 2)
+                             {
+                                 $("input[name='type_id_for_radio']").attr('disabled','disabled');
+                                 $(".self").show();
+                                 $(".filter").hide();
+                             }else
+                             {
+                                 $(".type_id_for_radio_filter").attr("checked",true);
+                                 $("input[name='type_id_for_radio']:checked").val(1);
+                                 $("input[name='type_id']").val(1);
+                                 $(".filter").show();
+                                 $(".self").hide();
+                             }
+                          });
+                      </script>
+                  </tr>
+              </table>
+          </fieldset>
+          <fieldset class="filter">
+            <legend>商品标签</legend>
+                <table width="90%" align="center">
+                  <tr>
+                      <td width="26%" height="25">商品标签</td>
+					  <td width="74%" height="25">
+                         <!-- BEGIN tags_list -->
+                            <!-- IF level=="0" -->
+                                    <!-- IF id !="1" --></br><!-- ENDIF -->&nbsp;&nbsp;<input name="tags[]" type="checkbox" <!-- IF selected -->checked<!-- ENDIF --> class="{id}" value="{id}" onClick="show_property_checkbox(this)" /><b>{name}:</b>
+                            <!-- ELSE -->        
+                                    &nbsp;&nbsp;<input type="checkbox" name="tags[]"  <!-- IF selected -->checked<!-- ENDIF -->  class="{parents_id}" value="{id}"/>{name}
+                            <!-- ENDIF -->
+                         <!-- END tags_list -->
+                      </td>
+                  </tr>
+                </table>    
+          </fieldset>
+          <fieldset class="filter">
+            <legend>服务类别</legend>
+                <table width="90%" align="center">
+                  <tr>
+                      <td width="26%" height="25">服务方式</td>
+					  <td width="74%" height="25">
+                          <!-- BEGIN goods_service_type -->
+                            &nbsp;&nbsp;<input type="checkbox" <!-- IF selected -->checked<!-- ENDIF -->  name="service_way[]" value="{id}"/>{text}
+                         <!-- END goods_service_type -->
+                      </td>
+                  </tr>
+                  <tr>
+                      <td width="26%" height="25">服务类型</td>
+					  <td width="74%" height="25">
+                         <!-- BEGIN type_name_and_property_ary -->
+                            </br>&nbsp;&nbsp;<input type="checkbox" onClick="show_type_id_checkbox(this);" name="goods_type_id[]" <!-- IF selected -->checked<!-- ENDIF --> value="{type_id}" service_type="{service_type}"/>{type_name}:
+                            <div class="son_{type_id} type_id_son" style="padding-left:20px;">
+                                <!-- BEGIN property_data -->
+                                    <!-- IF level=="0" -->
+                                            </br>&nbsp;&nbsp;<input type="checkbox" name="goods_property_id[]" <!-- IF selected -->checked<!-- ENDIF --> class="{id}" value="{id}" onClick="show_property_checkbox(this);" /><b>{name}:</b>
+                                    <!-- ELSE -->
+                                            &nbsp;&nbsp;<input type="checkbox" name="goods_property_id[]" <!-- IF selected -->checked<!-- ENDIF --> class="{parents_id}" value="{id}"/>{name}
+                                    <!-- ENDIF -->
+                                <!-- END property_data -->
+                            </div>
+                         <!-- END type_name_and_property_ary -->
+                      </td>
+                      <style>
+                           .type_id_son {display:none;}
+                      </style>
+                      <script>
+                         //初始化
+                           $(function(){
+                               var len = $("input[name='goods_type_id[]']:checked").length;
+                               for(var i = 0; i<len;i++)
+                               {
+                                   var type_id = $("input[name='goods_type_id[]']:checked").eq(i).attr("value");
+                                   $(".son_"+type_id).show();
+                               }
+                           }); 
+                           function show_type_id_checkbox(obj)
+                           {
+                               var is_checked = $(obj).attr("checked");
+                               var service_type = $(obj).attr("service_type");
+                               var type_id = $(obj).attr("value");
+                               if( is_checked == 'checked' )
+                               {
+                                   $(".son_"+type_id).show();
+                                   $(".son_"+type_id+" input:checkbox").attr("checked",true);
+                               }else
+                               {
+                                   $(".son_"+type_id).hide();
+                                   $(".son_"+type_id+" input:checkbox").attr("checked",false);
+                               }
+
+                           }
+                         function show_property_checkbox(obj)
+                         {
+                             var p_id = $(obj).attr('class');
+                             if($(obj).attr("checked") == 'checked')
+                             {
+                                 $("."+p_id).attr("checked",true);
+                             }else
+                             {
+                                 $("."+p_id).attr("checked",false);
+                             }
+                         }
+                      </script>
+                  </tr>
+                </table>    
+          </fieldset>
+          <fieldset class="filter">
+            <legend>商品基本信息</legend>
+                <table width="90%" align="center">
+                  <tr>
+					  <td width="26%" height="25">商品价格范围</td>
+					  <td width="74%" height="25" >
+                          <input type="text" name="prices_s" value="{goods_pool_info.goods_info_rule.prices_s}"/> 至 <input type="text" name="prices_e" value="{goods_pool_info.goods_info_rule.prices_e}"/>
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">上架时间</td>
+					  <td width="74%" height="25" >
+                           <input type="text" name="show_s" class="ui_timepicker" value="{goods_pool_info.goods_info_rule.show_s}"/> 至 <input type="text" name="show_e" class="ui_timepicker" value="{goods_pool_info.goods_info_rule.show_e}"/>
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">库存</td>
+					  <td width="74%" height="25" >
+                          <input type="text" name="stock_s" value="{goods_pool_info.goods_info_rule.stock_s}"/> 至 <input type="text" name="stock_e" value="{goods_pool_info.goods_info_rule.stock_e}"/>
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">活动时间</td>
+					  <td width="74%" height="25" >
+                          <input type="text" name="begin_s" class="ui_timepicker" value="{goods_pool_info.goods_info_rule.begin_s}" /> 至 <input type="text" name="begin_e" class="ui_timepicker" value="{goods_pool_info.goods_info_rule.begin_e}"/>
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">新品</td>
+					  <td width="74%" height="25" >
+                          最近<input type="text" name="new_goods_days" value="{goods_pool_info.goods_info_rule.new_goods_days}"/>天内发布且上架中的商品
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">最近活动</td>
+					  <td width="74%" height="25" >
+                          最近<input type="text" name="new_activity_days" value="{goods_pool_info.goods_info_rule.new_activity_days}"/>天开始且进行中的活动
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">活动是否官方</td>
+					  <td width="74%" height="25" >
+                          <select name="is_official">
+                                  <option value="">请选择</option>
+                                  <option <!-- IF goods_pool_info.goods_info_rule.is_official=="1" -->selected<!-- ENDIF --> value="1">官方</option>
+                                  <option <!-- IF goods_pool_info.goods_info_rule.is_official=="2" -->selected<!-- ENDIF -->  value="2">非官方</option>
+                          </select>
+                      </td>
+                  </tr>
+                  <tr>
+					  <td width="26%" height="25">活动是否周末</td>
+					  <td width="74%" height="25" >
+                          <select name="week">
+                                  <option value="">请选择</option>
+                                  <option <!-- IF goods_pool_info.goods_info_rule.week=="1" -->selected<!-- ENDIF --> value="1">周末</option>
+                                  <option <!-- IF goods_pool_info.goods_info_rule.week=="2" -->selected<!-- ENDIF --> value="2">非周末</option>
+                          </select>
+                      </td>
+                  </tr>  
+                  <tr>
+                      <td width="26%" height="25">地区</td>
+                      <td width="74%">
+                        <!--地区组件-->
+                            <script src="http://static-c1.yueus.com/yue_ui/mod/1.0.0/mod.js"></script>
+                            {widget_location}
+                            <script>
+                                //切换回调处理
+                                $(function()
+                                {
+                                    var input_name_id = "{input_name_id}";
+                                    window.__yue_location_widget__[input_name_id].$el.on('change_province_callback',function(ev,data)
+                                    {
+                                        console.log(data);
+                                    });
+
+                                    window.__yue_location_widget__[input_name_id].$el.on('change_city_callback',function(ev,data)
+                                    {
+                                        console.log(data);
+                                    });
+
+                                    window.__yue_location_widget__[input_name_id].$el.on('change_district_callback',function(ev,data)
+                                    {
+                                        console.log(data);
+                                    });
+                                });
+                            </script>
+                        <!--地区组件end-->
+                        <style>
+                            .plus_span,.x_span {  
+                                cursor: pointer;
+                                border: 2px solid rgb(75, 171, 54);
+                                display: inline-block;
+                                height: 20px;
+                                line-height: 20px;
+                                border-radius: 10px;
+                                width: 20px;
+                                text-align: center;
+                            }
+                            .x_span { border:2px solid rgb(184, 52, 82)}
+                            .plus_span {margin_right:10px;}
+                        </style>
+                        <input type="hidden" value="{value}" data-role="{top.goods.goods_data.province_value}" id="location_id"/>
+
+                        <span class="location_id_s">
+                                   <span class="plus_span" onclick="get_location_id_to_text();">+</span>&nbsp;&nbsp;
+                                    <span class="location_id_ary">
+                                            <!-- BEGIN goods_pool_info.goods_info_rule.location_ary_new -->
+                                                <span class="text_{id}">{text}<input type="hidden" name="location_id_ary[]" value="{id}"/><span class="x_span" onclick="del_text_location_id({id})">X</span>&nbsp;&nbsp;</span>
+                                            <!-- END goods_pool_info.goods_info_rule.location_ary_new -->
+                                   </span>
+                        </span>
+
+                        <script>
+                            function get_location_id_to_text()
+                            {
+
+                                var location_id = $('[data-role="select-location-location_id"] select[data-role="s-province"]').val();
+               
+                                if(location_id == '' || location_id == undefined)
+                                {
+                                    location_id = $('[data-role="select-location-location_id"] select[data-role="s-city"]').val();
+                                    if(location_id == '' || location_id == undefined)
+                                    {
+                                        alert('请选择地区');
+                                        return false;
+                                    }
+
+                                }else
+                                {
+                                    var city_location_id = $('[data-role="select-location-location_id"] select[data-role="s-city"]').val();
+
+                                    if(city_location_id)
+                                    {
+                                        location_id = city_location_id;
+                                    }
+                                }
+                                
+                                if( ! confirm('确定添加?'))
+                                {
+                                   return false;
+                                }
+                                
+                                var location_text = $("option[value="+location_id+"]").eq(0).text();
+                                if($(".location_id_ary span").hasClass("text_"+location_id))
+                                {
+                                    alert('地区已经有，请不要重复添加');
+                                    return false;
+                                }
+                                $(".location_id_ary").append("<span class='text_"+location_id+"'>"+location_text+" <span class='x_span' onclick='del_text_location_id("+location_id+")'>X</span><input type='hidden' name='location_id_ary[]' value='"+location_id+"'/>&nbsp;&nbsp;</span>");
+
+                            }
+
+                            function del_text_location_id(id)
+                            {
+                                if( ! confirm('确定删除?'))
+                                {
+                                   return false;
+                                }
+                                if( ! id )
+                                {
+                                    return false;
+                                }
+                                $(".text_"+id).remove();
+                            }
+
+                        </script>
+                      </td>
+                      
+                  </tr>
+                </table>    
+          </fieldset>
+          <fieldset class="filter">
+            <legend>交易信息</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="26%" height="25">完成订单数</td>
+                        <td width="74%" height="25">
+                           <input type="text" name="bill_finish_s" value="{goods_pool_info.transfer_info_rule.bill_finish_s}"/> 至 <input type="text" name="bill_finish_e" value="{goods_pool_info.transfer_info_rule.bill_finish_e}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="26%" height="25">完成交易金额</td>
+                        <td width="74%" height="25">
+                            <input type="text" name="bill_finish_prices_s" value="{goods_pool_info.transfer_info_rule.bill_finish_prices_s}"/> 至 <input type="text" name="bill_finish_prices_e" value="{goods_pool_info.transfer_info_rule.bill_finish_prices_e}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="26%" height="25">有交易商品</td>
+                        <td width="74%" height="25">
+                           <input type="text" name="transfer_num" value="{goods_pool_info.transfer_info_rule.transfer_num}"/> 天内有交易完成纪录的商品
+                        </td>
+                    </tr>
+<!--                    <tr>
+                        <td width="26%" height="25">成交转化率</td>
+                        <td width="74%" height="25">
+                           <input type="text" name="deal_persent_s" value="{goods_pool_info.transfer_info_rule.deal_persent_s}" placeHolder="1%"/> 至 <input type="text" name="deal_persent_e" placeHolder="100%" value="{goods_pool_info.transfer_info_rule.deal_persent_e}"/>
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td width="26%" height="25">用户好评数</td>
+                        <td width="74%" height="25">
+                            <input type="text" name="good_appraise_num_s" value="{goods_pool_info.transfer_info_rule.good_appraise_num_s}"/> 至 <input type="text" name="good_appraise_num_e" value="{goods_pool_info.transfer_info_rule.good_appraise_num_e}"/>
+                        </td>
+                    </tr>
+                </table>
+          </fieldset>
+          <fieldset class="filter">
+            <legend>商家信息</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="26%" height="25">合作商家</td>
+                        <td width="74%" height="25">
+                            <select name="is_cooperation">
+                                 <option value="">全部</option>
+                                 <option value="1" <!-- IF goods_pool_info.seller_info_rule.is_cooperation=="1" -->selected<!-- ENDIF -->>包含</option>
+                                 <option value="0" <!-- IF goods_pool_info.seller_info_rule.is_cooperation=="0" -->selected<!-- ENDIF -->>不包含</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="26%" height="25">刷单嫌疑</td>
+                        <td width="74%" height="25">
+                            <select name="is_flush">
+                                <option value="">全部</option>
+                                <option value="1" <!-- IF goods_pool_info.seller_info_rule.is_flush=="1" -->selected<!-- ENDIF --> >包含</option>
+                                <option value="0" <!-- IF goods_pool_info.seller_info_rule.is_flush=="0" -->selected<!-- ENDIF -->>不包含</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+          </fieldset>
+          <fieldset class="self">
+            <style>
+                .info_class,.button_class,.img_class {display:inline-block;margin-right:10px;}
+                .img_class img {width:100px;}
+                .img_class {vertical-align: top;}
+                .every_goods{border-bottom:1px solid rgb(196, 196, 216);margin-bottom:10px;padding-bottom:5px;width:400px;}
+                .add_all {width:500px;text-align:center;}
+                .result_list,.has_select_goods {display:inline-block;vertical-align: top;width:40%;height:500px;overflow: scroll;}
+                .goods_name {color:rgb(44, 47, 240);}
+                .goods_prices{color:red;}
+                .select_text{display:inline-block;margin-right:30px;margin-bottom:10px;color:green;}
+                .has_selected_goods_num{color:blue;}
+            </style>
+            <legend>自定义商品</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="100%" height="25">
+                            <span>商品ID:&nbsp;&nbsp;</span><input type="text" name="goods_id_str" placeholder="2124075,XXXX"/></br>
+                            <span>商家ID:&nbsp;&nbsp;</span><input type="text" name="user_id_str" placeholder="115203,XXXX" />
+                            &nbsp;&nbsp;<input type="button" onClick="search_goods();" class="btn_class" value="搜索"/>
+                            &nbsp;&nbsp;<span onClick="del_all_result_list();" class="btn_class">移除全部</span>
+                            &nbsp;&nbsp;<span onClick="add_all_to_selected();" class="btn_class">全部添加</span>
+                            </br>
+                            <div class="result_list">
+                               
+                            </div>
+                            <div class="has_select_goods">
+                                <span class="select_text">已选商品:(最大值{max_goods_num}个)</span><span onClick="del_all_selected();" class="btn_class">移除全部</span>
+                                
+                                <!-- BEGIN goods_pool_info.goods_id_self_list.data -->
+                                <div class="every_goods {goods_id}">
+                                    <div class="img_class"><a target="_blank" href="{images}"><img src="{images}" /></a></div>
+                                    <div class="info_class">
+                                        <span class='goods_name'>{titles}</span></br>
+                                        <span>goods_id:{goods_id}</span></br>
+                                        <span class='goods_prices'>价格:{prices}</span>
+                                    </div>
+                                    <div class="button_class"><span class='btn_class' onClick='del_selected(this);'>删除</span></div>
+                                    <input type="hidden" name="goods_id[]" value="{goods_id}"/>
+                                </div>
+                                <!-- END goods_pool_info.goods_id_self_list.data -->
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <script>
+                        function del_all_result_list()
+                        {
+                            if(confirm('确定操作'))
+                            {
+                                $(".result_list div").remove();
+                            }
+                        }
+                        function search_goods()
+                        {
+                            var goods_id_str = $("input[name='goods_id_str']").val();
+                            var user_id_str = $("input[name='user_id_str']").val();
+                            $.ajax( {
+                                url:'?action=goods_pool_list&is_search=1&goods_id_str='+goods_id_str+"&user_id_str="+user_id_str,
+                                type:'post',
+                                cache:false,
+                                dataType:'json',
+                                success:function(data) {
+                                    if(data.result != 1)
+                                    {
+                                        alert(data.message);
+                                        return false;
+                                    }else if(data.result == 1)
+                                    {
+                                        //$(".result_list").html(data.data);
+                                        var html = '';
+                                        $.each(data.data, function(i, item){    
+                                            html += "<div class='every_goods' goods_id='"+item.goods_id+"'>";
+                                                html += "<div class='img_class'>"
+                                                    html += "<a href='"+item.images+"' target='_blank'><img src='"+item.images+"' /></a>";
+                                                html += "</div>";
+                                                html += "<div class='info_class'>"
+                                                    html += "<span class='goods_name'>"+item.titles+"</span>";
+                                                    html += "</br>";
+                                                    html += "<span>goods_id:"+item.goods_id+"</span>";
+                                                    html += "</br>";
+                                                    html += "<span class='goods_prices'>价格:"+item.prices+"</span>";
+                                                html += "</div>";
+                                                html += "<div class='button_class'>"
+                                                    html += "<span class='btn_class' onclick='add_to_selected(this);'>添加</span>";
+                                                html += "</div>";
+                                            html += "</div>";
+                                        });
+                                        $(".result_list").html(html);
+
+                                    }
+                                },
+                                error : function() {
+                                    //alert("异常！");
+                                }
+                            });
+                            
+                        }
+                        
+                        function add_to_selected(obj)
+                        {
+                            var is_over = check_selected_max();
+                            if(is_over)
+                            {
+                                alert("超过添加商品最大值{max_goods_num}");
+                                return false;
+                            }
+                            var goods_id = $(obj).parent().parent().attr("goods_id");
+                            if($(".has_select_goods div").hasClass(goods_id))
+                            {
+                                alert("goods_id:"+goods_id+"已经添加过了,不要重复添加");
+                                return false;
+                            }
+                            var html = "<div class='every_goods "+goods_id+" '>";
+                            var img_html = $(obj).parent().siblings().eq(0).html();
+                            var info_html = $(obj).parent().siblings().eq(1).html();
+                            html += "<div class='img_class'>"+img_html+"</div>";
+                            html += "<div class='info_class'>"+info_html+"</div>";
+                            html += "<div class='button_class'><span class='btn_class' onClick='del_selected(this);'>删除</span></div>";
+                            html += "<input type='hidden' name='goods_id[]' value='"+goods_id+"'/>";
+                            html += "</div>";
+                            $(".has_select_goods").append(html);
+                        }
+                        
+                        function del_selected(obj)
+                        {
+                            if(confirm('确定操作'))
+                            {
+                                $(obj).parent().parent().remove();
+                            }
+                            
+                        }
+                        
+                        function check_selected_max()
+                        {
+                            var max = {max_goods_num};
+                            var len = $(".has_select_goods .every_goods").length;
+                            if(len >= max)
+                            {
+                                return true;
+                            }
+                            
+                            return false;
+                        }
+                        
+                        function add_all_to_selected()
+                        {
+                            var $obj = $(".result_list .every_goods");
+                            var html = '';
+                            var has_selected = $(".has_select_goods .every_goods").length;
+                            var max_goods_num = {max_goods_num};
+                            var can_add = max_goods_num-has_selected;
+                            if($obj.length > can_add)
+                            {
+                                alert("超过添加商品最大值{max_goods_num}");
+                                return false;
+                            }
+                            
+                            for(var i = 0; i < $obj.length;i++)
+                            {
+                                var goods_id = $obj.eq(i).attr("goods_id");
+                                if($(".has_select_goods div").hasClass(goods_id))
+                                {
+                                    alert("goods_id:"+goods_id+"已经添加过了,不要重复添加");
+                                    return false;
+                                }
+                                var img_html = $(".img_class").eq(i).html();
+                                var info_html = $(".info_class").eq(i).html();
+                                html += "<div class='every_goods "+goods_id+" '>";
+                                    html += "<div class='img_class'>";
+                                        html += img_html;
+                                    html += "</div>";
+                                    html += "<div class='info_class'>";
+                                        html += info_html;
+                                    html += "</div>";
+                                    html += "<div class='button_class'><span class='btn_class' onClick='del_selected(this);'>删除</span></div>";
+                                    html += "<input type='hidden' name='goods_id[]' value='"+goods_id+"'/>";
+                                html += "</div>";
+                                
+                            }
+                            $(".has_select_goods").append(html);
+                        }
+                        function del_all_selected()
+                        {
+                            if(confirm('确定操作'))
+                            {
+                                $(".has_select_goods div").remove();
+                            }
+                        }
+                        
+                    </script>
+                </table>
+          </fieldset>
+          <fieldset class="public">
+            <legend>公共</legend>
+                <table width="90%" align="center">
+                    <tr>
+                        <td width="26%" height="25">商品池名称</td>
+                        <td width="74%" height="25">
+                            <input type="text" name="name" value="{goods_pool_info.name}" />
+                        </td>
+                    </tr>
+                    <tr class="filter">
+                        <td width="26%" height="25">排序方式</td>
+                        <td width="74%" height="25">
+                            <select name="order_by">
+                                <option>请选择</option>
+                                <!-- BEGIN goods_pool_order_by -->
+                                    <option value="{id}" <!-- IF selected -->selected<!-- ENDIF --> >{text}</option>
+                                <!-- END goods_pool_order_by -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="filter">
+                        <td width="26%" height="25">更新周期</td>
+                        <td width="74%" height="25">
+                           <select name="update_cycle">
+                               <option>请选择</option>
+                                <!-- BEGIN goods_pool_update_cycle -->
+                                    <option value="{id}" <!-- IF selected -->selected<!-- ENDIF --> >{text}</option>
+                                <!-- END goods_pool_update_cycle -->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="26%" height="25">&nbsp;</td>
+                        <td width="74%" height="25">
+                            <input type="hidden" name="id" value="{goods_pool_info.id}"/>
+                            <input type="submit" value="提交" />
+                            &nbsp;&nbsp;
+                            <a class="btn_class" href="javascript:void(0);" onClick="jump();">返回</a>
+                        </td>
+                    </tr>
+                </table>
+          </fieldset>
+        </form>
+        </div>
+      </div>
+    </div>   
+    </div>
+</div>
+{top.log_list_html}
+
+<script>
+    function jump()
+    {
+        window.parent.location.href = "goods.php?action=goods_pool_list";
+    }
+</script>
+</body>
+</html>

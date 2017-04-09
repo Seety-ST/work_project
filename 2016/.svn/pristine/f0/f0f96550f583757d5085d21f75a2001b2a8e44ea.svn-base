@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link href="css/mrxx.css" type="text/css" rel="stylesheet" />
+	<title>美人信息</title>
+</head>
+
+<body>
+	<div class="index-page font_wryh">
+		<div class="header animated">
+			<h1 class="logo">
+				<a href="#">
+					<img src="images/logo-icon-145x111.png" />
+				</a>
+			</h1>
+		</div>
+		<div class="content">
+			<div class="banner-warp animated">			
+				<div class="flexslider">
+					<ul class="slides">
+						<li class="item-jane">
+						<div class="con-item">
+							<div class="mod-download-item">
+								<div class="code-item">
+									<img src="images/code-item/jane.png" />
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn-item btn-l"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn-item btn-r"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						</li>
+						<li class="item-janeplus">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/janeplus.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-beauty">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/beauty.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="item-baby">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/baby.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--<li class="item-yinxiang">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/code-img-yinxiang-105x105.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>-->
+						<li class="item-hcq">
+							<div class="con-item">
+								<div class="mod-download-item">
+									<div class="code-item">
+										<img src="images/code-item/hcq.png" />
+									</div>
+									<div class="btn-warp">
+										<a href="#" class="btn-item btn-l"> 
+											<i class="icon iconfont">&#xe601;</i>
+											<span>iPhone</span>
+										</a>
+										<a href="#" class="btn-item btn-r"> 
+											<i class="icon iconfont">&#xe600;</i>
+											<span>Android</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="app-warp animated">
+				<div class="list clearfix">
+					<ul>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/beauty-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">美人相机</dt>
+									<dd class="info-item">国内首款美颜自拍神器</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/jane-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">简 拼</dt>
+									<dd class="info-item line2-item">
+										聆听相片的声音<br />
+										文艺范拼图神器
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/janeplus-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">简 客</dt>
+									<dd class="info-item line2-item">
+										将音乐、心情、照片汇聚成册
+										H5制作神器
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li style="display:none">
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/yinxiang-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">印 象</dt>
+									<dd class="info-item">
+										定义自己的摄影方式
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/baby-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">亲子相机</dt>
+									<dd class="info-item">
+										记录宝宝成长的每一瞬间
+									</dd>
+								</dl>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="app-icon">
+									<img src="images/app-icon/hcq-icon-90x90.png" />
+								</i>
+								<dl class="text-item">
+									<dt class="title">图片合成器</dt>
+									<dd class="info-item">国内首款创意图片合成器
+									</dd>
+								</dl>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer animated">
+			<div class="footer-nav">
+				<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+			</div>
+			<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/respond.js"></script>
+	<script>
+		$('.flexslider').flexslider({
+			slideshowSpeed: 5000,
+			animationLoop: true,
+			directionNav: false,
+			pauseOnHover: true
+		});
+		$(function(){  
+		    var bannerHight = $(window).resize(function(){
+		    	$('.banner-warp .con-item').height($(window).height()*0.7142 +'px');
+		    }); 
+		    $(bannerHight).resize();
+		});
+	</script>
+</body>
+</html>

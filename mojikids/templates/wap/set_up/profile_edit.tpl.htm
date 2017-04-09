@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>个人资料 - 莫吉照相馆</title>
+		{%$wap_global_head%}
+		<link href="http://mojikids.yueus.com/static/wap/style/set_up/profile_edit.css" type="text/css" rel="stylesheet" />
+	
+    
+</head>
+	<body class="">
+		<div class="profile-edit-page" id="profile-edit-page" v-cloak>
+			<div class="item-wrap">
+				<div class="img-item">
+					<div class="ui-avatar-icon ui-avatar-icon-l" >
+					            <i data-role="user-icon"  id="upload-btn" @click.stop="chang_avatar()" :style="{backgroundImage: 'url(' + avatar + ')' }"></i>
+					            <em class="cammer-icon"></em>
+					</div>
+					<div class="txt f14 color-aaa tc">
+						点击修改头像
+					</div>
+
+				</div>
+				<div class="txt-item">
+					<div class="item ui-border-b">
+						<div class="title f14 color-333">用户ID</div>
+						<div class="info-con"><input type="text" class="ui-title-info color-ccc f14" v-model="total_data.res.user_id" readonly></div>
+					</div>
+					<div class="item">
+						<div class="title f14 color-333">用户昵称</div>
+						<div class="info-con"><input type="text" class="ui-title-info color-666 f14" v-model="total_data.res.nickname" placeholder="请输入用户昵称"></div>
+					</div>
+				</div>
+				<div class="btn-item">
+					<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l" @click.stop="save_profile()">
+						<span class="ui-button-content f16">保存</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+	
+<script type="text/javascript" src="http://mojikids.yueus.com/static/wap/modules/upload/index.js"></script>
+</body>
+
+</html>
+{%$wap_global_footer%}
+
+
+<script type="text/javascript" src="//static.yueus.com/yue_ui/upload/1.0.2/webuploader.zepto.min.js"></script>
+
+
+<script>
+ 	(function() {
+	 	var user_info = '{%$user_info%}';
+	 	var total_data = JSON.parse(user_info);
+	 	console.log(total_data);
+	 	// 加载util
+	 	var Util = require.syncLoad('wap-kids:global/util/index');
+	 	// 加载uploader
+	 	var Uploader = require('wap-kids:upload/index');
+
+	 	var profile_edit_page = new Vue
+	 	({
+	 		el: '#profile-edit-page',
+
+	 		mounted: function() {
+	 			// 加载传图组件
+	 			var self = this;
+	 			self._uploader = Uploader.init_com
+	 			({
+	 				$el : $('#upload-btn'),
+					server_url : '{%$server_url%}',
+	 				wx_params :
+	 				{
+						upload_type : 'icon',
+		 				choose_count : 1,
+						platform : 'aliyun',
+		 				upload_success : function()
+		 				{
+		 					// 传图到微信成功的时候
+		 					Util.loading.open
+		 					({
+		 						text : '正在获取图片...',
+		 					});
+		 				},
+		 				upload_fail : function()
+		 				{
+		 					 // 传图到微信失败的时候
+		 					 Util.loading.close();
+
+		 				},
+		 				get_imgUrl_success : function(data)
+		 				{
+		 					 // 成功获取微信的图片到自己服务器的时候
+		 					var self = this;
+		 					var list_data = data.obj_list;
+							if(list_data)
+							{
+								var url = list_data[0].server_url;
+			 					$('[data-role="user-icon"]').css('background-image','url('+ url +')');
+			 					Util.loading.close();
+							}
+
+		 				},
+		 				get_imgUrl_error : function()
+		 				{
+		 					// 失败获取微信的图片到自己服务器的时候
+		 					Util.toast({
+		 						message: '传图失败',
+		 						position: 'middle',
+		 						duration: 2000
+		 					});
+
+
+		 				}
+	 				},
+	 				app_params :
+	 				{
+
+	 				},
+	 				web_params :
+	 				{
+						form_data : {%$upload_params%},
+					  	init_img_url : '{%$img_url%}'+'?'+new Date().getTime(),
+		 				// web 实例化后，不代表传图就成功，还要主动触发action方法
+		 				ready_ok : function(upload_obj)
+		 				{
+		 					   // 安装上传组件的各种事件
+		 					   var selected_img_arr = "";
+		 					   var selected_img_arr
+		 					   upload_obj.on('startUpload',function()
+		 					   {
+		 						   //self.$loading = $.loading({content:"正在获取上传图片"});
+		 						   Util.loading.open
+		 						   ({
+		 								text : '正在获取上传图片',
+		 						   });
+		 					   })
+		 					   .on('fileQueued',function(file)
+		 					   {
+
+		 						   //self.upload_head_obj = [];
+		 						   console.log(file)
+		 					   })
+		 					   .on('filesQueued',function(arr)
+		 					   {
+
+		 						   console.log(arr)
+		 					   })
+		 					   .on('fileDequeued',function(file)
+		 					   {
+		 						   console.log(file)
+		 					   })
+
+		 					   .on('uploadComplete',function(err)
+		 					   {
+		 						   Util.loading.close();
+		 					   })
+		 					   .on('error',function(err)
+		 					   {
+		 						   Util.loading.close();
+		 					   })
+		 					   .on('uploadSuccess',function(file,response)
+		 					   {
+			 						// response 服务端返回数据
+
+			 						Util.loading.close();
+			 						console.log(response);
+
+									if(response.code == 0)
+								   {
+									   Util.request
+									   ({
+										   url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'upload/get_access_token.php',
+										   data : {upload_type:'icon'},
+										   success : function(response)
+										   {
+											   var res = response.res;
+
+											   upload_obj.option('formData',{data:JSON.stringify(res.upload_params)});
+											   upload_obj.option('server',res.server_url);
+
+											   $('[data-role="user-icon"]').css('background-image','url('+ self._uploader.web_params.init_img_url +')');
+
+											   // 重新赋值，为了区分第一次读取的图片地址
+											   self._uploader.web_params.init_img_url = res.img_url+'?'+new Date().getTime();
+
+										   }
+									   })
+
+								   }
+		 					   })
+		 					   .on('uploadError',function(file,reason)
+		 					   {
+		 						   Util.loading.close();
+
+		 						   console.log(reason);
+		 					   })
+		 					   .on('uploadFinished',function()
+		 					   {
+
+		 					   })
+		 				}
+		 			}
+	 			});
+				var img =new Image();
+				img.src = self.total_data.res.avatar;
+				img.onerror=function(){
+					self.avatar =window.__MOJIKIDS_GLOBAL['PAGE_URL']['index']+'static/wap/image/set_up/user-img-defalut.png';
+				};
+				img.onload=function(){
+					self.avatar = self.total_data.res.avatar;
+				};
+	 		},
+	 		data: {
+	 			total_data : total_data,
+	 			avatar : "",
+	 		},
+	 		computed : {
+
+	 		},
+	 		methods : {
+	 			chang_avatar : function()
+	 			{
+	 				var self = this;
+	 				self._uploader.action();
+	 				// alert("message");
+	 			},
+	 			save_profile : function()
+	 			{
+	 				var self = this;
+	 				var nickname = total_data.res.nickname;
+
+	 				if (!nickname)
+	 				{
+	 					Util.toast
+	 					({
+	 						message: '请输入修改的用户昵称',
+	 						position: 'middle',
+	 						duration: 3000
+	 					});
+	 					return;
+	 				}
+	 				if (nickname.length>10)
+	 				{
+	 					Util.toast
+	 					({
+	 						message: '输入用户昵称不能超过11个字',
+	 						position: 'middle',
+	 						duration: 3000
+	 					});
+	 					return;
+	 				}
+	 				Util.request
+	 				({
+	 					url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'mine/chang_mine_info.php',
+	 					type : 'GET',
+	 					cache : true,
+	 					data : {
+	 						nickname : nickname
+	 					},
+	 					beforeSend : function()
+	 					{
+
+	 					},
+	 					success : function(respond)
+	 					{
+	 						console.log(respond);
+	 						if (respond.res.data.result==1)
+	 						{
+	 							Util.toast
+	 							({
+	 								message: '保存成功',
+	 								position: 'middle',
+	 								duration: 5000
+	 							});
+	 							window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['index'] + 'set_up/';
+	 						}
+	 					},
+	 					error :function()
+	 					{
+
+	 					}
+	 				});
+	 			},
+
+	 		},
+	 		components: {
+
+
+	 		}
+	 	});
+
+	 })();
+</script>

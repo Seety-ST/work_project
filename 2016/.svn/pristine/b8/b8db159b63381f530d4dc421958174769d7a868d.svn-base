@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>美人信息</title>
+	<link href="css/iconfont-wap.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body >
+	<div class="article-page">
+		<header class="header animated">
+			<h1 class="logo">
+				<img src="images-wap/logo-img-145x115.png" />
+			</h1>
+		</header>
+		<div class="content">
+			<article class="con-warp">
+				<hgroup class="title-item">
+					<h2>加入我们</h2>
+					<h3>
+						<span>Join Us</span>
+						<i class="line-icon"></i>
+					</h3>
+				</hgroup>
+				<section class="mod-con-item">
+					<div class="select-warp clearfix">
+						<select class="select-item place-item">
+							<option>广州</option>
+							<option>上海</option>
+							<option>北京</option>
+						</select>
+						<select class="select-item department-item">
+							<option>软件技术部</option>
+							<option>市场部</option>
+							<option>内容部</option>
+							<option>运营部</option>
+							<option>产品部</option>
+						</select>
+					</div>
+					<div class="results-list">
+						<ul>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<dl class="job-item">
+										<dt>初级IOS开发工程师</dt>
+										<dd>招聘人数：2位</dd>
+									</dl>
+									<div class="salary-item">
+										4K-6K/月
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</article>
+		</div>
+		<footer class="footer animated">
+			<nav class="f-nav">
+				<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+			</nav>
+			<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+		</footer>
+	</div>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper1 = new Swiper('.banner-warp', {
+			pagination : '.swiper-pagination',
+			preloadImages: true,
+			lazyLoading: true,
+			loop : true,
+			speed: 700,
+			autoplay : 3000,
+			autoplayDisableOnInteraction : false
+		});
+	</script>
+</body>
+</html>

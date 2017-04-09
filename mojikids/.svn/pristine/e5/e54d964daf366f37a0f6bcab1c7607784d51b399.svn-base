@@ -1,0 +1,76 @@
+// 确认支付页面
+// 星星
+// 2017-1-5
+
+.page-container {
+  background-color: #fff;
+  font-size: 14px;
+  /*********支付页面***********/
+
+  .submit-btn-section {
+    padding: 20px 30px 0px;
+  }
+  .date-info-tips-section {
+    .tips-item-title {
+      padding-top: 30px;
+    }
+    .tips-item-count-down {
+      padding-top: 10px;
+      font-size: 34px;
+    }
+  }
+  /*********支付页面end***********/
+
+  /*********支付成功页面***********/
+  .banner-section {
+    height: 110px;
+    border-top: 1px solid #d9a729;
+    .banner-text {
+      padding-left: 28px;
+      .text-tips {
+        font-size: 21px;
+        padding-top: 30px;
+      }
+      .text-money-tips {
+        font-size: 12px;
+        padding-top: 10px;
+        .money {
+          font-size: 18px;
+        }
+      }
+    }
+    .banner-img {
+      margin-top: 13px;
+      margin-left: 28px;
+      background: url("../../image/pay/pay-success-banner-264x176.png") no-repeat;
+      background-size: cover;
+      width: 132px;
+      height: 88px;
+    }
+
+
+  }
+  .link-btn-section {
+    padding: 15px 15px 20px;
+    text-align: center;
+    .ui-button {
+      width: 150px;
+      display: inline-block;
+    }
+  }
+
+
+  /*********支付成功页面end***********/
+
+
+
+  /*********公共部分***********/
+  .order-info-section {
+    .order-info-item {
+      line-height: 45px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+}

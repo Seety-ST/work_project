@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>荣威e950</title>
+	<link href="css/swiper.min.css" type="text/css" rel="stylesheet" />
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+			          var docEl = doc.documentElement,
+			            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			            recalc = function () {
+			              var clientWidth = docEl.clientWidth;
+			              if (!clientWidth) return;
+			              docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+			            };
+
+			          if (!doc.addEventListener) return;
+			          win.addEventListener(resizeEvt, recalc, false);
+			          doc.addEventListener('DOMContentLoaded', recalc, false);
+			        })(document, window);
+	</script>
+</head>
+	<body class="newView-bg">
+		<section class="newView-page">
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<!-- Required swiper-lazy class and image source specified in data-src attribute -->
+						<img data-src="images-wap/xsj-img/1.jpg" class="swiper-lazy">
+						<!-- Preloader image -->
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images-wap/xsj-img/2.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images-wap/xsj-img/3.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images-wap/xsj-img/4.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>
+					<div class="swiper-slide">
+						<img data-src="images-wap/xsj-img/5.jpg" class="swiper-lazy">
+						<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+					</div>				
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-white"></div>
+			</div>
+			<section class="btn-wrap">
+				<a href="#" class="btn-item btn-yy"></a>
+				<a href="#" class="btn-item btn-xz"></a>
+			</section>
+		</section>
+		<script src="Scripts/swiper.min.js"></script>
+		<script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			// Disable preloading of all images
+			preloadImages: false,
+			// Enable lazy loading
+			lazyLoading: true
+		});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Circle</title>
+	<link href="css/index-wap.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript">
+		window.addEventListener( "load", function() {
+		    FastClick.attach( document.body );
+		}, false );
+	</script>
+<body>
+	<section class="circle-page">
+		<section class="content">
+			<div class="info-item">
+				<div class="logo-item clearfix">
+					<i class="icon">
+						<img src="images-wap/logo-icon-75x75.png" />
+					</i>
+					<h1 class="logo"></h1>
+				</div>
+				<h4 class="title"></h4>
+				<div class="mod-down-btn">
+					<a href="#" class="btn" touch-action="none">
+						<i class="icon"></i><em>立即下载</em>
+					</a>
+				</div>
+			</div>
+			<div class="con-item">
+				<div class="info-warp">
+					<div class="item item-1"></div>
+					<div class="item item-2"></div>
+					<div class="item item-3"></div>
+					<div class="item item-4"></div>
+				</div>
+				<div class="mod-down-btn">
+					<a href="#" class="btn" touch-action="none">
+						<i class="icon"></i><em>立即下载</em>
+					</a>
+				</div>
+			</div>
+		</section>
+	</section>
+</body>
+</html>

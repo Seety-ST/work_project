@@ -1,0 +1,152 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Circle</title>
+	<link rel="stylesheet" href="css/iconfont-wap.css">
+	<link href="css/common-wap.css" type="text/css" rel="stylesheet" />
+	<link href="css/index-wap.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/fastclick.js"></script>
+	<script type="text/javascript">
+		window.addEventListener( "load", function() {
+		    FastClick.attach( document.body );
+		}, false );
+	</script>
+<body>
+	<section class="circle-page">
+		<header class="header" id="header">
+			<div class="mod-bar-item">
+				<h1 class="logo">
+					<img src="images-wap/app-mod-item/logo-img-145x115.png" />
+				</h1>
+				<div class="nav-btn-warp">
+					<div class="icon-area more-btn" id="header-more-btn">
+						<i class="icon iconfont">&#xe602;</i>
+					</div>
+					<div class="icon-area close-btn" id="header-close-btn">
+						<i class="icon iconfont">&#xe600;</i>
+					</div>
+				</div>
+			</div>
+			<nav class="nav animated" id="nav">
+				<div class="nav-list">
+					<ul>
+						<li>
+							<a href="#">
+								<span>首 页</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>美人相机</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   拼</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   客</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>印   象</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">
+								<span>在一起</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>亲子相机</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>图片合成器</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<section class="content">
+			<div class="info-item">
+				<div class="logo-item clearfix">
+					<i class="icon">
+						<img src="images-wap/logo-icon-105x59.png" />
+					</i>
+					<h1 class="logo"></h1>
+				</div>
+				<h4 class="title"></h4>
+				<div class="mod-down-btn">
+					<a href="#" class="btn" touch-action="none">
+						<i class="icon"></i><em>立即下载</em>
+					</a>
+				</div>
+			</div>
+			<div class="con-item">
+				<div class="info-warp">
+					<div class="item item-1"></div>
+					<div class="item item-2"></div>
+					<div class="item item-3"></div>
+					<div class="item item-4"></div>
+				</div>
+				<div class="mod-down-btn">
+					<a href="#" class="btn" touch-action="none">
+						<i class="icon"></i><em>立即下载</em>
+					</a>
+				</div>
+			</div>
+			<div class="ba-item">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010502000269" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="http://www.adnonstop.com/viewcode/images/ghs.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fff;">沪公网安备 31010502000269号</p></a>
+		 	</div>
+		</section>
+	</section>
+	<!-- 分享弹出层 -->
+	<div class="mod-pop-item" style="display: none">
+		<div class="share-item"></div>
+	</div>
+	<!-- 分享弹出层 end -->
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#nav').height($(window).height() +'px');
+			$('#header-more-btn').click(function(){
+				if($('#header').hasClass('header-nav-active')){
+					$('#header').removeClass('header-nav-active');
+				}else{
+					$('#header').addClass('header-nav-active');
+				}
+			});
+			$('#header-close-btn').click(function(){
+				if($('#header').hasClass('header-nav-active')){
+					$('#header').removeClass('header-nav-active');
+				}else{
+					$('#header').addClass('header-nav-active');
+				}
+			});
+		})
+	</script>
+</body>
+</html>

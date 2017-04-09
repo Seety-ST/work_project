@@ -1,0 +1,12 @@
+<?php
+
+return array( 
+      'index'=>'//index.php',//首页
+       'goods_list'=>'//goods_list/index.php',//商品列表
+       'goods_detail'=>'//goods_detail/index.php', //商品详情
+       'photographer_list'=>'//photographer_list/index.php',//摄影师列表
+       'photographer_detail'=>'//photographer_detail/index.php'//摄影师详情
+);
+
+
+?>

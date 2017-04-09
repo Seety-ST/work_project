@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/201725/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+           <title>
+               tags标签
+           </title>
+   
+
+    
+</head>
+
+<body style="background-color:#fff;">
+	
+
+<!-- YUE-UI VUE 头部返回模块 start -->
+<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+<!-- 页面内容开始 -->
+<p class="f20">1.展示型标签：</p>
+<br />
+<span class="ui-tags dib ui-tags-height-15 ui-tags-color-ff6a6e">主营</span>
+
+<br />
+<br />
+
+<span class="ui-tags dib ui-tags-height-18   ui-tags-color-ff6a6e ui-tags-bg-fce">企业商家</span>
+
+<br />
+<br />
+<span class="ui-tags dib ui-tags-height-18   ui-tags-color-f8b24d ui-tags-bg-fdf">个人商家</span>
+
+<br />
+<br />
+<span class="ui-tags dib ui-tags-height-18   ui-tags-color-eee ui-tags-bg-eee">个人商家</span>
+
+<br />
+<br />
+<br />
+<br />
+<p class="f20">2.可点击型标签：</p>
+<br />
+<a href="#"><span class="ui-tags dib ui-tags-height-25  ui-tags-bg-eee ui-tags-color-eee ui-tags-bg-eee-active">日韩</span></a>
+
+<br />
+<br />
+<a href="#"><span class="ui-tags dib ui-tags-height-27   ui-tags-bg-fff ui-tags-color-ddd ui-tags-active ui-tags-bg-fff-active">10 : 00</span></a>
+
+<!-- 页面内容结束 -->
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

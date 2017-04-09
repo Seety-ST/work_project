@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+.page-container {
+  background-color: #fff;
+  font-size: 0.14rem;
+  /*********支付页面***********/
+  /*********支付页面end***********/
+  /*********支付成功页面***********/
+  /*********支付成功页面end***********/
+  /*********公共部分***********/
+}
+
+.page-container .submit-btn-section {
+  padding: 0.2rem 0.3rem 0;
+}
+
+.page-container .date-info-tips-section .tips-item-title {
+  padding-top: 0.3rem;
+}
+
+.page-container .date-info-tips-section .tips-item-count-down {
+  padding-top: 0.1rem;
+  font-size: 0.34rem;
+}
+
+.page-container .banner-section {
+  height: 1.1rem;
+  border-top: 0.01rem solid #d9a729;
+}
+
+.page-container .banner-section .banner-text {
+  padding-left: 0.28rem;
+}
+
+.page-container .banner-section .banner-text .text-tips {
+  font-size: 0.21rem;
+  padding-top: 0.3rem;
+}
+
+.page-container .banner-section .banner-text .text-money-tips {
+  font-size: 0.12rem;
+  padding-top: 0.1rem;
+}
+
+.page-container .banner-section .banner-text .text-money-tips .money {
+  font-size: 0.18rem;
+}
+
+.page-container .banner-section .banner-img {
+  margin-top: 0.13rem;
+  margin-left: 0.28rem;
+  background: url("http://mojikids.yueus.com/static/wap/image/pay/pay-success-banner-264x176.png") no-repeat;
+  background-size: cover;
+  width: 1.32rem;
+  height: 0.88rem;
+}
+
+.page-container .link-btn-section {
+  padding: 0.15rem 0.15rem 0.2rem;
+  text-align: center;
+}
+
+.page-container .link-btn-section .ui-button {
+  width: 1.5rem;
+  display: inline-block;
+}
+
+.page-container .order-info-section .order-info-item {
+  line-height: 0.45rem;
+  padding-left: 0.15rem;
+  padding-right: 0.15rem;
+}

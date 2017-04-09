@@ -1,0 +1,52 @@
+<link rel="dns-prefetch" href="//static-c1.yueus.com">
+<link rel="dns-prefetch" href="//static.yueus.com">
+<link rel="dns-prefetch" href="//goods.yueus.com">
+<link rel="dns-prefetch" href="//topic.yueus.com">
+<link rel="dns-prefetch" href="//list.yueus.com">
+
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.3, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="wap-font-scale" content="no">
+
+
+<!-- common css -->
+<link rel="stylesheet" type="text/css" href="/style/common/main.scss">
+
+<!-- basejs -->
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/lib/base.js"></script>
+<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+(function(){if(!window.console){console=(function(){var instance=null;function Constructor(){}Constructor.prototype={log:function(str){}};function getInstance(){if(instance==null){instance=new Constructor()}return instance}return getInstance()})()}String.prototype.trim=function(){return this.replace(/^\s+/,"").replace(/\s+$/,"")}})();
+</script>
+
+{%if $use_vue == 1%}
+<script type="text/javascript" src="//static-c1.yueus.com/yue_ui/vue/1.0.2/vue-base.min.19728b0.js"></script>
+{%/if%}
+
+
+<script>
+    // HUIPAI js 全局设置
+    window.__HUIPAI_GLOBAL = {};
+    window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] = '/ajax/';  
+    window.__HUIPAI_GLOBAL['PAGE_URL'] = 
+    {
+       index : '//51snap.yueus.com/',//首页
+       goods_list : '//51snap.yueus.com/search/?tp=per',//商品列表
+       goods_detail : '//51snap.yueus.com/goods/', //商品详情
+       photographer_list : '//51snap.yueus.com/search/?tp=list',//摄影师列表
+       photographer_detail : '//51snap.yueus.com/camera/'//摄影师详情
+    };  
+
+    
+</script>
+
+
+<style>
+
+</style>
+
+ 

@@ -1,0 +1,38 @@
+$(function(){
+    var ind = 0;
+    var nav = $("#nav");
+    var init = $("#nav .nav-li").eq(ind);
+    var block = $("#nav .block");
+    block.css({
+        "left": init.position().left - 3,
+        'width':init.width()
+    });
+    nav.hover(function() {
+    },
+    function() {
+        block.stop().animate({
+            "left": init.position().left - 3,
+            'width':init.width()
+        },
+        500);
+    });
+    $("#nav").slide({
+        type: "menu",
+        titCell: ".nav-li",
+        targetCell: ".sub",
+        delayTime: 300,
+        triggerTime: 0,
+        returnDefault: true,
+        defaultIndex: ind,
+        startFun: function(i, c, s, tit) {
+            block.stop().animate({
+                "left": tit.eq(i).position().left - 3,
+                "width":tit.eq(i).width()
+            },
+            500);
+        }
+    });
+});
+
+
+//…Ë÷√

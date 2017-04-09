@@ -1,0 +1,55 @@
+
+/**
+    by ÌÀÔ²
+    Í·²¿ËÑË÷
+    2016.10.28
+ **/
+
+
+var header_s_data ;
+var $header_s_data_pop = $('[header-s-data="pop"]');
+var $header_s_data_title = $('[header-s-data="title"]');
+var $header_s_data_click = $('[header-s-data="click"]');
+var $header_s_data_show = $('[header-s-data="show"]');
+
+
+$('[header-s-data="btn"]').hover(function() {
+    $header_s_data_pop.removeClass('fn-hide');
+}, function() {
+    $header_s_data_pop.addClass('fn-hide');
+});
+
+
+$header_s_data_pop.find('li').on('click', function(event) {
+    header_s_data = $(this).attr('header-s-data-role');
+    $header_s_data_pop.addClass('fn-hide');
+    var txt = $(this).html();
+    $header_s_data_title.html(txt);
+});
+
+
+$header_s_data_click.on('click', function(event) {
+    $header_s_data_show.removeClass('fn-hide');
+});
+
+
+$header_s_data_click.on('click', function(event) {
+
+    var val = $.trim($('[header-s-data="key"]').val());
+    if (!val) 
+    {
+        alert('ÇëÊäÈë¹Ø¼ü×Ö!');
+        return ;
+    }
+    if (!header_s_data) 
+    {
+        header_s_data = 'list';
+    }
+    window.location.href = '//paizhao.yueus.com/search/?tp=' + header_s_data + '&kw=' + val ;
+
+});
+
+
+
+
+

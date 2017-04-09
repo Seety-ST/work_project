@@ -1,0 +1,11 @@
+@font-face { 
+font-family: "mfont";
+src: url("http://localhost/paizhao/loc/static/wap/style/fonts/iconfont.053d4b7.eot");
+src: url("http://localhost/paizhao/loc/static/wap/style/fonts/iconfont.053d4b7.eot?#iefix") format("embedded-opentype"),
+url("http://localhost/paizhao/loc/static/wap/style/fonts/iconfont.f7a3eae.woff") format("woff"),
+url("http://localhost/paizhao/loc/static/wap/style/fonts/iconfont.7fc9b6e.ttf") format("truetype");}
+.icon-font{font-family:"mfont";font-size:16px;font-style:normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;position: relative;-webkit-font-smoothing: antialiased;}
+.i-xxx:before{content: "\f000";}
+.i-b:before{content: "\f001";}
+.i-iconfont-allow:before{content: "\f002";}
+.i-iconfont-shixinxiaojiantou:before{content: "\f003";}

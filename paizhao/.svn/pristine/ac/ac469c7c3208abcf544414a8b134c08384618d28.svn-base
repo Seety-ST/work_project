@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+	<title>{%$ret.goods_info.goods_data.titles%}-约摄，互联网摄影平台</title>
+    <meta name="keywords" content="{%$ret.goods_info.new_type_name%}，摄影师，拍照，预约">
+    <meta name="description" content="约摄精选专业摄影师，提供海量优质拍摄服务，{%$ret.goods_info.goods_data.titles%} 正在等你来。">
+	{%$pc_global_head%}
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<link href="../../style/goods/index-page.scss" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+
+	<div class="goods-page w1200">
+
+        <div class="global-nav-mod-1 color-666">
+            <a href="{%$paizhao_page_url.index%}" class="color-666">首页</a> <span class="ml5 mr5">&gt;</span> <a href="{%$ret.user_info.link_url%}" class="color-666">{%$ret.user_info.seller_name%}</a> <span class="ml5 mr5">&gt;</span> {%$ret.goods_info.goods_data.titles%}
+            
+        </div>
+
+		<div class="p1th clearfix">
+			<div class="focus  fldi">
+                <div class="img paizhao-ph-bgimg" data-role="focus-img"><img src="" class=""  data-lazyload-url="{%yueusv2_img_resize img_url=$ret.goods_info.goods_data.images size="640"%}" /></div>
+            </div>
+			<div class="main fldi">
+				<h3 class="title-area f22">
+					<span class="tips">[{%$ret.goods_info.new_type_name%}]</span>
+					<span class="title">{%$ret.goods_info.goods_data.titles%}</span>
+				</h3>
+
+				<div class="item-wrap">
+
+					<div class="item  price-item">
+						<div class="clearfix">
+							<div class="lbox fl ">
+								<p class="l-txt">套系价格：</p>
+							</div>
+							<div class="rbox fl">
+								<span class="money f28" data-role="money">{%$ret.goods_info.goods_data.prices%}</span>
+							</div>
+							<div class="zx-num fr">
+								<p class="p1">{%$ret.goods_info.consults%}</p>
+								<p class="p2">咨询数</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="item clearfix item-guige">
+						<div class="lbox fl">
+							<p class="gz-txt">套系规格：
+							</p>
+						</div>
+
+						<div class="rbox fl">
+							<div class="select" data-role="select-price">
+
+                                {%foreach $ret.goods_info.goods_prices_list as $val%}
+    								<button data-price="{%$val.prices%}"  data-size="{%$val.name%}"  class="ui-button ui-button-primary ui-button-inline-block ui-button-size-x-middle ui-button-border-ddd " ><span class="ui-button-content f14" >{%$val.prices%}/{%$val.name_val%}</span></button>
+                                {%/foreach%}
+							
+
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item clearfix">
+						<div class="lbox fl">
+							<p class="">服务承诺：</p>
+						</div>
+						<div class="rbox fl">
+							<div class="price ">
+								<span class="price-txt cp re"> <i class="icon"></i>
+									专业摄影师实名认证
+								</span>
+								<span class="price-txt cp re seller_ver"> <i class="icon"></i>
+									摄影顾问全程跟进
+								</span>
+
+								
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<div class="btn-area">
+                    <div class="btn">
+                        <button data-role="pai_s_xc" class="ui-button ui-button-bg-fbb ui-button-block ui-button-100per  ui-button-size-h40">
+                            <span class="ui-button-content f14">拍摄咨询</span>
+                        </button>
+                    </div>
+                    
+					<p class="p1">约摄客服电话：400-890-3040（工作日10:00 至19:00）</p>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<div class="p2th">
+
+			<div class="swt clearfix">
+				<ul class="list clearfix">
+				    <li class="cur" data-role="nav" data-nav="0"><a href="javascript:;">套系详情</a></li>
+				    <li class="line"></li>
+				    <li data-role="nav" data-nav="1"><a href="javascript:;">规格参数</a></li>
+				</ul>        
+			   
+			</div>
+
+			<div class="main-area clearfix">
+			    <div class="main fldi">
+					<div class="content-a "  data-role="content">
+				    	<div class="service_content">
+		                    <ul class="list clearfix">
+		                        
+		                        {%$ret.goods_info.detail_introduce%}
+		                    </ul>        
+		                </div>
+		                <div class="des" data-role="des" >
+		                	{%$ret.goods_info.goods_data.content%}
+		                </div>
+		            </div>
+
+		            <div class="content-b fn-hide" data-role="content">
+    			    	<div class="service_content">
+    	                    <ul class="list clearfix">
+    	                        {%$ret.goods_info.format_introduce%}
+    	                    </ul>  
+    	                </div>
+
+    	                <div class="part-b">
+    	                	<div class="title"><img src="../../image/goods/title-833x32.jpg" /></div>
+    	                	<div class="item-wrap">
+    	                	    <div class="item">
+    	                	        <div class="a">
+    	                	            <span class="a-icon">Q</span>：拍摄咨询流程是怎么样的？
+    	                	        </div>
+    	                	        <div class="b">
+    	                	            <span class="b-icon">A</span>：您可以直接在约摄官网选择喜欢的套系或摄影师，提交咨询信息，摄影顾问会在1个工作日内主动联系您沟通拍摄方案细节；您也可以通过拨打客服电话400-890-3040进行拍摄咨询。
+    	                	        </div>
+    	                	    </div> 
+
+    	                	    <div class="item">
+    	                	        <div class="a">
+    	                	            <span class="a-icon">Q</span>：摄影套系是什么？
+    	                	        </div>
+    	                	        <div class="b">
+    	                	            <span class="b-icon">A</span>：一个套系是指摄影师提供的一项摄影服务，包含该项服务的价格、规格参数、拍摄器材、拍摄地点等信息。
+    	                	        </div>
+    	                	    </div> 
+
+    	                	    <div class="item">
+    	                	        <div class="a">
+    	                	            <span class="a-icon">Q</span>：是否需要自备服装和化妆？
+    	                	        </div>
+    	                	        <div class="b">
+    	                	            <span class="b-icon">A</span>：套系详情的规格参数里会包含服装和化妆的相关说明；您也可以在和摄影师沟通拍摄细节时，根据您的需求沟通服装和化妆的情况。
+    	                	        </div>
+    	                	    </div> 
+
+    	                	    <div class="item">
+    	                	        <div class="a">
+    	                	            <span class="a-icon">Q</span>：多长时间可以收到精修的照片？
+    	                	        </div>
+    	                	        <div class="b">
+    	                	            <span class="b-icon">A</span>：您在拍摄后挑选需要精修的照片，就可以在双方约定的时间内拿到摄影师精修后的照片。
+    	                	        </div>
+    	                	    </div> 
+    	                	    
+    	                	</div>     
+    	                </div>
+		            </div>
+
+
+			    </div>
+			    <div class="sidebar frdi">
+			    	<div class="user-area">
+                        <a href="{%$ret.user_info.link_url%}">
+    			    		<div class="img"><img src="{%$ret.user_info.avatar%}" /></div>
+    			    		<div class="txt">
+    			    			<div class="name">{%$ret.user_info.seller_name%}</div>
+    			    			<div class="num">已有  <span class="s">{%$ret.user_info.consults%}</span> 人咨询</div>
+    			    		</div>
+                        </a>
+
+			    		
+
+			    	</div>
+
+
+			    	<div class="btn-area">
+			    		<div class="a">
+                            <button data-role="srdz" class="ui-button ui-button-bg-fbb ui-button-block ui-button-100per  ui-button-size-h36">
+                                <span class="ui-button-content f14">私人定制</span>
+                            </button>               
+                        </div>
+
+                        
+			    		<div class="b">
+                            <a href="{%$ret.user_info.link_url%}" class="tdn">
+                                <button class="ui-button ui-button-border-fbb  ui-button-block ui-button-100per  ui-button-size-h36">
+                                    <span class="ui-button-content f14">所有摄影套系</span>
+                                </button>
+                            </a>
+                        </div>
+			    	</div>
+
+			    	<div class="list-area">
+			    		{%if $ret.like_goods_info%}<div class="title f14">看过此套系的人还喜欢</div>{%/if%}
+			    		<ul class="list clearfix">
+                            {%foreach $ret.like_goods_info as $val%}
+    			    		    <li>
+    			    		    	<a href="{%$val.link_url%}"><div class="img"><img src="{%$val.images%}" /></div></a>
+    			    		    	<div class="txt-wrap">
+    				    		    	<div class="wbox clearfix">
+    				    		    	    <div class="lbox fldi">{%$val.prices%}</div>
+    				    		    	    <div class="rbox frdi">{%$val.consults%}人咨询</div>
+    				    		    	</div>
+    				    		    	<div class="des">
+    				    		    		{%$val.titles%}
+    				    		    	</div>
+    				    		    </div>
+    			    		    </li>
+                            {%/foreach%}
+			
+			    		</ul> 
+
+			    		{%if $ret.like_goods_info%}<div class="more"><a href="{%$ret.user_info.link_url%}">查看更多 ></a></div>{%/if%}
+
+
+
+			    	</div>
+
+			    </div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+
+</body>
+	{%$pc_global_footer%}
+	<!--SCRIPT_PLACEHOLDER-->
+
+	<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+	<script type="text/javascript">
+
+	$(function() 
+	{
+        var utility = require('../../modules/global/utility/index');
+        // 图片后加载处理
+        var lazyload = require('../../modules/global/lazyload/lazyload');
+        require('pc-huipai:global/layer/layer');
+
+
+        // 引入返回顶部组件
+        var go_top = require('pc-huipai:go_top');
+        var go_top_obj = new go_top({
+            render_ele: $('body') // 后加载的父容器
+        });
+
+        // 切换
+        $('[data-role="nav"]').on('click', function(event) {
+            var index = $(this).attr('data-nav');
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('[data-role="content"]').addClass('fn-hide');
+            $('[data-role="content"]').eq(index).removeClass('fn-hide');
+        });
+
+        // 详情页后加载
+        var lazyload_detail = new lazyload({
+            contain: $('[data-role="focus-img"]'), // 后加载的父容器
+            // size: '460', // 可传可不传，压位
+            img_center: {
+                is_open : true,  //是否开启图片居中功能
+                width : '500',   //图片居中盒子的宽
+                height : '500'  //图片居中盒子的高
+            }
+            // pre_load_165 : true //立刻加载165的图
+        });
+
+        // 内容后加载
+        var lazyload_detail_2 = new lazyload({
+            contain: $('[data-role="des"]'), // 后加载的父容器
+            // size: '460', // 可传可不传，压位
+            img_center: {
+                is_open : false,  //是否开启图片居中功能
+                width : '460',   //图片居中盒子的宽
+                height : '460'  //图片居中盒子的高
+            }
+            // pre_load_165 : true //立刻加载165的图
+        });
+
+
+        var size_data ; //套系规格
+        var $select_price = $('[data-role="select-price"]'); 
+        $select_price.find('button').on('click', function(event) {
+            $(this).addClass('cur').siblings('').removeClass('cur');
+            size_data = $(this).attr('data-size');
+            var price = $(this).attr('data-price');
+            $('[data-role="money_num"]').html(price)
+        });
+
+
+        $('[data-role="pai_s_xc"]').on('click', function(event) {
+            // 统计
+            utility.ajax_request
+            ({
+                url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'goods/statis_num.php',
+                data: 
+                {
+                    goods_id : '{%$ret.goods_info.goods_data.goods_id%}' ,
+                    user_id : '{%$ret.goods_info.goods_data.user_id%}' ,
+                    consult_type : 'goods'
+
+                },
+                dataType: 'json',
+                type: 'POST',
+                cache: false,
+                beforeSend: function() 
+                {
+
+                },
+                success: function(data)
+                {
+                  
+                },   
+                error: function() 
+                {
+
+                },    
+                complete: function() 
+                {
+
+                } 
+            });
+
+            if (!size_data) 
+            {
+                var index = layer.open({
+                    title: '提示信息', //标题
+                    shade: 0.5, //遮罩灰度
+                    move: false,
+                    content: '<div class="tc">请选择套系规格</div>' //内容
+                });
+                return ;
+            }
+
+            var index_1 = layer.confirm('<div class="pop-ewm fn-hide" data-role="pop-ewm"></div><div class="pop-contact-mod"><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text" placeholder="您的称呼" /><input type="text" name=" " id="tel" class="input-text"  placeholder="留下您的电话，方便联系" /></div><div class="btn"><button data-role="post-contact" class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h32"><span class="ui-button-content f14">提交</span></button></div><div class="num-box color-999">已有 <span class="num color-2bd">{%$ret.goods_info.consults%}</span> 人咨询此摄影套系</div></div>', 
+                {
+                    title: ['<div data-role="title-erweima" class="title-erweima dib"><i class="code-icon"></i>添加摄影顾问微信</div>', ''], //不显示标题
+                    shade: 0.5,
+                    move: false,
+                    area: ['600px', '310px'],
+                    btn: ['确定',''], //按钮
+                    skin : 'pai_s_xc_class',
+                }, function(){
+
+                }, function(){
+
+            });
+
+
+            // 二维码
+            $('[data-role="title-erweima"]').hover(function() {
+                console.log(1);
+                $('[data-role="pop-ewm"]').removeClass('fn-hide')
+            }, function() {
+                $('[data-role="pop-ewm"]').addClass('fn-hide')
+            });
+
+            $('[data-role="post-contact"]').on('click', function(event) {
+
+                var user_name = $.trim($('#user_name').val())
+                var tel = $.trim($('#tel').val())
+                if (!user_name) 
+                {
+                    alert('请输入您的称呼');
+                    return ;
+                }
+                if (!tel) 
+                {
+                    alert('请输入您的电话号码');
+                    return ;
+                }
+
+                var phone_len = /^\d{11}$/;
+                if(!phone_len.exec( parseInt(tel)))
+                { 
+                    alert('请输入正确手机号码');
+                    return ;
+                }
+
+                utility.ajax_request
+                ({
+                    url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'goods/contact.php',
+                    data: 
+                    {
+                        name : user_name,
+                        mobile : tel ,
+                        goods_id : '0' ,
+                        package_info  : size_data ,
+                        user_id : '{%$ret.goods_info.goods_data.user_id%}' ,
+                        consult_type : 'goods',
+                        package_type : '{%$ret.goods_info.goods_data.titles%}'
+
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    cache: false,
+                    beforeSend: function() 
+                    {
+
+                    },
+                    success: function(data)
+                    {
+                        console.log(data);
+                        layer.close(index_1);
+                        if (data.result_data.result == 1) 
+                        {
+                            var index_2 = layer.confirm('<div class="pop-contact-success-mod pop-contact-success-mod-1"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">你也可以加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+                            {
+                                    title: '提示', //不显示标题
+                                    shade: 0.5,
+                                    move: false,
+                                    area: ['600px', '270px'],
+                                    btn: ['确定',''], //按钮
+                                    skin : 'pai_s_xc_class',
+                                }, function(){
+
+                                }, function(){
+                            });
+                        }
+                        else
+                        {
+                            var index_3 = layer.confirm('<div class="pop-contact-success-mod"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">你也可以加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+                            {
+                                    title: '提示', //不显示标题
+                                    shade: 0.5,
+                                    move: false,
+                                    area: ['600px', '270px'],
+                                    btn: ['确定',''], //按钮
+                                    skin : 'pai_s_xc_class',
+                                }, function(){
+
+                                }, function(){
+                                    //  取消 do something
+
+                            });
+                        }
+                    },   
+                    error: function() 
+                    {
+
+                    },    
+                    complete: function() 
+                    {
+
+                    } 
+                });
+
+            });
+
+        });
+
+
+        $('[data-role="srdz"]').on('click', function(event) {
+            // 统计
+            utility.ajax_request
+            ({
+                url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'goods/statis_num.php',
+                data: 
+                {
+                    goods_id : '0' ,
+                    user_id : '{%$ret.goods_info.goods_data.user_id%}' ,
+                    consult_type : 'seller'
+
+                },
+                dataType: 'json',
+                type: 'POST',
+                cache: false,
+                beforeSend: function() 
+                {
+
+                },
+                success: function(data)
+                {
+                  
+                },   
+                error: function() 
+                {
+
+                },    
+                complete: function() 
+                {
+
+                } 
+            });
+
+
+            var index_1 = layer.confirm('<div class="pop-ewm fn-hide" data-role="pop-ewm"></div><div class="pop-contact-mod"><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text" placeholder="您的称呼" /><input type="text" name=" " id="tel" class="input-text"  placeholder="留下您的电话，方便联系" /></div><div class="btn"><button data-role="post-contact" class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h32"><span class="ui-button-content f14">提交</span></button></div><div class="num-box color-999">已有 <span class="num color-2bd">{%$ret.user_info.consults%}</span> 人咨询TA</div></div>', 
+                {
+                    title: ['<div data-role="title-erweima" class="title-erweima dib"><i class="code-icon"></i>添加摄影顾问微信</div>', ''], //不显示标题
+                    shade: 0.5,
+                    move: false,
+                    area: ['600px', '310px'],
+                    btn: ['确定',''], //按钮
+                    skin : 'pai_s_xc_class',
+                }, function(){
+
+                }, function(){
+
+            });
+
+            // 二维码
+            $('[data-role="title-erweima"]').hover(function() {
+                console.log(1);
+                $('[data-role="pop-ewm"]').removeClass('fn-hide')
+            }, function() {
+                $('[data-role="pop-ewm"]').addClass('fn-hide')
+            });
+
+            $('[data-role="post-contact"]').on('click', function(event) {
+
+                var user_name = $.trim($('#user_name').val())
+                var tel = $.trim($('#tel').val())
+                if (!user_name) 
+                {
+                    alert('请输入您的称呼');
+                    return ;
+                }
+                if (!tel) 
+                {
+                    alert('请输入您的电话号码');
+                    return ;
+                }
+
+                var phone_len = /^\d{11}$/;
+                if(!phone_len.exec( parseInt(tel)))
+                { 
+                    alert('请输入正确手机号码');
+                    return ;
+                }
+
+                utility.ajax_request
+                ({
+                    url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'goods/contact.php',
+                    data: 
+                    {
+                        name : user_name,
+                        mobile : tel ,
+                        goods_id : '{%$ret.goods_info.goods_data.goods_id%}' ,
+                        user_id : '{%$ret.goods_info.goods_data.user_id%}' ,
+                        consult_type : 'seller'
+
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    cache: false,
+                    beforeSend: function() 
+                    {
+
+                    },
+                    success: function(data)
+                    {
+                        console.log(data);
+                        layer.close(index_1);
+                        if (data.result_data.result == 1) 
+                        {
+                            var index_2 = layer.confirm('<div class="pop-contact-success-mod pop-contact-success-mod-1"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">你也可以加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+                            {
+                                    title: '提示', //不显示标题
+                                    shade: 0.5,
+                                    move: false,
+                                    area: ['600px', '270px'],
+                                    btn: ['确定',''], //按钮
+                                    skin : 'pai_s_xc_class',
+                                }, function(){
+
+                                }, function(){
+                            });
+                        }
+                        else
+                        {
+                            var index_3 = layer.confirm('<div class="pop-contact-success-mod"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">你也可以加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+                            {
+                                    title: '提示', //不显示标题
+                                    shade: 0.5,
+                                    move: false,
+                                    area: ['600px', '270px'],
+                                    btn: ['确定',''], //按钮
+                                    skin : 'pai_s_xc_class',
+                                }, function(){
+
+                                }, function(){
+                                    //  取消 do something
+
+                            });
+                        }
+                    },   
+                    error: function() 
+                    {
+
+                    },    
+                    complete: function() 
+                    {
+
+                    } 
+                });
+
+            });
+
+
+
+
+        });
+
+	});
+</script>
+	{%$pc_global_tj%}
+</html>

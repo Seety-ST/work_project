@@ -1,0 +1,96 @@
+<?php
+/**
+* @Desc:     商品列表      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:34:45
+* @Version:  
+*/
+include_once('common.inc.php');
+$ranks_id = 1992;
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+// $where = '1';
+// $style_where = '1';
+// $type_ids = $_INPUT['type_ids'];
+// if ($type_ids)
+// {
+//     if (is_array($type_ids))
+//     {
+//         foreach ($type_ids as $v)
+//         {
+//             $t_ids[] = (int)$v;
+//         }
+//         $type_ids = $t_ids;
+//         $t_ids = '(' . implode(',', $t_ids) . ')';
+//     }
+//     else
+//     {
+//         $t_ids = '(' . (int)$type_ids . ')';
+//         $type_ids = array();
+//         $type_ids[] = $t_ids;
+//     }
+//     $where .= " AND type_id IN {$t_ids}";
+// }
+// $style_ids = $_INPUT['style_ids'];
+// if ($style_ids)
+// {
+//     if (is_array($style_ids))
+//     {
+//         foreach ($style_ids as $v)
+//         {
+//             $s_ids[] = (int)$v;
+//         }
+//         $style_ids = $s_ids;
+//         $s_ids = '(' . implode(',', $s_ids) . ')';
+//     }
+//     else
+//     {
+//         $s_ids = '(' . (int)$style_ids . ')';
+//         $style_ids = array();
+//         $style_ids[] = $s_ids;
+//     }
+//     $style_where .= " AND style_id IN {$s_ids}";
+// }
+// $photographers_type = $_INPUT['photographers_type'];
+// if ($photographers_type == 1 || $photographers_type ==2)
+// {
+//     $photographers_type = (int)$photographers_type;
+//     $where .= " AND photographers_type={$photographers_type}";
+// }
+// $location_id = $_INPUT['location_id'];
+// if ($location_id)
+// {
+//     $where .= " AND location_id like '{$location_id}%'";
+// }
+// $sort = $_INPUT['sort'];
+// $order = $_INPUT['order'];
+// if ($sort == 'consult' || $sort == 'prices' || $sort == 'new')
+// {
+//     $order = $order == 'DESC' ? $order : 'ASC';
+//     $sort_filed = $sort == 'consult' ? "(consult_num+add_consult_num)" : ($sort=='new'?'update_time':'prices');
+//     $sort_filed .= " {$order}";
+// }
+// else
+// {
+//     $sort_filed = '((consult_num*0.5)+(pv*0.05)+(uv*0.45)) DESC';
+// }
+// $tpl = getSmartyTemplate('goods_list.tpl.html', PAIZHAO_TEMPLATES_ROOT);
+// // $data = array();
+// // if ($where == '1')
+// // {
+// //     $data = unserialize(Get(PAIZHAO_SITE_URL . '/ajax.php?action=goods_list&rank_ids='. $ranks_id));
+// // }
+$where = array(
+            'kw'=>null,
+            'sr'=>0,
+            'o'=>2,
+            'l'=>101029001,
+            'pt'=>0,
+            't'=>array(),
+            's'=>array()
+    );
+// $data = $goods_class->get_goods_list_with_style(true, $where, '0,40');
+$data = $goods_class->init_goods_num();
+var_dump($data);
+// var_dump($goods_class->get_goods_list_count_with_style($where, $style_where));
+//$tpl->display();

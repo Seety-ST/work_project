@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Circle</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body class="bgfff">
+	<!--内容-->
+	<section class="content">
+		<article class="directions-page">
+			<div class="item info-item">
+				<p>CC卡是Circle用户的身份等级卡，总共分类5个级别：LV1蓝卡、Lv2银卡、Lv3金卡、Lv4白金卡、Lv5黑金卡。</p>
+			</div>
+			<div class="item">
+				<p>当前版本如何晋升CC卡等级：</p>
+				<p>1.上一个月CC值决定了你本月CC卡等级：CC值等于上个月的“用户秀获赞总数＋帖子内容获赞总数”</p>
+			</div>
+			<div class="item">
+				<p>2.用户关注数</p>
+				<table cellpadding="0" cellspacing="0" class="item-table item-num-table">
+					<tr>
+						<th>CC卡类型</th>
+						<th>满足条件1：CC卡值</th>
+						<th>满足条件2：关注数</th>
+					</tr>
+					<tr>
+						<td>CC普通卡</td>
+						<td>小于100</td>
+						<td>关注数无条件</td>
+					</tr>
+					<tr>
+						<td>CC银卡</td>
+						<td>100-499</td>
+						<td>关注数大于50人</td>
+					</tr>
+					<tr>
+						<td>CC金卡</td>
+						<td>500-4999</td>
+						<td>关注数大于20人</td>
+					</tr>
+					<tr>
+						<td>CC白金卡</td>
+						<td>大于5000</td>
+						<td>关注数大于10人</td>
+					</tr>
+					<tr>
+						<td>CC黑金卡</td>
+						<td>连续3月大于5000</td>
+						<td>关注数无条件</td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<p>CC卡更新时间：</p>
+				<p>每个月第一天用户的CC卡等级将更新</p>
+			</div>
+			<div class="item">
+				<p>当前版本CC卡特权：</p>
+				<p>1.尊贵身份标识</p>
+			</div>
+			<div class="item">
+				<p>2.可成倍累计CC币</p>
+				<ul class="info-list">
+					<li>
+						<span class="card-name">CC蓝卡</span>
+						<span class="card-multiple">1.0倍</span>
+					</li>
+					<li>
+						<span class="card-name">CC银卡</span>
+						<span class="card-multiple">1.0倍</span>
+					</li>
+					<li>
+						<span class="card-name">CC金卡</span>
+						<span class="card-multiple">1.5倍</span>
+					</li>
+					<li>
+						<span class="card-name">CC白金卡</span>
+						<span class="card-multiple">2.0倍</span>
+					</li>
+					<li>
+						<span class="card-name">CC黑金卡</span>
+						<span class="card-multiple">3.0倍</span>
+					</li>
+				</ul>
+			</div>
+			<div class="item">
+				<p>3.内容优先被推荐</p>
+				<p>CC卡等级越高，内容被推荐至首页的几率也越大</p>
+			</div>
+			<div class="item">
+				<p>4.不同等级CC卡用户有机会参加Circle举办的不同等级Party等</p>
+			</div>
+		</article>
+	</section>
+</body>
+</html>

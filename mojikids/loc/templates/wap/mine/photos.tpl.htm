@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{%$wap_global_head%}
+        <link rel="stylesheet" href="http://localhost/mojikids/loc/static/wap/style/mine/photos.css">
+		<title>我的照片-莫吉照相馆</title>
+	
+    <link rel="stylesheet" type="text/css" href="http://localhost/mojikids/loc/static/wap/style/modules/widget/swipe/swipe.css" />
+</head>
+	<body class="cor-bg-fff" >
+		<div  id="photos-page" >
+
+		</div>
+
+	
+<script type="text/javascript" src="http://localhost/mojikids/loc/static/wap/modules/widget/swipe/extend.js"></script>
+<script type="text/javascript" src="http://localhost/mojikids/loc/static/wap/modules/widget/swipe/swipe.js"></script>
+<script type="text/javascript" src="http://localhost/mojikids/loc/static/wap/modules/widget/swipe/swipe-item.js"></script>
+<script type="text/javascript" src="http://localhost/mojikids/loc/static/wap/modules/widget/swipe/index.js"></script>
+<script type="text/javascript" src="http://localhost/mojikids/loc/static/wap/modules/mine/photos/photos.js"></script>
+<script type="text/javascript" src="http://localhost/mojikids/loc/static/wap/modules/mine/photos/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://172.18.6.41:8132/livereload.js"></script></body>
+
+</html>
+{%$wap_global_footer%}
+<script>
+ 	(function()
+	{
+		var Photos_Vue = require('wap-kids:mine/photos/index');
+
+		var order_sn = '{%$order_sn%}';
+		var p_vue = Photos_Vue.init({order_sn:order_sn});
+		p_vue.template = Photos_Vue.template;
+
+		new Vue(p_vue);
+	 })();
+</script>
+
+{%$wap_global_tj%}

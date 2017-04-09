@@ -1,0 +1,106 @@
+.camera-page .p1th {
+  padding: 50px 0px;
+  border-bottom: 1px solid #eee; }
+  .camera-page .p1th .lbox {
+    padding: 0px 100px; }
+    .camera-page .p1th .lbox .address-txt {
+      text-align: center;
+      padding-top: 20px; }
+      .camera-page .p1th .lbox .address-txt .icon {
+        vertical-align: middle; }
+      .camera-page .p1th .lbox .address-txt .txt {
+        display: inline-block;
+        vertical-align: middle; }
+  .camera-page .p1th .rbox {
+    width: 800px; }
+    .camera-page .p1th .rbox .item-2 {
+      padding-top: 40px;
+      background: url(http://paizhao.yueus.com/static/pc/image/camera/txt-bg-67x61.png) no-repeat right bottom; }
+      .camera-page .p1th .rbox .item-2 .txt-2 {
+        padding-top: 35px; }
+        .camera-page .p1th .rbox .item-2 .txt-2 .list li {
+          float: left;
+          margin-right: 65px; }
+.camera-page .p2th {
+  padding-bottom: 80px; }
+  .camera-page .p2th .item-wrap .select-list-item {
+    margin: 20px 0px;
+    background-color: #fafafa; }
+    .camera-page .p2th .item-wrap .select-list-item .classify-item .list li {
+      float: left;
+      padding: 15px 0px;
+      margin-left: 40px;
+      cursor: pointer; }
+      .camera-page .p2th .item-wrap .select-list-item .classify-item .list li.li-cur {
+        color: #2bd9d9; }
+      .camera-page .p2th .item-wrap .select-list-item .classify-item .list li:hover {
+        color: #2bd9d9; }
+    .camera-page .p2th .item-wrap .select-list-item .sort-item .list li {
+      float: left;
+      padding: 15px 0px;
+      margin-left: 40px;
+      cursor: pointer; }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li.li-cur {
+        color: #2bd9d9; }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover {
+        color: #2bd9d9; }
+        .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover .icon {
+          background-image: url(http://paizhao.yueus.com/static/pc/image/camera/down-arrow-12x12.png); }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li .icon {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 100%; }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li .sort-down-arrow {
+        background-image: url(http://paizhao.yueus.com/static/pc/image/camera/down-arrow-12x12.png); }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li .sort-up-arrow {
+        background-image: url(http://paizhao.yueus.com/static/pc/image/camera/up-arrow-12x12.png); }
+  .camera-page .p2th .item-wrap .photo-list-item .pic-list-mod-1 .txt-item .box-2 {
+    height: 42px; }
+
+.pop-contact-mod {
+  width: 500px;
+  margin: 0 auto; }
+  .pop-contact-mod .p1 {
+    text-align: center;
+    line-height: 28px;
+    padding: 0px 0 30px 0; }
+  .pop-contact-mod .it {
+    text-align: center; }
+    .pop-contact-mod .it .input-text {
+      width: 180px;
+      height: 24px;
+      line-height: 24px;
+      padding: 3px 10px;
+      border: 1px solid #ddd;
+      margin-right: 10px;
+      font-size: 14px; }
+  .pop-contact-mod .btn {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 20px; }
+  .pop-contact-mod .num-box {
+    text-align: center;
+    padding: 10px 0 0 0; }
+    .pop-contact-mod .num-box .num {
+      padding: 0px 5px; }
+
+.pai_zhao_camera_class .layui-layer-content {
+  padding: 20px 20px 25px 20px !important; }
+
+.pai_zhao_camera_class .layui-layer-btn1 {
+  display: none; }
+
+.pai_zhao_camera_class .layui-layer-btn {
+  border-top: none;
+  background-color: #fff;
+  text-align: center;
+  padding: 0px 10px 15px 15px; }
+
+.pai_zhao_camera_class .layui-layer-title .code-icon {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  background: url(http://paizhao.yueus.com/static/pc/image/camera/code-img-18x18.jpg) no-repeat center; }

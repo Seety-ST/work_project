@@ -1,0 +1,268 @@
+/**
+ * @authors @authors huangst
+ * @date    2017-01-11 09:29:59
+ * 首页
+ */
+
+.index-page{
+	.p1th{
+		background-color: #fff;
+		.item-wrap{
+			.img-item{
+				height:160px;
+				overflow: hidden;
+
+				img{
+					width:100%;
+					height:160px;
+					display:block;	
+					object-fit: cover;
+				}
+				.swiper-pagination{
+					width:98%;
+					text-align: right;
+					.swiper-pagination-bullet{
+						width:9px;
+						height: 9px;
+						background-color: #f4f4f3;
+						opacity: 1;
+						border:1px solid #d8d7d7; /* no */
+					}
+					.swiper-pagination-bullet-active{
+						background-color: #ffc430;
+					}
+				}
+				
+			}
+			
+		}
+	}
+	.p2th{
+		position:relative;
+		.item-wrap{
+			padding-top: 7px;
+			.address-item{
+				width:100%;
+				position: absolute;
+				left: 0;
+				top:-19px;
+				z-index: 1;
+				padding-top: 13px;
+				background: url(../../image/index/oval-img-197x40.png?__inline) no-repeat center top;
+				background-size: 98px 20px;
+				text-align: center;
+				
+				.address-icon{
+					width:16px;
+					height:16px;
+					display:inline-block;
+					vertical-align: middle;
+					background: url(../../image/index/address-icon-32x32.png?__inline) no-repeat center;
+					background-size: cover;
+				}
+				.address-txt{
+					vertical-align: middle;
+					color:#ff5669;
+				}
+			}
+		}
+	}
+	.p3th{
+		.item-wrap{
+			.baby-list-item{
+				.list{
+					li{
+						width:315px;
+						padding:15px;
+						margin: 15px auto 20px;
+						border-radius: 8px;
+						box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.12);
+						position:relative;
+						.img-item{
+							position:relative;
+							width: 40px;
+							height: 40px;
+							margin:0 auto;
+							.ui-avatar-icon{
+								i{
+									background-size: 100%;
+									background-position: center;
+									background-repeat: no-repeat;
+								}
+							}
+							.mark-icon{
+								width: 32px;
+								height: 32px;
+								position: absolute;
+								top:-10px;
+								left:-20px;
+								z-index: 1;
+								background-repeat: no-repeat;
+								background-size: contain;
+								background-position: center;
+								&.girl-mark-icon{
+									background-image: url(../../image/index/girl-mark-64x64.png?__inline);
+								}
+								&.boy-mark-icon{
+									background-image: url(../../image/index/boy-mark-64x64.png?__inline);
+								}
+							}
+						}
+						.txt-item{
+							padding:9px 0px 15px 0px;
+							.age-txt{
+								margin-left: 7px;
+							}
+						}
+						.else-item{
+							.txt{
+								vertical-align: middle;
+							}
+							.arrow-icon{
+								width:16px;
+								height:16px;
+								display:inline-block;
+								vertical-align: middle;
+								background:url(../../image/index/arrow-icon-32x32.png?__inline) no-repeat center;
+								background-size: 100%;
+							}
+							
+						}
+						.more-item{
+							position:absolute;
+							top:15px;
+							right:15px;
+							z-index: 1;
+							.more-btn{
+								width:27px;
+								height:27px;
+								display:inline-block;
+								background:url(../../image/index/more-btn-54x54.png?__inline) no-repeat center;
+								background-size: cover;
+							}
+						}
+					}
+				}
+			}
+			.no-data-item{
+				width:345px;
+				height:140px;
+				margin: 15px auto;
+				border-radius: 8px;
+				box-shadow: 0 0 0.15rem rgba(0, 0, 0, 0.15);
+				background: url(../../image/mine/no-data-bg-120x120.jpg) no-repeat right bottom;
+				background-size: 60px 60px;
+				.add-btn-icon{
+					width:60px;
+					height:60px;
+					display:block;
+					margin:0px auto;
+					padding-top: 25px;
+					background: url(../../image/mine/add-btn-114x114.png) no-repeat center bottom;
+					background-size:contain;
+				}
+				.text{
+					padding-top: 15px;
+				}
+			}
+		}
+	}
+	.p4th{
+		.item-wrap{
+			padding:0px 15px;
+			.list{
+				li{
+					width:100%;
+					margin-bottom: 15px;
+					.img-item{
+						width:130px;
+						height:130px;
+						.img{
+							width:130px;
+							height:130px;
+							display:inline-block;
+							background-size: cover;
+							background-position: center;
+							background-image: url(../../image/index/test/260x260.jpg);
+						}
+					}
+					.txt-item{
+						width:200px;
+						.box-2{
+							margin-top: 5px;
+							min-height: 38px;
+							
+						}
+						.box-3{
+							margin-top: 32px;
+						}
+					}
+				}
+			}
+			.more-item{
+				color:#ffa800;
+				padding:15px 0px 30px 0px;
+				opacity:.4;
+			}
+		}
+	}
+
+	
+}
+.mint-popup{
+	border-radius: 6px;
+	.add-baby-pop{
+		width:285px;
+		
+		.item-wrap{
+			padding:0px 15px;
+			.list{
+				padding:20px 15px 0px 15px;
+				li{
+					padding:8px 0px;
+					border-bottom: 1px solid #e6e6e6; /*no*/
+					&:last-child{
+						border-bottom:0;
+					}
+					.img-item{
+						position:relative;
+						width:40px;
+						height:40px;
+						margin:0 auto;
+						.ui-avatar-icon{
+							i{
+								background-size: 100%;
+								background-repeat: no-repeat;
+								background-position: center;
+							}
+						}
+						.choose-icon{
+							position:absolute;
+							right:0;
+							bottom:0;
+							z-index: 1;
+							width:14px;
+							height:14px;
+							display:inline-block;
+							background:url(../../image/index/choose-icon-28x28.png?__inline) no-repeat center;
+							background-size: cover;
+							opacity:0;
+							&.cur{
+								opacity:1;
+							}
+						}
+					}
+					.txt-item{
+						width:170px;
+						padding-top: 10px;
+					}
+				}
+			}
+			.btn-item{
+				margin:25px 0px 20px 0px;
+			}
+		}
+	}
+}
+
+	

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>首页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/index/index-page.css" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="index-page font_wryh">
+		<div class="p1th">
+			<div class="scrollBox" id="scrollBox">
+				<ul class="img_list clearfix font_wryh" id="foo2">
+					{%foreach $paizhao_goods_info.banner as $banner%}
+						<li class="banner1" style="background-image:url({%$banner.img_url%})">
+							
+						</li>
+					{%/foreach%}
+					
+				</ul>
+
+				<div class="page-wrap">
+					<a href="javascript:;" class="pre fl " id="prev2" ></a>
+					<div class="page-box fl" id="pager2">
+						<a href="javascript:;" class="selected"></a>
+						<a href="javascript:;"></a>
+						<a href="javascript:;"></a>
+					</div>
+				   <a href="javascript:;" class="next fl " id="next2" ></a>
+				</div>
+			</div>
+
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="classify-item">
+					<ul class="list clearfix">
+						{%foreach $paizhao_goods_info.package_type as $package_type%}
+						<a href="{%$package_type.link_url%}">
+							<li>
+								<div class="img-icon" style="background-image:url({%$package_type.img_url%})"></div>
+								<div class="title color-333 f14">{%$package_type.title%}</div>
+							</li>
+						</a>
+						{%/foreach%}
+					</ul>
+				</div>
+				<div class="img-item clearfix">
+					<ul class="list clearfix">
+						{%foreach $paizhao_goods_info.custom_recommend as $custom_recommend%}
+						<a href="#">
+							<li class="{%$custom_recommend.img_width%}">
+								<i class="img" style="background-image:url({%$custom_recommend.img_url%})">
+									
+								</i>
+							</li>
+						</a>
+						{%/foreach%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="p3th">
+			<div class="w1200">
+				<div class="title-item">
+					<p class="cn-title">
+						摄影机构
+					</p>
+					<p class="en-title">
+						PHOTOGRAPtHY STUDIO
+					</p>
+				</div>
+				<div class="item-wrap clearfix">
+					<a href="#" class="left-btn fldi" id="prev3"></a>
+					<ul class="list fldi clearfix" id="foo3">
+						{%foreach $paizhao_goods_info.organization as $organization%}
+						
+						
+							<li class="clearfix">
+								{%foreach $organization as $val%}
+									{%if $val.seller_id%}
+									<div class="txt-item fldi">
+										<div class="img">
+											<img src="{%$val.avatar%}" />
+										</div>
+										<div class="txt-con">
+											<p class="txt f16 color-333">{%$val.seller_name%}</p>
+											<p class="f16"><em class="tips f12">擅长</em>{%$val.remark%}</p>
+										</div>
+									</div>
+									{%/if%}
+									{%if $val.goods_id %}
+									<div class="img-item fldi">
+										<i class="img" style="background-image:url({%$val.img_url%})">
+											
+										</i>
+										<div class="txt">
+											{%$val.prices%}
+										</div>
+									</div>
+									{%/if%}
+								{%/foreach%}
+							</li>
+						
+						
+						{%/foreach%}
+						
+					</ul>
+					<a href="#" class="right-btn fldi" id="next3"></a>
+				</div>
+				<div class="more-item">
+					<a href="#" class="more-btn f14 color-333">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="p4th">
+			<div class="w1200">
+				<div class="title-item">
+					<p class="cn-title">
+						独立摄影师
+					</p>
+					<p class="en-title">
+						INDIE PHOTOGRAPHER
+					</p>
+				</div>
+				<div class="item-wrap">
+					<ul class="list clearfix">
+						{%foreach $paizhao_goods_info.photographers as $val%}
+						<a href="#">
+							<li>
+								<div class="img">
+									<img src="{%$val.img_url%}" />
+								</div>
+								<div class="txt-item clearfix">
+									<div class="lbox fldi">
+										<i class="avator-icon" style="background-image:url({%$val.avatar%})"></i>
+									</div>
+									<div class="rbox fldi">
+										<p class="txt-1 f14 color-333">
+											{%$val.seller_name%}
+										</p>
+										<p class="txt-2 f14">
+											{%$val.goods_info%}{%$val.goods_num%}
+										</p>
+									</div>
+								</div>
+							</li>
+						</a>
+						{%/foreach%}
+
+						
+					</ul>
+				</div>
+				<div class="more-item">
+					<a href="#" class="more-btn f14 color-333">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="p5th">
+			<div class="w1200">
+				<div class="title-item">
+					<p class="cn-title">
+						热门拍摄
+					</p>
+					<p class="en-title">
+						HOT PHOTOGRAPHY
+					</p>
+				</div>
+				<div class="item-wrap">
+					<ul class="list clearfix">
+						{%foreach $paizhao_goods_info.hot_goods as $val%}
+						<a href="#">
+							<li class="{%$val.img_width%}">
+								<div class="img-item">
+									<i class="img" style="background-image:url({%$val.img_url%})"></i>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 clearfix">
+										<span class="txt-1 fldi">{%$val.prices%}</span>
+										<span class="txt-2 frdi">{%$val.consults%}</span>
+									</div>
+									<div class="box-2">
+										<p class="txt-1 color-666"><span class="fb">{%$val.type_name%}</span>{%$val.title%}</p>
+									</div>
+								</div>
+							</li>
+						</a>
+						{%/foreach%}
+
+					</ul>
+				</div>
+				<div class="more-item">
+					<a href="#" class="more-btn f14 color-333">查看更多</a>
+				</div>
+			</div>
+		</div>
+		<div class="p6th">
+			<div class="w1200">
+				<ul class="list clearfix">
+					{%foreach $paizhao_goods_info.footer as $val%}
+					<a href="{%$val.link_url%}">
+						<li>
+							<div class="img-item">
+								<img src="{%$val.img_url%}" />
+							</div>
+							<div class="text-item">
+								<p class="title">
+									{%$val.content%}
+								</p>
+								<p class="txt f14 color-666">
+									{%$val.remark%}
+								</p>
+							</div>
+						</li>
+					</a>
+					{%/foreach%}
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		// var carouFredSel = require('../../modules/carouFredSel/jquery.carouFredSel-5.5.0');
+		// $('#foo2').carouFredSel({
+		// 	prev: '#prev2',
+		// 	next: '#next2',
+		// 	pagination: "#pager2",
+		// 	auto: true
+		//  });
+
+		// $('#foo3').carouFredSel({
+		// 	prev: '#prev3',
+		// 	next: '#next3',
+		// 	auto: false
+		//  });
+
+		require.async('pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0',function()
+		{
+			$('#foo2').carouFredSel({
+				prev: '#prev2',
+				next: '#next2',
+				pagination: "#pager2",
+				auto: true,
+				scroll:
+				{
+					fx: "crossfade"
+				}
+			 });
+
+			$('#foo3').carouFredSel({
+				prev: '#prev3',
+				next: '#next3',
+				auto: false
+			 });
+		});
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

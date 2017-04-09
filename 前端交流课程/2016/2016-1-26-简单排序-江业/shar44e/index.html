@@ -1,0 +1,86 @@
+<html>
+<head>
+    <script src="CArray.js"></script>
+    <title>算法测试</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    var log_tip = true; //是否打印过程 会增加额外时间
+    var head = true; //是否打印原始数据与结果
+    var nums = 10; //数据长度
+
+    if(log_tip && head == true)
+    {
+        confirm("打印计算过程会影响测试时间")
+    }
+
+    var time_obj =
+    {
+        bubbleSort_start : '',
+        bubbleSort_end : '',
+        selectionSort_start : '',
+        selectionSort_end : '',
+        insertionSort_start : '',
+        insertionSort_end : ''
+    };
+
+    //100个随机数
+    var numElements_r = 100;
+    print("===========产生" + numElements_r +"个随机数============");
+    var myNums_r = new CArray(numElements_r);
+    myNums_r.setData();
+    head && print(myNums_r.toString());
+
+    //冒泡排序
+    var numElements_b = nums;
+    print("===========冒泡排序" + numElements_b +"个随机数============");
+    var mynums_b = new CArray(numElements_b);
+    mynums_b.setData();
+    head && print("原始数据");
+    head && print(mynums_b.toString());
+    time_obj.bubbleSort_start = new Date().getTime();
+    mynums_b.bubbleSort(log_tip);
+    time_obj.bubbleSort_end = new Date().getTime();
+    head && print("结果");
+    head && print(mynums_b.toString());
+
+    //选择排序
+    var numElements_s = nums;
+    print("===========选择排序" + numElements_s +"个随机数============");
+    var mynums_s = new CArray(numElements_s);
+    mynums_s.setData();
+    head && print("原始数据");
+    head && print(mynums_s.toString());
+    time_obj.selectionSort_start = new Date().getTime();
+    mynums_s.selectionSort(log_tip);
+    time_obj.selectionSort_end = new Date().getTime();
+    head && print("结果");
+    head && print(mynums_s.toString());
+
+    //插入排序
+    var numElements_i = nums;
+    print("===========插入排序" + numElements_i +"个随机数============");
+    var mynums_i = new CArray(numElements_i);
+    mynums_i.setData();
+    head && print("原始数据");
+    head && print(mynums_i.toString());
+    time_obj.insertionSort_start = new Date().getTime();
+    mynums_i.insertionSort(log_tip);
+    time_obj.insertionSort_end = new Date().getTime();
+    head && print("结果");
+    head && print(mynums_i.toString());
+
+    print("=======================冒泡排序耗时：" + parseInt(time_obj.bubbleSort_end - time_obj.bubbleSort_start))
+    print("=======================选择排序耗时：" + parseInt(time_obj.selectionSort_end - time_obj.selectionSort_start))
+    print("=======================插入排序耗时：" + parseInt(time_obj.insertionSort_end - time_obj.insertionSort_start))
+
+
+
+
+
+
+</script>
+</html>

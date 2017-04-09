@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<link rel="import" href="../webcontrol/head.tpl.htm?__inline">
+	<link href="../../style/index/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body bgcolor="#fafafa">
+<main role="main">
+	<!-- 头部内容 -->
+	
+	<!-- 页面内容 -->
+	<div class="index-page">
+		<div class="item-wrap">
+			<div class="search-item">
+				<div class="lbox">
+					<div class="item">
+						<i class="arrow-icon"></i>
+						<em class="txt f14 fldi color-333">摄影套系</em>
+					</div>
+					<div class="pop-item dn">
+						<i class="triangle-icon">
+							
+						</i>
+						<ul class="list f14 color-333">
+							<li>
+								摄影套系
+							</li>
+							<li>
+								摄影套系
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="rbox">
+					<input type="text" class="input-txt color-ccc"  placeholder="搜索摄影套系"/>
+				</div>
+			</div>
+			<div class="content">
+				<div class="p1th">
+					<div class="swiper-container" id="swiper-container-1" >
+						<ul class="list swiper-wrapper clearfix" >
+							<li data-role="swipe">
+								<a href="#">
+									<i class="img" ></i>
+								</a>
+							</li>
+						</ul>
+						
+						<!-- 如果需要分页器 -->
+						<div class="swiper-pagination" id="swiper-pagination-1">
+							<span class="swiper-pagination-bullet"></span>
+							<span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+<script type="text/javascript" src="http://localhost/paizhao/loc/static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"></script>
+<script type="text/javascript">
+
+	$(function() 
+	{
+		// banner
+		var mySwiper_1 = new Swiper ('#swiper-container-1',{
+		    direction: 'horizontal',
+		    loop: false,
+		    autoplay : false,
+		    // speed:false,
+		    // 如果需要分页器
+		    pagination: '#swiper-pagination-1'
+		});
+
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>

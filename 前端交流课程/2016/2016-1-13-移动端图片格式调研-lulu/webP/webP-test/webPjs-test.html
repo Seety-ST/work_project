@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="GBK" >
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>漫时</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<body class="bg-img">
+    <div class="test">
+        <p class="note"></p>
+        <p>1.图片应用</p>
+        <!-- img图片 -->
+        <img alt="" data-img="images/750x1214.jpg" data-pinit="registered" />
+        <br />
+        <p>2.背景应用</p>
+        <!-- 样式中的图片 -->
+        <div class="img"></div>
+    </div>
+    <!-- 判别浏览器是否支持webP图片格式JS -->
+    <script type="text/javascript">
+    var testWebp = function(callback){
+                var image = new Image();
+                image.onerror = function() {
+                  callback(false);
+                };
+                image.onload = function() {
+                  callback(image.width == 1);
+                };
+                image.src = 'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAAAUAgCdASoBAAEAL/3+/3+CAB/AAAFzrNsAAP5QAAAAAA==';
+            },webSrc = function(src){
+                var suffix = src.lastIndexOf('.');
+                suffix = src.substr(suffix);
+                if (/png|jpg/.test(suffix)){
+                    return src.substr(0,(src.length-3))+'webp';
+                }else{
+                    return src;
+                }
+            }
+            $(function(){
+                var $note = $('.note');
+                testWebp(function(SUP){
+                    var $img = $('img[data-img]');
+                    if(SUP){
+                        $('body').addClass('mod-webp');
+                        $img.each(function(i,o){
+                            var $o = $(o),
+                                src = $o.attr('data-img');
+                            $o.attr('src',webSrc(src));
+                        });
+                        $note.html('你载入的是<strong>webp</strong>格式');
+                    }else{
+                        $('body').addClass('mod-nowebp');
+                        $img.each(function(i,o){
+                            var $o = $(o),
+                                src = $o.attr('data-img');
+                            $o.attr('src',src);
+                        });
+                        $note.html('你载入的是<strong>png、jpg</strong>格式');
+                    }
+                });
+            });
+    </script>
+</body>
+</html>

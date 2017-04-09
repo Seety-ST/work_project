@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://paizhao.yueus.com/static/pc/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	
+	
+
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/no-use/no-use.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/common/main.css">
+<!-- 当前页css  -->
+	<!-- <link charset="utf-8" rel="stylesheet" href="../style/xxxx.scss"> -->
+
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+
+<body>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		<div class="ui-frame-nav ">
+			<ul class="list" id="list">
+
+
+				<div class="title">基本</div>
+				<a href="color.htm" class="link"><li>颜色 color</li></a>
+		
+				
+
+
+				<div class="title">通用模块</div>
+				<a href="layer.htm" class="link"><li>layer 弹出组件</li></a>
+			
+
+			</ul>
+		</div>
+
+		<div class="ui-frame-content">
+			<div class="main">拍照UI规范库</div>
+		</div>
+
+	</div>
+
+</body>
+
+
+<script type="text/javascript">
+$(function() {
+
+	$('#list > .link').on('click', function(event) {
+		var href = $(this).attr('href').toString();
+		localStorage.setItem('value', href);
+	});
+
+	var is_value = localStorage.getItem('value') ;
+	if (is_value) 
+	{
+		$('#list').find('.link').each(function(index, el) {
+			if ($(this).attr('href').toString() == is_value ) 
+			{
+			    $(this).find('li').addClass('cur');
+			}
+		});
+	}
+
+});
+
+</script>
+
+
+
+</html>
+

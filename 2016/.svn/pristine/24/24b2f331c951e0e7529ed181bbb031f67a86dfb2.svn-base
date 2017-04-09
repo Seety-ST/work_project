@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="gbk" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>爽拍应用指南</title>
+	<link href="css/wap.css?v6" type="text/css" rel="stylesheet" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<script src="js/lazysizes.min.js" async=""></script>
+<body>
+	<section class="mask-page">
+		<div class="bg"><img  src="images/bg-item-750x16642.png" class="lazyload" /></div>
+		<section class="header-item">
+			<img data-sizes="auto" data-src="images/header-bg-750x1077.jpg"  class="lazyload" />
+		</section>
+		<section class="mod-item beauty-item">
+			<div class="item">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/1/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 按钮 -->
+				<div class="mod-download-item">
+					<!-- 下载美人相机按钮 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载美人相机</span>
+						</a>
+					</div>
+					<!-- 抢先预览按钮 -->
+					<div class="btn-item see-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>更多美人作品</span>
+						</a>
+					</div>
+				</div>
+				<!-- 按钮 end -->
+			</div>
+		</section>
+		<section class="mod-item jane-item">
+			<div class="item">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/2/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 按钮 -->
+				<div class="mod-download-item" >
+					<!-- 下载简拼按钮 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载简拼</span>
+						</a>
+					</div>
+					<!-- 抢先预览按钮 -->
+					<div class="btn-item see-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>更多精彩作品</span>
+						</a>
+					</div>
+				</div>
+				<!-- 按钮 end -->
+			</div>
+		</section>
+		<section class="mod-item janplus-item">
+			<div class="item">
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/3/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 下载按钮 -->
+				<div class="mod-download-item" >
+					<!-- 下载简客按钮 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载简客</span>
+						</a>
+					</div>
+				</div>
+				<!-- 下载按钮 end -->
+			</div>
+		</section>
+		<section class="mod-item interphoto-item">
+			<div class="item">
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/4/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 下载按钮 -->
+				<div class="mod-download-item" >
+					<!-- 下载 Interphoto按钮 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载 Interphoto</span>
+						</a>
+					</div>
+				</div>
+				<!-- 下载按钮 end -->
+			</div>
+		</section>
+		<section class="mod-item poco-item">
+			<div class="item">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/5/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 按钮 -->
+				<div class="mod-download-item" >
+					<!-- 下载POCO相机 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载POCO相机</span>
+						</a>
+					</div>
+					<!-- 抢先预览按钮 -->
+					<div class="btn-item see-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>更多在路上作品</span>
+						</a>
+					</div>
+				</div>
+				<!-- 按钮 end -->
+			</div>
+		</section>
+		<section class="mod-item hcq-item">
+			<div class="item">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/6/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 按钮 -->
+				<div class="mod-download-item" >
+					<!-- 下载图片合成器 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载图片合成器</span>
+						</a>
+					</div>
+					<!-- 抢先预览按钮 -->
+					<div class="btn-item see-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>更多创意作品</span>
+						</a>
+					</div>
+				</div>
+				<!-- 按钮 end -->
+			</div>
+		</section>
+		<section class="mod-item small-item">
+			<div class="item">
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/mod-item/7/con-item.jpg"  class="lazyload" />
+				</div>
+				<!-- 下载按钮 -->
+				<div class="mod-download-item" >
+					<!-- 下载小美人儿 -->
+					<div class="btn-item download-item">
+						<a href="#" class="btn-area">
+							<i class="icon"></i>
+							<span>下载小美人儿</span>
+						</a>
+					</div>
+				</div>
+				<!-- 下载按钮 end -->
+			</div>
+		</section>
+		<!-- 分享组 -->
+	   	<section class="share-item">
+		   <div class="listItem"></div>
+		   <div class="list clearfix">
+			   <ul>
+					<li>
+						<a href="#">
+							<i class="s-icon friend-icon"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="s-icon wx-icon"></i>
+						</a>
+					</li>
+					<li style="display:">
+						<a href="#">
+							<i class="s-icon wb-icon"></i>
+						</a>
+					</li>
+					<li style="display:none">
+						<a href="#">
+							<i class="s-icon qzone-icon"></i>
+						</a>
+					</li>
+					<li style="display:none">
+						<a href="#">
+							<i class="s-icon qzone-icon"></i>
+						</a>
+					</li>
+			   </ul>
+		   </div>
+	   </section>
+		<!-- 分享组 end -->
+	</section>
+	<script>
+	window.lazySizesConfig = {
+		addClasses: true
+	};
+	</script>
+</body>
+</html>

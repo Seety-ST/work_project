@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="GBK" >
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>必胜客</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+<body>       
+    <section class="bszkp-page">
+       <hgroup class="mod-bar-item">
+           <h1 class="logo-item">
+               <a href="#" class="icon-area">
+                   <i class="icon"></i>
+               </a>
+           </h1>
+           <h2 class="back-item">
+               <a href="#" class="icon-area">
+                   <i class="icon btn"></i>
+               </a>
+           </h2>
+       </hgroup>
+       <div class="con-item">
+           <div class="listItem"></div>
+           <div class="gift-item"></div>
+           <div class="btn-item">
+             <a href="#" class="btn"></a>
+           </div>
+       </div>
+    </section>
+</body>
+</html>

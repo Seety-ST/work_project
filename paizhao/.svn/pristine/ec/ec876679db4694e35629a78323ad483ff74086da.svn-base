@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{%$page_title%}</title>
+    <meta name="keywords" content="{%$meta_keywords%}">
+    <meta name="description" content="{%$meta_description%}">
+    {%$wap_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+    <!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+    <link href="../../style/search/list.scss" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+</body>
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+    var LZ = require('wap-huipai:global/lazyload/lazyload');
+    var go_top = require('wap-huipai:global/go_top/go_top');
+
+    $(function(){
+
+
+
+        new LZ($('body'),{
+            // size : window.innerWidth
+        });
+
+        // 返回顶部按钮
+        new go_top({
+            render_ele : $('body')
+        })
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>摄影师主页</title>    
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/camera/index-page.css">
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="camera-page font_wryh">
+		<div class="p1th">
+			<div class="w1200 clearfix">
+				<div class="lbox fldi">
+					<div class="avatar-item">
+						<div class="ui-avatar-icon ui-avatar-icon-120">
+							<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+						</div>
+						<p class="address-txt">
+							<i class="icon icon-circle-address ui-icon-size-16 dib"></i>
+							<em>广州</em>
+						</p>
+					</div>
+				</div>
+				<div class="rbox frdi"></div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"></script>
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		require.async('pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0',function()
+		{
+			$('#foo2').carouFredSel({
+				prev: '#prev2',
+				next: '#next2',
+				pagination: "#pager2",
+				auto: true,
+				scroll:
+				{
+					fx: "crossfade"
+				}
+			 });
+
+			$('#foo3').carouFredSel({
+				prev: '#prev3',
+				next: '#next3',
+				auto: false
+			 });
+		});
+
+		// 图片后加载处理
+		var lazyload = require('pc-huipai:global/lazyload/lazyload');
+	
+		var lazyload_obj1 = new lazyload({
+			contain: $('[data-role="img_cen1"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false
+			},
+			flag : 'data-src'
+		});
+		var lazyload_obj2 = new lazyload({
+			contain: $('[data-role="img_cen2"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false
+			},
+			flag : 'data-src'
+		});
+		var lazyload_obj3 = new lazyload({
+			contain: $('[data-role="img_cen3"]'), // 后加载的父容器  
+			img_center: {
+				is_open : true,
+				width : '285',
+				height : '285'
+			},
+			flag : 'data-src'
+		});
+		var lazyload_obj4 = new lazyload({
+			contain: $('[data-role="img_cen4"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false
+			},
+			flag : 'data-src'
+		});
+
+		var lazyload_obj5 = new lazyload({
+			contain: $('[data-role="img_cen5"]'), // 后加载的父容器  
+			img_center: {
+				is_open : true,
+				width : '128',
+				height : '128'
+			},
+			flag : 'data-src'
+		});
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

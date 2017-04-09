@@ -1,0 +1,896 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>无标题文档</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	
+	<div class="header">
+		<div class="w1000">
+			<div class="nav-wrap clearfix">
+				<div class="nav-item">
+						<img src="images/ll-nav-1.png" usemap="#Map" border="0" />
+		                    <map name="Map" id="Map">
+		                      <area shape="poly" coords="29,1,0,48,84,46,114,-4" href="#" />
+		                      <area shape="poly" coords="118,0,91,45,209,47,239,-1" href="#" />
+		                      <area shape="poly" coords="243,-1,218,44,335,48,361,1" href="#" />
+		                      <area shape="poly" coords="370,-1,342,46,460,47,489,0" href="#" />
+		                      <area shape="poly" coords="466,47,496,-3,613,-1,586,45" href="#" />
+		                      <area shape="poly" coords="618,-2,591,46,754,48,780,-3" href="#" />
+		                    </map>
+				  </div>
+				<div class="login-item">
+					<a href="#">登录</a>/<a href="#">注册</a>
+				</div>
+			</div>
+			<h1 class="logo-item">
+				<a href="#"></a>
+			</h1>
+		</div>
+	</div>
+	<div class="content">
+		<div class="index-page font_wryh">
+		<div class="w1000">
+			<div class="path1">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<div class="text-item">
+						<p>钟情严谨的构图细节？喜爱动感的活力影像？ 拥有自己的黑色态度？无论你是哪一种，来这里，上传最能象征新速腾R-Line的出位影像，用光影、色彩，引领新一代的风尚视觉！</p>
+					</div>
+					<div class="info-item">
+						<img src="images/ll-img-12.png" />
+					</div>
+					<div class="join-btn">
+						<a href="#" class="btn"></a>
+					</div>
+				</div>
+			</div>
+			<div class="path2">
+				<div class="listItem"></div>
+				<a href="#" class="more">更多&gt;&gt;</a>
+				<div class="tab-wrap">
+					<div class="tab-nav clearfix">
+						<ul>
+							<li class="cur" id="on1" >
+								<a class="nav-1" href="#this" onclick="tab('on',1,4)">严谨即风尚</a>
+							</li>
+							<li id="on2">
+								<a class="nav-2" href="#this"  onclick="tab('on',2,4)">动感即风尚</a>
+							</li>
+							<li class="" id="on3" >
+								<a class="nav-3" href="#this" onclick="tab('on',3,4)">黑色即风尚</a>
+							</li>
+							<li class="" id="on4" >
+								<a class="nav-4" href="#this" onclick="tab('on',4,4)">POCO相机作品</a>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-con">
+						<div class="list"  id="c-on1" style="display: ;" >
+							<ul>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list"  id="c-on2" style="display: none;" >
+							<ul>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空22</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list"  id="c-on3" style="display: none;" >
+							<ul>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空33</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="img-item">
+										<a href="#">
+											<img src="images/test/229x229.jpg" />
+										</a>
+									</div>
+									<div class="text-item">
+										<dl class="info">
+											<dt>坠入深空</dt>
+											<dd>Junhee_晴天</dd>
+										</dl>
+										<div class="zan-item">
+											<a href="#">
+												<i class="icon"></i>
+												<em>83</em>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="list"  id="c-on4" style="display: none;" >
+							<ul>
+								<div style="text-align:center; margin:20px 0; ">
+									 <img src="images/poco-codeimg-115x115.png" style="display:block; margin:0 auto 10px;">
+									<p>
+										下载POCO相机APP，9月12日，成为新速腾R-Line影像拍客！
+									</p>
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="path3">
+				<div class="listItem"></div>
+					<div class="mod-lookback-item">
+						<div id="look-imglist">
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/1.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/2.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/3.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/4.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/5.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/6.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/7.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/8.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/9.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/10.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/11.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/12.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/13.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/14.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/15.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/16.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/17.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/18.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/19.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+							<div class="look-item">
+								<div class="img-item">
+									<a href="http://vw.faw-vw.com/newsagitar-rline" target="_blank">
+										<img src="images/banner-img/20.jpg" alt="" class="img-responsive" />
+									</a>
+								</div>
+							</div>
+						</div>
+						<pre id="prev">&nbsp;</pre>
+						<pre id="next">&nbsp;</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+	<!-- 获奖名单弹出层 -->
+	<div class="fade"></div>
+	<div class="pop-jjmd">
+		<div class="close">
+			<input type="image" src="images/ll-img-16.png" />
+		</div>
+		<div class="pop-con font_wryh">
+			<div class="item-list">
+				<div class="item">
+					<div class="listItem">一等奖：1名</div>
+					<div class="list clearfix">
+						<ul>
+							<li>
+								<div class="img-item">
+									<a href="http://www1.poco.cn/topic/sagitar_201609/index.php?r=showlist/showfinal&show_id=4968">
+										<img src="images/jjmd-img/1/1.jpg" />
+									</a>
+								</div>
+								<div class="text-item">
+									<dl class="info">
+										<dt>园游会</dt>
+										<dd>5CM/S</dd>
+									</dl>
+									<div class="zan-item">
+										<a href="#">
+											<i class="icon"></i>
+											<em>686</em>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="info">
+						* <span class="normal">获得奖品为</span>GoPro HERO session 迷你小巧高清运动摄像机1台；<span class="normal">新速腾R-Line</span>一周免费使用权
+					</div>
+				</div>
+				<div class="item">
+					<div class="listItem">二等奖：2名</div>
+					<div class="list clearfix">
+						<ul>
+							<li>
+								<div class="img-item">
+									<a href="http://www1.poco.cn/topic/sagitar_201609/index.php?r=showlist/showfinal&show_id=328">
+										<img src="images/jjmd-img/2/1.jpg" />
+									</a>
+								</div>
+								<div class="text-item">
+									<dl class="info">
+										<dt>光影</dt>
+										<dd>小爷我要纳妾啦</dd>
+									</dl>
+									<div class="zan-item">
+										<a href="#">
+											<i class="icon"></i>
+											<em>517</em>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<a href="http://www1.poco.cn/topic/sagitar_201609/index.php?r=showlist/showfinal&show_id=699">
+										<img src="images/jjmd-img/2/2.jpg" />
+									</a>
+								</div>
+								<div class="text-item">
+									<dl class="info">
+										<dt>东京铁塔</dt>
+										<dd>Yoko</dd>
+									</dl>
+									<div class="zan-item">
+										<a href="#">
+											<i class="icon"></i>
+											<em>480</em>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="info">
+						* <span class="normal">获得奖品为</span>小蚁（YI）4K运动相机1部
+					</div>
+				</div>
+				<div class="item">
+					<div class="listItem">三等奖：3名</div>
+					<div class="list clearfix">
+						<ul>
+							<li>
+								<div class="img-item">
+									<a href="http://www1.poco.cn/topic/sagitar_201609/index.php?r=showlist/showfinal&show_id=1080">
+										<img src="images/jjmd-img/3/1.jpg" />
+									</a>
+								</div>
+								<div class="text-item">
+									<dl class="info">
+										<dt>舞动皮寮湾</dt>
+										<dd>今生缘/S</dd>
+									</dl>
+									<div class="zan-item">
+										<a href="#">
+											<i class="icon"></i>
+											<em>431</em>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<a href="http://www1.poco.cn/topic/sagitar_201609/index.php?r=showlist/showfinal&show_id=842">
+										<img src="images/jjmd-img/3/2.jpg" />
+									</a>
+								</div>
+								<div class="text-item">
+									<dl class="info">
+										<dt>动感瞬间</dt>
+										<dd>5CM/S</dd>
+									</dl>
+									<div class="zan-item">
+										<a href="#">
+											<i class="icon"></i>
+											<em>390</em>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="img-item">
+									<a href="http://www1.poco.cn/topic/sagitar_201609/index.php?r=showlist/showfinal&show_id=1053">
+										<img src="images/jjmd-img/3/3.jpg" />
+									</a>
+								</div>
+								<div class="text-item">
+									<dl class="info">
+										<dt>新城主力G20</dt>
+										<dd>乙清</dd>
+									</dl>
+									<div class="zan-item">
+										<a href="#">
+											<i class="icon"></i>
+											<em>384</em>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="info">
+						* <span class="normal">获得奖品为</span>富士（FUJIFILM）趣奇俏便携式手机照片打印机1台
+					</div>
+				</div>
+				<div class="item lucky-item">
+					<div class="listItem">幸运奖：20名</div>
+					<div class="md-item">
+						高妞妞GNN、碧绿马甲、6小菲菲儿6、贤王的伤、smal小月、小小的泽语、sj.天行健、xiewen0915、蓉松的小屋、Matthieu、传风lapo、liu_jiao_jiao、难得糊涂一老翁、媛媛的Home、白羊座的Skye、活力的黄小米、泰哥猛虎、幸福的晟晟、听海问涛、miss桃
+					</div>
+				</div>
+				<div class="tips">
+					恭喜一等奖获奖者5cm/s成为新速腾R-Line风尚拍客
+					<br />
+					9月26日风尚大片曝光，敬请期待！
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 获奖名单弹出层end -->
+</body>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/img-js.js"></script>
+<script langauge="javaScript" type="text/javascript">
+
+function tab(name,num,end)
+{
+		for(i=1;i<=end;i++)
+		{
+				var d=document.getElementById(name+i);
+				var a=document.getElementById("c-"+name+i);
+				d.className=i==num?"cur":"";
+				a.style.display=i==num?"block":"none"
+		}
+}
+
+
+
+/* 焦点图 */
+var carousel = $("#look-imglist").featureCarousel({});
+
+</script>
+
+
+</html>

@@ -1,0 +1,80 @@
+.pop-back {
+  position: fixed;
+  top: 35%;
+  right: 10px; }
+  .pop-back .list {
+    border: 1px solid #dedddd; }
+    .pop-back .list li {
+      width: 120px;
+      text-align: center;
+      height: 38px;
+      line-height: 38px;
+      background-color: #f8f8f8;
+      color: #2db7f5;
+      cursor: pointer;
+      -webkit-transition: all 0.2s ease-out 0s;
+      -moz-transition: all 0.2s ease-out 0s;
+      -o-transition: all 0.2s ease-out 0s; }
+      .pop-back .list li:hover {
+        background-color: #E6E5E4; }
+    .pop-back .list li:nth-child(1) {
+      border-bottom: 1px solid #dedddd; }
+
+.pc-ui-frame {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px 0 0;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 5px #cdcdcd;
+  -moz-box-shadow: 0 0 5px #cdcdcd;
+  box-shadow: 0 0 5px #cdcdcd; }
+  .pc-ui-frame .ui-frame-content {
+    border-left: 1px solid #e9e9e9;
+    padding: 0 40px 120px;
+    background: #fff;
+    min-height: 500px;
+    overflow: hidden;
+    border-radius: 0 0 6px 6px; }
+  .pc-ui-frame .ui-frame-nav {
+    width: 300px;
+    padding-bottom: 50px;
+    float: left;
+    border-right: 1px solid #e9e9e9;
+    margin-right: -1px; }
+    .pc-ui-frame .ui-frame-nav .list .title {
+      font-size: 18px;
+      padding: 50px 0 10px 40px;
+      color: #2db7f5; }
+    .pc-ui-frame .ui-frame-nav .list li {
+      color: #666;
+      padding: 10px 0 10px 80px;
+      font-size: 14px;
+      border-left: 4px solid #fff;
+      -webkit-transition: all 0.2s ease-out 0s;
+      -moz-transition: all 0.2s ease-out 0s;
+      -o-transition: all 0.2s ease-out 0s; }
+      .pc-ui-frame .ui-frame-nav .list li:hover {
+        cursor: pointer;
+        background: #f8f8f8;
+        border-left: 4px solid #ff5f3e; }
+    .pc-ui-frame .ui-frame-nav .list a:hover {
+      text-decoration: none; }
+      .pc-ui-frame .ui-frame-nav .list a:hover li {
+        color: #ff5f3e; }
+    .pc-ui-frame .ui-frame-nav .list .cur {
+      background: #f8f8f8;
+      border-left: 4px solid #ff5f3e; }
+  .pc-ui-frame .main {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 220px;
+    color: #2db7f5; }
+  .pc-ui-frame .content {
+    margin: 0 auto;
+    width: 1200px; }
+  .pc-ui-frame .main-title {
+    font-size: 22px;
+    padding: 30px 0 50px 0;
+    color: #2db7f5; }

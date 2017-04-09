@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	
+	<link href="../../style/goods/succeed.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body bgcolor="#fafafa">
+<main role="main" class="main-top">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="succeed-page">
+		<div class="item-wrap tc">
+			
+			{%if $result==1 %}
+			<i class='smile-icon  smile-1'></i>
+			<div class="txt-item color-24c">
+				    提交成功！<br>
+				  摄影顾问很快就会给您打电话啦~
+			</div>
+			{%elseif $result==-2 %}
+			<i class='smile-icon  smile-2'></i>
+			<div class="txt-item color-24c">
+				  您已留下过咨询信息啦！<br>
+				摄影顾问很快就会给您打电话啦~
+			</div>
+			{%/if%}
+			<div class="code-item">
+				<div class="img">
+					<img src="../../image/goods/code-img-480x480.jpg" />
+				</div>
+				<div class="txt f14 color-aaa tc">您也可以添加摄影顾问微信</div>
+			</div>
+		</div>
+		<a href="//www.51snap.cn/" class="tdn">
+			<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h45">
+			           <span class="ui-button-content f14">进入首页，发现更多套系</span>
+			</button>
+		</a>
+	</div>
+
+
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+	var LZ = require('wap-huipai:global/lazyload/lazyload');
+	var header = require('wap-huipai:global/header/main');
+	$(document).ready(function() {
+
+		// 渲染头部
+		var header_obj = header.init({
+			ele : $("#global-header"), //头部渲染的节点
+			title:"提交成功！",
+			header_show : true , //是否显示头部
+			mt_0_ele : $('#seller-detail-page'), //如果头部隐藏，要把当前页节点margin-top改为0
+			left_icon_show : false,
+			right_icon_show : true, //是否显示右边的按钮
+			share_icon : 
+			{
+				show :false,  //是否显示分享按钮icon
+				content:""
+			},
+			omit_icon :
+			{
+				show :false,  //是否显示三个圆点icon
+				content:""
+			},
+			show_txt :
+			{
+				show :false,  //是否显示文字
+				content:"编辑"  //显示文字内容
+			},
+			search_icon : 
+			{
+				show :false,  //是否搜索icon
+				content:""  //显示文字内容
+			},
+			go_index :
+			{
+				show :true,  //是否搜索icon
+			}
+		});
+			  
+		
+		
+	    	
+		
+
+	 
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>
+
+
+
+
+
+

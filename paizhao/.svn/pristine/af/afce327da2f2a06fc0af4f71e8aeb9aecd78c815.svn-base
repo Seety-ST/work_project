@@ -1,0 +1,213 @@
+<?php
+/*
+ * //商品列表页
+ *
+ * //author   xingxing
+ *
+ *
+ * 2016-11-21
+*/
+
+
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+
+
+/*******************配置数组*********************/
+//摄影师类型
+$goods_photographers_arr = array("2"=>array("name"=>"摄影机构"),"1"=>array("name"=>"独立摄影师"));
+
+
+
+/*******************配置数组end*********************/
+
+//排序参数
+$pt = (int)$_INPUT["pt"];
+$sort = trim($_INPUT['sort']);
+$order = trim($_INPUT['order']);
+$keyword = urldecode(trim($_INPUT['kw']));
+
+//页面获取参数
+$lid = (int)$_INPUT["lid"];//地址参数
+
+if(!empty($lid))
+{
+    $location_name = get_location_name_by_location_id($lid,true);
+    $lid_tmp = $lid;
+}
+else
+{
+    //如果没有传，获取默认第一个
+    /*$lid_tmp = 101029001;
+    $location_name = get_location_name_by_location_id($lid_tmp,true);*/
+    $lid_tmp = 0;
+    $location_name = "请选择";
+}
+
+
+//排序条件
+
+
+//临时排序数组
+$tmp_sort_arr = array(
+    array("key"=>"0","name"=>"综合"),
+    array("key"=>"1","name"=>"人气")
+);
+
+//根据筛选条件，配置最终排序数组的结构状态
+foreach($tmp_sort_arr as $key => $value)
+{
+    //区分是否地区跟其他条件排序，根据页面模式添加特殊class
+
+    //判断是否有条件
+    if(!empty($sort))
+    {
+        if($value["key"]==$sort)
+        {
+            $value["cur_class"] = "cur";
+
+        }
+
+
+    }
+    else
+    {
+        //没有条件，默认综合为选中
+        if($value["key"]=="0")
+        {
+            $value["cur_class"] = "cur";
+        }
+    }
+    $sort_arr[$key] = $value;
+
+}
+
+//对条件数组进行处理，方便模板选中
+$photographers_type_id = $pt;
+foreach($goods_photographers_arr as $key => $value)
+{
+    if($key==$photographers_type_id)
+    {
+        $goods_photographers_arr[$key]["class_type"] = "li-cur";
+    }
+    else
+    {
+        $goods_photographers_arr[$key]["class_type"] = "";
+    }
+}
+
+//默认降序
+$order = $order == '1' ? $order : '2';
+
+//对条件数组进行处理，方便模板选中end
+
+foreach($sort_arr as $key => $value)
+{
+    $sort_arr[$key]["link"] = link_construct("sort_type",$pt,$sort,$value["key"],$order,$lid,$keyword);
+}
+
+
+
+//赋值到模板进行连接构造
+$tpl->assign("parent_se",$parent_se);
+$tpl->assign("child_se",$child_se);
+//构造地区地址
+$province_id = substr($lid_tmp,0,6);//保证是省id，6位
+$city_id = substr($lid_tmp,0,9);//保证是市地区id,9位
+$tpl->assign("province_id",$province_id);
+$tpl->assign("city_id",$city_id);
+//meta赋值
+$tpl->assign("page_title","约摄-预约优质摄影师");
+$tpl->assign("meta_keywords","影楼,摄影工作室,独立摄影师,摄影服务");
+$tpl->assign("meta_description","约摄，一个提供海量高质量摄影师的约拍平台。影楼、摄影工作室、独立摄影师应有尽有。");
+//数组数据赋值
+$tpl->assign("goods_photographers_arr",$goods_photographers_arr);
+//单变量
+$tpl->assign("location_name",$location_name);
+//获取信息的条件参数
+$tpl->assign("photographers_type_id",$photographers_type_id);
+$tpl->assign("lid",$lid);
+$tpl->assign("sort",$sort);
+$tpl->assign("order",$order);
+$tpl->assign("kw",urlencode($keyword));
+$tpl->assign("decode_kw",$keyword);
+//赋值数组,排序
+$tpl->assign("sort_arr",$sort_arr);
+
+
+
+if($_INPUT["print"]==2)
+{
+    $submit_array  = array();
+    $submit_array["kw"] = $keyword;
+    $submit_array["sr"] = $sort;
+    $submit_array["o"] = $order;
+    $submit_array["l"] = $lid;
+    $submit_array["pt"] = $photographers_type_id;
+    print_r($submit_array);
+}
+
+/*******页面连接构造通用函数********/
+/*
+ *  @param
+ *  str $link_type //页面链接类型（排序筛选型，选择地区型）（值：sort_type,lid_type）
+ *  int $condition_type_id //选择的条件类型ID
+ *  str $sort //排序参数
+ *  str $sort_id //(构造排序数组链接时候，传入的排序参数)
+ *  str $order //升序降序
+ *  int $lid //地址
+ *  str $keyword //关键字
+ *
+*/
+function link_construct($link_type,$condition_type_id,$sort,$sort_id,$order,$lid,$keyword)
+{
+    $link_url = "./index.php?tp=per&";
+    $sort_str = "sort=".$sort."&";
+    $order_str = "order=".$order."&";
+    $lid_str = "lid=".$lid."&";
+    $keyword_str = "kw=".urlencode($keyword)."&";
+    if(empty($condition_type_id))
+    {
+        $condition_type_id = "";
+    }
+    $photographers_str = "pt=".$condition_type_id."&";
+
+    //根据条件构造链接结构
+    switch($link_type)
+    {
+        //排序筛选型
+        case "sort_type":
+            //有排序加处理
+            $order_str = "order=2&";
+            $sort_str = "sort=".$sort_id."&";
+            break;
+        //选择地区型
+        case "break;
+            lid_type":
+            //暂时不用调整
+            break;
+        default:
+            break;
+    }
+
+    $return_url = $link_url.$photographers_str.$sort_str.$order_str.$lid_str.$keyword_str."s=1";
+    return $return_url;
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

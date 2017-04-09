@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{%$wap_global_head%}
+        <link rel="stylesheet" href="/style/mine/photos.scss">
+		<title>我的照片-莫吉照相馆</title>
+	</head>
+	<body class="cor-bg-fff" >
+		<div  id="photos-page" >
+
+		</div>
+
+	</body>
+
+</html>
+{%$wap_global_footer%}
+<script>
+ 	(function()
+	{
+		var Photos_Vue = require('/modules/mine/photos/index');
+
+		var order_sn = '{%$order_sn%}';
+		var p_vue = Photos_Vue.init({order_sn:order_sn});
+		p_vue.template = Photos_Vue.template;
+
+		new Vue(p_vue);
+	 })();
+</script>
+
+{%$wap_global_tj%}

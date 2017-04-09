@@ -1,0 +1,30 @@
+<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+	<ul class="list clearfix">
+		{{#each result_data}}
+		<a href="{{link_url}}">
+			<li class="pic-list-width-285">
+				<div class="img-item">
+					<div class="img">
+						<img src="{{images}}">
+					</div>
+					<div class="txt color-fff">{{consults}}</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 clearfix">
+						<p class="txt-1 color-fa6 fldi f18 fb">
+							{{prices}}
+						</p>
+						<p class="txt-2  color-999 frdi f14">{{location_name}}</p>
+					</div>
+					<div class="box-2">
+						<p class="txt-1 color-333 f14">
+							{{titles}}
+						</p>
+					</div>
+					
+				</div>
+			</li>
+		</a>
+		{{/each}}
+	</ul>
+</div>

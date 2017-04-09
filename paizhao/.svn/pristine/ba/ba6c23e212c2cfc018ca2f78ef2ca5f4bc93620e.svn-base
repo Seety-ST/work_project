@@ -1,0 +1,8 @@
+Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"pic-list-mod-1 pic-list-mod-w1200 font_wryh\">\n	<ul class=\"list clearfix\">\n		\n		<a href=\"\">\n			<li class=\"pic-list-width-285\">\n				<div class=\"img-item\">\n					<div class=\"img\">\n						<img src=\"\">\n					</div>\n					<div class=\"txt color-fff\">999+人咨询</div>\n				</div>\n				<div class=\"txt-item\">\n					<div class=\"box-1 clearfix\">\n						<p class=\"txt-1 color-fe9 fldi f18 fb\">\n							\n						</p>\n						<p class=\"txt-2  color-999 frdi f14\">12人咨询</p>\n					</div>\n					<div class=\"box-2\">\n						<p class=\"txt-1 color-333 f14\">\n							\n						</p>\n					</div>\n					\n				</div>\n			</li>\n		</a>\n		\n	</ul>\n</div>";
+  })

@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>新速腾</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="header">
+		<div class="w1000">
+			<h1 class="logo-item">
+				<a href="#"></a>
+			</h1>
+		</div>
+	</div>
+	<div class="content">
+		<div class="index-page">
+			<div class="w1000">
+				<div class="listItem"></div>
+				<div class="form-wrap">
+					<div class="form-item clearfix">
+						<div class="input-item name-item">
+							<h4 class="title">* 姓名：</h4>
+							<input type="text" class="input-txt input-txt-1" />
+						</div>
+						<div class="input-item sex-item">
+							<label><input type="radio" name="sex" value="男士" id="sex_1" checked="checked">男士</label>
+							<label><input type="radio" name="sex" value="女士" id="sex_0">女士</label>
+						</div>
+					</div>
+					<div class="form-item clearfix">
+						<div class="input-item">
+							<h4 class="title">* 手机：</h4>
+							<input type="text" class="input-txt" />
+						</div>
+					</div>
+					<div class="form-item clearfix">
+						<div class="input-item">
+							<h4 class="title">* 邮箱：</h4>
+							<input type="text" class="input-txt" />
+						</div>
+					</div>
+					<div class="form-item clearfix">
+						<div class="input-item">
+							<h4 class="title">* 城市：</h4>
+							<select class="select-txt mr15" name="province" id="province">
+								<!-- BEGIN provinces -->
+								<option value="{province}">{province}</option>
+								<!-- END provinces -->
+							</select>
+							<select class="select-txt" name="city" id="city"></select>
+						</div>
+					</div>
+					<div class="tips">
+						<p>
+							2016年12月31日前，通过POCO媒体购车且通过上海通用汽车系统验证有效的<br />
+							购车的，POCO给予最先优惠购买用户最高5000元优惠。
+						</p>
+					</div>
+					<div class="btn-item">
+						<a href="#"  class="btn tjxx-btn"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+	<!-- 弹框 -->
+	<div class="fade"></div>
+	<div class="pop-tips">
+		<a href="#" class="close"></a>
+	</div>
+	<!-- 弹框 end -->
+</body>
+</html>

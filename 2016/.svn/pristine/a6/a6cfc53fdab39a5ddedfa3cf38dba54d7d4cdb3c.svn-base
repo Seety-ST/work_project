@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>问题反馈</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="question-page">
+		<div class="form-wrap">
+			<div class="item">
+				<h4 class="title">请选择反馈分类（必填）</h4>
+				<div class="input-item">
+					<select class="input-txt input-select">
+						<option>请选择</option>
+					</select>
+				</div>
+			</div>
+			<div class="item">
+				<h4 class="title">详细问题（必填）</h4>
+				<div class="input-item">
+					<textarea name="" class="input-txt textarea-txt" placeholder="请描述你遇到的问题或者建议..."></textarea>
+				</div>
+			</div>
+			<div class="item">
+				<h4 class="title">上传图片</h4>
+				<div class="img-list clearfix">
+					<ul>
+						<li>
+							<a href="#" class="add-btn"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="item">
+				<h4 class="title">联系方式（必填）</h4>
+				<div class="input-item">
+					<input type="text"  class="input-txt" placeholder="手机号码/QQ/E-mail" />
+				</div>
+			</div>
+			<div class="btn-item">
+				<!-- un-ti-btn 为不可点击状态 -->
+				<a href="#" class="tj-btn un-ti-btn">提交</a>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>摄影师主页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/camera/index-page.scss" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="camera-page font_wryh">
+		
+		<div class="p1th">
+			<div class="w1200 clearfix">
+				<div class="lbox fldi">
+					<div class="avatar-item">
+						<div class="ui-avatar-icon ui-avatar-icon-120">
+							<i style="background-image:url({%$photographers_info.un_data.avatar%})"></i>
+						</div>
+						<p class="address-txt">
+							<i class="icon icon-circle-address ui-icon-size-16 dib"></i>
+							<em class="txt">{%$photographers_info.un_data.location_name%}</em>
+						</p>
+					</div>
+				</div>
+				<div class="rbox fldi">
+					<div class="item-1 clearfix">
+						<span class="fldi name-txt color-333 fb f24">{%$photographers_info.un_data.name%}</span>
+						<button class="ui-button ui-button-bg-ffc ui-button-block  ui-button-size-h40 frdi">
+							<span class="ui-button-content f14">私人订制</span>
+						</button>
+					</div>
+					<div class="item-2">
+						<div class="txt-1 color-666 f14">
+							{%$photographers_info.un_data.introduce%}
+						</div>
+						<div class="txt-2">
+							<ul class="list clearfix f14 color-333">
+								<li>
+									套系数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.goods_num%}</span>
+								</li>
+								<li>
+									咨询数：<span class="f24 color-2bd fb">{%$photographers_info.un_data.consults%}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="item-wrap">
+					<div class="select-list-item clearfix">
+						<div class="classify-item fldi" >
+							<ul class="list clearfix f14 color-666" data-role="filter-item">
+								
+							{%foreach $paizhao_goods_type as $key => $val%}
+								<li data-key ="{%$key%}">
+									{%$val.name%}
+								</li>
+							{%/foreach%}
+							</ul>
+						</div>
+						<div class="sort-item frdi f14 color-666" >
+							<ul class="list clearfix" data-role="sort-item">
+								{%foreach $sort_item as $val%}
+								<li  sort-type="{%$val.sort_type%}">
+									{%$val.name%}
+								</li>
+								{%/foreach%}
+								
+							</ul>
+						</div>
+					</div>
+					<div class="photo-list-item" data-role="filter-photo-list">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+	var utility = require('pc-huipai:global/utility/index');  
+	$(function() 
+	{
+		function camera_sort_list(obj){
+			utility.ajax_request
+			({
+				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN']+'get_camera_list.php',
+				data : obj.data,
+				cache: false,
+				beforeSend: function()
+				{
+
+				},
+				success: function(data)
+				{
+					// console.log(data);
+					var tpl  = __inline('./list_item.tmpl');
+					
+					$('[data-role="filter-photo-list"]').append(tpl(data));
+				},
+
+				error: function()
+				{
+
+				},
+				complete:function(){
+
+				}
+			});
+		}
+		camera_sort_list({
+			data : {
+				user_id : '{%$user_id%}',
+				sort : '',
+				type_id : '',
+				order : 'DESC'
+			}
+
+		});
+		// 筛选
+		$('[data-role="filter-item"]').find("li").on('click',  function(event) {
+			var type_id = $(this).attr('data-key');
+			$(this).addClass('li-cur').siblings('li').removeClass('li-cur');
+			var sort = '' ;
+			$('[data-role="sort-item"]').find('li').each(function() {
+
+
+				if ($(this).hasClass('li-cur')) 
+				{
+				    sort = $(this).attr('sort-type');
+				}
+			});
+			camera_sort_list({
+				data : {
+					user_id : '{%$user_id%}',
+					sort : sort,
+					type_id : type_id,
+					order : 'DESC'
+				}
+
+			});
+			
+		});
+		// 排序
+		$('[data-role="sort-item"]').find("li").on('click',  function(event) {
+			var sort_type = $(this).attr('sort-type');
+			$(this).addClass('li-cur').siblings('li').removeClass('li-cur');
+			var type_id = '' ;
+			$('[data-role="filter-item"]').find('li').each(function() {
+				if ($(this).hasClass('li-cur')) 
+				{
+				    type_id = $(this).attr('data-key');
+				}
+			});
+			camera_sort_list({
+				data : {
+					user_id : '{%$user_id%}',
+					sort : sort_type,
+					type_id : '',
+					order : 'DESC'
+				}
+
+			});
+			
+		});
+
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

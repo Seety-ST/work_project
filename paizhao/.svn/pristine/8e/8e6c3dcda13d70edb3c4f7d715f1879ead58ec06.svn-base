@@ -1,0 +1,43 @@
+<!--底部-->
+
+<script>
+(function()
+{   
+    var run_status = 'DEV' == 'DEV' ? false : true ;
+    
+    if(window.__RESOURCE_MAP__)
+    {
+        var version = '2016-11-28 9:30:45';
+
+        // __yue_ls__.loader(window.__RESOURCE_MAP__,
+        // [            
+        //     'wap-yypay:global/I_APP/I_APP',
+        //     'wap-yypay:global/I_WX_SDK/I_WX_SDK',
+        //     'wap-yypay:global/cookie/index',
+        //     'wap-yypay:global/frozen/frozen',
+        //     'wap-yypay:global/lazyload/lazyload',
+        //     'wap-yypay:global/list/list',
+        //     'wap-yypay:global/ua/index',
+        //     'wap-yypay:global/utility/cross_domain_storage',
+        //     'wap-yypay:global/main',
+        //     'wap-yypay:global/utility/index',
+        // ],run_status,version,'yypay');    
+        
+    }
+    
+
+})();
+</script>
+
+
+
+<script>
+
+
+
+   
+
+
+</script>
+
+<!-- 判断当前浏览器是否为ie9以下 end -->

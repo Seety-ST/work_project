@@ -1,0 +1,12 @@
+<?php
+require('common.inc.php');
+$user_acl_obj = POCO::singleton('pai_mall_admin_user_class');
+$user_acl = $user_acl_obj->get_acl_user_cache($yue_login_id);
+if($user_acl['s_id'] == md5(session_id()."|".mall_get_ip()))
+{
+	$r_url = $_INPUT['r_url']?urldecode($_INPUT['r_url']):"index.php";
+	header("Location:".$r_url);
+	exit;
+}
+mall_load_action('send_verification');
+?>

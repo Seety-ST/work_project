@@ -1,0 +1,3915 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>极限油耗挑战赛  节能车身巅峰PK</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script src="js/lazysizes.min.js" async=""></script>
+	<!-- 点击率统计css -->
+	<script type="text/javascript" src="http://www1.poco.cn/topic/admin_v2/index.php?r=Css/get&channel=roewe_360"></script>
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?da84584d9e58452a2e5f7bdf27061f86";
+		  var s = document.getElementsByTagName("script")[0];
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+</head>
+
+<body>
+	<iframe name="driveFrame" style="display:none"></iframe>
+	<section class="index-page">
+		<hgroup class="header-item">
+			<h2 class="logo-item">
+					<a href="#" class="icon-area">
+						<i class="icon"></i>
+					</a>
+				</h2>
+			<h1 class="brands-item">
+					<a href="#" class="icon-area">
+						<i class="icon"></i>
+					</a>
+				</h1>
+		</hgroup>
+		<div class="content">
+			<section class="path1 teaser lazyload" data-expand="-30">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<dl class="text-item">
+						<dt class="title">线下活动介绍</dt>
+						<dd>
+							<i class="icon con-l-icon"></i>
+							<i class="icon con-r-icon"></i>
+							<p style="padding-bottom:0.2133rem;">
+								实力刷新节油极限，超低油耗称霸大漠！荣威360全国节油争霸赛，8月22日至8月28日征战河西走廊。
+								<br />
+								1箱油达1000km即可获得万元奖金，同时奖金随公里数逐层上升，更可争夺百万现金大奖，并获得中国节油王桂冠称号。
+							</p>
+							<p>报名参与互动，选出您心目中的节油王。</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="path6">
+				<div class="title">
+					视频直播
+				</div>
+				<div class="zb-time-item">
+					<div class="sub-title"><span class="txt">直播时间段</span></div>
+					<ul class="list">
+						<li class="clearfix">
+							<div class="lbox fldi">
+								<p class="date-txt">
+									8月23日
+								</p>
+							</div>
+							<div class="rbox fldi">
+								<p class="time-txt">
+									10：00-12：00 
+								</p>
+								<p class="time-txt">
+									15：00-16：00
+								</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="lbox fldi">
+								<p class="date-txt">
+									8月23日
+								</p>
+							</div>
+							<div class="rbox fldi">
+								<p class="time-txt">
+									10：00-12：00 
+								</p>
+								<p class="time-txt">
+									15：00-16：00
+								</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="lbox fldi">
+								<p class="date-txt">
+									8月23日
+								</p>
+							</div>
+							<div class="rbox fldi">
+								<p class="time-txt">
+									10：00-12：00 
+								</p>
+								<p class="time-txt">
+									15：00-16：00
+								</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="lbox fldi">
+								<p class="date-txt">
+									8月23日
+								</p>
+							</div>
+							<div class="rbox fldi">
+								<p class="time-txt">
+									10：00-12：00 
+								</p>
+								<p class="time-txt">
+									15：00-16：00
+								</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<div class="lbox fldi">
+								<p class="date-txt">
+									8月23日
+								</p>
+							</div>
+							<div class="rbox fldi">
+								<p class="time-txt">
+									10：00-12：00 
+								</p>
+								<p class="time-txt">
+									15：00-16：00
+								</p>
+							</div>
+						</li>
+					</ul>
+					<p class="tips-txt">*户外可能存在不定因素 直播时间以实播时间为准</p>
+				</div>
+				<div class="video-item">
+					<div class="nav-li" id="nav-list">
+						<ul class="list">
+							<li class="sl-li cur">
+								实力组
+							</li>
+							<li class="xy-li">
+								学院组
+							</li>
+						</ul>
+					</div>
+					<div class="video-img" id="video-img">
+						<div class="img">
+							<img src="images/st-img-5.jpg" />
+						</div>
+						<div class="img dn">
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="path2 teaser lazyload" data-expand="-30">
+				<div class="item-wrap clearfix">
+					<div class="item">
+						<div class="listItem">实力组</div>
+						<div class="con-item">
+							<div class="img-item">
+								<img data-sizes="auto" data-src="images/list-img/1/1.jpg" class="lazyload" />
+							</div>
+							<div class="img-item">
+								<img data-sizes="auto" data-src="images/list-img/1/2.jpg" class="lazyload" />
+							</div>
+							<div class="text-item">
+								<div class="txt">
+									<p>
+										简介：专业赛车手-郑晚成
+										<br />
+										主播-Sis.J闫闫
+									</p>
+								</div>
+								<div class="zan-item">
+									<a href="javascript:;" class="zan-btn" onclick="addLike(1)"></a>
+									<p class="num" id="team-1">{team_1}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="listItem">学院组</div>
+						<div class="con-item">
+							<div class="img-item">
+								<img data-sizes="auto" data-src="images/list-img/2/1.jpg" class="lazyload" />
+							</div>
+							<div class="img-item">
+								<img data-sizes="auto" data-src="images/list-img/2/2.jpg" class="lazyload" />
+							</div>
+							<div class="text-item">
+								<div class="txt">
+									<p>
+										简介：易车资深编辑-吴昊
+										<br />
+										主播-曾莹
+									</p>
+								</div>
+								<div class="zan-item">
+									<a href="javascript:;" class="zan-btn" onclick="addLike(2)"></a>
+									<p class="num" id="team-2">{team_2}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="path3 teaser lazyload" data-expand="-30">
+				<div class="listItem"></div>
+				<form name="driveForm" action="saveDrive.php" method="post" target="driveFrame">
+					<div class="from-wrap">
+						<div class="item clearfix">
+							<h4 class="title">姓&nbsp;&nbsp;&nbsp;&nbsp;名</h4>
+							<div class="input-item">
+								<input type="text" class="input-txt" maxlength="15" name="name" value="">
+							</div>
+						</div>
+						<div class="item radio-item clearfix">
+							<h4 class="title">性别</h4>
+							<div class="input-item">
+								<label><input type="radio" name="sex" value="先生" id="sex_1" checked="checked">先生</label>
+								<label><input type="radio" name="sex" value="女士" id="sex_0">女士</label>
+							</div>
+						</div>
+						<div class="item clearfix">
+							<h4 class="title">电&nbsp;&nbsp;&nbsp;&nbsp;话</h4>
+							<div class="input-item">
+								<input type="text" class="input-txt" maxlength="11" name="phone" id="phone" value="">
+							</div>
+						</div>
+						<div class="item address-item clearfix">
+							<div class="title-item">
+								<h4 class="title">省&nbsp;&nbsp;&nbsp;&nbsp;份</h4>
+								<h4 class="title">城&nbsp;&nbsp;&nbsp;&nbsp;市</h4>
+								<h4 class="title">经销商</h4>
+							</div>
+							<div class="input-item">
+								<select class="select-txt" name="province" id="province">
+									<!-- BEGIN provinces -->
+									<option value="{province}">{province}</option>
+									<!-- END provinces -->
+								</select>
+								<select class="select-txt" name="city" id="city"></select>
+								<select class="select-txt" name="dealer" id="dealer">
+								</select>
+							</div>
+						</div>
+						<div class="tips-item"></div>
+					</div>
+					<section class="btn-wrap">
+						<a href="javascript:;" class="btn tjsq-btn" onclick="subForm();">提交申请</a>
+					</section>
+				</form>
+			</section>
+			<section class="path4 teaser lazyload" data-expand="-30">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<img data-sizes="auto" data-src="images/ll-img-16.jpg" class="lazyload" />
+				</div>
+			</section>
+			<section class="path5 teaser lazyload" data-expand="-30">
+				<div class="listItem"></div>
+				<div class="con-item">
+					<div class="select-wrap">
+						<div class="input-wrap clearfix">
+							<input type="text" class="input-text" id="input-text" value="1.5L 手动精英版  ￥7.59万元" />
+							<a href="javascript:;" class="s-btn" onclick="selectPop();"></a>
+						</div>
+						<div class="select-pop" style="display:none" id="select-pop">
+							<ul>
+								<li>
+									<a href="javascript:;" onclick="showItem(1, this)">1.5L 手动精英版  ￥7.59万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(2, this)">1.5L 自动精英版  ￥8.39万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(3, this)">1.5L 手动智屏版  ￥7.79万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(4, this)">1.5L 自动智屏版  ￥8.59万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(5, this)">1.5L 手动豪华版  ￥8.29万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(6, this)">1.5L 自动豪华版  ￥8.99万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(7, this)">20T 双离合精英版  ￥9.99万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(8, this)">20T 双离合尊享版  ￥10.79万元</a>
+								</li>
+								<li>
+									<a href="javascript:;" onclick="showItem(9, this)">20T 双离合旗舰版  ￥12.99万元</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="from-wrap">
+						<div class="table-con" id="table-con-items">
+							<!-- 1.5L 手动精英版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-1" style="display:block">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.5L DVVT高效能发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.5L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>80/6000</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>135/4500</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>SSG五速手动变速箱</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.7 (配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前盘后鼓</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动四向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>O</td>
+								</tr>
+							</table>
+							<!-- 1.5L 自动精英版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-2" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.5L DVVT高效能发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.5L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>80/6000</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>135/4500</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>Multi-Mode智控手自一体变速箱</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.9(配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动四向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>-</td>
+								</tr>
+							</table>
+							<!-- 1.5L 手动智屏版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-3" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.5L DVVT高效能发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.5L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>80/6000</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>135/4500</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>SSG五速手动变速箱</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.7 (配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动四向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>●</td>
+								</tr>
+							</table>
+							<!-- 1.5L 自动智屏版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-4" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.5L DVVT高效能发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.5L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>80/6000</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>135/4500</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>Multi-Mode智控手自一体变速箱</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.9（配备S/S）</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动四向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>●</td>
+								</tr>
+							</table>
+							<!-- 1.5L 手动豪华版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-5" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.5L DVVT高效能发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.5L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>80/6000</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>135/4500</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>SSG五速手动变速箱</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.7(配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动六向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>●</td>
+								</tr>
+							</table>
+							<!-- 1.5L 自动豪华版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-6" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.5L DVVT高效能发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.5L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>80/6000</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>135/4500</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>Multi-Mode智控手自一体变速箱</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.9 (配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动六向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>●</td>
+								</tr>
+							</table>
+							<!-- 20T双离合精英版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-7" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.4TGI 缸内直喷涡轮增压发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.4L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>115/5600</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>235/1600-4000</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>7速TST智能双离合变速器</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.7(配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动六向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>-</td>
+								</tr>
+							</table>
+							<!-- 20T双离合尊享版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-8" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.4TGI 缸内直喷涡轮增压发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.4L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>115/5600</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>235/1600-4000</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>7速TST智能双离合变速器</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.7(配备S/S)</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>O</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>电子温控空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>手动六向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>●</td>
+								</tr>
+							</table>
+							<!-- 20T双离合旗舰版 -->
+							<table cellspacing="0" cellpadding="0" class="table-item" id="table-item-9" style="display:none">
+								<tr>
+									<th colspan="2">技术参数</th>
+								</tr>
+								<tr>
+									<td class="title">长/宽/高(mm)</td>
+									<td>4579/1804/1490</td>
+								</tr>
+								<tr>
+									<td class="title">轴距(mm)</td>
+									<td>2660</td>
+								</tr>
+								<tr>
+									<td class="title">行李箱容积(L)</td>
+									<td>482</td>
+								</tr>
+								<tr>
+									<td class="title">油箱容积(L)</td>
+									<td>55</td>
+								</tr>
+								<tr>
+									<th colspan="2">动力操控</th>
+								</tr>
+								<tr>
+									<td class="title">发动机</td>
+									<td>1.4TGI 缸内直喷涡轮增压发动机</td>
+								</tr>
+								<tr>
+									<td class="title">排量</td>
+									<td>1.4L</td>
+								</tr>
+								<tr>
+									<td class="title">最大功率/转速 Kw/rpm</td>
+									<td>115/5600</td>
+								</tr>
+								<tr>
+									<td class="title">最大扭矩/转速 Nm/rpm</td>
+									<td>235/1600-4000</td>
+								</tr>
+								<tr>
+									<td class="title">变速箱型式</td>
+									<td>7速TST智能双离合变速器</td>
+								</tr>
+								<tr>
+									<td class="title">综合油耗L/100km</td>
+									<td>5.7</td>
+								</tr>
+								<tr>
+									<td class="title">Start-stop发动机智能启停系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">排放</td>
+									<td>国V</td>
+								</tr>
+								<tr>
+									<td class="title">悬挂系统</td>
+									<td>前麦弗逊/后H型悬挂</td>
+								</tr>
+								<tr>
+									<td class="title">制动系统</td>
+									<td>前后碟刹</td>
+								</tr>
+								<tr>
+									<td class="title">转向系统</td>
+									<td>EPS电动助力转向系统</td>
+								</tr>
+								<tr>
+									<td class="title">轮毂</td>
+									<td>16寸 铝合金</td>
+								</tr>
+								<tr>
+									<td class="title">轮胎</td>
+									<td>205/55 R16</td>
+								</tr>
+								<tr>
+									<td class="title">低滚阻轮胎</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">时尚设计</th>
+								</tr>
+								<tr>
+									<td class="title">Loetsch第二代全息数字仪表盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">典雅科技型按键白色背光</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">朗月明眸透镜式大灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">晶钻LED日间行车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜集成转向灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">舒适配备</th>
+								</tr>
+								<tr>
+									<td class="title">音响系统</td>
+									<td>XBM蓝韵系列高保真音响系统带随速感应音量调节功能</td>
+								</tr>
+								<tr>
+									<td class="title">娱乐系统</td>
+									<td>Smart Radio智能定时功能收音机/带AUX IN音频输入/MP3播放功能</td>
+								</tr>
+								<tr>
+									<td class="title">空调系统</td>
+									<td>智能自动恒温空调</td>
+								</tr>
+								<tr>
+									<td class="title">点阵屏行车电脑</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">段码屏行车电脑</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">ECO经济运行模式提示</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">USB接口（带充电功能）</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排12V电源接口</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">宽域型无骨雨刷</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">PM2.5绿净功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶席座椅可调</td>
+									<td>电动六向可调</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座椅腰部调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅手动四向可调</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">皮质座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">织物镶拼座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">后排4/6折叠座椅</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排整体式折叠座椅</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">前排座椅地图袋</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">遥控钥匙（带行李箱开启）x2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员电动车窗一键上升带防夹</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座电动车窗一键下降</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">12键多功能方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">6键多功能方向盘</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">Solig一键式豪华天窗</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中央扶手带杯托×2</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排中控储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座椅下方储物盒</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">外后视镜电加热</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排多功能储物中央扶手</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶员侧上方贴心眼镜盒</td>
+									<td>-</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶侧遮阳板化妆镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排独立阅读灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机舱隔音棉</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">定速巡航</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯自动点亮</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Follow me home大灯延时关闭</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<th colspan="2">安全配备</th>
+								</tr>
+								<tr>
+									<td class="title">ABS+EBD+BA+CBC</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">VSC+MSR+TCS+HRC+HAS</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">iTPMS胎压监测系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排双安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排安全带高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">副驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排侧安全气囊</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前后一体式安全气帘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">前排燃爆式预紧安全带</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排三点式安全带x3</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排高度可调双头枕</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">驾驶座安全带未系报警</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">车速感应自动落锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">Lazy-Locking 车窗关闭系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">手动防眩目后视镜</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">发动机防盗锁止系统</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高度可调方向盘</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">多级溃缩转向柱</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">大灯高度调节</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">紧急制动双闪功能</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">高位刹车灯</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后排儿童座椅ISOFIX</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">儿童门锁</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">电池防耗保护装置</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">后倒车雷达</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaNet 4G智能网络行车系统
+										<br /> • 8英寸高清红外多点触控屏
+										<br /> • 4G通信，车载wifi
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 语音指令自由交互系统
+										<br /> • 精准行车智能导航
+										<br /> • 动态倒车影像
+										<br /> • 一键24小时后台服务
+									</td>
+									<td>●</td>
+								</tr>
+								<tr>
+									<td class="title">
+										inkaLink 娱乐行车系统
+										<br /> • 8英寸高分辨率电容屏
+										<br /> • 蓝牙手机免提系统
+										<br /> • IOS CarPlay, Mirrorlink随心互联
+										<br /> • 多媒体影音娱乐
+										<br /> • 动态倒车影像
+									</td>
+									<td>-</td>
+								</tr>
+							</table>
+						</div>
+						<div class="tips">
+							<p>
+								主要性能参数和配备(● 表示有此装备; ○表示次装备为选装; —表示无次装备)
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="mod-top-btn">
+				<a href="#" class="icon-area">
+					<i class="top-icon"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script>
+	var city = new Array(); //缓存
+	var dealer = new Array(); //缓存
+	$('#province').on('change', function() {
+		var prov = $('[name="province"]').val();
+		if (city[prov] == undefined) {
+			$.getJSON('ajaxAddr.php', {
+				"prov": prov
+			}, function(json) {
+				var html = '';
+				$.each(json, function(i, v) {
+					html += '<option value="' + v.city + '">' + v.city + '</option>'
+				});
+				city[prov] = html;
+				$('#city').html(html);
+				$('#city').trigger('change');
+			});
+		} else {
+			$('#city').html(city[prov]);
+			$('#city').trigger('change');
+		}
+	});
+	$('#city').on('change', function() {
+		var c = $('[name="city"]').val();
+		if (dealer[c] == undefined) {
+			$.getJSON('ajaxAddr.php', {
+				"city": c
+			}, function(json) {
+				var html = '';
+				$.each(json, function(i, v) {
+					html += '<option value="' + v.id + '">' + v.addr + '</option>'
+				});
+				dealer[c] = html;
+				$('#dealer').html(html);
+			});
+		} else {
+			$('#dealer').html(dealer[c]);
+		}
+	});
+	$('#province').val('{province}');
+	$('#province').trigger('change');
+
+	function subForm() {
+		if (!/^[\u4e00-\u9fa5]+$/i.test($('[name="name"]').val())) {
+			alert('请填写真实姓名！');
+			$('[name="name"]').focus();
+			return false;
+		}
+		if (!/^[1][3-8][\d][\d][\d][\d][\d][\d][\d][\d][\d]+$/.test($('#phone').val())) {
+			alert('请填写手机号码！');
+			$('#phone').focus();
+			return false;
+		}
+		$('[name="driveForm"]').submit();
+	}
+
+	function showItem(id, obj) {
+		$('#table-con-items .table-item').hide();
+		$('#table-item-'+id).show();
+		$('#input-text').val($(obj).text());
+		$('#select-pop').hide();
+	}
+
+	function selectPop() {
+		$('#select-pop').show();
+	}
+
+	function addLike(id) {
+		$.getJSON('ajaxLike.php', {
+			"id": id
+		}, function(json) {
+			if (json.ok) {
+				var v = parseInt($('#team-'+id).text());
+				$('#team-'+id).text(v+1);
+			} else {
+				alert('操作失败！');
+			}
+		});
+	}
+	$("#nav-list").find('li').on('click', function(event) {
+		$(this).addClass('cur').siblings().removeClass('cur');
+		var index = $(this).index();
+		
+
+	});
+	</script>
+
+</body>
+
+</html>

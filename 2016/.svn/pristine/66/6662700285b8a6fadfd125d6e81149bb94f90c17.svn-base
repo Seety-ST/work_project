@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>云相册</title>
+	<link href="css/cloud-beauty.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="cloud-page">
+		<!-- mod-tool-bar -->
+		<section class="mod-tool-bar clearfix">
+			<ul>
+				<li>
+					<a href="#"> 
+						<i class="icon choose-icon"></i> 
+						<em>选择</em>
+					</a>
+				</li>
+				<!-- 无法点击为 no-click -->
+				<li class="no-click">
+					<a href="#"> 
+						<i class="icon set-icon"></i> 
+						<em>设置</em>
+					</a>
+				</li>
+			</ul>
+		</section>
+		<!-- mod-tool-bar end -->
+		<div class="content">
+			<!-- 无网络状态 -->
+			<div class="no-wifi-item mod-tips-item con-item" style="display:none">
+				<i class="mod-icon nowifi-icon"></i>
+				<span>
+					当前网络不可用
+					<br />
+					请检查网络连接
+				</span>
+			</div>
+			<!-- 默认 -->
+			<div class="no-pic-item mod-tips-item con-item" style="display:none ">
+				<i class="mod-icon nopic-icon"></i>
+				<span>
+					你的相册还没有照片哦
+					<br />
+					试着上传一张照片吧
+				</span>
+			</div>
+			<!-- 云相册 -->
+			<div class="cloud-imgList-item con-item"  style="display: ">
+				<div class="item-warp">
+					<div class="item">
+						<dl>
+							<dt class="date-item">2016年01月21日</dt>
+							<dd class="list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="item">
+						<dl>
+							<dt class="date-item">2016年01月20日</dt>
+							<dd class="list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="item">
+						<dl>
+							<dt class="date-item">2016年01月21日</dt>
+							<dd class="list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/test/246x246.jpg" />
+										</div>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!-- upload btn 不可点击状态为 no-click-upload-btn -->
+			<div class="mod-upload-btn">
+				<a href="#" class="btn">
+					<i class="icon upload-btn"></i>
+					<em>上传</em>
+				</a>
+			</div>
+			<!-- upload btn end -->
+		</div>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade" style="display: "></div>
+	<!-- 好友退出连接 -->
+	<div class="pop-tipsItem" style="display: ">
+		<div class="text-item">
+			<p>您的好友已退出连接</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>我知道了</em>
+			</span>
+		</div>
+	</div>
+	<!-- 好友退出连接 end-->
+	<!-- 弹出层 end -->
+</body>
+</html>

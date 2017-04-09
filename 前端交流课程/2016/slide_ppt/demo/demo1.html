@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo1</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/slide.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/demo1.css" />
+</head>
+<body>
+<div class="banner_1">
+	<div class="bd">
+		<a href="javascript:void(0);">
+			<img src="img/1.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/2.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/3.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/4.jpg" />
+		</a>
+
+	</div>
+	<div class="btn_prev">Prev</div>
+	<div class="btn_next">Next</div>
+	<div class="hd">
+		<a href="javascript:void(0);">1</a>
+		<a href="javascript:void(0);">2</a>
+		<a href="javascript:void(0);">3</a>
+		<a href="javascript:void(0);">4</a>
+	</div>
+</div>
+<div class="banner_2">
+	<div class="bd">
+		<a href="javascript:void(0);">
+			<img src="img/1.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/2.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/3.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/4.jpg" />
+		</a>
+	</div>
+	<div class="btn_prev">Prev</div>
+	<div class="btn_next">Next</div>
+	
+</div>
+
+<div class="banner_3">
+	<div class="bd">
+		<a href="javascript:void(0);">
+			<img src="img/1.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/2.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/3.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/4.jpg" />
+		</a>
+	</div>
+	<div class="btn_prev">Prev</div>
+	<div class="btn_next">Next</div>
+	
+</div>
+<div class="banner_4">
+	<div class="bd">
+		<a href="javascript:void(0);">
+			<img src="img/1.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/2.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/3.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/4.jpg" />
+		</a>
+		<a href="javascript:void(0);">
+			<img src="img/1.jpg" />
+		</a>
+	</div>
+	<div class="btn_prev">Prev</div>
+	<div class="btn_next">Next</div>
+	
+</div>
+<script type="text/javascript">
+$(function(){
+	slide({
+		wrap:".banner_1",
+		mainCell:'.bd a',
+		titleCell:'.hd a',
+		effect:'left',
+		title_class:'now',
+		time:300,
+		prev:'.btn_prev',
+		next:'.btn_next',
+		init_before:function(){
+			var _this=this;
+			_this.$_wrap.css({
+				opacity:0
+			});
+		},
+		init_after:function(){
+			var _this=this;
+			setTimeout(function(){
+				_this.$_wrap.css({
+					opacity:1
+				})
+			},1000);
+			
+		}
+	});
+
+	slide({
+		wrap:".banner_2",
+		mainCell:'.bd a',
+		effect:'fade',
+		time:300,
+		prev:'.btn_prev',
+		next:'.btn_next'
+	});
+
+	slide({
+		wrap:".banner_3",
+		mainCell:'.bd a',
+		prev:'.btn_prev',
+		next:'.btn_next',
+		time:300,
+		custom_event:{
+			".bd a":{
+				"click":function(e){
+					var $_this=$(e.currentTarget);
+					alert($_this.find("img").attr('src'));
+				}
+			}
+		},
+		custom_swf:{
+			init:function(){
+				var _this=this;
+				_this.$_mainCell.css({
+					position:"absolute",
+					left:"0px",
+					top:"0px",
+					zIndex:"8"
+				});
+				if(_this.$_mainCell.parent().css("position") == "static"){
+					_this.$_mainCell.parent().css({
+						position:'relative'
+					});
+				}
+
+				_this.$_mainCell.eq(0).css({
+					zIndex:10
+				}).addClass("_thisClass");
+
+			},
+			show:function(ele){
+				var _this=this,
+					$_show=$(ele),
+					$_last=_this.$_wrap.find("._thisClass"),
+					cc_mainCell_length=_this.$_mainCell.length,
+					cc_show_index=$_show.index(),
+					cc_last_index=$_last.index();
+				$_show.siblings().css({zIndex:8});
+				$_last.css({zIndex:9});
+				var direction={
+					left_to_right:function(){
+						$_show.css({
+							left:"-100%",
+							zIndex:10
+						});
+					},
+					right_to_left:function(){
+						$_show.css({
+							left:"100%",
+							zIndex:10
+						});
+					}
+				};
+				if(cc_show_index==0 && cc_last_index==cc_mainCell_length-1){
+					direction.right_to_left();
+				}
+				else if(cc_show_index==cc_mainCell_length-1 && cc_last_index==0){
+					direction.left_to_right();
+				}
+				else if(cc_last_index<cc_show_index){
+					direction.right_to_left();
+				}
+				else{
+					direction.left_to_right();
+				}
+				$_show.stop().animate({
+					left:"0px"
+				},_this.opt.time,function(){
+					$_show.addClass("_thisClass").siblings().removeClass("_thisClass");
+					_this.$_wrap.data('is_lock',false);
+				});
+			}
+		}
+	});
+
+	slide({
+		wrap:".banner_4",
+		mainCell:'.bd a',
+		effect:'left',
+		time:300,
+		prev:'.btn_prev',
+		next:'.btn_next',
+		visit:2,
+		differ:2
+	});
+	
+});
+</script>
+</body>
+</html>

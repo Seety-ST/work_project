@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="gbk">
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+<link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+
+<script src="js/shadowbox/shadowbox.js" type="text/javascript"></script>
+<link href="js/shadowbox/shadowbox.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"> 
+Shadowbox.init({ 
+    handleOversize: "drag", 
+	overlayColor: '#000',
+    modal: true,
+    displayNav: true,
+	displayCounter: false,
+//    onClose:function(){
+//        location.reload();
+//    }
+    
+    
+}); 
+Shadowbox.setup();
+</script>
+<title>商品池规则列表</title>
+</head>
+<body>
+<div class="mainbox">
+<table class="search_table" width="100%">
+	<tbody>
+		<tr>
+			<td width="19%" class="search">
+                <form action="" method="post">
+                    <span>状态</span>
+                    <select name="status">
+                        <option value="">全部</option>
+                        <option value="1" <!-- IF status="1" -->selected="selected" <!-- ENDIF -->>有效</option>
+                        <option value="2" <!-- IF status="2" -->selected="selected" <!-- ENDIF -->>无效</option>
+                    </select>
+                    <span>类型</span>
+                    <select name="type_id">
+                        <option value="">全部</option>
+                        <option value="1" <!-- IF type_id="1" -->selected="selected" <!-- ENDIF -->>筛选</option>
+                        <option value="2" <!-- IF type_id="2" -->selected="selected" <!-- ENDIF -->>自定义</option>
+                    </select>
+                    <span>关键字</span>
+                    <input type="text" name="keyword" placeholder="商品池名" value="{keyword}"/>
+                    <input type="hidden" name="action" value="goods_pool_list"/>
+                    <input type="submit" value="查询" class="btn_class"/>&nbsp;&nbsp;
+                    <a rel="shadowbox[goods_pool_add]" class="btn_class" href="?action=goods_pool_add">添加</a>
+                </form>
+            </td>
+        </tr>
+	</tbody>
+</table>
+    <div id="tabs">
+    <div class="tabbox">
+      <div class="table-list">
+        <table width="100%" cellspacing="0" id="list-table">
+            <thead>
+              <tr>
+                <th>商品池ID</th>
+                <th>商品池名称</th>
+                <th>类型</th>
+                <th>商品数</th>
+                <th>排序方式</th>
+                <th>更新周期</th>
+                <th>添加时间</th>
+                <th>更新状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+                <!-- BEGIN list -->
+                    <tr>
+                      <td>{id}</td>
+                      <td>{name}</td>
+                      <td>{type_id_name}</td>
+                      <td>{goods_total}</td>
+                      <td>{order_by_name}</td>
+                      <td>{update_cycle_name}</td>
+                      <td>{add_time}</td>
+                      <td>{status_name}</td>
+                      <td>
+                          <a rel="shadowbox[goods_pool_edit_{id}]" href="?action=goods_pool_edit&id={id}" class="btn_class">详情</a>
+                          &nbsp;&nbsp;
+                          <!-- IF status="2" -->
+                            <a href="javascript:void(0)" class="btn_class" onClick="open_one({id})" >启用</a>
+                          <!-- ELSE -->   
+                            <a href='javascript:void(0)' class="btn_class" onClick="del_one({id})">删除</a>
+                          <!-- ENDIF -->
+                          &nbsp;&nbsp;
+                          <a href='javascript:void(0)' class="btn_class" onClick="synchronous_one({id})">同步到榜单</a>
+                          &nbsp;&nbsp;
+                          <a rel="shadowbox[goods_pool_rule_{id}_goods_list]" href="?action=goods_pool_goods_list&id={id}" class="btn_class">商品列表</a>
+                       </td>
+                    </tr>
+               <!-- END list -->
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="pages" class="page"> {page} </div>  
+</div>
+</body>
+</html>
+<script>
+    function del_one(id)
+    {
+        if(confirm('确定操作?'))
+        {
+            window.location.href="goods.php?action=goods_pool_del&id="+id;
+        }
+    }
+    function open_one(id)
+    {
+        if(confirm('确定操作?'))
+        {
+            window.location.href="goods.php?action=goods_pool_status&id="+id;
+        }
+    }
+    function synchronous_one(id)
+    {
+        if(confirm('确定操作?'))
+        {
+            window.location.href="goods.php?action=goods_pool_synchronous_goods_list&id="+id;
+        }
+    }
+</script>

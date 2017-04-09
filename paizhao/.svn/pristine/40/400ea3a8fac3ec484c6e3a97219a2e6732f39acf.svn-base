@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="gbk">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>yue-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/base.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/common/main.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-no-use.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-not.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/paizhao-ui-avatar.css">
+<!-- 列表 -->
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/paizhao-ui-list.css">
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "wap-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"
+        },
+        "wap-huipai:global/go_top/go_top": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/go_top/go_top.js"
+        },
+        "wap-huipai:global/iconfont_js/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/iconfont_js/index.js"
+        },
+        "wap-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/extend/layer.ext.js"
+        },
+        "wap-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"
+        },
+        "wap-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "wap-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"
+        },
+        "wap-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/main.js"
+        },
+        "wap-huipai:global/swiper/1.0.0/swiper3.07.min": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"
+        },
+        "wap-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/ua/index.js"
+        },
+        "wap-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/cross_domain_storage.js"
+        },
+        "wap-huipai:global/utility/index": {
+            "deps": [
+                "wap-huipai:global/cookie/index",
+                "wap-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+
+
+<header class="global-header " >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">图片列表</h3>
+	</div>
+</header>
+  
+
+
+<!-- 页面内容start -->
+	<p class="p10 f14 color-ff6">列表样式一</p>
+	<div class="wap-list-mod-1">
+		<ul class="list clearfix">
+			<li class="pic-list-width-44-percent">
+				<div class="img-item">
+					<i class="img" style='background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)'></i>
+					<div class="txt f12 color-fff">
+						12人咨询
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 color-666">
+						最懂你美丽的高颜值个人写高
+						颜值个人写高颜值个人写高
+					</div>
+					<div class="box-2 clearfix">
+						<div class="txt-1 fldi color-fa6">
+							￥500.00
+						</div>
+						<div class="txt-2 frdi color-ccc">
+							广州
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="pic-list-width-44-percent">
+				<div class="img-item">
+					<i class="img" style='background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)'></i>
+					<div class="txt f12 color-fff">
+						12人咨询
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 color-666">
+						最懂你美丽的高颜值个人写高
+						颜值个人写高颜值个人写高
+					</div>
+					<div class="box-2 clearfix">
+						<div class="txt-1 fldi color-fa6">
+							￥500.00
+						</div>
+						<div class="txt-2 frdi color-ccc">
+							广州
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="pic-list-width-44-percent">
+				<div class="img-item">
+					<i class="img" style='background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)'></i>
+					<div class="txt f12 color-fff">
+						12人咨询
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 color-666">
+						最懂你美丽的高颜值个人写高
+						颜值个人写高颜值个人写高
+					</div>
+					<div class="box-2 clearfix">
+						<div class="txt-1 fldi color-fa6">
+							￥500.00
+						</div>
+						<div class="txt-2 frdi color-ccc">
+							广州
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="pic-list-width-44-percent">
+				<div class="img-item">
+					<i class="img" style='background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)'></i>
+					<div class="txt f12 color-fff">
+						12人咨询
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 color-666">
+						最懂你美丽的高颜值个人写高
+						颜值个人写高颜值个人写高
+					</div>
+					<div class="box-2 clearfix">
+						<div class="txt-1 fldi color-fa6">
+							￥500.00
+						</div>
+						<div class="txt-2 frdi color-ccc">
+							广州
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<p class="p10 f14 color-ff6">列表样式二</p>
+	<div class="wap-list-mod-2">
+		<ul class="list clearfix">
+			<li>
+				<div class="txt-item clearfix">
+					<div class="box-1 fldi clearfix">
+						<div class="ui-avatar-icon ui-avatar-icon-32 fldi">
+							<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						</div>
+						<div class="txt fldi">
+							<p class="txt-1 f14 color-333">
+								摄影师马叔
+							</p>
+							<p class="txt-2">
+								<span class="skill-txt color-fff">擅长</span>
+								<span class="type-txt color-aaa">日常写真</span>
+							</p>
+						</div>
+					</div>
+					<div class="box-2 frdi">
+						<div class="txt-1 color-666">
+							<span class="f24 color-24c">87</span>人咨询
+						</div>
+					</div>
+				</div>
+				<div class="img-item">
+					<div class="item">
+						<i class="img"  style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						<div class="txt color-fff">￥500.00</div>
+					</div>
+					<div class="item">
+						<i class="img"  style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						<div class="txt color-fff">￥500.00</div>
+					</div>
+					<div class="item">
+						<i class="img"  style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						<div class="txt color-fff">￥500.00</div>
+					</div>
+
+				</div>
+			</li>
+			<li>
+				<div class="txt-item clearfix">
+					<div class="box-1 fldi clearfix">
+						<div class="ui-avatar-icon ui-avatar-icon-32 fldi">
+							<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						</div>
+						<div class="txt fldi">
+							<p class="txt-1 f14 color-333">
+								摄影师马叔
+							</p>
+							<p class="txt-2">
+								<span class="skill-txt color-fff">擅长</span>
+								<span class="type-txt color-aaa">日常写真</span>
+							</p>
+						</div>
+					</div>
+					<div class="box-2 frdi">
+						<div class="txt-1 color-666">
+							<span class="f24 color-24c">87</span>人咨询
+						</div>
+					</div>
+				</div>
+				<div class="img-item">
+					<div class="item">
+						<i class="img"  style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						<div class="txt color-fff">￥500.00</div>
+					</div>
+					<div class="item">
+						<i class="img"  style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						<div class="txt color-fff">￥500.00</div>
+					</div>
+					<div class="item">
+						<i class="img"  style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+						<div class="txt color-fff">￥500.00</div>
+					</div>
+					
+				</div>
+			</li>
+		</ul>
+	</div>
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

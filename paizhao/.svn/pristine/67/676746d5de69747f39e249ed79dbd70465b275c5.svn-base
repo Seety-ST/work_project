@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/base.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/common/main.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-no-use.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-not.css">
+   
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/paizhao-ui-border.css">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+	<link rel="stylesheet" type="text/css" href="http://51snap.yueus.com//static/wap/style/fonts/font.css" />
+
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "wap-huipai:iconfont_js/index.js": {
+            "url": "http://51snap.yueus.com//static/wap/iconfont_js/index.js"
+        },
+        "wap-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"
+        },
+        "wap-huipai:global/go_top/go_top": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/go_top/go_top.js"
+        },
+        "wap-huipai:global/header/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/header/main.js"
+        },
+        "wap-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"
+        },
+        "wap-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "wap-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"
+        },
+        "wap-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/main.js"
+        },
+        "wap-huipai:global/swiper/1.0.0/swiper3.07.min": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"
+        },
+        "wap-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/ua/index.js"
+        },
+        "wap-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/cross_domain_storage.js"
+        },
+        "wap-huipai:global/utility/index": {
+            "deps": [
+                "wap-huipai:global/cookie/index",
+                "wap-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+
+
+<header class="global-header" >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">边框</h3>
+	</div>
+</header>
+  
+
+<!-- 页面内容start -->
+	<ul class="ui-list-text border-list">
+	    <li class="ui-border-t">上边框</li>
+	    <li class="ui-border">边框</li>
+	    <li class="ui-border-b">下边框</li>
+	    <li class="ui-border-tb">上下边框</li>
+	    <li class="ui-border-l">左边框</li>
+	    <li class="ui-border-r">右边框</li>
+	    <li class="border">
+	        xxx
+	    </li>
+	</ul>
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

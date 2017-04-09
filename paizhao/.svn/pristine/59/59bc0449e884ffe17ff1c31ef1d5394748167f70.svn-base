@@ -1,0 +1,23 @@
+<?php
+/**
+ * @author hudw <hudw@yueus.com>
+ * 2016.10.8
+ * 公共head
+ */
+
+include_once PAIZHAO_ROOT_URL.'common.inc.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'iconfont/icon-res.php';
+function _get_wbc_head($params=array())
+{	
+        $get_icon_font = _get_icon_font();
+        $tpl = getSmartyTemplate('head.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'wap/webcontrol/', $caching = true, $clear_cache);
+        $tpl ->assign("PAIZHAO_PLACEHOLER_IMG",PAIZHAO_PLACEHOLER_IMG);
+       
+        $tpl ->assign("get_icon_font",$get_icon_font);
+
+        $tpl_html = $tpl->fetch();
+        return $tpl_html;
+}
+
+
+?>

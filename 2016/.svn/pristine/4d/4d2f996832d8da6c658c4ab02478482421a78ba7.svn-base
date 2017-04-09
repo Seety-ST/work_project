@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>朋友圈转盘</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="index-page">
+		<section class="gameContainer lucky-item">
+			<div class="gameContainerRow">
+				<i class="monkey-icon">
+					<img src="images/icon-monkey-203x124.png" />
+				</i>
+				<img class="Disc" src="images/disk.png">
+				<img id="slotMachineButtonFake" class="Needle" data-tj="tj-luckly-one" src="images/start.png"></div>
+			<div class="slotMachineTimes">
+				<p id="todayTimes"></p>
+			</div>
+		</section>
+		<section class="gif-tips">
+			奖品剩余
+			<span class="num">10000</span>
+			份
+		</section>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/awardRotate.js"></script>
+	<script type="text/javascript">		
+		var turnplate={
+		        prize:[],             //大转盘奖品名称
+		        startAngle:0,               //开始角度		         
+		        bRotate:false               //false:停止;ture:旋转
+		};
+		$(document).ready(function(){
+			turnplate.prize = ["照片冲印￥299","时光印￥49.9", "萌系照片夹￥49.9",  "MINI相册￥79.9", "相片树￥169.9", "照片冲印￥299", "时光印￥49.9 ", "萌系照片夹￥49.9", "MINI相册￥79.9", "相片树￥169.9"];
+			var rotateTimeOut = function (){
+			        $('.Disc').rotate({
+			            angle:0,
+			            animateTo: 2160,
+			            duration:8000,
+			            callback:function (){
+			                alert('网络超时，请检查您的网络设置！');
+			            }
+			        });
+			};
+			//旋转转盘 item:奖品位置; txt：提示语;
+			var rotateFn = function (item, txt,callback){
+				var angles = item * (360 / turnplate.prize.length) - (360 / (turnplate.prize.length*2));
+				if(angles<36){
+					angles = 36 - angles; 
+				}else{
+					angles = 360 - angles + 36;
+				}
+				$('.Disc').stopRotate();
+				$('.Disc').rotate({
+					angle:0,
+					animateTo:angles-1800,
+					duration:4000,
+					callback:function (){
+						alert(txt);
+						 turnplate.bRotate = !turnplate.bRotate;
+					}
+				});
+			};
+			//点击指针事件
+			$("#slotMachineButtonFake").click(function(){
+				var item = rnd(1,turnplate.prize.length);
+				rotateFn(item, turnplate.prize[item-1]);
+				console.log(item);	
+			});
+
+		});
+		function rnd(n, m){
+		    var random = Math.floor(Math.random()*(m-n+1)+n);
+		    return random;
+		     
+		}
+	</script>
+</body>
+</html>

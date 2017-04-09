@@ -1,0 +1,106 @@
+// 确认订单页面
+// 星星
+// 2017-1-5
+
+.page-container {
+  background-color: #faf8f8;
+  font-size: 14px;
+    .order-detail-info {
+      padding-bottom: 65px;
+      .common-info-section {
+        background-color: #fff;
+        margin-bottom: 10px;
+        .order-time-address {
+          line-height: 45px;
+          padding-left: 15px;
+          padding-right: 15px;
+          .detail-value {
+            width: 280px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: right;
+          }
+        }
+
+      }
+      .order-info-section {
+        background-color: #fdfdfd;
+        margin-bottom: 10px;
+        .order-info {
+          padding: 12px 15px;
+          .info-img {
+            background: url("../../image/order/order-info-img-160x160.png") no-repeat;
+            background-size: cover;
+            width: 80px;
+            height: 80px;
+          }
+          .info-content {
+            padding-left: 90px;
+            padding-top: 3px;
+            line-height: 23px;
+          }
+          .info-content-price {
+            color: #666666;
+            line-height: 23px;
+          }
+          .info-content-type {
+            margin-top: 3px;
+            color: #aaaaaa;
+          }
+        }
+        .order-price {
+          background-color: #fff;
+          line-height: 45px;
+          padding: 0px 15px;
+          .price-title {
+            color: #666;
+          }
+          .order-total-price {
+            font-size: 16px;
+          }
+          .price-value {
+            color: #666;
+          }
+          .main-color {
+            color: #ffc430;
+          }
+        }
+
+      }
+      .customer-info-section {
+        background-color: #fff;
+        input {
+          width: 250px;
+        }
+        .customer-info-item {
+          line-height: 55px;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+        .customer-info-item-more {
+          padding: 15px;
+          .item-title {
+            padding-bottom: 15px;
+          }
+          .item-more {
+            height: 120px;
+            width: 100%;
+          }
+        }
+      }
+      .submit-btn {
+        position: fixed;
+        z-index: 1;
+        bottom:0;
+        display: -webkit-box;
+        display: box;
+        width: 100%;
+        .ui-button {
+          border-radius: 0px;
+        }
+      }
+    }
+
+
+}

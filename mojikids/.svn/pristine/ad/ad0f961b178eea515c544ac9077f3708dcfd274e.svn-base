@@ -1,0 +1,21 @@
+<?php
+/**
+ * 我的照片入口
+ * @author hudw
+ */
+
+include_once('../../fe_include/common.inc.php');
+
+$nickname = trim($_INPUT['nickname']);
+
+
+// 获取数据
+$ret = get_api_result('user/profile_edit.php',array(
+    'user_id' => $yue_login_id,
+    'operate' => "操作类型",
+    'nickname' =>  $nickname
+));
+
+
+mojikids_mobile_output($ret,false);
+?>

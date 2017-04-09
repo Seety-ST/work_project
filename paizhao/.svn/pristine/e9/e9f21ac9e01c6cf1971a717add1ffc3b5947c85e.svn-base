@@ -1,0 +1,54 @@
+<?php
+require(dirname(dirname(__FILE__)).'/common.inc.php');
+$task_admin_group_obj = POCO::singleton('pai_mall_admin_group_class');
+
+if($_POST)
+{
+    if($_POST['id'])
+    {
+        $rs = $task_admin_group_obj->update_admin_group($_POST,$_POST['id']);
+        if($rs['result'] == 1 && $_POST['status'] == 2) //删除分组
+        {
+             mall_add_admin_log(10003,100,$_POST['id']);
+        }
+        else if($rs['result'] == 1)  //编辑分组
+        {
+            mall_add_admin_log(10002,100,$_POST['id']);
+            
+        }
+    }else
+    {   //添加分组
+        $rs = $task_admin_group_obj->add_admin_group($_POST);
+        if($rs['result'] == 1)
+        {
+            mall_add_admin_log(10001,100,$rs['last_id']);
+        }
+    }
+    
+    if($rs['result'] == 1)
+    {
+        exit('<script>parent.alert("'.$rs['message'].'");parent.parent.location.href="admin_group.php?action=admin_group_list"</script>');
+    }else
+    {
+        exit('<script>parent.alert("'.$rs['message'].'")</script>');
+    }
+}
+$id = (int)$_INPUT['id'];
+$tpl = new SmartTemplate ( TASK_TEMPLATES_ROOT."/admin_group/admin_group_save.tpl.htm" );
+
+$admin_group_info = array();
+$admin_log_list_html = '';
+if($id)
+{
+    $admin_group_info = $task_admin_group_obj->get_admin_group_one($id);
+    $admin_log_list_html = mall_get_log_list_html(100,$id);
+}
+
+$status_html = get_status_list_for_admin_html($admin_group_info['status'],false);
+
+$tpl->assign('id',$id);
+$tpl->assign('status_html',$status_html);
+$tpl->assign('admin_log_list_html',$admin_log_list_html);
+$tpl->assign('admin_group_info',$admin_group_info);
+$tpl->output();
+?>

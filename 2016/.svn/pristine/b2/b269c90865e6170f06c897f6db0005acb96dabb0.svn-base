@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Circle</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+    <script>
+            (function (doc, win) {
+                      var docEl = doc.documentElement,
+                        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                        recalc = function () {
+                          var clientWidth = docEl.clientWidth;
+                          if (!clientWidth) return;
+                          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+                        };
+
+                      if (!doc.addEventListener) return;
+                      win.addEventListener(resizeEvt, recalc, false);
+                      doc.addEventListener('DOMContentLoaded', recalc, false);
+                    })(document, window);
+    </script>
+</head>
+<body class="report-bg">
+    <!--内容-->
+    <section class="content">
+        <section class="report-page">
+            <h3 class="title">请选择投诉原因</h3>
+            <div class="mod-radio-list">
+                <ul>
+                    <li>
+                        <h4 class="title">色情低俗内容</h4>
+                        <div class="radio-item">
+                            <input type="radio" id="report-list-1" name="name" checked />
+                            <label for="report-list-1" class="check-box"></label>
+                        </div>
+                    </li>
+                    <li>
+                        <h4 class="title">广告骚扰信息</h4>
+                        <div class="radio-item">
+                            <input type="radio" id="report-list-2" name="name" />
+                            <label for="report-list-2" class="check-box"></label>
+                        </div>
+                    </li>
+                    <li>
+                        <h4 class="title">有害信息（暴力、反动、迷信、谣言）</h4>
+                        <div class="radio-item">
+                            <input type="radio" id="report-list-3" name="name" />
+                            <label for="report-list-3" class="check-box"></label>
+                        </div>
+                    </li>
+                    <li>
+                        <h4 class="title">欺诈、骗局</h4>
+                        <div class="radio-item">
+                            <input type="radio" id="report-list-4" name="name" />
+                            <label for="report-list-4" class="check-box"></label>
+                        </div>
+                    </li>
+                    <li>
+                        <h4 class="title">咒骂辱骂、人身攻击</h4>
+                        <div class="radio-item">
+                            <input type="radio" id="report-list-5" name="name" />
+                            <label for="report-list-5" class="check-box"></label>
+                        </div>
+                    </li>
+                    <li>
+                        <h4 class="title">其他</h4>
+                        <div class="radio-item">
+                            <input type="radio" id="report-list-6" name="name" />
+                            <label for="report-list-6" class="check-box"></label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="textarea-item">
+                <textarea name="" placeholder="详细说明投诉情况（选填)"></textarea>
+                <p class="tips">请合理使用举报功能，恶意举报将受到相应的处罚</p>
+            </div>
+            <div class="btn-item">
+                <!-- loading-btn为加载状态 qr-btn为确认提交状态 nochoose-btn为不可选状态 -->
+                <span class="btn-area nochoose-btn">
+                    <i class="icon loadding-icon"></i>
+                    <em>确认提交</em>
+                </span>
+            </div>
+        </section>
+    </section>
+    <!-- 弹出层 -->
+    <!-- 举报成功 -->
+    <div class="pop-reportTips succeed-pop" style="display: none">
+        <div class="pop-con">
+            <div class="text-item">
+                <i class="icon succeed-icon"></i>
+                <p>
+                    举报成功<br />
+                    点击返回退出举报页
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 举报失败 -->
+    <div class="pop-reportTips fail-pop" style="display:  ">
+        <div class="pop-con">
+            <div class="text-item">
+                <i class="icon fail-icon"></i>
+                <p>
+                    举报失败<br />
+                    被举报信息已被删除
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出层 end -->
+</body>
+</html>

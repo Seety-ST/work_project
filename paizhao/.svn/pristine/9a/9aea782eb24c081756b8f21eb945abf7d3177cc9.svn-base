@@ -1,0 +1,469 @@
+
+
+.w1200{width:1200px; margin:0 auto;}
+/*页面样式*/
+/*滚动*/
+.index-page .p1th .scrollBox {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	height: 512px;
+}
+.index-page .p1th .scrollBox 	.img_list{
+	width: 100%;
+}
+.index-page .p1th .scrollBox 	.img_list li{
+	width: 100%;
+	height: 512px;
+	float: left;
+	display: block;
+	background-repeat: no-repeat;	
+	
+}
+
+
+
+.index-page .p1th .scrollBox .page-wrap .page-box{
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	margin-left: -96px;
+	width: 200px;
+	text-align: center;
+}
+.index-page .p1th .scrollBox .page-wrap .page-box a {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	border-radius: 10px;
+	background: #fff;
+	margin-right: 10px;
+	text-indent: -9999px;
+	opacity: 0.5;
+	-webkit-box-shadow: 0 0 4px #bbb;
+	-moz-box-shadow: 0 0 4px #bbb;
+	box-shadow: 0 0 4px #bbb;
+
+}
+.index-page .p1th .scrollBox .page-wrap .page-box a:hover, 
+.index-page .p1th .scrollBox .page-wrap .page-box a.selected {
+	background: #fff;
+	opacity: 1;
+}
+.index-page .p1th .scrollBox .page-wrap .pre{
+	position: absolute;
+	top:50%;
+	margin-top: -22px;
+	width: 44px;
+	height:44px;
+	left: -60px;
+	background: url() no-repeat;
+	-webkit-transition: right .2s, left .2s;
+	-moz-transition: right .2s, left .2s;
+	-ms-transition: right .2s, left .2s;
+	-o-transition: right .2s, left .2s;
+	transition: right .2s, left .2s;
+}
+.index-page .p1th .scrollBox .page-wrap .next{
+	top:50%;
+	margin-top: -22px;
+	width: 44px;
+	height:44px;
+	background: url() no-repeat;
+	position: absolute;
+	right: -60px;
+	display:none;
+	-webkit-transition: right .1s, left .1s;
+	-moz-transition: right .1s, left .1s;
+	-ms-transition: right .1s, left .1s;
+	-o-transition: right .1s, left .1s;
+	transition: right .1s, left .1s;
+}
+
+
+.index-page .p2th{
+	padding:50px 0px 60px 0px;
+	background-color: #fff;
+}
+.index-page .p2th .classify-item{
+	text-align: center;
+}
+.index-page .p2th .classify-item .list{
+	display: inline-block;
+}
+.index-page .p2th .classify-item .list li{
+	width: 80px;
+	margin-right: 60px;
+	text-align: center;
+	float:left;
+	display: inline-block;
+}
+
+.index-page .p2th .classify-item .list li .img-icon{
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	background-image: url(http://paizhao.yueus.com/static/pc/image/index/80x80.jpg);
+	background-position: center;
+	background-size: cover;
+	border-radius: 40px;
+	border:2px solid transparent;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition:    all 0.5s ease 0s;
+	-o-transition:      all 0.5s ease 0s;
+	transition:         all 0.5s ease 0s;
+}
+.index-page .p2th .classify-item .list li:hover .img-icon{
+	border:2px solid #44454a;
+	
+}
+.index-page .p2th .classify-item .list li .title{
+	text-align: center;
+	margin-top: 15px;
+}
+.index-page .p2th .img-item{
+	margin-top: 40px;
+}
+.index-page .p2th .img-item .list{
+	width: 1220px;
+	overflow: hidden;
+}
+.index-page .p2th .img-item .list li{
+	float: left;
+	margin:0px 20px 20px 0px;
+}
+.index-page .p2th .img-item .list li .img{
+	display: inline-block;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.index-page .p2th .img-item .list li.w700-img .img{
+	width: 700px;
+	height: 230px;
+}
+.index-page .p2th .img-item .list li.w480-img .img{
+	width: 480px;
+	height: 480px;
+
+}
+.index-page .p3th{
+	padding:60px 0px;
+	background-color: #f8f8f8;
+}
+.index-page  .p3th .title-item{
+	text-align: center;
+	background: url(http://paizhao.yueus.com/static/pc/image/index/line-img-60x1.jpg) no-repeat center bottom;
+}
+.index-page  .p3th .title-item .cn-title{
+	font-size: 24px;
+	color: #292e33;
+}
+.index-page  .p3th .title-item .en-title{
+	font-size: 14px;
+	color:#aaa;
+	padding-bottom: 10px;
+}
+.index-page  .p3th .more-item{
+	text-align: center;
+}
+.index-page  .p3th .more-item .more-btn{
+	padding:13px 47px;
+	display: inline-block;
+	margin:30px auto 0px;
+	text-decoration: none;
+	background-color: #fff;
+	border:1px solid #eeeeee;
+}
+.index-page  .p3th .item-wrap{
+	padding-top: 32px;
+}
+.index-page  .p3th .item-wrap .list li{
+	width: 1072px;
+	padding:20px 0px;
+	float: left;
+	background-color: #fff;
+}
+.index-page  .p3th .item-wrap .list li .txt-item{
+	width: 232px;
+	text-align: center;
+	margin-top: 40px;
+}
+.index-page  .p3th .item-wrap .list li .txt-item .img{
+	width: 120px;
+	margin:0 auto;
+}
+.index-page  .p3th .item-wrap .list li .txt-item  .txt-con{
+	padding-top: 25px;
+}
+.index-page  .p3th .item-wrap .list li .txt-item  .txt-con .txt{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.index-page  .p3th .item-wrap .list li .txt-item  .tips{
+	padding:3px 5px;
+	display: inline-block;
+	margin:5px 5px 0px 0px;
+	background-color: #49ded7;
+	color: #fff;
+}
+
+.index-page  .p3th .item-wrap .list li .img-item {
+	width: 260px;
+	height: 260px;
+	overflow: hidden;
+	margin-right: 20px;
+	position: relative;
+	float: left;
+}
+.index-page  .p3th .item-wrap .list li .img-item  .img{
+	width: 260px;
+	height: 260px;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.index-page  .p3th .item-wrap .list li .img-item  .txt{
+	width: 100%;
+	padding:12px 0px;
+	position: absolute;
+	left: 0;
+	bottom:0;
+	background: rgba(255,255,255,.8);
+	text-align: center;
+	font-weight: bold;
+	color: #fe9000;
+	
+}
+.index-page  .p3th .item-wrap .left-btn{
+	width: 64px;
+	height: 84px;
+	display: inline-block;
+	margin-top: 108px;
+	background: url(http://paizhao.yueus.com/static/pc/image/index/left-btn-64x84.jpg) no-repeat center;
+
+}
+.index-page  .p3th .item-wrap .right-btn{
+	width: 64px;
+	height: 84px;
+	display: inline-block;
+	margin-top: 108px;
+	background: url(http://paizhao.yueus.com/static/pc/image/index/right-btn-64x84.jpg) no-repeat center;
+}
+
+.index-page .p4th{
+	padding:60px 0px;
+	background-color: #fff;
+}
+.index-page  .p4th .title-item{
+	text-align: center;
+	background: url(http://paizhao.yueus.com/static/pc/image/index/line-img-60x1.jpg) no-repeat center bottom;
+}
+.index-page  .p4th .title-item .cn-title{
+	font-size: 24px;
+	color: #292e33;
+}
+.index-page  .p4th .title-item .en-title{
+	font-size: 14px;
+	color:#aaa;
+	padding-bottom: 10px;
+}
+.index-page  .p4th .more-item{
+	text-align: center;
+}
+.index-page  .p4th .more-item .more-btn{
+	padding:13px 47px;
+	display: inline-block;
+	margin:30px auto 0px;
+	text-decoration: none;
+	background-color: #fff;
+	border:1px solid #eeeeee;
+}
+.index-page .p4th .item-wrap .list{
+	width: 1220px;
+
+}
+.index-page .p4th .item-wrap .list li{
+	width: 285px;
+	height: 355px;
+	margin:30px 20px 0px 0px;
+	cursor: pointer;
+	position: relative;
+	background-color: #fff;
+	float: left;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition:    all 0.5s ease 0s;
+	-o-transition:      all 0.5s ease 0s;
+	transition:         all 0.5s ease 0s;
+}
+.index-page .p4th .item-wrap .list li:hover{
+	box-shadow: 0 0 20px rgba(0,0,0,.15);
+
+}
+.index-page .p4th .item-wrap .list li .img{
+	width: 285px;
+	height: 285px;
+	overflow: hidden;
+}
+.index-page .p4th .item-wrap .list li .img img{
+	width: 100%;
+	
+}
+
+.index-page .p4th .item-wrap .list li  .txt-item{
+	position: absolute;
+	left: 18px;
+	bottom:20px;
+}
+.index-page .p4th .item-wrap .list li  .txt-item .lbox .avator-icon{
+	width: 80px;
+	height: 80px;
+	border:3px solid #fff;
+	display: inline-block;
+	border-radius: 40px;
+	background-image: url(http://paizhao.yueus.com/static/pc/image/index/avator-80x80.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.index-page .p4th .item-wrap .list li  .txt-item .rbox{
+	margin:40px 0px 0px 10px;
+}
+.index-page .p4th .item-wrap .list li  .txt-item .rbox .txt-2{
+	color: #aaa;
+}
+.index-page .p5th{
+	padding:60px 0px;
+	background-color: #f8f8f8;
+}
+.index-page  .p5th .title-item{
+	text-align: center;
+	background: url(http://paizhao.yueus.com/static/pc/image/index/line-img-60x1.jpg) no-repeat center bottom;
+}
+.index-page  .p5th .title-item .cn-title{
+	font-size: 24px;
+	color: #292e33;
+}
+.index-page  .p5th .title-item .en-title{
+	font-size: 14px;
+	color:#aaa;
+	padding-bottom: 10px;
+}
+.index-page  .p5th .more-item{
+	text-align: center;
+}
+.index-page  .p5th .more-item .more-btn{
+	padding:13px 47px;
+	display: inline-block;
+	margin:30px auto 0px;
+	text-decoration: none;
+	background-color: #fff;
+	border:1px solid #eeeeee;
+}
+.index-page  .p5th .item-wrap .list{
+	margin-top: 30px;
+	width: 1220px;
+}
+.index-page  .p5th .item-wrap .list li{
+	float: left;
+	cursor: pointer;
+	margin:0px 20px 20px 0px;
+	position: relative;
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition:    all 0.5s ease 0s;
+	-o-transition:      all 0.5s ease 0s;
+	transition:         all 0.5s ease 0s;
+}
+.index-page  .p5th .item-wrap .list li:hover{
+	box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+.index-page  .p5th .item-wrap .list li .img{
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+.index-page  .p5th .item-wrap .list li.min-size {
+	width: 285px;
+	height: 285px;
+}
+.index-page  .p5th .item-wrap .list li.min-size .img{
+	width: 285px;
+	height: 285px;
+}
+.index-page  .p5th .item-wrap .list li.middle-size {
+	width: 386px;
+	height: 386px;
+
+}
+.index-page  .p5th .item-wrap .list li.middle-size .img{
+	width: 386px;
+	height: 386px;
+
+}
+.index-page  .p5th .item-wrap .list li.max-size {
+	width: 590px;
+	height: 590px;
+
+}
+.index-page  .p5th .item-wrap .list li.max-size .img{
+	width: 590px;
+	height: 590px;
+
+}
+.index-page  .p5th .item-wrap .list li .txt-item{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom:0;
+	background:rgba(255,255,255,.8);
+
+}
+.index-page  .p5th .item-wrap .list li:hover .txt-item{
+	background:rgba(255,255,255,1);
+}
+.index-page  .p5th .item-wrap .list li .txt-item .box-1{
+	padding:10px 10px;
+}
+.index-page  .p5th .item-wrap .list li .txt-item .box-1 .txt-1{
+	font-size: 18px;
+	color: #fe9000;
+	font-weight: bold;
+}
+.index-page  .p5th .item-wrap .list li .txt-item .box-1 .txt-2{
+	color: #aaa;
+}
+.index-page  .p5th .item-wrap .list li .txt-item .box-2{
+	padding:0px 10px 10px 10px;
+}
+.index-page  .p5th .item-wrap .list li .txt-item .box-2 .txt-1{
+	color: #666;
+}
+.index-page .p6th{
+	padding:74px 0px;
+}
+.index-page .p6th .list li{
+	width: 400px;
+	float: left;
+	text-align: center;
+}
+.index-page .p6th .list li .img-item{
+	text-align: center;
+}
+.index-page .p6th .list li .img-item img{
+	width: 128px;
+	height: 128px;
+	border-radius: 50%;
+	
+}
+.index-page .p6th .list li .text-item .title{
+	font-size: 24px;
+	color:#292e33;
+	font-weight: bold;
+	margin-top: 24px;
+}
+.index-page .p6th .list li .text-item .txt{
+	margin-top:15px;
+}

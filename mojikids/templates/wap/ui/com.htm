@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/main.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.css">
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/ui/no-use/yue-ui-not.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://mojikids.yueus.com/static/wap/lib/base.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+		YUE-UI VUE 2.0 交互组件
+	</title>
+	<style>
+
+	</style>
+
+    
+</head>
+
+<body>
+	<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+	<div id="page-container" class="page-container p10" v-cloak>
+		<button @click="show_toast" class="ui-button ui-button-block ui-button-100per ui-button-size-m ui-button-bg-ff6">
+			<span class="ui-button-content f16">Toast使用</span>
+		</button>
+		<br>
+		<button @click="show_popup" class="ui-button ui-button-block ui-button-100per ui-button-size-m ui-button-bg-ff6">
+			<span class="ui-button-content f16">Popup使用</span>
+		</button>
+		<br>
+		<button @click="show_dialog" class="ui-button ui-button-block ui-button-100per ui-button-size-m ui-button-bg-ff6">
+			<span class="ui-button-content f16">Dialog使用</span>
+		</button>
+		<br>
+		<button @click="show_loading" class="ui-button ui-button-block ui-button-100per ui-button-size-m ui-button-bg-ff6">
+			<span class="ui-button-content f16">Loading使用</span>
+		</button>
+
+		<mt-popup v-model="popupVisible" position="right">
+			<slot name="">你好</slot>
+		</mt-popup>
+	</div>
+
+
+</body>
+
+</html>
+<script src="http://mojikids.yueus.com/templates/wap/ui/head.js" charset="utf-8"></script>
+
+
+
+
+<script type="text/javascript">
+	(function() {
+
+		var Popup =  require.syncLoad('wap-kids:widget/popup/index');
+		// 加载util
+        var Util =require.syncLoad('wap-kids:global/util/index');
+		// 注册组件
+		Vue.component(Popup.name, Popup);
+
+		new Vue
+		({
+			el: '#page-container',
+			created: function()
+			{
+
+			},
+			data:
+			{
+				popupVisible: false,
+			},
+			methods:
+			{
+				show_toast: function()
+				{
+					Util.toast({
+						message: '提示',
+						position: 'middle',
+						duration: 5000
+					});
+				},
+				show_popup: function()
+				{
+					this.$data.popupVisible = true;
+
+				},
+				show_dialog: function()
+				{
+					Util.dialog({
+						title: '预约须知',
+						message: '确定执行此操作?',
+						showCancelButton : true,
+						confirmButtonText : '确认',
+						cancelButtonText : '取消',
+					},
+					/**
+					 * 按钮点中后的回调
+					 * @param  {[string]} value [description]
+					 * @return {[string]} 返回confirm  || cancel [description]
+					 */
+					function(value)
+					{
+						console.log(value);
+					})
+				},
+				show_loading : function()
+				{
+					Util.loading.open
+					({
+						text : '加载中...',
+						timeout:2000
+					});
+				}
+			}
+		});
+	})();
+</script>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>约摄-POCO旗下的摄影师预约平台</title>   
+    <meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+    <meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/placeholder/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/placeholder/index.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/index/index-page.css">
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+	
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

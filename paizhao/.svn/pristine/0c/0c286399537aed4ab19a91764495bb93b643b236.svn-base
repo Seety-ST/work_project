@@ -1,0 +1,43 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+include_once('common.inc.php');
+$cache = $_INPUT['cache'] ? true : false;
+$clear = $_INPUT['clear'] ? true : false;
+$tpl = getSmartyTemplate('index.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'pc/ptjs/', $cache, $clear);
+if ($tpl->isCached('index.tpl.htm'))
+{
+    echo 'is cached';
+}
+if ($tpl->smarty->isCached('index.tpl.htm'))
+{
+    echo '1 is cached';
+}
+print_r($tpl);
+$tpl->smarty->clearAllCache();
+print_r($tpl);
+
+// $smarty = new Smarty();
+// $template_dir = PAIZHAO_TEMPLATES_ROOT.'pc/ptjs/';
+// $smarty->setTemplateDir($template_dir);
+// $smarty->setCompileDir('./_smarty_templates_c/');
+// $smarty->setCompileCheck(true);
+// $smarty->setForceCompile(false);
+// $smarty->setCacheDir('./_smarty_cache/');
+// $smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
+// $smarty->setCacheLifetime(3600);
+// $smarty->setLeftDelimiter('{%');
+// $smarty->setRightDelimiter('%}');
+// $smarty->setDebugging(false);
+// //$smarty->clearAllCache();
+// $tpl = $smarty->createTemplate('index.tpl.htm');
+// $tpl->smarty->clearAllCache();
+// $rst = $tpl->smarty->isCached('index.tpl.htm');
+// var_dump($rst);
+// var_dump($tpl);
+// $tpl->display();

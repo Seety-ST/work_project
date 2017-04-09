@@ -1,0 +1,28 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+include_once('common.inc.php');
+
+$smarty = new Smarty();
+$template_dir = PAIZHAO_TEMPLATES_ROOT.'pc/ptjs/';
+$smarty->setTemplateDir($template_dir);
+$smarty->setCompileDir('./_smarty_templates_c/');
+$smarty->setCompileCheck(true);
+$smarty->setForceCompile(false);
+$smarty->setCacheDir('./_smarty_cache/');
+$smarty->setCaching(Smarty::CACHING_LIFETIME_CURRENT);
+$smarty->setCacheLifetime(3600);
+$smarty->setLeftDelimiter('{%');
+$smarty->setRightDelimiter('%}');
+$smarty->setDebugging(false);
+$tpl = $smarty->createTemplate('index.tpl.htm');
+$tpl->smarty->clearAllCache();
+$rst = $tpl->isCached();
+var_dump($rst);
+var_dump($tpl);
+$tpl->display();

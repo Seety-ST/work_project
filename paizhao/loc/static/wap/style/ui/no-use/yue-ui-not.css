@@ -1,0 +1,84 @@
+@charset "UTF-8";
+.border-list {
+  background-color: #fff; }
+
+.border-list li {
+  width: 100px;
+  margin: 10px auto;
+  -webkit-box-pack: center;
+  text-align: center; }
+
+.ui-list-text > li {
+  line-height: 20px;
+  padding: 12px 25px 12px 0;
+  font-size: 16px; }
+
+.ui-list-text > li.cur {
+  background-color: #429931;
+  color: #fff;
+  margin-left: 0px;
+  padding-left: 15px; }
+
+.ui-list-link .ui-list-info, .ui-list-item-link .ui-list-info, .ui-list-text .ui-list-info {
+  padding-right: 35px; }
+
+.ui-list-text.ui-list-link .ui-list-info, .ui-list-text .ui-list-item-link .ui-list-info {
+  padding-right: 70px; }
+
+/**
+* 按钮
+*/
+.ui-btn, .ui-btn-lg, .ui-btn-s {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 13px;
+  min-width: 55px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #0079ff;
+  font-size: 15px;
+  background-color: #fdfdfd;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, white), to(#fafafa));
+  border-radius: 3px;
+  vertical-align: top;
+  color: #00a5e0;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #cacccd;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
+
+.global-header {
+  height: 45px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fafafa;
+  width: 100%;
+  margin-bottom: 20px; }
+  .global-header .title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60%;
+    margin: 0 auto;
+    font-family: 'Microsoft YaHei', Verdana, SimSun; }
+  .global-header .back {
+    width: 50px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+    .global-header .back .icon-back {
+      background-image: url(http://localhost/paizhao/loc/static/wap/image/ui/icon-back-22x40.png);
+      width: 11px;
+      height: 20px;
+      display: block;
+      background-size: cover;
+      margin: 12px auto 0 auto; }
+    .global-header .back:active .icon-back {
+      background-image: url(http://localhost/paizhao/loc/static/wap/image/ui/icon-back-22x40-active.png); }

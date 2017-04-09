@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://localhost/paizhao/loc/static/pc/lib/base.js"></script>
+	
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	<!-- 高亮引导 -->
+	<script type="text/javascript" src="http://static.yueus.com/yue_ui/coder/js/prismjs.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://static.yueus.com/yue_ui/coder/css/prismjs.css">
+
+	<link type="text/css" rel="stylesheet" href="http://localhost/paizhao/loc/static/pc/style/ui/no-use/no-use.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://localhost/paizhao/loc/static/pc/style/common/main.css">
+<link type="text/css" rel="stylesheet" href="http://localhost/paizhao/loc/static/pc/style/ui/ui-color.css">
+<!-- 当前页css  -->
+	<link type="text/css" rel="stylesheet" href="http://localhost/paizhao/loc/static/pc/style/ui/ui-layer.css">
+<link type="text/css" rel="stylesheet" href="http://localhost/paizhao/loc/static/pc/modules/global/layer/skin/layer.css">
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://localhost/paizhao/loc/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="http://localhost/paizhao/loc/static/pc/modules/global/layer/layer.js"></script>
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">弹出层组件 layer</h3>
+
+				<!-- 模板start -->
+				<div class="model f14">
+
+					<div id="test-1" class="f16 cp mt20 dib">点击测试（常规）</div>
+
+					<br />
+
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+$(function(){
+	require('pc-huipai:global/layer/layer');	
+	$('#test-1').on('click', function(event) {
+
+		console.log(layer);
+
+		var index = layer.open({
+			title: ['如果你不想显示标题栏，你可以title: false', 'background-color:#fff;border-bottom:none;'], //标题
+			shade: 0.5, //遮罩灰度
+	       		 move: false,
+	       		 area: ['600px', 'auto'],
+	       		 skin : 'demo-class',
+		  	content: '<div class="tc">这里是测试内容。</div>' //内容
+
+		});
+
+	});
+
+
+	
+
+
+	
+})
+
+</script>
+</html>
+
+

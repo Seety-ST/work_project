@@ -1,0 +1,314 @@
+<?php
+
+/**
+ * 获取 api 数据返回
+ *
+ * @param string  $path 路径 ( 例如: customer/buyer_index )
+ * @param array  $param 参数 ( 例如: array( 'user_id' => '117452') )
+ * @param boolean $decode 是否转为数组
+ * @param boolean $to_gbk 转编码gbk
+ * @param boolean $is_login 是否登陆
+ * @return array| string
+ */
+if(!function_exists("__get_api_result"))
+{
+    function __get_api_result($path, $param, $decode = TRUE, $to_gbk = FALSE, $is_login = TRUE,$version = '1.0.0')
+    {
+        if (empty($path) || empty($param)) {
+            return FALSE;
+        }
+
+
+        // 设置 location_id
+        $param['location_id'] = empty($_COOKIE['yue_location_id']) ? 101029001 : $_COOKIE['yue_location_id'];
+        $param['request_platform'] = 'web';
+
+        if(true)
+        {
+            // 手机 api 接口
+            $dir = '/disk/data/htdocs232/poco/mojikids/api/';   // APP接口路径
+            $file = $dir . (strpos($path, '.php') ? $path : $path . '.php');
+            if (!file_exists($file)) {
+                return FALSE;
+            }
+            // 传递参数
+            $post_data = array(
+                'version' => $version,
+                'os_type' => 'web',
+                'ctime' => time(),
+                'app_name' => 'poco_yuepai_web',
+                'sign_code' => substr(md5('poco_' . json_encode($param) . '_app'), 5, -8),
+                'is_enc' => 0,
+                'param' => $param,
+            );
+            //var_dump($param);
+            define('YUE_INVOCATION_PROTOCOL', FALSE);  // 不引入协议
+            if ($is_login === TRUE) {
+                define('YUE_INPUT_CHECK_TOKEN', FALSE);  // 不使用验证access_token
+            }
+            
+            $json = require($file);
+        }
+        $arr = json_decode($json, TRUE);
+        //var_dump($arr);
+        if ($decode === TRUE) {
+            $arr = __convert_result($arr, $to_gbk);
+            return $arr;
+        } else {
+            $arr = __convert_result($arr, FALSE);
+            $json = json_encode($arr);
+            return $json;
+        }
+    }
+}
+/**
+ * 转编码
+ *
+ * @param array $arr  转义数组
+ * @param boolean $to_gbk  是否转编码
+ * @return array
+ */
+if(!function_exists("__convert_result"))
+{
+    function __convert_result($arr, $to_gbk = TRUE)
+    {
+        if (empty($arr)) {
+            return array();
+        }
+        $newarr = array();
+        foreach ($arr as $key => $value) {
+            if (empty($value)) {
+                $newarr[$key] = $value;
+                continue;
+            }
+            if (is_array($value)) {
+                $newarr[$key] = __convert_result($value, $to_gbk);
+                continue;
+            }
+            if (strpos($value, 'yueyue://') === 0) {
+                if ($to_gbk === TRUE) {
+                    $value = mb_convert_encoding($value, 'gbk', 'utf8');
+                }
+                $newarr[$key] = __mall_yueyue_app_to_http($value);
+                continue;
+            }
+            if ($to_gbk === TRUE) {
+                $newarr[$key] = mb_convert_encoding($value, 'gbk', 'utf8');
+            } else {
+                $newarr[$key] = $value;
+            }
+        }
+        return $newarr;
+    }
+}
+
+
+/**
+ * 转换app页面 to wap页面
+ *
+ * @param string $url 链接
+ * @return string
+ */
+if(!function_exists("__mall_yueyue_app_to_http"))
+{
+    function __mall_yueyue_app_to_http($url)
+    {
+        $html_array = include('../config/page_url_config.inc.php');
+        $url_arr = parse_url($url);
+
+        if ($_GET['__show_pid'] == 1) {
+            var_dump($url);
+        }
+
+        if ($url_arr['scheme'] === 'yueyue') {
+            $parse_arr = array();
+            parse_str($url_arr['query'], $parse_arr);
+            $pid = $parse_arr['pid'];
+            $type = $parse_arr['type'];
+
+
+
+            // ======== 针对参数过长的处理 ========
+            // hudw 2015.9.6
+            $temp_parse_arr = array();
+            parse_str($url_arr['query'], $temp_parse_arr);
+            unset($temp_parse_arr['user_id']);
+            unset($temp_parse_arr['inner_app']);
+            unset($temp_parse_arr['inner_web']);
+            unset($temp_parse_arr['type']);
+            unset($temp_parse_arr['tjurl']);
+
+            if($_GET['npid'] != 1)
+            {
+
+                unset($temp_parse_arr['pid']);
+            }
+
+            $temp_parse_str = http_build_query($temp_parse_arr);
+
+            // ======== 针对参数过长的处理 ========
+
+            if ($type === 'inner_app') {
+
+                // 针对兼容商家列表的处理!!!
+                // hudw 2015.9.23
+                if ($pid == 1220101) {
+                    $return_query = urldecode($temp_parse_arr['return_query']);
+                    if (preg_match('/cms_type=mall/', $return_query)) {
+                        //$pid = 1220147;
+                    }
+                }
+
+                // 重新整合url
+                $temp_url_arr = parse_url($html_array[$pid]);
+                parse_str($temp_url_arr['query'], $temp_query_arr_v2);
+                $real_html_url = $temp_url_arr['scheme'] . '://' . '' . $temp_url_arr['host'] . $temp_url_arr['path'];
+                $real_query_str = $temp_url_arr['query'] ? '&' . $temp_url_arr['query'] : '';
+
+                $temp_url = $real_html_url . '?' . $temp_parse_str . $real_query_str;
+
+                $temp_url = __mall_yueyue_http_to_static($pid,$temp_url);
+
+                return $temp_url;
+
+            } elseif ($type === 'inner_web') {
+
+                $temp_url = $parse_arr['url'];
+
+                $temp_url = __mall_yueyue_http_to_static($pid,$temp_url);
+
+                return $temp_url;
+
+            }else if($type === 'outside_web')
+            {
+                $temp_url = urldecode($parse_arr['url']);
+
+                $url = $temp_url;
+
+                return $url;
+            }
+        }
+        else
+        {
+
+            if (preg_match('/www.yueus.com/', $_SERVER['SCRIPT_URI']))
+            {
+
+                $url_arr['host'] = str_replace('yp.yueus.com', 'www.yueus.com', $url_arr['host']);
+
+                $url = $url_arr['scheme'] . '://' . $url_arr['host'] . $url_arr['path'] . ($url_arr['query'] ? '?' . $url_arr['query'] : '');
+
+                $temp_url = __mall_yueyue_http_to_static($pid,$url);
+            }
+        }
+
+
+        return $url;
+    }
+}
+
+if(!function_exists("mall_yueyue_app_to_http"))
+{
+    function mall_yueyue_app_to_http($url)
+    {
+        return __mall_yueyue_app_to_http($url);
+    }
+}
+
+if(!function_exists("__mall_yueyue_http_to_static"))
+{
+    /**
+     * http地址转换静态地址
+     *
+     * @param  [type] $pid [description]
+     * @param  [type] $url [description]
+     * @return [type]      [description]
+     */
+    function __mall_yueyue_http_to_static($pid,$url)
+    {
+
+        return $url;
+
+        $url_arr = parse_url($url);
+        $path = $url_arr['path'];
+        $query = $url_arr['query'];
+        $_url_str = $url_arr['scheme'].'://'.$url_arr['host'];
+        parse_str($query,$query_arr);
+
+        $_url_query = "";
+
+        // 专题特殊处理
+        if(preg_match("/topic.yueus.com/", $url_arr['host']))
+        {
+            $pid = '8888888';
+        }
+
+        switch ($pid) {
+            // goods.yueus.com 转换
+            case '1220102':
+            case '1220152':
+                $goods_id = $query_arr['goods_id'];
+                unset($query_arr);
+                $url = $_url_str."/{$goods_id}.html";
+                break;
+            // seller.yueus.com 转换
+            case '1220103':
+                $seller_user_id = $query_arr['seller_user_id'];
+                unset($query_arr);
+                $url = $_url_str."/{$seller_user_id}.html";
+                break;
+            // topic.yueus.com 转换
+            case '8888888':
+                $topic_id = $query_arr['topic_id'];
+                unset($query_arr);
+                if(intval($topic_id)>0)
+                {
+                    $url = "//topic.yueus.com/{$topic_id}.html";
+                }
+
+                break;
+            // list.yueus.com 旧版品类首页 转换
+            case '1220144':
+                unset($query_arr['title']);
+                $__category_url_params = '';
+                foreach ($query_arr as $key => $value)
+                {
+                    $__category_url_params.= "-{$key}-{$value}";
+                }
+
+                $url = "//list.yueus.com/category{$__category_url_params}.html";
+                unset($query_arr);
+                unset($__category_url_params);
+                break;
+            case '1220176':
+                unset($query_arr['title']);
+                $__category_url_params = '';
+                foreach ($query_arr as $key => $value)
+                {
+                    $__category_url_params.= "-{$key}-{$value}";
+                }
+
+                $url = "//list.yueus.com/category_v2{$__category_url_params}.html";
+                unset($query_arr);
+                unset($__category_url_params);
+                break;
+            // list.yueus.com 频道首页 转换
+            case '1220145':
+                $__channel_url_params = '';
+                foreach ($query_arr as $key => $value)
+                {
+                    $__channel_url_params.= "-{$key}-{$value}";
+                }
+
+                $url = "//list.yueus.com/channel{$__channel_url_params}.html";
+                unset($query_arr);
+                unset($__channel_url_params);
+                break;
+            default:
+                $url = $url;
+                break;
+        }
+
+        return $url;
+    }
+}

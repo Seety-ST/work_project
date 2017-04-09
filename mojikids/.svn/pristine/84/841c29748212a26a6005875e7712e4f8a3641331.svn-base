@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017223/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+	   列表
+	</title>
+	<style>
+		body{
+			background-color: #fff;
+		}
+	</style>
+
+    
+</head>
+<body>
+	
+
+<!-- YUE-UI VUE 头部返回模块 start -->
+<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+
+
+<div class="wap-list-mod-1">
+	<ul class="list">
+		<li class="clearfix">
+			<div class="avator-item fldi">
+				<div class="ui-avatar-icon ui-avatar-icon-60">
+				           <i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-m.jpg)"></i>
+				</div>
+				<i class="mark-icon girl-mark-icon"></i>
+			</div>
+			<div class="txt-item fldi">
+				<p class="box-1 tc">
+					刘雯小公主
+				</p>
+				<p class="box-2 f14 color-666 tc">
+					2岁
+				</p>
+			</div>
+			<div class="btn-item frdi">
+				<button class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+					<span class="ui-button-content f12">修改</span>
+				</button>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="avator-item fldi">
+				<div class="ui-avatar-icon ui-avatar-icon-60">
+				           <i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-m.jpg)"></i>
+				</div>
+				<i class="mark-icon boy-mark-icon"></i>
+			</div>
+			<div class="txt-item fldi">
+				<p class="box-1 tc">
+					余文乐小王子
+				</p>   
+				<p class="box-2 f14 color-666 tc">
+					2岁
+				</p>
+			</div>
+			<div class="btn-item frdi">
+				<button class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+					<span class="ui-button-content f12">修改</span>
+				</button>
+			</div>
+		</li>
+	</ul>
+</div>
+
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        宝宝档案 - 莫吉照相馆
+    </title>
+
+    {%$wap_global_head%}
+    <meta name="Keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+    <meta name="Description" content="MOJIKIDS莫吉照相馆，专注3-7岁儿童亲子摄影。我们一直坚持对细节及品质的极致追求，用镜头记录孩子的纯真笑颜。">
+    <!-- <link rel="import" href="../../ui/g_head.tpl.htm?__inline"> -->
+
+    <link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/bb/list/index.css">
+
+    
+</head>
+
+<body  class="cor-bg-fff">
+
+<main role="main">
+    <div id="page-container" class="page-container" >
+
+        <div class="index-page">
+
+            <div class="p1th">
+                <div class="item-wrap">
+                    {%foreach $ret.data.list as $val%}
+
+                        <div class="item">
+                            <div class="lbox">
+                                
+                                {%if $val.baby_sex eq "小王子"%}
+                                    <i class="icon-com icon-boy"></i>
+                                {%else%}
+                                    <i class="icon-com icon-girl"></i>
+                                {%/if%}
+                                <div class="ui-avatar-icon ui-avatar-icon-60">
+                                    <i style="background-image:url({%$val.baby_image%})"></i>
+                                </div>
+                            </div>
+                            <div class="cbox">
+                                <div class="box1 color-333">{%$val.baby_name%} {%$val.baby_sex%}</div>
+                                <div class="box2 color-666">{%$val.baby_birth%}</div>
+                            </div>
+                            <div class="rbox">
+                                <a href="../file/index.php?baby_id={%$val.baby_id%}&type=edit" >
+                                    <button class="ui-button  ui-button-inline-block  ui-button-size-xx main-bg ui-button-radius-l">
+                                        <span class="ui-button-content f12">修改</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div> 
+                    {%/foreach%}
+         
+                </div>   
+
+
+                <div class="btn">
+                    <a href="../file/index.php" >
+                        <button class="ui-button ui-button-block ui-button-100per ui-button-size-xl  ui-button-radius-l ui-button-bd-fac main-border-color">
+                            <span class="ui-button-content f16">新建宝宝档案</span>
+                        </button>
+                    </a>
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div> 
+</main>
+
+</body>
+
+</html> 
+
+{%$wap_global_footer%}
+<!-- <link rel="import" href="../../ui/g_footer.tpl.htm?__inline"> -->
+
+<script type="text/javascript" src="http://mojikids.yueus.com/static/wap/modules/upload/index.js"></script>
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+        // 加载util
+        var Util = require.syncLoad('wap-kids:global/util/index');
+        // 加载uploader
+        var Uploader = require('wap-kids:upload/index');
+
+        new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return {
+                    cur : 0
+                }
+            },
+            methods:
+            {
+                /**
+                 * 触发传图
+                 * @return {[type]} [description]
+                 */
+                fetch_upload : function()
+                {
+
+                }
+            }
+        });
+    })();
+</script>
+
+{%$wap_global_tj%}

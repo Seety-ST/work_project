@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Swiper demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/wap-v2.css">
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<!-- Swiper -->
+	<section class="index-page swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="item show-page">
+					<div class="con-item">
+						<div class="listItem ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.6s"></div>
+						<div class="con-wrap">
+							<div class="img-item ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.6s" swiper-animate-delay="0.5s">
+								<img src="images/test/402x536.jpg" />
+							</div>
+							<div class="btn-wrap clearfix">
+								<a href="#" class="btn-item like-btn ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">
+									<i class="icon like-icon"></i>
+									<span>投票(1634)</span>
+								</a>
+								<a href="#" class="btn-item join-btn ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s">
+									<span>参加活动</span>
+								</a>
+							</div>
+							<dl class="text-item ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.2s" swiper-animate-delay="1s">
+								<dt>
+									本美人要成为最具吸引力的Magnet Girl，<br />
+									快来给我点赞！
+								</dt>
+								<dd>
+									即日起至2017年1月13日，每个ID可为一幅作品投票；<br />
+									票数前10的作品，将在美人相机开机画面中做展示；<br />
+									本页面所有作品都来自于美人相机APP Magnet Girl活动。
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="mod-arrow swipe-handler">
+						<i class="down-icon"></i>
+						<em>进入排行榜</em>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="item product-page">
+					<div class="listItem swipe-handler ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.2s"></div>
+					<div class="list clearfix ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+						<ul>
+							<li class="item-1">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-2">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-3">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-4">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-3">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+							<li class="item-6">
+								<i class="num-item">
+									<em class="num"></em>
+								</i>
+								<div class="img-item">
+									<img src="images/test/182x243.jpg" />
+								</div>
+								<div class="text-item">
+									<span class="poll">1634</span>票
+								</div>
+								<div class="name-item">
+									美人1924
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="more-btn ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+						<a href="#" class="btn" id="more-btn">查看更多作品</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- 弹出层 -->
+	<div class="fade" style="display:none"></div>
+	<!-- 投票成功 -->
+	<div class="mod-pop succeed-pop" style="display:none">
+		<div class="text-item">
+			<p>投票成功</p>
+		</div>
+		<div class="btn-item">
+			<a href="#" class="btn close-btn">关 闭</a>
+		</div>
+	</div>
+	<!-- 已投票 -->
+	<div class="mod-pop had-pop" style="display:none">
+		<div class="text-item">
+			<p>您已为TA投过票了</p>
+		</div>
+		<div class="btn-item">
+			<a href="#" class="btn close-btn">关 闭</a>
+		</div>
+	</div>
+	<!-- 弹出层 end -->
+	<!-- Swiper JS -->
+	<script src="js/swiper.min.js"></script>
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+			direction: 'vertical',
+			fade: {
+				crossFade: true,
+			},
+			swipeHandler : '.swipe-handler',
+			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+				swiperAnimateCache(swiper); //隐藏动画元素 
+				swiperAnimate(swiper); //初始化完成开始动画
+			}, 
+			onSlideChangeEnd: function(swiper){ 
+				swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			} 
+		});
+	</script>
+</body>
+</html>

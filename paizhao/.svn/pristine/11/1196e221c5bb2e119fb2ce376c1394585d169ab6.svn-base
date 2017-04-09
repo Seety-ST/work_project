@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://51snap.yueus.com//static/pc/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	
+	
+
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/ui/no-use/no-use.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/common/main.css">
+<!-- 当前页css  -->
+	<!-- <link charset="utf-8" rel="stylesheet" href="../style/xxxx.scss"> -->
+
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/placeholder/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/placeholder/index.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+
+<body>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		<div class="ui-frame-nav ">
+			<ul class="list" id="list">
+
+
+				<div class="title">基本</div>
+				<a href="color.htm" class="link"><li>颜色 color</li></a>
+				<a href="avatar.htm" class="link"><li>头像规格 avatar</li></a>
+				<a href="button.htm" class="link"><li>按钮 button</li></a>
+				<a href="icon.htm" class="link"><li>图标 icon</li></a>
+
+				<div class="title">通用模块</div>
+				<a href="layer.htm" class="link"><li>layer 弹出组件</li></a>
+				<a href="list.htm" class="link"><li>列表</li></a>
+				<a href="page.htm" class="link"><li>分页</li></a>
+				<a href="nav.htm" class="link"><li>面包屑</li></a>
+				
+
+			</ul>
+		</div>
+
+		<div class="ui-frame-content">
+			<div class="main">拍照UI规范库</div>
+		</div>
+
+	</div>
+
+</body>
+
+
+<script type="text/javascript">
+$(function() {
+
+	$('#list > .link').on('click', function(event) {
+		var href = $(this).attr('href').toString();
+		localStorage.setItem('value', href);
+	});
+
+	var is_value = localStorage.getItem('value') ;
+	if (is_value) 
+	{
+		$('#list').find('.link').each(function(index, el) {
+			if ($(this).attr('href').toString() == is_value ) 
+			{
+			    $(this).find('li').addClass('cur');
+			}
+		});
+	}
+
+});
+
+</script>
+
+
+
+</html>
+

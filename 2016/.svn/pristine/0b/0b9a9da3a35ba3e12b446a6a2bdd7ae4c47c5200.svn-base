@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>简拼官网</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/jane.css">
+</head>
+<body>
+	<div id="jpdown-page">
+		<div class="section page1">
+			<div class="contain">
+				<div class="bg-item">
+					<img src="images/jane/index-bgicon-720x290.png" />
+				</div>
+				<div class="con-item clearfix">
+					<div class="imgSowItem">
+						<!-- 焦点图 -->
+						<div class="device">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="img">
+											<img src="images/jane/test/177x316.jpg" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img">
+											<img src="images/jane/test/177x316-2.jpg" />
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img">
+											<img src="images/jane/test/177x316-3.jpg" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="pagination"></div>
+						</div>
+						<!-- 焦点图 end -->
+					</div>
+					<div class="info-item">
+						<h4 class="title"></h4>
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<div class="code-img">
+									<img src="images/jane/code-img-100x100.png" />
+								</div>
+							</div>
+							<div class="btn-warp">
+								<a href="#" class="btn btn-iphone"> 
+									<i class="icon iconfont">&#xe601;</i>
+									<span>iPhone</span>
+								</a>
+								<a href="#" class="btn btn-android"> 
+									<i class="icon iconfont">&#xe600;</i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page2">
+			<div class="contain">
+				<div class="con-item">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/jane/code-img-100x100.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page3">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/jane/code-img-100x100.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page4">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/jane/code-img-100x100.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page5">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/jane/code-img-100x100.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page6">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="bg-item"></div>
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/jane/code-img-100x100.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page7">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="info-item">
+						<h2 class="logo">
+							<i class="icon"></i>
+						</h2>
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<div class="code-img">
+									<img src="images/jane/code-img-160x160.png" />
+								</div>
+							</div>
+							<div class="btn-warp">
+								<a href="#" class="btn btn-iphone"> 
+									<i class="icon iconfont">&#xe601;</i>
+									<span>iPhone</span>
+								</a>
+								<a href="#" class="btn btn-android"> 
+									<i class="icon iconfont">&#xe600;</i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="footer-nav">
+						<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+					</div>
+					<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h1 class="mod-logo">
+		<img src="images/jane/logo-img-122x78.png" />
+	</h1>
+	<!-- mod header -->
+	<div class="header">
+		<h1 class="logo">
+			<a href="#">
+				<img src="images/app-mod-item/logo-img-145x111.png" />
+			</a>
+		</h1>
+		<div class="mod-nav-bar"  id="mod-nav-bar">
+			<div class="nav-btn-warp">
+				<div class="more-btn" id="header-more-btn">
+					<i class="icon iconfont">&#xe602;</i><span>更多产品</span>
+				</div>
+			</div>
+			<div class="nav" id="nav">
+				<ul>
+					<li>
+						<a href="#">
+							<span>美人相机</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li class="active">
+						<a href="#">
+							<span>简   拼</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>简   客</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>印   象</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>图片合成器</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- mod header end -->
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/idangerous.swiper.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(function(){
+			$('#jpdown-page').fullpage({
+				'navigation' : true,
+				'scrollingSpeed' : 800,
+				'continuousVertical' : false,
+				'css3' : true,
+							//events
+							afterLoad: function(anchorLink, index){
+						if(index == 2){
+							$('.page2').find('.move-item').delay(100).animate({
+								top: '17%'
+							}, 'slow');
+						}
+						if(index == 3){
+							$('.page3').find('.move-item').delay(100).animate({
+								bottom: '-17%'
+							}, 'slow');
+						}
+						if(index == 4){
+							$('.page4').find('.move-item').delay(100).animate({
+								bottom: '-17%'
+							}, 'slow');
+						}
+						if(index == 5){
+							$('.page5').find('.move-item').delay(0).animate({
+								bottom: '-17%'
+							}, 'slow');
+						}
+						if(index == 6){
+							$('.page6').find('.move-item').delay(100).animate({
+								bottom: '-17%'
+							}, 'slow');
+						}
+					},
+					onLeave: function(index, direction){
+						if(index == '2'){
+							$('.page2').find('.move-item').delay(0).animate({
+								top: '0%'
+							}, 'fast');
+						}
+						if(index == '3'){
+							$('.page3').find('.move-item').delay(0).animate({
+								bottom: '0%'
+							}, 'fast');
+						}
+						if(index == '4'){
+							$('.page4').find('.move-item').delay(0).animate({
+								bottom: '0%'
+							}, 'fast');
+						}
+						if(index == '5'){
+							$('.page5').find('.move-item').delay(0).animate({
+								bottom: '0%'
+							}, 'fast');
+						}
+						if(index == '6'){
+							$('.page6').find('.move-item').delay(0).animate({
+								bottom: '0%'
+							}, 'fast');
+						}
+					}
+			});
+		});
+		var mySwiper = new Swiper('.swiper-container',{
+			 pagination: '.pagination',
+			 paginationClickable: true,
+			 centeredSlides: true,
+			 slidesPerView: 3,
+			 grabCursor : true,
+			 autoplay: 2000,
+			 autoplayDisableOnInteraction : false,
+			 spaceBetween: 30,
+			 speed:300
+		});
+		$("#mod-nav-bar").each(function() {
+			$(this).hover(function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+			},
+			function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+			});
+		 });
+	});
+	</script>
+
+</body>
+</html>

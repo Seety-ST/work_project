@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<title>亲子相机官网</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/idangerous.swiper.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link href="css/common.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="css/baby.css">
+
+	
+
+</head>
+<body>
+	<div id="jpdown-page">
+		<div class="section page1">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="info-item">
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<div class="code-img">
+									<img src="images/baby/code-index-103x103.png" />
+								</div>
+							</div>
+							<div class="btn-warp">
+								<a href="#" target="_blank" class="btn btn-iphone"> 
+									<i class="icon iconfont">&#xe601;</i>
+									<span>iPhone</span>
+								</a>
+								<a href="#" target="_blank" class="btn btn-android"> 
+									<i class="icon iconfont">&#xe600;</i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page2">
+			<div class="contain">
+				<div class="con-item">
+					<div class="move-item">
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/baby/code-index-103x103.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page3">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/baby/code-index-103x103.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page4">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/baby/code-index-103x103.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page5">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="move-item">
+						<div class="info-item">
+							<div class="mod-download-item clearfix">
+								<div class="code-item">
+									<div class="code-img">
+										<img src="images/baby/code-index-103x103.png" />
+									</div>
+								</div>
+								<div class="btn-warp">
+									<a href="#" target="_blank" class="btn btn-iphone"> 
+										<i class="icon iconfont">&#xe601;</i>
+										<span>iPhone</span>
+									</a>
+									<a href="#" target="_blank" class="btn btn-android"> 
+										<i class="icon iconfont">&#xe600;</i>
+										<span>Android</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page6">
+			<div class="contain">
+				<div class="con-item clearfix">
+					<div class="info-item">
+						<h2 class="logo">
+							<i class="icon"></i>
+						</h2>
+						<div class="mod-download-item clearfix">
+							<div class="code-item">
+								<div class="code-img">
+									<img src="images/baby/code-img-161x161.png" />
+								</div>
+							</div>
+							<div class="btn-warp">
+								<a href="#" class="btn btn-iphone">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>iPhone</span>
+								</a>
+								<a href="#" target="_blank" class="btn btn-android">
+									<i class="icon iconfont">&#xe600;</i>
+									<span>Android</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="footer-nav">
+						<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+					</div>
+					<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h1 class="mod-logo">
+		<img src="images/baby/logo-img-146x66.png" />
+	</h1>
+	<!-- mod header -->
+	<div class="header">
+		<h1 class="logo">
+			<a href="#">
+				<img src="images/app-mod-item/logo-img-145x111.png" />
+			</a>
+		</h1>
+		<!-- <div class="mod-nav-bar"  id="mod-nav-bar">
+			<div class="nav-btn-warp">
+				<div class="more-btn" id="header-more-btn">
+					<i class="icon iconfont">&#xe602;</i><span>更多产品</span>
+				</div>
+			</div>
+			<div class="nav" id="nav">
+				<ul>
+					<li>
+						<a href="#">
+							<span>美人相机</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>简   拼</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>简   客</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>图片合成器</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+					<li class="active">
+						<a href="#">
+							<span>亲子相机</span>
+							<em class="n-line"></em>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div> -->
+		<div id="header" class="clearfix" style="position: absolute; top: 0px; background-color: transparent;">
+			<div class="gnav font clearfix">
+				
+					<div class="menu_container">
+					<ul class="clearfix">
+							<li class="gn gn_1 current" style="opacity: 1;"><a href="#" style="color: rgb(0, 0, 0);"> 美人相机</a></li>
+							<li class="gn gn_2" style="opacity: 1;"><a href="#" style="color: rgb(0, 0, 0);">简   客</a></li>
+							<li class="gn gn_3" style="opacity: 1;"><a href="#" style="color: rgb(0, 0, 0);">图片合成器</a></li>
+							<li class="gn gn_4" style="opacity: 1;"><a href="#" style="color: rgb(0, 0, 0);">图片合成器</a></li>
+							<li class="gn gn_5" style="opacity: 1;"><a href="#" style="color: rgb(0, 0, 0);">亲子相机</a></li>
+					</ul>
+					<div class="line" style="overflow: hidden; width: 129px; left: 36px; background-color: rgb(0, 0, 0);"></div>
+						
+					</div>		
+			</div>
+		</div>
+		<!-- header js开始 -->
+		<link rel="stylesheet" type="text/css" href="css/header.css" media="screen,print">
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/IE.css" media="screen,print">
+		<![endif]-->
+
+		<!-- header js结束 -->
+		<script>
+			var ua=window.navigator.userAgent;
+			function loadJS(url, success) {
+			  var domScript = document.createElement('script');
+			  domScript.src = url;
+			  success = success || function(){};
+			  domScript.onload = domScript.onreadystatechange = function() {
+			    if (!this.readyState || 'loaded' === this.readyState || 'complete' === this.readyState) {
+			      success();
+			      this.onload = this.onreadystatechange = null;
+			      this.parentNode.removeChild(this);
+			    }
+			  }
+			  document.getElementsByTagName('head')[0].appendChild(domScript);
+			}
+			if(/MSIE/g.test(ua)){  
+				
+			} else{	
+				//执行加载外部 JS 文件
+				loadJS('js/header/jquery.min.js',function (){
+				   loadJS('js/header/jquery.easing.1.3.js',function (){
+				    loadJS('js/header/contents.js',function (){
+
+				    });
+				   });
+				});
+			}
+		</script>
+	</div>
+	
+	<!-- mod header end -->
+	<script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/respond.js"></script>
+	<script>
+	$(document).ready(function() {
+		$(function(){
+			$('#jpdown-page').fullpage({
+				'navigation' : true,
+				'scrollingSpeed' : 800,
+				'continuousVertical' : false,
+				'css3' : true
+			});
+		});
+		$("#mod-nav-bar").each(function() {
+			$(this).hover(function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+			},
+			function() {
+				$(this).find("#header-more-btn").delay(100).animate({
+							opacity: '1',
+							marginRight: '0'
+						}).show();
+				$(this).find("#nav").delay(100).animate({
+							opacity: '0',
+							marginRight: '2.5%'
+						}).hide();
+			});
+		 });
+	});
+	</script>
+	
+	
+
+</body>
+</html>

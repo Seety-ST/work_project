@@ -1,0 +1,468 @@
+/**
+ * @author hudw
+   2015.4
+   fis pure config 设置
+**/
+
+var pk = require('./package.json');
+
+var static_url = '/static/wap';
+var tpl_url = '/templates/wap';
+
+// 配置开发模式
+var file = fis.file.wrap('public_tag.txt');
+
+if(!file)
+{
+	fis.util.write('./public_tag.txt','is_dev');
+}
+
+if(!pk)
+{
+    fis.log.error('缺少 package.json 文件');
+    process.exit();
+}
+
+var nowDate = new Date();
+var todate = nowDate.getFullYear() + ""+ (nowDate.getMonth()+1) + "" + nowDate.getDate();
+var mode = file.getContent();
+var domain  = '';
+var use_hash = false;
+var domain_info = 
+{
+    "predev" : "http://51snap.yueus.com",
+    "pub" : "http://51snap.yueus.com", 
+    "hudw":
+    {
+        "dev" : "http://localhost/yueyue_huipai/loc"
+    },
+    "zky" : 
+    { 
+        "dev" : "http://localhost/paizhao/loc"
+    },
+    "hgc" : 
+    { 
+        "dev" : ""
+    },
+    "hst" : 
+    { 
+        "dev" : "http://localhost/yue_supe/loc"
+    }
+};
+
+// ================== 生成路径的deploy配置 ==================
+var deploy_info =
+{
+    online : {
+        to : '../..'
+    },
+    dev : {
+        to : '../..'
+    },
+    loc : {
+        to : '../../loc'
+    }
+};
+// ================== 生成路径的deploy配置 ==================
+
+switch(mode.trim())
+{
+    case 'is_dev':
+        domain = domain_info[pk['author']].dev;
+        break;
+    case 'is_predev':
+        domain = domain_info.predev;
+        break;
+    case 'is_pub':
+        domain = domain_info.pub;
+        use_hash = true;
+        break;
+    case 'is_pub_test':
+        domain = domain_info.pub_test_domain;
+        use_hash = true;
+        break;
+    default:
+        domain = domain_info.predev;
+
+};
+
+
+
+//如果要兼容低版本ie显示透明png图片，请使用pngquant作为图片压缩器，
+//否则png图片透明部分在ie下会显示灰色背景
+//fis.config.set('settings.optimzier.png-compressor.type', 'pngquant');
+
+//设置jshint插件要排除检查的文件，默认不检查lib、jquery、backbone、underscore等文件
+//使用pure release命令时，添加--lint或-l参数即可生效
+fis.set('settings.lint.jshint.ignored', [ 'lib/**', /jquery|backbone|underscore/i ]);
+
+//设置项目编码格式
+fis.set('project.charset', 'utf8');
+
+//设置合并格式
+fis.set('modules.spriter', 'csssprites');
+
+// md5文件后缀
+fis.set('project.md5Connector','.');
+
+//设置项目编码格式
+fis.set('namespace', 'wap-huipai');
+
+//csssprite处理时图片之间的边距，默认是3px 注意！！ 使用图片合并只有执行合并命令才生效
+fis.set('settings.spriter.csssprites.margin', 10);
+// 设置了scale ，每一条css里面就不用设置background-size
+fis.set('settings.spriter.csssprites.scale', 0.5);
+
+//项目排除掉 指定文件_xxx.scss，不对其进行构建
+fis.set('project.ignore', 
+[
+    'out/**', 
+    'docs**',
+    'node_modules/**',
+    '**/_*.scss','/**.cmd','tpl/**.tpl.html',
+    '**.sh',
+    'conf.json',
+    'package.json',
+    'public_tag.txt',
+    'fis-conf.js',
+    'yuefe-conf.js',
+    '**.dump',
+    '**.md',
+    'new_config/**',
+    'old_config/**' 
+]);
+
+ 
+fis.match('*.scss', {
+    rExt: '.css',
+    parser: [
+        fis.plugin('node-sass', {
+            includePaths: [
+                'styles'
+            ] || [], 
+            sourceMap : false
+        })
+    ],
+    release: static_url+'/$&',
+    domain : domain,
+    useHash : use_hash
+});
+
+/***** fis 配置生产路径 *****/
+fis.media('predev').match('*', {
+    charset: 'gbk',
+    deploy: [
+                fis.plugin('local-deliver', deploy_info.dev)
+            ]
+});
+fis.media('prod').match('*', {
+    charset: 'gbk',
+    deploy: [
+                fis.plugin('skip-packed-x', {
+                  // 配置项
+                }),
+                fis.plugin('local-deliver', deploy_info.online)
+            ]
+});
+fis.hook('commonjs');
+/***** fis 配置生产路径 *****/
+
+
+/***** fis 核心配置 参数 *****/
+fis
+.match('::package', 
+{
+    // npm install [-g] fis3-postpackager-loader
+    // 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
+    postpackager: fis.plugin('loader', 
+    {
+        resourceType: 'commonJs',
+        useInlineMap: true // 资源映射表内嵌
+    })
+})
+.match('::image', 
+{
+    useHash: true,
+    release: static_url+'/$&',
+    domain: domain
+}).match('**.png',
+{
+    release: static_url+'/$&',
+    domain: domain,
+    useHash : use_hash
+}).match('*.js', 
+{    
+    useHash : use_hash,
+    domain: domain,
+    release: static_url+'/$&',
+})
+.match('**.json',{
+    release: false
+})
+.match('**.txt',{
+    release: false
+})
+.match('**.sh',{
+    release: false
+})
+.match('**.md',{
+    release: false
+})
+.match('components/**.js',{
+    isMod: true,
+    release:static_url+'/$&',
+    domain:domain,
+    useHash : use_hash,
+})
+
+.match('**.tmpl', {
+    parser: fis.plugin('handlebars-1.x',
+    {
+        useData : true
+    }), 
+    release: false,
+    isJsLike : true,
+    rExt: '.js', 
+})
+.match('**.htm', {
+    release: static_url+'/$&',
+    domain : domain,
+    useHash : false
+})
+.match('*.{scss,css}', {
+    // 给匹配到的文件分配属性 `useSprite` 
+    useSprite: true,
+    release : static_url,
+    postprocessor: [        
+        fis.plugin('px2rem', 
+        {
+            baseDpr: 2,             // base device pixel ratio (default: 2)
+            remVersion: true,       // whether to generate rem version (default: true)
+            remUnit: 100,            // rem unit value (default: 75)
+            remPrecision: 3         // rem precision (default: 6)
+        })
+    ]
+})
+.match('templates/ui/no-use/**',{
+    release:false
+})
+.match('templates/**',{
+    release:'/$0'
+})
+.match(/\/templates\/(.*)/i,{    
+    release:tpl_url+'/$1'
+})
+.match('templates/**.tmpl',{    
+    release: false,
+    isJsLike : true,
+})
+.match('style/**.css',{
+    release : static_url+'/$&',
+    //使用域名控制
+    domain : domain,               
+})
+.match('style/**.scss',{
+    release : static_url+'/$&',
+    //使用域名控制
+    domain : domain,               
+})
+.match(/\/style\/ui\/(paizhao-ui-*.*)|(reset.*)/i,{
+    release : false
+})
+.match('modules/**.css',{
+    release : static_url+'/style$&',
+    //使用域名控制
+    useDomain : true,               
+    useSprite: true
+})
+.match('modules/**/(**.js)',{
+    isMod: true,
+    release:static_url+'/$&',
+    useHash : use_hash,  
+    domain : domain, 
+    id: '$1',
+    useSameNameRequire : true, 
+})
+.match('modules/**.{scss,css}',{
+    release:static_url+'/$&',
+    useHash : use_hash,  
+    domain : domain, 
+    useSameNameRequire : true, 
+})
+.match('modules/global/(**).js',{
+    isMod: true,
+    release:static_url+'/$&',
+    useHash : use_hash,  
+    domain : domain, 
+    useSameNameRequire : true, 
+    id: 'global/$1',
+})
+.match('lib/**.js',{
+    release:false,
+})
+.match(/\/lib\/base.js/i,{
+    useMap:false,
+    isMod : false,
+    domain : domain,
+    release:static_url+'/$&'
+})
+.match('*.{png,jpg,JPEG}',{
+    release: static_url+'/$&'
+})
+.match('pak/map.js',{
+    release: false
+})
+
+
+/*fis.match('**.vue', {
+  isMod: true,
+  rExt: 'js',
+  useSameNameRequire: true,
+  parser: fis.plugin('vue-component', {
+    cssScopeFlag: 'vuec'
+  }),
+  release: static_url+'/$&',
+  domain : domain
+});
+
+// tag style in vue file
+fis.match('yue-ui/**.vue:css', {
+  rExt: 'css',
+  parser: [
+  fis.plugin('node-sass', {})
+    ],
+    release: static_url+'/$&',
+    domain : domain
+});
+
+
+
+/***** fis 核心配置 参数 *****/
+
+
+if(mode.trim() =='is_pub')
+{
+
+    /*************************打包规范*****************************/
+    fis       
+    .match('*.js', 
+    {
+        optimizer: fis.plugin('uglify-js'),
+        useHash : use_hash,
+        release: static_url+'/$&',
+        domain:domain,
+    })
+    .match('lib/**.js',{
+        release:false,
+    })
+    .match(/\/lib\/base.js/i,{
+        useMap:false,
+        isMod : false,
+        domain : domain,
+        release:static_url+'/$&'
+    })
+    .match('**.{scss,less,css}', 
+    {        
+        optimizer: fis.plugin('clean-css'),
+        useHash : use_hash,
+        domain:domain,        
+    })
+    .match('*.{scss,css}', {
+        // 给匹配到的文件分配属性 `useSprite` 
+        useSprite: true,
+        postprocessor: [        
+            fis.plugin('px2rem', 
+            {
+                baseDpr: 2,             // base device pixel ratio (default: 2)
+                remVersion: true,       // whether to generate rem version (default: true)
+                remUnit: 100,            // rem unit value (default: 75)
+                remPrecision: 3         // rem precision (default: 6)
+            })
+        ]
+    })
+    .match('::image', 
+    {
+        useHash: true,
+        domain: domain
+    })
+    .match('**.png',
+    {
+        release: static_url+'/$&',
+        useHash : use_hash
+    })
+    .match('**/(*_{x,y,z}.png)', {
+            release: static_url+'/image/'+todate+'/$1'
+    })
+    // 启用打包插件，必须匹配 ::package
+    .match('::package', 
+    {
+        spriter: fis.plugin('csssprites', 
+        {            
+            scale: 0.5, // 移动端二倍图用
+            margin: '10'
+        }),
+        // npm install [-g] fis3-postpackager-loader
+        // 分析 __RESOURCE_MAP__ 结构，来解决资源加载问题
+        // 纯前端项目，依赖不能自断被加载进来，所以这里需要借助一个 loader 来完成
+        postpackager: fis.plugin('loader', 
+        {
+            resourceType: 'mod',
+            //beautyResourceMap : true,
+            //useSiteMap : true,
+            useInlineMap: true // 资源映射表内嵌
+        })
+    })
+    .match('pak/map.js',{
+        release: false
+    })
+    .match('templates/ui/no-use/**',{
+        release:false
+    })
+    .match(/\/style\/common\/(yue-ui-*.*)|(reset.*)/i,{
+        release:false
+    })
+    .match('/style/common/main.scss', 
+    {
+        packTo: 'style/'+todate+'/main.css',
+        domain:domain  
+    })
+    .match('/modules/global/**.js', {        
+        packTo: 'js/'+todate+'/common.js',
+        domain:domain
+    }); 
+
+}
+
+var run_status_tag = "<!--RUN_STATUS-->";
+var complie_date = "<!--COMPLIE_DATE-->";
+var now = nowDate.getFullYear() + "-"+ (nowDate.getMonth()+1) + "-" + nowDate.getDate() + " " + nowDate.getHours() + ":" + nowDate.getMinutes() + ":" + nowDate.getSeconds();
+fis.set('modules.prepackager',function(ret,content,conf,settings)
+{   
+    fis.util.map(ret.src, function(subpath, file)
+    {
+        if (file.isHtmlLike) {
+            var content = file.getContent();
+            //content += '<!-- build '+ (new Date())+'-->';
+
+            if (content.indexOf("<!--RUN_STATUS-->") !== -1) 
+            {
+                var run_status = 'DEV';
+                if(mode.trim() == 'is_pub')
+                {
+                    run_status = 'ONLINE';
+                }
+                content = content.replace(run_status_tag, run_status);
+            }           
+            if(content.indexOf(complie_date) !== -1) 
+            {
+                content = content.replace(complie_date, now);   
+            }
+
+            file.setContent(content);
+        }        
+
+    });
+});
+
+
+

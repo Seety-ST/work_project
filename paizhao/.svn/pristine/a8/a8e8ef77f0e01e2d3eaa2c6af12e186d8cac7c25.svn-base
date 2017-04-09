@@ -1,0 +1,7 @@
+.camera-page{
+	.p1th{
+		padding:50px 0px;
+		border-bottom: 1px solid #eee;
+	}
+}
+

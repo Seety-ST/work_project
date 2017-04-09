@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="GBK" >
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>抽奖</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+<body>
+    <div class="index-page">
+        <div class="lucky-item">
+            <div id="disk">
+                <img src="images/disk.png" id="disk_rote" style="border: 0px solid red;"></div>
+            <div id="start">
+                <img src="images/start.png" id="startbtn" alt="开始抽奖" ></div>
+        </div>
+        <div class="info-item">
+            <div class="list">
+                <ul>
+                    <li> <em class="num">1</em>
+                        <div class="txt-item">
+                            <h3 class="title">活动时间：</h3>
+                            <p>2016年9月30日 00:00--2016年10月7日0:00</p>
+                        </div>
+                    </li>
+                    <li> <em class="num">2</em>
+                        <div class="txt-item">
+                            <p>活动期间，首次安装简拼并使用的新用户，即有1次抽奖机会，活动期间总计1次抽奖机会。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <em class="num">3</em>
+                        <div class="txt-item">
+                            <p>抽得奖品用户，请正确填写联系方式和收货地址。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <em class="num">4</em>
+                        <div class="txt-item">
+                            <p>活动结束后，即10月8日起10个工作日内安排寄送。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sy-item">
+            <img src="images/ll-img-2.png" />
+        </div>
+    </div>
+    <!-- 弹出层 -->
+    <div class="fade" style="display:"></div>
+    <!-- 填写领奖信息弹出层 -->
+    <form name="prospect_form" action="" method="post" target="loginFrame" id="prospect_form">
+        <div class="pop-ljxx" id="order_drive_pop" style="display:none">
+            <div class="item-wrap font_wryh">
+                <a href="#this" class="close">
+                    <img src="images/ll-img-3.png" />
+                </a>
+                <div class="item-con clearfix">
+                    <div class="item clearfix">
+                        <h4 class="tips fldi">姓&nbsp;名</h4>
+                        <div class="input-item fldi">
+                            <input class="input-txt input-txt-1" id="user_name" name="name" type="text"></div>
+                    </div>
+                    <div class="item clearfix">
+                        <h4 class="tips fldi">手&nbsp;机</h4>
+                        <div class="input-item fldi">
+                            <input class="input-txt input-txt-1" id="phone" name="phone" type="text"></div>
+                    </div>
+                    <div class="item clearfix">
+                        <h4 class="tips fldi">地&nbsp;址</h4>
+                        <div class="input-item fldi">
+                            <textarea class="input-txt input-txt-2" id="address" name="address"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="txt">
+                    温馨提示：
+                    <br />
+                    请认真填写联系方式和收件地址，活动结束后即10月8日起10个工作日内安排寄送。
+                </div>
+                <div class="submit-item">
+                    <a href="#this" onclick="add_info()" class="submit-btn">提 交</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- 填写领奖信息弹出层 end-->
+    <!-- 获得产品 -->
+    <div class="pop-gifItem" id="gift-sm" style="display:none">
+        <div class="listItem">丝芙兰蜜吻润唇球</div>
+        <div class="gif-img">
+            <img src="images/gif-img/sm-img.jpg" />
+        </div>
+        <div class="btn-item">
+            <a href="#" class="free-btn">免费领取</a>
+        </div>
+    </div>
+    <div class="pop-gifItem" id="gift-sn" style="display:none">
+        <div class="listItem">索尼靓咔™KW1</div>
+        <div class="gif-img">
+            <img src="images/gif-img/zp-img.jpg" />
+        </div>
+        <div class="btn-item">
+            <a href="#" class="free-btn">免费领取</a>
+        </div>
+    </div>
+    <div class="pop-gifItem" id="gift-sfl" style="display: ">
+        <div class="listItem">
+            灰姑娘 气质御姐 随心包
+            <br />
+            <span class="tips">
+                （奖品请以实物为准）
+            </span>
+        </div>
+        <div class="gif-img">
+            <img src="images/gif-img/cg-img.jpg" />
+        </div>
+        <div class="btn-item">
+            <a href="#" class="free-btn">免费领取</a>
+        </div>
+    </div>
+    <!-- 获得产品 end-->
+    <!-- 谢谢参与 -->
+    <div class="pop-xxcy" style="display:none">
+        <a href="#" class="close">
+            <img src="images/ll-img-3.png" />
+        </a>
+        <div class="pop-con">
+            <div class="txt-item">
+                <p>您可以告诉更多小伙伴下载参与抽奖！</p>
+            </div>
+            <div class="share-item">
+                <div class="listItem">
+                    <span>分享活动</span>
+                </div>
+                <div class="mod-share-list">
+                    <ul>
+                        <li> <i class="icon"><img src="images/share-icon/1.png" /></i> 
+                        </li>
+                        <li> <i class="icon"><img src="images/share-icon/2.png" /></i> 
+                        </li>
+                        <li>
+                            <i class="icon">
+                                <img src="images/share-icon/3.png" />
+                            </i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 谢谢参与 end-->
+    <!-- 再玩一次 -->
+    <div class="pop-again" style="display:none">
+        <div class="pop-con">
+            <div class="listItem">啥也没中，再玩一次吧！</div>
+            <div class="btn-item">
+                <a href="#" class="mod-pop-btn">再玩一次</a>
+            </div>
+        </div>
+    </div>
+    <!-- 再玩一次 end-->
+    <!-- 弹出层 end-->
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/awardRotate.js"></script>
+    <script type="text/javascript">     
+        var turnplate={
+                prize:[],             //大转盘奖品名称
+                startAngle:0,               //开始角度               
+                bRotate:false               //false:停止;ture:旋转
+        };
+        $(document).ready(function(){
+            turnplate.prize = ["谢谢参与","索尼靓咔™KW1", "再玩一次",  "雙妹夜来香袭人香皂", "雙妹雪白晶润面膜", "谢谢参与", "索尼靓咔™KW1 ", "再玩一次", "雙妹夜来香袭人香皂", "雙妹雪白晶润面膜"];
+            var rotateTimeOut = function (){
+                    $('.Disc').rotate({
+                        angle:0,
+                        animateTo: 2160,
+                        duration:8000,
+                        callback:function (){
+                            alert('网络超时，请检查您的网络设置！');
+                        }
+                    });
+            };
+            //旋转转盘 item:奖品位置; txt：提示语;
+            var rotateFn = function (item, txt,callback){
+                var angles = item * (360 / turnplate.prize.length) - (360 / (turnplate.prize.length*2));
+                if(angles<36){
+                    angles = 36 - angles; 
+                }else{
+                    angles = 360 - angles + 36;
+                }
+                $('.Disc').stopRotate();
+                $('.Disc').rotate({
+                    angle:0,
+                    animateTo:angles-1800,
+                    duration:4000,
+                    callback:function (){
+                        callback();
+                    }
+                });
+            };
+            //点击指针事件
+            $("#slotMachineButtonFake").click(function(){
+                var item = rnd(1,turnplate.prize.length);
+                rotateFn(item, turnplate.prize[item-1]);
+                switch (item) {
+                            case 1:
+                            rotateFn(36, turnplate.prize[0],function(){
+                                $('.pop-xxcy').show();
+                                $('.fade').show();
+                            });
+                                break;
+                            case 2:
+                                rotateFn(72, turnplate.prize[1],function(){
+                                        $('#gift-sn').show();
+                                        $('.fade').show();
+                                });
+                                break;
+                            case 3:
+                            rotateFn(108, turnplate.prize[2],function(){
+                                $('.pop-again').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 4:
+                            rotateFn(144, turnplate.prize[3],function(){
+                                $('#gift-sfl').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 5:
+                            rotateFn(180, turnplate.prize[4],function(){
+                                $('#gift-sm').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 6:
+                            rotateFn(216, turnplate.prize[5],function(){
+                                $('.pop-xxcy').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 7:
+                            rotateFn(252, turnplate.prize[6],function(){
+                                $('#gift-sn').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 8:
+                            rotateFn(288, turnplate.prize[7],function(){
+                                $('.pop-again').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 9:
+                            rotateFn(324, turnplate.prize[8],function(){
+                                $('#gift-sfl').show();
+                                $('.fade').show();
+                            });
+                            break;
+                            case 10:
+                            rotateFn(360, turnplate.prize[9],function(){
+                                $('#gift-sm').show();
+                                $('.fade').show();
+                            });
+                            break;
+                        }
+                        console.log(item);
+                
+                
+            });
+            //免费领取按钮弹出填写信息弹出层
+            $('.free-btn').click(function(){
+                $('#gift-sn').hide();
+                $('#gift-sm').hide();
+                $('#gift-sfl').hide();
+                $('#order_drive_pop').show();
+            })
+            //关闭填写弹出层
+            $(' #order_drive_pop .close').click(function(){
+                $('#order_drive_pop').hide();
+                $('.fade').hide();
+            })
+            //关闭谢谢分享弹出层
+            $(' .pop-xxcy .close').click(function(){
+                $('.pop-xxcy').hide();
+                $('.fade').hide();
+            })
+            //再来一次
+            $('.pop-again .mod-pop-btn').click(function(){
+                $('.pop-again').hide();
+                $('.fade').hide();
+                $('#slotMachineButtonFake').attr('data-tj','tj-luckly-two');
+            })
+
+        });
+        function rnd(n, m){
+            var random = Math.floor(Math.random()*(m-n+1)+n);
+            return random;
+             
+        }
+        
+
+    </script>
+</body>
+</html>

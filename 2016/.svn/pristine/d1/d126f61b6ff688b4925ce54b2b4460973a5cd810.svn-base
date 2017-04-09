@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK" >
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>合成相片demo</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<!-- 模板 3张 -->
+	<h4 class="title">3张模板</h4>
+	<section class="img-wrap mod-list-3">
+		<div class="list">
+			<ul>
+				<li class="item-1">
+					<img src="images/320x320.jpg" />
+				</li>
+				<li class="item-2">
+					<img src="images/402x536.jpg" />
+				</li>
+				<li class="item-3">
+					<img src="images/750x500.jpg" />
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- 模板 6张 -->
+	<h4 class="title">6张模板</h4>
+	<section class="img-wrap mod-list-6">
+		<div class="list">
+			<ul>
+				<li class="item-1">
+					<img src="images/750x500.jpg" />
+				</li>
+				<li class="item-2">
+					<img src="images/402x536.jpg" />
+				</li>
+				<li class="item-3">
+					<img src="images/320x320.jpg" />
+				</li>
+				<li class="item-4">
+					<img src="images/750x500.jpg" />
+				</li>
+				<li class="item-5">
+					<img src="images/402x536.jpg" />
+				</li>
+				<li class="item-6">
+					<img src="images/320x320.jpg" />
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- 模板 9张 -->
+	<h4 class="title">9张模板</h4>
+	<section class="img-wrap mod-list-9">
+		<div class="list">
+			<ul>
+				<li class="item-1">
+					<img src="images/750x500.jpg" />
+				</li>
+				<li class="item-2">
+					<img src="images/402x536.jpg" />
+				</li>
+				<li class="item-3">
+					<img src="images/320x320.jpg" />
+				</li>
+				<li class="item-4">
+					<img src="images/402x536.jpg" />
+				</li>
+				<li class="item-5">
+					<img src="images/750x500.jpg" />
+				</li>
+				<li class="item-6">
+					<img src="images/320x320.jpg" />
+				</li>
+				<li class="item-7">
+					<img src="images/320x320.jpg" />
+				</li>
+				<li class="item-8">
+					<img src="images/750x500.jpg" />
+				</li>
+				<li class="item-9">
+					<img src="images/402x536.jpg" />
+				</li>
+			</ul>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script>
+		$(".mod-list-3 img , .mod-list-9 img").each(function(i){
+			var img = $(this);
+			var realWidth = this.width;//真实的宽度
+			var realHeight = this.height;//真实的高度
+			$("<img/>").attr("src", $(img).attr("src")).load(function() {
+				realWidth = this.width;
+				realHeight = this.height;
+				if(realWidth>= realHeight){
+					$(img).css("width","auto").css("height","100%");
+				}
+				else{
+					$(img).css("width","100%").css("height","auto");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

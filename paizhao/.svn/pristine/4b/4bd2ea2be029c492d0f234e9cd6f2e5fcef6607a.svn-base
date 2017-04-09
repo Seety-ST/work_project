@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>yue-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/base.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-no-use.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-not.scss">
+   
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-list.scss">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+</head>
+
+
+<header class="global-header" >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">颜色 ui-color.scss</h3>
+	</div>
+</header>
+  
+
+
+<!-- 模板start -->
+	<div class="model f14 p10">
+
+		<p class="color-666">文字颜色测试 <span class="ml10">#666</span></p> 
+		<p class="color-999">文字颜色测试 <span class="ml10">#999</span></p> 
+		<p class="color-333">文字颜色测试 <span class="ml10">#333</span></p> 
+		<p class="color-aaa">文字颜色测试 <span class="ml10">#aaa</span></p> 
+		<p class="color-ccc">文字颜色测试 <span class="ml10">#ccc</span></p> 
+ 		<p class="color-fff">文字颜色测试 <span class="ml10">#fff</span></p> 
+ 		<p class="color-111">文字颜色测试 <span class="ml10">#111</span></p>
+ 		<p class="color-2bd">文字颜色测试 <span class="ml10">#2bd9d9</span></p> 
+ 		<p class="color-fe9">文字颜色测试 <span class="ml10">#fe9000</span></p> 
+ 		<p class="color-fa6">文字颜色测试 <span class="ml10">#fa6969</span></p> 
+ 		<p class="color-24c">文字颜色测试 <span class="ml10">#24c7c7</span></p> 
+	</div>
+<!-- 模板end -->
+
+</body>
+
+
+
+
+</html>

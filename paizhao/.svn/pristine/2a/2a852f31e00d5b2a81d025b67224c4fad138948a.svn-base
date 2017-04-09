@@ -1,0 +1,44 @@
+<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+    <ul class="list clearfix">
+        {%foreach $list_data as $key => $value%}
+
+        <li class="pic-list-width-285">
+            <div class="img-item">
+                <div class="img paizhao-ph-bgimg">
+                    <a href="{%$value.link_url%}" target="_blank"><img data-src="{%$value.images%}"></a>
+                </div>
+                <div class="txt color-fff dn">{%$value.consults%}人咨询</div>
+            </div>
+            <div class="txt-item">
+                <a href="{%$value.link_url%}" target="_blank">
+                <div class="box-1 clearfix">
+                    <p class="txt-1 color-fa6 fldi f18 fb">
+                        {%$value.prices%}
+                    </p>
+                    <p class="txt-2  color-999 frdi f14">{%if $value.consults lt 1%}&nbsp;{%else%}{%$value.consults%}人咨询{%/if%}</p>
+                </div>
+                </a>
+                <a href="{%$value.link_url%}" target="_blank">
+                <div class="box-2">
+                    <p class="txt-1 color-333 f14">
+                        {%$value.titles%}
+                    </p>
+                </div>
+                </a>
+                <div class="box-3 clearfix">
+
+                    <div class="txt-1 frdi clearfix">
+                        <a href="{%$value.seller_link_url%}" target="_blank"><p class="txt fldi color-999">{%$value.seller_name%}</p></a>
+                        <div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+                            <a href="{%$value.seller_link_url%}" target="_blank"><i style="background-image:url({%$value.avatar%})"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </li>
+
+        {%/foreach%}
+    </ul>
+</div>

@@ -1,0 +1,314 @@
+@import "../../../sass/compass";
+.index-page{
+    padding-bottom: 20px;
+    .p1th{
+        .img{
+            img{
+                width: 100%;
+            }
+            
+        }
+    }
+
+    .p2th{
+        padding-top: 20px;
+        .wbox1{
+            font-size: 14px;
+            @include flexbox((
+                display: box,  // 盒子模型 子元素默认水平左对齐
+                box-pack: center  // 水平居中方式  start | center | end | justify
+           
+            ));
+            .lbox{
+                color: #ef9300;
+                margin-right: 5px;
+                padding-top: 3px;
+            }
+            .cbox{
+                border-radius: 5px;
+                background: #8fc247;
+                padding: 2px 10px;
+                color: #fff;
+                line-height: 22px;
+                height:20px
+            }
+            .rbox{
+                color: #ef9300;
+                margin: 0 5px 0 5px;
+                font-weight: bold;
+                padding-top: 3px;
+            }
+            .end{
+                border-radius: 5px;
+                background: #8fc247;
+                padding: 2px 5px;
+                color: #fff;
+            }
+        }
+
+        .wbox2{
+            color: #ffbc00;
+            text-align: center;
+            padding: 15px 0px 0px 0px; 
+        }
+
+        .img{
+            text-align: center;
+            padding:15px 0 0 0;
+            img{
+                width: 176px;
+                margin: 0 auto;
+            }
+        }
+
+        .wbox3{
+            font-size: 15px;
+            color: #444444;
+            padding-top: 10px;
+        }
+        .wbox4{
+            border-radius: 20px;
+            background-color: #fadeb2;
+            font-size: 17px;
+            font-weight: bold;
+            color: #000;
+            margin: 10px 40px 0 40px;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .wbox5{
+            font-size: 15px;
+            margin: 20px 40px 0 40px;
+            @include flexbox((
+                display: box,  // 盒子模型 子元素默认水平左对齐
+                box-pack: justify  // 水平居中方式  start | center | end | justify
+               
+            ));
+        
+            .lbox{
+                border: 1px solid #fac636;
+                color: #fac636;
+                padding: 10px 0px;
+                border-radius: 20px;
+                text-align: center;
+                width: 135px;
+            }
+            .rbox{
+                color: #fff;
+                padding: 12px 0px;
+                border-radius: 20px;
+                background-color:#fac636;
+                text-align: center;
+                width: 135px;
+            }
+        }
+    }
+
+    .p3th{
+        padding-top: 30px;
+        .box1{
+            img{
+                width: 100%;
+            }
+        }
+
+        .list{
+
+            text-align: center;
+            color: #000;
+            font-size: 16px;
+            font-weight: bold;
+            li{
+                padding-top: 18px;
+            }
+
+            .icon{
+                img{
+                    width: 47px;
+                    margin: 0 auto;
+                }
+            }
+
+            .txt{
+                padding-top: 2px;
+            }
+
+            .txt2{
+                padding-top: 5px;
+                color: #444444;
+                font-size: 14px;
+                font-weight: normal;
+            }
+
+
+        }
+
+
+        .tips{
+            text-align: center;
+            color: #8fc247;
+            font-size: 14px;
+            line-height: 30px;
+            padding-top: 20px;
+        }
+
+
+    }
+
+    .p4th{
+        .box1{
+            padding-top: 35px;
+            img{
+                width: 100%;
+            }
+            
+        }
+        .box2{
+            color: #ef9300;
+            padding: 10px 0 10px 0;
+            text-align: center;
+        }
+
+        .box3{
+            color: #444444;
+            padding: 10px 0 8px 0;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .list{
+            li{
+                margin-right: 10px;
+                color: #444444;
+            }
+            .circle{
+                
+                img{
+                    width: 4px;
+                    margin-right: 3px;
+                }
+            }
+            @include flexbox((
+                display: box,  // 盒子模型 子元素默认水平左对齐
+                box-pack: center  // 水平居中方式  start | center | end | justify
+            ));
+
+        }
+        .box4{
+            padding-top: 20px;
+            text-align: center;
+            img{
+                width: 200px;
+                margin: 0 auto;
+            }
+        }
+
+        .box5{
+            padding-top: 20px;
+            text-align: center;
+            img{
+                width: 158px;
+                margin: 0 auto;
+            }
+        }
+
+        .box6{
+            border: 1px dashed #ef9300;
+            text-align: center;
+            margin: 5px 30px 0 30px;
+            padding: 5px 0 18px 0;
+            li{
+                padding-top: 12px;
+            }
+            img{
+                width: 4px;
+                margin-right: 3px;
+            }
+        }
+
+
+
+    }
+
+
+
+    .p5th{
+        .box1{
+            padding-top: 35px;
+            img{
+                width: 100%;
+            }
+            
+        }
+
+        .box2{
+            line-height: 25px;
+            color: #84aeb8;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .item-wrap{
+            text-align: center;
+           
+            .title{
+                font-weight: bold;
+                font-size: 17px;
+                color: #444444;
+                padding-top: 25px;
+                img{
+                    width: 17px;
+                    margin-right: 5px;  
+                    vertical-align: -3px;
+                    
+                }
+            }
+
+            .list{
+                padding-top: 0px;
+                li{
+                    padding-top: 12px;
+                }
+                img{
+                    width: 4px;
+                    margin-right: 3px;
+                    vertical-align: middle;
+                }
+
+            }
+
+            .img2{
+                img{
+                    width: 100%;
+                }
+
+                margin: 15px 30px  0 30px
+            }
+
+            .txt3{
+                line-height: 26px;
+                color: #444444;
+                padding-top: 15px;
+            }
+        }
+    }
+
+
+    .footer{
+        text-align: center;
+        img{
+            width: 170px;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+    }
+
+
+
+}
+
+.mint-msgbox-header{
+    padding: 15px 0 !important;
+}

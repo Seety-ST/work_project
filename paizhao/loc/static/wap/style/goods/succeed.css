@@ -1,0 +1,26 @@
+.succeed-page {
+  padding: 15px; }
+  .succeed-page .item-wrap {
+    width: 81%;
+    margin: 50px auto; }
+    .succeed-page .item-wrap .smile-icon {
+      width: 63px;
+      height: 63px;
+      display: inline-block;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .succeed-page .item-wrap .smile-icon.smile-1 {
+        background-image: url(http://localhost/paizhao/loc/static/wap/image/goods/smile-1.png); }
+      .succeed-page .item-wrap .smile-icon.smile-2 {
+        background-image: url(http://localhost/paizhao/loc/static/wap/image/goods/smile-2.png); }
+    .succeed-page .item-wrap .txt-item {
+      font-size: 17px; }
+    .succeed-page .item-wrap .code-item {
+      padding: 15px;
+      width: 70%;
+      margin: 25px auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+      .succeed-page .item-wrap .code-item .img img {
+        width: 100%; }

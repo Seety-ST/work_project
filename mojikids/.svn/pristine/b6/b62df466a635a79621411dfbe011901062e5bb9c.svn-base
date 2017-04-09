@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        推广
+    </title>
+    <meta name="Keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+    <meta name="Description" content="MOJIKIDS莫吉照相馆，专注3-7岁儿童亲子摄影。我们一直坚持对细节及品质的极致追求，用镜头记录孩子的纯真笑颜。">
+    <!-- {%$wap_global_head%} -->
+    <link rel="import" href="../../ui/g_head.tpl.htm?__inline">
+
+    <link charset="utf-8" rel="stylesheet" href="/style/topic/t_27/index.scss">
+</head>
+
+<body  class="cor-bg-fff">
+
+<main role="main">
+    <div id="page-container" class="page-container" >
+        <div class="index-page">
+
+            <div class="p1th">
+                <div class="img"><img src="image/topic/t_27/img-1.jpg" /></div>
+            </div>
+
+
+            <div class="p2th">
+                <div class="wbox1 ">
+                    <div class="lbox ">内测时间:</div>
+                    <div class="cbox ">2017/2/15</div>
+                    <div class="rbox ">-</div>
+                    <div class="end ">2/21</div>
+                </div>
+
+                <div class="wbox2">
+                    凭邀请码可获赠体验价值199的【Emoji】四宫格
+                </div>
+
+                <div class="img"><img src="image/topic/t_27/img-2.jpg" /></div>
+
+                <div class="wbox3 tc">
+                    邀请码
+                </div>
+
+                <div class="wbox4">
+                    ATAAAA6
+                </div>
+
+
+                <div class="wbox5 ">
+                    <div class="lbox ">分享邀请码给朋友</div>
+                    <div class="rbox ">立即使用</div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="p3th">
+                <div class="box1">
+                    <div class="img"><img src="image/topic/t_27/img-3.jpg" /></div>
+                </div>
+
+                <ul class="list ">
+                    <li>
+                        <div class="img">
+                            <div class="icon">
+                                <img src="image/topic/t_27/img-4.jpg" />
+                            </div>
+                            <div class="txt">
+                                使用邀请码，并预约拍摄
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="img">
+                            <div class="icon">
+                                <img src="image/topic/t_27/img-5.jpg" />
+                            </div>
+                            <div class="txt">
+                                在所选的拍摄时间到店参与拍摄
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="img">
+                            <div class="icon">
+                                <img src="image/topic/t_27/img-6.jpg" />
+                            </div>
+                            <div class="txt">
+                                分享至社交媒体
+                            </div>
+                            <div class="txt2">(朋友圈、微博、QQ空间、大众点评等)</div>
+                        </div>
+                    </li>
+                </ul>   
+
+                <div class="tips">
+                    -仅限广州地区3-7岁宝宝参加, <br />
+                    每个邀请码仅能使用一次 <br />
+                    更多疑问请添加微信小助手咨询 <br />
+                    （Wechat ID：MOJIKIDS）
+                </div>
+
+
+
+            </div>
+
+
+            <div class="p4th">
+                <div class="box1">
+                    <img src="image/topic/t_27/img-7.jpg" />
+                </div>
+
+                <div class="box2 tc">
+                    EMOJI表情包四宫格 专属定制大头照
+                </div>
+                <div class="box3 tc">拍摄过程</div>
+
+
+                <ul class="list tc">
+                    <li><span class="circle"><img src="image/topic/t_27/img-10.jpg" /></span>自然互动</li>    
+                    <li><span class="circle"><img src="image/topic/t_27/img-10.jpg" /></span>精准抓拍</li>    
+                    <li><span class="circle"><img src="image/topic/t_27/img-10.jpg" /></span>让孩子流露出最真的表情</li>
+                </ul>    
+
+                <div class="box4">
+                    <img src="image/topic/t_27/img-8.jpg" />
+                </div>  
+
+                <div class="box5">
+                    <img src="image/topic/t_27/img-9.jpg" />
+                </div>     
+
+                <div class="box6">
+                    <ul class="list2 clearfix">
+                        <li><img src="image/topic/t_27/img-10.jpg" /> 提供宝宝妆面1组</li>
+                        <li><img src="image/topic/t_27/img-10.jpg" /> 提供白色T恤1件或裸上身</li>
+                        <li><img src="image/topic/t_27/img-10.jpg" /> 赠送精修底片4张+四宫格照片1张</li>
+                        <li><img src="image/topic/t_27/img-10.jpg" /> 冲印4D四宫格照片2张</li>
+                        <li><img src="image/topic/t_27/img-10.jpg" /> 赠送Emoji4D相框 1个</li>
+
+                    </ul>        
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="p5th">
+                
+
+                
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+</main>
+
+
+
+</body>
+
+
+<!-- {%$wap_global_footer%} -->
+
+
+</html>
+<link rel="import" href="../../ui/g_footer.tpl.htm?__inline">
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+        // 加载util
+        var Util = require.syncLoad(__moduleId('/modules/global/util/index'));
+
+
+    })();
+</script>
+
+<!-- {%$wap_global_tj%} -->

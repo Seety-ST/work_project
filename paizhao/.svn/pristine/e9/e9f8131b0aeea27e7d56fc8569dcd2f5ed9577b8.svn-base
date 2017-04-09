@@ -1,0 +1,40 @@
+.sygw-page{
+	padding:15px;
+	
+	.ewm-item{
+		width:72%;
+		padding:15px;
+		background-color: #fff;
+		border-radius: 5px;
+		margin:50px auto;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+		.title-item{
+			.rbox{
+				width:45px;
+				height:36px;
+				img{
+					width:100%;
+				}
+			}
+			.lbox{
+				.txt{
+					padding-bottom: 10px;
+					background:url(../../image/goods/line-img-40x4.png) no-repeat left bottom;
+					background-size: 20px 2px;
+				}
+			}
+		}
+	}
+	.img-item{
+		margin-top: 20px;
+		width:100%;
+		img{
+			width:100%;
+		}
+	}
+	.txt-item{
+		font-size: 13px;
+		padding:10px 0px 0px 0px;
+	}
+	
+}

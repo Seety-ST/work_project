@@ -1,0 +1,442 @@
+
+/*  摄影社区css  */
+
+/* 今日焦点 */
+.mod-item-daypoint{}
+.mod-item-daypoint .mod-img-list{ padding-top:10px; width:695px; overflow:hidden}
+.mod-item-daypoint .mod-img-list ul{ width:720px}
+.mod-item-daypoint .mod-img-list li{ padding-right:12px; width:165px; height:165px; }
+.mod-item-daypoint .mod-img-list .img-box{ width:165px; height:165px}
+.mod-item-daypoint .mod-img-list h4.title{ width:165px; position:absolute; bottom:0; left:0; height:25px; line-height:25px; text-align:center;}
+
+/* 热点 */
+.mod-item-hotpoint{ width:432px;}
+.mod-item-hotpoint .mod-imgtxt-list{ padding-top:12px; overflow:hidden; width:432px;}
+.mod-item-hotpoint .mod-imgtxt-list ul{ width:450px}
+.mod-item-hotpoint .mod-imgtxt-list li{  width:210px; height:80px; overflow:hidden; padding:0 10px 7px 0}
+.mod-item-hotpoint .mod-imgtxt-list .img-box{ width:80px; height:80px;}
+.mod-item-hotpoint .mod-imgtxt-list .txt-box{ width:120px; line-height:18px}
+.mod-item-hotpoint .mod-imgtxt-list .txt-box dt{ padding-bottom:6px}
+
+/* 地区站 */
+.mod-item-section{ width:210px}
+.mod-item-section .mod-link-list{ padding-top:6px; }
+.mod-item-section .mod-link-list a{ display:inline-block; margin:0 12px; line-height:30px;}
+
+/* 作品 */
+.mod-item-work{}
+.mod-item-work .mod-img-list{ padding-top:20px; width:994px; overflow:hidden; }
+.mod-item-work .mod-img-list ul{ width:1010px}
+.mod-item-work .mod-img-list li{ width:190px; margin:0 11px 11px 0;position:relative;z-index:1;} 
+.mod-item-work .mod-img-list li dl.title{ display:none}
+.mod-item-work .mod-img-list .img-box{ width:190px; height:190px}
+.mod-item-work .mod-img-list li.cur dl.title{ width:190px; height:94px; line-height:18px; position:absolute; bottom:0; left:0; text-align:center;bottom: -94px;}
+.mod-item-work .mod-img-list li .txt .level{ display:block; font-style:normal}
+
+/* 影展 */
+.mod-item-showList{ width:432px;}
+.mod-item-showList .mod-img-list{ padding-top:12px; overflow:hidden; width:432px; }
+.mod-item-showList .mod-img-list ul{ width:450px}
+.mod-item-showList .mod-img-list li{ width:210px; height:169px; padding-right:12px}
+.mod-item-showList .mod-img-list .img-box{ width:210px; height:169px}
+.mod-item-showList .mod-img-list h4.title{ width:210px; position:absolute; bottom:0; left:0; height:25px; line-height:25px; text-align:center;}
+.mod-item-work .mod-img-list .img-box .tag{padding:2px 8px;color:#fff;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');background:rgba(0,0,0,0.5);position:absolute;top:0px;left:0px;}
+.mod-item-work .mod-img-list .img-box a .tag{text-decoration:none;}
+
+
+/* 活动 */
+.mod-item-active{ width:210px}
+.mod-item-active .mod-img-list{ padding-top:12px; overflow:hidden; width:210px; }
+.mod-item-active .mod-img-list li{ width:210px; height:169px;}
+.mod-item-active .mod-img-list .img-box{ width:210px; height:169px}
+.mod-item-active .mod-img-list h4.title{ width:210px; height:25px; line-height:25px; text-align:center;}
+
+/* 摄影技巧教程 */
+.mod-item-teachphoto{}
+.mod-item-teachphoto .mod-imgtxt-list{ width:994px; overflow:hidden; }
+.mod-item-teachphoto .mod-imgtxt-list ul{ width:1030px; }
+.mod-item-teachphoto .mod-imgtxt-list li{ width:321px; height:88px; padding:20px 20px 0 0;}
+.mod-item-teachphoto .mod-imgtxt-list .img-box{ width:86px; height:86px;}
+.mod-item-teachphoto .mod-imgtxt-list .txt-box{ width:217px; line-height:18px}
+
+
+/* 器材资讯 */
+.equipment-info{width:661px;overflow:hidden;line-height:24px;}
+.equipment-info .list{width:700px;}
+.equipment-info .list li{float:left;display:inline;width:315px;margin-right:25px;padding:16px 0;}
+.equipment-info .list  dd{background:url(http://photo.poco.cn/images/circle-1-1.png) no-repeat 0 10px;padding-left:12px;}
+.equipment-info .border-bottom{ border-bottom-width:1px; border-bottom-style:solid;}
+
+/* 器材出售 */
+.equipment-sale{width:312px;overflow:hidden;padding-top:16px;}
+.equipment-sale .list{line-height:18px;width:360px;padding-top:10px;}
+.equipment-sale .list li{float:left;display:inline;padding:0px 20px 0 0; height:160px; width:87px; overflow:hidden}
+.equipment-sale .list li a{ text-decoration:none }
+.equipment-sale .list li img{border-width:1px; border-style:solid;}
+
+/* 红人认证条件 */
+.hot-condition{padding-top:25px;}
+.hot-condition ol{}
+.hot-condition .tit{font-size:18px;}
+.hot-condition .lbox{float:left;padding-right:30px;}
+
+/* 个人展示 */
+.personal-info{ position:relative}
+.personal-info .wbox{ height:130px; padding:20px 20px 0;  width:282px;}
+.personal-info .btn{ position:absolute; top:5px; right:5px;z-index:99;}
+.personal-info .btn .s-btn-left, .personal-info .btn .s-btn-right{ display:block; width:18px; height:18px; background:url(http://photo.poco.cn/images/img-39-18.png) no-repeat; float:left; margin-left:3px}
+.personal-info .btn .s-btn-right{ background-position:-21px 0}
+.mod-waterfall .column-wrap .column{overflow:hidden;}
+.mod-waterfall .column-wrap .item{ width:210px;overflow:hidden; }
+
+/*.mod-title .item-nav{ width: 800px;overflow: hidden;height: 20px;text-align:right }.mod-search-item .mod-title .item-nav{ width: 800px; }*/
+.mod-title .item-nav li{ display:inline-block;  *+display:inline; *+zoom:1; _display:inline; _zoom:1;  }
+
+.mod-title .item-nav_zp{ width: 900px;overflow: hidden;height: 20px;text-align:right }
+.mod-title .item-nav_zp li a{ margin:0 9px }
+.mod-title .item-nav_zp li{ display:inline-block;  *+display:inline; *+zoom:1; _display:inline; _zoom:1;  }
+
+.mod-title .item-nav_dq{ width: 890px;overflow: hidden;height: 20px;text-align:right }
+.mod-title .item-nav_dq li a{ margin:0 9px }
+.mod-title .item-nav_dq li{ display:inline-block;  *+display:inline; *+zoom:1; _display:inline; _zoom:1;  }
+.mod-item .mod-img-list li{overflow: hidden;}
+
+.mod-item-work .mod-title .item-nav{width: 800px;}
+.poco_verified_icon img, .poco_verified_icon_2 img { cursor:pointer; width:15px; height:15px;background:url(http://www.poco.cn/js_common/images/pocoVerified/vissads.png);background:url();_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.poco.cn/js_common/images/pocoVerified/vissads.png");}
+.poco_verified_icon_red img, .poco_verified_icon_1 img { cursor:pointer; width:15px; height:15px;background:url(http://www.poco.cn/js_common/images/pocoVerified/vissads_red.png);_background:url();_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.poco.cn/js_common/images/pocoVerified/vissads_red.png");}
+
+/*******认证图标样式************/
+.poco_verified_icon img, .poco_verified_icon_2 img { cursor:pointer; width:15px; height:15px;
+		background:url(http://www.poco.cn/js_common/images/pocoVerified/vissads.png);
+		_background:url();
+		_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.poco.cn/js_common/images/pocoVerified/vissads.png");
+}
+.poco_verified_icon_red img, .poco_verified_icon_1 img { cursor:pointer; width:15px; height:15px;
+		background:url(http://www.poco.cn/js_common/images/pocoVerified/vissads_red.png);
+		_background:url();
+		_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.poco.cn/js_common/images/pocoVerified/vissads_red.png");
+}
+.poco_verified {
+	position:absolute;
+	margin:-38px 0 0 25px;
+	z-index: 500;
+}
+.poco_verified, .poco_hot_lis td, .poco_hot_lis table, .poco_hot_lis tr {
+	width:230px;
+}
+.poco_verified .hidden {
+	overflow:hidden;
+	width:100%;
+	height:100%
+}
+
+.poco_verified .medal_img {
+	background:url(http://www.poco.cn/js_common/images/pocoVerified/pocoVerified_a.png);
+	height:54px;
+	width:141px;
+	margin:-60px 0 0 20px;
+	display:block;
+	
+}
+.poco_verified.certification .medal_img {
+	background-position:-225px 0
+}
+.poco_verified.mingren .medal_img {
+	background-position:-780px 0
+}
+.poco_verified .top td {
+	height:75px;
+}
+.poco_verified .top .hidden {
+	height:75px
+}
+.poco_verified .center td {
+	background:url(http://www.poco.cn/js_common/images/pocoVerified/pocoVerified.png) 0px -321px;
+	_background:none;
+	
+}
+.poco_verified .center .ie6_png_bg{ display:none; overflow:hidden;}
+.poco_verified .center .ie6_png_bg div{
+	margin-top:-321px;
+	height:20px;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.poco.cn/js_common/images/pocoVerified/pocoVerified.png");
+	}
+	
+
+
+.poco_verified .center .more{ text-align:right;	margin:0 9px 0 19px; padding:3px 0;}
+
+.poco_verified .center #verified_msg {
+    width:187px;
+	font-family:"宋体";
+	margin:0 14px 0 29px;
+	text-align:left;
+	color:#000;
+	white-space:normal; word-wrap:break-word; word-break:break-all; overflow:hidden;
+	padding-bottom:10px;
+}
+
+
+.poco_verified .center #verified_msg span{ cursor:pointer; color:#F00; text-decoration:underline}
+
+
+.poco_verified .center .more a{ color:#c60000; text-decoration:underline}
+
+.poco_verified .center #verified_msg p { text-align:right}
+.poco_verified .image {
+	background:url(http://www.poco.cn/js_common/images/pocoVerified/pocoVerified.png) no-repeat;
+	_background:none;
+_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.poco.cn/js_common/images/pocoVerified/pocoVerified.png");
+	width:230px;
+	height:310px;
+}
+.poco_verified .bottom td {
+	height:9px;
+}
+.poco_verified .bottom .hidden{ height:9px;}
+.poco_verified .bottom .image {
+	margin-top:-237px;
+}
+.poco_verified.arrow_left .top .image {
+	margin-top:-75px
+}
+.poco_verified.arrow_right {
+	margin:25px 0 0 -185px
+}
+.poco_verified.arrow_right .top .image {
+	margin-top:-150px
+}
+
+.list-product{width:360px;margin-top:-20px;float:left;z-index:99;position:relative;}
+.list-product li{float:left;display:inline;width:113px;}
+.list-product li a{ text-decoration:none;}
+.list-product li a:hover{text-decoration: underline}
+
+/* 列表新加 */
+.mod-waterfall .column-wrap .collect-item{ border:1px solid #d9d9d9; padding:18px 8px 9px}
+.collect-item h4.title{ text-align:center; line-height:30px;font-weight:normal}
+.collect-item h4.title .collect-title{ display:block; font-size:30px; color:#5baf28; font-style:normal  }
+.collect-user-txt{ background:url(http://photo.poco.cn/images/line-10x1.png) left top repeat-x; margin-top:15px; padding-left:40px;}
+.collect-user-txt .user-img{ width:40px; height:40px;}
+.collect-user-txt .user-txt{ width:110px;}
+.collect-user-txt .user-txt h4.title{ font-weight:normal; margin-right:3px;}
+.collect-user-txt .user-txt em.ico{ background:url(http://photo.poco.cn/images/ico-13x13.png) no-repeat; width:13px; height:13px; display:block; float:left; overflow:hidden}
+.collect-user-txt .user-txt dd.xt{ color:#999}
+.collect-user-txt .btn .about-btn{ background:url(http://photo.poco.cn/images/collect-btn-60x22.png) no-repeat; width:60px; height:22px; line-height:22px; text-align:center; display:block; text-decoration:none}
+.collect-user-txt .btn .about-btn:hover{ background-position:0 -22px; text-decoration:none}
+.collect-user-txt .collect-more{ text-align:right}
+.collect-user-txt .collect-more a{ color:#999}
+
+
+/* 作品页 */
+.ui-btn-bg-common,
+.ui-btn-bg-common:hover,
+.ui-btn-bg-common span,
+.ui-btn-bg-common:hover span{background-image:url(http://photo.poco.cn/images/bg-nav-713-160.png);}
+.ui-btn-bg-common{background-position:0 0;}
+.ui-btn-bg-common:hover{background-position:0 -80px;}
+.ui-btn-bg-common span{background-position:right -40px;}
+.ui-btn-bg-common:hover span{background-position:right -120px;}
+
+.ui-btn-bg-base-40{display:inline-block;padding-left:3px;word-break:keep-all;height:40px;line-height:40px;font-size:16px;}
+.ui-btn-bg-base-40 span{display:block;padding:0 23px 0 20px;}
+
+.ui-select-bg-common{background-image:url(http://photo.poco.cn/images/bg-select-713-210.png);_background-image:url(http://photo.poco.cn/images/bg-select-713-210-ie6.png);}
+.f-tdn a:hover{text-decoration:none;}
+
+
+
+.photo-works-list{padding-bottom:40px;}
+.photo-works-list .item-title{border-bottom-width:1px;border-bottom-style:solid;}
+.photo-works-list .ui-btn-nav{width:850px;}
+.photo-works-list .ui-btn-nav li{display:inline;float:left;padding:0 10px 10px 0;}
+.photo-works-list .ui-btn-nav li.cur a{background-position:0 -80px;}
+.photo-works-list .ui-btn-nav li.cur a span{background-position:right -120px;}
+.photo-works-list .item-select{width:113px;height:32px;margin:10px 8px 0 0;background-position:0 0;}
+.photo-works-list .select-hover{background-position:0 -37px;}
+.photo-works-list .item-select .inputBox{cursor:pointer;padding-left:11px;}
+.photo-works-list .item-select .inputBox .inputClass{background:none;border:none;height:28px;line-height:28px;width:70px;padding-top:1px;}
+
+.photo-works-list .item-select .pop-ui-select{position:absolute;left:0;top:32px;width:113px;z-index:9;display:none;}
+.photo-works-list .select-hover .pop-ui-select{display:block;}
+.photo-works-list .item-select .select-box-con{padding:18px 12px 0 12px;background:url(http://photo.poco.cn/images/bg-select-113x5.png) repeat-y;_background:url(http://photo.poco.cn/images/bg-select-113x5-ie6.png) repeat-y;}
+.photo-works-list .item-select .pop-ui-select li{float:left;height:24px;line-height:24px;padding-bottom:10px;}
+.photo-works-list .item-select .pop-ui-select li a{display:inline-block;height:22px;line-height:22px;border-width:1px;border-style:solid;outline:none;padding:0 8px;word-break:keep-all;}
+.photo-works-list .item-select .select-box-btm{height:3px;overflow:hidden;background-position:0 -84px;}
+
+/* 图文列表230x230 */
+.mod-txtimg230-list{padding-top:30px;width:992px;overflow:hidden;}
+.mod-txtimg230-list ul{width:1016px;}
+.mod-txtimg230-list li{float:left;width:230px;padding:0 24px 40px 0;}
+.mod-txtimg230-list li .img-box{width:230px;height:230px;overflow:hidden;}
+.mod-txtimg230-list li .txt-box{width:230px;}
+.mod-txtimg230-list li .txt-box h4{font-weight:normal;padding-top:8px;}
+.mod-txtimg230-list li .txt-box .icon-num{width:14px;height:11px;display:block;margin-top:6px;background-image:url(http://photo.poco.cn/images/bg-icon-20-45.png);}
+.mod-txtimg230-list li .txt-box .icon-browse-num{background-position:0 0;}
+.mod-txtimg230-list li .txt-box .icon-vote-num{background-position:0 -16px;}
+.mod-txtimg230-list li .txt-box .icon-comment-num{background-position:0 -32px;}
+
+/* 分页 */
+.photo-works-list .page{ padding:30px 0 0 0;position:relative;z-index:3; }
+.photo-works-list .page a{background:#ffffff;}
+
+/* 本版版主 */
+.photo-works-list .info-box{margin-top:-18px;}
+.photo-works-list .info-box .pop-info-board{position:absolute;z-index:9;top:28px;left:0;height:39px;line-height:39px;} 
+.photo-works-list .info-box .icon-arrow{display:block;position:absolute;z-index:99;top:-5px;left:115px;width:10px;height:8px;overflow:hidden;background-position:0 -193px;}
+.photo-works-list .info-box .pop-info-board .bg-left{display:inline-block;padding-left:3px;background-position:0 -110px;}
+.photo-works-list .info-box .pop-info-board .bg-right-txt{display:block;padding:0 11px 0 14px;background-position:right -149px;}
+
+/* 浮动选择框 */
+.pop-ui-select-sidebar{position:fixed;_position:absolute;z-index:9999;right:30px;border-width:1px;border-style:solid;background:#fff;width:100px; top:50%; margin-top:-160px;
+_top:expression(eval(document.compatMode &&
+     document.compatMode=='CSS1Compat') ?
+     documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
+     document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+     _margin-top:0;}
+.pop-ui-select-sidebar .title{border-bottom-width:1px;border-bottom-style:solid;background:#f3f3f3;padding:4px 10px 4px 9px;}
+.pop-ui-select-sidebar .title h4{font-weight:normal;}
+.pop-ui-select-sidebar .btn-close{display:block;width:9px;height:9px;margin-top:7px;background-position:0 -92px;}
+.pop-ui-select-sidebar .select-list{padding:18px 5px 0 5px;}
+.pop-ui-select-sidebar .select-list li{float:left;height:24px;line-height:24px;padding-bottom:10px;}
+.pop-ui-select-sidebar .select-list li a{display:inline-block;height:22px;line-height:22px;border-width:1px;border-style:solid;outline:none;padding:0 8px;word-break:keep-all;}
+
+/* ==2013.3.14 摄影首页修改== */
+
+/* 搜索 */
+.mod-search-item{ width:126px;}
+.mod-search-item .input-item{ width:99px; background:url(http://photo.poco.cn/images/input-l-3x24.png) left top no-repeat; height:24px; padding-left:3px;}
+.mod-search-item .input-item .input-txt{ width:89px; padding:0 5px; height:22px; line-height:22px; border-width:1px 0 1px 0; border-style:solid; border-color:#888;}
+.mod-search-item .input-item .trips{ position:absolute; top:1px; left:9px;}
+.mod-search-item .btn{ display:block; width:24px; height:24px; background:url(http://photo.poco.cn/images/search-btn-24x48.png) no-repeat; text-indent:-9999em;}
+.mod-search-item .btn:hover{ background-position:0 -24px;}
+
+/* 地区 */
+.mod-item-section{ width:auto}
+
+/* pic145列表 */
+.mod-pic145-list{ width:994px; overflow:hidden}
+.mod-pic145-list ul{ width:1050px;}
+.mod-pic145-list li{ float:left; width:145px; padding-right:25px;}
+.mod-pic145-list .img-box{ width:145px; height:145px; overflow:hidden;}
+.mod-pic145-list .img-box img{ max-height:145px;max-width:145px }
+.mod-pic145-list .img-title{ width:90px; height:36px; line-height:36px; padding-left:55px; background:#f2f2f2; margin-top:1px;}
+.mod-pic145-list .img-title .user-img{ position:absolute; top:-9px; left:10px;}
+.mod-pic145-list .img-title .user-img img{ display:block; border-width:1px; border-style:solid; border-color:#fff;max-width:34px;max-height:34px }
+.mod-pic145-list .txt-item{ padding-top:7px}
+.mod-pic145-list .img-box .img-info{ display:none}
+.mod-pic145-list li.current .img-box .img-info{ width:121px; height:115px; display:block; padding:15px 12px;bottom:-145px }
+.mod-pic145-list li.current .img-box .img-info a{ color:#fff;}
+.mod-pic145-list h4.title{ padding-top:6px}
+
+/* 视觉漫游/影展 */
+.mod-item-showList{ width:auto}
+.mod-item-showList #ifocus { width:992px; height:420px;}
+.mod-item-showList #ifocus_pic { display:inline; position:relative; float:left; width:750px; height:420px; overflow:hidden; z-index:1; }
+.mod-item-showList #ifocus_piclist { position:absolute; }
+.mod-item-showList #ifocus_piclist li { width:750px; height:420px; overflow:hidden; }
+.mod-item-showList #ifocus_piclist img { width:750px; height:420px; }
+.mod-item-showList #ifocus_btn { display:inline; float:right; position:relative; width:241px; height:418px; background:#f6f6f6; z-index:3; border-width:1px 1px 1px 0; border-style:solid;  }
+.mod-item-showList #ifocus_btn li{ width:217px; height:83px; padding:20px 10px 0 14px; cursor:pointer;  position:relative; }
+.mod-item-showList #ifocus_btn #border_bottom {  border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:#eaeaea; }
+.mod-item-showList #ifocus_btn li a:hover{ text-decoration:none }
+.mod-item-showList #ifocus_btn .current { background:#fff; height:85px  }
+.mod-item-showList #ifocus_btn .icon{ display:none;}
+.mod-item-showList #ifocus_btn .current .icon{ display:block; position:absolute; top:39px; left:-7px; background:url(http://photo.poco.cn/images/img-icon-7x16.png) no-repeat; _background:0; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='scale', src="http://photo.poco.cn/images/img-icon-7x16.png"); width:7px; height:16px;}
+.mod-item-showList #ifocus_tx .normal { display:none; }
+.mod-item-showList #ifocus_btn .current dt.title{ font-weight:bold; color:#333}
+.mod-item-showList #ifocus_btn .current dt.title a{ color:#333;}
+.mod-item-showList .mod-pic145-list .txt-item{ height:53px; overflow:hidden}
+
+/* 活动 */
+.mod-item-active{ width:auto;}
+.mod-item-active .mod-imgtxt-list{ width:994px; overflow:hidden; }
+.mod-item-active .mod-imgtxt-list ul{ width:1030px; }
+.mod-item-active .mod-imgtxt-list li{ width:321px; height:80px; padding:20px 20px 0 0;}
+.mod-item-active .mod-imgtxt-list .img-box{ width:86px; height:86px;}
+.mod-item-active .mod-imgtxt-list .txt-box{ width:217px; line-height:18px}
+
+/* 游学院[2014/12/12 update]*/
+.mod-yxb-item .bammer318{width:318px;position:relative; height:265px; overflow:hidden; float:left }
+.mod-yxb-item .bammer318 .pagination{height:16px;clear:both;position:absolute; top:240px; right:20px; z-index:2}
+.mod-yxb-item .bammer318 .pagination .subLineTab{display:none;}
+.mod-yxb-item .bammer318 .pagination .subPageTab{float:right}
+.mod-yxb-item .bammer318 .pagination a{width:7px; height:7px;  float:left; margin-left:10px; overflow:hidden; background:url(http://photo.poco.cn/images/icon-btn-hover-7x7.png) no-repeat;}
+.mod-yxb-item .bammer318 .pagination a:hover,
+.mod-yxb-item .bammer318 .pagination a.selected{ background:url(http://photo.poco.cn/images/icon-btn-7x7.png) no-repeat}
+.mod-yxb-item .bammer318 .dTitle{font-weight:bold;line-height:26px; text-align:center; width:230px;}
+.mod-yxb-item .bammer318 .pagination .subPageTab  i{font-style: normal;}
+.mod-yxb-item .bammer318 i.iToc{font-style:normal;}
+.mod-yxb-item .bammer318 i.toc{font-style:normal;cursor:pointer;}
+.mod-yxb-item .bammer318 .contentdiv{display:none;zoom:1;overflow:hidden; }
+.mod-yxb-item .bammer318 .sliderfilter{filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);-moz-opacity:1;opacity:1; position:relative; z-index:1}
+.mod-yxb-item .bammer318 .contentdiv h4.title{ position:absolute; bottom:0; left:0; width:278px; height:45px; line-height:45px; color:#fff; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4C000000', endColorstr='#4C000000');background:rgba(0,0,0,0.3); padding:0 20px; font-weight:normal; font-size:14px;}
+.mod-yxb-item .mes-list-item{ float:left; width:676px;}
+.mod-yxb-item .mes-list-item .list{ height:255px; width:278px; padding:10px 20px 0; background:#fafafa; float:left; margin-left:20px;}
+.mod-yxb-item .mes-list-item .list li{ padding:10px 0; list-style:disc; margin-left:10px; line-height:20px}
+.mod-yxb-item .mes-list-item .list li dt.title{ color:#000; }
+.mod-yxb-item .mes-list-item .list li dt.title a{ color:#000; font-size:16px;}
+.mod-yxb-item .mes-list-item .list li dd{ color:#999; font-size:14px;}
+
+/* 摄影点评 */
+.mod-item-comments{}
+.mod-item-comments .img-item{ width:145px; height:145px; float:left; padding-right:20px}
+.mod-item-comments i.yh-icon{ float:left; background:url(http://image16-c.poco.cn/best_pocoers/20140904/12532014090418165943757040_16.jpg) no-repeat; width:16px; height:13px; _overflow:hidden}
+.mod-item-comments .text-item{ float:left; width:800px; padding-left:8px;}
+.mod-item-comments .text-item .txt{ font-size:24px; line-height:36px; letter-spacing: 1px; font-style:italic}
+.mod-item-comments .text-item h5.title{ font-size:14px; font-weight:normal}
+
+
+/* 约约活动 */
+.mod-title .item-nav{ position:relative; z-index:2}
+.mod-title .item-nav .code-item{ position:absolute; left:-85px; top:8px; width:190px;}
+.mod-title .item-nav .code-item .code{ background:#fff; height:190px; width:170px; padding:10px; float:left; -webkit-box-shadow:0px -3px 3px rgba(0,0,0,0.3);-moz-box-shadow:0px -3px 3px rgba(0,0,0,0.3); box-shadow:0px -3px 3px rgba(0,0,0,0.3); text-align:center}
+.mod-title .item-nav .code-item .code .img{ width:170px; height:170px; }
+.mod-title .item-nav .code-item .t-icon{ height:0; width:0; border:12px solid; border-color: transparent  transparent #ccc transparent; font-size:0; _border-top-color:white; _border-left-color:white;  _border-bottom-color:white; margin-left:108px; position:relative}
+.mod-title .item-nav .code-item .t-icon span{ height:0; width:0; border:11px solid; border-color: transparent  transparent #fff transparent; font-size:0; _border-top-color:white; _border-left-color:white;  _border-bottom-color:white; position:absolute; top:-10px; left:-11px;}
+.mod-yyimg-item{ z-index:1}
+.mod-yyimg-item a.title{ position:absolute; bottom:0; left:0; color:#fff; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#66000000', endColorstr='#66000000');background:rgba(0,0,0,0.4);  font-weight:normal;}
+.mod-yyimg-item .yy-b-img{ width:594px; height:390px; float:left}
+.mod-yyimg-item .yy-b-img li{ position:relative; width:594px; height:390px}
+.mod-yyimg-item .yy-b-img li a.title{ font-size:16px; padding:15px 20px; width:554px}
+.mod-yyimg-item .yy-s-list{ float:left; width:400px;}
+.mod-yyimg-item .yy-s-list li{ width:190px; height:190px; position:relative; margin:0 0 10px 10px; float:left;}
+.mod-yyimg-item .yy-s-list li a.title{ padding:5px 20px; width:150px; font-size:14px;}
+
+
+/* 游学院 2016-3-18 */
+.mod-youxue .mod-title .item-nav .icon-yxy{ vertical-align: middle; padding-right: 10px;}
+.mod-youxue .mod-title .item-nav .code-item{ left: -60px; top: 20px;  width:160px;}
+.mod-youxue .mod-title .item-nav .code-item .code{ width: 140px; height: 160px; -webkit-box-shadow:1px 0px 10px rgba(0,0,0,0.15);-moz-box-shadow:1px 0px 10px  rgba(0,0,0,0.15); box-shadow:1px 0px 10px  rgba(0,0,0,0.15);}
+.mod-youxue .mod-title .item-nav .code-item .code .img,
+.mod-youxue .mod-title .item-nav .code-item .code .img img{ width:140px; height:140px; }
+.mod-youxue .mod-title .item-nav .code-item .t-icon{ border:7px solid;  border-color: transparent  transparent #ebebeb transparent; font-size:0; _border-top-color:white; _border-left-color:white;  _border-bottom-color:white; margin-left:69px;}
+.mod-youxue .mod-title .item-nav .code-item .t-icon span{ border:6px solid; border-color: transparent  transparent #fff transparent; font-size:0; _border-top-color:white; _border-left-color:white;  _border-bottom-color:white; top:-5px; left:-6px;}
+.mod-yxb-item .yxy-info-item{ width: 586px; height: 402px; float: left;}
+.mod-yxb-item .yxy-info-item .info-item{ padding-top: 206px; width: 552px; margin: 0 auto;}
+.mod-yxb-item .yxy-info-item .info-item .text-item{ width: 226px; padding: 20px 25px 0; float: left; color: #fff; position: relative;}
+.mod-yxb-item .yxy-info-item .info-item .text-item dt.title{ width: 110px; height: 40px; line-height: 40px; background: #59bae8; text-align: center;  font-size: 18px; position: absolute; top: 0; left: 50%; margin-left: -55px;}
+.mod-yxb-item .yxy-info-item .info-item .text-item .info{ padding-top: 31px; height: 60px; font-size: 14px; line-height: 26px; text-align: center; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#99000000', endColorstr='#99000000');background:rgba(0,0,0,0.6); }
+.mod-yxb-item .yxy-s-list{ width: 404px; float: right; overflow: hidden;}
+.mod-yxb-item .yxy-s-list .tab-choose{ width: 100%; height: 38px; font-size: 16px; background: #e8e8e8;}
+.mod-yxb-item .yxy-s-list .tab-choose li{ float: left; width: 100px; height: 38px; }
+.mod-yxb-item .yxy-s-list .tab-choose li a{display: block; border-top: 3px solid #e8e8e8; color: #666; height: 35px; line-height: 35px; text-align: center;}
+.mod-yxb-item .yxy-s-list .tab-choose li a:hover{ text-decoration: none}
+.mod-yxb-item .yxy-s-list .tab-choose li.cur a{border-top: 3px solid #666; background: #f6f6f6; color: #333;}
+.mod-yxb-item .yxy-s-list .list{ width: 408px;}
+.mod-yxb-item .yxy-s-list .list li{ float: left; width: 200px; height: 180px; overflow: hidden; position: relative; margin: 0 4px 4px 0;}
+.mod-yxb-item .yxy-s-list .list li .img-infoItem{ display: block; position: absolute; bottom: 0; left: 0; width: 200px; height: 180px; text-align: center; color: #fff; background: url(../images/blank-1x1.png) repeat; cursor: pointer;  }
+.mod-yxb-item .yxy-s-list .list li .img-infoItem:hover{ text-decoration: none; }
+.mod-yxb-item .yxy-s-list .list li .summary-item,
+.mod-yxb-item .yxy-s-list .list li .img-infoItem:hover .info-item{ display:none}
+.mod-yxb-item .yxy-s-list .list li .img-infoItem:hover .summary-item{ display:block }
+.mod-yxb-item .yxy-s-list .list li .info-item{width: 200px; height: 180px; }
+.mod-yxb-item .yxy-s-list .list li .info-item h5.title{ font-weight: normal; text-align: center; font-size: 16px; width: 180px; padding: 8px 10px; position: absolute; bottom: 0; left: 0; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4C000000', endColorstr='#4C000000');background:rgba(0,0,0,0.3);}
+.mod-yxb-item .yxy-s-list .list li .summary-item{width: 160px;height: 156px; padding: 12px 20px; filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#7F000000', endColorstr='#7F000000');background:rgba(0,0,0,0.5);
+}
+.mod-yxb-item .yxy-s-list .list li .summary-item .title-item{}
+.mod-yxb-item .yxy-s-list .list li .summary-item h5.title{ font-size: 18px; font-weight: normal;}
+.mod-yxb-item .yxy-s-list .list li .summary-item .sub-title{ font-size: 12px;}
+.mod-yxb-item .yxy-s-list .list li .summary-item .txt{ text-align: left; font-size: 14px; line-height: 18px; padding: 10px 0}
+.mod-yxb-item .yxy-s-list .list li .summary-item .btn-item{ position: absolute; bottom: 12px; left: 76px;  border: 1px solid #fff; height: 17px; line-height: 17px; width: 46px; margin: 0 auto; text-align: center; border-radius: 9px; font-size: 12px; font-family: '宋体' }  
+

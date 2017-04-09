@@ -1,0 +1,294 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>抽奖</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="index-page">
+		<div class="lucky-item">
+			<div id="disk">
+				<img src="images/disk.png" id="disk_rote" style="border: 0px solid red;"></div>
+			<div id="start">
+				<!-- 开始抽奖图为start.png 活动结束图为stop.png -->
+				<img src="images/start.png" id="startbtn" alt="开始抽奖" ></div>
+		</div>
+		<div class="info-item">
+			<div class="listItem">活动规则</div>
+			<div class="list">
+				<ul>
+					<li> <em class="num">1</em>
+						<div class="txt-item">
+							<h3 class="title">活动时间：</h3>
+							<p class="fb">2016年6月10日 00:00--2016年6月17日00:00</p>
+						</div>
+					</li>
+					<li> <em class="num">2</em>
+						<div class="txt-item">
+							<p><span class="fb">活动期间，</span>首次安装美人相机并使用的新用户，即有1次抽奖机会，活动期间总计1次抽奖机会。</p>
+						</div>
+					</li>
+					<li>
+						<em class="num">3</em>
+						<div class="txt-item">
+							<p><span class="fb">抽得奖品用户，</span>请正确填写联系方式和收货地址其中丝芙兰蜜吻润纯球5款颜色随机1款发货。</p>
+						</div>
+					</li>
+					<li>
+						<em class="num">4</em>
+						<div class="txt-item">
+							<p><span class="fb">活动结束后，</span>即6月18日起10个工作日内安排寄送。</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sy-item">
+			<img src="images/ll-img-2.png" />
+		</div>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade" style="display:"></div>
+	<!-- 填写领奖信息弹出层 -->
+	<form name="prospect_form" action="" method="post" target="loginFrame" id="prospect_form">
+		<div class="pop-ljxx" id="order_drive_pop" style="display: none">
+			<div class="item-wrap font_wryh">
+				<a href="#this" onclick="hide_big_div('order_drive_pop');" class="close">
+					<img src="images/ll-img-3.png" />
+				</a>
+				<div class="item-con clearfix">
+					<div class="item clearfix">
+						<h4 class="tips fldi">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</h4>
+						<div class="input-item fldi">
+							<input class="input-txt input-txt-1" id="user_name" name="name" type="text"></div>
+					</div>
+					<div class="item clearfix">
+						<h4 class="tips fldi">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机</h4>
+						<div class="input-item fldi">
+							<input class="input-txt input-txt-1" id="phone" name="phone" type="text"></div>
+					</div>
+					<div class="item clearfix">
+						<h4 class="tips fldi">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址</h4>
+						<div class="input-item fldi">
+							<textarea class="input-txt input-txt-2" id="address" name="address"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="txt">
+					温馨提示：
+					<br />
+					请认真填写联系方式和收件地址，活动结束后即1月15日起10个工作日内安排寄送。
+				</div>
+				<div class="submit-item">
+					<a href="#this" onclick="add_info()" class="submit-btn">提 交</a>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!-- 填写领奖信息弹出层 end-->
+	<!-- 获得产品 -->
+	<div class="pop-gifItem" style="display:">
+		<div class="listItem">雙妹夜来香袭人皂</div>
+		<div class="gif-img">
+			<img src="images/gif-img/xz-img.jpg" />
+		</div>
+		<div class="btn-item">
+			<a href="#" class="mod-pop-btn">免费领取</a>
+		</div>
+	</div>
+	<div class="pop-gifItem" style="display:none">
+		<div class="listItem">索尼靓咔™KW1</div>
+		<div class="gif-img">
+			<img src="images/gif-img/zp-img.jpg" />
+		</div>
+		<div class="btn-item">
+			<a href="#" class="mod-pop-btn">免费领取</a>
+		</div>
+	</div>
+	<div class="pop-gifItem" style="display:none">
+		<div class="listItem">
+			丝芙兰蜜吻唇球1个
+			<br />
+			（颜色随机寄送）
+		</div>
+		<div class="gif-img">
+			<img src="images/gif-img/cg-img.jpg" />
+		</div>
+		<div class="btn-item">
+			<a href="#" class="mod-pop-btn">免费领取</a>
+		</div>
+	</div>
+	<!-- 获得产品 end-->
+	<!-- 谢谢参与 -->
+	<div class="pop-xxcy" style="display:none">
+		<a href="#" class="close">
+			<img src="images/ll-img-3.png" />
+		</a>
+		<div class="pop-con">
+			<div class="txt-item">
+				<p>您可以告诉更多小伙伴下载参与抽奖！</p>
+			</div>
+			<div class="share-item">
+				<div class="listItem">
+					<span>分享活动</span>
+				</div>
+				<div class="mod-share-list">
+					<ul>
+						<li> <i class="icon"><img src="images/share-icon/1.png" /></i> 
+						</li>
+						<li> <i class="icon"><img src="images/share-icon/2.png" /></i> 
+						</li>
+						<li>
+							<i class="icon">
+								<img src="images/share-icon/3.png" />
+							</i>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 谢谢参与 end-->
+	<!-- 再玩一次 -->
+	<div class="pop-again" style="display:none">
+		<div class="pop-con">
+			<div class="listItem">啥也没中，再玩一次吧！</div>
+			<div class="btn-item">
+				<a href="#" class="mod-pop-btn">再玩一次</a>
+			</div>
+		</div>
+	</div>
+	<!-- 再玩一次 end-->
+	<!-- 弹出层 end-->
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript">
+			$(function() {
+				$("#startbtn").click(function() {
+						lottery();
+				});
+			});
+			function lottery() {
+				$.ajax({
+						type: 'POST',
+						url: 'ajax.php',
+						dataType: 'json',
+						cache: false,
+						error: function() {
+								alert('Sorry，出错了！');
+								return false;
+						},
+						success: function(json) {
+								$("#startbtn").unbind('click').css("cursor", "default");
+								var angle = json.angle; //指针角度 
+								var prize = json.prize; //中奖奖项标题 
+								var key = json.key; //抽奖key
+									$("#disk_rote").rotate({
+											duration: 5000, //转动时间 ms
+											angle: 0, //从0度开始
+											animateTo: 3600 - angle, //转动角度 
+											easing: $.easing.easeOutSine, //easing扩展动画效果
+											callback: function() {
+												$("#startbtn").attr('src','images/stop.png');
+												alert('恭喜您中得'+prize+'请在下面填写信息领取');
+												$("#prize").val( prize );
+												$("#lottery_key").val( key );
+												$("#order_drive_pop").show();
+												}
+						});
+					}
+				});
+			}		
+		</script>
+	<script type="text/javascript">	
+			$(document).ready(function(){
+				$("#user_name").focus();
+			});
+			function add_info(){
+
+				var name = document.getElementById('user_name').value;
+				if(name==''){
+					alert('请先填写姓名！');
+					return false;
+					}
+					
+				if(name){
+					var reg = /^[a-zA-Z\u4e00-\u9fa5]+$/;
+					if(!reg.test(name)){
+					alert('请填写准确姓名!');
+					return false;
+					}
+						}
+					
+
+				var phone = document.getElementById('phone').value;
+				if(phone==''){
+					alert('请填写手机号码!');
+					return false;
+					}	
+					
+					if(phone){
+					var phone = document.getElementById('phone').value;
+					var reg = /^(13[0-9]{9,9}$)|(15[0-9]{9,9}$)|(18[0-9]{9,9}$)|(19[0-9]{9,9}$)$/;
+					if(!reg.test(phone)){
+					alert('手机号码有误!');
+					return false;
+						}
+					}
+					
+				var address = document.getElementById('address').value;
+				if(address==''){
+					alert('请填写地址!');
+					return false;
+					}	
+		
+				$.ajax({
+					 type: "POST",
+					 url: "add_info.php",
+					 data: $("#prospect_form").serialize(),
+					 success: function(msg){
+						if(msg==1){
+					 $("#order_drive_pop").hide();
+					 alert('提交成功,谢谢参与!测试可以点击【清除记录重试一次】');
+					 }else if(msg=='error_null'){
+						 alert('填写的用户信息有空!');
+					 }else if(msg=='error_exist_phone'){
+						 alert('该手机用户己参加过活动了,谢谢!');
+					 }else if(msg=='error_request'){
+						 alert('抽奖的结果异常，请重新操作!');
+					 }
+					 }
+				});
+		
+			}
+
+			 $(function() {
+					 $("#clear_cookie").click(function() {
+							 clear_cookie();
+						});
+			});
+
+			function clear_cookie(){
+				$.ajax({
+					 type: "POST",
+					 url: "c.php?c=1",
+					 success: function(msg){
+								 alert('己清除,自动刷新当前页面');
+						 location.reload();
+					 }
+				});
+
+			}
+	</script>
+
+	<a id="clear_cookie" style="position:fixed; top:5%; left:5%;">清除记录重试一次</a>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?php
+/**
+* @authors huangst
+* @date    2016-10-26 15:35:39
+* 获取摄影师主页列表
+*/
+include_once('../common.inc.php');
+$sort = $_INPUT['sort'];
+$order = $_INPUT['order'];
+$type_id = $_INPUT['type_id'];
+$user_id = intval($_INPUT['user_id']);
+$where = 'user_id='.$user_id;
+
+// 判断type_id是否存在，如果组合$where $where为了摄影师筛选条件
+if ($type_id)
+{
+    $type_id = (int)$type_id;
+    $where .= " AND type_id={$type_id}";
+}
+
+// 排序方式
+if ($sort == 'consult' || $sort == 'prices' || $sort == 'new')
+{
+    $order = $order == 'DESC' ? $order : 'ASC';
+    $sort_filed = $sort == 'consult' ? "(consult_num+add_consult_num)" : ($sort=='new'?'update_time':'prices');
+    $sort_filed .= " {$order}";
+}
+else
+{
+    $sort_filed = '((consult_num*0.5)+(pv*0.05)+(uv*0.45)) DESC';
+}
+
+
+$goods_info = $goods_class->get_goods_list($where, '0,40', $sort_filed, '`goods_id`,`titles`,`images`,`consult_num`,`add_consult_num`,`location_id`,`prices`', true);

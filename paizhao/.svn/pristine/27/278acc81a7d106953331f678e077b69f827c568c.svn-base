@@ -1,0 +1,63 @@
+.ui-button{
+	cursor:pointer;
+	.ui-button-content{
+		padding:0px 20px;
+	}
+}
+.ui-button-100per{
+	width: 100%;
+}
+.ui-button-block{
+	display: block;
+}
+
+// 按钮边框颜色
+.ui-button-border-ddd{
+	background-color: #fff;
+	color: #666;
+	border: 1px solid #ddd;
+	&:hover{
+		border-color: #fe9920;
+		color:#fe9920;
+	}
+}
+.ui-button-border-ffc{
+	background-color: #fff;
+	color: #ffc64b;
+	border: 1px solid #ffc64b;
+	&:hover{
+		border-color: #ffba47;
+		color:#ffba47;
+	}
+}
+
+// 按钮背景色
+.ui-button-bg-ffc{
+	background-color: #ffc64b;
+	color:#fff;
+	&:hover{
+		background-color: #ffba47;
+	}
+}
+.ui-button-bg-24c{
+	background-color: #24c7c7;
+	color:#fff;
+	&:hover{
+		background-color: #22bdbd;
+	}
+}
+
+
+// 按钮高度
+.ui-button-size-h32{
+	height: 32px;
+	line-height: 32px;
+}
+.ui-button-size-h36{
+	height: 36px;
+	line-height: 36px;
+}
+.ui-button-size-h40{
+	height: 40px;
+	line-height: 40px;
+}

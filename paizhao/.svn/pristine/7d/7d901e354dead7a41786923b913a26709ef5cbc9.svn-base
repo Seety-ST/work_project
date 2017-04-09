@@ -1,0 +1,312 @@
+<?php
+/**
+* @Desc:     咨询      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月12日
+* @Time:     上午9:49:21
+* @Version:  
+*/
+class pai_paizhao_consult_class extends POCO_TDG
+{
+    public function __construct()
+    {
+        $this->setServerId(101);
+        $this->setDBName('mall_paizhao_db');
+    }
+
+    private function set_mall_consult_status_tbl()
+    {
+        $this->setTableName('mall_consult_status_tbl');
+    }
+
+    private function set_mall_consult_tbl()
+    {
+        $this->setTableName('mall_consult_tbl');
+    }
+    
+    private function set_mall_consult_button_tbl()
+    {
+        $this->setTableName('mall_consult_button_tbl');
+    }
+    
+    private function set_mall_goods_tbl()
+    {
+        $this->setTableName('mall_goods_tbl');
+    }
+    
+    private function set_mall_photographers_tbl()
+    {
+        $this->setTableName('mall_photographers_tbl');
+    }
+
+    public function add_consult($data)
+    {
+        if (!$this->check_data($data, 'consult')) return array('result'=>-1, 'message'=>'data wrong!');
+        $this->set_mall_consult_tbl();
+        $where = "mobile='{$data['mobile']}'";
+        $where = $data['consult_type'] == 'goods' ? $where . " AND goods_id={$data['goods_id']}" : $where . " AND user_id={$data['user_id']}";
+        if ($this->find($where))
+        {
+            return array('result'=>-1, 'message'=>'您已留下过咨询信息啦!<br/>摄影顾问很快就会给您打电话啦!');
+        }
+        $time = time();
+        $data = array(
+            'name' => iconv('utf-8', 'gbk', $data['name']),
+            'mobile' => $data['mobile'],
+            'seller_id' => $data['seller_id'],
+            'user_id' => $data['user_id'],
+            'photographers' => $data['photographers'],
+            'package_info' => iconv('utf-8', 'gbk', $data['package_info']),
+            'goods_id' => $data['goods_id'],
+            'source' => $data['source'] == 'PC' ? 'PC' : 'WAP',
+            'consult_type' => $data['consult_type'] == 'goods' ? 'goods' : 'seller',
+            'create_time' => $time,
+            'update_time' => $time,
+            'group_time' => strtotime('today'),
+        );
+        $return = array('result'=>-1, 'message'=>'添加失败');
+        POCO_TRAN::begin($this->getServerId());
+        $insert = $this->insert($data);
+        if (!$insert)
+        {
+            POCO_TRAN::rollback($this->getServerId());
+            return $return;
+        }
+        $this->set_mall_photographers_tbl();
+        $photographers_update = $this->incrField("user_id={$data['user_id']}", 'consult_num');
+        if (!$photographers_update)
+        {
+            POCO_TRAN::rollback($this->getServerId());
+            return $return;
+        }
+        if ($data['consult_type'] == 'goods')
+        {
+            $this->set_mall_goods_tbl();
+            $goods_update = $this->incrField("goods_id={$data['goods_id']}", 'consult_num');
+            if (!$goods_update)
+            {
+                POCO_TRAN::rollback($this->getServerId());
+                return $return;
+            }
+        }
+        POCO_TRAN::commmit($this->getServerId());
+        return array('result'=>1, 'message'=>'添加咨询成功');
+    }
+
+    public function edit_consult($edit_info)
+    {
+
+    }
+
+    /**
+     * 获取列表
+     * @param string $where
+     * @param string $limit
+     */
+    public function get_list($where = '', $limit = '0,40', $p_where = '')
+    {
+        $this->set_mall_consult_tbl();
+        if (!$p_where)  return $this->findAll($where, $limit, '`id` DESC');
+        $p_where .= ' AND status=1 AND is_black=0';
+        $this->set_mall_photographers_tbl();
+        $photographers = $this->findAll($p_where, null, null, 'user_id,seller_name');
+        $user_ids = array();
+        foreach ($photographers as $v)
+        {
+            $user_ids[$v['user_id']] = $v['seller_name'];
+        }
+        if (array_keys($user_ids)) $where .= ' AND user_id IN(' . implode(',', array_keys($user_ids)) . ')';
+        $this->set_mall_consult_tbl();
+        $list = $this->findAll($where);
+        foreach ($list as $k=>$v)
+        {
+            $list[$k]['seller_name'] = $user_ids[$v['user_id']];
+        }
+        return $list;
+    }
+    
+    /**
+     * 获取列表count值
+     * @param string $where
+     */
+    public function get_list_count($where = '', $p_where = '')
+    {
+        $this->set_mall_consult_tbl();
+        if (!$p_where) return $this->findCount($where);
+        $p_where .= ' AND status=1 AND is_black=0';
+        $this->set_mall_photographers_tbl();
+        $photographers = $this->findAll($p_where, null, null, 'user_id');
+        $user_ids = array();
+        foreach ($photographers as $v)
+        {
+            $user_ids[] = (int)$v['user_id'];
+        }
+        if ($user_ids) $where .= ' AND user_id IN(' . implode(',', $user_ids) . ')';
+        $this->set_mall_consult_tbl();
+        return $this->findCount($where);
+    }
+    
+    public function get_consult_status()
+    {
+        $status = POCO::getCache('paizhao_consult_status');
+        if (!$status)
+        {
+            $this->set_mall_consult_status_tbl();
+            $status = $this->findAll();
+            POCO::setCache('paizhao_consult_status', $status);
+        }
+        return $status;
+    }
+    
+    /**
+     * 更改咨询信息
+     * @param array $data
+     * @param int $id
+     */
+    public function update_consult($data, $id)
+    {
+        $this->set_mall_consult_tbl();
+        $id = (int)$id;
+        return $this->update($data, "id={$id}");
+    }
+    
+    /**
+     * 获取咨询按钮的统计值
+     * @param string $button_where
+     * @param string $where
+     * @param string $limit
+     */
+    public function get_consult_button_list($condition = array('button_where'=>'1', 'where'=>'1', 'g_p_where'=>'', 'consult_type'=>'goods'), $limit = '0,40')
+    {
+        $this->set_mall_consult_button_tbl();
+        $where = $condition['where'];
+        $button_where = $condition['button_where'];
+        $g_p_where = $condition['g_p_where'];
+        $consult_type = $condition['consult_type'];
+        $p_where = '';
+        if ($consult_type == 'seller' && $g_p_where)
+        {
+            $p_where .= " AND {$p_where}";
+        }
+        $g_where = '';
+        if ($consult_type == 'goods' && $g_p_where)
+        {
+            $g_where = " AND {$g_p_where}";
+        }
+        $sql = "SELECT 
+                    style_name,type_name,seller_name,prices,mall_consult_button_tbl.create_time,consult_click_num,source,mall_goods_tbl.consult_num as g_consults,mall_photographers_tbl.consult_num as p_consults
+                FROM
+                    {$this->_db_name}.{$this->_tbl_name}
+                LEFT JOIN
+                   (SELECT 
+                        goods_id,photographers,price,count(*) as consult_num, group_time
+                    FROM
+                        {$this->_db_name}.mall_consult_tbl
+                    WHERE 
+                        {$where}
+                    GROUP BY `goods_id`, `group_time`) consult_tbl
+                ON
+                    {$this->_tbl_name}.goods_id = consult_tbl.goods_id AND {$this->_tbl_name}.`group_time` = consult_tbl.`group_time`
+                LEFT JOIN
+                    {$this->_db_name}.mall_photographers_tbl
+                ON
+                    {$this->_tbl_name}.user_id = mall_photographers_tbl.user_id {$p_where}
+                LEFT JOIN
+                    (SELECT 
+                        g.goods_id,prices,titles,consult_num,type_name,style_name
+                     FROM
+                        {$this->_db_name}.mall_goods_tbl g
+                     LEFT JOIN
+                        {$this->_db_name}.mall_goods_style_tbl s
+                     ON
+                        g.goods_id = s.goods_id {$g_where}) mall_goods_tbl
+                ON
+                    {$this->_tbl_name}.goods_id = mall_goods_tbl.goods_id
+                WHERE
+                    {$button_where}
+                GROUP BY 
+                    {$this->_tbl_name}.`goods_id`, {$this->_tbl_name}.`group_time`
+                ORDER BY
+                    `id` DESC
+                LIMIT
+                    {$limit}
+                ";
+        return $sql;
+        return $this->query($sql);   
+    }
+    
+    /**
+     * 获取统计值
+     * @param string $where
+     */
+    public function get_consult_button_list_count($where = '')
+    {
+        $this->set_mall_consult_button_tbl();
+        return $this->findCount($where);
+    }
+    
+    /**
+     * 添加咨询按钮的统计值
+     * @param array $data
+     */
+    public function add_consult_button($data)
+    {
+//         if (!$this->check_data($data, 'button')) return array('result'=>-1, 'message'=>'button data wrong!');
+        $time = time();
+        $source = $data['source'] == 'PC' ? 'PC' : 'WAP';
+        $consult_type = $data['consult_type'] == 'goods' ? 'goods' : 'seller';
+        $data = array(
+            '"' . (int)$data['goods_id'] . '"',
+            '"' . (int)$data['seller_id'] . '"',
+            '"' . (int)$data['user_id'] . '"',
+            '"' . mysql_escape_string($data['goods_name']) . '"',
+            '"' . (int)$data['goods_type_id'] . '"',
+            '"' . (int)$data['goods_style_id'] . '"',
+            1,
+            "'{$source}'",
+            "'{$consult_type}'",
+            $time,
+            $time,
+            strtotime('today'),
+        );
+        $values = '(' . implode(',', $data) . ')';
+        $this->set_mall_consult_button_tbl();
+        $sql = "INSERT INTO 
+                    {$this->_db_name}.{$this->_tbl_name}
+                    (`goods_id`,`seller_id`,`user_id`, `goods_name`,`goods_type_id`,`goods_style_id`,`consult_click_num`,`source`,`consult_type`,`create_time`,`update_time`,`group_time`)
+                VALUES
+                    {$values}
+                ON DUPLICATE KEY UPDATE 
+                    `consult_click_num`=`consult_click_num`+1, `update_time`=VALUES(`update_time`)
+                ";
+        $result = $this->query($sql);
+        return isset($result) ? array('result'=>1, 'message'=>'add button consult success') : array('result'=>-1, 'message'=>'add button consult error');
+    }
+    
+    /**
+     * 验证数据
+     * @param array $data
+     * @param string $type
+     * @return boolean
+     */
+    private function check_data($data, $type = 'consult')
+    {
+        $check = false;
+        switch ($type)
+        {
+            case 'consult':
+                if (($data['goods_id'] || $data['user_id'] || $data['seller_id']) && $data['name'] && $data['mobile'] && $data['consult_type'] && $data['source'])
+                {
+                    $check = true;
+                }
+                break;
+            case 'button':
+                if ($data['goods_id'] && $data['goods_name'] && $data['goods_type_id'] && $data['goods_style_id'] && $data['source'])
+                {
+                    $check = true;
+                }
+                break;
+        }
+        return $check;
+    }
+}

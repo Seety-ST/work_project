@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/201726/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+    <title>
+        tab切换
+    </title>
+
+    
+</head>
+
+<body>
+    
+
+
+<!-- YUE-UI VUE 头部返回模块 start -->
+<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+<!-- YUE-UI VUE 头部返回模块 end -->
+
+<div class="pl20">
+    <!-- tab-nav开始 -->
+    <div class="yue-ui-tab-nav clearfix">
+        <div class="item fl tab-item-cur">
+            <span class="btn-text">名称</span>
+        </div>
+        <div class="item fl ">
+            <span class="btn-text">名称</span>
+        </div>  
+    </div>
+    <!-- tab-nav结束 -->
+</div>
+
+
+<br />
+<br />
+
+
+<div class="ui-button-box-tap ui-border-b">
+    <div class="ui-button-tap ui-border-r" data-role="category">
+        <span data-role="col-name">所有品类</span>
+        <i class="tag" data-role="tag"></i>
+    </div>
+    <div class="ui-button-tap" data-role="sort-btn">
+        <span data-role="sort-name">默认排序</span>
+        <i class="tag" data-role="sort-tag"></i>
+    </div>
+</div>
+
+
+<br />
+<br />
+
+<div class="yue-ui-tab-menu">
+    <ul class="list f14  color-999 ui-border-b">
+        <li class="cur"><p class="txt"><span class="circle"></span>待付款</p></li>
+        <li><p class="txt">待签到</p></li>
+        <li><p class="txt">已完成</p></li>
+        <li><p class="txt">已关闭</p></li>
+    </ul>        
+</div>
+
+
+<br />
+<br />
+
+<div class="yue-ui-tab-menu">
+    <ul class="list f14  color-999 ui-border-b">
+        <li><p class="txt">交易记录</p></li>
+        <li class="cur"><p class="txt"><span class="circle"></span>充值记录</p></li>
+        <li><p class="txt">提现记录</p></li>
+    </ul>        
+</div>
+
+
+
+
+
+
+</body>
+
+
+
+</html>

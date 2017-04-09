@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>{%$page_title%}</title>
+    <meta name="keywords" content="{%$meta_keywords%}">
+    <meta name="description" content="{%$meta_description%}">
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/search/search-page.css">
+</head>
+<body>
+<!-- 头部内容 -->
+{%$pc_global_top_bar%}
+<!-- 页面内容 -->
+<div class="content-wrap w1200">
+    <div class="select-nav">
+        <div class="dib select-nav-text fl"><a href="../">首页</a></div>
+
+        {%if $main_select_condition_arr%}
+        <div class="dib r-arrow  select-nav-text fl">&gt;</div>
+        <div class="main-type dib fl">
+            <div class="main-type-list">
+                <div class="main-select-disable dib">{%$main_type_text%}</div>
+                <div class="main-select-able dib"><a href="{%$all_type_text_link%}">全部</a></div>
+                <div class="main-select-able dib"><a href="{%$second_type_text_link%}">{%$second_type_text%}</a></div>
+            </div>
+            {%foreach $main_select_condition_arr as $key => $value%}
+            <div class="main-type-sel select-nav-tab dib fl cor-666">
+                <span class="tab-name f12 fl">{%$value.name%}</span>
+                <i class="tab-arrow"></i>
+            </div>
+            {%/foreach%}
+        </div>
+        {%else%}
+        <div class="dib r-arrow  select-nav-text fl">&gt;</div>
+        <div class="dib select-nav-text fl ml15">全部</div>
+        {%/if%}
+
+        {%if $second_select_condition_arr%}
+            <div class="dib r-arrow select-nav-text fl">&gt;</div>
+            {%foreach $second_select_condition_arr as $key => $value%}
+            <a href="{%$value.link%}">
+                <div class="select-nav-tab select-nav-tab-hover dib fl">
+                    <span class="tab-name f12 fl cor-666">{%$value.name%}</span>
+                    <i class="tab-close"></i>
+                </div>
+            </a>
+            {%/foreach%}
+        {%/if%}
+
+
+    </div>
+    <div class="select-list clearfix {%$condition_dn%}">
+        <div class="select-list-tab border-line clearfix {%$type_dn%}">
+            <div class="tab-title dib fb">
+                套系类型：
+            </div>
+            <div class="tab-list" data-role="type-shrink">
+                <ul class="list clearfix">
+                    {%foreach $goods_type_arr as $val%}
+                    <li><a href="{%$val.link%}">{%$val.name%}</a></li>
+                    {%/foreach%}
+                </ul>
+            </div>
+            <div class="tab-btn clearfix" data-role="more-btn" data-type="type">
+                <div class="btn-text dib">多选</div>
+                <i></i>
+            </div>
+            <!--展开模式-->
+            <div class="tab-list tab-list-choose dn" data-role="type-spread">
+                <ul class="list-choose clearfix">
+                    {%foreach $goods_type_arr as $key => $val%}
+                    <li class="list-li" data-role="sel-ele" data-mark="{%$key%}" data-type="type"><i></i>{%$val.name%}</li>
+                    {%/foreach%}
+                </ul>
+                <div class="choose-confirm-btn tc">
+                    <span class="confirm" data-role="list-confirm" data-type="type">确定</span>
+                    <span class="cancel ml10" data-role="list-cancel" data-type="type">取消</span>
+                </div>
+            </div>
+        </div>
+        <div class="select-list-tab border-line clearfix {%$style_dn%}">
+            <div class="tab-title dib fb">
+                风格场景：
+            </div>
+            <div class="tab-list" data-role="style-shrink">
+                <ul class="list clearfix">
+                    {%foreach $goods_style_arr as $val%}
+                    <li><a href="{%$val.link%}">{%$val.name%}</a></li>
+                    {%/foreach%}
+                </ul>
+            </div>
+            <div class="tab-btn clearfix" data-role="more-btn" data-type="style">
+                <div class="btn-text dib">多选</div>
+                <i></i>
+            </div>
+            <!--展开模式-->
+            <div class="tab-list tab-list-choose dn" data-role="style-spread">
+                <ul class="list-choose clearfix">
+                    {%foreach $goods_style_arr as $key => $val%}
+                    <li class="list-li" data-role="sel-ele" data-mark="{%$key%}" data-type="style"><i></i>{%$val.name%}</li>
+                    {%/foreach%}
+                </ul>
+                <div class="choose-confirm-btn tc">
+                    <span class="confirm" data-role="list-confirm" data-type="style">确定</span>
+                    <span class="cancel ml10" data-role="list-cancel" data-type="style">取消</span>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="select-list-tab border-line clearfix {%$photographers_dn%}">
+            <div class="tab-title dib fb">
+                摄影师类型：
+            </div>
+            <div class="tab-list tab-list-choose dib">
+                <ul class="list clearfix">
+                    {%foreach $goods_photographers_arr as  $val%}
+                    <li><a href="{%$val.link%}">{%$val.name%}</a></li>
+                    {%/foreach%}
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="sort-nav mt20 mb20 clearfix">
+        <ul class="sort-nav-list f14">
+            {%foreach $sort_arr as $key => $value%}
+            {%if $value.key neq "location"%}
+            <a href="{%$value.link%}">
+            {%/if%}
+            <li class="nav-list-li {%$value.cur_class%} {%$value.lid_class%} {%if $value.key eq 'location'%}nav-list-li-width-auto{%/if%} " {%if $value.key eq "location"%}data-role="location-li"{%/if%}><span>{%$value.name%}</span>{%if $value.key eq "location"%}<i class="{%$value.sort_arrow_class%} ml5 mr5 dib"></i>{%elseif $value.key eq "3" || $value.key eq "1"%}<i class="icon {%$value.sort_arrow_class%}"></i>{%/if%}
+                {%if $value.key eq "location"%}
+                <div class="location-li-list" data-role="location-li-list">
+                    <i class="location-close-icon" data-role="location-list-close"></i>
+                    <div class="location-select-pop">
+                        <div class="location-select-pop-item">
+                            <div class="item-wrap">
+                                <ul class="location-tab-list clearfix">
+                                    <li class="li-cur" data-role="province-data" common-data-role="common-data">广东<i class="arrow-icon"></i></li>
+                                    <li data-role="city-data" common-data-role="common-data">广州市<i class="arrow-icon" ></i></li>
+                                    {%if $can_use_district%}
+                                    <li data-role="district-data" common-data-role="common-data">请选择<i class="arrow-icon" ></i></li>
+                                    {%else%}
+                                    <li data-role="district-data" common-data-role="common-data" class="dn">请选择<i class="arrow-icon" ></i></li>
+                                    {%/if%}
+                                </ul>
+                                <div class="location-tab-detail-list-wrap" data-role="province-data-list" common-data-role="common-data-list">
+                                </div>
+                                <div class="location-tab-detail-list-wrap" data-role="city-data-list" common-data-role="common-data-list">
+                                </div>
+                                <div class="location-tab-detail-list-wrap" data-role="district-data-list" common-data-role="common-data-list">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%/if%}
+            </li>
+            {%if $value.key neq "location"%}
+            </a>
+            {%/if%}
+            {%/foreach%}
+
+
+        </ul>
+
+
+    </div>
+    {%if $keyword%}
+    <div class="search-kw mb20">
+        {%if $list_data_count%}
+        <p class="search-kw-nav">搜索关键字<label class="keywords">“{%$keyword%}”</label>服务</p>
+        {%/if%}
+    </div>
+    {%/if%}
+    <div class="list-wrap" data-role="list-wrap">
+        {%$list_data_html%}
+
+        {%if $list_data_count%}
+        {%else%}
+        <div class="no-content-tips-mod-1">
+            <div class="img">
+                <img src="http://paizhao.yueus.com/static/pc/image/ui/no-content-icon-59x59.png">
+            </div>
+            <div class="txt color-666 f14 pt10">
+                {%if $keyword%}
+                抱歉！没有找到与“ <span class="color-24c">{%$keyword%} </span>”相关的服务 请换一个关键词再试试吧。
+                {%else%}
+                抱歉，暂时没有相关的数据
+                {%/if%}
+            </div>
+        </div>
+        {%/if%}
+    </div>
+    <div class="page-mod-1 f14 tc mb10">{%$page_select%}</div>
+
+</div>
+<!-- 底部内容 -->
+{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/ua/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/utility/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"></script>
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script>
+
+    $(function()
+    {
+
+        // 图片后加载处理
+        var lazyload = require('pc-huipai:global/lazyload/lazyload');
+        var location_sel = require('pc-huipai:global/location_sel/location_sel');
+        var lazyload_list_obj = new lazyload({
+            contain: $('[data-role="list-wrap"]'), // 后加载的父容器
+            img_center: {
+                is_open : false,
+                width : '285',
+                height : '285'
+            },
+            flag : 'data-src'
+        });
+
+        //地区选择
+        var location_arr_json = {%$location_arr_json%};
+        var can_use_district = "{%$can_use_district%}";
+
+        var province_id = "{%$province_id%}";
+        var city_id = "{%$city_id%}";
+        var district_id = "{%$district_id%}";
+        //构造条件对象
+        construct_condition = function(){
+            var local_link_url = "./index.php?tp=list&ev=";
+            var local_ev_type_str = "{%$ev_type_str%}";
+            var local_ev_style_str = "{%$ev_style_str%}";
+            var local_ev_photographer_str = "{%$ev_photographer_str%}";
+            var local_sort_str = "{%$sort_str%}";
+            var local_order_str = "{%$order_str%}";
+            var local_keyword_str = "{%$keyword_str%}";
+
+            var condition_list_obj = {
+                local_link_url:local_link_url,
+                local_ev_type_str:local_ev_type_str,
+                local_ev_style_str:local_ev_style_str,
+                local_ev_photographer_str:local_ev_photographer_str,
+                local_sort_str:local_sort_str,
+                local_order_str:local_order_str,
+                local_keyword_str:local_keyword_str
+            }
+            return condition_list_obj;
+        }
+        var condition_list = construct_condition();
+        //console.log(location_arr_json.result_data);
+        //var parse_location_arr_json = JSON.parse(location_arr_json);
+
+        var location_sel_obj = new location_sel({
+            province_id:province_id,
+            city_id:city_id,
+            district_id:district_id,
+            condition_list:condition_list,
+            can_use_district:can_use_district,
+            location_json_obj:location_arr_json.result_data
+        });
+
+
+        //多选点击
+        $("[data-role='more-btn']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            $(this).addClass("dn");
+            $("[data-role='"+data_type+"-shrink']").addClass("dn");
+            $("[data-role='"+data_type+"-spread']").removeClass("dn");
+        });
+
+        //多选-确定按钮
+        $("[data-role='list-confirm']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            console.log("点击了确定");
+            //检查所属列表是否有勾选
+            var has_sel = false;
+            var spread_li = $("[data-role='"+data_type+"-spread']").find("li");
+            var spread_li_len = spread_li.length;
+            var data_mark = "";
+            var data_mark_arr = [];
+            for(var i=0;i<spread_li_len;i++)
+            {
+                if($(spread_li[i]).hasClass("list-li-cur"))
+                {
+                    has_sel = true;
+                    //将选中的模块的ID值记录到数组
+                    data_mark = $(spread_li[i]).attr("data-mark");
+                    data_mark_arr.push(data_mark);
+                }
+            }
+            if(!has_sel)
+            {
+                //alert("请勾选一个选项");
+                return false;
+            }
+
+            var parent_se = "{%$parent_se%}";
+            var child_se = "{%$child_se%}";
+            var type_parent_split = "{%$type_parent_split%}";
+            var style_parent_split = "{%$style_parent_split%}";
+
+            var ev_type_str = "{%$ev_type_str%}";
+            var ev_style_str = "{%$ev_style_str%}";
+            var ev_photographer_str = "{%$ev_photographer_str%}";
+
+            console.log(ev_type_str);
+            console.log(ev_style_str);
+            console.log(ev_photographer_str);
+
+
+
+            var sort_str = "{%$sort_str%}";
+            var order_str = "{%$order_str%}";
+            var lid_str = "{%$lid_str%}";
+            var keyword_str = "{%$keyword_str%}";
+
+            console.log(parent_se);
+            console.log(child_se);
+
+
+            var sel_str = data_mark_arr.join(child_se);//临时处理
+            console.log("选中的分类ID分类与值"+data_type+"-"+sel_str);
+            var link_url = "./index.php?tp=list&ev=";
+            if(data_type=="type")
+            {
+                var js_type_ev_str = type_parent_split+"_"+sel_str+parent_se;
+                var jump_link = link_url+ev_photographer_str+js_type_ev_str+ev_style_str+"&"+sort_str+order_str+lid_str+keyword_str+"s=1";
+            }
+            else
+            {
+                var js_type_ev_str = style_parent_split+"_"+sel_str+parent_se;
+                var jump_link = link_url+ev_photographer_str+ev_type_str+js_type_ev_str+"&"+sort_str+order_str+lid_str+keyword_str+"s=1";
+            }
+
+            //console.log(jump_link);
+            window.location.href=jump_link;
+
+
+            //构造链接
+
+        });
+
+        //取消按钮点击
+        $("[data-role='list-cancel']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            $("[data-role='"+data_type+"-shrink']").removeClass("dn");
+            $("[data-role='more-btn'][data-type='"+data_type+"']").removeClass("dn");
+            $("[data-role='"+data_type+"-spread']").addClass("dn");
+            //清理对应的勾选选中
+            var spread_li = $("[data-role='"+data_type+"-spread']").find("li");
+            var spread_li_len = spread_li.length;
+            for(var i=0;i<spread_li_len;i++)
+            {
+
+                $(spread_li[i]).removeClass("list-li");
+                $(spread_li[i]).removeClass("list-li-cur");
+                $(spread_li[i]).addClass("list-li");
+            }
+            $("[data-role='list-confirm'][data-type='"+data_type+"']").removeClass("confirm-active");
+        });
+
+
+
+
+        //选中点击，样式改变
+        $("[data-role='sel-ele']").on("click",function(){
+            var data_type = $(this).attr("data-type");
+            if($(this).hasClass("list-li-cur"))
+            {
+                $(this).removeClass("list-li-cur");
+                $(this).addClass("list-li");
+            }
+            else
+            {
+                $(this).removeClass("list-li");
+                $(this).addClass("list-li-cur");
+            }
+
+
+            //循环
+            var has_sel = false;
+            var spread_li = $("[data-role='"+data_type+"-spread']").find("li");
+            var spread_li_len = spread_li.length;
+            for(var i=0;i<spread_li_len;i++)
+            {
+                if($(spread_li[i]).hasClass("list-li-cur"))
+                {
+                    has_sel = true;
+                }
+            }
+
+
+            if(has_sel)
+            {
+                if(!$("[data-role='list-confirm'][data-type='"+data_type+"']").hasClass("confirm-active"))
+                {
+                    $("[data-role='list-confirm'][data-type='"+data_type+"']").addClass("confirm-active");
+                }
+            }
+            else
+            {
+                if($("[data-role='list-confirm'][data-type='"+data_type+"']").hasClass("confirm-active"))
+                {
+                    $("[data-role='list-confirm'][data-type='"+data_type+"']").removeClass("confirm-active");
+                }
+            }
+
+
+        });
+
+
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

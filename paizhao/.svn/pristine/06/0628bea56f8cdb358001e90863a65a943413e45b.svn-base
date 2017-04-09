@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/base.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-no-use.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-not.scss">
+
+   	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-border.scss">
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-tab.scss">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+</head>
+
+
+<header class="global-header " >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">图片列表</h3>
+	</div>
+</header>
+  
+
+  
+<!-- 页面内容start -->
+	<div class="sort-filter-item-tab-1">
+		<div class="item-wrap">
+			<div class="sort-item f14 color-666">
+				<ul class="list">
+					<li>
+						<span class="txt">
+							综合
+						</span>
+					</li>
+					<li>
+						<span class="txt">
+							综合
+						</span>
+					</li>
+					<li>
+						<span class="txt">
+							综合
+						</span>
+					</li>
+					<li class="">
+						<span class="txt">
+							综合
+						</span>
+						<span class="arrow-item">
+							<i class="icon-font i-iconfont-shixinxiaojiantou"></i>
+							<i class="icon-font i-iconfont-shixinxiaojiantou"></i>
+						</span>
+					</li>
+				</ul>
+			</div>
+			<div class="filter-item">
+				<i class="filter-icon yue-ui-icon-size-22"></i>
+			</div>
+		</div>
+	</div>
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

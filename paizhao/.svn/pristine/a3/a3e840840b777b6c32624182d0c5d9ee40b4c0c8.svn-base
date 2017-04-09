@@ -1,0 +1,37 @@
+<?php
+/**
+* @authors huangst
+* @date    2016-10-26 15:35:39
+* 获取摄影师主页列表
+*/
+include_once('../../common.inc.php');
+$name = strval($_INPUT['name']);
+$mobile = intval($_INPUT['mobile']);
+$goods_id = intval($_INPUT['goods_id']);
+$user_id = intval($_INPUT['user_id']);
+$goods_name = strval($_INPUT['goods_name']);
+
+$package_info = strval($_INPUT['package_type'] .'-'. $_INPUT['package_info']);
+
+$consult_type = strval($_INPUT['consult_type']);
+$consult_cookie = strval($_INPUT['consult_cookie']);
+$source = strval($_INPUT['consult_type'])?strval($_INPUT['consult_type']) : 'PC';
+
+// $package_type = strval($_INPUT['package_type']);
+
+$consult_button_class = POCO::singleton('pai_paizhao_consult_class');
+$data = array(
+'name'=> $name ,
+'mobile'=> $mobile ,
+'goods_id'=> $goods_id,
+'package_info'=> $package_info,
+'user_id'=> $user_id,
+'source'=>$source ,
+'consult_type'=> $consult_type,
+'package_type'=> $package_type,
+'consult_cookie'=> $consult_cookie
+);
+
+$ret = $consult_button_class->add_consult($data);
+paizhao_mobile_output($ret,false);
+

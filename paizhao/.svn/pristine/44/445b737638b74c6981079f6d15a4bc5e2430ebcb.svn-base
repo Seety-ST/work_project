@@ -1,0 +1,324 @@
+
+
+.w1200{
+  width:1200px;
+  margin:0 auto;
+}
+.content-wrap {
+    color: #666;
+    .select-nav {
+      height: 50px;
+      .select-nav-text {
+        line-height: 50px;
+      }
+      .r-arrow {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      .main-type {
+        position: relative;
+        .main-type-list {
+          position: absolute;
+          top: 35px;
+          left: 10px;
+          width: 196px;
+          display: none;
+          height: 40px;
+          line-height: 40px;
+          border: 1px solid #24c7c7;
+          z-index: 1;
+          background-color: #fff;
+          .main-select-disable {
+            color: #ddd;
+            padding-left: 10px;
+          }
+          .main-select-able {
+            padding-left: 20px;
+            color: #666;
+          }
+          .main-select-able:hover {
+            color: #24c7c7;
+          }
+        }
+      }
+      .main-type-sel {
+        z-index: 2;
+        background-color: #fff;
+        position: relative;
+
+      }
+
+      .main-type:hover {
+        .select-nav-tab {
+          border: 1px solid #24c7c7;
+          border-bottom: none;
+          color: #24c7c7;
+          .tab-arrow {
+            background: url(../../image/search/main-type-up-12x12.png?__sprite) no-repeat;
+          }
+        }
+        .main-type-sel {
+          border-bottom: 0;
+        }
+        .main-type-list {
+          display: block;
+        }
+      }
+
+      .select-nav-tab {
+        cursor: pointer;
+        height: 22px;
+        border: 1px solid #ddd;
+        margin-left: 10px;
+        margin-top: 13px;
+        .tab-name {
+          display: inline-block;
+          padding: 0px 0px 0px 10px;
+          line-height: 22px;
+        }
+        .tab-close {
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          background: url(../../image/search/tab-close-12x12.png?__sprite) no-repeat;
+          margin: 5px 10px 5px 10px;
+        }
+        .tab-arrow {
+          width: 12px;
+          height: 12px;
+          display: inline-block;
+          background: url(../../image/search/main-type-down-12x12.png?__sprite) no-repeat;
+          margin: 5px 10px 5px 10px;
+        }
+      }
+      .select-nav-tab-hover:hover {
+        border: 1px solid #24c7c7;
+        color: #24c7c7;
+        .tab-close {
+          background: url(../../image/search/tab-close-hover-12x12.png?__sprite) no-repeat;
+        }
+      }
+
+    }
+    .select-list {
+      border: 1px solid #ddd;
+      .border-line {
+        border-bottom: 1px solid #ddd;
+      }
+      .select-list-tab {
+        background-color: #fafafa;
+        .tab-title {
+          width: 109px;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          padding-right: 21px;
+          text-align: right;
+          float: left;
+
+        }
+        .tab-list {
+          padding-left: 20px;
+          width: 988px;
+          float: left;
+          background-color: #fff;
+          .list {
+            li {
+              cursor: pointer;
+              float: left;
+              line-height: 50px;
+              margin-left: 20px;
+              display: inline-block;
+            }
+            li:hover {
+              color: #24c7c7;
+            }
+          }
+        }
+        .tab-list-choose {
+          padding-left: 20px;
+          padding-right: 60px;
+          .choose-confirm-btn {
+            padding-bottom: 20px;
+            cursor: pointer;
+            .confirm {
+              display: inline-block;
+              background-color: #24c7c7;
+              color: #fff;
+              padding: 5px 10px;
+            }
+            .cancel {
+              border: 1px solid #d3d3d3;
+              background-color: #fff;
+              padding: 5px 10px;
+            }
+          }
+          .list-choose {
+            li {
+              cursor: pointer;
+              float: left;
+              line-height: 40px;
+              margin-left: 20px;
+              i {
+                width: 10px;
+                height: 10px;
+                margin-right: 5px;
+                position: relative;
+                display: inline-block;
+                top: 2px;
+              }
+            }
+            .list-li {
+              color: #333;
+              i {
+                background-color: #fff;
+                border: 1px solid #333;
+              }
+            }
+            .list-li:hover {
+              color: #24c7c7;
+              i {
+                background-color: #fff;
+                border: 1px solid #24c7c7;
+              }
+            }
+            .list-li-cur {
+              color: #24c7c7 ;
+              i {
+                background: url(../../image/search/tab-choose-10x10.png?__sprite) no-repeat;
+                border: 1px solid #24c7c7;
+              }
+
+            }
+          }
+        }
+        .tab-btn {
+          width: 60px;
+          float: right;
+          background-color: #fff;
+          cursor: pointer;
+          .btn-text {
+            line-height: 50px;
+          }
+          i {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background: url(../../image/search/type-plus-12x12.png?__sprite) no-repeat;
+            margin-left: 4px;
+            margin-top: 24;
+          }
+        }
+        .tab-btn:hover {
+          color: #24c7c7;
+          i {
+            background: url(../../image/search/type-plus-hover-12x12.png?__sprite) no-repeat;
+          }
+        }
+      }
+
+    }
+
+    .sort-nav {
+      background-color: #FAFAFA;
+      .sort-nav-list {
+        margin-left: 35px;
+        .nav-list-li {
+          float: left;
+          padding: 15px 0px;
+          width: 50px;
+          margin-right: 70px;
+          cursor: pointer;
+          span {
+            display: inline-block;
+
+          }
+          .icon {
+            width: 12px;
+            height: 12px;
+            position: relative;
+            top: 1px;
+            display: inline-block;
+          }
+          .sort-up-arrow {
+            display: none;
+            background: url(../../image/search/up-arrow-grey-12x12.png?__sprite) no-repeat;
+          }
+          .sort-down-arrow {
+            display: none;
+            background: url(../../image/search/down-arrow-grey-12x12.png?__sprite) no-repeat;
+          }
+        }
+        .nav-list-li:hover {
+          .sort-up-arrow {
+            display: inline-block;
+          }
+          .sort-down-arrow {
+            display: inline-block;
+          }
+        }
+        .nav-list-li-cur {
+          color: #24c7c7;
+          .sort-up-arrow {
+            display: inline-block;
+            background: url(../../image/search/up-arrow-12x12.png?__sprite) no-repeat;
+          }
+          .sort-down-arrow {
+            display: inline-block;
+            background: url(../../image/search/down-arrow-12x12.png?__sprite) no-repeat;
+          }
+        }
+        .location-li {
+          position: relative;
+          .location-li-list {
+            position: absolute;
+            display: none;
+            top: 51px;
+            left: -115px;
+
+          }
+        }
+        .location-li:hover {
+          color: #24c7c7;
+          .location-li-list {
+            display: block;
+          }
+          .ui-triangle-bottom-mid-gray {
+            display: inline-block;
+            border-width: 0px 6px 6px 6px;
+            border-color: transparent transparent #24c7c7 transparent;
+            _border-color: #000 #000 #fff #000;
+            _filter: chroma(color=black);
+          }
+        }
+      }
+    }
+
+
+
+
+
+}
+
+/*公共样式*/
+.color-666 { color: #666 }
+.color-ddd { color: #ddd }
+.color-fff { color: #fff }
+.color-fa { color: #FAFAFA }
+.color-d3 { color: #D3D3D3 };
+
+//UI箭头样式重写
+/*.ui-triangle-bottom-mid-grey {
+  border-width: 0px 6px 6px 6px;
+  border-color: transparent transparent #666 transparent;
+  _border-color: #000 #000 #fff #000;
+  _filter: chroma(color=black);
+}*/
+.location-arrow {
+  width: 300px;
+  height: 12px;
+  top: -12px;
+  position: absolute;
+  background: url(../../image/search/location-arrow-300x12.png) no-repeat;
+}
+
+

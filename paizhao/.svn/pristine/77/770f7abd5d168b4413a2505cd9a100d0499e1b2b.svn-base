@@ -1,0 +1,12 @@
+<?php
+
+return array( 
+       'index'=>'//paizhao.yueus.com/',//首页
+       'goods_list'=>'//paizhao.yueus.com/search/?tp=per',//商品列表
+       'goods_detail'=>'//paizhao.yueus.com/goods/', //商品详情
+       'photographer_list'=>'//paizhao.yueus.com/search/?tp=list',//摄影师列表
+       'photographer_detail'=>'//paizhao.yueus.com/camera/'//摄影师详情
+);
+
+
+?>

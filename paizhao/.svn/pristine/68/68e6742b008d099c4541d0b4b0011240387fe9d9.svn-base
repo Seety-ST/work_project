@@ -1,0 +1,127 @@
+<!--底部-->
+
+<script>
+(function()
+{   
+    var run_status = 'ONLINE' == 'DEV' ? false : true ;
+    
+    var version = '2016-12-29 16:39:32';
+
+    require.resourceMap({"res":{"wap-huipai:iconfont_js/index.js":{"uri":"http://51snap.yueus.com/static/wap/iconfont_js/index.e3a14a7.js","url":"http://51snap.yueus.com/static/wap/iconfont_js/index.e3a14a7.js","type":"js","deps":["path","fs","./iconfont.js"]},"wap-huipai:global/abnormal/index":{"uri":"http://51snap.yueus.com/static/wap/modules/global/abnormal/index.628bc8d.js","url":"http://51snap.yueus.com/static/wap/modules/global/abnormal/index.628bc8d.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:modules/global/abnormal/main.scss":{"uri":"http://51snap.yueus.com/static/wap/modules/global/abnormal/main.56955cb.css","url":"http://51snap.yueus.com/static/wap/modules/global/abnormal/main.56955cb.css","type":"css"},"wap-huipai:global/cookie/index":{"uri":"http://51snap.yueus.com/static/wap/modules/global/cookie/index.3d78d12.js","url":"http://51snap.yueus.com/static/wap/modules/global/cookie/index.3d78d12.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/go_top/go_top":{"uri":"http://51snap.yueus.com/static/wap/modules/global/go_top/go_top.179b44a.js","url":"http://51snap.yueus.com/static/wap/modules/global/go_top/go_top.179b44a.js","type":"js","deps":["wap-huipai:modules/global/go_top/go_top.scss"],"pkg":"wap-huipai:p0"},"wap-huipai:modules/global/go_top/go_top.scss":{"uri":"http://51snap.yueus.com/static/wap/modules/global/go_top/go_top.e5dab2d.css","url":"http://51snap.yueus.com/static/wap/modules/global/go_top/go_top.e5dab2d.css","type":"css"},"wap-huipai:modules/global/header/header.scss":{"uri":"http://51snap.yueus.com/static/wap/modules/global/header/header.2b83c7e.css","url":"http://51snap.yueus.com/static/wap/modules/global/header/header.2b83c7e.css","type":"css"},"wap-huipai:global/header/main":{"uri":"http://51snap.yueus.com/static/wap/modules/global/header/main.4096f5b.js","url":"http://51snap.yueus.com/static/wap/modules/global/header/main.4096f5b.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/layer/layer":{"uri":"http://51snap.yueus.com/static/wap/modules/global/layer/layer.8390eec.js","url":"http://51snap.yueus.com/static/wap/modules/global/layer/layer.8390eec.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:modules/global/layer/need/layer.css":{"uri":"http://51snap.yueus.com/static/wap/modules/global/layer/need/layer.78b1c1a.css","url":"http://51snap.yueus.com/static/wap/modules/global/layer/need/layer.78b1c1a.css","type":"css"},"wap-huipai:global/lazyload/lazyload":{"uri":"http://51snap.yueus.com/static/wap/modules/global/lazyload/lazyload.1744170.js","url":"http://51snap.yueus.com/static/wap/modules/global/lazyload/lazyload.1744170.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/list/list":{"uri":"http://51snap.yueus.com/static/wap/modules/global/list/list.f02ce73.js","url":"http://51snap.yueus.com/static/wap/modules/global/list/list.f02ce73.js","type":"js","deps":["wap-huipai:modules/global/list/list.scss"],"pkg":"wap-huipai:p0"},"wap-huipai:modules/global/list/list.scss":{"uri":"http://51snap.yueus.com/static/wap/modules/global/list/list.a13f28d.css","url":"http://51snap.yueus.com/static/wap/modules/global/list/list.a13f28d.css","type":"css"},"wap-huipai:global/location_sel/location_localstorage":{"uri":"http://51snap.yueus.com/static/wap/modules/global/location_sel/location_localstorage.b0dcb79.js","url":"http://51snap.yueus.com/static/wap/modules/global/location_sel/location_localstorage.b0dcb79.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/main":{"uri":"http://51snap.yueus.com/static/wap/modules/global/main.db67dd9.js","url":"http://51snap.yueus.com/static/wap/modules/global/main.db67dd9.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:modules/global/swiper/1.0.0/swiper.min.css":{"uri":"http://51snap.yueus.com/static/wap/modules/global/swiper/1.0.0/swiper.min.fbf327c.css","url":"http://51snap.yueus.com/static/wap/modules/global/swiper/1.0.0/swiper.min.fbf327c.css","type":"css"},"wap-huipai:global/swiper/1.0.0/swiper3.07.min":{"uri":"http://51snap.yueus.com/static/wap/modules/global/swiper/1.0.0/swiper3.07.min.69e4d21.js","url":"http://51snap.yueus.com/static/wap/modules/global/swiper/1.0.0/swiper3.07.min.69e4d21.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/ua/index":{"uri":"http://51snap.yueus.com/static/wap/modules/global/ua/index.e997896.js","url":"http://51snap.yueus.com/static/wap/modules/global/ua/index.e997896.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/utility/cross_domain_storage":{"uri":"http://51snap.yueus.com/static/wap/modules/global/utility/cross_domain_storage.41d35cd.js","url":"http://51snap.yueus.com/static/wap/modules/global/utility/cross_domain_storage.41d35cd.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:global/utility/index":{"uri":"http://51snap.yueus.com/static/wap/modules/global/utility/index.f18f8c4.js","url":"http://51snap.yueus.com/static/wap/modules/global/utility/index.f18f8c4.js","type":"js","pkg":"wap-huipai:p0"},"wap-huipai:style/camera/index-page.scss":{"uri":"http://51snap.yueus.com/static/wap/style/camera/index-page.3c074c1.css","url":"http://51snap.yueus.com/static/wap/style/camera/index-page.3c074c1.css","type":"css"},"wap-huipai:style/common/main.scss":{"uri":"http://51snap.yueus.com/static/wap/style/common/main.4dbf771.css","url":"http://51snap.yueus.com/static/wap/style/common/main.4dbf771.css","type":"css","pkg":"wap-huipai:p1"},"wap-huipai:style/goods/index-page.scss":{"uri":"http://51snap.yueus.com/static/wap/style/goods/index-page.5c91fb4.css","url":"http://51snap.yueus.com/static/wap/style/goods/index-page.5c91fb4.css","type":"css"},"wap-huipai:style/goods/succeed.scss":{"uri":"http://51snap.yueus.com/static/wap/style/goods/succeed.3b6f006.css","url":"http://51snap.yueus.com/static/wap/style/goods/succeed.3b6f006.css","type":"css"},"wap-huipai:style/goods/sygwwx.scss":{"uri":"http://51snap.yueus.com/static/wap/style/goods/sygwwx.43844a9.css","url":"http://51snap.yueus.com/static/wap/style/goods/sygwwx.43844a9.css","type":"css"},"wap-huipai:style/index/index-page.scss":{"uri":"http://51snap.yueus.com/static/wap/style/index/index-page.11ac15d.css","url":"http://51snap.yueus.com/static/wap/style/index/index-page.11ac15d.css","type":"css"},"wap-huipai:style/search/search-page.scss":{"uri":"http://51snap.yueus.com/static/wap/style/search/search-page.015c4d6.css","url":"http://51snap.yueus.com/static/wap/style/search/search-page.015c4d6.css","type":"css"},"wap-huipai:style/topic/index-page.scss":{"uri":"http://51snap.yueus.com/static/wap/style/topic/index-page.79a331c.css","url":"http://51snap.yueus.com/static/wap/style/topic/index-page.79a331c.css","type":"css"},"wap-huipai:style/ui/layer.css":{"uri":"http://51snap.yueus.com/static/wap/style/ui/layer.78b1c1a.css","url":"http://51snap.yueus.com/static/wap/style/ui/layer.78b1c1a.css","type":"css"},"wap-huipai:style/ui/no-use/base.scss":{"uri":"http://51snap.yueus.com/static/wap/style/ui/no-use/base.823eab7.css","url":"http://51snap.yueus.com/static/wap/style/ui/no-use/base.823eab7.css","type":"css"},"wap-huipai:style/ui/no-use/yue-ui-no-use.scss":{"uri":"http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css","url":"http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css","type":"css"},"wap-huipai:style/ui/no-use/yue-ui-not.scss":{"uri":"http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-not.4cd35c0.css","url":"http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-not.4cd35c0.css","type":"css"}},"pkg":{"wap-huipai:p0":{"uri":"http://51snap.yueus.com/static/wap/js/20161229/common.ccdce86.js","url":"http://51snap.yueus.com/static/wap/js/20161229/common.ccdce86.js","type":"js","has":["wap-huipai:global/abnormal/index","wap-huipai:global/cookie/index","wap-huipai:global/go_top/go_top","wap-huipai:global/header/main","wap-huipai:global/layer/layer","wap-huipai:global/lazyload/lazyload","wap-huipai:global/list/list","wap-huipai:global/location_sel/location_localstorage","wap-huipai:global/main","wap-huipai:global/swiper/1.0.0/swiper3.07.min","wap-huipai:global/ua/index","wap-huipai:global/utility/cross_domain_storage","wap-huipai:global/utility/index"],"deps":["wap-huipai:modules/global/go_top/go_top.scss","wap-huipai:modules/global/list/list.scss"]},"wap-huipai:p1":{"uri":"http://51snap.yueus.com/static/wap/style/20161229/main.c834952.css","url":"http://51snap.yueus.com/static/wap/style/20161229/main.c834952.css","type":"css","has":["wap-huipai:style/common/main.scss"]}}});
+
+    __yue_ls__.loader(require.__RESOURCES_MAP_OBJ,
+    [                        
+        'wap-huipai:global/abnormal/index',
+        'wap-huipai:global/cookie/index',
+        'wap-huipai:global/go_top/go_top',
+        'wap-huipai:global/header/main',
+        'wap-huipai:global/layer/layer',
+        'wap-huipai:global/lazyload/lazyload',
+        'wap-huipai:global/list/list',
+        'wap-huipai:global/location_sel/location_localstorage',            
+        'wap-huipai:global/main',
+        'wap-huipai:global/swiper/1.0.0/swiper3.07.min',
+        'wap-huipai:global/ua/index',
+        'wap-huipai:global/utility/cross_domain_storage',
+        'wap-huipai:global/utility/index',
+    ],run_status,version,'paizhao');    
+    
+
+})();
+</script>
+
+{%if $is_weixin%}
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script>
+
+// 微信分享
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId:  '{%$wx_json.appId%}', // 必填，公众号的唯一标识
+    timestamp: '{%$wx_json.timestamp%}', // 必填，生成签名的时间戳
+    nonceStr: '{%$wx_json.nonceStr%}', // 必填，生成签名的随机串
+    signature: '{%$wx_json.signature%}',// 必填，签名，见附录1
+    jsApiList: ['checkJsApi',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQZone',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'downloadImage',
+        'openProductSpecificView'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+
+
+window.__ShareTimeline = 
+{
+    title: '约摄-poco旗下的摄影师预约平台', // 分享标题
+    link: '', // 分享链接
+    imgUrl: 'http://www.51snap.cn/static/wap/image/common/share-icon-32x32.png', // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+       
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+}
+window.__ShareAppMessage = {
+    title: '约摄-poco旗下的摄影师预约平台', // 分享标题
+    desc: '生活不只有诗和远方 还有此刻的美好。留下一辑经典照片，与未来的自己想当年。', // 分享描述
+    link: '', // 分享链接
+    imgUrl: 'http://www.51snap.cn/static/wap/image/common/share-icon-32x32.png', // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+  
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+};
+
+{%if $params.share_open%}
+wx.ready(function()
+{
+    wx.onMenuShareTimeline(window.__ShareTimeline);//朋友圈
+    wx.onMenuShareAppMessage(window.__ShareAppMessage);//微信好友
+    wx.onMenuShareQQ(window.__ShareAppMessage); //qq好友
+    wx.onMenuShareQZone(window.__ShareAppMessage); //qq空间分享
+});
+
+{%/if%}  
+
+
+</script>
+{%/if%}
+
+{%if $is_mqq%}
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+<script type="text/javascript">
+    setShareInfo({
+        title:          '约摄-poco旗下的摄影师预约平台',
+        summary:        '生活不只有诗和远方 还有此刻的美好。留下一辑经典照片，与未来的自己想当年。',
+        pic:            'http://www.51snap.cn/static/wap/image/common/share-icon-32x32.png' + new Date().getTime(),
+        url:            ''
+    });
+</script>
+{%/if%}
+

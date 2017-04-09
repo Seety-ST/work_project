@@ -1,0 +1,1 @@
+define("wap-kids:widget/go_top/index",function(t,e,o){"use strict";function d(t){return t&&t.__esModule?t:{"default":t}}var i=t("wap-kids:widget/go_top/go_top"),n=d(i);o.exports=n.default});

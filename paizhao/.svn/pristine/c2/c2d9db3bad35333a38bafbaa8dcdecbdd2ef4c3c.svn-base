@@ -1,0 +1,414 @@
+<?php
+
+
+// 引用头部、底部、统计
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/head.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/footer.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/tj.php';
+
+// 公共头部和底部
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/global-footer-bar.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/global-top-bar.php';
+
+// 读取模板
+$tpl = getSmartyTemplate('index.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'pc/search/');
+
+// 获取头、底部、统计结构
+$pc_global_head = _get_wbc_head(array('use_vue'=>1));
+$pc_global_footer = _get_wbc_footer();
+$pc_global_tj = _get_wbc_tj();
+
+$pc_global_footer_bar = _get_wbc_footer_bar();
+$pc_global_top_bar = _get_wbc_global_top_bar();
+
+//对象
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+$page_obj =POCO::singleton('show_page');
+
+/*******************配置数组*********************/
+//套系配置
+$goods_type_arr = require('../config/paizhao_goods_type_config.php');
+//风格场景
+$goods_style_arr = require('../config/paizhao_goods_style_config.php');
+//摄影师类型
+$goods_photographers_arr = array("1"=>array("name"=>"摄影机构"),"2"=>array("name"=>"独立摄影师"));
+//地址数组
+$goods_location_array_config = require('../config/paizhao_goods_location_config.php');
+
+$i=0;
+foreach($goods_location_array_config as $key => $value)
+{
+    $goods_location_array[$i]["location_id"] = $key;
+    $goods_location_array[$i]["location_name"] = $value;
+    $i++;
+}
+
+
+//配置主类型，自定义
+$parent_list = array(
+    "11"=>"type",
+    "22"=>"style",
+    "33"=>"photographers",
+);
+
+//配置主类型对应要拆分的数组
+$parent_list_to_config_arr = array(
+    "11"=>$goods_type_arr,
+    "22"=>$goods_style_arr,
+    "33"=>$goods_photographers_arr,
+);
+
+//间隔符编码处理
+$parent_se = urlencode("@");
+$child_se = urlencode("||");
+/*******************配置数组end*********************/
+
+//页面获取参数
+$lid = (int)$_INPUT["lid"];//地址参数
+if(!empty($lid))
+{
+    //获取地址名字
+    foreach($goods_location_array as $key => $value)
+    {
+        if($lid==$value["location_id"])
+        {
+            $location_name = $value["location_name"];
+            break;
+        }
+    }
+}
+else
+{
+    //如果没有传，获取默认第一个
+    $lid = $goods_location_array[0]["location_id"];
+    $location_name = $goods_location_array[0]["location_name"];
+}
+
+
+
+
+
+/*
+ * //参考链接：//https://search.jd.com/search?keyword=电脑&enc=utf-8&qrst=1&rt=1&stop=1&vt=2&wq=电脑&ev=exbrand_微星（MSI）||神舟（HASEE）@933_88789||88787||79881@212_1674@&uc=0#J_crumbsBar
+ *
+ * //参考京东的链接拼接做法，搜索参数为主分类ID加“_”加子分类ID，子分类使用“||”拼接并且加“@”符合为一个条件结束，然后“||”跟“@”使用urlencode()进行转变处理
+ *
+ * */
+
+
+//页面接受参数，并且拆分得到筛选的结构
+
+//条件参数
+$ev = urldecode(trim($_INPUT["ev"]));
+$ev_array = explode("@",$ev);//主分类拆分
+$ev_select_array = array();
+
+
+//筛选条件数组，显示在顶部
+$tmp_select_condition_arr = array();
+//搜索条件，查询使用
+$where = "1";
+$style_where = "1";
+$j=0;//记录筛选条件
+foreach($ev_array as $key => $mix_value)
+{
+    if(!empty($mix_value))
+    {
+        //混合结构内部拆分
+        $mix_value_arr = explode("_",$mix_value);
+        //主分类
+        $parent_value = $mix_value_arr[0];
+        //子分类
+        $child_value = $mix_value_arr[1];
+        //对子分类进行拆分
+        $child_value_arr = explode("||",$child_value);
+        //子分类的ID数组循环
+
+        //构造搜索条件（支持多选栏）
+        $type_ids = "";
+        $style_ids = "";
+        $photographers_type_id = "";
+
+        //根据类型设置筛选条件
+        switch($parent_list_to_config_arr[$parent_value])
+        {
+            case "type":
+                $type_ids = '(' . implode(",",$child_value_arr) . ')';
+                $where .= " AND type_id IN {$type_ids}";
+                break;
+            case "style":
+                $style_ids = '(' . implode(",",$child_value_arr) . ')';
+                $style_where .= " AND style_id IN {$style_ids}";
+                break;
+            case "photographers":
+                $photographers_type_id = '(' . implode(",",$child_value_arr) . ')';
+                $where .= " AND photographers_type = {$photographers_type_id}";
+                break;
+
+        }
+
+        //构造条件显示,html显示
+        $split_str = "、";
+        $child_value_arr_len = count($child_value_arr);
+
+        foreach($child_value_arr as $k => $v)
+        {
+            //参考京东，最多显示四个值，最后一个值不加间隔号
+            if($k>=3 || ($k==($child_value_arr_len-1)))
+            {
+                $split_str = "";
+            }
+            //匹配主分类对应的配置数组，匹配对应的筛选值
+            $tmp_select_condition_arr[$j]["name"] .= $parent_list_to_config_arr[$parent_value][$v]["name"].$split_str;
+
+            //构造关闭连接，待补充
+            if($k>=3)
+            {
+                break;
+            }
+        }
+        $tmp_select_condition_arr[$j]["key"] = $parent_list[$parent_value];
+        $j++;
+    }
+}
+
+/***************构造左上角条件显示跟条件块显示*******************/
+//根据页面结构，拆分主,从条件,现在左上角
+$main_select_condition_arr = array();
+$second_select_condition_array = array();
+$main_type_text = "";
+$second_type_text = "";
+foreach($tmp_select_condition_arr as $key => $value)
+{
+    if($value["key"]=="photographers")
+    {
+        $main_select_condition_arr[] = $value;
+    }
+    else
+    {
+        $second_select_condition_arr[] = $value;
+    }
+}
+//主分类为第一个
+if($main_select_condition_arr[0]["name"]=="摄影机构")
+{
+    $main_type_text = "摄影机构";
+    $second_type_text = "独立摄影师";
+}
+else if($main_select_condition_arr[0]["name"]=="独立摄影师")
+{
+    $main_type_text = "独立摄影师";
+    $second_type_text = "摄影机构";
+}
+//根据主从条件，控制版面条件筛选层显示
+$photographers_dn = "";
+$type_dn = "";
+$style_dn = "";
+if(!empty($main_select_condition_arr))
+{
+    $photographers_dn = "dn";
+}
+//从条件
+foreach($second_select_condition_arr as $k => $v)
+{
+    if($v["key"]=="type")
+    {
+        $type_dn = "dn";
+    }
+    else if($v["key"]=="style")
+    {
+        $style_dn = "dn";
+    }
+}
+/***************构造左上角条件显示跟条件块显示end*******************/
+
+
+
+
+//地址条件
+$where .= " AND location_id like '{$lid}%'";
+
+//排序条件
+//排序参数
+$sort = trim($_INPUT['sort']);
+$order = trim($_INPUT['order']);
+
+//临时排序数组
+$tmp_sort_arr = array(
+    array("key"=>"no_key","name"=>"综合"),
+    array("key"=>"consult","name"=>"人气"),
+    array("key"=>"new","name"=>"最新"),
+    array("key"=>"price","name"=>"价格"),
+    array("key"=>"location","name"=>$location_name),
+);
+
+//根据筛选条件，配置最终排序数组的结构状态
+foreach($tmp_sort_arr as $key => $value)
+{
+    //区分是否地区跟其他条件排序，根据页面模式添加特殊class
+    if($value["key"]=="location")
+    {
+        $value["sort_arrow_class"] = "";
+        $value["cur_class"] = "";
+        $value["lid_class"] = "location-li";
+        $value["sort_arrow_class"] = "ui-triangle ui-triangle-bottom-mid-gray";
+    }
+    else
+    {
+        //判断是否有条件
+        if(!empty($sort))
+        {
+            if($value["key"]==$sort)
+            {
+                $value["cur_class"] = "nav-list-li-cur";
+                //判断排序
+                if(empty($order) || $order=="desc")
+                {
+                    //降序序，icon也为降序序
+                    $value["sort_arrow_class"] = "sort-down-arrow";
+
+                }
+                else
+                {
+                    //升序，icon为升序
+                    $value["sort_arrow_class"] = "sort-up-arrow";
+                }
+
+            }
+            else
+            {
+                //有条件，默认为降序
+                $value["sort_arrow_class"] = "sort-down-arrow";
+            }
+        }
+        else
+        {
+            //没有条件，默认综合为选中
+            if($value["key"]=="no_key")
+            {
+                $value["sort_arrow_class"] = "";
+                $value["cur_class"] = "nav-list-li-cur";
+            }
+            else
+            {
+                //移动上去默认是降序
+                $value["sort_arrow_class"] = "sort-down-arrow";
+                $value["cur_class"] = "";
+            }
+
+        }
+    }
+    $sort_arr[$key] = $value;
+
+}
+
+if ($sort == 'consult' || $sort == 'prices' || $sort == 'new')
+{
+    $order = $order == 'asc' ? $order : 'desc';//默认降序
+    $sort_filed = $sort == 'consult' ? "(consult_num+add_consult_num)" : ($sort=='new'?'update_time':'prices');
+    $sort_filed .= " {$order}";
+}
+else
+{
+    $sort_filed = '((consult_num*0.5)+(pv*0.05)+(uv*0.45)) DESC';
+}
+
+
+
+
+//通过条件获取数据，并且做分页处理
+$show_count  = 16;	//每页显示数
+$p = (int)$_INPUT['p'];
+if($p<=0)
+{
+    $p = 1;
+}
+$limit = ($p-1)*$show_count;
+$limit_str = "{$limit},{$show_count}";
+
+$list_data_count = $goods_class->get_goods_list_count_with_style($where, $style_where);
+$list_data = $goods_class->get_goods_list_with_style($where, $style_where, $sort_filed, $limit_str);
+
+if($_INPUT["print"]==1)
+{
+    print_r($goods_type_arr);
+    print_r($goods_style_arr);
+    print_r($goods_photographers_arr);
+    print_r($goods_location_array);
+    print_r($sort_arr);
+    print_r($main_select_condition_arr);
+    print_r($second_select_condition_arr);
+}
+
+if($_INPUT["print"]==2)
+{
+    echo $list_data_count;
+    print_r($list_data);
+}
+
+
+
+/***********构造分页结构分页处理*************/
+$page_obj->setvar(array(
+    "ev"=>urlencode($ev),
+    "lid"=>$lid,
+    "sort"=>$sort,
+    "order"=>$order
+
+));
+$page_obj->set($show_count, $list_data_count);
+if ($show_count > $list_data_count)
+{
+    $page_select = '';
+}
+else
+{
+    $page_select = $page_obj->output ( 1,1 ) ;
+}
+$page_select = str_replace('font-size:9pt;','',$page_select);
+/***********构造分页结构分页处理end*************/
+
+
+// 输出数据
+$tpl->assign('pc_global_head',$pc_global_head);
+$tpl->assign('pc_global_footer',$pc_global_footer);
+$tpl->assign('pc_global_tj',$pc_global_tj);
+$tpl->assign('pc_global_footer_bar',$pc_global_footer_bar);
+$tpl->assign('pc_global_top_bar',$pc_global_top_bar);
+//赋值到模板进行连接构造
+$tpl->assign("parent_se",$parent_se);
+$tpl->assign("child_se",$child_se);
+//分页
+$tpl->assign("page_select",$page_select);
+//数组数据赋值
+$tpl->assign("goods_type_arr",$goods_type_arr);
+$tpl->assign("goods_style_arr",$goods_style_arr);
+$tpl->assign("goods_photographers_arr",$goods_photographers_arr);
+$tpl->assign("goods_location_array",$goods_location_array);
+$tpl->assign("sort_arr",$sort_arr);
+$tpl->assign("main_select_condition_arr",$main_select_condition_arr);
+$tpl->assign("second_select_condition_arr",$second_select_condition_arr);
+//单变量
+$tpl->assign("location_name",$location_name);
+$tpl->assign("main_type_text",$main_type_text);
+$tpl->assign("second_type_text",$second_type_text);
+//结构块显示
+$tpl->assign("photographers_dn",$photographers_dn);
+$tpl->assign("type_dn",$type_dn);
+$tpl->assign("style_dn",$style_dn);
+
+
+
+
+
+
+
+
+
+/*******连接构造通用函数********/
+function link_construct()
+{
+
+}
+
+?>

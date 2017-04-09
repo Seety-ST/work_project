@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>图片合成器</title>
+	<link href="css/wap-ui.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="login-page">
+		<section class="mod-from-warp">
+			<div class="user-img-warp">
+				<div class="img-item">
+					<!-- 默认头像 -->
+					<img src="images/useheader-mod-204x204.png" style="display:" />
+					<!-- 已上传头像 -->
+					<img src="images/test/204x204.jpg" style="display:none" />
+				</div>
+				<div class="set-item">设置头像</div>
+			</div>
+			<div class="input-warp username-input-warp">
+				<label class="input-label name-icon"></label>
+				<input type="text" class="iput-item" placeholder="输入昵称" />
+			</div>
+			<div class="input-warp password-input-warp">
+				<label class="input-label password-icon"></label>
+				<input type="password" class="iput-item" placeholder="输入密码" />
+				<span class="area-icon">
+					<!-- 可视为see-icon 不可视为no-see-icon -->
+					<i class="icon no-see-icon"></i>
+				</span>
+			</div>
+			<div class="btn-warp">
+				<!-- un-btn-item 为无法点击 -->
+				<span class="btn-item">
+					<em>完成</em>
+				</span>
+			</div>
+		</section>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade"></div>
+	<!-- 上传头像失败 -->
+	<div class="pop-tipsItem" style="display:">
+		<div class="text-item">
+			<p>上传头像失败！请重新上传。</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 上传头像失败 end-->
+	<!-- 密码为空 -->
+	<div class="pop-tipsItem" style="display:none">
+		<div class="text-item">
+			<p>密码不能为空!</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 密码为空 end-->
+	<!-- 头像为空 -->
+	<div class="pop-tipsItem" style="display:none">
+		<div class="text-item">
+			<p>头像不能为空！</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 头像为空 end-->
+	<!-- 昵称为空 -->
+	<div class="pop-tipsItem" style="display:none">
+		<div class="text-item">
+			<p>昵称不能为空!</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 昵称为空 end-->
+	<!-- 密码含空格 -->
+	<div class="pop-tipsItem" style="display:none">
+		<div class="text-item">
+			<p>密码不能含空格!</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 密码含空格 end-->
+	<!-- 密码长度 -->
+	<div class="pop-tipsItem" style="display:none">
+		<div class="text-item">
+			<p>密码长度必须在8-20个英文字母或数字之间！</p>
+		</div>
+		<div class="btn-item">
+			<span class="area-btn">
+				<em>确定</em>
+			</span>
+		</div>
+	</div>
+	<!-- 密码长度 end-->
+	<!-- 弹出层 end -->
+</body>
+</html>

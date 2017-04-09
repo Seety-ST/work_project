@@ -1,0 +1,110 @@
+<?php
+/**
+* @Desc:     咨询列表      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月12日
+* @Time:     上午9:38:30
+* @Version:  
+*/
+//error_reporting(E_ALL ^ E_NOTICE);
+require(dirname(dirname(__FILE__)).'/common.inc.php');
+$action = $_INPUT['action'];
+if ($action == 'consult_list_export')
+{
+    mall_load_action($action);
+    exit;
+}
+$consult_obj = POCO::singleton('pai_paizhao_consult_class');
+$where = '1';
+$start_time = $_INPUT['start_time'];
+if ($start_time)
+{
+    $s_time = strtotime($start_time);
+    $where .= " AND `create_time` > {$s_time}";
+}
+$end_time = $_INPUT['end_time'];
+if ($end_time)
+{
+    $e_time = strtotime($end_time) + 86400;
+    $where .= " AND `create_time` < {$e_time}";
+}
+$mobile = $_INPUT['mobile'];
+if ($mobile && is_numeric($mobile))
+{
+    $where .= " AND `mobile` LIKE '%{$mobile}%'";
+}
+$p_where = '';
+$photographers = $_INPUT['photographers'];
+if ($photographers)
+{
+    $p_where = '(user_id='.(int)$photographers . " OR seller_name LIKE '%{$photographers}%')";
+}
+$order_id = $_INPUT['order_id'];
+if ($order_id)
+{
+    $order_id = (int)$order_id;
+    $where .= " AND `order_id` LIKE '%{$order_id}%'";
+}
+$status = $_INPUT['status'];
+if ($status)
+{
+    $status = (int)$status;
+    $where .= " AND `status_id` = {$status}";
+}
+$work_start_time = $_INPUT['work_start_time'];
+if ($work_start_time)
+{
+    $work_s_time = strtotime($work_start_time);
+    $where .= " AND `work_time` > {$work_s_time}";
+}
+$work_end_time = $_INPUT['work_end_time'];
+if ($work_end_time)
+{
+    $work_e_time = strtotime($work_end_time) + 86400;
+    $where .= " AND `work_time` < {$work_e_time}";
+}
+$total_count = $consult_obj->get_list_count($where);
+$page_obj = new show_page ();
+$show_count = 40;
+$page_obj->setvar ( array (
+    "status" => $status,
+    'start_time'=>$start_time,
+    'end_time'=>$end_time,
+    'mobile'=>$mobile,
+    'photographers'=>$photographers,
+    'order_num'=>$order_num,
+    'work_start_time'=>$work_start_time,
+    'work_end_time'=>$work_end_time,
+    'action'=>$action,
+) );
+$page_obj->set($show_count, $total_count);
+$list = $consult_obj->get_list($where, $page_obj->limit(), $p_where);
+$status_list = $consult_obj->get_consult_status();
+$status_arr = array();
+foreach ($status_list as $k=>$v)
+{
+    $status_arr[$v['id']] = $v['status_desc'];
+    if ($status == $v['id'])
+    {
+        $status_list[$k]['selected'] = 1;
+        break;
+    }
+}
+foreach ($list as $k=>$v)
+{
+    $list[$k]['status_desc'] = $status_arr[$v['status_id']];
+    $list[$k]['create_time'] = date('Y-m-d H:i:s', $v['create_time']);
+    $list[$k]['work_time'] = $v['work_time'] ? date('Y-m-d', $v['work_time']) : '';
+}
+$tpl = new SmartTemplate ( TASK_TEMPLATES_ROOT."/consult/consult_list.tpl.htm" );
+$tpl->assign('list', $list);
+$tpl->assign('page', $page_obj->output(1));
+$tpl->assign('status_arr', $status_list);
+$tpl->assign('start_time', $start_time);
+$tpl->assign('end_time', $end_time);
+$tpl->assign('mobile', $mobile);
+$tpl->assign('photographers', $photographers);
+$tpl->assign('work_start_time', $work_start_time);
+$tpl->assign('work_end_time', $work_end_time);
+$tpl->assign('order_id', $order_id);
+$tpl->output();

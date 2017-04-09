@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>妙脆角</title>
+	<link href="css-v4/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="activity-page">
+		<div class="bg-item"></div>
+		<div class="step-item">
+			<div class="item-list clearfix">
+				<div class="item item-1">
+					<div class="s-bg">
+						<img src="images-v4/step-img/1.png" />
+					</div>
+				</div>
+				<div class="item item-2">
+					<div class="s-bg">
+						<img src="images-v4/step-img/2.png" />
+					</div>
+					<i class="zt-icon">
+						<img src="images-v4/step-img/2-icon.png" />
+					</i>
+				</div>
+				<div class="item item-3">
+					<div class="s-bg">
+						<img src="images-v4/step-img/3.png" />
+					</div>
+				</div>
+				<div class="item item-4">
+					<div class="s-bg">
+						<img src="images-v4/step-img/4.png" />
+					</div>
+					<div class="download-btn">
+						<a href="#">
+							<i class="mr-icon"><img src="images-v4/ll-img-21.png" /></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

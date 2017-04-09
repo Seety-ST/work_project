@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MOJIKIDS - 莫吉照相馆</title>   
+		<meta name="keywords" content="MOJIKIDS,莫吉照相馆,儿童摄影,亲子摄影">
+		<meta name="description" content="MOJIKIDS莫吉照相馆，专注3-7岁儿童亲子摄影。我们一直坚持对细节及品质的极致追求，用镜头记录孩子的纯真笑颜。"> 
+		{%$wap_global_head%}
+		<link href="../../style/index/index-page.scss" type="text/css" rel="stylesheet" />
+		
+	</head>
+	<body class="cor-bg-fff">
+		
+		<main class="main-bottom">
+			<div class="index-page" id="index-page" v-cloak>
+				<div class="p1th">
+					<div class="item-wrap">
+						<div class="img-item">
+							<div id="page-container" class="page-container">
+
+								<!-- 如果你后续需要找到当前实例化后的swiper对象以对其进行一些操作的话，可以自定义配置一个ref属性 -->
+								<swiper :options="swiperOption" ref="mySwiperA" class="swiper-box">
+									<!-- 幻灯内容 -->
+									<swiper-slide v-for="item in total_data.res.banner"><a v-bind:href="item.url"><img  v-lazy.container="item.image" alt=""></a></swiper-slide>
+									<!-- ... -->
+									<!-- 以下控件元素均为可选（使用具名slot来确定并应用一些操作控件元素） -->
+									<div class="swiper-pagination" slot="pagination"></div>
+
+								</swiper>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="p2th">
+					<div class="item-wrap">
+						<div class="address-item">
+							<i class="address-icon">
+								
+							</i>
+							<span class="address-txt f13">{%$location_name%}</span>
+						</div>
+					</div>
+				</div>
+				<div class="p3th">
+					<div class="item-wrap">
+						<div class="baby-list-item" v-if="has_data">
+							<ul class="list">
+								<li>
+									<div class="img-item">
+										<div class="ui-avatar-icon ui-avatar-icon-40" @click="go_to_baby_card()"><i :style="{backgroundImage: 'url(' + show_current_baby_card.baby_image + ')'}"></i></div>
+										<i class="mark-icon girl-mark-icon" v-if="baby_sex"></i>
+										<i class="mark-icon boy-mark-icon" v-else></i>
+										
+									</div>
+									<div class="txt-item f14 color-666 tc">
+										<span class="name-txt">{{show_current_baby_card.baby_name}}{{show_current_baby_card.baby_sex}}</span>
+										<span class="age-txt">{{show_current_baby_card.baby_birth}}</span>
+									</div>
+									<a href="{%$page_url.index%}mine/">
+										<div class="else-item tc">
+											<span class="txt main-color f14">80%妈妈给孩子，拍了这个摄影套餐</span>
+											<i class="arrow-icon"></i>
+										</div>
+									</a>
+									<div class="more-item" @click="show_popup" v-if="is_login === 'is_login'">
+										<i class="more-btn"></i>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<template v-else>
+							<a href="../bb/file">
+								<div class="no-data-item">
+									<i class="add-btn-icon"></i>
+									<p class="main-color f16 tc text">完善宝宝档案，生成专属卡片</p>
+								</div>
+							</a>
+						</template>
+						
+						
+					</div>
+				</div>
+				<div class="p4th">
+					<div class="item-wrap">
+						<ul class="list">
+
+							<li class="clearfix" v-for="(item,index) in total_data.res.goods">
+							<a :href="item.url">
+								<div class="img-item fldi">
+									<i class="img" v-lazy:background-image="item.image"></i>
+								</div>
+								<div class="txt-item frdi">
+									<div class="box-1 f14 color-111">{{item.title}}</div>
+									<div class="box-2 color-999">
+										{{item.description}}
+									</div>
+									<div class="box-3 f16 main-color">{{item.price}}</div>
+								</div>
+							</a>
+								
+							</li>
+							
+						</ul>  
+						<div class="more-item f16 tc">
+							更多套餐，敬请期待 ~
+						</div>
+					</div>
+				</div>
+				<mt-popup v-model="popupVisible" position="center">
+					<div class="add-baby-pop">
+						<div class="item-wrap">
+							<ul class="list" >
+								<li class="clearfix" v-for="(item,index) in show_all_baby_card" @click.stop="change_babycard_cur(item,index)">
+									<div class="img-item fldi">
+										<div class="ui-avatar-icon ui-avatar-icon-40">
+										            <i :style="{backgroundImage: 'url(' + item.baby_image + ')'}"></i>
+										</div>
+										<i class="choose-icon" :class="{'cur':item.cur}"></i>
+									</div>
+									<div class="txt-item frdi clearfix color-333 f16">
+										<div class="box-1 fldi">
+											{{item.baby_name}} {{item.baby_sex}}
+										</div>
+										<div class="box-2 frdi">{{item.baby_birth}}</div>
+									</div>
+								</li>
+								
+							</ul>
+							<a href="../bb/file">
+								<div class="btn-item">
+									<button class="ui-button ui-button-block ui-button-100per ui-button-size-xl  ui-button-radius-l ui-button-bd-fac main-border-color">
+										<span class="ui-button-content f16">添加宝宝</span>
+									</button>
+								</div>
+							</a>
+						</div>
+					</div>
+				</mt-popup>
+				
+			</div>
+		</main>
+		{%include file="../webcontrol/global_footer_bar.tpl.htm" current_page_name=$currentKey page_url = $page_url%}
+		
+	</body>
+	
+</html>
+{%$wap_global_footer%}
+
+
+
+
+<script>
+ 	(function() {
+	 	// 加载轮播图模块
+	 	var Swipe = require('/modules/widget/swipe/index');
+	 	// 使用轮播图
+	 	Vue.use(Swipe);
+	 	// 使用弹窗
+	 	var Popup =  require.syncLoad(__moduleId('/modules/widget/popup/index'));
+	 	Vue.component(Popup.name, Popup);
+	 	// 所有的数据
+	 	var json_data = '{%$json_data%}'
+	 	var total_data = JSON.parse(json_data);
+
+	 	//有userid 的宝贝卡片数据
+	 	var baby_card_data = '{%$baby_card_data%}';
+	 	var login_baby_card_data = JSON.parse(baby_card_data); 
+
+	 	
+	 	// 加载util
+	 	var Util = require.syncLoad(__moduleId('/modules/global/util/index'));
+	 	if (Util.storage.get('bb_file')) 
+	 	{
+	 	    var local_baby_list= [Util.storage.get('bb_file')]; //本地保存的宝贝卡片数据
+	 	    console.log(local_baby_list);
+	 	}
+	 	console.log(total_data);
+
+	 	// 加载lazyload模块
+	 	var Lazyload = require.syncLoad(__moduleId('/modules/widget/lazyload/index'));
+	 	Vue.use(Lazyload);
+
+
+	 	var is_login = '{%$is_login%}';
+	 	var index_page = new Vue
+	 		({
+	 			el: '#index-page',
+
+	 			created: function() {
+	 				var self =this;
+	 				if (is_login=='is_login') 
+	 				{
+	 					if (login_baby_card_data.res.list.length>0) 
+	 					{
+	 						self.has_data = true;
+	 						self.show_current_baby_card = login_baby_card_data.res.list[0];
+	 						self.show_all_baby_card = login_baby_card_data.res.list;
+	 						login_baby_card_data.res.list[0].cur = true;
+	 						if (login_baby_card_data.res.list[0].baby_sex=="小王子") 
+	 						{
+	 						    self.baby_sex=false;
+	 						}
+	 						else
+	 						{
+	 							self.baby_sex=true;
+	 						}
+	 						
+	 					}
+	 					else
+	 					{
+	 						this.has_data = false;
+	 					}
+	 					
+	 				}
+	 				else
+	 				{
+	 					if (local_baby_list) 
+	 					{
+	 						self.has_data = true;
+	 						local_baby_list[0].baby_birth = local_baby_list[0].baby_birth+'岁';
+	 						self.show_current_baby_card = local_baby_list[0];
+	 						local_baby_list[0].cur = true;
+	 						self.show_all_baby_card = local_baby_list;
+	 						if (local_baby_list[0].baby_sex=="男") 
+	 						{
+	 							local_baby_list[0].baby_sex = "小王子";
+	 							self.baby_sex = false;
+	 						}
+	 						else
+	 						{	
+	 							local_baby_list[0].baby_sex = "小公主";
+	 							self.baby_sex = true;
+	 						}
+	 						 
+	 					}
+	 					else
+	 					{
+	 						this.has_data = false;
+	 					}
+	 						
+	 				}
+	 				
+
+	 			},
+	 			data: {
+	 				total_data: total_data,
+	 				swiperOption: {
+	 					pagination: '.swiper-pagination',
+	 					prevButton: '.swiper-button-prev',
+	 					nextButton: '.swiper-button-next',
+	 					slidesPerView: 1,
+	 					paginationClickable: true,
+	 					spaceBetween: 30,
+	 					mousewheelControl: false,
+	 					autoplay : 5000
+	 				},
+	 				popupVisible: false,
+	 				show_current_baby_card : '',
+	 				show_all_baby_card : '',
+	 				has_data : false,
+	 				baby_sex : false,
+	 				is_login : is_login,
+	 			},
+	 			methods: {
+	 				show_popup: function()
+	 				{
+	 					this.$data.popupVisible = true;
+
+	 				},
+	 				change_babycard_cur : function(item,index)
+	 				{
+	 					var self = this;
+	 					if (is_login=='is_login') 
+	 					{
+	 						self.show_current_baby_card = login_baby_card_data.res.list[index];
+	 						for (var i = 0; i < login_baby_card_data.res.list.length; i++) {
+	 							login_baby_card_data.res.list[i].cur = false;
+	 						};
+	 						login_baby_card_data.res.list[index].cur = true;
+
+
+	 						if (login_baby_card_data.res.list[index].baby_sex=="小王子") 
+	 						{
+	 							self.baby_sex = false;
+
+
+	 						}
+	 						else
+	 						{
+	 							self.baby_sex = true;
+	 						}
+
+	 					}
+	 					else
+	 					{
+	 						self.show_current_baby_card = local_baby_list[index];
+	 						for (var i = 0; i < local_baby_list.length; i++) {
+	 							local_baby_list[i].cur = false;
+	 						};
+	 						local_baby_list[i].cur = true;
+	 					}
+	 					self.popupVisible = false;
+	 				},
+	 				go_to_baby_card : function()
+	 				{
+	 					var self = this;
+	 					var img = encodeURIComponent(self.show_current_baby_card.baby_image);
+	 					var sex_key = "";
+	 					var name = self.show_current_baby_card.baby_name;
+	 					var baby_birth = self.show_current_baby_card.baby_birth;
+	 					if (self.show_current_baby_card.baby_sex=="女" || self.show_current_baby_card.baby_sex=="小公主") 
+	 					{
+							sex_key=2;
+	 					}
+	 					else{
+	 						sex_key=1;
+	 					}
+	 					console.log(baby_birth);
+	 					// window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['bb']+'?img='+img+'&sex_key='+sex_key+'&car_type=bb_car&name='+name+" "+baby_birth;
+	 				},
+	 			}
+	 		});
+
+	 	
+	 })();
+</script>
+{%$wap_global_tj%}

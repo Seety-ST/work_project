@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>yue-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/base.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-no-use.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-not.scss">
+
+   	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-avatar.scss">
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-icon-size.scss">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+	<style>
+		.icon-size-demo{
+			background-color: #333;
+		}
+	</style>
+</head>
+
+
+<header class="global-header " >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">icon规格大小</h3>
+	</div>
+</header>
+  
+
+
+<!-- 页面内容start -->
+	<p>yue-ui-icon-size-10</p>
+	<span class="icon-size-demo yue-ui-icon-size-10"></span>
+	<br />
+	<p>yue-ui-icon-size-16</p>
+	<span class="icon-size-demo yue-ui-icon-size-16"></span>
+	<br />
+	<p>yue-ui-icon-size-22</p>
+	<span class="icon-size-demo yue-ui-icon-size-22"></span>
+	<br />
+	<p>yue-ui-icon-size-45x45</p>
+	<span class="icon-size-demo yue-ui-icon-size-45"></span>
+	<br />
+
+	
+	<i class="dib icon-font i-iconfont-allow icon-font-size-16"></i>
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Circle</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!--内容-->
+    <section class="content">
+        <div class="waitTalk-page">
+            <section class="con-item">
+                <div class="listItem">别急，再等等！</div>
+                <h3 class="title">距离今晚群聊还有</h3>
+                <DIV id="CountMsg" class="HotDate">
+                    <span id="t_h">00</span>:<span id="t_m">00</span>:<span id="t_s">00</span>
+                </DIV>
+                <p class="tips">语音群聊每天9:00PM-12PM</p>
+            </section>
+        </div>
+    </section>
+    <script language="javascript" type="text/javascript"> 
+            var formatZero = function(n){
+                 return (n-9>0)?n:'0'+n;                        
+             }
+            function GetRTime(){
+                var EndTime= new Date('2016/06/15 22:00:00'); //截止时间
+                var NowTime = new Date();
+                var t =EndTime.getTime() - NowTime.getTime();
+                var h=0;
+                var m=0;
+                var s=0;
+
+            
+                if(t>=0){
+                  h=Math.floor(t/1000/60/60%24);
+                  m=Math.floor(t/1000/60%60);
+                  s=Math.floor(t/1000%60);
+                }
+
+                h = formatZero(h);
+                m = formatZero(m);
+                s = formatZero(s);
+
+                document.getElementById("t_h").innerHTML = h;
+                document.getElementById("t_m").innerHTML = m;
+                document.getElementById("t_s").innerHTML = s ;
+           }
+           setInterval(GetRTime,0);  
+    </script> 
+</body>
+</html>

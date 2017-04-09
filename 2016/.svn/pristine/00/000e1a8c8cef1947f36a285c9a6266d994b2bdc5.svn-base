@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="Scripts/jquery.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.carouFredSel-5.5.0-auto.js"></script>
+	<title>醉美广州网络摄影大赛</title>
+</head>
+<body class="index-bg">
+	<div class="content">
+		<div class="w1000 re">
+			<div class="nav-content clearfix">
+				<h1 class="logo">
+					<a href="#"></a>
+				</h1>
+				<h1 class="hc-logo"><a href="#"></a></h1>
+				<div class="top-login clearfix">
+					<div class="login frdi"><a href="#">登录</a>|<a href="#">注册</a></div>
+				</div>
+				<ul class="nav clearfix font_wryh">
+					<li class="cur">
+						<a href="#">首页</a>
+					</li>
+					<li>
+						<a href="#">大赛规则</a>
+					</li>
+					<li>
+						<a href="#">我要参赛</a>
+					</li>
+					<li>
+						<a href="#">作品浏览</a>
+					</li>
+					<li>
+						<a href="#">我的作品</a>
+					</li>
+					<li>
+						<a href="#">获奖公布</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="index-page">
+			<div class="p1th clearfix">
+				<div class="pathA">
+					<div class="scrollBox">
+						<ul class="img_list clearfix" id="foo1">
+							<li style="background-image:url(images/index-banner/1.jpg)"></li>
+						</ul>
+						<div class="page-wrap w1000 re clearfix">
+							<div class="page-box" id="pager1">
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pathB">
+					<div class="w1000 re">
+						<ul>
+							<li class="join-0">
+								<a href="#"></a>
+							</li>
+							<li class="join-1">
+								<a href="#"></a>
+							</li>
+							<li class="join-2">
+								<a href="#"></a>
+							</li>
+							<li class="join-3">
+								<a href="#"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="w1000">
+				<div class="p2th clearfix">
+					<div class="left fldi font_wryh">
+						<div class="pathA fldi">
+							<div class="com-item">大赛介绍</div>
+							<p class="des f16 pb20">
+								大赛全面征集体现广州市内城市<br />
+								发展、生态花卉和岭南文化3大主<br />
+								题的摄影作品。<br />
+								<span class="f20 fb">更能赢取丰厚奖金，</span><br />
+								快来踊跃报名吧！
+							</p>
+						</div>
+						<div class="pathB fldi">
+							<div class="com-item">大赛流程</div>
+							<div class="list f16">
+								<ul>
+									<li class="clearfix">
+										<span class="txt">选择上传主题</span>
+									</li>
+									<li class="clearfix">
+										<span class="txt">上传参赛作品</span>
+									</li>
+									<li class="clearfix">
+										<span class="txt">接受网友投票</span>
+									</li>
+									<li class="clearfix">
+										<span class="txt">赢取大奖</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right frdi">
+						<div class="com-item font_wryh">奖品设置</div>
+						<div class="path2-list">
+							<div class="scrollBox list1">
+								<ul class="img_list clearfix" id="foo2">
+									<li>
+										<img src="images/jp-img/xj/1.jpg"></li>
+									<li>
+										<img src="images/jp-img/xj/2.jpg"></li>
+									<li>
+										<img src="images/jp-img/xj/3.jpg"></li>
+									<li>
+										<img src="images/jp-img/xj/4.jpg"></li>
+								</ul>
+								<div class="page-wrap clearfix">
+									<a href="#" class="pre fl" id="prev2"></a>
+									<div class="page-box fl" id="pager2">
+										<a href="#"></a>
+										<a href="#"></a>
+										<a href="#"></a>
+										<a href="#"></a>
+									</div>
+									<a href="#" class="next fl" id="next2"></a>
+								</div>
+							</div>
+							<div class="scrollBox list2">
+								<ul class="img_list clearfix" id="foo3">
+									<li>
+										<img src="images/jp-img/sj/1.jpg"></li>
+									<li>
+										<img src="images/jp-img/sj/2.jpg"></li>
+									<li>
+										<img src="images/jp-img/sj/3.jpg"></li>
+									<li>
+										<img src="images/jp-img/sj/4.jpg"></li>
+								</ul>
+								<div class="page-wrap clearfix">
+									<a href="#" class="pre fl" id="prev3"></a>
+									<div class="page-box fl" id="pager3">
+										<a href="#"></a>
+										<a href="#"></a>
+										<a href="#"></a>
+										<a href="#"></a>
+									</div>
+									<a href="#" class="next fl" id="next3"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p3th">
+				<div class="com-item">
+					<div class="code-item">
+						<img src="images/code-img.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="p4th w1000 font_wryh">
+				<div class="com-item">
+					三大摄影主题
+					<p class="tips">
+						仅限相机类器材所拍摄的单图作品参赛
+					</p>
+				</div>
+				<div class="more-wrap clearfix">
+					<ul>
+						<li class="item-1">
+							<a href="#"></a>
+						</li>
+						<li class="item-2">
+							<a href="#"></a>
+						</li>
+						<li class="item-3">
+							<a href="#"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="p5th font_wryh">
+				<div class="w1000">
+					<div class="com-item">美图欣赏
+						<p class="tips"><a href="#" class="more f14 mt10">查看更多作品&gt;&gt;</a></p>
+					</div>
+					<div class="img-list">
+						<div class="item item-1">
+							<h4 class="title"></h4>
+							<div class="img-ilist clearfix">
+								<ul>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/rw/320x320-1.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/rw/320x320-2.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/rw/320x160-1.jpg" />
+											<img src="images/indexshow-img/rw/320x160-2.jpg" />
+										</div>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="mod-link"></a>
+						</div>
+						<div class="item item-2">
+							<h4 class="title"></h4>
+							<div class="img-ilist clearfix">
+								<ul>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/st/320x320-1.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/st/320x160-1.jpg" />
+										</div>
+										<div class="li-warp li-160">
+											<img src="images/indexshow-img/st/160x160-1.jpg" />
+											<img src="images/indexshow-img/st/160x160-2.jpg" />
+										</div>
+									</li>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/st/320x320-2.jpg" />
+										</div>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="mod-link"></a>
+						</div>
+						<div class="item item-3 clearfix">
+							<h4 class="title"></h4>
+							<div class="img-ilist clearfix">
+								<ul>
+									<li>
+										<div class="li-warp">
+											<img src="images/indexshow-img/fj/320x320-1.jpg" />
+										</div>
+									</li>
+									<li class="li-2row">
+										<div class="li-warp">
+											<img src="images/indexshow-img/fj/480x160-1.jpg" />
+											<img src="images/indexshow-img/fj/160x160-1.jpg" />
+											<img src="images/indexshow-img/fj/320x160-1.jpg" />
+											<img src="images/indexshow-img/fj/320x160-2.jpg" />
+										</div>
+									</li>
+								</ul>
+							</div>
+							<a href="#" class="mod-link"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fade"></div>
+			<div class="quarter-final-pop font_wryh">
+				
+				<div class="item-wrap">
+					<div class="item-1"><img src="images/st-img-1.png" /></div>
+					<div class="item-2 tc">
+						<p class="box-1">你的投票，将会决定最后入围名单</p>
+						<p class="box-2">快来支持你的心水之作吧~</p>
+					</div>
+					<div class="item-3 tc">
+						<a href="#" class="quarter-final-btn"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+	<script type="text/javascript">
+					//	Scrolled by user interaction
+					$('#foo1').carouFredSel({
+						pagination: "#pager1",
+						auto: true,
+						responsive: true,
+							items	: 1,
+							scroll: {
+								fx: "crossfade"
+							}
+					});
+					//	Scrolled by user interaction
+					$('#foo2').carouFredSel({
+						prev: '#prev2',
+						next: '#next2',
+						pagination: "#pager2",
+						auto: true
+					});
+					//	Scrolled by user interaction
+					$('#foo3').carouFredSel({
+						prev: '#prev3',
+						next: '#next3',
+						pagination: "#pager3",
+						auto: true
+					});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?php
+/**
+* @Desc:     商品详情      
+* @User:     wlq<wulq@yueus.com>
+* @Date:     2016年10月11日
+* @Time:     上午9:35:24
+* @Version:  
+*/
+include_once('common.inc.php');
+$goods_class = POCO::singleton('pai_paizhao_goods_class');
+// $goods_info = $goods_class->get_goods_info(2150627);
+// var_dump(unserialize($goods_info['goods_info']['prices_list']));
+var_dump($goods_class->add_consult_num(66, 'add_num', 5));

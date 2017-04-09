@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+.page-container {
+  background-color: #fff;
+}
+
+.page-container .date-container {
+  background-color: #fff;
+}
+
+.page-container .date-container .date-nav {
+  display: -webkit-flex;
+  display: flex;
+  height: 0.45rem;
+  line-height: 0.45rem;
+}
+
+.page-container .date-container .date-nav .nav-icon {
+  width: 20%;
+  text-align: center;
+}
+
+.page-container .date-container .date-nav .nav-text {
+  width: 60%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.page-container .date-container .content-main {
+  width: 100%;
+}
+
+.page-container .date-container .content-main ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-container .date-container .content-main .weekdays {
+  padding: 0.15rem 0 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.page-container .date-container .content-main .weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+}
+
+.page-container .date-container .content-main .days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.page-container .date-container .content-main .days .other-month {
+  display: none;
+}
+
+.page-container .date-container .content-main .days li {
+  display: inline-block;
+  width: 14.2%;
+  text-align: center;
+  padding-bottom: 0.15rem;
+  padding-top: 0.15rem;
+  color: #ffc430;
+  font-size: 0.16rem;
+}
+
+.page-container .date-container .content-main .days li .active-little {
+  border-radius: 50%;
+  background-color: #ffc430;
+  color: #fff;
+  padding: 0.06rem 0.11rem;
+}
+
+.page-container .date-container .content-main .days li .active-big {
+  border-radius: 50%;
+  background-color: #ffc430;
+  color: #fff;
+  padding: 0.05rem 0.07rem 0.05rem 0.05rem;
+}
+
+.page-container .date-container .content-main .days li .full {
+  color: #ccc;
+}
+
+.page-container .date-container .date-detail-list .detail-list-title {
+  padding: 0.15rem 0.15rem 0 0.15rem;
+}
+
+.page-container .date-container .date-detail-list .detail-list {
+  padding-left: 0.23rem;
+  padding-right: 0.13rem;
+  padding-bottom: 0.5rem;
+}
+
+.page-container .date-container .date-detail-list .detail-list .detail-list-item {
+  float: left;
+  margin-right: 0.08rem;
+  text-align: center;
+  height: 0.28rem;
+  line-height: 0.28rem;
+  width: 0.74rem;
+  border: 1px solid #ccc;
+  border-radius: 0.16rem;
+  margin-top: 0.1rem;
+}
+
+.page-container .date-container .date-detail-list .detail-list .detail-list-item-cur {
+  border: 0.01rem solid #FFC430;
+  color: #FFC430;
+}
+
+/*重写弹框按钮样式*/
+
+/*
+.mint-msgbox-confirm:active {
+  background-color: #fff;
+  color: #46AFFF;
+}
+.mint-msgbox-confirm:hover {
+  background-color: #fff;
+  color: #46AFFF;
+}*/

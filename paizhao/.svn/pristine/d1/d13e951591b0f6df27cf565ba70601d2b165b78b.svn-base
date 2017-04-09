@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://51snap.yueus.com//static/pc/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	
+	
+
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/ui/no-use/no-use.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/common/main.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/ui/ui-color.css">
+<!-- 当前页css  -->
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/pc/style/ui/ui-page.css">
+<script type="text/javascript" >
+<<<<<<< .mine
+<<<<<<< .mine
+<<<<<<< .mine
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.c132acb.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/layer/layer": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/main": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/ua/index": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "pkg": "pc-huipai:p0"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.59702b5.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.f42e9f2.js"
+        }
+    },
+    "pkg": {
+        "pc-huipai:p0": {
+            "url": "http://51snap.yueus.com//static/pc/js/common.e2b33a8.js"
+        }
+    }
+});
+=======
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/placeholder/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/placeholder/index.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+=======
+require.resourceMap({"res":{"pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto":{"url":"http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.c132acb.js"},"pc-huipai:global/cookie/index":{"pkg":"pc-huipai:p0"},"pc-huipai:global/layer/extend/layer.ext":{"pkg":"pc-huipai:p0"},"pc-huipai:global/layer/layer":{"pkg":"pc-huipai:p0"},"pc-huipai:global/lazyload/lazyload":{"deps":["pc-huipai:global/utility/index"],"pkg":"pc-huipai:p0"},"pc-huipai:global/list/list":{"deps":["pc-huipai:global/utility/index","pc-huipai:global/lazyload/lazyload"],"pkg":"pc-huipai:p0"},"pc-huipai:global/location_sel/location_sel":{"pkg":"pc-huipai:p0"},"pc-huipai:global/main":{"pkg":"pc-huipai:p0"},"pc-huipai:global/placeholder/index":{"pkg":"pc-huipai:p0"},"pc-huipai:global/ua/index":{"pkg":"pc-huipai:p0"},"pc-huipai:global/utility/cross_domain_storage":{"pkg":"pc-huipai:p0"},"pc-huipai:global/utility/index":{"deps":["pc-huipai:global/cookie/index","pc-huipai:global/ua/index"],"pkg":"pc-huipai:p0"},"pc-huipai:go_top":{"url":"http://51snap.yueus.com//static/pc/modules/go_top/go_top.59702b5.js"},"pc-huipai:header_search/index":{"url":"http://51snap.yueus.com//static/pc/modules/header_search/index.472a53a.js"}},"pkg":{"pc-huipai:p0":{"url":"http://51snap.yueus.com//static/pc/js/common.dc7b4a2.js"}}});
+=======
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0-auto": {
+            "url": "http://51snap.yueus.com//static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0-auto.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/location_sel/location_sel.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/placeholder/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/placeholder/index.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:go_top": {
+            "url": "http://51snap.yueus.com//static/pc/modules/go_top/go_top.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://51snap.yueus.com//static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+>>>>>>> .r3835
+>>>>>>> .r3520
+>>>>>>> .r3487
+</script>
+
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">分页 ui-page.scss</h3>
+
+				<!-- 模板start -->
+				<div class="model f14">
+					<p class="f18">分页样式一</p>
+					<br />
+					<div class="page-mod-1 f14">
+						<a href="#" class="color-333">上一页</a>
+						<a href="#" class="color-333">1</a>
+						<a href="#" class="color-333">2</a>
+						<a href="#" class="color-333">下一页</a>
+						<span class="color-999 ml5">共 120 页</span>
+					</div>
+
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+	
+</script>
+</html>
+
+

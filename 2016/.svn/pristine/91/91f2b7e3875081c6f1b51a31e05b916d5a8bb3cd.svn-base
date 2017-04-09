@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>朋友圈转盘</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+<body>
+	<div class="index-page">
+                    <h1 class="logo">
+                        <img src="images/logo-icon-108x94.png" />
+                    </h1>
+		<section class="gameContainer lucky-item">
+			<div class="gameContainerRow">
+				<img class="Disc" src="images/disk.png">
+				<img id="slotMachineButtonFake" class="Needle" data-tj="tj-luckly-one" src="images/start.png"></div>
+			<div class="slotMachineTimes">
+				<p id="todayTimes"></p>
+			</div>
+		</section>
+		<section class="gif-tips">
+			奖品剩余
+			<span class="num">1000</span>
+			份
+		</section>
+                    <div class="download-link" style="display: none">
+                        <a href="#">下载美人相机兑奖 &gt;&gt;</a>
+                    </div>
+		<section class="btn-item clearfix">
+			<a href="#">
+				<img src="images/download-btn-375x73.png" />
+			</a>
+			<a href="http://www.adnonstop.com">
+				<img src="images/list-btn-375x73.png" />
+			</a>
+		</section>
+		<section class="gz-item">
+			<ul>
+				<li class="hd-li"> <em class="num">1</em>
+					<span class="txt fb">
+						<span class="l-title">活动时间：</span>
+						2016年5月18日盈利模式大赛期间
+					</span>
+				</li>
+				<li> <em class="num">2</em>
+					<span class="txt">每部手机有且只有1次转盘机会100%中奖</span>
+				</li>
+				<li>
+					<em class="num">3</em>
+					<span class="txt">奖品总量为1000份，抽完即止</span>
+				</li>
+				<li>
+					<em class="num">4</em>
+					<span class="txt">冲印兑换码需进入美人相机内二屏“照片定制”入口，兑换码只能使用1次</span>
+				</li>
+				<li>
+					<em class="num">5</em>
+					<span class="txt">冲印兑换码须在2016年5月20日前使用，过期无效</span>
+				</li>
+				<li>
+					<em class="num">6</em>
+					<span class="txt">苹果商店，安卓应用商店中搜索“美人相机”下载APP，使用兑换码</span>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade" style="display: none"></div>
+	<!-- 29.9元照片冲印 -->
+	<div class="pop-gift" style="display: none">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="gif-item">
+				<dl class="listItem">
+					<dt>
+						获得价值
+						<span class="point">29.9</span>
+						元的
+						<span class="point">照片冲印</span>
+					</dt>
+					<dd>( 照片冲印  LOMO版/通用版)</dd>
+				</dl>
+				<div class="gift-img">
+					<img src="images/gift-item/1.jpg" />
+				</div>
+			</div>
+			<div class="input-warp clearfix">
+				<div class="input-item">
+					<div class="input-bg">
+						<img src="images/input-txt-290x80.png" />
+					</div>
+					<input type="text" class="input-txt" placeholder="请输入手机号" />
+				</div>
+				<a href="#" class="btn">
+					<img src="images/btn-175x80.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 49.9元 时光印 -->
+	<div class="pop-gift" style="display: none">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="gif-item">
+				<dl class="listItem">
+					<dt>
+						获得价值
+						<span class="point">49.9</span>
+						元的
+						<span class="point">照片冲印</span>
+					</dt>
+					<dd>( 时光印 通用版)</dd>
+				</dl>
+				<div class="gift-img">
+					<img src="images/gift-item/2.jpg" />
+				</div>
+			</div>
+			<div class="input-warp clearfix">
+				<div class="input-item">
+					<div class="input-bg">
+						<img src="images/input-txt-290x80.png" />
+					</div>
+					<input type="text" class="input-txt" placeholder="请输入手机号" />
+				</div>
+				<a href="#" class="btn">
+					<img src="images/btn-175x80.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 49.8元萌系照片夹 -->
+	<div class="pop-gift" style="display: none">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="gif-item">
+				<dl class="listItem">
+					<dt>
+						获得价值
+						<span class="point">49.8</span>
+						元的
+						<span class="point">萌系照片夹</span>
+					</dt>
+					<dd>( 萌系小动物照片夹 通用版)</dd>
+				</dl>
+				<div class="gift-img">
+					<img src="images/gift-item/3.jpg" />
+				</div>
+			</div>
+			<div class="input-warp clearfix">
+				<div class="input-item">
+					<div class="input-bg">
+						<img src="images/input-txt-290x80.png" />
+					</div>
+					<input type="text" class="input-txt" placeholder="请输入手机号" />
+				</div>
+				<a href="#" class="btn">
+					<img src="images/btn-175x80.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 79.9元 MINI相册 -->
+	<div class="pop-gift" style="display: none">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="gif-item">
+				<dl class="listItem">
+					<dt>
+						获得价值
+						<span class="point">79.9</span>
+						元的
+						<span class="point">MINI相册</span>
+					</dt>
+					<dd>( MINI相册)</dd>
+				</dl>
+				<div class="gift-img">
+					<img src="images/gift-item/4.jpg" />
+				</div>
+			</div>
+			<div class="input-warp clearfix">
+				<div class="input-item">
+					<div class="input-bg">
+						<img src="images/input-txt-290x80.png" />
+					</div>
+					<input type="text" class="input-txt" placeholder="请输入手机号" />
+				</div>
+				<a href="#" class="btn">
+					<img src="images/btn-175x80.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 169.9元相片树  -->
+	<div class="pop-gift" style="display: none">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="gif-item">
+				<dl class="listItem">
+					<dt>
+						获得价值
+						<span class="point">169.9</span>
+						元的
+						<span class="point">相片树</span>
+					</dt>
+					<dd>( 相片树 定制版)</dd>
+				</dl>
+				<div class="gift-img">
+					<img src="images/gift-item/5.jpg" />
+				</div>
+			</div>
+			<div class="input-warp clearfix">
+				<div class="input-item">
+					<div class="input-bg">
+						<img src="images/input-txt-290x80.png" />
+					</div>
+					<input type="text" class="input-txt" placeholder="请输入手机号" />
+				</div>
+				<a href="#" class="btn">
+					<img src="images/btn-175x80.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 机会用完弹出层  -->
+	<div class="pop-used" style="display:">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="btn-item" style="display:none">
+				<a href="#" class="btn share-btn"> <i class="icon"><img src="images/icon-monkey-88x92.png" /></i> 
+					<span>
+						<img src="images/share-btn-320x91.png" />
+					</span>
+				</a>
+				<a href="#" class="btn list-btn">
+					<img src="images/list-btn-320x91.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 分享弹出层  -->
+	<div class="pop-share" style="display: none">
+		<i class="top-icon">
+			<img src="images/top-icon-64x97.png" />
+		</i>
+		<div class="pop-con">
+			<img src="images/share-img-750x503.png" />
+		</div>
+	</div>
+	<!-- 文字弹出层  -->
+	<div class="pop-txt" style="display: none">
+		<a href="#" class="close">
+			<img src="images/close-img-48x48.png" />
+		</a>
+		<div class="pop-con">
+			<div class="txt-item">
+				奖品兑换码短信通知正朝您的手机飞奔而来，请注意查收。
+			</div>
+			<div class="btn-item">
+				<a href="#" class="btn share-btn"> <i class="icon"><img src="images/icon-monkey-88x92.png" /></i> 
+					<span>
+						<img src="images/share-btn-320x91.png" />
+					</span>
+				</a>
+				<a href="#" class="btn list-btn">
+					<img src="images/list-btn-320x91.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- 弹出层 end -->
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/awardRotate.js"></script>
+	<script type="text/javascript">		
+		var turnplate={
+				prize:[],             //大转盘奖品名称
+				startAngle:0,               //开始角度		         
+				bRotate:false               //false:停止;ture:旋转
+		};
+		$(document).ready(function(){
+			turnplate.prize = ["照片冲印￥299","时光印￥49.9", "萌系照片夹￥49.9",  "MINI相册￥79.9", "相片树￥169.9", "照片冲印￥299", "时光印￥49.9 ", "萌系照片夹￥49.9", "MINI相册￥79.9", "相片树￥169.9"];
+			var rotateTimeOut = function (){
+					$('.Disc').rotate({
+						angle:0,
+						animateTo: 2160,
+						duration:8000,
+						callback:function (){
+							alert('网络超时，请检查您的网络设置！');
+						}
+					});
+			};
+			//旋转转盘 item:奖品位置; txt：提示语;
+			var rotateFn = function (item, txt,callback){
+				var angles = item * (360 / turnplate.prize.length) - (360 / (turnplate.prize.length*2));
+				if(angles<36){
+					angles = 36 - angles; 
+				}else{
+					angles = 360 - angles + 36;
+				}
+				$('.Disc').stopRotate();
+				$('.Disc').rotate({
+					angle:0,
+					animateTo:angles-1800,
+					duration:4000,
+					callback:function (){
+						alert(txt);
+						 turnplate.bRotate = !turnplate.bRotate;
+					}
+				});
+			};
+			//点击指针事件
+			$("#slotMachineButtonFake").click(function(){
+				var item = rnd(1,turnplate.prize.length);
+				rotateFn(item, turnplate.prize[item-1]);
+				console.log(item);	
+			});
+
+		});
+		function rnd(n, m){
+			var random = Math.floor(Math.random()*(m-n+1)+n);
+			return random;
+			 
+		}
+	</script></body>
+</html>

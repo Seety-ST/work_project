@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>问题反馈</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body>
+	<div class="search-page">
+		<div class="mod-search-item clearfix">
+			<input type="text" class="input-text" placeholder="搜索" />
+			<button class="cancle-btn">取消</button>
+		</div>
+		<div class="list">
+			<ul>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+				<li>
+					<a href="#"><span class="point">内存</span>不足</a>
+				</li>
+				<li>
+					<a href="#">照片不能保存，<span class="point">释放</span>空间</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="mod-feedback-btn">
+		<a href="#" class="btn">我要反馈</a>
+	</div>
+</body>
+
+</html>

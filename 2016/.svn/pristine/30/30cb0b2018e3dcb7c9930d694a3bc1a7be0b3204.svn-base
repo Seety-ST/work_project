@@ -1,0 +1,310 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="GBK" >
+	<meta http-equiv="Content-Type" content="text/html;" />
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>必胜客</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+<body class="index-bg">       
+	<section class="index-page">
+
+		<div class="pop-rule-btn"><img src="images/ty-rule.png" /></div>
+
+		<div class="listItem"></div>
+		<i class="yy-icon"></i>
+		<i class="fish-icon-item"></i>
+		<div class="lucky-item">
+			<div id="disk">
+				<img src="images/disk.png" id="disk_rote" style="border: 0px solid red;"></div>
+			<div id="start">
+				<img src="images/start.png" id="startbtn" alt="开始抽奖" >
+				<i class="hand-icon"></i>
+			</div>
+		</div>
+	</section>
+	<!-- 弹出层 -->
+	<div class="fade" style="display:none"></div>
+	<!-- 信息提交成功 -->
+	<div class="mod-pop succeed-pop" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con">
+			<dl class="text-item">
+				<dt>信息提交成功</dt>
+				<dd>稍后工作人员会与你联系</dd>
+			</dl>
+			<div class="code-item">
+				<p class="txt">
+					截屏并保存二维码
+					<br />
+					扫一扫分享朋友圈
+				</p>
+				<p class="code-img">
+					<img src="images/code-img-202x202.png" />
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- 您已参加过活动 -->
+	<div class="mod-pop had-pop" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con">
+			<dl class="text-item">
+				<dt>您已参加过活动</dt>
+			</dl>
+			<div class="code-item">
+				<p class="txt">
+					截屏并保存二维码
+					<br />
+					扫一扫分享朋友圈
+				</p>
+				<p class="code-img">
+					<img src="images/code-img-202x202.png" />
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- 今天的奖品已抽完 -->
+	<div class="mod-pop finish-pop" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con">
+			<dl class="text-item">
+				<dt>
+					今天的奖品已抽完
+					<br />
+					请明天继续</dt>
+			</dl>
+			<div class="code-item">
+				<p class="txt">
+					截屏并保存二维码
+					<br />
+					扫一扫分享朋友圈
+				</p>
+				<p class="code-img">
+					<img src="images/code-img-202x202.png" />
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- 弹出层end -->
+
+
+	<!-- 获奖名单 -->
+	<div class="pop-list" style="display:">
+		<h3 class="title-1">
+			必胜客福利大狂欢 <br />
+			美人相机抽奖互动
+		</h3>
+
+		<div class="content-box">
+			<div class="t"><p>活动时间</p><p>2016年10月08日至2016年10月15日</p></div>
+			<div class="item-wrap-2">
+				<div class="dt">活动方式</div>
+				<div class="item clearfix">
+				   活动期间，通过美人相机APP进入活动主页，点击参与抽奖，即有机会获得美人相机60积分、丝芙兰润唇球或者必胜客会员福利劵。同一手机用户活动期间限获得2次抽奖机会，不可重复获奖。
+				</div> 
+			</div> 
+			<div class="item-wrap">
+				<div class="dt">奖项设置</div>
+				<div class="item clearfix">
+					<div class="lbox fl">1</div>
+					<div class="rbox fl">
+						必胜客会员福利劵1张，共10,000份；
+					</div>
+				</div> 
+
+				<div class="item clearfix">
+					<div class="lbox fl">2</div>
+					<div class="rbox fl">
+						美人相机60积分950份
+					</div>
+				</div> 
+
+				<div class="item clearfix">
+					<div class="lbox fl">3</div>
+					<div class="rbox fl">
+						丝芙兰润唇球50份
+					</div>
+				</div> 
+				
+			</div>   
+
+
+			<div class="item-wrap-2">
+				<div class="dt">领奖须知</div>
+				<div class="item clearfix">
+				   <span class="kg"></span>虚拟奖品的领取：主办方将根据中奖用户填写的手机号码，积分和优惠券会通过系统自动发放到用户的美人相机账号和必胜客账号中。优惠券使用规则详见券面说明。
+				   <br />
+				   <span class="kg"></span>实物奖品的领取：主办方将根据中奖用户填写的手机号码，在活动结束后1个月内，联系中奖用户，请届时留意并在规定的时间内回复我们您的真实姓名、身份证复印件或扫描件及邮寄地址，未能按时完整回复者，奖项自动作废。奖品将于确认领奖事宜的1个月内通过快递寄出；确认领奖事宜后1个月内，如未向主办方声明奖品获得情况，则视为奖品已获得，奖品逾期不补；奖品个人所得税由主办方代扣代缴。
+				   <br />
+				   <span class="kg"></span>如因中奖者提供个人信息不全或有误（包括真实姓名、身份证号码、邮寄地址、邮政编码及联系电话等），导致奖品无法递送，主办方不为此承担任何责任。
+				   <br />
+				   <span class="kg"></span>本活动奖项采用第三方程序随机即时抽取，一经确认不得更换或折换现金，奖品规格外观以实物为准。
+				</div> 
+			</div>   
+
+			<div class="item-wrap">
+				<div class="dt">其它</div>
+				<div class="item clearfix">
+					<div class="lbox fl">1</div>
+					<div class="rbox fl">
+					   本次活动的主办方为百胜餐饮集团中国事业部必胜客品牌（统一简称“主办方”）。
+					</div>
+				</div> 
+
+				<div class="item clearfix">
+					<div class="lbox fl">2</div>
+					<div class="rbox fl">
+						主办方及其广告公司、网络合作伙伴的员工不可参加此次活动，以示公允。
+					</div>
+				</div> 
+
+				<div class="item clearfix">
+					<div class="lbox fl">3</div>
+					<div class="rbox fl">
+						对于任何通过不正当手段参加活动者，主办方有权在不事先通知的前提下取消其参加活动及获奖资格。
+					</div>
+				</div> 
+
+				<div class="item clearfix">
+					<div class="lbox fl">4</div>
+					<div class="rbox fl">
+						主办方不对因网络传输原因而导致参加者提交的信息错误承担任何责任。
+					</div>
+				</div> 
+
+				<div class="item clearfix">
+					<div class="lbox fl">5</div>
+					<div class="rbox fl">
+						如遇不可抗力因素，本活动因故无法进行时，主办方在法律允许的范围内有权决定取消、终止、修改或暂停本活动。
+					</div>
+				</div>
+				
+			</div>  
+
+
+
+		</div>
+
+
+		<div class="close">确定</div>
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/awardRotate.js"></script>
+	<script type="text/javascript">     
+		var turnplate={
+				prize:[],             //大转盘奖品名称
+				startAngle:0,               //开始角度               
+				bRotate:false               //false:停止;ture:旋转
+		};
+		$(document).ready(function(){
+			turnplate.prize = ["谢谢参与","索尼靓咔™KW1", "再玩一次",  "雙妹夜来香袭人香皂", "雙妹雪白晶润面膜", "谢谢参与", "索尼靓咔™KW1 ", "再玩一次", "雙妹夜来香袭人香皂", "雙妹雪白晶润面膜"];
+			var rotateTimeOut = function (){
+					$('.Disc').rotate({
+						angle:0,
+						animateTo: 2160,
+						duration:8000,
+						callback:function (){
+							alert('网络超时，请检查您的网络设置！');
+						}
+					});
+			};
+			//旋转转盘 item:奖品位置; txt：提示语;
+			var rotateFn = function (item, txt,callback){
+				var angles = item * (360 / turnplate.prize.length) - (360 / (turnplate.prize.length*2));
+				if(angles<36){
+					angles = 36 - angles; 
+				}else{
+					angles = 360 - angles + 36;
+				}
+				$('.Disc').stopRotate();
+				$('.Disc').rotate({
+					angle:0,
+					animateTo:angles-1800,
+					duration:4000,
+					callback:function (){
+						callback();
+					}
+				});
+			};
+			//点击指针事件
+			$("#slotMachineButtonFake").click(function(){
+				var item = rnd(1,turnplate.prize.length);
+				rotateFn(item, turnplate.prize[item-1]);
+				switch (item) {
+							case 1:
+							rotateFn(36, turnplate.prize[0],function(){
+							});
+								break;
+							case 2:
+								rotateFn(72, turnplate.prize[1],function(){
+								});
+								break;
+							case 3:
+							rotateFn(108, turnplate.prize[2],function(){
+							});
+							break;
+							case 4:
+							rotateFn(144, turnplate.prize[3],function(){
+							});
+							break;
+							case 5:
+							rotateFn(180, turnplate.prize[4],function(){
+							});
+							break;
+							case 6:
+							rotateFn(216, turnplate.prize[5],function(){
+							});
+							break;
+							case 7:
+							rotateFn(252, turnplate.prize[6],function(){
+							});
+							break;
+							case 8:
+							rotateFn(288, turnplate.prize[7],function(){
+							});
+							break;
+							case 9:
+							rotateFn(324, turnplate.prize[8],function(){
+							});
+							break;
+							case 10:
+							rotateFn(360, turnplate.prize[9],function(){
+	
+							});
+							break;
+						}
+						console.log(item);               
+			});
+		});
+		function rnd(n, m){
+			var random = Math.floor(Math.random()*(m-n+1)+n);
+			return random;
+			 
+		}
+		
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>搜索页</title>
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/search/search-page.scss" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+<!-- 头部内容 -->
+    {%$pc_global_top_bar%}
+    <!-- 页面内容 -->
+        <div class="content-wrap w1200">
+            <div class="select-nav">
+                <div class="dib select-nav-text fl">首页</div>
+                <div class="dib r-arrow  select-nav-text fl">&gt;</div>
+                <div class="dib select-nav-text fl">全部</div>
+                <div class="dib r-arrow select-nav-text fl">&gt;</div>
+
+                <div class="main-type dib fl">
+                    <div class="main-type-list">
+                        <div class="main-select-disable dib">摄影机构</div>
+                        <div class="main-select-able dib">全部</div>
+                        <div class="main-select-able dib">独立摄影师</div>
+                    </div>
+                    <div class="main-type-sel select-nav-tab select-nav-tab-hover dib fl">
+                        <span class="tab-name f12 fl">摄影机构</span>
+                        <i class="tab-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="dib r-arrow select-nav-text fl">&gt;</div>
+
+
+
+                <div class="select-nav-tab dib fl">
+                    <span class="tab-name f12 fl">日常写真</span>
+                    <i class="tab-close"></i>
+                </div>
+                <div class="select-nav-tab dib fl">
+                    <span class="tab-name f12 fl">情绪、文艺青年</span>
+                    <i class="tab-close"></i>
+                </div>
+            </div>
+            <div class="select-list clearfix">
+                <div class="select-list-tab border-line">
+                    <div class="tab-title dib fb">
+                        <div class="tab-title-text">套系类型：</div>
+                    </div>
+                    <div class="tab-list dib">
+                        <ul class="list clearfix">
+                            <li>日常写真</li>
+                            <li>日常写真</li>
+                            <li>日常写真</li>
+                            <li>日常写真</li>
+                            <li>日常写真</li>
+                            <li>日常写真</li>
+                        </ul>
+                    </div>
+                    <div class="tab-btn dib clearfix">
+                        <div class="btn-text dib">多选</div>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="select-list-tab border-line">
+                    <div class="tab-title dib fb">
+                        <div class="tab-title-text">风格场景：</div>
+                    </div>
+                    <div class="tab-list dib">
+                        <ul class="list clearfix">
+                            <li>日常写真</li>
+                            <li>复古</li>
+                            <li>日常写真</li>
+                            <li>清新</li>
+                            <li>日常写真</li>
+                            <li>日常写真</li>
+                        </ul>
+                    </div>
+                    <div class="tab-btn dib clearfix">
+                        <div class="btn-text dib">多选</div>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="select-list-tab border-line">
+                    <div class="tab-title dib fb">
+                        <div class="tab-title-text">摄影师类型：</div>
+                    </div>
+                    <div class="tab-list dib">
+                        <ul class="list clearfix">
+                            <li>摄影机构</li>
+                            <li>摄影师独立机构</li>
+                        </ul>
+                    </div>
+                    <div class="tab-btn dib clearfix">
+                        <div class="btn-text dib">多选</div>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="select-list-tab">
+                    <div class="tab-title dib fb">
+                        <div class="tab-title-text">场景风格：</div>
+                    </div>
+                    <div class="tab-list-choose dib">
+                        <ul class="list-choose clearfix">
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                        </ul>
+                        <div class="choose-confirm-btn tc">
+                            <span class="confirm">确定</span>
+                            <span class="cancel ml10">取消</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="sort-nav"></div>
+            <div class="list-wrap"></div>
+
+        </div>
+    <!-- 底部内容 -->
+    {%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->

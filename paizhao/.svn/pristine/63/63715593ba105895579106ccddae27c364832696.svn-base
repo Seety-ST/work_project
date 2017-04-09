@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>搜索页</title>
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/search/search-page.css">
+</head>
+<body>
+<!-- 头部内容 -->
+    {%$pc_global_top_bar%}
+    <!-- 页面内容 -->
+        <div class="content-wrap w1200">
+            <div class="select-nav">
+                <div class="dib select-nav-text fl">首页</div>
+                <div class="dib r-arrow  select-nav-text fl">&gt;</div>
+                <div class="dib select-nav-text fl">全部</div>
+                <div class="dib r-arrow select-nav-text fl">&gt;</div>
+
+                <div class="main-type dib fl">
+                    <div class="main-type-list">
+                        <div class="main-select-disable dib">摄影机构</div>
+                        <div class="main-select-able dib">全部</div>
+                        <div class="main-select-able dib">独立摄影师</div>
+                    </div>
+                    <div class="main-type-sel select-nav-tab dib fl">
+                        <span class="tab-name f12 fl">摄影机构</span>
+                        <i class="tab-arrow"></i>
+                    </div>
+                </div>
+
+                <div class="dib r-arrow select-nav-text fl">&gt;</div>
+
+
+
+                <div class="select-nav-tab select-nav-tab-hover dib fl">
+                    <span class="tab-name f12 fl">日常写真</span>
+                    <i class="tab-close"></i>
+                </div>
+                <div class="select-nav-tab select-nav-tab-hover dib fl">
+                    <span class="tab-name f12 fl">情绪、文艺青年</span>
+                    <i class="tab-close"></i>
+                </div>
+            </div>
+            <div class="select-list clearfix">
+                <div class="select-list-tab border-line clearfix">
+                    <div class="tab-title dib fb">
+                        套系类型：
+                    </div>
+                    <div class="tab-list dib">
+                        <ul class="list clearfix">
+                            {%foreach $goods_type_arr as $key => $val%}
+                            <li>{%$val.name%}</li>
+                            {%/foreach%}
+                        </ul>
+                    </div>
+                    <div class="tab-btn dib clearfix">
+                        <div class="btn-text dib">多选</div>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="select-list-tab border-line clearfix">
+                    <div class="tab-title dib fb">
+                        风格场景：
+                    </div>
+                    <div class="tab-list dib">
+                        <ul class="list clearfix">
+                            {%foreach $goods_style_arr as $key => $val%}
+                            <li>{%$val.name%}</li>
+                            {%/foreach%}
+                        </ul>
+                    </div>
+                    <div class="tab-btn dib clearfix">
+                        <div class="btn-text dib">多选</div>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="select-list-tab border-line clearfix">
+                    <div class="tab-title dib fb">
+                        摄影师类型：
+                    </div>
+                    <div class="tab-list dib">
+                        <ul class="list clearfix">
+                            {%foreach $goods_photographers_arr as $key => $val%}
+                            <li>{%$val.name%}</li>
+                            {%/foreach%}
+                        </ul>
+                    </div>
+                    <div class="tab-btn dib clearfix">
+                        <div class="btn-text dib">多选</div>
+                        <i></i>
+                    </div>
+                </div>
+                <div class="select-list-tab clearfix">
+                    <div class="tab-title dib fb">
+                        场景风格：
+                    </div>
+                    <div class="tab-list tab-list-choose dib">
+                        <ul class="list-choose clearfix">
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li"><i></i>摄影机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                            <li class="list-li-cur"><i></i>摄影师独立机构</li>
+                        </ul>
+                        <div class="choose-confirm-btn tc">
+                            <span class="confirm">确定</span>
+                            <span class="cancel ml10">取消</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="sort-nav mt20 mb20 clearfix">
+                <ul class="sort-nav-list f14">
+                    {%foreach $sort_arr as $key => $value%}
+                    <li class="nav-list-li {%$value.lid_class%}">
+                        <span>{%$value.name%}</span>
+
+                        {%if $value.key eq "location"%}
+                        <i class="{%$value.sort_arrow_class%}"></i>
+                        <div class="location-li-list">
+                            <!-- 地区选择弹窗开始 -->
+                            <div class="city-select-pop-mod-1">
+                                <div class="city-select-pop-item">
+                                    <i class="ui-triangle ui-triangle-bottom-mid-white"></i>
+                                    <div class="item-wrap">
+                                        <div class="item tc-item clearfix">
+                                            <p class="title color-aaa fldi">同城：</p>
+                                            <ul class="list fldi">
+                                                <li class="color-2bd">{%location_name%}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="item">
+                                            <ul class="list color-aaa clearfix">
+                                                {%foreach $goods_location_array as $k => $v%}
+                                                <li>{%$v.location_name%}</li>
+                                                {%/foreach%}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 地区选择弹窗结束 -->
+                        </div>
+                        {%elseif $value.key eq "no_key"%}
+                        <i class="icon {%$value.sort_arrow_class%}"></i>
+                        {%else%}
+                        {%/if%}
+                    </li>
+                    {%/foreach%}
+
+
+
+
+                    <!--<li class="nav-list-li"><span>综合</span></li>
+                    <li class="nav-list-li"><span>人气</span><i class="icon sort-up-arrow"></i></li>
+                    <li class="nav-list-li"><span>最新</span><i class="icon sort-down-arrow"></i></li>
+                    <li class="nav-list-li"><span>价格</span></li>
+                    <li class="nav-list-li"><span>广州</span><i class="ui-triangle ui-triangle-bottom-mid-gray"></i></li>
+                    <li class="nav-list-li location-li"><span>广州</span><i class="ui-triangle ui-triangle-bottom-mid-gray-up"></i>
+                        <div class="location-li-list">
+                            &lt;!&ndash; 地区选择弹窗开始 &ndash;&gt;
+                            <div class="city-select-pop-mod-1">
+                                <div class="city-select-pop-item">
+                                    <i class="ui-triangle ui-triangle-bottom-mid-white"></i>
+                                    <div class="item-wrap">
+                                        <div class="item tc-item clearfix">
+                                            <p class="title color-aaa fldi">同城：</p>
+                                            <ul class="list fldi">
+                                                <li class="color-2bd">{%location_name%}</li>
+                                            </ul>
+                                        </div>
+                                        <div class="item">
+                                            <ul class="list color-aaa clearfix">
+                                                {%foreach $goods_location_array as $key => $value%}
+                                                <li>{%$value.location_name%}</li>
+                                                {%/foreach%}
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            &lt;!&ndash; 地区选择弹窗结束 &ndash;&gt;
+                        </div>
+                    </li>-->
+                </ul>
+
+
+
+            </div>
+            <div class="list-wrap"></div>
+
+        </div>
+    <!-- 底部内容 -->
+    {%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->

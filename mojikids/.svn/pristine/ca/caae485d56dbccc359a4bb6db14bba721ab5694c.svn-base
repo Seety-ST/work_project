@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{%$wap_global_head%}
+		<link href="http://mojikids.yueus.com/static/wap/style/about/store-info.css" type="text/css" rel="stylesheet" />
+	
+    
+</head>
+	<body>
+		<div class="store-info-page" >
+			<div class="p1th">
+				<div class="item-wrap">
+					<div class="img-item">
+						<i class="img"></i>
+					</div>
+				</div>
+			</div>
+			<div class="p2th">
+				<div class="item-wrap">
+					<div class="ui-edit-user-info-mod ui-border-b">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl clearfix">
+									<i class="yue-ui-icon-size-16 store-icon fldi tips-icon"></i>
+									<p class="tips color-666 f14 fldi">MOJIKIDS 天河北路店</p>
+								</div>
+								<div class="rbox fr">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-edit-user-info-mod ui-border-b">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl clearfix">
+									<i class="yue-ui-icon-size-16 store-icon fldi tips-icon"></i>
+									<p class="tips color-666 f14 fldi">MOJIKIDS 天河北路店</p>
+								</div>
+								<div class="rbox fr">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui-edit-user-info-mod ui-border-b">
+						<div class="item item-border-bottom-1">
+							<div class="user-info-item clearfix">
+								<div class="lbox fl clearfix">
+									<i class="yue-ui-icon-size-16 store-icon fldi tips-icon"></i>
+									<p class="tips color-666 f14 fldi">MOJIKIDS 天河北路店</p>
+								</div>
+								<div class="rbox fr">
+									<i class="icon-allow-grey"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="p3th">
+				<div class="item-wrap">
+					<dl>
+						<dt class="color-333 f14">
+							交通线路：
+						</dt>
+						<dd class="f14 color-666">
+							位于天河北路、五山路交界处，五山路口公交车站，地铁3号线、11号线（规划中）华师站交汇处
+						</dd>
+					</dl>
+					<dl>
+						<dt class="color-333 f14">
+							交通线路：
+						</dt>
+						<dd class="f14 color-666">
+							位于天河北路、五山路交界处，五山路口公交车站，地铁3号线、11号线（规划中）华师站交汇处
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		
+	
+
+</body>
+	
+</html>
+{%$wap_global_footer%}
+
+
+
+
+<script>
+ 	(function() {
+	 	
+
+	 	
+	 })();
+</script>

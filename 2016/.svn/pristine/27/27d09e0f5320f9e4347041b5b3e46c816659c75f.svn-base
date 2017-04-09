@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="GBK" >
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>玩转女神季</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script src="js/zepto.js"  type="text/javascript" ></script>
+</head>
+
+<body class="play-beauty-page-index">
+
+	<div class="play-beauty-page">
+		<div class="img-title-item animated">
+			<img src="images/img-title-362x344.png" />
+		</div>
+		<div class="item-wrap">
+			<div class="item lbox animated">
+				<div class="text-con clearfix">
+					<div class="img fr">
+						<img src="images/img-girl-66x213.png" />
+					</div>
+					
+				</div>
+				<div class="btn-con">
+					<a href="javascript:;" class="girl-btn" data-role="door-btn">
+						<img src="images/girl-btn-244x61.png" />	
+					</a>
+				</div>
+			</div>
+			<div class="item rbox animated">
+				<div class="text-con">
+					<img src="images/img-boy-25x213.png" />
+				</div>
+				<div class="btn-con">
+					<a href="javascript:;" class="boy-btn" data-role="door-btn">
+						<img src="images/boy-btn-244x61.png" />	
+						
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script>
+	$('[data-role="door-btn"]').on("click",function(){
+		$(".play-beauty-page .lbox").addClass('fadeoutLeft');
+		$(".play-beauty-page .rbox").addClass('fadeoutRight');
+		$(".play-beauty-page .img-title-item").addClass('fadeoutBottom');
+		$(".play-beauty-page-index").removeClass('play-beauty-page-index');
+
+	});
+</script>
+</html>

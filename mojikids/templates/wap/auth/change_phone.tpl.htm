@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        更换手机号
+    </title>
+    <!-- {%$wap_global_head%} -->
+
+    
+</head>
+<body class="cor-bg-fff">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/main.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.css">
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/ui/no-use/yue-ui-not.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://mojikids.yueus.com/static/wap/lib/base.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<link charset="utf-8" rel="stylesheet" href="http://mojikids.yueus.com/static/wap/style/auth/change_phone.css">
+<main role="main">
+
+    <div id="page-container" class="page-container">
+
+        <div class="change-phone">
+            <div class="p1th">
+                <div class="wbox ">
+                    <div class="lbox  cur">
+                        <div class="icon icon-1"></div>
+                        <p class="p1">验证身份</p>
+                    </div>
+                    <div class="rbox ">
+                        <div class="icon icon-2"></div>
+                        <p class="p1">绑定新号码</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="p2th">
+                <div class="item-wrap">
+                    <div class="item ui-border-b">
+                        <div class="f16 main-color numer">52s</div>
+                        <input type="text" name=" " id=" " placeholder="请输入手机号码" class="input-text">
+                    </div> 
+
+                    <div class="item ui-border-b">
+                       <input type="text" name=" " id=" " placeholder="请输入验证码" class="input-text">
+                    </div> 
+                    
+                </div>     
+            </div>
+
+            <div class="btn">
+                <button disabled="disabled" class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l"><span class="ui-button-content f16">确定</span></button>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+</main>
+
+</body>
+
+</html>
+
+
+
+
+<!-- {%$wap_global_footer%} -->
+
+<script src="http://mojikids.yueus.com/templates/wap/ui/head.js" charset="utf-8"></script>
+
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+        // 加载util
+        var Util = require.syncLoad('wap-kids:global/util/index');
+
+        new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return{
+
+                }
+            },
+            methods:
+            {
+
+            }
+        });
+
+    })();
+</script>
+
+<!-- {%$wap_global_tj%} -->

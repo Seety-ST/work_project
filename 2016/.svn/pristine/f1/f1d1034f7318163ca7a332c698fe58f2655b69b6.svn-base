@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>美人相机积分</title>
+    <link href="css/beauty-point.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript">
+        window.addEventListener( "load", function() {
+            FastClick.attach( document.body );
+        }, false );
+    </script>
+    <body class="bg-fff">
+        <section class="experience-page">
+            <div class="banner-item">
+                <img src="images/test/750x450.jpg" />
+            </div>
+            <div class="con-wrap">
+                <div class="listItem">体验云相册</div>
+                <div class="item-list">
+                    <div class="item">
+                        <h3 class="title">
+                            <span class="area">任务详情</span>
+                        </h3>
+                        <div class="text-item">
+                            <p>进入云相册，上传一张照片即可获得奖励积分。如果采用“在线支付”方式完成订单，首次上传10张照片即可获取200积分奖励。</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <h3 class="title">
+                            <span class="area">奖励积分</span>
+                            <span class="tips-item">
+                                <i class="icon points-icon"></i>
+                                <span class="points-item">+<em class="num">3</em></span>
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="mod-btn-item">
+                    <a href="#" class="now-btn" style="display:">立即体验</a>
+                    <a href="#" class="now-btn finish-btn" style="display:none">已安装</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

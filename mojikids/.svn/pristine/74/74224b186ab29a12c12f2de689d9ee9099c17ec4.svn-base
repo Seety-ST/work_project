@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    (function()
+    {
+        setTimeout(function()
+        {
+            var _vcloaks = document.querySelectorAll('[v-cloak]');
+            if(_vcloaks.length>0)
+            {
+                alert('页面状态异常，请返回或刷新页面');
+            }
+        },30000);
+
+    })();
+</script>
+
+<!-- <script type="text/javascript">__poco_site_stat_request_filename = 'yueus.css';</script>
+<script type="text/javascript" src="//static-c1.yueus.com/js/site_stat_code.min.js"></script> -->

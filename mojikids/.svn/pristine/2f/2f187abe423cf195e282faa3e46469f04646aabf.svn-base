@@ -1,0 +1,1 @@
+.moji-area{width:100%}.moji-area .picker-slot-wrapper,.moji-area .picker-item{-webkit-backface-visibility:hidden;backface-visibility:hidden}.moji-area .picker-toolbar{border-bottom:solid .01rem #eaeaea}.moji-area-action{display:inline-block;width:50%;text-align:center;line-height:40px;font-size:16px;color:#26a2ff}.moji-area-cancel{float:left}.moji-area-confirm{float:right}

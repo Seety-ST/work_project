@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>{%$ret.goods_info.goods_data.titles%}-约摄，互联网摄影平台</title>   
+	<meta name="keywords" content="{%$ret.goods_info.new_type_name%}，摄影师，拍照，预约">
+	<meta name="description" content="约摄精选专业摄影师，提供海量优质拍摄服务，{%$ret.goods_info.goods_data.titles%} 正在等你来。"> 
+	{%$wap_global_head%}    
+	<script type="text/javascript" >
+require.resourceMap({"res":{"wap-huipai:global/abnormal/index":{"pkg":"wap-huipai:p0"},"wap-huipai:global/cookie/index":{"pkg":"wap-huipai:p0"},"wap-huipai:global/go_top/go_top":{"pkg":"wap-huipai:p0"},"wap-huipai:global/header/main":{"pkg":"wap-huipai:p0"},"wap-huipai:global/layer/layer":{"pkg":"wap-huipai:p0"},"wap-huipai:global/lazyload/lazyload":{"pkg":"wap-huipai:p0"},"wap-huipai:global/list/list":{"pkg":"wap-huipai:p0"},"wap-huipai:global/location_sel/location_localstorage":{"pkg":"wap-huipai:p0"},"wap-huipai:global/main":{"pkg":"wap-huipai:p0"},"wap-huipai:global/swiper/1.0.0/swiper3.07.min":{"pkg":"wap-huipai:p0"},"wap-huipai:global/ua/index":{"pkg":"wap-huipai:p0"},"wap-huipai:global/utility/cross_domain_storage":{"pkg":"wap-huipai:p0"},"wap-huipai:global/utility/index":{"pkg":"wap-huipai:p0"}},"pkg":{"wap-huipai:p0":{"url":"http://51snap.yueus.com/static/wap/js/common.bec347f.js"}}});
+</script>
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/goods/index-page.3cc88ac.css">
+</head>
+<body class="bg-color-faf">
+<main role="main" class="main-top">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="goods-detail-page">
+		<div class="p1th">
+			<div class="item-wrap">
+				<div class="img-item">
+				
+					<i class="img paizhao-ph-bgimg" data-lazyload-url="{%yueusv2_img_resize img_url=$ret.goods_info.goods_data.images size="640"%}"></i>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 f14">
+						<span class="type-txt">
+							{%$ret.goods_info.new_type_name%}
+						</span>
+						{%$ret.goods_info.goods_data.titles%}
+					</div>
+					<div class="box-2 clearfix">
+						<div class="lbox fldi color-fa6" data-role="select-price">
+							{%$ret.goods_info.goods_data.prices%}
+						</div>
+						<div class="rbox frdi color-aaa">
+							{%$ret.goods_info.consults%} 人咨询
+						</div>
+					</div>
+				</div>
+				<div class="promise-item ui-border-t">
+					<ul class="list clearfix">
+						<li>
+							<i class="dib icon-font i-iconfont-success icon-font-size-16"></i>
+							<span class="txt color-aaa">专业摄影师实名认证</span>
+							
+						</li>
+						<li>
+							<i class="dib icon-font i-iconfont-success icon-font-size-16"></i>
+							<span class="txt color-aaa">摄影顾问全程跟进</span>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="item-wrap">
+				<div class="title-item clearfix" data-role="gg-title-item">
+					<span class="f14 color-333 fldi">规格：</span><span class="color-24c" data-role="select-txt">4小时不含化妆</span>
+					<i class="dib icon-font i-iconfont-allow icon-font-size-16 frdi i-iconfont-allow-rotate"></i>
+				</div>
+				<div class="item" data-role="gg-content">
+					<ul class="list f14 color-666 clearfix">
+						{%foreach $ret.goods_info.goods_prices_list as $val%}
+						<li data-price="{%$val.prices%}"  data-size="{%$val.name%}">
+							{%$val.prices%}/{%$val.name_val%}
+						</li>
+						{%/foreach%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="p3th">
+			<div class="item-wrap">
+				<a href="{%$ret.user_info.link_url%}">
+					<div class="seller-info-item clearfix">
+						<div class="ui-avatar-icon ui-avatar-icon-45 fldi">
+							<i style="background-image:url({%$ret.user_info.avatar%})"></i>
+						</div>
+						<div class="txt-item fldi">
+							<p class="box-1 color-333 f14">{%$ret.user_info.seller_name%}</p>
+							<p class="box-2 color-aaa">
+								已有{%$ret.user_info.consults%}人咨询TA 
+							</p>
+						</div>
+						<i class="dib icon-font i-iconfont-allow icon-font-size-16 frdi"></i>
+					</div>
+				</a>
+
+			</div>
+		</div>
+		<div class="p4th">
+			<div class="item-wrap">
+				<div class="nav-item" data-role="nav-item">
+					<ul class="list f14 color-666">
+						<li class="ui-border-t ui-border-r cur">
+							套系详情
+						</li>
+						<li class="ui-border-t">
+							规格参数
+						</li>
+					</ul>
+				</div>
+				<div class="content" data-role="nav-content">
+					<div class="item detail-item">
+						<div class="top-content">
+							<ul class="list">
+								{%foreach $ret.goods_info.detail_introduce as $val%}
+								<li class="">
+									<div class="lbox f14 color-aaa">
+										{%$val.name%}
+									</div>
+									<div class="rbox color-333 f14">{%$val.value%}</div>
+								</li>
+								
+								{%/foreach%}
+							</ul>
+						</div>
+					</div>
+					<div class="item size-item dn">
+						<div class="top-content">
+							<ul class="list">
+								{%foreach $ret.goods_info.format_introduce as $val%}
+								<li class="">
+									<div class="lbox f14 color-aaa">
+										{%$val.name%}
+									</div>
+									<div class="rbox color-333 f14">{%$val.value%}</div>
+								</li>
+								{%/foreach%}
+							</ul>
+						</div>
+						
+					</div>
+					<div class="bottom-content">
+						{%$ret.goods_info.goods_data.content%}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p5th">
+			<div class="item-wrap">
+				{%if $ret.like_goods_info%}
+				<div class="title-item tc f14 color-666">
+					看过此套系的人还喜欢
+				</div>
+				{%/if%}
+				<div class="wap-list-mod-1">
+					<ul class="list clearfix">
+					
+						{%foreach $ret.like_goods_info as $val%}
+						<a href="{%$val.link_url%}">
+							<li class="pic-list-width-44-percent">
+								<div class="img-item">
+									<i class="img paizhao-ph-bgimg" data-lazyload-url="{%$val.images%}"></i>
+									<div class="txt f12 color-fff">
+										{%$val.consults%}人咨询
+									</div>
+								</div>
+								<div class="txt-item">
+									<div class="box-1 color-666">
+										{%$val.titles%}
+									</div>
+									<div class="box-2 clearfix">
+										<div class="txt-1 fldi color-fa6">
+											{%$val.prices%}
+										</div>
+										<div class="txt-2 frdi color-ccc">
+											{%$val.location_name%}
+											
+										</div>
+									</div>
+								</div>
+							</li>
+						</a>
+						{%/foreach%}
+					</ul>
+				</div>
+				{%if $ret.like_goods_info%}
+				<a href="{%$ret.user_info.link_url%}">
+					<div class="more-item tc ui-border-t">
+						<span class="more-txt f14 color-24c">查看更多</span>
+						<i class="jiantou-icon"></i>
+					</div>
+				</a>
+				{%/if%}
+			</div>
+		</div>
+		
+
+		<div class="consult-item">
+			<a href="javascript:;" class="tdn" data-role="pszx-btn">
+				<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h50">
+				           <span class="ui-button-content f14">拍摄咨询</span>
+				</button>
+			</a>
+		</div>
+	</div>
+
+
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+	var LZ = require.syncLoad('wap-huipai:global/lazyload/lazyload');
+	var header = require.syncLoad('wap-huipai:global/header/main');
+	var utility = require.syncLoad('wap-huipai:global/utility/index');
+	var go_top = require.syncLoad('wap-huipai:global/go_top/go_top');
+	$(document).ready(function() {
+		require.syncLoad('wap-huipai:global/layer/layer');
+		
+		// 渲染头部
+		var header_obj = header.init({
+			ele : $("#global-header"), //头部渲染的节点
+			title:"套系详情",
+			header_show : true , //是否显示头部
+			mt_0_ele : $('#seller-detail-page'), //如果头部隐藏，要把当前页节点margin-top改为0
+			left_icon_show : false,
+			right_icon_show : true, //是否显示右边的按钮
+			share_icon : 
+			{
+				show :false,  //是否显示分享按钮icon
+				content:""
+			},
+			omit_icon :
+			{
+				show :false,  //是否显示三个圆点icon
+				content:""
+			},
+			show_txt :
+			{
+				show :false,  //是否显示文字
+				content:"编辑"  //显示文字内容
+			},
+			search_icon : 
+			{
+				show :false,  //是否搜索icon
+				content:""  //显示文字内容
+			},
+			go_index :
+			{
+				show :true,  //是否搜索icon
+			}
+		});
+
+		// 返回顶部按钮
+		new go_top({
+			render_ele : $('body')
+		});
+
+		 new LZ($('body'),{
+		 	// size : window.innerWidth
+		 });
+		
+
+		
+		
+	    	// 点击选择规格
+	    	$('[data-role="gg-title-item"]').on('click',function(event) {
+	    		
+	    		if ($('[data-role="gg-content"]').hasClass('dn')) 
+	    		{
+	    		    $('[data-role="gg-content"]').removeClass('dn');
+	    		    $(this).find('.i-iconfont-allow').addClass('i-iconfont-allow-rotate');
+
+	    		}
+	    		else{
+	    			$('[data-role="gg-content"]').addClass('dn');
+	    			$(this).find('.i-iconfont-allow').removeClass('i-iconfont-allow-rotate');
+	    			
+	    			
+	    		}
+	    		$('[data-role="gg-content"]').find('.list').removeClass('tips-bg');
+	    	});
+
+
+	    	var size_data ; //套系规格
+	    	$('[data-role="gg-content"]').find('li').on('click',  function(event) {
+	    		$(this).addClass('cur').siblings('li').removeClass('cur');
+	    		var price = $(this).attr('data-price');
+	    		$('[data-role="select-price"]').html('￥'+price);
+	    		size_data = $(this).attr('data-size');
+	    		var select_txt = $(this).html();
+	    		$('[data-role="select-txt"]').html(select_txt);
+	    	});
+		
+	    	// nav内容切换
+	    	$('[data-role="nav-item"]').find('li').on('click',  function(event) {
+	    		var index = $(this).index();
+	    		$(this).addClass('cur').siblings('li').removeClass('cur');
+	    		$('[data-role="nav-content"]').find('.item').eq(index).removeClass('dn').siblings('.item').addClass('dn');
+	    	});
+
+
+	    	var gg_title_item_offsettop = $('[data-role="gg-title-item"]').offset().top;
+
+	    	var pai_s_xc_back ; 
+	    	// 拍照咨询按钮点击
+	    	$('[data-role="pszx-btn"]').on('click',  function(event) {
+	    		// 统计
+	    		utility.ajax_request
+	    		({
+	    			url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'goods/statis_num.php',
+	    			data: 
+	    			{
+	    				goods_id : '{%$ret.goods_info.goods_data.goods_id%}' ,
+	    				user_id : '{%$ret.goods_info.goods_data.user_id%}' ,
+	    				consult_type : 'goods',
+	    				source : 'WAP'
+
+	    			},
+	    			dataType: 'json',
+	    			type: 'POST',
+	    			cache: false,
+	    			beforeSend: function() 
+	    			{
+
+	    			},
+	    			success: function(data)
+	    			{
+	    			  console.log(data);
+	    			  if (data.result_data.result == 1) 
+	    			  {
+	    				  pai_s_xc_back = data.result_data.consult_cookie;
+	    			  }
+	    			},   
+	    			error: function() 
+	    			{
+
+	    			},    
+	    			complete: function() 
+	    			{
+
+	    			} 
+	    		});
+	    		if (!size_data) 
+	    		{
+	    			layer.open({
+	    			    content: '请选择套系规格'
+	    			    ,skin: 'msg'
+	    			    ,time: 2 //2秒后自动关闭
+	    			  });
+	    			$('body').scrollTop(gg_title_item_offsettop-50);
+	    			$('[data-role="gg-content"]').find('.list').addClass('tips-bg');
+	    			return ;
+	    		}
+	    	
+
+	    		var layer1 = layer.open({
+	    			content:'<div class="pop-contact-mod"><i class="close-btn" data-role="close-pop-btn"></i><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text f14" placeholder="您的称呼" /><input type="tel" name=" " id="tel" class="input-text f14"  placeholder="留下您的电话，方便联系" /></div><a href="javascript:;" class="tdn" data-role="post-contact"><button class="ui-button ui-button-bg-24c ui-button-block ui-button-border-24c ui-button-100per  ui-button-size-h45"><span class="ui-button-content f14">马上提交</span></button></a><a href="//www.51snap.cn/succeed/sygw.php" class="tdn"><button class="ui-button ui-button-border-24c ui-button-block ui-button-100per  ui-button-size-h45"><span class="ui-button-content f14">我想添加摄影顾问微信</span></button></a><div class="num-box color-999">已有 <span class="num color-2bd"> 23 </span> 人咨询TA</div></div>',
+	    			skin : 'pai_zhao_goods_class'
+
+	    		});
+	    		$('[data-role="close-pop-btn"]').on('click',  function(event) {
+	    			layer.close(layer1);
+	    		});
+
+	    		// 
+	    		$('[data-role="post-contact"]').on('click', function(event) {
+
+	    			var user_name = $.trim($('#user_name').val())
+	    			var tel = $.trim($('#tel').val())
+	    			if (!user_name) 
+	    			{
+	    				alert('请输入您的称呼');
+	    				return ;
+
+	    			}
+	    			if (!tel) 
+	    			{
+	    				alert('请输入您的电话号码');
+	    				return ;
+	    			}
+
+	    			var phone_len = /^\d{11}$/;
+	    			if(!phone_len.exec( parseInt(tel)))
+	    			{ 
+	    				alert('请输入正确手机号码');
+	    				return ;
+	    			}
+
+	    			utility.ajax_request
+	    			({
+	    				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'goods/contact.php',
+	    				data: 
+	    				{
+	    					name : user_name,
+	    					mobile : tel ,
+	    					goods_id : '{%$ret.goods_info.goods_data.goods_id%}' ,
+	    					package_info  : size_data ,
+	    					user_id : '{%$ret.goods_info.goods_data.user_id%}' ,
+	    					consult_type : 'goods',
+	    					package_type : '{%$ret.goods_info.goods_data.titles%}',
+	    					consult_cookie : pai_s_xc_back,
+	    					source : 'WAP'
+
+	    				},
+	    				dataType: 'json',
+	    				type: 'POST',
+	    				cache: false,
+	    				beforeSend: function() 
+	    				{
+
+	    				},
+	    				success: function(data)
+	    				{
+	    					console.log(data);
+	    					window.location.href = "//www.51snap.cn/succeed/?res="+data.result_data.result;
+	    					
+	    				},   
+	    				error: function() 
+	    				{
+
+	    				},    
+	    				complete: function() 
+	    				{
+
+	    				} 
+	    			});
+
+	    		});
+	    	
+	    	});
+		
+		
+
+		{%if $is_weixin%}
+		window.__ShareTimelin = 
+		{
+		    title: '{%$ret.goods_info.goods_data.titles%}', // 分享标题
+		    link: '', // 分享链接
+		    imgUrl: '{%$ret.goods_info.goods_data.images%}', // 分享图标
+		    success: function () { 
+		        // 用户确认分享后执行的回调函数
+		    },
+		    cancel: function () { 
+		        // 用户取消分享后执行的回调函数
+		    }
+		}
+		window.__ShareAppMessag = {
+		    title: '{%$ret.goods_info.goods_data.titles%}', // 分享标题
+		    desc: '我发现了很不错的摄影套系！快接住我的安利，前往约摄定制你的美好记忆。', // 分享描述
+		    link: '', // 分享链接
+		    imgUrl: '{%$ret.goods_info.goods_data.images%}', // 分享图标
+		    type: '', // 分享类型,music、video或link，不填默认为link
+		    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+		    success: function () { 
+		        // 用户确认分享后执行的回调函数
+		    },
+		    cancel: function () { 
+		        // 用户取消分享后执行的回调函数
+		    }
+		};
+
+		wx.ready(function()
+		{
+		    wx.onMenuShareTimeline(window.__ShareTimelin);//朋友圈
+		    wx.onMenuShareAppMessage(window.__ShareAppMessag);//微信好友
+		    wx.onMenuShareQQ(window.__ShareAppMessag); //qq好友
+		});
+		{%/if%}
+	 
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>
+
+
+
+
+
+

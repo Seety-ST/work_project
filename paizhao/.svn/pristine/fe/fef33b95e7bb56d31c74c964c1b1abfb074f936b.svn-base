@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄创意个性摄影师-{%$photographers_info.un_data.name%}，{%$photographers_info.un_data.name%}拍摄服务</title>   
+	<meta name="keywords" content="认证摄影师，摄影套系，预约摄影师，拍摄服务">
+	<meta name="description" content="预约{%$photographers_info.un_data.name%}，满足您喜欢的各种摄影风格，清新，浪漫，时尚摩登，文艺青年，复古情怀，性感私房，日系，校园..."> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	
+	<link href="../../style/camera/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body bgcolor="#fafafa">
+
+<main role="main">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="camera-page">
+		<div class="p1th">
+			<div class="item-wrap">
+				<div class="img-item">
+					<i class="img" style="background-image:url({%$photographers_info.un_data.cover%})">
+						
+					</i>
+					<div class="txt clearfix">
+						<div class="box-1 clearfix">
+							<div class="lbox fldi">
+								<div class="ui-avatar-icon ui-avatar-icon-60">
+									<i style="background-image:url({%$photographers_info.un_data.avatar%})"></i>
+								</div>
+
+							</div>
+							<div class="rbox fldi">
+								<div class="txt-1 color-fff ">
+									<p class="name f16">{%$photographers_info.un_data.name%}</p>
+									<p class="number"><span class="number-1">套系数 : {%$photographers_info.un_data.goods_num%}</span><span class="number-2">咨询数 : {%$photographers_info.un_data.consults%}</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1">
+						<span class="address-icon yue-ui-icon-size-16"></span>
+						<span class="txt">{%$photographers_info.un_data.location_name%}</span>
+					</div>
+					<div class="box-2 f14 txt-overflow" data-role="introduce">
+						{%$photographers_info.un_data.introduce|nl2br|truncate:150:"...":true %}
+					</div>
+					<div class="box-3 tc" data-role="allow-icon">
+						<i class="dib icon-font i-iconfont-allow icon-font-size-16"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="item-wrap">
+				<div class="sort-filter-item-tab-1">
+						<div class="item-wrap">
+							<div class="sort-item f14 color-666">
+								<ul class="list" data-role="sort-item">
+									<li sort-type="0" class="cur">
+										<span class="txt">
+											{%$wx_json.appId%}
+										</span>
+									</li>
+									<li sort-type="1">
+										<span class="txt">
+											人气
+										</span>
+									</li>
+									<li sort-type="2">
+										<span class="txt">
+											最新
+										</span>
+									</li>
+									<li class="clearfix" sort-type="3" order-type="1">
+										<div class="item">
+											<span class="txt fldi">
+												价格
+											</span>
+											<span class="arrow-item fldi">
+												<i class="icon-font i-iconfont-shixinxiaojiantou shixinxiaojiantou-up cur"></i>
+												<i class="icon-font i-iconfont-shixinxiaojiantou shixinxiaojiantou-down"></i>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="filter-item" data-role="filter-item-btn">
+								<i class="filter-icon yue-ui-icon-size-22"></i>
+							</div>
+						</div>
+				</div>
+				<div class="wap-list-mod-1">
+						<div id="render_item_ele"></div>
+						
+				</div>
+			</div>
+		</div>
+		<div class="consult-item">
+			<a href="javascript:;" class="tdn" data-role="pszx-btn">
+				<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h50">
+				           <span class="ui-button-content f14">私人订制</span>
+				</button>
+			</a>
+		</div>
+
+	</div>
+
+	<div class="filter-item-pop dn" data-role="filter-item-pop">
+		<div class="fade" data-role="fade-item"></div>
+		<div class="item-wrap">
+			<div class="item ui-border-b">
+				<div class="title-item f14 color-333">
+					套系类型
+				</div>
+				<div class="filter-item">
+					<ul class="list clearfix f14 color-666" data-role="filter-item">
+						{%foreach $paizhao_goods_type as $key => $val%}
+								<li data-key ="{%$val.type_id%}" class="{%$val.cur_name%}">
+									{%$val.name%}
+								</li>
+						{%/foreach%}
+					</ul>
+				</div>
+				
+			</div>
+			<div class="button-item">
+				<a href="#" class="tdn ui-border-b">
+					<button class="ui-button  ui-button-block ui-button-100per  ui-button-size-h50 color-24c reset-btn" data-role="reset-btn">
+					           <span class="ui-button-content f14">重置</span>
+					</button>
+				</a>
+				<a href="#" class="tdn ui-border-b">
+					<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h50" data-role="sure-btn">
+					           <span class="ui-button-content f14">确定</span>
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>	
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+
+<script type="text/javascript">
+	var LZ = require('wap-huipai:global/lazyload/lazyload');
+	var header = require('wap-huipai:global/header/main');
+	var list_item_class = require('wap-huipai:global/list/list');
+	var utility = require('wap-huipai:global/utility/index');
+	var go_top = require('wap-huipai:global/go_top/go_top');
+	var template  = __inline('./item.tmpl');
+	$(document).ready(function() {
+		require('wap-huipai:global/layer/layer');
+		// 渲染头部
+		var header_obj = header.init({
+			ele : $("#global-header"), //头部渲染的节点
+			title:"{%$photographers_info.un_data.name%}",
+			header_show : true , //是否显示头部
+			mt_0_ele : $('#seller-detail-page'), //如果头部隐藏，要把当前页节点margin-top改为0
+			left_icon_show : false,
+			right_icon_show : true, //是否显示右边的按钮
+			share_icon : 
+			{
+				show :false,  //是否显示分享按钮icon
+				content:""
+			},
+			omit_icon :
+			{
+				show :false,  //是否显示三个圆点icon
+				content:""
+			},
+			show_txt :
+			{
+				show :false,  //是否显示文字
+				content:"编辑"  //显示文字内容
+			},
+			search_icon : 
+			{
+				show :false,  //是否搜索icon
+				content:""  //显示文字内容
+			},
+			go_index :
+			{
+				show :true,  //是否搜索icon
+			}
+		});
+		var _page_params = {
+			type_id : '',
+			user_id : '{%$user_id%}',
+			sort : '',
+			order : ''
+		}
+
+		var list_obj = new list_item_class(
+		{
+			//渲染目标
+			ele : $('#render_item_ele'),
+			//请求地址
+			url :  window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/get_list_info.php',
+			//传递参数
+			params : _page_params,
+			//模板
+			template : template,
+			//lz是否开启参数
+			is_open_lz_opts : true
+
+		});
+	    	
+	    	// 返回顶部按钮
+	    	new go_top({
+	    		render_ele : $('body')
+	    	});
+
+		// 筛选弹窗
+		$('[data-role="fade-item"]').click(function() {
+		        $('[data-role="filter-item-pop"]').addClass('dn');
+		});
+
+		$('[data-role="filter-item-btn"]').on('click' ,function(event) {
+			$('[data-role="filter-item-pop"]').removeClass('dn');
+		});
+
+
+		// 介绍内容全部显示
+		$('[data-role="allow-icon"]').on('click', function(event) {
+			if ($('[data-role="introduce"]').hasClass('txt-overflow')) 
+			{
+			    $('[data-role="introduce"]').removeClass('txt-overflow');
+			}
+			else{
+				$('[data-role="introduce"]').addClass('txt-overflow');
+			}
+			
+		});
+
+		// 排序
+		$('[data-role="sort-item"]').find('li').on('click', function(event) {
+			var sort = $(this).attr('sort-type');
+			var order = $(this).attr('order-type') || '';
+			$(this).addClass('cur').siblings('li').removeClass('cur');
+			console.log(sort);
+			
+			if (sort==3) 
+			{
+			    if ($(this).attr('order-type') ==1) 
+			    {
+			        $(this).find('.shixinxiaojiantou-up').addClass("color-24c");
+			        $(this).find('.shixinxiaojiantou-down').removeClass('color-24c');
+			        $(this).attr('order-type','2');
+			    }
+			    else{
+			    	$(this).find('.shixinxiaojiantou-down').addClass('color-24c');
+			    	$(this).find('.shixinxiaojiantou-up').removeClass("color-24c");
+			    	$(this).attr('order-type','1');
+			    }
+			    
+
+			}
+			else{
+				$('.shixinxiaojiantou-up').removeClass("color-24c");
+				$('.shixinxiaojiantou-down').removeClass('color-24c');
+			}
+			list_obj.refresh({
+				"sort" : sort,
+				"order" : order
+			});
+		});
+	 	
+	 	// 筛选
+	 	$('[data-role="filter-item"]').find('li').on('click', function(event) {
+	 		var type_id = $(this).attr('data-key');
+	 		$(this).addClass('cur').siblings('li').removeClass('cur');
+	 		
+	 		
+	 	});
+
+	 	// 筛选重置按钮
+	 	$('[data-role="reset-btn"]').on('click',function(event) {
+	 		$('[data-role="filter-item"]').find('li').each(function(index, el) {
+	 			$(this).removeClass('cur');
+	 		});
+	 	});
+
+	 	// 筛选确定按钮
+	 	$('[data-role="sure-btn"]').on('click' ,function(event) {
+	 		var type_id = '';
+	 		$('[data-role="filter-item"]').find('li').each(function(index, el) {
+	 			
+	 			if ($(this).hasClass('cur')) 
+	 			{
+	 			    type_id = $(this).attr('data-key');
+	 			}
+
+	 		});
+	 		list_obj.refresh({"type_id" : type_id});
+	 		$('[data-role="filter-item-pop"]').addClass('dn');
+	 	});
+
+	 	var data={
+	 		user_id :  {%$user_id%}
+	 	}
+	 	// 私人订制按钮点击
+	 	$('[data-role="pszx-btn"]').on('click',  function(event) {
+	 		var consult_cookie = "";
+	 		// 统计
+	 		utility.ajax_request
+	 		({
+	 			url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/add_consult_button.php',
+	 			data: data,
+	 			dataType: 'json',
+	 			type: 'POST',
+	 			cache: false,
+	 			beforeSend: function() 
+	 			{
+
+	 			},
+	 			success: function(data)
+	 			{
+	 			  console.log(data);
+	 			  if (data.result_data.result == 1) 
+	 			  {
+	 				  consult_cookie = data.result_data.consult_cookie;
+	 			  }
+	 			},   
+	 			error: function() 
+	 			{
+
+	 			},    
+	 			complete: function() 
+	 			{
+
+	 			} 
+	 		});
+	 	
+	 	
+
+	 		var layer1 = layer.open({
+	 			content:'<div class="pop-contact-mod"><i class="close-btn" data-role="close-pop-btn"></i><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text f14" placeholder="您的称呼" /><input type="tel" name=" " id="tel" class="input-text f14"  placeholder="留下您的电话，方便联系" /></div><a href="javascript:;" class="tdn" data-role="post-contact"><button class="ui-button ui-button-bg-24c ui-button-block ui-button-border-24c ui-button-100per  ui-button-size-h45"><span class="ui-button-content f14">马上提交</span></button></a><a href="//www.51snap.cn/succeed/sygw.php" class="tdn"><button class="ui-button ui-button-border-24c ui-button-block ui-button-100per  ui-button-size-h45"><span class="ui-button-content f14">我想添加摄影顾问微信</span></button></a><div class="num-box color-999">已有 <span class="num color-2bd"> 23 </span> 人咨询TA</div></div>',
+	 			skin : 'pai_zhao_goods_class'
+
+	 		});
+	 		$('[data-role="close-pop-btn"]').on('click',  function(event) {
+	 			layer.close(layer1);
+	 		});
+
+	 		// 
+	 		$('[data-role="post-contact"]').on('click', function(event) {
+
+	 			var user_name = $.trim($('#user_name').val())
+	 			var tel = $.trim($('#tel').val())
+	 			if (!user_name) 
+	 			{
+	 				alert('请输入您的称呼');
+	 				return ;
+
+	 			}
+	 			if (!tel) 
+	 			{
+	 				alert('请输入您的电话号码');
+	 				return ;
+	 			}
+
+	 			var phone_len = /^\d{11}$/;
+	 			if(!phone_len.exec( parseInt(tel)))
+	 			{ 
+	 				alert('请输入正确手机号码');
+	 				return ;
+	 			}
+
+	 			utility.ajax_request
+	 			({
+	 				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/add_contact_info.php',
+	 				data: 
+	 				{
+	 					name : user_name,
+	 					mobile : tel ,
+	 					user_id : '{%$user_id%}',
+	 					consult_cookie : consult_cookie
+
+	 				},
+	 				dataType: 'json',
+	 				type: 'POST',
+	 				cache: false,
+	 				beforeSend: function() 
+	 				{
+
+	 				},
+	 				success: function(data)
+	 				{
+	 					console.log(data);
+	 					window.location.href = "//www.51snap.cn/succeed/?res="+data.result_data.result;
+	 					
+	 				},   
+	 				error: function() 
+	 				{
+
+	 				},    
+	 				complete: function() 
+	 				{
+
+	 				} 
+	 			});
+
+	 		});
+	 	
+	 	});
+		
+		
+		
+	
+
+		
+
+		
+
+	});
+</script>
+
+
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script>
+
+// 微信分享
+wx.config({
+    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId:  '{%$wx_json.appId%}', // 必填，公众号的唯一标识
+    timestamp: '{%$wx_json.timestamp%}', // 必填，生成签名的时间戳
+    nonceStr: '{%$wx_json.nonceStr%}', // 必填，生成签名的随机串
+    signature: '{%$wx_json.signature%}',// 必填，签名，见附录1
+    jsApiList: ['checkJsApi',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'downloadImage',
+        'openProductSpecificView'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+
+
+var ShareTimeline = 
+{
+    title: '约摄-poco旗下的摄影师预约平台', // 分享标题
+    link: '', // 分享链接
+    imgUrl: 'http://www.51snap.cn/static/wap/image/common/share-icon-32x32.png', // 分享图标
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+}
+var ShareAppMessage = {
+    title: '约摄-poco旗下的摄影师预约平台', // 分享标题
+    desc: '生活不只有诗和远方 还有此刻的美好。留下一辑经典照片，与未来的自己想当年。', // 分享描述
+    link: '', // 分享链接
+    imgUrl: 'http://www.51snap.cn/static/wap/image/common/share-icon-32x32.png', // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+    success: function () { 
+        // 用户确认分享后执行的回调函数
+    },
+    cancel: function () { 
+        // 用户取消分享后执行的回调函数
+    }
+};
+
+wx.ready(function()
+{
+    wx.onMenuShareTimeline(ShareTimeline);//朋友圈
+    wx.onMenuShareAppMessage(ShareAppMessage);//微信好友
+    wx.onMenuShareQQ(ShareAppMessage); //qq好友
+});
+
+   
+
+
+</script>
+
+
+{%$wap_global_tj%}
+</html>
+
+
+
+
+
+

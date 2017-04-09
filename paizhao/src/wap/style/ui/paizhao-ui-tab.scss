@@ -1,0 +1,54 @@
+.sort-filter-item-tab-1{
+	.item-wrap{
+		display: -webkit-box;
+		background-color: #fff;
+		.sort-item{
+			
+			-webkit-box-flex:1;
+			.list{
+				display:-webkit-box;
+				text-align: center;
+				box-pack:center;
+				box-align:center;
+				-webkit-box-pack:center;
+				-webkit-box-align:center;
+				li{
+					padding:8px 0px;
+					-webkit-box-flex:1;
+					
+					&.cur{
+						.txt{
+							color: #24c7c7;     
+						}
+					}
+					.icon-font{
+						font-size: 8px;
+						display:block;
+					}
+					.shixinxiaojiantou-up{
+						-webkit-transform:rotateX(180deg);
+					}
+					.arrow-item{
+						margin-left: 5px;
+						margin-top: 1px;
+
+					}
+					.item{
+						display:inline;
+						margin: 0 auto;
+					}
+
+				}
+			}
+		}
+		.filter-item{
+			padding:6px 0px;
+			width:52px;
+			text-align: center;
+			.filter-icon{
+				background-size: cover;
+				background-image: url(../../image/ui/filter-icon-44x44.png);
+			}
+		}
+	}
+}

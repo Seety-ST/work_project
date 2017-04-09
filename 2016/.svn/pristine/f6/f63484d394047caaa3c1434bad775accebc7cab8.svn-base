@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>美人信息</title>
+	<link href="css/iconfont-wap.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/common-wap.css" type="text/css" rel="stylesheet" />
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body >
+	<div class="index-page">
+		<header class="header animated">
+			<h1 class="logo">
+				<img src="images-wap/logo-img-145x115.png" />
+			</h1>
+		</header>
+		<div class="content">
+			<section class="banner animated">
+				<!-- Swiper -->
+				<div class="swiper-container banner-warp">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img src="images-wap/banner/jane-750x680.jpg" class="swiper-lazy" />
+								<!-- 预加载 -->
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="mod-btn-item jane-btn">
+								<a href="#" class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>立即下载</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img src="images-wap/banner/janeplus-750x680.jpg" class="swiper-lazy" />
+								<!-- 预加载 -->
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="mod-btn-item janeplus-btn">
+								<a href="#" class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>立即下载</span>
+								</a>
+							</div>
+						</div>
+						<!--<div class="swiper-slide">
+							<div class="img-item">
+								<img src="images-wap/banner/yinxiang-750x680.jpg" class="swiper-lazy" />
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="mod-btn-item yinxiang-btn">
+								<a href="#" class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>立即下载</span>
+								</a>
+							</div>
+						</div>-->
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img src="images-wap/banner/beauty-750x680.jpg" class="swiper-lazy" />
+								<!-- 预加载 -->
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="mod-btn-item beauty-btn">
+								<a href="#" class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>立即下载</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img src="images-wap/banner/hcq-750x680.jpg" class="swiper-lazy" />
+								<!-- 预加载 -->
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="mod-btn-item hcq-btn">
+								<a href="#" class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<span>立即下载</span>
+								</a>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="img-item">
+								<img src="images-wap/banner/baby-750x680.jpg" class="swiper-lazy" />
+								<!-- 预加载 -->
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+							<div class="mod-btn-item baby-btn">
+								<a href="#" class="btn">
+									<i class="download-icon">
+										<img src="images-wap/dowanload-icon-36x35.png" />
+									</i>
+									<span>立即下载</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<!-- Swiper end-->
+			</section>
+			<section class="app-warp animated">
+				<ul>
+					<li class="clearfix">
+						<a href="#">
+							<div class="info-item">
+								<i class="app-icon">
+									<img src="images-wap/app-icon/beauty-icon.png" />
+								</i>
+								<dl class="text-item">
+									<dt>美人相机</dt>
+									<dd>国内首款美颜自拍神器</dd>
+								</dl>
+							</div>
+							<div class="download-btn">
+								<span class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<em>Download</em>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="clearfix">
+						<a href="#">
+							<div class="info-item">
+								<i class="app-icon">
+									<img src="images-wap/app-icon/jane-icon.png" />
+								</i>
+								<dl class="text-item">
+									<dt>简 拼</dt>
+									<dd>
+										聆听照片的声音<br />
+										文艺范拼图神器
+									</dd>
+								</dl>
+							</div>
+							<div class="download-btn">
+								<span class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<em>Download</em>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="clearfix">
+						<a href="#">
+							<div class="info-item">
+								<i class="app-icon">
+									<img src="images-wap/app-icon/janeplus-icon.png" />
+								</i>
+								<dl class="text-item">
+									<dt>简 客</dt>
+									<dd>
+										将音乐、心情、照片汇聚成册<br />
+										H5制作神器
+									</dd>
+								</dl>
+							</div>
+							<div class="download-btn">
+								<span class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<em>Download</em>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="clearfix" style="display:none">
+						<a href="#">
+							<div class="info-item">
+								<i class="app-icon">
+									<img src="images-wap/app-icon/yinxiang-icon.png" />
+								</i>
+								<dl class="text-item">
+									<dt>印 象</dt>
+									<dd>定义自己的摄影方式</dd>
+								</dl>
+							</div>
+							<div class="download-btn">
+								<span class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<em>Download</em>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="clearfix">
+						<a href="#">
+							<div class="info-item">
+								<i class="app-icon">
+									<img src="images-wap/app-icon/baby-icon.png" />
+								</i>
+								<dl class="text-item">
+									<dt>亲子相机</dt>
+									<dd>记录宝宝成长的每一瞬间</dd>
+								</dl>
+							</div>
+							<div class="download-btn">
+								<span class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<em>Download</em>
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="clearfix">
+						<a href="#">
+							<div class="info-item">
+								<i class="app-icon">
+									<img src="images-wap/app-icon/hcq-icon.png" />
+								</i>
+								<dl class="text-item">
+									<dt>图片合成器</dt>
+									<dd>国内首款创意图片合成器</dd>
+								</dl>
+							</div>
+							<div class="download-btn">
+								<span class="btn">
+									<i class="icon iconfont">&#xe601;</i>
+									<em>Download</em>
+								</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<footer class="footer animated">
+			<nav class="f-nav">
+				<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+			</nav>
+			<p class="cpoy-txt">&copy;2016 Beauty,Inc.  美人信息版权所有</p>
+		</footer>
+	</div>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper1 = new Swiper('.banner-warp', {
+			pagination : '.swiper-pagination',
+			preloadImages: true,
+			lazyLoading: true,
+			loop : true,
+			speed: 700,
+			autoplay : 3000,
+			autoplayDisableOnInteraction : false
+		});
+	</script>
+</body>
+</html>

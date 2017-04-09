@@ -1,0 +1,547 @@
+/** 清除内外边距 **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote, /* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form,
+fieldset,
+legend,
+button,
+input,
+textarea, /* form elements 表单元素 */
+th,
+td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border:medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body,
+button,
+input,
+select,
+textarea { font:12px/1.5  "SimSun", Tahoma, Arial, sans-serif}
+input,
+select,
+form img,
+button { vertical-align:middle; }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { font-size: 100%; }
+em { font-style:normal; }
+/** 重置列表元素 **/
+ul,
+ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color:#333; }
+a:hover { text-decoration: underline;}
+/** 重置图片元素 **/
+img { border:none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+textarea, input{resize:none}
+a, textarea, input, button{outline:none}
+.clear { clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+.coz{ clear:both; overflow:hidden; zoom:1}
+/*** font ***/
+.word_break { white-space:normal; word-wrap:break-word; word-break:break-all; }
+.f14 { font-size:14px; }
+.fb { font-weight:bold; }
+.db{ display:block}
+.dn {display:none}
+.di{ display:inline}
+.tc{ text-align:center;}
+.vam{vertical-align:middle;}
+.lh18 { line-height:18px; }
+.lh20 { line-height:20px; }
+.lh22 { line-height:22px; }
+.lh24 { line-height:24px; }
+.lh26 { line-height:26px; }
+.lh28 { line-height:28px; }
+.lh30 { line-height:30px; }
+.font_wryh{font-family:'微软雅黑','黑体','宋体';}
+/** position **/
+.re { position:relative; z-index:1 }
+.fr { float:right; }
+.fl { float:left; }
+.frdi { float:right; display:inline }
+.fldi { float:left;display:inline }
+.pt5 { padding-top:5px; }
+.pt10 { padding-top:10px; }
+.pt15 { padding-top:15px; }
+.pt20 { padding-top:20px; }
+.pb5 { padding-bottom:5px}
+.pb10 { padding-bottom:10px}
+.pb15 { padding-bottom:15px}
+.pb20 { padding-bottom:20px}
+.pl5 { padding-left:5px; }
+.pl10 { padding-left:10px; }
+.pl15 { padding-left:15px; }
+.pl20 { padding-left:20px; }
+.pr5 { padding-right:5px; }
+.pr10 { padding-right:10px; }
+.pr15 { padding-right:15px; }
+.pr20 { padding-right:20px; }
+.mt5 { margin-top:5px; }
+.mt10 { margin-top:10px; }
+.mt15 { margin-top:15px; }
+.mt20 { margin-top:20px; }
+.mb5 { margin-bottom:5px}
+.mb10 { margin-bottom:10px}
+.mb15 { margin-bottom:15px}
+.mb20 { margin-bottom:20px}
+.ml5 { margin-left:5px; }
+.ml10 { margin-left:10px; }
+.ml15 { margin-left:15px; }
+.ml20 { margin-left:20px; }
+.mr5 { margin-right:5px; }
+.mr10 { margin-right:10px; }
+.mr15 { margin-right:15px; }
+.mr20 { margin-right:20px; }
+.p5{padding:5px;}
+.p10{padding:10px;}
+.p15{padding:15px;}
+.p20{padding:20px;}
+/* ====================== 重置结束 ===================== */
+.w1000{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+body { 
+	font: 14px "Microsoft Yahei",Arial,Helvetica,sans-serif; 
+	color: #fff;
+	background-color: #fff;
+}
+
+.footer{
+	color: #323232;
+}
+.footer a{
+	color: #323232;
+}
+
+
+
+.page { 
+	background-repeat: no-repeat;
+}
+.contain { 
+	position: relative; 
+	width: 100%;
+	height: 100%;
+
+}
+.
+.page .con-item{
+	width: 1024px;
+	margin: 0 auto;
+}
+
+#navBar { 
+	z-index: 3; 
+	position: absolute; 
+	top: 40%; 
+	right: 24px;
+}
+#navBar .active { 
+	background: url(../images/yinxiang/page-icon-active-12x12.png) no-repeat;
+}
+#navBar li { 
+	cursor: pointer; 
+	margin-bottom: 16px; 
+	transition: all .7s ease; 
+	line-height: 0px; 
+	font-size: 0;
+	text-align: center; 
+	width: 12px; 
+	height: 12px;
+	background: url(../images/yinxiang/page-icon-12x12.png) no-repeat;
+}
+
+
+.mod-logo{
+	width: 12.29167%;
+	position: fixed;
+	top: 0;
+	left: 5.729167%;
+	z-index: 9;
+}
+.mod-logo img{
+	display: block;
+	width: 100%;
+}
+
+
+.mod-download-item{
+	width: 100%;
+}
+.mod-download-item .code-item{
+	float: left;
+	width: 40.37%;
+}
+.mod-download-item .code-item .code-img{
+	width: 100%;
+	overflow: hidden;
+}
+.mod-download-item .code-item .code-img img{
+	width: 100%;
+}
+.mod-download-item .btn-warp{
+	float: left;
+	width: 55.19%;
+	padding-left: 4.44%;
+}
+.mod-download-item .btn-warp .btn{
+	float: left;
+	margin: 0.03rem 0 0.12rem;
+	border: 1px solid #171717;
+	width: 100%;
+	text-align: center;
+	color: #171717;
+	font-size: 0.22rem;
+	height: 0.41rem;
+	line-height: 0.41rem;
+	-webkit-transition: 600ms;
+	-moz-transition: 600ms;
+	-ms-transition: 600ms;
+	-o-transition: 600ms;
+	transition: 600ms;
+}
+.mod-download-item .btn-warp .btn:hover{
+	background: #171717;
+	color: #fff;
+	text-decoration: none;
+}
+.mod-download-item .btn-warp .btn .icon{
+	font-size: 0.25rem;
+	font-weight: normal;
+}
+
+
+#jpdown-page{
+	min-width: 1024px;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: url(../images/yinxiang/page-icon-active-12x12.png) no-repeat;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: url(../images/yinxiang/page-icon-12x12.png) no-repeat;
+}
+
+.page1,
+.page2,
+.page3,
+.page4,
+.page5,
+.page6{
+	overflow: hidden;
+	z-index: 1;
+}
+.page2 .bg-item,
+.page3 .bg-item,
+.page4 .bg-item,
+.page5 .bg-item,
+.page6 .bg-item{
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.page2 .info-item,
+.page3 .info-item,
+.page4 .info-item,
+.page5 .info-item,
+.page6 .info-item{
+	width: 10.24rem;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0 0 0 -5.12rem;
+}
+.page2 .move-item,
+.page3 .move-item,
+.page4 .move-item,
+.page5 .move-item,
+.page6 .move-item{
+	width: 100%;
+	height: 9.5rem;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -4.75rem;
+}
+
+
+
+/* -- 第一屏 -- */
+.page1{
+	background-image: url(../images/yinxiang/bg-item/section-1-bg.jpg);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.page1 .con-item{
+	width: 10.24rem;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: 0% 0 0 -5.12rem;
+}
+.page1 .info-item{
+	float: right;
+	width: 2.64rem;
+	margin: 1.52rem 1.72rem 0 0;
+}
+
+
+
+
+
+/* -- 第二屏 -- */
+.page2 .bg-item{
+	background-image: url(../images/yinxiang/bg-item/section-2-bg.jpg);
+}
+.page2 .info-item .mod-download-item{
+	width: 2.64rem;
+	float: left;
+	padding: 0 0 0 1.54rem;
+}
+
+/* -- 第三屏 -- */
+.page3 .bg-item{
+	background-image: url(../images/yinxiang/bg-item/section-3-bg.jpg);
+}
+.page3 .mod-download-item{
+	width: 2.64rem;
+	float: right;
+	padding: 0 1.5rem 0 0;
+}
+
+
+/* -- 第四屏 -- */
+.page4 .bg-item{
+	background-image: url(../images/yinxiang/bg-item/section-4-bg.jpg);
+}
+.page4 .mod-download-item{
+	width: 2.64rem;
+	float: left;
+	padding: 0 0 0 1.54rem;
+}
+
+
+/* -- 第五屏 -- */
+.page5 .bg-item{
+	background-image: url(../images/yinxiang/bg-item/section-5-bg.jpg);
+}
+.page5 .mod-download-item{
+	width: 2.64rem;
+	float: right;
+	padding: 0 1.5rem 0 0;
+}
+
+
+
+/* -- 第六屏 -- */
+.page6 .bg-item{
+	background-image: url(../images/yinxiang/bg-item/section-6-bg.jpg);
+}
+.page6 .mod-download-item{
+	width: 2.64rem;
+	float: left;
+	padding: 0 0 0 1.54rem;
+}
+
+/* -- 第七屏 -- */
+.page7 .con-item{
+	width: 3.89rem;
+	height: 2.78rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -1.39rem 0 0 -1.95rem;
+}
+.page7 .info-item{
+	width: 3.89rem;
+	height: 2.78rem;
+}
+.page7 .info-item h2.logo{
+	width: 3.89rem;
+	margin: 0 auto;
+}
+.page7 .info-item h2.logo i.icon{
+	display: block;
+	width: 3.89rem;
+	height: 0.96rem;
+	background: url(../images/yinxiang/logo-img-389x82.png) no-repeat;
+	background-size: contain;
+}
+.page7 .info-item .mod-download-item{
+	width: 3.2rem;
+	margin: 0 auto;
+	padding-top: 0.58rem;
+}
+.page7 .info-item .mod-download-item .code-item{
+	float: left;
+	width: 1.22rem;
+}
+.page7 .info-item .mod-download-item .code-item .code-img{
+	width: 1.22rem;
+	height: 1.22rem;
+}
+.page7 .info-item .mod-download-item .code-item .code-img img{
+	width: 1.22rem;
+}
+.page7 .info-item .mod-download-item .btn-warp{
+	padding: 0 0 0 0.12rem;
+	width: 1.82rem;
+}
+.page7 .info-item .mod-download-item .btn-warp .btn{
+	float: left;
+	margin: 0.02rem 0 0.13rem;
+	padding: 0;
+	height: 0.49rem;
+	line-height: 0.49rem;
+	width: 1.8rem;
+}
+
+
+
+
+
+
+
+/* ie6-8 */
+@media \0screen\,screen\9 {
+	.mod-download-item{
+		width: 270px;
+	}
+	.mod-download-item .code-item{
+		width: 109px;
+	}
+	.mod-download-item .code-item .code-img{
+		width: 109px;
+		height: 109px;
+	}
+	.mod-download-item .code-item .code-img img{
+		width: 109px;
+	}
+	.mod-download-item .btn-warp{
+		width: 152px;
+		padding-left: 9px;
+	}
+	.mod-download-item .btn-warp .btn{
+		margin: 2px 0 17px 0;
+		width: 150px;
+		height: 41px;
+		font-size: 22px;
+		line-height: 41px;
+		padding: 0;
+	}
+	.mod-download-item .btn-warp .btn .icon{
+		font-size: 25px;
+	}
+	.page2 .bg-item,
+	.page3 .bg-item,
+	.page4 .bg-item,
+	.page5 .bg-item,
+	.page6 .bg-item{
+		height: 950px
+	}
+	.page2 .info-item,
+	.page3 .info-item,
+	.page4 .info-item,
+	.page5 .info-item,
+	.page6 .info-item{
+		width: 1024px;
+		margin: 0 0 0 -512px;
+	}
+	.page2 .move-item,
+	.page3 .move-item,
+	.page4 .move-item,
+	.page5 .move-item,
+	.page6 .move-item{
+		height: 950px;
+		margin-top: -475px;
+	}
+	.page1 .con-item{
+		width: 1024px;
+		margin: 0% 0 0 -512px;
+	}
+	.page1 .info-item{
+		margin: 152px 172px 0 0;
+	}
+	.page2 .mod-download-item,
+	.page4 .mod-download-item,
+	.page6 .mod-download-item{
+		padding: 0 0 0 154px;
+	}
+	.page3 .mod-download-item,
+	.page5 .mod-download-item{
+		padding: 0 150px 0 0;
+	}
+	.page7 .con-item{
+		width: 389px;
+		height: 278px;
+		margin: -139px 0 0 -195px;
+	}
+	.page7 .info-item{
+		width: 389px;
+		height: 278px;
+	}
+	.page7 .info-item h2.logo{
+		width: 389px;
+		margin: 0 auto;
+	}
+	.page7 .info-item h2.logo i.icon{
+		width: 389px;
+		height: 96px;
+	}
+	.page7 .info-item .mod-download-item{
+		width: 320px;
+		padding-top: 58px;
+	}
+	.page7 .info-item .mod-download-item .code-item{
+		width: 122px;
+	}
+	.page7 .info-item .mod-download-item .code-item .code-img{
+		width: 122px;
+		height: 122px;
+	}
+	.page7 .info-item .mod-download-item .code-item .code-img img{
+		width: 122px;
+	}
+	.page7 .info-item .mod-download-item .btn-warp{
+		padding: 0 0 0 12px;
+		width: 182px;
+	}
+	.page7 .info-item .mod-download-item .btn-warp .btn{
+		margin: 2px 0 13px;
+		height: 49px;
+		line-height: 49px;
+		width: 180px;
+	}
+
+}

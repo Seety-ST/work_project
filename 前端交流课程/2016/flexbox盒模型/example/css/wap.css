@@ -1,0 +1,178 @@
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #000; }
+a:hover { text-decoration: none }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+.f16{
+    font-size: 16px;
+}
+.f20{
+    font-size: 20px;
+}
+/* ====================== 重置结束 ===================== */
+.tc{
+    text-align: center;
+}
+.nav-item .list{
+    display: -webkit-box;
+}
+.nav-item .list li{
+    -webkit-box-flex:1;
+    font-size: 20px;
+    padding:10px 0px;
+    cursor: pointer;
+    border-bottom:2px solid transparent;
+    text-align: center;
+}
+.nav-item .list li.cur{
+    border-color: #ff5f3e;
+}
+.content{
+    width: 600px;
+    margin:20px auto;
+
+}
+.content .item{
+    width: 600px;
+    display: -webkit-box;
+    height:200px;
+
+}
+.section1{
+    background:orange;
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+.section2{
+    background:purple;
+    -moz-box-flex:2;
+    -webkit-box-flex:2;
+    box-flex:2;
+}
+.section3{
+    background:green;
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    box-flex:1;
+}
+.content-2 .item{
+    -moz-box-orient:vertical;
+        -webkit-box-orient:vertical;
+        box-orient:vertical;//垂直排列
+}
+.normal{
+    -webkit-box-direction:normal;
+}
+.reverse{
+    -webkit-box-direction:reverse;
+}
+.content-3 .item .section1{
+    height: 50px;
+
+
+}
+.content-3 .item .section2{
+    height: 100px;
+
+
+}
+.content-3 .item .section3{
+    height: 60px;
+    
+
+}
+.box-align-start{
+        -webkit-box-align:start;
+}
+.box-align-end{
+        -webkit-box-align:end ;
+}
+.box-align-center{
+        -webkit-box-align:center;
+}
+.box-align-baseline{
+        -webkit-box-align:baseline;
+}
+.box-align-stretch{
+        -webkit-box-align:stretch;
+}
+
+/*例子*/
+.level-item {
+    margin-top: 30px;
+}
+.level-item .list{
+    display: -webkit-box;
+
+}
+.level-item .list li{
+    -webkit-box-flex:1;
+    position:relative;
+}
+.level-item .list li:before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: inline-block;
+    background-color: #ccc;
+    position: absolute;
+    left:0;
+    top:50%;
+    margin-top: -2px;
+}
+.level-item .list li:first-child{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.level-item .list .circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    background-color: #cccccc;
+    right:0;
+    top:0;
+    text-align: center;
+    line-height: 20px;
+    color:#fff;
+}
+.level-item .list li.cur:before{
+    background-color: #00edea;
+}
+.level-item .list li.cur .circle{
+    background-color: #00edea;
+}

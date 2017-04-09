@@ -1,0 +1,57 @@
+<?php
+//type_id的配置
+$type_id_ary = pai_mall_load_config('certificate_service_type_id');
+return array(
+			 array(
+                 'val'=>'G_YUEUS_MALL_GET_FIRST_CACHE_',
+                 'text'=>'后台属性搜索缓存',
+                 'params'=>array(),
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_GOODS_TYPE_ATT_SEARCH_TYPE_',
+                 'text'=>'前台属性搜索缓存',
+                 'params'=>array('class'=>'pai_mall_goods_type_attribute_class','method'=>'del_property_for_search_get_data'), 
+             ),
+			 array(
+                 'val'=>'G_YUEUS_MALL_SELLER_',
+                 'text'=>'商家信息缓存',
+                 'params'=>array('class'=>'pai_mall_seller_class','method'=>'del_seller_cache_for_all'), 
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_GOODS_ACL_TYPE_INFO_',
+                 'text'=>'角色权限缓存',
+                 'params'=>array('class'=>'pai_mall_admin_type_class','method'=>'del_all_admin_type_cache'), //参数是这个类的这个删除缓存的方法
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_GOODS_ACL',
+                 'text'=>'后台权限菜单缓存',
+                 'params'=>array('class'=>'pai_mall_admin_acl_class','method'=>'del_md5_child_cache'), //参数是这个类的这个删除缓存的方法
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_GOODS_ACL_USER_',
+                 'text'=>'所有后台人员权限缓存',
+                 'params'=>array('class'=>'pai_mall_admin_user_class','method'=>'del_all_user_cache'), //参数是这个类的这个删除缓存的方法
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_CMS_NEW_',
+                 'text'=>'cms详情的缓存',
+                 'params'=>array('class'=>'pai_mall_cms_news_class','method'=>'del_all_cms_cache'), //参数是这个类的这个删除缓存的方法
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_CMS_TYPE',
+                 'text'=>'cms分类的缓存',
+                 'params'=>array('class'=>'pai_mall_cms_type_class','method'=>'del_first_level_type_id_cache'), //参数是这个类的这个删除缓存的方法
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_PROFESSION',
+                 'text'=>'职业相关缓存',
+                 'params'=>array('class'=>'pai_mall_profession_class','method'=>'del_all_cache_for_profession'), //参数是这个类的这个删除缓存的方法
+             ),
+             array(
+                 'val'=>'G_YUEUS_MALL_ADMIN_GROUP_',
+                 'text'=>'管理组相关缓存',
+                 'params'=>array('class'=>'pai_mall_admin_group_class','method'=>'del_all_cache'), //参数是这个类的这个删除缓存的方法
+             ),
+             
+);
+?>

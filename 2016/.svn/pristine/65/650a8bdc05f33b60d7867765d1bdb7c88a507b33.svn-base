@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Circle</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<i class="logo-icon"></i>
+		</h1>
+		<div class="r-btn-item">
+			<span class="btn-area open-btn"> 
+				<em class="txt">打开软件</em> 
+				<i class="icon more-icon"></i>
+			</span>
+		</div>
+	</header>
+	<!--内容-->
+	<section class="content">
+		<div class="article-page">
+			<section class="mod-s-item-list">
+				<article class="item">
+					<div class="user-item">
+						<picture class="img-item">
+							<img src="images/test/70x70.jpg" />
+						</picture>
+						<dl class="text-item">
+							<dt class="info-item">
+								<span class="name">大D</span> <i class="mod-sex-icon female-icon"></i>
+								<i class="mod-level-icon LV1">LV1</i>
+							</dt>
+							<dd class="date-item">
+								<span class="time-item">
+									<i class="icon-time"></i>
+									<time>1小时前</time>
+								</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="con-item">
+						<div class="text-item">
+							<p>今天的spotlight介绍的是，囚禁人类或者更改了背景的，一些不同寻常的鸟笼。</p>
+							<p class="img">
+								<img src="images/test/750x566.jpg" />
+							</p>
+							<p class="img">
+								<img src="images/test/750x566.jpg" />
+							</p>
+							<p>今天的spotlight介绍的是，囚禁人类或者更改了背景的，一些不同寻常的鸟笼。</p>
+							<p>今天的spotlight介绍的是，囚禁人类或者更改了背景的，一些不同寻常的鸟笼。</p>
+							<p>今天的spotlight介绍的是，囚禁人类或者更改了背景的，一些不同寻常的鸟笼。</p>
+							<p class="img">
+								<img src="images/test/750x566.jpg" />
+							</p>
+							<p>今天的spotlight介绍的是，囚禁人类或者更改了背景的，一些不同寻常的鸟笼。</p>
+						</div>
+					</div>
+					<div class="btn-item clearfix">
+						<div class="date-btn btn-love">
+							<span class="btn-area">
+								<i class="icon"></i> 
+								<em>364</em>
+							</span>
+						</div>
+						<div class="date-btn btn-comment">
+							<span class="btn-area">
+								<i class="icon"></i>
+								<em>364</em>
+							</span>
+						</div>
+					</div>
+				</article>
+			</section>
+			<!-- 查看更多内容 -->
+			<section class="more-warp">
+				<h4 class="title">查看更多内容</h4>
+				<i class="icon more-icon"></i>
+			</section>
+		</div>
+	</section>
+	<!-- 下载浮动层 -->
+	<section class="mod-download-item">
+		<section class="info-item">
+			<div class="img-item">
+				<img src="images/logo-icon-96x96.png" />
+			</div>
+			<dl class="text-item">
+				<dt>
+					<i class="icon-logo"></i>
+					<span class="apply-item">
+						<i class="icon icon-iphone"></i>
+						<i class="icon icon-android"></i>
+					</span>
+				</dt>
+				<dd class="txt">让一切美好发生</dd>
+			</dl>
+		</section>
+		<button class="download-btn">立即下载</button>
+	</section>
+	<!-- 下载浮动层 end -->
+</body>
+</html>

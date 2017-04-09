@@ -1,0 +1,156 @@
+.camera-page .p1th {
+  padding: 50px 0px;
+  border-bottom: 1px solid #eee; }
+  .camera-page .p1th .lbox {
+    padding: 0px 100px; }
+    .camera-page .p1th .lbox .address-txt {
+      text-align: center;
+      padding-top: 20px; }
+      .camera-page .p1th .lbox .address-txt .icon {
+        vertical-align: middle; }
+      .camera-page .p1th .lbox .address-txt .txt {
+        display: inline-block;
+        vertical-align: middle; }
+  .camera-page .p1th .rbox {
+    width: 800px; }
+    .camera-page .p1th .rbox .item-2 {
+      padding-top: 40px;
+      background: url(http://51snap.yueus.com//static/pc/image/camera/txt-bg-67x61.png) no-repeat right bottom; }
+      .camera-page .p1th .rbox .item-2 .txt-2 {
+        padding-top: 35px; }
+        .camera-page .p1th .rbox .item-2 .txt-2 .list li {
+          float: left;
+          margin-right: 65px; }
+.camera-page .p2th {
+  padding-bottom: 60px; }
+  .camera-page .p2th .item-wrap .select-list-item {
+    margin: 20px 0px;
+    background-color: #fafafa; }
+    .camera-page .p2th .item-wrap .select-list-item .classify-item .list li {
+      float: left;
+      padding: 15px 0px;
+      margin-left: 40px;
+      cursor: pointer; }
+      .camera-page .p2th .item-wrap .select-list-item .classify-item .list li.li-cur {
+        color: #2bd9d9; }
+      .camera-page .p2th .item-wrap .select-list-item .classify-item .list li:hover {
+        color: #2bd9d9; }
+    .camera-page .p2th .item-wrap .select-list-item .sort-item .list li {
+      float: left;
+      padding: 15px 0px;
+      margin: 0px 25px;
+      cursor: pointer; }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li.li-cur {
+        color: #2bd9d9; }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover {
+        color: #2bd9d9; }
+        .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover .up_arrow {
+          background-image: url(http://51snap.yueus.com//static/pc/image/camera/up-arrow-12x12.png); }
+        .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover .down_arrow {
+          background-image: url(http://51snap.yueus.com//static/pc/image/camera/up-arrow-12x12.png); }
+        .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover .sort-up-arrow {
+          background-image: url(http://51snap.yueus.com//static/pc/image/camera/up-arrow-12x12.png); }
+        .camera-page .p2th .item-wrap .select-list-item .sort-item .list li:hover .sort-down-arrow {
+          background-image: url(http://51snap.yueus.com//static/pc/image/camera/down-arrow-12x12.png); }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li .icon {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 100%; }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li .sort-down-arrow {
+        background-image: url(http://51snap.yueus.com//static/pc/image/camera/down-arrow-12x12.png); }
+      .camera-page .p2th .item-wrap .select-list-item .sort-item .list li .sort-up-arrow {
+        background-image: url(http://51snap.yueus.com//static/pc/image/camera/up-arrow-12x12.png); }
+  .camera-page .p2th .item-wrap .photo-list-item .pic-list-mod-1 .txt-item .box-2 {
+    height: 42px; }
+  .camera-page .p2th .item-wrap .photo-list-item .pic-list-mod-1 .img-item .img img {
+    height: 100%; }
+  .camera-page .p2th .page-mod-1 {
+    margin-top: 10px; }
+
+.pop-contact-mod {
+  width: 500px;
+  margin: 0 auto; }
+  .pop-contact-mod .p1 {
+    text-align: center;
+    line-height: 28px;
+    padding: 0px 0 30px 0; }
+  .pop-contact-mod .it {
+    text-align: center; }
+    .pop-contact-mod .it .input-text {
+      width: 180px;
+      height: 24px;
+      line-height: 24px;
+      padding: 3px 10px;
+      border: 1px solid #ddd;
+      margin-right: 10px;
+      font-size: 14px; }
+  .pop-contact-mod .btn {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 20px; }
+  .pop-contact-mod .num-box {
+    text-align: center;
+    padding: 10px 0 0 0; }
+    .pop-contact-mod .num-box .num {
+      padding: 0px 5px; }
+
+body .pai_zhao_camera_class .layui-layer-content {
+  padding: 20px 20px 35px 20px; }
+
+.pai_zhao_camera_class .layui-layer-btn1 {
+  display: none; }
+
+.pai_zhao_camera_class .layui-layer-btn {
+  border-top: none;
+  background-color: #fff;
+  text-align: center;
+  padding: 0px 10px 15px 15px; }
+
+.pai_zhao_camera_class .layui-layer-title {
+  overflow: visible; }
+
+.pai_zhao_camera_class .layui-layer-title .title-item {
+  position: relative; }
+
+.pai_zhao_camera_class .layui-layer-title .title-item .max-code-img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  background: url(http://51snap.yueus.com//static/pc/image/camera/code-img-100x100.jpg) #fff no-repeat center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 45px;
+  left: 0px; }
+
+.pai_zhao_camera_class .layui-layer-title .code-icon {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  background: url(http://51snap.yueus.com//static/pc/image/camera/code-img-18x18.jpg) no-repeat center; }
+
+.pop-contact-success-mod {
+  width: 500px;
+  margin: 0 auto; }
+  .pop-contact-success-mod .lbox {
+    margin-left: 9px; }
+    .pop-contact-success-mod .lbox .img {
+      background: url(http://51snap.yueus.com//static/pc/image/camera/erweima-182x142.jpg);
+      width: 182px;
+      height: 142px; }
+    .pop-contact-success-mod .lbox .txt {
+      margin: -10px 0 0 0px; }
+  .pop-contact-success-mod .rbox {
+    margin-left: 20px;
+    width: 280px;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    line-height: 26px; }
+    .pop-contact-success-mod .rbox .img {
+      margin-top: 15px; }
+    .pop-contact-success-mod .rbox .txt {
+      padding-top: 5px; }

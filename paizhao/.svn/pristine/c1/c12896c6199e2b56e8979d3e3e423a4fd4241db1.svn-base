@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/base.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-no-use.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-not.scss">
+   
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-button.scss">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+</head>
+
+
+<header class="global-header " >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">按钮 ui-button</h3>
+	</div>
+</header>
+  
+
+
+<!-- 页面内容start -->
+<a href="#" class="tdn">
+	<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h45">
+	           <span class="ui-button-content f14">高度45px</span>
+	</button>
+</a>
+<br />
+<a href="#" class="tdn">
+	<button class="ui-button ui-button-border-24c ui-button-block ui-button-100per  ui-button-size-h45">
+	           <span class="ui-button-content f14">高度45px</span>
+	</button>
+</a>
+<br />
+<a href="#" class="tdn">
+	<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h50">
+	           <span class="ui-button-content f14">高度50px</span>
+	</button>
+</a>
+<br />
+<a href="#" class="tdn">
+	<button class="ui-button ui-button-border-24c ui-button-block ui-button-100per  ui-button-size-h50">
+	           <span class="ui-button-content f14">高度50px</span>
+	</button>
+</a>
+<br />
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

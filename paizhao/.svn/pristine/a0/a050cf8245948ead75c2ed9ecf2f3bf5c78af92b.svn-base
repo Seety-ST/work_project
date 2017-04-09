@@ -1,0 +1,37 @@
+.succeed-page{
+	padding:15px;
+	.item-wrap{
+		width:81%;
+		margin:50px auto;
+		.smile-icon{
+			width:63px;
+			height:63px;
+			display:inline-block;
+			background-size: cover;
+			background-repeat: no-repeat;
+			&.smile-1{
+				background-image: url(../../image/goods/smile-1.png);
+			}
+			&.smile-2{
+				background-image: url(../../image/goods/smile-1.png);
+			}
+		}
+		.txt-item{
+			font-size: 17px;
+		}
+		.code-item{
+			padding:15px;
+			width:70%;
+			margin:25px auto;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+			.img{
+				
+				img{
+					width:100%;
+				}
+			}
+		}
+	}
+}

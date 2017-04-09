@@ -1,0 +1,46 @@
+.ptjs-page {
+  background-color: #f7f9fc; }
+  .ptjs-page .p1th {
+    padding: 200px 275px 144px 275px; }
+    .ptjs-page .p1th .item-wrap {
+      width: 670px;
+      margin: 0 auto; }
+      .ptjs-page .p1th .item-wrap .logo-item {
+        padding-right: 60px;
+        background: url(http://paizhao.yueus.com/static/pc/image/ptjs/line-img-1x92.jpg) no-repeat center right; }
+      .ptjs-page .p1th .item-wrap .txt-item {
+        padding-left: 50px; }
+        .ptjs-page .p1th .item-wrap .txt-item .en-title {
+          font-size: 11px; }
+        .ptjs-page .p1th .item-wrap .txt-item .cn-title {
+          font-size: 42px; }
+        .ptjs-page .p1th .item-wrap .txt-item .tips-txt {
+          font-size: 15px; }
+  .ptjs-page .p2th .list li {
+    width: 370px;
+    float: left;
+    margin: 0px 15px;
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+    .ptjs-page .p2th .list li .img-item {
+      width: 92px;
+      height: 92px;
+      position: absolute;
+      left: 50%;
+      top: -46px;
+      margin-left: -46px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(68, 209, 209, 0.5); }
+      .ptjs-page .p2th .list li .img-item img {
+        width: 100%; }
+    .ptjs-page .p2th .list li .txt-item {
+      padding: 100px 0px 62px 0px;
+      text-align: center; }
+      .ptjs-page .p2th .list li .txt-item .title-txt {
+        padding-bottom: 30px;
+        color: #444;
+        font-size: 18px; }
+      .ptjs-page .p2th .list li .txt-item .txt {
+        line-height: 30px;
+        font-size: 15px; }

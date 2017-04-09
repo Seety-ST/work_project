@@ -1,0 +1,179 @@
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #fff; }
+a:hover { text-decoration: none }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html { 
+	-ms-touch-action: none;
+}
+body{
+	background: #ecd0cd url(../images/ll-img-2.jpg) center top no-repeat;
+	background-size: 100% auto;
+	color: #fff;
+	font-size: 0.24rem;
+}
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+	height: 100%;
+	width: 100%;
+}
+body.index-bg{
+	background: url(../images_8m/index-bgimg-750x1334.jpg) center center no-repeat;
+	background-size: 100% auto;
+}
+input,select,button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0; 
+}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="radio"]:checked,
+button{
+	-webkit-appearance:none;
+	appearance:none; 
+	border-radius: 0;
+}
+
+/* lazyload css */
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.lazyload {}
+
+.lazyloading {
+  min-height: 60px;
+}
+
+.teaser.lazyload {
+	opacity: 0;
+	transform: scale(0.95);
+}
+
+.teaser.lazyloaded {
+	opacity: 1;
+	transform: scale(1);
+	transition: all 600ms;
+}
+
+
+/* content */
+/* index */
+.index-page{
+	background: url(../images/ll-img-1.png) center top no-repeat;
+	background-size: 100% auto;
+	padding: 4.02rem 0 0.4rem;
+	color: #000;
+}
+.index-page img{
+	width: 100%;
+	display: block;
+}
+.index-page .product-list{
+	padding: 0 0.3rem;
+	text-align: center;
+}
+.index-page .product-list .listItem{
+	width: 100%;
+	color: #231815;
+	font-size: 0.32rem;
+	font-weight: bold;
+}
+.index-page .product-list .tab-nav{
+	font-size: 0.24rem;
+	padding-top: 0.02rem;
+}
+.index-page .product-list .tab-nav a{
+	margin: 0 0.27rem;
+	color: #000;
+}
+.index-page .product-list .tab-nav a.cur{
+	color: #ee4363;
+}
+.index-page .product-list .list li{
+	float: left;
+	width: 2.8rem;
+	padding: 0.18rem 0.1rem 0 0;
+}
+.index-page .product-list .list li:nth-of-type(2n){
+	padding: 0.18rem 0 0 0.1rem;
+}
+.index-page .product-list .btn-item{
+	background: #ff7c95;
+	height: 0.5rem;
+	font-size: 0.24rem;
+	line-height: 0.5rem;
+	color: #fff;
+}
+.index-page .product-list .btn-item:active{
+	opacity: 0.8
+}
+.index-page .product-list .icon{
+	display: inline-block;
+
+	font-size: 0;
+	height: 0;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-right: 0;
+}
+.index-page .product-list .like-icon{
+	width: 0.23rem;
+	height: 0.2rem;
+	background-image: url(../images/like-icon-23x20.png);
+}
+.index-page .product-list .page{
+	padding-top: 0.45rem;
+	font-size: 0.24rem;
+}
+.index-page .product-list .page a{
+	margin: 0 0.15rem;
+	color: #231815;
+}
+.index-page .product-list .page a.click{
+	color: #ee4363;
+}
+.index-page .product-list .page a:active{
+	opacity: 0.8;
+}

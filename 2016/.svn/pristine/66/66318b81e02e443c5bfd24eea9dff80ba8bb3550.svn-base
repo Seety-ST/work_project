@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>美人信息</title>
+	<link href="css/iconfont-wap.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link href="css/common-wap.css" type="text/css" rel="stylesheet" />
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body >
+	<div class="article-page">
+		<header class="header" id="header">
+			<div class="mod-bar-item">
+				<h1 class="logo">
+					<img src="images-wap/logo-img-145x115.png" />
+				</h1>
+				<div class="nav-btn-warp">
+					<div class="icon-area more-btn" id="header-more-btn">
+						<i class="icon iconfont">&#xe602;</i>
+					</div>
+					<div class="icon-area close-btn" id="header-close-btn">
+						<i class="icon iconfont">&#xe600;</i>
+					</div>
+				</div>
+			</div>
+			<nav class="nav animated" id="nav">
+				<div class="nav-list">
+					<ul>
+						<li class="active">
+							<a href="#">
+								<span>首页</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>美人相机</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   拼</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>简   客</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>亲子相机</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span>图片合成器</span>
+								<em class="n-line"></em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="content">
+			<article class="con-warp">
+				<section class="detail-con-warp">
+					<div class="listItem">
+						<h4 class="title">
+							<span>初级IOS开发工程师</span>
+							<em class="sub-clasee">—— 擅长拍照，文案精细，整理资源，处变不惊</em>
+						</h4>
+						<ul class="clearfix">
+							<li>所属部门：软件技术部</li>
+							<li>工作地点：广州</li>
+							<li>招聘人数：2位</li>
+							<li>薪酬：4K-6K/月</li>
+						</ul>
+					</div>
+					<div class="detial-item">
+						<table cellspacing="0" cellpadding="0" class="job-claim-item">
+							<tr>
+								<td class="title">岗位职责：</td>
+								<td class="claim-item">
+									<p>
+										1. 在项目经理带领下开发SNS、O2O、工具类app；
+										<br />
+										2. 负责基于ios平台应用软件的界面和功能模块开发；
+										<br />
+										3. 参与产品相关单元测试；
+										<br />
+										4. 按照项目计划，按时提交高质量的代码，完成开发任务；
+										<br />
+										5. 规范的技术文档的编写、维护；
+										<br />
+										6. 积极沟通与解决开发当中遇到的问题，积极参与产品、功能与技术架构的改进；
+										<br />
+										7. 积极参与工作相关技术的研究。
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="title">任职要求：</td>
+								<td class="claim-item">
+									<p>
+										1. 计算机相关专业，大专以上学历，欢迎应届生投；
+										<br />
+										2. 熟悉iOS开发架构和API调用，熟练掌握UITableView、UIWebView等常用性控件，并掌握AFNetworking、SDWebImage等第三方框架；
+										<br />
+										3. 熟悉HTTP、TCP/IP通讯协议，熟悉面向对象编程，图形界面开发；
+										<br />
+										4. 熟练掌握Objective-C语言，熟悉iOS平台下的高性能编程及性能调优；
+										<br />
+										5. 强烈的工作热情，追求代码稳定性、渴望自己开发的app受欢迎；
+										<br />
+										6. 具备良好的职业素养和团队协作精神，以及较强的学习和交流能力；
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="email-item">
+						欢迎加入我们，简历请投递到：
+						<span class="mail"> <i class="icon email-icon"></i><em>hr@adnonstop.com</em>
+						</span>
+					</div>
+				</section>
+			</article>
+		</div>
+		<footer class="footer animated">
+			<nav class="f-nav">
+				<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">加入我们</a>
+			</nav>
+			<p class="cpoy-txt">
+				<span class="copy-item">&copy;2016 Beauty,Inc.  广州美人信息技术有限公司</span>
+				<span class="icp-item">粤ICP备16016424号-2</span>
+			</p>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script>
+		var swiper1 = new Swiper('.banner-warp', {
+			pagination : '.swiper-pagination',
+			preloadImages: true,
+			lazyLoading: true,
+			loop : true,
+			speed: 700,
+			autoplay : 3000,
+			autoplayDisableOnInteraction : false
+		});
+		$(document).ready(function(){
+			$('#nav').height($(window).height() +'px');
+			$('#header-more-btn').click(function(){
+				if($('#header').hasClass('header-nav-active')){
+					$('#header').removeClass('header-nav-active');
+				}else{
+					$('#header').addClass('header-nav-active');
+				}
+			});
+			$('#header-close-btn').click(function(){
+				if($('#header').hasClass('header-nav-active')){
+					$('#header').removeClass('header-nav-active');
+				}else{
+					$('#header').addClass('header-nav-active');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

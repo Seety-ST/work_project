@@ -1,0 +1,98 @@
+<html>  
+<meta http-equiv="X-UA-Compatible" content="chrome=1">  
+<head>  
+<script>  
+        window.onload = function() {  
+            draw();  
+            var saveButton = document.getElementById("saveImageBtn");  
+            bindButtonEvent(saveButton, "click", saveImageInfo);  
+            var dlButton = document.getElementById("downloadImageBtn");  
+            bindButtonEvent(dlButton, "click", saveAsLocalImage);  
+        };  
+		
+            function draw(){  
+                var canvas = document.getElementById("thecanvas");  
+                var ctx = canvas.getContext("2d");  
+						
+				var image = new Image();//创建一张图片
+				image.src = "images/1.jpg";//设置图片的路径
+				
+				image.onload=function(){
+					if(image.complete==true){
+						
+						var can = document.createElement("canvas");
+						var can_ctx = can.getContext("2d"); 
+						
+						can.width = 300;
+						can.height = 300; 
+		
+						can_ctx.fillStyle="#FFFFFF";
+						can_ctx.fillRect(0,0,300,300);
+
+						can_ctx.save();
+						can_ctx.translate(20,20);
+						can_ctx.rotate(20*Math.PI/180);
+						can_ctx.scale(2,0.5);
+						can_ctx.drawImage(image,0,0,300,300);	
+						can_ctx.restore();
+						
+						var can_image = can.toDataURL("image/png");  
+						console.log(can_image);
+						
+						
+						var drawImg = new Image();//创建一张图片
+						drawImg.src = can_image;
+						ctx.drawImage(drawImg,0,0,500,500);
+						
+						
+						
+						var canvas_2 = document.getElementById("thecanvas_2");  
+						var ctx_2 = canvas_2.getContext("2d");  
+						var imgData = can_ctx.getImageData(0,0,300,300);
+						
+						console.log(imgData);
+						ctx_2.putImageData(imgData,0,0);
+						
+					}
+				}
+			
+				
+            }  
+              
+            function bindButtonEvent(element, type, handler)  
+            {  
+                   if(element.addEventListener) {  
+                      element.addEventListener(type, handler, false);  
+                   } else {  
+                      element.attachEvent('on'+type, handler);  
+                   }  
+            }  
+              
+            function saveImageInfo ()   
+            {  
+                var mycanvas = document.getElementById("thecanvas");  
+                var image    = mycanvas.toDataURL("image/png");
+				
+                var w=window.open('about:blank','image from canvas');  
+                w.document.write("<img src='"+image+"' alt='from canvas'/>");  
+            }  
+  
+            function saveAsLocalImage () {   
+			
+                var myCanvas = document.getElementById("thecanvas");  
+                var image = myCanvas.toDataURL("image/png");  
+				
+				console.log(image);
+				window.location.href=image;
+            }  
+        </script>  
+</head>  
+<body bgcolor="#E6E6FA">  
+    <div>  
+        <canvas width='500' height='500' id="thecanvas"></canvas> 
+        <canvas width='500' height='500' id="thecanvas_2"></canvas>   
+        <button id="saveImageBtn">Save Image</button>  
+        <button id="downloadImageBtn">Download Image</button>  
+    </div>  
+</body>  
+</html>  

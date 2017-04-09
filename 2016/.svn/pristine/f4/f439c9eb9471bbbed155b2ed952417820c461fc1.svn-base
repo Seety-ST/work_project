@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>新速腾</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="header">
+		<div class="w1000">
+			<div class="nav-wrap clearfix">
+				<div class="nav-item">
+						<img src="images/ll-nav-2.png" usemap="#Map" border="0" />
+		                    <map name="Map" id="Map">
+		                      <area shape="poly" coords="29,1,0,48,84,46,114,-4" href="#" />
+		                      <area shape="poly" coords="118,0,91,45,209,47,239,-1" href="#" />
+		                      <area shape="poly" coords="243,-1,218,44,335,48,361,1" href="#" />
+		                      <area shape="poly" coords="370,-1,342,46,460,47,489,0" href="#" />
+		                      <area shape="poly" coords="466,47,496,-3,613,-1,586,45" href="#" />
+		                      <area shape="poly" coords="618,-2,591,46,754,48,780,-3" href="#" />
+		                    </map>
+				  </div>
+				<div class="login-item">
+					<a href="#">登录</a>/<a href="#">注册</a>
+				</div>
+			</div>
+			<h1 class="logo-item">
+				<a href="#"></a>
+			</h1>
+		</div>
+	</div>
+	<div class="content">
+		<div class="hdxz-page font_wryh">
+			<div class="w1000">
+				<div class="mod-listItem">
+					<img src="images/ll-img-20.png" />
+				</div>
+				<div class="item-wrap">
+					<div class="item">
+						<div class="listItem">风尚进阶</div>
+						<div class="con-item">
+							<div class="text-item">
+								<p>
+									以“风尚”之名
+									<br />
+									9月07日-9月16日，3个主题征集参赛者风尚作品，每个主题每次最多上传5张作品
+								</p>
+								<div class="dl-list">
+									<dl>
+										<dt>1、“严谨即风尚”主题：</dt>
+										<dd>
+											<p>
+												构图控的世界，追求极致的缜密与美感。至真至美的风尚，来源于对最原始细节的不断苛求，无限的想法依靠有限的规则。上传彰显你追求极致构图的作品，忠于内心，跳跃思想。
+											</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>2、“动感即风尚”主题：</dt>
+										<dd>
+											<p>
+												动感是逐光者的梦，诞生于不羁与张扬的内心。向往无休止的动感魅力，敢于行动，就要始终向着更具挑战的山峰进发。上传表现你心中无限动感的作品，激扬青春，勇敢向前。
+											</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>3、“黑色即风尚”主题：</dt>
+										<dd>
+											<p>
+												世界缤纷无极限，看惯绚丽的色彩，墨染的风韵更值得细细体味。深沉不是谁的专利，黑色却带给年轻人深思，感受黑色之美，上传属于你的墨色风范，用力感受生命，用心触发思考。
+											</p>
+										</dd>
+									</dl>
+									<dl>
+										<dt>入围晋级</dt>
+										<dd>
+											<p>
+												9月19日-9月20日，POCO编辑+网友投票 评选1名风尚拍客
+											</p>
+										</dd>
+										<dt>线下创作</dt>
+										<dd>
+											<p>
+												9月21日-9月25日，风尚拍客线下创作玩味影像
+											</p>
+										</dd>
+										<dt>风尚大片</dt>
+										<dd>
+											<p>
+												9月26日-9月30日，风尚大片曝光
+											</p>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="listItem">奖项设置</div>
+						<div class="con-item">
+							<div class="item-list">
+								<ul>
+									<li class="clearfix">
+										<h4 class="title">1等奖：</h4>
+										<div class="txt">
+											1名。最终通过POCO编辑推荐+网友投票数最高的风尚拍客将获得<span class="point">小蚁（YI）4K运动相机1部</span>
+											<br />
+											 新速腾R-Line一周免费使用权，并将成为新速腾R-Line风尚拍客，为新速腾R-Line拍摄风尚大片
+										</div>
+									</li>
+									<li class="clearfix">
+										<h4 class="title">2等奖：</h4>
+										<div class="txt">
+											2名。奖品为<span class="point">小蚁（YI）4K运动相机1部</span>
+										</div>
+									</li>
+									<li class="clearfix">
+										<h4 class="title">3等奖：</h4>
+										<div class="txt">
+											3名。奖品为<span class="point">富士（FUJIFILM）趣奇俏便携式手机照片打印机1台</span>
+										</div>
+									</li>
+									<li class="clearfix">
+										<h4 class="title">幸运奖：</h4>
+										<div class="txt">
+											活动征集期内所有参赛者均有机会参与抽奖，奖品为<span class="point">京东商城50元购物卡一张</span>
+										</div>
+									</li>
+								</ul>
+								<div class="tips">
+									<p>**1.2.3等奖获奖者按投票数排名依次评选</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

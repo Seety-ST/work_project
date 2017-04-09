@@ -1,0 +1,159 @@
+//切换tab
+@import "../../sass/compass";
+
+.yue-ui-tab-nav {
+    .item {
+        font-size: 14px;
+        position: relative;
+        padding: 4px 16px 3px 15px;
+        border: 1px solid #555;
+        // background: #fff;
+        color: #555;
+        &:active {
+            border-color: #aaa;
+            color: #aaa;
+        }
+        &:nth-child(1) {
+            border-right: none;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        &:nth-child(2) {
+            border-left: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+    .tab-item-cur {
+        background: #555;
+        color: #fff;
+        &:active {
+            background: #aaa;
+            border-color: #aaa;
+            color: #fff;
+        }
+    }
+}
+
+
+//  tab 通用
+.ui-tab {
+    width: 100%;
+    overflow: hidden;
+}
+.ui-tab-nav {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: box;
+    display: -webkit-box;
+    font-size: 16px;
+    height: 45px;
+    box-sizing: border-box;
+}
+.ui-tab-content {
+    margin-top: 45px;
+    display: -webkit-box;
+}
+.ui-tab-content > li {
+    -webkit-box-flex: 1;
+    width: 100%;
+}
+.ui-tab-nav li {
+    height: 45px;
+    line-height: 45px;
+    min-width: 70px;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    text-align: center;
+    color: #808080;
+    box-sizing: border-box;
+}
+.ui-tab-nav li.current {
+    color: #00a5e0;
+    border-bottom: 2px #00a5e0 solid;
+}
+.ui-tab-nav li:active {
+    opacity: .8;
+}
+
+
+//筛选按钮样式
+.ui-button-box-tap {
+    position: relative;
+    z-index: 4;
+    display: -webkit-box;
+    width: 100%;
+    color: #999;
+    background-color: #fff;
+    // border-bottom: 1px solid #cdcdd1;
+    .ui-button-tap {
+        position: relative;
+        -webkit-box-flex: 1;
+        width: 45px;
+        line-height: 45px;
+        text-align: center;
+    }
+    .tag {
+        position: absolute;
+        top: 20px;
+        right: 16px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #aaa;
+        -webkit-transition: -webkit-transform .5s;
+    }
+    .tag-trfm {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+
+
+
+.yue-ui-tab-menu{
+    .list{
+        background-color: #fff;
+        @include flexbox((
+            display: box  // 盒子模型 子元素默认水平左对齐
+
+        ));
+
+        li{
+
+            padding: 13px 0 0px 0;
+            @include flexbox((
+                display: box,  // 盒子模型 子元素默认水平左对齐
+                box-flex: 1, //占有空间比例
+                box-pack: center
+            ));
+            .txt{
+                position: relative;
+                padding: 0px 5px 11px 5px;
+                .circle{
+                    display: inline-block;
+                    background-color: #ff3d3d;
+                    width:6px;
+                    height:6px;
+                    border-radius: 6px;
+                    position: absolute;
+                    right:-5px;
+                    top:-3px;
+                }
+            }
+
+        }
+        .cur{
+            color:#ffc430;
+
+            .txt{
+                border-bottom: 2px solid #ffc430;
+            }
+        }
+    }
+}

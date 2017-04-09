@@ -1,0 +1,38 @@
+<div class="pic-list-mod-1 pic-list-mod-w1200 font_wryh">
+    <ul class="list clearfix">
+        {%foreach $list_data as $key => $value%}
+        <a href="{%$value.link_url%}" target="_blank">
+        <li class="pic-list-width-285">
+            <div class="img-item">
+                <div class="img">
+                    <img class="paizhao-ph-bgimg" data-src="{%$value.images%}">
+                </div>
+                <div class="txt color-fff dn">{%$value.consults%}人咨询</div>
+            </div>
+            <div class="txt-item">
+                <div class="box-1 clearfix">
+                    <p class="txt-1 color-fa6 fldi f18 fb">
+                        ￥{%$value.prices%}
+                    </p>
+                    <p class="txt-2  color-999 frdi f14">{%$value.consults%}人咨询</p>
+                </div>
+                <div class="box-2">
+                    <p class="txt-1 color-333 f14">
+                        {%$value.titles%}
+                    </p>
+                </div>
+                <div class="box-3 clearfix">
+                    <div class="txt-1 frdi clearfix">
+                        <p class="txt fldi color-999">{%$value.seller_name%}</p>
+                        <div class="ui-avatar-icon ui-avatar-icon-16 fldi">
+                            <i style="background-image:url({%$value.avatar%})"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+        </a>
+        {%/foreach%}
+    </ul>
+</div>

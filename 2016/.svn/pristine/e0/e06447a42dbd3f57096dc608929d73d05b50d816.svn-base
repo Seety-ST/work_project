@@ -1,0 +1,82 @@
+var navL;
+var urlarr = ["/","index-baby.html","2","3","4"];
+var navX;
+$(function() {
+	
+	set_size();
+	var $dir = location.href.split("/");  
+    	var $dir2 = $dir[$dir.length -1];  
+   
+	navX = $.inArray($dir2, urlarr)-1;
+	
+	$("#header a").live('click', function(event) {
+  			event.stopPropagation();
+	});
+	
+	$("#header .gnav li").click(function(){
+		if($(window).width()<=768) {
+  			$("#header .spmenu_btn").stop().next().slideUp(400,'easeOutQuart');
+			$("#header .spmenu_btn").next().removeClass("spd")
+			$("#header .spmenu_btn img").stop().animate({'margin-top' : 0},200,'easeOutQuart');
+			 $("body").css({'overflow':'inherit'});
+			 $("#overlay").hide();
+		};
+		var myLink = $("a",this).attr("href");
+		if(myLink === location.pathname) {
+			return false;
+		};
+			//event.stopPropagation();
+	});
+	
+	if($(window).width()>768) {
+	$('#header .gnav li.gn').hover(
+			function(){
+				$(".gnav .line").stop().animate({'width' : $(this).width(),'left' : $(this).offset().left-navL},500,'easeOutQuart');
+				$('#header .gnav li.gn').stop().animate({'opacity' : '0.5'},200,'easeOutQuart');
+				$(this).stop().animate({'opacity' : '1'},200,'easeOutQuart');
+				
+			},
+			function () {
+				main_nav_out();
+				if($(window).width()>738) {
+					$('#header .gnav li.gn').stop().animate({'opacity' : '1'},200,'easeOutQuart');
+					
+				}
+			});
+	}
+	
+});
+
+
+function main_nav_out(){
+	
+	var $dir = location.href.split("/");  
+    	var $dir2 = $dir[$dir.length -1];  
+	navX = $.inArray($dir2, urlarr)-1;
+	
+	if(navX<0) {
+		$(".gnav .line").stop().animate({'width' : 0},500,'easeOutQuart');
+	}else{
+		$(".gnav .line").stop().animate({'width' : $('#header .gnav li:eq('+navX+')').width(),'left' :$('.gnav li').eq(navX).offset().left-navL},500,'easeOutQuart');
+	}
+	
+}
+
+
+
+$(window).resize(function() {
+	set_size();
+});
+function set_size(){
+	var winW = $(window).width();
+	if(winW<=1024) {
+		var margin = 20;	
+	}else{
+		var margin = 36;	
+	}
+	navL = $('#header .gnav').offset().left-margin;
+	
+	$(".pace .pace-activity").css({"right":(winW-14)/2});
+	main_nav_out();
+};
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+	<link href="css/cmt_list.css" type="text/css" rel="stylesheet" />
+	<title>醉美广州网络摄影大赛</title>
+</head>
+<body>
+
+	<div class="content w1000">
+		<div class="nav-content clearfix">
+			<h1 class="logo">
+				<a href="#"></a>
+			</h1>
+			<div class="top-login clearfix">
+				<div class="login frdi">
+					<a href="#">登录</a>
+					|
+					<a href="#">注册</a>
+				</div>
+			</div>
+			<ul class="nav clearfix font_wryh">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">大赛规则</a>
+				</li>
+				<li>
+					<a href="#">我要参赛</a>
+				</li>
+				<li class="cur">
+					<a href="#">作品浏览</a>
+				</li>
+				<li>
+					<a href="#">我的作品</a>
+				</li>
+				<li>
+					<a href="#">获奖公布</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 模板 -->
+		<div class="wirkshow-box">
+			<div class="item-con clearfix">
+				<div class="path1">
+					<div class="mod-final-page-wrap border-color2" id="J_content">
+						<!--标题-->
+						<div class="listItem font_wryh pb5">
+							<h3 class="Title lh24">我在巴黎，小雨欧洲</h3>
+							<span class="pl15 pr15">|</span>
+							<span class="theme">主题：路途美景</span>
+							<!--返回按钮-->
+							<a href="#" class="back">返回&gt;&gt;</a>
+							<!--返回按钮 end-->
+						</div>
+						<!--信息-->
+						<div class="guild-hold clearfix">
+							<div class="pt10 fl">
+								<div class="btn_share fl" href="javascript:void(0);">
+									<span class="J_show_share_widget share-page pr5 dis-ib">
+										分享此作品
+										<span class="hid">
+											( <em class="J_share_count">0</em>
+											)
+										</span>
+										:
+									</span>
+									<div class="share_app dis-ib">
+										<a href="#" class="wx share-common-bg">
+											<!--微信弹出层-->
+											<div class="pop-codeItem" style="padding-left:7px;">
+												<img src="images/code-img.jpg" />
+											</div>
+											<!--微信弹出层 end-->
+										</a>
+										<a href="#" class="pocoweibo share-common-bg">分享到POCO微博</a>
+										<a href="#" class="qq share-common-bg">分享到腾讯微博</a>
+										<a href="#" class="sina share-common-bg">分享到新浪微博</a>
+										<a href="#" class="qzone share-common-bg">分享到QQ空间</a>
+										<a href="#" class="renren share-common-bg">分享到人人网</a>
+									</div>
+									<a class="btn_copy dis-ib" href="javascript:void(0);">复制</a>
+								</div>
+							</div>
+							<!--投票按钮-->
+							<a href="#" class="vote-btn font_wryh fb">投票(33)</a>
+							<!--投票按钮 end-->
+						</div>
+						<div class="final-page-txt lh24 f14">
+							<p>
+								小情小调，欧洲的小小国度，仿佛每日都在下着带着音符的小雨，落在带着咖啡味的浓浓香草，如此的美妙不可言。就好像，我在巴黎，小雨欧洲
+							</p>
+						</div>
+						<div class="final-page-imgList mod-link-none" id="J_photo_list">
+							<div>
+								<ul class="artList">
+									<li>
+										<div class="img-item">
+											<div class="img-box photo">
+												<img src="images/754x502.jpg" />
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="path2">
+					<div class="pathA">
+						<div class="img-box pb5">
+							<a href="#">
+								<img src="images/86x86.jpg" alt="" />
+							</a>
+						</div>
+						<h4 class="title font_wryh">
+							<a href="">刘顺儿妞Secret</a>
+						</h4>
+						<div class="btn-item">
+							<a href="#">其他参赛作品</a>
+						</div>
+					</div>
+					<div class="pathB">
+						<div class="list">
+							<ul>
+								<li>
+									<div class="img-box">
+										<a href="#">
+											<img src="images/145x145.jpg" alt="" />
+										</a>
+									</div>
+									<h4 class="title">
+										<a href="#">我在巴黎，小雨欧洲</a>
+									</h4>
+								</li>
+								<li>
+									<div class="img-box">
+										<a href="#">
+											<img src="images/145x145.jpg" alt="" />
+										</a>
+									</div>
+									<h4 class="title">
+										<a href="#">我在巴黎，小雨欧洲</a>
+									</h4>
+								</li>
+								<li>
+									<div class="img-box">
+										<a href="#">
+											<img src="images/145x145.jpg" alt="" />
+										</a>
+									</div>
+									<h4 class="title">
+										<a href="#">我在巴黎，小雨欧洲</a>
+									</h4>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banner">
+				<img src="images/banner-960x100.jpg" />
+			</div>
+		</div>
+		<!-- 模板 END -->
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

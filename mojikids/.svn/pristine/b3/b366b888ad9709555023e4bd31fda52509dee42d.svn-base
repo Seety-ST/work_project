@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 门店信息
+ */
+
+.store-info-page .p1th .item-wrap .img-item {
+  width: 100%;
+  height: 2.1rem;
+}
+
+.store-info-page .p1th .item-wrap .img-item i.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(http://mojikids.yueus.com/static/wap/image/about/test/750x420.8f46d64.jpg);
+}
+
+.store-info-page .p2th {
+  margin-bottom: 0.1rem;
+}
+
+.store-info-page .p3th {
+  background-color: #fff;
+}
+
+.store-info-page .p3th .item-wrap {
+  padding: 0.15rem 0.15rem 0 0.15rem;
+}
+
+.store-info-page .p3th .item-wrap dl {
+  padding-bottom: 0.15rem;
+  display: -webkit-box;
+}
+
+.store-info-page .p3th .item-wrap dl dt {
+  width: 0.7rem;
+}
+
+.store-info-page .p3th .item-wrap dl dd {
+  -webkit-box-flex: 1;
+}
+
+.store-info-page .mint-popup {
+  width: 100%;
+}
+
+.store-info-page .mint-popup .map_pop {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+}

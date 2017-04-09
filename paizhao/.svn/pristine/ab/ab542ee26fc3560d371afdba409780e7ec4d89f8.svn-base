@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <title>{%$page_title%}</title>
+    <meta name="keywords" content="{%$meta_keywords%}">
+    <meta name="description" content="{%$meta_description%}">
+    {%$wap_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+    <!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+    <link href="../../style/search/search-page.scss" type="text/css" rel="stylesheet" />
+
+</head>
+<body class="cor-bg-fff" style="overflow: hidden">
+<div class="search-page">
+    <div class="keyword-search">
+        <i class="search-icon"></i>
+        <input class="search-input" value="" placeholder="搜索摄影套系"/>
+    </div>
+</div>
+
+
+
+
+<div class="fade fn-hide" style="z-index:10;" data-role="fade"></div>
+
+
+
+<div class="popup-wrap f14" data-role="search-popup-wrap">
+    <div class="popup popup-hide">
+        <div class="popup-content clearfix border-b">
+            <div class="content-title">风格场景</div>
+            <div class="content-list">
+                <ul>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li class="li-cur">清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="popup-content clearfix border-b">
+            <div class="content-title">风格场景</div>
+            <div class="content-list">
+                <ul>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li class="li-cur">清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="popup-content clearfix border-b">
+            <div class="content-title">地区<span class="location-name ml5" data-role="location-name">广州市</span></div>
+            <div class="content-list">
+                <ul>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li class="li-cur">清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clearfix location-sel border-b">
+            <div class="sel border-r sel-cur" data-role="province">广东<i class="ui-triangle arrow-icon ml5 mr5"></i></div>
+            <div class="sel" data-role="city">选择城市<i class="ui-triangle arrow-icon ml5 mr5"></i></div>
+        </div>
+
+        <div class="popup-content clearfix content-bottom">
+            <div class="content-list" data-role="location-list">
+                <ul>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li class="li-cur">清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                    <li>清新</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="popup-footer">
+            <div class="popup-footer-btn reset fb" data-role="reset">重置</div>
+            <div class="popup-footer-btn confirm fb" data-role=confirm">确定</div>
+        </div>
+    </div>
+</div>
+</body>
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+    var LZ = require('wap-huipai:global/lazyload/lazyload');
+    var go_top = require('wap-huipai:global/go_top/go_top');
+
+    $(function(){
+
+
+
+        new LZ($('body'),{
+            // size : window.innerWidth
+        });
+
+        // 返回顶部按钮
+        new go_top({
+            render_ele : $('body')
+        })
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "wap-huipai:iconfont_js/index.js": {
+            "url": "http://51snap.yueus.com//static/wap/iconfont_js/index.js"
+        },
+        "wap-huipai:global/abnormal/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/abnormal/index.js"
+        },
+        "wap-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"
+        },
+        "wap-huipai:global/frozen": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/frozen.js"
+        },
+        "wap-huipai:global/go_top/go_top": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/go_top/go_top.js"
+        },
+        "wap-huipai:global/header/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/header/main.js"
+        },
+        "wap-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"
+        },
+        "wap-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "wap-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"
+        },
+        "wap-huipai:global/list/list": {
+            "deps": [
+                "wap-huipai:global/utility/index",
+                "wap-huipai:global/abnormal/index",
+                "wap-huipai:global/frozen",
+                "wap-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/list/list.js"
+        },
+        "wap-huipai:global/location_sel/location_sel": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/location_sel/location_sel.js"
+        },
+        "wap-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/main.js"
+        },
+        "wap-huipai:global/swiper/1.0.0/swiper3.07.min": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"
+        },
+        "wap-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/ua/index.js"
+        },
+        "wap-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/cross_domain_storage.js"
+        },
+        "wap-huipai:global/utility/index": {
+            "deps": [
+                "wap-huipai:global/cookie/index",
+                "wap-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+	<!-- <link rel="import" href="../webcontrol/head.tpl.htm?__inline"> -->
+	<!-- swiper css -->
+	<link href="http://51snap.yueus.com//static/wap/style/camera/index-page.css" type="text/css" rel="stylesheet" />
+	
+<link rel="stylesheet" type="text/css" href="http://51snap.yueus.com//static/wap/modules/global/header/header.css">
+<link rel="stylesheet" type="text/css" href="http://51snap.yueus.com//static/wap/modules/global/list/list.css">
+<link rel="stylesheet" type="text/css" href="http://51snap.yueus.com//static/wap/modules/global/abnormal/main.css">
+
+</head>
+<body bgcolor="#fafafa">
+<main role="main">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="camera-page">
+		<div class="p1th">
+			<div class="item-wrap">
+				<div class="img-item">
+					<i class="img" style="background-image:url({%$photographers_info.un_data.cover%})">
+						
+					</i>
+					<div class="txt clearfix">
+						<div class="box-1 clearfix">
+							<div class="lbox fldi">
+								<div class="ui-avatar-icon ui-avatar-icon-60">
+									<i style="background-image:url({%$photographers_info.un_data.avatar%})"></i>
+								</div>
+
+							</div>
+							<div class="rbox fldi">
+								<div class="txt-1 color-fff ">
+									<p class="name f16">{%$photographers_info.un_data.name%}</p>
+									<p class="number"><span class="number-1">套系数 : {%$photographers_info.un_data.goods_num%}</span><span class="number-2">咨询数 : {%$photographers_info.un_data.consults%}</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="txt-item">
+					<div class="box-1">
+						<span class="address-icon yue-ui-icon-size-16"></span>
+						<span class="txt">{%$photographers_info.un_data.location_name%}</span>
+					</div>
+					<div class="box-2 f14">
+						{%$photographers_info.un_data.introduce|nl2br|truncate:150:"...":true %}
+					</div>
+					<div class="box-3 tc">
+						<i class="dib icon-font i-iconfont-allow icon-font-size-16"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="item-wrap">
+				<div class="sort-filter-item-tab-1">
+						<div class="item-wrap">
+							<div class="sort-item f14 color-666">
+								<ul class="list">
+									<li sort-type="0" class="cur">
+										<span class="txt">
+											综合
+										</span>
+									</li>
+									<li sort-type="1">
+										<span class="txt">
+											人气
+										</span>
+									</li>
+									<li sort-type="2">
+										<span class="txt">
+											最新
+										</span>
+									</li>
+									<li class="clearfix" sort-type="3">
+										<div class="item">
+											<span class="txt fldi">
+												价格
+											</span>
+											<span class="arrow-item fldi">
+												<i class="icon-font i-iconfont-shixinxiaojiantou shixinxiaojiantou-up cur"></i>
+												<i class="icon-font i-iconfont-shixinxiaojiantou "></i>
+											</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="filter-item" data-role="filter-item-btn">
+								<i class="filter-icon yue-ui-icon-size-22"></i>
+							</div>
+						</div>
+				</div>
+				<div class="wap-list-mod-1">
+						<div id="render_item_ele"></div>
+						
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="filter-item-pop dn" data-role="filter-item-pop">
+		<div class="fade" data-role="fade-item"></div>
+		<div class="item-wrap">
+			<div class="item ui-border-b">
+				<div class="title-item f14 color-333">
+					套系类型
+				</div>
+				<div class="filter-item">
+					<ul class="list clearfix f14 color-666">
+						<li>
+							婚纱写真
+						</li>
+						<li>
+							婚纱写真
+						</li>
+						<li>
+							婚纱写真
+						</li>
+						<li>
+							婚纱写真
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+			<div class="button-item">
+				<a href="#" class="tdn ui-border-b">
+					<button class="ui-button  ui-button-block ui-button-100per  ui-button-size-h50 color-24c reset-btn">
+					           <span class="ui-button-content f14">重置</span>
+					</button>
+				</a>
+				<a href="#" class="tdn ui-border-b">
+					<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h50">
+					           <span class="ui-button-content f14">确定</span>
+					</button>
+				</a>
+			</div>
+		</div>
+	</div>	
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/ua/index.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/utility/index.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/header/main.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/abnormal/index.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/frozen.js"></script>
+<script type="text/javascript" src="http://51snap.yueus.com//static/wap/modules/global/list/list.js"></script>
+
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+	var LZ = require('wap-huipai:global/lazyload/lazyload');
+	var header = require('wap-huipai:global/header/main');
+	var list_item_class = require('wap-huipai:global/list/list');
+	var template  = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n	<li class=\"pic-list-width-44-percent\">\n		<div class=\"img-item\">\n			<i class=\"img\" style=\"background-image:url(";
+  if (helper = helpers.images) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.images); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + ")\"></i>\n			<div class=\"txt f12 color-fff\">\n				";
+  if (helper = helpers.consults) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.consults); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n			</div>\n		</div>\n		<div class=\"txt-item\">\n			<div class=\"box-1 color-666\">\n				";
+  if (helper = helpers.titles) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.titles); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n			</div>\n			<div class=\"box-2 clearfix\">\n				<div class=\"txt-1 fldi color-fa6\">\n					";
+  if (helper = helpers.prices) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.prices); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n				</div>\n				<div class=\"txt-2 frdi color-ccc\">\n					";
+  if (helper = helpers.location_name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.location_name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n				</div>\n			</div>\n		</div>\n	</li>\n	";
+  return buffer;
+  }
+
+  buffer += "\n\n\n<ul class=\"list clearfix\">\n	";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.list), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n</ul>\n";
+  return buffer;
+  });
+	$(document).ready(function() {
+
+		// 渲染头部
+		var header_obj = header.init({
+			ele : $("#global-header"), //头部渲染的节点
+			title:"{%$photographers_info.un_data.name%}",
+			header_show : true , //是否显示头部
+			mt_0_ele : $('#seller-detail-page'), //如果头部隐藏，要把当前页节点margin-top改为0
+			right_icon_show : true, //是否显示右边的按钮
+			share_icon : 
+			{
+				show :false,  //是否显示分享按钮icon
+				content:""
+			},
+			omit_icon :
+			{
+				show :false,  //是否显示三个圆点icon
+				content:""
+			},
+			show_txt :
+			{
+				show :false,  //是否显示文字
+				content:"编辑"  //显示文字内容
+			},
+			search_icon : 
+			{
+				show :true,  //是否搜索icon
+				content:""  //显示文字内容
+			}
+		});
+
+		var _page_params = {
+			type_id : '',
+			user_id : '{%$user_id%}',
+			sort : '',
+			order : ''
+		}
+
+		var list_obj = new list_item_class(
+		{
+			//渲染目标
+			ele : $('#render_item_ele'),
+			//请求地址
+			url :  window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/get_list_info.php',
+			//传递参数
+			params : _page_params,
+			//模板
+			template : template,
+			//lz是否开启参数
+			is_open_lz_opts : true
+
+		});
+	    
+	    // 筛选弹窗
+	    $('[data-role="fade-item"]').click(function() {
+	            $('[data-role="filter-item-pop"]').addClass('dn');
+	    });
+
+	    $('[data-role="filter-item-btn"]').on('click' ,function(event) {
+	    	$('[data-role="filter-item-pop"]').removeClass('dn');
+	    });
+	 
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>

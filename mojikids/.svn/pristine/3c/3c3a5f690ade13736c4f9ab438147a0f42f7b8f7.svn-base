@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017120/main.d624110.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.39fdb82.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+		地区选择
+	</title>
+
+
+    
+</head>
+
+<body >
+	<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+    <main role="main">
+    	<div id="page-container" class="page-container page-view" >
+            <moji-area  :location-id="id" ref="area" @confirm="area_confirm"></moji-area>
+
+            <button class="ui-button ui-button-block ui-button-100per ui-button-size-x ui-button-bg-ff6-has-active" @click="open_area">
+				<span class="ui-button-content f14">打开地区选择</span>
+			</button>
+    	</div>
+    </main>
+
+
+
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+	(function()
+    {
+        // 加载地区组件
+        var Area = require.syncLoad('wap-kids:widget/area/index');
+
+        // 安装Area 模块
+		Vue.component(Area.name, Area);
+
+		new Vue
+		({
+			el: '#page-container',
+			mounted: function()
+			{
+
+			},
+			data:function()
+            {
+                return {
+                    visible : false,
+                    id : '101029002',
+
+                }
+            },
+			methods:
+			{
+                open_area : function()
+                {
+                    var self = this
+
+                    self.$refs.area.open();
+
+                },
+                /**
+                 * 获取选中的地区
+                 * @param  {[type]} data [description]
+                 * @return {[type]}      [description]
+                 */
+                area_confirm : function(data)
+                {
+                    var self = this;
+
+                    console.log(data);
+                }
+			}
+		});
+	})();
+</script>

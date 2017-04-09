@@ -1,0 +1,58 @@
+<?php
+
+
+// 引用头部、底部、统计
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/head.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/footer.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/tj.php';
+
+// 公共头部和底部
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/global-footer-bar.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/global-top-bar.php';
+
+// 读取模板
+$tpl = getSmartyTemplate('index.tpl.htm', PAIZHAO_TEMPLATES_ROOT.'pc/goods/');   
+
+
+// 获取头、底部、统计结构
+$pc_global_head = _get_wbc_head(array('use_vue'=>1));
+$pc_global_footer = _get_wbc_footer();
+$pc_global_tj = _get_wbc_tj();
+
+$pc_global_footer_bar = _get_wbc_footer_bar();
+$pc_global_top_bar = _get_wbc_global_top_bar();
+
+
+
+
+$goods_id = (int)$_INPUT['goods_id'];
+$user_id = (int)$_INPUT['user_id'];
+
+
+$paizhao_goods_obj = POCO::singleton('pai_paizhao_goods_class');
+
+$goods_info = $paizhao_goods_obj->get_goods_info(294,true,true);
+
+
+
+if ($_INPUT['print']) 
+{
+    print_r($goods_info);
+}
+
+
+
+// 输出数据
+$tpl->assign('pc_global_head',$pc_global_head);
+$tpl->assign('pc_global_footer',$pc_global_footer);
+$tpl->assign('pc_global_tj',$pc_global_tj);
+$tpl->assign('pc_global_footer_bar',$pc_global_footer_bar);
+$tpl->assign('pc_global_top_bar',$pc_global_top_bar);
+
+
+
+$tpl->assign('goods_info',$goods_info);
+
+
+
+?>

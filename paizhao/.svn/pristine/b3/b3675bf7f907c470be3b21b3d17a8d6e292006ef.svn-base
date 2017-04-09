@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>首页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/camera/index-page.scss" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="camera-page font_wryh">
+		
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		require.async('pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0',function()
+		{
+			$('#foo2').carouFredSel({
+				prev: '#prev2',
+				next: '#next2',
+				pagination: "#pager2",
+				auto: true,
+				scroll:
+				{
+					fx: "crossfade"
+				}
+			 });
+
+			$('#foo3').carouFredSel({
+				prev: '#prev3',
+				next: '#next3',
+				auto: false
+			 });
+		});
+
+		// 图片后加载处理
+		var lazyload = require('../../modules/global/lazyload/lazyload');
+	
+		var lazyload_obj1 = new lazyload({
+			contain: $('[data-role="img_cen1"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false
+			},
+			flag : 'data-src'
+		});
+		var lazyload_obj2 = new lazyload({
+			contain: $('[data-role="img_cen2"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false
+			},
+			flag : 'data-src'
+		});
+		var lazyload_obj3 = new lazyload({
+			contain: $('[data-role="img_cen3"]'), // 后加载的父容器  
+			img_center: {
+				is_open : true,
+				width : '285',
+				height : '285'
+			},
+			flag : 'data-src'
+		});
+		var lazyload_obj4 = new lazyload({
+			contain: $('[data-role="img_cen4"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false
+			},
+			flag : 'data-src'
+		});
+
+		var lazyload_obj5 = new lazyload({
+			contain: $('[data-role="img_cen5"]'), // 后加载的父容器  
+			img_center: {
+				is_open : true,
+				width : '128',
+				height : '128'
+			},
+			flag : 'data-src'
+		});
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

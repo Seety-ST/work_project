@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>paizhao-ui</title>
+	
+	<script src="http://paizhao.yueus.com/static/pc/lib/base.js"></script>
+	<script src="http://static-c1.yueus.com/yue_ui/js/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	$(function() {
+	    
+
+	    $('#go-back').on('click', function(event) {
+	        window.location.href = './index.htm' ;
+	    });
+
+	    $('#go-top').on('click', function(event) {
+	        $("html,body").animate({scrollTop:0},100);
+	    });
+
+
+	});
+</script>
+
+	
+	
+
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/no-use/no-use.css">
+<!-- 基本 -->
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/common/main.css">
+<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/ui-color.css">
+<!-- 当前页css  -->
+	<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ui/ui-button.css">
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+   
+
+
+<body>
+
+	<!-- 返回 -->
+	<div class="pop-back" id="pop-back">
+		<ul class="list clearfix">
+			<li id="go-back">返回首页</li>
+			<li id="go-top">返回顶部</li>
+		</ul>        
+	</div>
+	
+	<div class="pc-ui-frame clearfix font_wryh">
+
+		
+		<div class="ui-frame-content">
+
+			<div class="content">
+				<h3 class="main-title">按钮 ui-button.scss</h3>
+
+				<!-- 模板start -->
+				<div class="model">
+					<button class="ui-button ui-button-bg-fbb ui-button-block ui-button-100per  ui-button-size-h32">
+					           <span class="ui-button-content f14">高度32px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h32">
+					           <span class="ui-button-content f14">高度32px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-border-fbb ui-button-block ui-button-100per  ui-button-size-h32">
+					           <span class="ui-button-content f14">高度32px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-border-fbb  ui-button-block ui-button-100per  ui-button-size-h32">
+					           <span class="ui-button-content f14">高度32px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-bg-fbb ui-button-block ui-button-100per  ui-button-size-h36">
+					           <span class="ui-button-content f14">高度36px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h36">
+					           <span class="ui-button-content f14">高度36px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-bg-fbb ui-button-block ui-button-100per  ui-button-size-h40">
+					           <span class="ui-button-content f14">高度40px</span>
+					</button>
+					<br />
+					<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h40">
+					           <span class="ui-button-content f14">高度40px</span>
+					</button>
+					<br />
+				</div>
+				<!-- 模板end -->
+
+			</div>
+		   
+			
+
+			<!-- 页面代码 -->
+ 
+		</div>
+	</div>
+
+</body>
+<script>
+	
+</script>
+</html>
+
+

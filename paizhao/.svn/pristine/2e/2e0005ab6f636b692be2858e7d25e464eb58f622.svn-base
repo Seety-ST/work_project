@@ -1,0 +1,10 @@
+.camera-page .p1th {
+  padding: 50px 0px;
+  border-bottom: 1px solid #eee; }
+  .camera-page .p1th .lbox .address-txt {
+    text-align: center; }
+    .camera-page .p1th .lbox .address-txt .icon {
+      vertical-align: middle; }
+    .camera-page .p1th .lbox .address-txt .txt {
+      display: inline-block;
+      vertical-align: middle; }

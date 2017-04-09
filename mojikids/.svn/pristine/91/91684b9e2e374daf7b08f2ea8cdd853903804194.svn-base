@@ -1,0 +1,12 @@
+.index-page .img img {
+  max-width: 100%;
+}
+
+.index-page .txt {
+  text-align: center;
+  padding-top: 0.15rem;
+}
+
+.index-page .link {
+  padding: 0.2rem 0.15rem 0.15rem 0.15rem;
+}

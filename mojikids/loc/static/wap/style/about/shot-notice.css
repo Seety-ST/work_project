@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 拍摄须知
+ */
+
+.shot-notice-page .p1th .item-wrap {
+  padding: 0 0.15rem;
+}
+
+.shot-notice-page .p1th .item-wrap dl {
+  margin: 0.2rem 0 0.05rem 0;
+}
+
+.shot-notice-page .p1th .item-wrap dl dd {
+  margin-top: 0.1rem;
+}
+
+.shot-notice-page .p2th .item-wrap .img-item {
+  width: 100%;
+  height: 1.2rem;
+}
+
+.shot-notice-page .p2th .item-wrap .img-item i.img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(http://localhost/mojikids/loc/static/wap/image/about/bg-img-690x240.e94a261.jpg) no-repeat center;
+  background-size: contain;
+}

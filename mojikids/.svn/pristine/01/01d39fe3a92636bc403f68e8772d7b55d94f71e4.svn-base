@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        DEMO
+    </title>
+    {%$wap_global_head%}
+
+    
+</head>
+
+<body >
+
+<main role="main">
+    <div id="page-container" class="page-container" >
+        <h1>这是一个DEMO页面</h1>
+
+        <div class="btn">
+            <div class="share-box" data-role="share-box">分享demo</div>
+        </div>
+
+    </div>
+</main>
+
+</body>
+
+</html>
+{%if $is_wap%}
+<script type="text/javascript" src="//static-c1.yueus.com/yue_ui/upload/1.0.2/webuploader.zepto.min.js"></script>
+{%/if%}
+
+
+{%$wap_global_footer%}
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script src="http://localhost/yueyue_dev/yue_ui/share/yueyue_share_v4.js" ></script>
+
+<script type="text/javascript">
+    (function()
+    {
+
+        var Util = require.syncLoad('wap-kids:global/util/index');
+        var WXSDK = require.syncLoad('wap-kids:global/wxsdk/index');
+        var App  = require.syncLoad('wap-kids:global/app/index');
+        var UA   = Util.ua;
+
+        //如果是微信需要穿wx_json
+	    var __SHARE_TEXTS = {%$share_text%};
+        __SHARE_TEXTS.result_data = __SHARE_TEXTS.res;
+        delete __SHARE_TEXTS.res;
+	    //调用分享方法
+	    var share_obj = new yueyue_share_class(
+    	{
+    		ele : document.querySelector('.share-box'),
+    		wx_json : {},
+            App : App,
+            UA : UA,
+            WXSDK : WXSDK,
+            share_text : __SHARE_TEXTS
+    	});
+
+    })();
+</script>
+
+{%$wap_global_tj%}

@@ -1,0 +1,65 @@
+<?php
+/*
+ * //下单操作页面
+ * author //星星
+ *
+*/
+
+include_once('../../fe_include/common.inc.php');
+
+//确认订单页面输入的内容
+$phone = (int)$_INPUT["phone"];
+$username = trim($_INPUT["username"]);
+$baby_age = trim($_INPUT["baby_age"]);
+$email = trim($_INPUT["email"]);
+$description = trim($_INPUT["description"]);
+//相关内容提交
+$service_time = trim($_INPUT["service_time"]);
+$goods_id = (int)$_INPUT["goods_id"];
+$standard_id = (int)$_INPUT["standard_id"];
+$store_id = (int)$_INPUT["store_id"];
+$buy_num = (int)$_INPUT["buy_num"];
+$timezone_id = (int)$_INPUT["timezone_id"];
+
+
+
+//入库前形式处理
+
+
+$param = array('user_id' => $yue_login_id,
+    'goods_id' =>$goods_id,
+    'store_id' => $store_id,
+    'standard_id' => $standard_id,
+    'buy_num' =>$buy_num,
+    'service_time'=>date("Y-m-d",$service_time),
+    "timezone_id"=>$timezone_id,
+    'username'=>$username,
+    'phone'=>$phone,
+    'description'=>$description,
+    'email'=>$email,
+    'baby_age'=> $baby_age
+
+);
+
+if(MALL_UA_IS_WEIXIN)
+{
+    $param["order_from"] = "weixin";
+}
+else
+{
+    $param["order_from"] = "wap";
+}
+
+
+
+$submit_param_array = $param;
+
+//print_r($submit_param_array);
+
+// 获取数据
+$ret = get_api_result('trade/submit_order.php',$submit_param_array);
+
+$output_arr["data"] = $ret["data"];
+
+mojikids_mobile_output($output_arr,false);
+?>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/base.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/common/main.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-no-use.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/no-use/yue-ui-not.scss">
+	<link charset="utf-8" rel="stylesheet" href="../../modules/global/layer/need/layer.css">
+	<script src="/lib/base.js"></script>
+   
+
+	<!-- 列表 -->
+	<link charset="utf-8" rel="stylesheet" href="../../style/ui/paizhao-ui-dialog.scss">
+
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+</head>
+
+
+<header class="global-header " >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">弹窗</h3>
+	</div>
+</header>
+  
+
+
+<!-- 页面内容start -->
+	<div class="model f14">
+
+		<div id="test-1" class="f16 cp mt20 dib">点击测试（常规）</div>
+
+		<br />
+
+	</div>
+<!-- 页面内容end -->
+
+</body>
+
+
+<script>
+	require('../../modules/global/layer/layer.js');	
+	$('#test-1').on('click', function(event) {
+
+		console.log(layer);
+
+		var index = layer.open({
+			  style: 'border:none; background-color:#78BA32; color:#fff;',
+			  content:'内容'
+
+		});
+
+	});
+</script>
+
+</html>

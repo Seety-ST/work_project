@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>摄影师主页</title>    
+    {%$pc_global_head%}
+    <script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "pc-huipai:carouFredSel/jquery.carouFredSel-5.5.0": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/carouFredSel/jquery.carouFredSel-5.5.0.js"
+        },
+        "pc-huipai:global/cookie/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"
+        },
+        "pc-huipai:global/layer/extend/layer.ext": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/extend/layer.ext.js"
+        },
+        "pc-huipai:global/layer/layer": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"
+        },
+        "pc-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "pc-huipai:global/utility/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"
+        },
+        "pc-huipai:global/list/list": {
+            "deps": [
+                "pc-huipai:global/utility/index",
+                "pc-huipai:global/lazyload/lazyload"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/list/list.js"
+        },
+        "pc-huipai:global/main": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/main.js"
+        },
+        "pc-huipai:global/ua/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"
+        },
+        "pc-huipai:global/utility/cross_domain_storage": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/cross_domain_storage.js"
+        },
+        "pc-huipai:global/utility/index": {
+            "deps": [
+                "pc-huipai:global/cookie/index",
+                "pc-huipai:global/ua/index"
+            ],
+            "url": "http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"
+        },
+        "pc-huipai:header_search/index": {
+            "url": "http://paizhao.yueus.com/static/pc/modules/header_search/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+    <link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/style/ptjs/index-page.css">
+<link type="text/css" rel="stylesheet" href="http://paizhao.yueus.com/static/pc/modules/global/layer/skin/layer.css">
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	
+
+	<div class="ptjs-page">
+		
+		<div class="p1th">
+			<div class="w1200">
+				<div class="item-wrap clearfix">
+					<div class="logo-item fldi">
+						<img src="http://paizhao.yueus.com/static/pc/image/ptjs/logo-img-149x122.png" />
+					</div>
+					<div class="txt-item fldi">
+						<p class="en-title color-666">
+							YUEUS PHOTOGRAPHY  
+						</p>
+						<p class="cn-title color-333">
+							生活不只有诗和远方
+							还有此刻的美好
+						</p>
+						<p class="tips-txt color-666">
+							[留下一辑经典照片，与未来的自己想当年]
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th font_wryh">
+			<div class="w1200">
+				<ul class="list clearfix">
+					<li>
+						<div class="img-item">
+							<img src="http://paizhao.yueus.com/static/pc/image/ptjs/camera-icon-92x92.png" />
+						</div>
+						<div class="txt-item">
+							<p class="title-txt">
+								创意个性摄影师 + 海量摄影风格
+							</p>
+							<p class="txt">6000+摄影套系</p>
+							<p class="txt">搭配专业的拍摄服务</p>
+							<p class="txt">只为追求完美的的照片品质</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/cookie/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/ua/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/utility/index.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/layer/layer.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://paizhao.yueus.com/static/pc/modules/global/lazyload/lazyload.js"></script>
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		var utility = require('pc-huipai:global/utility/index');  
+		require('pc-huipai:global/layer/layer');  
+		
+		
+	
+		
+
+		// 私人订制按钮点击促发的事件
+		var data={
+			user_id :  {%$user_id%}
+		}
+
+		$('[data-role="srdz-btn"]').on('click', function(event) {
+			utility.ajax_request
+			({
+				url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN']+'camera/add_consult_button.php',
+				data : data,
+				cache: false,
+				beforeSend: function()
+				{
+
+				},
+				success: function(data)
+				{
+					
+				},
+				error: function(data)
+				{
+					
+				},
+				complete:function(){
+					
+					
+					
+				}
+			});
+		
+			var index_1 = layer.confirm('<div class="pop-contact-mod"><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text" placeholder="您的称呼" /><input type="text" name=" " id="tel" class="input-text"  placeholder="留下您的电话，方便联系" /></div><div class="btn"><button data-role="submit_info_btn" class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h32"><span class="ui-button-content f14">提交</span></button></div><div class="num-box color-999">已有 <span class="num color-2bd">{%$photographers_info.un_data.consults%}</span> 人咨询此摄影套系</div></div>', 
+				{
+					title:  ['<i class="code-icon"></i>添加摄影顾问微信', 'background-color:#fff;border-bottom:none;'], //不显示标题
+					shade: 0.5,
+					move: false,
+					area: ['600px'],
+					btn: '', //按钮
+					skin : 'pai_zhao_camera_class',
+				}, function(){
+
+				}, function(){
+
+			});
+
+			$('[data-role="submit_info_btn"]').on('click', function(event) {
+
+				var user_name = $.trim($('#user_name').val())
+				var tel = $.trim($('#tel').val())
+				if (!user_name) 
+				{
+					alert('请输入您的称呼');
+					return ;
+				}
+				if (!tel) 
+				{
+					alert('请输入您的电话号码');
+					return ;
+				}
+
+				var phone_len = /^\d{11}$/;
+				if(!phone_len.exec( parseInt(tel)))
+				{ 
+					alert('请输入正确手机号码');
+					return ;
+				}
+
+				utility.ajax_request
+				({
+					url: window.__HUIPAI_GLOBAL['AJAX_DOMAIN'] + 'camera/add_contact_info.php',
+					data: 
+					{
+						name : user_name,
+						mobile : tel ,
+						user_id : '{%$user_id%}' 
+
+					},
+					dataType: 'json',
+					type: 'POST',
+					cache: false,
+					beforeSend: function() 
+					{
+						
+					},
+					success: function(data)
+					{
+						
+						layer.close(index_1);
+						if (data.result_data.result == 1) 
+						{
+							var index_2 = layer.confirm('<div class="pop-contact-success-mod pop-contact-success-mod-1"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">直接加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"><i class="icon  icon-smile-face ui-icon-size-44 dib"></i></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+							{
+									title: ['', 'background-color:#fff;border-bottom:none;'], //不显示标题
+									shade: 0.5,
+									move: false,
+									area: ['600px'],
+									btn: '', //按钮
+									skin : 'pai_zhao_camera_class',
+								}, function(){
+
+								}, function(){
+							});
+						}
+						else
+						{
+							var index_3 = layer.confirm('<div class="pop-contact-success-mod"><div class="wbox clearfix"><div class="lbox fldi"><div class="img"></div><div class="txt color-666 f14">直接加摄影顾问微信</div></div><div class="rbox fldi"><div class="img"><i class="icon icon-normal-face ui-icon-size-44 dib"></i></div><div class="txt"><p class="p1">' + data.result_data.message + '</p></div></div></div></div>', 
+							{
+									title: ['', 'background-color:#fff;border-bottom:none;'], //不显示标题
+									shade: 0.5,
+									move: false,
+									area: ['600px'],
+									btn: '', //按钮
+									skin : 'pai_zhao_camera_class',
+								}, function(){
+
+								}, function(){
+									//  取消 do something
+
+							});
+						}
+					},   
+					error: function() 
+					{
+						
+					},    
+					complete: function() 
+					{
+
+					} 
+				});
+
+			});
+		});
+		var lazyload = require('pc-huipai:global/lazyload/lazyload');
+		var lazyload_obj1 = new lazyload({
+			contain: $('[data-role="img_cen1"]'), // 后加载的父容器  
+			img_center: {
+				is_open : false,
+				width : '285',
+				height : '285'
+			},
+			flag : 'data-src'
+		});
+	});
+
+
+</script>
+
+{%$pc_global_tj%}
+</html>

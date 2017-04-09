@@ -1,0 +1,487 @@
+body {
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/body-bg.cc7aa64.jpg) no-repeat center top;
+  background-size: 100% auto;
+  background-color: #ffe23d;
+  overflow-x: hidden;
+}
+
+.open-store-index .item-wrap .p1th .title {
+  padding-top: 2.3rem;
+}
+
+.open-store-index .item-wrap .p2th {
+  padding: 0.17rem 0.21rem 0 0.21rem;
+}
+
+.open-store-index .item-wrap .p2th li {
+  width: 1.31rem;
+  margin: 0.1rem 0 0 0.21rem;
+  float: left;
+}
+
+.open-store-index .item-wrap .p2th li .img-item {
+  width: 1.15rem;
+  height: 1.15rem;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/li-bg-1.png) no-repeat center center;
+  background-size: 100%;
+  padding: 0.08rem;
+}
+
+.open-store-index .item-wrap .p2th li .img-item img {
+  width: 100%;
+}
+
+.open-store-index .item-wrap .p2th li .txt-item {
+  width: 1.11rem;
+  height: 0.25rem;
+  margin: 0.07rem auto 0;
+  line-height: 0.25rem;
+  background-color: #ef9300;
+  border-radius: 0.04rem;
+}
+
+.open-store-index .item-wrap .p2th li.else-li .img-item {
+  width: 1.31rem;
+  height: 1.63rem;
+  background: none;
+  padding: 0;
+}
+
+.open-store-index .item-wrap .p3th {
+  position: relative;
+  padding-top: 0.9rem;
+}
+
+.open-store-index .item-wrap .p3th .loading-item {
+  width: 0.61rem;
+  height: 0.92rem;
+  position: absolute;
+  top: -0.3rem;
+  right: -0.2rem;
+  -webkit-backface-visibility: visible;
+  -webkit-animation-name: loadingimg;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: step-start;
+}
+
+.open-store-index .item-wrap .p3th .loading-item img {
+  width: 100%;
+}
+
+.open-store-index .item-wrap .p3th .title-item {
+  width: 3.42rem;
+  height: 0.67rem;
+  margin: 0 auto;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/title-img-684x134.png) no-repeat center;
+  background-size: 100%;
+}
+
+.open-store-index .item-wrap .p3th .title-item .title {
+  padding-top: 0.46rem;
+}
+
+.open-store-index .item-wrap .p3th .tips-btn {
+  width: 1.19rem;
+  height: 0.26rem;
+  line-height: 0.26rem;
+  margin: 0.16rem auto;
+  color: #eb2a42;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-bg-238x53.png) no-repeat center;
+  background-size: 100%;
+}
+
+.open-store-index .item-wrap .p3th .list li {
+  margin-top: 0.56rem;
+}
+
+.open-store-index .item-wrap .p3th .list li .img-item {
+  width: 2.81rem;
+  height: 2.81rem;
+  padding: 0.17rem;
+  margin: 0 auto;
+  background: rgba(239, 147, 0, 0.3);
+  border-radius: 0.05rem;
+  position: relative;
+}
+
+.open-store-index .item-wrap .p3th .list li .img-item .img img {
+  width: 100%;
+  display: block;
+  border-radius: 0.03rem;
+}
+
+.open-store-index .item-wrap .p3th .list li .img-item .logo-img {
+  width: 0.92rem;
+  height: 0.61rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.46rem;
+  top: -0.43rem;
+}
+
+.open-store-index .item-wrap .p3th .list li .img-item .logo-img img {
+  width: 100%;
+}
+
+.open-store-index .item-wrap .p3th .list li .img-item.img-item-style-1 .img img {
+  border: 0.02rem solid #ea68a2;
+}
+
+.open-store-index .item-wrap .p3th .list li .img-item.img-item-style-2 .img img {
+  border: 0.02rem solid #ac6a00;
+}
+
+.open-store-index .item-wrap .p3th .list li .txt-item .box-1 {
+  width: 2.82rem;
+  height: 0.31rem;
+  line-height: 0.31rem;
+  margin: 0.2rem auto 0;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-img-2.png) no-repeat center;
+  background-size: 100%;
+}
+
+.open-store-index .item-wrap .p3th .list li .txt-item .box-1 .txt-1 {
+  color: #eb2a42;
+  padding-left: 0.15rem;
+}
+
+.open-store-index .item-wrap .p3th .list li .txt-item .box-1 .txt-2 {
+  color: #fff;
+  font-size: 0.19rem;
+  padding-right: 0.13rem;
+}
+
+.open-store-index .item-wrap .p3th .list li .txt-item .box-2 {
+  margin: 0.12rem 0;
+}
+
+.open-store-index .item-wrap .p3th .list li .txt-item .box-2 .btn {
+  width: 1.98rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  display: inline-block;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-img-3.png) no-repeat center;
+  background-size: 100%;
+  color: #fff;
+  font-weight: bold;
+}
+
+.open-store-index .item-wrap .p4th {
+  padding-top: 0.87rem;
+}
+
+.open-store-index .item-wrap .p4th .tips-btn {
+  width: 1.41rem;
+  height: 0.26rem;
+  line-height: 0.26rem;
+  margin: 0.16rem auto;
+  color: #eb2a42;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-img-283x53.png) no-repeat center;
+  background-size: 100%;
+}
+
+.open-store-index .item-wrap .p4th .list li {
+  margin-top: 0.5rem;
+}
+
+.open-store-index .item-wrap .p4th .list li .img-item {
+  width: 2.81rem;
+  height: 2.81rem;
+  padding: 0.17rem;
+  margin: 0 auto;
+  background: rgba(239, 147, 0, 0.3);
+  border-radius: 0.05rem;
+  position: relative;
+}
+
+.open-store-index .item-wrap .p4th .list li .img-item .img img {
+  width: 100%;
+  display: block;
+  border-radius: 0.03rem;
+}
+
+.open-store-index .item-wrap .p4th .list li .img-item .logo-img {
+  width: 0.92rem;
+  height: 0.61rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.46rem;
+  top: -0.43rem;
+}
+
+.open-store-index .item-wrap .p4th .list li .img-item .logo-img img {
+  width: 100%;
+}
+
+.open-store-index .item-wrap .p4th .list li .img-item.img-item-style-1 .img img {
+  border: 0.02rem solid #ea68a2;
+}
+
+.open-store-index .item-wrap .p4th .list li .img-item.img-item-style-2 .img img {
+  border: 0.02rem solid #ac6a00;
+}
+
+.open-store-index .item-wrap .p4th .list li .txt-item .box-1 {
+  width: 2.82rem;
+  height: 0.31rem;
+  line-height: 0.31rem;
+  margin: 0.2rem auto 0;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-img-2.png) no-repeat center;
+  background-size: 100%;
+}
+
+.open-store-index .item-wrap .p4th .list li .txt-item .box-1 .txt-1 {
+  color: #eb2a42;
+  padding-left: 0.15rem;
+}
+
+.open-store-index .item-wrap .p4th .list li .txt-item .box-1 .txt-2 {
+  color: #fff;
+  font-size: 0.19rem;
+  padding-right: 0.13rem;
+}
+
+.open-store-index .item-wrap .p4th .list li .txt-item .box-2 {
+  margin: 0.12rem 0;
+}
+
+.open-store-index .item-wrap .p4th .list li .txt-item .box-2 .btn {
+  width: 1.98rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  display: inline-block;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-img-3.png) no-repeat center;
+  background-size: 100%;
+  color: #fff;
+  font-weight: bold;
+}
+
+.open-store-index .item-wrap .p5th .time-item {
+  color: #eb2a42;
+}
+
+.open-store-index .item-wrap .p5th .code-item {
+  padding-top: 0.3rem;
+}
+
+.open-store-index .item-wrap .p5th .code-item .img img {
+  width: 1.12rem;
+  height: 1.12rem;
+  margin: 0 auto;
+  display: block;
+  border: 0.07rem solid #fff;
+}
+
+.open-store-index .item-wrap .p5th .code-item .txt {
+  padding-top: 0.08rem;
+  color: #eb2a42;
+}
+
+.open-store-index .item-wrap .p5th .btn-item {
+  width: 2.89rem;
+  height: 0.57rem;
+  line-height: 0.57rem;
+  margin: 0.2rem auto;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/btn-img-4.png) no-repeat center;
+  background-size: 100%;
+  font-weight: bold;
+}
+
+.open-store-index .item-wrap .p5th .logo-item {
+  width: 1.54rem;
+  height: 0.48rem;
+  margin: 0 auto;
+  margin-bottom: 0.15rem;
+}
+
+.open-store-index .item-wrap .p5th .logo-item img {
+  width: 100%;
+}
+
+.mint-popup {
+  background: transparent !important;
+}
+
+.receive-explain-pop .close-btn {
+  width: 0.33rem;
+  height: 0.33rem;
+  position: absolute;
+  left: 50%;
+  bottom: -0.55rem;
+  margin-left: -0.16rem;
+  display: inline-block;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/close-img.png) no-repeat center;
+  background-size: 100%;
+}
+
+.receive-explain-pop .item-wrap {
+  width: 3.18rem;
+  background-size: 100% auto;
+}
+
+.receive-explain-pop .item-wrap .title-item {
+  font-weight: bold;
+  width: 100%;
+  height: 0.78rem;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/pop-title-636x155.png) no-repeat center;
+  background-size: 100%;
+}
+
+.receive-explain-pop .item-wrap .title-item .title {
+  padding-top: 0.1rem;
+}
+
+.receive-explain-pop .item-wrap .item-1 {
+  padding: 0.27rem 0.18rem 0.2rem 0.3rem;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/pop-bg-636x656.png) no-repeat center bottom;
+  background-size: 100%;
+  background-color: #fff;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  position: relative;
+}
+
+.receive-explain-pop .item-wrap .item-1 li {
+  padding-bottom: 0.3rem;
+  padding-left: 0.12rem;
+}
+
+.receive-explain-pop .item-wrap .item-1 li .txt-item {
+  display: -webkit-box;
+  padding-left: 0.08rem;
+  font-size: 0.11rem;
+  position: relative;
+}
+
+.receive-explain-pop .item-wrap .item-1 li .txt-item .cicle-item {
+  width: 0.27rem;
+  height: 0.27rem;
+  text-align: center;
+  line-height: 0.29rem;
+  background: url(http://mojikids.yueus.com/static/wap/image/topic/open_store/circle-img-55x54.png) no-repeat center;
+  background-size: 100%;
+  position: absolute;
+  left: -0.26rem;
+  top: 50%;
+  margin-top: -0.13rem;
+  z-index: 2;
+}
+
+.receive-explain-pop .item-wrap .item-1 li .txt-item .txt-1 {
+  -webkit-box-flex: 1;
+}
+
+@-webkit-keyframes loadingimg {
+  0% {
+    top: -0.3rem;
+    right: -0.2rem;
+    -webkit-transform: rotate(0deg);
+  }
+
+  5% {
+    top: -0.35rem;
+    right: 0;
+    -webkit-transform: rotate(-2deg);
+  }
+
+  10% {
+    top: -0.36rem;
+    right: 0.2rem;
+    -webkit-transform: rotate(-4deg);
+  }
+
+  15% {
+    top: -0.37rem;
+    right: 0.4rem;
+    -webkit-transform: rotate(-6deg);
+  }
+
+  20% {
+    top: -0.36rem;
+    right: 0.6rem;
+    -webkit-transform: rotate(-8deg);
+  }
+
+  25% {
+    top: -0.35rem;
+    right: 0.8rem;
+    -webkit-transform: rotate(-10deg);
+  }
+
+  30% {
+    top: -0.3rem;
+    right: 1rem;
+    -webkit-transform: rotate(-12deg);
+  }
+
+  35% {
+    top: -0.28rem;
+    right: 1.2rem;
+  }
+
+  40% {
+    top: -0.27rem;
+    right: 1.4rem;
+  }
+
+  45% {
+    top: -0.26rem;
+    right: 1.6rem;
+  }
+
+  50% {
+    top: -0.25rem;
+    right: 1.8rem;
+  }
+
+  55% {
+    top: -0.35rem;
+    right: 2rem;
+  }
+
+  60% {
+    top: -0.35rem;
+    right: 2.2rem;
+  }
+
+  65% {
+    top: -0.35rem;
+    right: 2.4rem;
+  }
+
+  70% {
+    top: -0.35rem;
+    right: 2.6rem;
+  }
+
+  75% {
+    top: -0.35rem;
+    right: 2.8rem;
+  }
+
+  80% {
+    top: -0.35rem;
+    right: 3rem;
+  }
+
+  85% {
+    top: -0.35rem;
+    right: 3.2rem;
+  }
+
+  90% {
+    top: -0.35rem;
+    right: 3.4rem;
+  }
+
+  95% {
+    top: -0.35rem;
+    right: 3.6rem;
+  }
+
+  100% {
+    top: -0.35rem;
+    right: 3.8rem;
+  }
+}

@@ -1,0 +1,100 @@
+<?php
+
+/**
+ * 公共协议文件 ( 入口 )
+ *
+ * @author willike <chenwb@yueus.com>
+ * @since 2015-8-5
+ * @description 若非协议处理请求(include), 则 数据变量 必须为 $post_data
+ */
+// 定义 是否引用协议
+if (!defined('YUE_INVOCATION_PROTOCOL')) {
+    define('YUE_INVOCATION_PROTOCOL', TRUE); // 引入协议
+}
+// 定义是否 验证access_token
+if (!defined('YUE_INPUT_CHECK_TOKEN')) {
+    define('YUE_INPUT_CHECK_TOKEN', TRUE);
+}
+// 引入全局DB类
+//if (!isset($DB) || empty($DB)) {
+//    global $DB;
+//}
+// 引入协议
+$yue_protocol_path = str_replace('\\', '/', dirname(dirname(__FILE__))) . '/protocol/';
+require($yue_protocol_path . 'moji_protocol.inc.php');
+// 获取客户端的数据
+$cp = new yue_protocol_system();
+// 判断是否 使用协议
+if (YUE_INVOCATION_PROTOCOL === FALSE) {
+    // 使用 include 引入 ( for web )
+    if (empty($post_data)) {
+        $options['code'] = 204;
+        return $cp->output($options);
+    }
+    $client_data = $cp->get_input_process($post_data, YUE_INPUT_CHECK_TOKEN, FALSE);
+    if (!is_array($client_data)) {
+        $client_data = strpos($client_data, '{"') === 0 ? json_decode($client_data, TRUE) : array();
+    }
+} else {
+    // 正常请求 ( for APP )
+    $client_data = $cp->get_input(array('be_check_token' => YUE_INPUT_CHECK_TOKEN));
+}
+// 引入 框架
+require_once('/disk/data/htdocs232/poco/pai/poco_app_common.inc.php');
+// 引入 公共方法
+require_once('/disk/data/htdocs232/poco/pai/yue_admin/task/include/basics.fun.php');
+// 引入公共方法
+require_once('moji_interface.func.php');
+
+// 客户端类型 ios/android/web
+$os_type = $client_data['data']['os_type']; 
+// $version 版本号 $channel 渠道号
+$version_str = $client_data['data']['version'];  // 版本号
+list($version, $channel) = explode('_', $version_str);
+// 位置ID
+$location_id = trim($client_data['data']['param']['location_id']);
+// 统一处理 用户ID
+$user_id = trim($client_data['data']['param']['user_id']);
+if ($user_id == '' && YUE_INPUT_CHECK_TOKEN === TRUE) {
+    $options['data'] = array(
+        'result' => -100,
+        'message' => '请先登录',
+    );
+    return $cp->output($options);
+}
+if (!is_numeric($user_id)) {
+    $user_id = 0;
+}
+// 目标对象
+$target_id = trim($client_data['data']['param']['target_id']);
+$target_id = empty($target_id) ? $user_id : $target_id;
+
+// 条数限制
+$limit = trim($client_data['data']['param']['limit']);  // 传值如: 0,20
+if (empty($limit) || !preg_match('/^\d+,{1}\d+$/', $limit)) {
+    $page = intval($client_data['data']['param']['page']);  // 第几页
+    $rows = intval($client_data['data']['param']['rows']); // 每页限制条数(5-100之间)
+
+    $page = $page < 1 ? 1 : $page;
+    $lcount = $rows < 5 ? 5 : ($rows > 100 ? 100 : $rows);
+    $lstart = ($page - 1) * $lcount;  // 开始位置
+    $limit_str = $lstart . ',' . $lcount;
+} else {
+    list($lstart, $lcount) = explode(',', $limit);
+    $lstart = $lstart < 0 ? 0 : $lstart;
+    $lcount = $lcount > 100 ? 100 : ($lcount < 1 ? 1 : $lcount);
+    $limit_str = $lstart . ',' . $lcount;
+}
+// 请求平台
+$request_platform = $client_data['data']['param']['request_platform'];  
+if (!empty($request_platform)) {
+    if (!in_array($request_platform, array('weixin', 'pc', 'weixin_app', 'app', 'api'))) {
+        $options['data'] = array(
+            'result' => 0,
+            'message' => 'request platform invaild!',
+        );
+        return $cp->output($options);
+    }
+} else {
+    $request_platform = 'app';
+}

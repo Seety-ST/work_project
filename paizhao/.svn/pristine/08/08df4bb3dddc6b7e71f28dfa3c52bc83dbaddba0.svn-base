@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>约摄-POCO旗下的摄影师预约平台</title>   
+	<meta name="keywords" content="约摄,找摄影师拍照,写真拍摄,婚纱照,亲子照,艺术照,约拍,摄影师预约">
+	<meta name="description" content="约摄，一个提供海量高质量摄影师的约拍平台。这里摄影种类繁多，价格实惠。找摄影师拍照，就上约摄。"> 
+	{%$wap_global_head%}    
+	<!--RESOURCEMAP_PLACEHOLDER-->
+	<link rel="import" href="../webcontrol/head.tpl.htm?__inline">
+	<!-- swiper css -->
+	
+	<link href="../../style/goods/index-page.scss" type="text/css" rel="stylesheet" />
+	
+</head>
+<body bgcolor="#fafafa">
+<main role="main">
+	<!-- 头部内容 -->
+	<section id="global-header"></section>
+	<!-- 页面内容 -->
+	<div class="goods-detail-page">
+		<div class="p1th">
+			<div class="item-wrap">
+				<div class="img-item">
+					<i class="img" style="background-image:url({%$ret.goods_info.goods_data.images%})"></i>
+				</div>
+				<div class="txt-item">
+					<div class="box-1 f14">
+						<span class="type-txt">
+							{%$ret.goods_info.new_type_name%}
+						</span>
+						{%$ret.goods_info.goods_data.titles%}
+					</div>
+					<div class="box-2 clearfix">
+						<div class="lbox fldi color-fa6">
+							{%$ret.goods_info.goods_data.prices%}
+						</div>
+						<div class="rbox frdi color-aaa">
+							{%$ret.goods_info.consults%} 人咨询
+						</div>
+					</div>
+				</div>
+				<div class="promise-item ui-border-t">
+					<ul class="list clearfix">
+						<li>
+							<i class="dib icon-font i-iconfont-success icon-font-size-16"></i>
+							<span class="txt color-aaa">专业摄影师实名认证</span>
+							
+						</li>
+						<li>
+							<i class="dib icon-font i-iconfont-success icon-font-size-16"></i>
+							<span class="txt color-aaa">摄影顾问全程跟进</span>
+							
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="item-wrap">
+				<div class="title-item clearfix" data-role="gg-title-item">
+					<span class="f14 color-333 fldi">规格：</span><span class="color-24c" data-role="select-txt">4小时不含化妆</span>
+					<i class="dib icon-font i-iconfont-allow icon-font-size-16 frdi "></i>
+				</div>
+				<div class="item dn" data-role="gg-content">
+					<ul class="list f14 color-666 clearfix">
+						{%foreach $ret.goods_info.goods_prices_list as $val%}
+						<li data-price="{%$val.prices%}"  data-size="{%$val.name%}">
+							{%$val.prices%}/{%$val.name_val%}
+						</li>
+						{%/foreach%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="p3th">
+			<div class="item-wrap">
+				<div class="seller-info-item clearfix">
+					<div class="ui-avatar-icon ui-avatar-icon-45 fldi">
+						<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+					</div>
+					<div class="txt-item fldi">
+						<p class="box-1 color-333 f14">德兰哈比</p>
+						<p class="box-2 color-aaa">
+							已有9506人咨询TA 
+						</p>
+					</div>
+					<i class="dib icon-font i-iconfont-allow icon-font-size-16 frdi"></i>
+				</div>
+
+			</div>
+		</div>
+		<div class="p4th">
+			<div class="item-wrap">
+				<div class="nav-item">
+					<ul class="list f14 color-666">
+						<li class="ui-border-t ui-border-r cur">
+							套系详情
+						</li>
+						<li class="ui-border-t">
+							套系详情
+						</li>
+					</ul>
+				</div>
+				<div class="content">
+					<div class="item detail-item">
+						<div class="top-content">
+							<ul class="list">
+								<li class="">
+									<div class="lbox f14 color-aaa">
+										套系类型：
+									</div>
+									<div class="rbox color-333 f14">特色摄影</div>
+								</li>
+								<li class="">
+									<div class="lbox f14 color-aaa">
+										套系类型：
+									</div>
+									<div class="rbox color-333 f14">特色摄影</div>
+								</li>
+								<li class="">
+									<div class="lbox f14 color-aaa ">
+										套系类型：
+									</div>
+									<div class="rbox color-333 f14 ">广东省广州市天河区体育中心东门C1 摄影展棚风景区 </div>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom-cotent">
+							{%$ret.goods_info.goods_data.content%}
+						</div>
+					</div>
+					<div class="item size-item">
+						<div class="top-content">
+							<ul class="list">
+								<li class="">
+									<div class="lbox f14 color-aaa">
+										套系类型：
+									</div>
+									<div class="rbox color-333 f14">创意裸价: ¥60.00、尊享服务: ¥580.00标配服务: ¥80.00、创意裸价: ¥60.00尊享服务: ¥580.00、标配服务: ¥80.00</div>
+								</li>
+							
+							</ul>
+						</div>
+						<div class="bottom-cotent">
+							{%$ret.goods_info.goods_data.content%}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p5th">
+			<div class="item-wrap">
+				<div class="title-item tc f14 color-666">
+					看过此套系的人还喜欢
+				</div>
+				<div class="wap-list-mod-1">
+					<ul class="list clearfix">
+					
+						<li class="pic-list-width-44-percent">
+							<div class="img-item">
+								<i class="img" style="background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)"></i>
+								<div class="txt f12 color-fff">
+									12人咨询
+								</div>
+							</div>
+							<div class="txt-item">
+								<div class="box-1 color-666">
+									最懂你美丽的高颜值个人写高
+									颜值个人写高颜值个人写高
+								</div>
+								<div class="box-2 clearfix">
+									<div class="txt-1 fldi color-fa6">
+										￥500.00
+									</div>
+									<div class="txt-2 frdi color-ccc">
+										广州
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="pic-list-width-44-percent">
+							<div class="img-item">
+								<i class="img" style="background-image:url(http://51snap.yueus.com//static/pc/image/ui/285x285.jpg)"></i>
+								<div class="txt f12 color-fff">
+									12人咨询
+								</div>
+							</div>
+							<div class="txt-item">
+								<div class="box-1 color-666">
+									最懂你美丽的高颜值个人写高
+									颜值个人写高颜值个人写高
+								</div>
+								<div class="box-2 clearfix">
+									<div class="txt-1 fldi color-fa6">
+										￥500.00
+									</div>
+									<div class="txt-2 frdi color-ccc">
+										广州
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="more-item tc ui-border-t">
+					<span class="more-txt f14 color-24c">查看更多</span>
+					<i class="jiantou-icon"></i>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="consult-item" data-role="consult-btn">
+			<a href="#" class="tdn">
+				<button class="ui-button ui-button-bg-24c ui-button-block ui-button-100per  ui-button-size-h50">
+				           <span class="ui-button-content f14">拍摄咨询</span>
+				</button>
+			</a>
+		</div>
+	</div>
+
+
+	
+	<!-- 底部内容 -->
+</main>	
+
+</body>
+
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<!-- swiper js -->
+
+<script type="text/javascript">
+	var LZ = require('wap-huipai:global/lazyload/lazyload');
+	var header = require('wap-huipai:global/header/main');
+	$(document).ready(function() {
+
+		// 渲染头部
+		var header_obj = header.init({
+			ele : $("#global-header"), //头部渲染的节点
+			title:"{%$photographers_info.un_data.name%}",
+			header_show : true , //是否显示头部
+			mt_0_ele : $('#seller-detail-page'), //如果头部隐藏，要把当前页节点margin-top改为0
+			right_icon_show : true, //是否显示右边的按钮
+			share_icon : 
+			{
+				show :false,  //是否显示分享按钮icon
+				content:""
+			},
+			omit_icon :
+			{
+				show :false,  //是否显示三个圆点icon
+				content:""
+			},
+			show_txt :
+			{
+				show :false,  //是否显示文字
+				content:"编辑"  //显示文字内容
+			},
+			search_icon : 
+			{
+				show :true,  //是否搜索icon
+				content:""  //显示文字内容
+			}
+		});
+
+		require('wap-huipai:global/layer/layer');	  
+		$('[data-role="consult-btn"]').on('click', function(event) {
+
+			console.log(layer);
+
+			var layer1 = layer.open({
+				content:'<div class="pop-contact-mod"><i class="close-btn" data-role="close-pop-btn"></i><p class="p1 color-333 f16">留下您的联系方式<br />摄影顾问稍后与你沟通拍摄细节</p><div class="it"><input type="text" name=" " id="user_name" class="input-text f14" placeholder="您的称呼" /><input type="text" name=" " id="tel" class="input-text f14"  placeholder="留下您的电话，方便联系" /></div><a href="#" class="tdn"><button class="ui-button ui-button-bg-24c ui-button-block ui-button-border-24c ui-button-100per  ui-button-size-h45"><span class="ui-button-content f14">马上提交</span></button></a><a href="#" class="tdn"><button class="ui-button ui-button-border-24c ui-button-block ui-button-100per  ui-button-size-h45"><span class="ui-button-content f14">我想添加摄影顾问微信</span></button></a><div class="num-box color-999">已有 <span class="num color-2bd"> 23 </span> 人咨询TA</div></div>',
+				skin : 'pai_zhao_goods_class'
+
+			});
+			$('[data-role="close-pop-btn"]').on('click',  function(event) {
+				layer.close(layer1);
+			});
+
+		});
+		
+	    	// 点击选择规格
+	    	$('[data-role="gg-title-item"]').on('click',function(event) {
+	    		
+	    		if ($('[data-role="gg-content"]').hasClass('dn')) 
+	    		{
+	    		    $('[data-role="gg-content"]').removeClass('dn');
+	    		    $(this).find('.i-iconfont-allow').addClass('i-iconfont-allow-rotate');
+
+	    		}
+	    		else{
+	    			$('[data-role="gg-content"]').addClass('dn');
+	    			$(this).find('.i-iconfont-allow').removeClass('i-iconfont-allow-rotate');
+	    			
+	    			
+	    		}
+	    	});
+
+	    	$('[data-role="gg-content"]').find('li').on('click',  function(event) {
+	    		var select_txt = $(this).html();
+	    		$('[data-role="select-txt"]').html(select_txt);
+	    	});
+		
+
+	 
+	});
+</script>
+
+{%$wap_global_tj%}
+</html>
+
+
+
+
+
+

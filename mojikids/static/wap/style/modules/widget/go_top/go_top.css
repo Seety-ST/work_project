@@ -1,0 +1,14 @@
+.go-top-mod a {
+  width: 0.44rem;
+  height: 0.44rem;
+  display: block;
+  position: fixed;
+  right: 0.2rem;
+  bottom: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+  background: url(http://mojikids.yueus.com/static/wap/image/common/go-top-88x88.png);
+  width: 0.44rem;
+  height: 0.44rem;
+  background-size: cover;
+}

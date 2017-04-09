@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017213/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+	<title>
+		基础页面 范例
+	</title>
+
+
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/modules/layout/footer/footer.817f444.css" />
+</head>
+
+<body >
+	<header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+    <main role="main">
+    	<div id="page-container" class="page-container page-view" >
+            <h1>该页面有Vue实例，工具集使用例子</h1>
+            <moji-footer index="0" >
+
+            </moji-footer>
+    	</div>
+    </main>
+
+
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/modules/layout/footer/footer.35bf79d.js"></script>
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/modules/layout/footer/index.ef878e0.js"></script>
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+
+
+
+
+
+<script type="text/javascript">
+	(function()
+    {
+        // 加载footer模块
+        var Footer =  require('wap-kids:layout/footer/index');
+
+        // 加载toast组件
+		var Toast  =  require.syncLoad('wap-kids:widget/toast/index');
+
+        // 加载util
+        var Util =require.syncLoad('wap-kids:global/util/index');
+
+        // 安装footer
+        Vue.component(Footer.name, Footer);
+        // 安装toast
+		Vue.$toast = Vue.prototype.$toast = Toast;
+        // 使用toast
+		Vue.$toast({
+			message: '提示',
+			position: 'middle',
+			duration: 5000
+		});
+
+        // 异步请求
+        Util.request
+		({
+			url : 'http://www.51snap.cn/ajax/camera/get_list_info.php',
+			type : 'GET',
+			cache : true,
+			data :
+			{
+				type_id:'',
+				user_id:100076,
+				sort:'',
+				order:'',
+				page:1,
+			},
+			beforeSend : function()
+			{
+				console.log('请求中...')
+			},
+			success : function(res)
+			{
+				console.log(res)
+			}
+		});
+
+		new Vue
+		({
+			el: '#page-container',
+			mounted: function()
+			{
+
+			},
+			data:function()
+            {
+                return {
+                    cur : 0
+                }
+            },
+			methods:
+			{
+
+			}
+		});
+	})();
+</script>

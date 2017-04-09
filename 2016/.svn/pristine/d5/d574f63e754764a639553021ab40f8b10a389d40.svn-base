@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+
+	<title>无标题文档</title>
+</head>
+
+<body>
+	<div class="header">
+		<div class="head clearfix">
+			<a href="#" class="sc-icon"></a>
+			<h1 class="logo">
+				<a href="#"></a>
+			</h1>
+			<div class="btn-warp">
+				<a href="#" class="btn btn-join" style="display:none"></a>
+			</div>
+			<div class="nav clearfix">
+				<ul>
+					<li class="link-1">
+						<a href="#"></a>
+					</li>
+					<li class="link-2">
+						<a href="#"></a>
+					</li>
+					<li class="link-3">
+						<a href="#"></a>
+					</li>
+					<li class="link-4">
+						<a href="#"></a>
+					</li>
+					<li class="link-5">
+						<a href="#"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="index-page font_wryh">
+			<div class="path1">
+				<div class="listItem"></div>
+				<div class="mod-item">
+					<div class="mod-con">
+						<div class="con-item">
+							<div class="pathA">
+								<div class="list clearfix">
+									<ul>
+										<li>
+											<div class="img-item">
+												<img src="images/dk-img/1/1.jpg" />
+											</div>
+											<div class="text-item">
+												<dl>
+													<dt>谢墨</dt>
+													<dd>
+														<p>
+															业界顶尖摄影艺术家
+															<br />
+															中国摄影家协会会员
+															<br />
+															广东省摄影家协会副主席
+														</p>
+													</dd>
+												</dl>
+												<div class="btn-warp clearfix">
+													<a href="#" class="btn">大咖介绍</a>
+													<a href="#" class="btn">大咖课程</a>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="img-item">
+												<img src="images/dk-img/1/2.jpg" />
+											</div>
+											<div class="text-item">
+												<dl>
+													<dt>罗晓韵</dt>
+													<dd>
+														<p>
+															国家一级摄影师
+															<br />
+															中国摄影家协会会员
+														</p>
+													</dd>
+												</dl>
+												<div class="btn-warp clearfix">
+													<a href="#" class="btn">大咖介绍</a>
+													<a href="#" class="btn">大咖课程</a>
+												</div>
+											</div>
+										</li>
+										<li class="last">
+											<div class="img-item">
+												<img src="images/dk-img/1/3.jpg" />
+											</div>
+											<div class="text-item">
+												<dl>
+													<dt>贾蕾</dt>
+													<dd>
+														<p>
+															明星时尚摄影师
+															<br />
+															著有《青春魂:贾蕾的唯美摄影》
+															<br />
+															代表作《爵迹》海报
+														</p>
+													</dd>
+												</dl>
+												<div class="btn-warp clearfix">
+													<a href="#" class="btn">大咖介绍</a>
+													<a href="#" class="btn">大咖课程</a>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="pathB">
+								<div class="img-list clearfix">
+									<ul>
+										<li class="li-1">
+											<div class="img-item">
+												<img src="images/dk-img/2/1.jpg" />
+											</div>
+											<div class="text-item">
+												<div class="info-item clearfix">
+													<div class="user-img">
+														<img src="images/user-img/1.jpg" />
+													</div>
+													<h3 class="name">谢墨</h3> <i class="dk-icon"></i>
+												</div>
+												<div class="txt">
+													<p>大师课程</p>
+												</div>
+											</div>
+											<a href="#"></a>
+										</li>
+										<li class="li-2">
+											<div class="img-item">
+												<img src="images/dk-img/2/2.jpg" />
+											</div>
+											<div class="text-item">
+												<div class="info-item clearfix">
+													<div class="user-img">
+														<img src="images/user-img/2.jpg" />
+													</div>
+													<h3 class="name">罗晓韵</h3> <i class="dk-icon"></i>
+												</div>
+												<div class="txt">
+													<p>大师课程</p>
+												</div>
+											</div>
+											<a href="#"></a>
+										</li>
+										<li class="li-3">
+											<div class="img-item">
+												<img src="images/dk-img/2/3.jpg" />
+											</div>
+											<div class="text-item">
+												<div class="info-item clearfix">
+													<div class="user-img">
+														<img src="images/user-img/3.jpg" />
+													</div>
+													<h3 class="name">贾蕾</h3>
+													<i class="dk-icon"></i>
+												</div>
+												<div class="txt">
+													<p>大师课程</p>
+												</div>
+											</div>
+											<a href="#"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="pathC">
+								<div class="img-list clearfix">
+									<ul>
+										<li class="li-1">
+											<div class="img-item">
+												<img src="images/dk-img/3/1.jpg" />
+											</div>
+											<div class="text-item">
+												<div class="info-item clearfix">
+													<div class="user-img">
+														<img src="images/user-img/1.jpg" />
+													</div>
+													<h3 class="name">谢墨</h3>
+													<i class="dk-icon"></i>
+												</div>
+												<div class="txt">
+													<p>大师课程</p>
+												</div>
+											</div>
+											<a href="#"></a>
+										</li>
+										<li class="li-2">
+											<div class="img-item">
+												<img src="images/dk-img/3/2.jpg" />
+											</div>
+											<div class="text-item">
+												<div class="info-item clearfix">
+													<div class="user-img">
+														<img src="images/user-img/2.jpg" />
+													</div>
+													<h3 class="name">罗晓韵</h3>
+													<i class="dk-icon"></i>
+												</div>
+												<div class="txt">
+													<p>大师课程</p>
+												</div>
+											</div>
+											<a href="#"></a>
+										</li>
+										<li class="li-3">
+											<div class="img-item">
+												<img src="images/dk-img/3/3.jpg" />
+											</div>
+											<div class="text-item">
+												<div class="info-item clearfix">
+													<div class="user-img">
+														<img src="images/user-img/3.jpg" />
+													</div>
+													<h3 class="name">贾蕾</h3>
+													<i class="dk-icon"></i>
+												</div>
+												<div class="txt">
+													<p>大师课程</p>
+												</div>
+											</div>
+											<a href="#"></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="more-item clearfix">
+								<a href="#">
+									<img src="images/ll-img-10.jpg" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="path2">
+				<div class="listItem"></div>
+				<div class="mod-item">
+					<div class="mod-con">
+						<div class="theme-item clearfix">
+							<ul>
+								<!-- cur为立即参加状态 end为往事回顾状态 -->
+								<li class="end">
+									<div class="item item-1"></div>
+									<a href="#"></a>
+								</li>
+								<li class="end">
+									<div class="item item-2"></div>
+									<a href="#"></a>
+								</li>
+								<li class="end">
+									<div class="item item-3"></div>
+									<a href="#"></a>
+								</li>
+								<li class="end">
+									<div class="item item-4"></div>
+									<a href="#"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 新增 -->
+			<div class="path4">
+				<div class="mod-item">
+					<div class="mod-con">
+						<div class="idea-item clearfix">
+							<div class="btn-wrap">
+								<a href="#" class="btn jqqd-btn"></a>
+								<a href="#" class="btn zsgb-btn"></a>
+							</div>
+							<div class="info-item">
+								<a href="#" class="btn more-btn"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 新增 end -->
+			<div class="path3">
+				<div class="mod-item">
+					<div class="mod-con">
+						<div class="banner-item">
+							<a href="#">
+								<img src="images/ll-img-12.jpg" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="foot w1000"></div>
+	</div>
+	<!-- 弹出层 -->
+	<div class="fade" style="display: none"></div>
+	<div class="pop-hdgz" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con font_wryh">
+			<div class="con-item">
+				<div class="listItem">
+					<dl>
+						<dt class="title"></dt>
+						<dd class="join-btn">
+							<a href="#"></a>
+						</dd>
+					</dl>
+				</div>
+				<div class="item-warp">
+					<div class="item">
+						<div class="text-item">
+							<h3 class="title">活动介绍</h3>
+							<div class="txt">
+								<p>
+									用手机记录身边的美好，
+									<br />
+									跟着摄影大咖来体会拍摄的乐趣。上传你的作品，爱不一样摄影大赛。
+								</p>
+							</div>
+						</div>
+						<div class="text-item pt10">
+							<h4 class="title">报名步骤</h4>
+							<div class="txt">
+								<p>
+									1. 登陆或注册三星盖乐世社区
+									<a href="http://www.galaxyclub.cn/" target="_blank">http://www.galaxyclub.cn/</a>
+									<br />
+									2.点击立即参与，在线上传拍摄作品
+								</p>
+							</div>
+						</div>
+						<div class="text-item pt30">
+							<h4 class="title">奖品</h4>
+							<div class="jz-list clearfix">
+								<ul>
+									<li>
+										<div class="img-item">
+											<img src="images/jp-img/1.jpg" />
+										</div>
+										<p>冠军奖</p>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/jp-img/2.jpg" />
+										</div>
+										<p>亚军奖</p>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/jp-img/3.jpg" />
+										</div>
+										<p>季军奖</p>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/jp-img/4.jpg" />
+										</div>
+										<p>幸运奖</p>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/jp-img/5.jpg" />
+										</div>
+										<p>互动奖</p>
+									</li>
+									<li>
+										<div class="img-item">
+											<img src="images/jp-img/6.jpg" />
+										</div>
+										<p>终极大奖</p>
+									</li>
+								</ul>
+							</div>
+							<div class="txt pb5">
+								<p class="fbt t-title">【主题活动奖品】</p>
+								<p>
+									冠军奖：每期1名，三星S7手机一台，共4台
+									<br />
+									亚军奖：每期2名，Samsung Gear S2 classic一个，共8个
+									<br />
+									季军奖：每期3名，三星移动充电宝一个，共12个
+									<br />
+									幸运奖：每期20名，三星（SAMSUNG）Bar 32GB USB3.0 U盘，共80个每期进行随机抽取
+								</p>
+							</div>
+							<div class="txt pb5">
+								<p class="fb t-title">【参与互动奖品】</p>
+								<p>互动奖：每期200名，京东50元购物卡一张，参与互动点赞的网友，每期进行随机抽取</p>
+							</div>
+							<div class="txt">
+								<p class="fb t-title">【决赛奖品】</p>
+								<p>终极大奖：盖乐世摄影梦想基金4999元</p>
+							</div>
+						</div>
+						<div class="text-item pt20">
+							<h4 class="title">评选规则</h4>
+							<div class="txt">
+								<p>
+									1.每期主题活动由大赛组委会进行海选100名参赛者晋级，大赛组委会由poco专业编辑组成，海选名单在当期主题活动结束后3天公布。
+									<br />
+									2.100名晋级参赛者按照点赞数（占40%）以及三位大咖评分（占60%）进行评选冠军、亚军、季军，冠军、亚军、季军名单在当期主题活动结束后7天内公布。
+									<br />
+									3.决赛获胜者由三位大咖进行评分，分数最高者获胜，决赛获胜者名单在决赛结束后7天内公布。
+									<br />
+									4、点赞数评分规则：
+									<br />
+									(1)	小于等于50个赞，积5分
+									<br />
+									(2)	大于50个赞，小于等于100个赞，积10分
+									<br />
+									(3) 大于100个赞，小于等于200个赞，积15分
+									<br />
+									(4)	大于200个赞，小于等于500个赞，积20分
+									<br />
+									(5)	大于500个赞，小于等于1000个赞，积分25分
+									<br />
+									(6)	大于1000个赞，小于等于2000个赞，积30分
+									<br />
+									(7)	大于2000个赞，小于等于3000个赞，积35分
+									<br />
+									(8)	大于3000个赞，积40分
+									<br />
+									**40分为上限**
+								</p>
+							</div>
+						</div>
+						<div class="text-item pt30">
+							<h4 class="title">参赛要求和作品条件</h4>
+							<div class="txt">
+								<p>
+									1.请认真阅读本大赛规则，并确认完全理解、同意遵守本活动规则；
+									<br />
+									2.根据每期不同活动主题，上传个人手机拍摄作品，需使用三星手机完成拍摄，可以修图，但必须保留带有EXIF信息的原图，且获奖时需提供给运营团队。作品需积极向上，不含违法，反动等内容，作品须为参赛者本人原创，黑白、彩色均可，参赛作品最多上传10张。
+									<br />
+									3. 赛事类型：活动共4期，每期活动为期2周
+									<br />
+									4. 在盖乐世活动页投稿作品后，可获得评奖机会；（提示：作品上传后将接受审核。您可在二个工作日之后查看您的作品，请您耐心等待。）
+									<br />
+									5. 三星盖乐世社区有权对参赛作品进行审核、对于不合规范作品有权进行删除；
+									<br />
+									6. 网友可对参赛作品进行投票，同一个ID对同一个作品每日最多投10票；
+									<br />
+									7. 同一作品在每个赛段只能上传一次，否则将视为重复投递作品无效，三星盖乐世社区会将重复上传的作品删除。作品被删除后，请参赛者按照本规则另行投稿。
+								</p>
+							</div>
+						</div>
+						<div class="text-item pt30">
+							<h4 class="title">有关肖像权及著作权</h4>
+							<div class="txt">
+								<p>
+									1.参赛者须拥有所投稿照片的著作权并获得参赛照片中所包含人物的肖像权使用许可和其它必要的许可，同时须保证上传的照片不侵犯任何第三人的著作权、肖像权、名誉权、 隐私权、商标权、商号权等其他合法权益，否则由参赛者承担所有责任，给主办方造成损失的，还应赔偿主办方的全部损失。
+									<br />
+									2.任何人发现本次比赛参赛照片有侵权嫌疑，请及时与本届摄影比赛组织者联系。同时，主办方一经接到包括有关照片肖像权、著作权等相关投诉的，或者发现投稿作品中包含前条规定之违反内容时，将立即删除相关照片并把相关投诉转送至上传人（即参赛者），由参赛者自行解决相关投诉并承担费用。
+									<br />
+									3.因参赛照片侵犯任何第三方的合法权益或违反中国相关法律法规等情形使主办方遭受损失的，主办方有权要求上传人承担损害赔偿的责任。
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="text-item">
+							<h3 class="title">活动时间</h3>
+							<div class="txt">
+								<p>
+									【一】2016年4月15日-2016年4月30日：爱不一样 夜游精灵
+									<br />
+									【二】2016年5月1日-2016年5月14日：爱不一样 留住刹那
+									<br />
+									【三】2016年5月15日-2016年5月30日：爱不一样 最美笑脸
+									<br />
+									【四】2016年6月1日-2016年6月14日：爱不一样 岁月静好
+									<br />
+									【决赛】2016年6月15日-2016年6月30日：每期冠军及亚军，共12人进行终极创作
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 大咖介绍 -->
+	<!-- 谢墨 -->
+	<div class="pop-dkjs dkjs-1" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con font_wryh">
+			<div class="con-item">
+				<div class="info-warp">
+					<div class="listItem">大咖介绍</div>
+					<div class="user-img">
+						<div class="img-item">
+							<img src="images/dk-img/1/1.jpg" />
+						</div>
+						<h3 class="title">谢墨</h3>
+					</div>
+					<div class="text-item">
+							<h4 class="title">简介：</h4>
+							<p>
+								业界顶尖摄影艺术家<br />
+								中国摄影家协会会员<br />
+								广东省摄影家协会副主席
+							</p>
+							<h4 class="title">详细介绍：</h4>
+							<p>
+								广东省青年摄影家协会名誉主席<br />
+								1999年 第十九届全国摄影艺术展览人像金奖；第四届中国摄影金像奖；第三届全国人像摄影十杰；<br />
+								2000年 作品三幅由国务院新闻办选送联合国总部参加《聚焦中国》大型影展，配合江泽民主席出席联合国千年系列会议；<br />
+								2000年 担任广东省青年摄影家协会主席；<br />
+								2001年 瑞典哈苏公司颁发“哈苏摄影大师”称号，为世界华人第一人，这是世界摄影界的最高荣誉之一；<br />
+								2001年 荣获中国摄影家协会颁发的“德艺双馨”优秀摄影家称号；<br />
+								2002年 第四届“中国人像摄影十杰”评委；<br />
+								2005年 担任广东省摄影家协会副主席；<br />
+								2006年 荣获广东省第七届鲁迅文学艺术奖；<br />
+								2007年 出任瑞士布朗专业闪光灯的形象大使；<br />
+								2008年 受美国纽约摄影学会邀请前往纽约举办摄影讲座并担任其36届国际沙龙摄影展评委；<br />
+								2008年 担任2009年“哈苏摄影大师”评委。
+							</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 罗晓韵 -->
+	<div class="pop-dkjs dkjs-2" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con font_wryh">
+			<div class="con-item">
+				<div class="info-warp">
+					<div class="listItem">大咖介绍</div>
+					<div class="user-img">
+						<div class="img-item">
+							<img src="images/dk-img/1/2.jpg" />
+						</div>
+						<h3 class="title">罗晓韵</h3>
+					</div>
+					<div class="text-item">
+							<h4 class="title">简介：</h4>
+							<p>
+								国家一级摄影师<br />
+								中国摄影家协会会员
+							</p>
+							<h4 class="title">详细介绍：</h4>
+							<p>
+								国家一级摄影师，中国摄影家协会会员、英国皇家摄影协会会员、“花图摄影”公司创始人、女行团创始人、“极拍App”联合创始人、产品视觉总监 Getty Images 签约摄影师、BING 全球首页合作摄影师。<br />
+								<br />
+								以遍布世界的摄影作品备受全球摄影人的推崇。擅长纪实摄影和风光人像,尤 其以把自己记录在画面中的照片广受欢迎。<br />
+								作品风格独特,试图把内心的感受描 绘于照片之上,具有梦幻般的绝美艺术气息。曾多次与境外领馆,旅游局,航空公司合作推广宣传项目
+							</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 贾蕾 -->
+	<div class="pop-dkjs dkjs-3" style="display:none">
+		<a href="#" class="close-btn"></a>
+		<div class="pop-con font_wryh">
+			<div class="con-item">
+				<div class="info-warp">
+					<div class="listItem">大咖介绍</div>
+					<div class="user-img">
+						<div class="img-item">
+							<img src="images/dk-img/1/3.jpg" />
+						</div>
+						<h3 class="title">贾蕾</h3>
+					</div>
+					<div class="text-item">
+							<h4 class="title">简介：</h4>
+							<p>
+								明星时尚摄影师<br />
+								著有《青春魂:贾蕾的唯美摄影》/代表作《爵迹》海报
+							</p>
+							<h4 class="title">详细介绍：</h4>
+							<p>
+								2009年毕业于平面设计专业, 自学摄影并独创青春唯美摄影风格,开创了风靡网络的小清新时代, 被称"小清新鼻祖" . 特有的"贾蕾色"色彩和富有浪漫感的温暖阳光感染影响了众多年轻人与摄影人。<br />
+								2010年转型涉足时尚领域, 与艺人,媒体及商业广告合作.延续了干净唯美风格的同时, 尝试更多的突破与内心表达,期间与黄晓明,莫文蔚,刘亦菲,唐嫣,李易峰,凤凰传奇等众多艺人合作。<br />
+								2015年,与郭敬明导演合作拍摄电影《爵迹》系列海报,作品在网络上获得爆炸式的曝光度.同时与自己风格吻合度极高的纯爱电影《致青春2:原来你还在这里》海报合作。
+							</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 大咖介绍 end-->
+	<!-- 弹出层 end -->
+</body>
+</html>

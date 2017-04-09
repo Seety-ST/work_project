@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>新速腾</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="header">
+		<div class="w1000">
+			<div class="nav-wrap clearfix">
+				<div class="nav-item">
+						<img src="images/ll-nav-1.png" usemap="#Map" border="0" />
+		                    <map name="Map" id="Map">
+		                      <area shape="poly" coords="29,1,0,48,84,46,114,-4" href="#" />
+		                      <area shape="poly" coords="118,0,91,45,209,47,239,-1" href="#" />
+		                      <area shape="poly" coords="243,-1,218,44,335,48,361,1" href="#" />
+		                      <area shape="poly" coords="370,-1,342,46,460,47,489,0" href="#" />
+		                      <area shape="poly" coords="466,47,496,-3,613,-1,586,45" href="#" />
+		                      <area shape="poly" coords="618,-2,591,46,754,48,780,-3" href="#" />
+		                    </map>
+				  </div>
+				<div class="login-item">
+					<a href="#">登录</a>/<a href="#">注册</a>
+				</div>
+			</div>
+			<h1 class="logo-item">
+				<a href="#"></a>
+			</h1>
+		</div>
+	</div>
+	<div class="content">
+		<div class="my_work font_wryh">
+			<div class="w1000">
+				<div class="mod-listItem">
+					<img src="images/ll-img-34.png" />
+				</div>
+				<div class="my_work">
+					<div class="listItem">
+						<a href="#" class="back">返 回</a>
+					</div>
+					<div class="picshow-block clearfix">
+						<div class="min_pic_left">
+							<div class="user_box">
+								<div class="img_box">
+									<img src="images/test/140x140.jpg" />
+								</div>
+								<div class="info_box">
+									<p>老戚</p>
+								</div>
+							</div>
+							<div class="btn_top">
+								<a href="javascript:void(0)">
+									<img src="images/ll-img-35.png" id="gotop" />
+								</a>
+							</div>
+							<!-- 上按钮 -->
+							<div class="showbox" id="showArea">
+								<!-- 左边滚动小图 -->
+								<ul>
+									<li>
+										<div class="img_box">
+											<table cellpadding="0" cellspacing="0" width="163">
+												<tr>
+													<td height="163" valign="middle">
+														<img src="images/test/174x174.jpg"  class="thumb_img"  rel="images/test/740x490.jpg"  />
+													</td>
+												</tr>
+											</table>
+										</div>
+									</li>
+									<li>
+										<div class="img_box">
+											<table cellpadding="0" cellspacing="0" width="163">
+												<tr>
+													<td height="163" valign="middle">
+														<img src="images/test/174x174.jpg"  class="thumb_img"  rel="images/test/740x490.jpg"  />
+													</td>
+												</tr>
+											</table>
+										</div>
+									</li>
+									<li>
+										<div class="img_box">
+											<table cellpadding="0" cellspacing="0" width="163">
+												<tr>
+													<td height="163" valign="middle">
+														<img src="images/test/174x174.jpg"  class="thumb_img"  rel="images/test/740x490.jpg"  />
+													</td>
+												</tr>
+											</table>
+										</div>
+									</li>
+									<li>
+										<div class="img_box">
+											<table cellpadding="0" cellspacing="0" width="163">
+												<tr>
+													<td height="163" valign="middle">
+														<img src="images/test/174x174.jpg"  class="thumb_img"  rel="images/test/740x490.jpg"  />
+													</td>
+												</tr>
+											</table>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="btn_bottom">
+								<a href="javascript:void(0)">
+									<img src="images/ll-img-36.png" id="gobottom" />
+								</a>
+							</div>
+							<!-- 下按钮 -->
+						</div>
+						<div class="max_pic_right">
+							<div class="img-info-item">
+								<div class="theme-item">
+									主题：严谨即风尚
+								</div>
+								<div class="big-img">
+								<div class="scrollBox">
+									<ul class="img_list clearfix" id="bigImgList1">
+										<li>
+											<table cellpadding="0" cellspacing="0" width="740">
+												<tr>
+													<td height="490" valign="middle">
+														<img src="images/test/740x490.jpg">
+													</td>
+												</tr>
+											</table>
+										</li>
+										<li>
+											<table cellpadding="0" cellspacing="0" width="740">
+												<tr>
+													<td height="490" valign="middle">
+														<img src="images/test/740x490.jpg">
+													</td>
+												</tr>
+											</table>
+										</li>
+									</ul>
+									<div class="page-wrap clearfix">
+										<a href="#" class="pre fl" id="prev1"></a>
+										<a href="#" class="next fl" id="next1"></a>
+									</div>
+								</div>
+								</div>
+								<div class="txt_box clearfix">
+									<dl class="txt-item">
+										<dt class="pb10">古建筑</dt>
+										<dd>
+											中国著名摄影师、影像艺术家、MV短片电影导演，曾获中国摄影界个人成就最高奖金像奖、中国摄影艺术大展金奖、奥地利超级巡回大展金奖、中国人像摄影大展金奖等诸多荣誉。至今在韩国、香港、北京、深圳、成都、上海等美术馆及画廊屡次举办艺术作品展。
+										</dd>
+									</dl>
+									<div class="btn_box clearfix">
+										<a href="#" class="fr">
+											<img src="images/ll-img-49.png" />
+										</a>
+										<a href="#" class="tp-btn fr">(666)</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<!-- 右大图 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.carouFredSel-5.5.0.js"></script>
+	<script>
+		//小图滚动
+		$(document).ready(function() {
+			function $(e) {return document.getElementById(e);}
+			document.getElementsByClassName = function(cl) {
+				var retnode = [];
+				var myclass = new RegExp('\\b'+cl+'\\b');
+				var elem = this.getElementsByTagName('*');
+				for (var i = 0; i < elem.length; i++) {
+					var classes = elem[i].className;
+					if (myclass.test(classes)) retnode.push(elem[i]);
+				}
+				return retnode;
+			}
+			var MyMar;
+			var speed = 1; //速度，越大越慢
+			var spec = 1; //每次滚动的间距, 越大滚动越快
+			var ipath = 'images/'; //图片路径
+			var thumbs = document.getElementsByClassName('thumb_img');
+			for (var i=0; i<thumbs.length; i++) {
+				var obj=thumbs[i];
+				//obj.onmouseover = function () {$('main_img').src=this.getAttribute('rel'); $('main_img').link=this.getAttribute('link');};
+				//thumbs[i].onclick = function () {window.location.href= this.getAttribute('rel');}
+			}
+			//$('main_img').onclick = function () {window.location.href= this.getAttribute('link');}
+			$('gotop').onmouseover = function() {this.src = ipath + 'll-img-35.png'; MyMar=setInterval(gotop,speed);} //向上鼠标经过时按钮图片
+			$('gotop').onmouseout = function() {this.src = ipath + 'll-img-35.png'; clearInterval(MyMar);}//向上鼠标离开按钮图片
+			$('gobottom').onmouseover = function() {this.src = ipath + 'll-img-36.png'; MyMar=setInterval(gobottom,speed);}//向下鼠标经过时按钮图片
+			$('gobottom').onmouseout = function() {this.src = ipath + 'll-img-36.png'; clearInterval(MyMar);}//向下鼠标离开按钮图片
+			function gotop() {$('showArea').scrollTop-=spec;}
+			function gobottom() {$('showArea').scrollTop+=spec;}		
+		});
+
+
+		//	大图切换
+		$('#bigImgList1').carouFredSel({
+			prev: '#prev1',
+			next: '#next1',
+			auto: false
+		});
+	</script>
+</body>
+</html>

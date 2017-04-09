@@ -1,0 +1,24 @@
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 反馈
+ */
+
+.feedback-page{
+	.p1th{
+		.item-wrap{
+			.textarea-item{
+				padding:15px;
+				background-color: #fff;
+				.feedback-info{
+					width: 100%;
+					height: 150px;
+				}
+			}
+			.btn-item{
+				padding: 20px 30px;
+			}
+		}
+	}
+}

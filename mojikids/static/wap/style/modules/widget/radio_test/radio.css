@@ -1,0 +1,59 @@
+.radio-mod-1 .el-radio-input {
+  position: relative;
+  display: inline-block;
+}
+
+.radio-mod-1 .el-radio-input .radio-inner {
+  width: 0.1rem;
+  height: 0.1rem;
+  display: inline-block;
+  vertical-align: middle;
+  border: 0.02rem solid #ccc;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-mod-1 .el-radio-input .radio-inner:after {
+  width: 0.06rem;
+  height: 0.06rem;
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  background-color: #ffc430;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.15s cubic-bezier(0.71, -0.46, 0.88, 0.6);
+}
+
+.radio-mod-1 .el-radio-input .el-radio-original {
+  width: 0.14rem;
+  height: 0.14rem;
+  opacity: 0;
+  outline: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.radio-mod-1 .el-radio-input .el-radio-label {
+  padding-left: 0.05rem;
+  vertical-align: middle;
+}
+
+.radio-mod-1.is-checked .radio-inner {
+  border-color: #ffc430;
+}
+
+.radio-mod-1.is-checked .radio-inner:after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-mod-1.is-checked .el-radio-label {
+  color: #ffc430;
+}

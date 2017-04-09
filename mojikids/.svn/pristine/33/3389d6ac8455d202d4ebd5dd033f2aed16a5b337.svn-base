@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {%$page_title%}
+    </title>
+    {%$wap_global_head%}
+
+    
+</head>
+
+<body class="cor-bg-fff">
+
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/auth/index.e5a8e88.css">
+<main role="main">
+    <div id="page-container" class="page-container" v-cloak>
+        <div class="bind-container">
+            <div class="input-con ui-border-b clearfix">
+                <input class="dib f16 color-666" type="tel" placeholder="请填写手机号码" v-model="phone"/><div class="f16 fr main-color" @click="get_code" v-html="code_btn_html"></div>
+            </div>
+            <div class="input-con ui-border-b">
+                <input class="input-con-detail dib f16 color-666" type="tel"  placeholder="请填写验证码" v-model="code" @input="code_input" />
+            </div>
+            <div class="submit-btn-con">
+                <button class="ui-button ui-button-block ui-button-100per ui-button-size-xl ui-button-radius-l" :class="btn_bg_status" @click="submit_form">
+                    <span class="ui-button-content f16">确认</span>
+                </button>
+            </div>
+            <div class="index-footer-img" v-show="footer_img_show">
+
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+</html>
+
+{%$wap_global_footer%}
+
+
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+
+        //配置一些顶层变量
+        var __r_url = "{%$r_url%}";
+        var count_sec = "{%$count_sec%}";//倒数秒数
+
+        // 加载util
+        var Util = require.syncLoad('wap-kids:global/util/index');
+
+
+        var vm = new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return {
+                    phone : "",
+                    code : "",
+                    code_btn_lock : false,//获取验证码按钮锁
+                    code_btn_html : "获取验证码",
+                    count_down_sec : count_sec,//倒数秒数，并且做显示使用
+                    btn_bg_status : "ui-button-bg-btn-ccc",//提交按钮背景色
+                    btn_lock :false,//提交按钮锁
+                    footer_img_show : true,//底部图片显示
+                    count_down_sec_static : count_sec//静态，设置倒数秒数，不更改
+                }
+            },
+            methods:
+            {
+                //验证码输入
+                code_input : function(){
+                    var code = this.code;
+                    if(code!="")
+                    {
+                        this.btn_bg_status = "main-bg";
+                    }
+                    else
+                    {
+                        this.btn_bg_status = "ui-button-bg-btn-ccc";
+                    }
+                },
+                //检查手机
+                check_phone : function(phone){
+                    //判断手机号是否满11位
+                    var phone_reg = new RegExp(/^[0-9]{11}$/);
+                    var phone_check = phone_reg.test(phone); //
+                    if (!phone_check)
+                    {
+                        Util.toast({
+                            message: '请填入正确手机号',
+                            position: 'middle',
+                            duration: 3000
+                        });
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                },
+                //获取验证码点击
+                get_code : function(){
+                    var self = this;
+                    //检查按钮锁的状态
+                    var code_btn_lock = self.code_btn_lock;
+                    if(code_btn_lock)
+                    {
+                        return;
+                    }
+                    //检查手机
+                    var phone = self.phone;
+                    var phone_check = self.check_phone(phone);
+                    if(!phone_check)
+                    {
+                        return;
+                    }
+
+                    //手机号符合规则处理
+                    self.code_btn_lock = true;
+
+                    var interval_value = "";
+                    //调用异步发送短信
+                    console.log("调用异步发送短信");
+                    // 异步请求
+                    Util.request
+                    ({
+                        url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'auth/get_login_code.php',
+                        type : 'POST',
+                        cache : true,
+                        data :
+                        {
+                            phone:phone
+                        },
+                        beforeSend : function()
+                        {
+                            Util.loading.open
+                            ({
+                                text : '获取验证码...',
+                                timeout:1000
+                            });
+                        },
+                        success : function(respond)
+                        {
+                            if(respond.res.data.result=="1")
+                            {
+                                /*验证码倒计时*/
+                                interval_value = setInterval(function(){
+                                    self.count_down_sec--;
+
+                                    if(self.count_down_sec==0)
+                                    {
+                                        clearInterval(interval_value);
+                                        self.count_down_sec = self.count_down_sec_static;
+                                        self.code_btn_html = "获取验证码";
+                                        self.code_btn_lock = false;
+                                    }
+                                    else
+                                    {
+                                        //html结构显示
+                                        self.code_btn_html = self.count_down_sec+"s";
+                                    }
+                                },1000);
+                                /*验证码倒计时*/
+
+                                //暂不处理
+                                console.log("发送成功");
+                                Util.toast({
+                                    message: "发送验证码成功",
+                                    position: 'middle',
+                                    duration: 3000
+                                });
+                            }
+                            else
+                            {
+                                //alert("手机号"+respond.res.data.phone);
+                                //alert("uniond_id"+respond.res.data.union_id);
+                                Util.toast({
+                                    message: respond.res.data.message,
+                                    position: 'middle',
+                                    duration: 3000
+                                });
+                                //开锁
+                                self.code_btn_lock = false;
+                            }
+                        },
+                        error :function()
+                        {
+                            Util.toast({
+                                message: "发送验证码失败，请稍后再试",
+                                position: 'middle',
+                                duration: 3000
+                            });
+                            //开锁
+                            self.code_btn_lock = false;
+                        }
+                    });
+
+
+
+                },
+                //手机验证码提交
+                submit_form : function(){
+                    var self = this;
+                    var phone = self.phone;
+                    var code = self.code;
+
+                    //通过判断按钮背景色，判断是否可以点击，背景色与验证码输入值挂扣
+                    var btn_bg_status = self.btn_bg_status;
+                    if(btn_bg_status=="ui-button-bg-btn-ccc")
+                    {
+                        return;
+                    }
+                    else if(btn_bg_status=="main-bg")
+                    {
+                        //按钮锁
+                        var btn_lock = self.btn_lock;
+                        if(btn_lock)
+                        {
+                            return;
+                        }
+
+                        //判断手机号
+                        var phone_check = self.check_phone(phone);
+                        if(!phone_check)
+                        {
+                            return;
+                        }
+
+                        //异步提交处理
+                        console.log("异步提交处理");
+
+
+                        var data_obj = {
+                            phone:phone,
+                            code:code
+                        }
+
+                        //获取宝宝卡片的本地缓存
+                        var bb_file_obj = Util.storage.get('bb_file');
+                        if(bb_file_obj)
+                        {
+                            data_obj["bb_file"] = bb_file_obj;
+                        }
+
+                        self.btn_lock = true;
+                        // 异步请求
+                        Util.request
+                        ({
+                            url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'auth/submit_login_info.php',
+                            type : 'POST',
+                            cache : true,
+                            data : data_obj,
+                            beforeSend : function()
+                            {
+                                Util.loading.open
+                                ({
+                                    text : '提交中...',
+                                    timeout:1000
+                                });
+                            },
+                            success : function(respond)
+                            {
+
+                                if(respond.res.data.result>0)//大于0，都认为是正确
+                                {
+                                    //注册或者登陆成功，返回用户ID，设置缓存跟跳转
+                                    var user_id = respond.res.data.user_id;
+                                    var bb_file_add_result = respond.res.data.bb_file_add_result;
+                                    console.log("result值:"+respond.res.data.result);
+                                    console.log("登录成功后的user_id:"+user_id+"是否入库了BB卡片："+bb_file_add_result);
+                                    console.log("message"+respond.res.data.message);
+
+
+                                    if(user_id && bb_file_add_result=="1")
+                                    {
+                                        Util.storage.remove("bb_file");
+                                    }
+                                    //跳转处理
+                                    Util.toast({
+                                        message: "登录注册成功，跳转处理",
+                                        position: 'middle',
+                                        duration: 2000
+                                    });
+                                    setTimeout(function(){
+                                        window.location.href=__r_url;
+                                    },2000);
+
+                                }
+                                else
+                                {
+                                    Util.toast({
+                                        message: respond.res.data.message,
+                                        position: 'middle',
+                                        duration: 3000
+                                    });
+                                }
+                                //开锁
+                                self.btn_lock = false;
+                            },
+                            error :function()
+                            {
+                                Util.toast({
+                                    message: "提交失败，请再试",
+                                    position: 'middle',
+                                    duration: 3000
+                                });
+                                //开锁
+                                self.btn_lock = false;
+                            }
+                        });
+                    }
+                }
+            }
+        });
+
+        if(Util.ua.isAndroid)
+        {
+            //处理安卓点击输入框，缩小屏幕处理
+            window.onresize=function(){
+                if(vm.footer_img_show)
+                {
+                    vm.footer_img_show = false;
+                }
+                else
+                {
+                    vm.footer_img_show = true;
+                }
+            }
+        }
+
+
+    })();
+</script>
+
+{%$wap_global_tj%}

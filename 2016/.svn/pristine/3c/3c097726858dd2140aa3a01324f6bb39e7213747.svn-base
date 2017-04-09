@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="GBK" >
+    <meta http-equiv="Content-Type" content="text/html;" />
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache,must-revalidate,no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+    <title>必胜客</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+    <script>
+        (function(doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function() {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+<body class="index-bg">       
+    <section class="index-page">
+        <div class="listItem"></div>
+        <i class="yy-icon"></i>
+        <i class="fish-icon-item"></i>
+        <div class="lucky-item">
+            <div id="disk">
+                <img src="images/disk.png" id="disk_rote" style="border: 0px solid red;"></div>
+            <div id="start">
+                <img src="images/start.png" id="startbtn" alt="开始抽奖" >
+                <i class="hand-icon"></i>
+            </div>
+        </div>
+    </section>
+    <!-- 弹出层 -->
+    <div class="fade"></div>
+    <!-- 信息提交成功 -->
+    <div class="mod-pop succeed-pop" style="display:none">
+        <a href="#" class="close-btn"></a>
+        <div class="pop-con">
+            <dl class="text-item">
+                <dt>信息提交成功</dt>
+                <dd>稍后工作人员会与你联系</dd>
+            </dl>
+            <div class="code-item">
+                <p class="txt">
+                    截屏并保存二维码
+                    <br />
+                    扫一扫分享朋友圈
+                </p>
+                <p class="code-img">
+                    <img src="images/code-img-202x202.png" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 您已参加过活动 -->
+    <div class="mod-pop had-pop" style="display:none">
+        <a href="#" class="close-btn"></a>
+        <div class="pop-con">
+            <dl class="text-item">
+                <dt>您已参加过活动</dt>
+            </dl>
+            <div class="code-item">
+                <p class="txt">
+                    截屏并保存二维码
+                    <br />
+                    扫一扫分享朋友圈
+                </p>
+                <p class="code-img">
+                    <img src="images/code-img-202x202.png" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 今天的奖品已抽完 -->
+    <div class="mod-pop finish-pop" style="display:">
+        <a href="#" class="close-btn"></a>
+        <div class="pop-con">
+            <dl class="text-item">
+                <dt>
+                    今天的奖品已抽完
+                    <br />
+                    请明天继续</dt>
+            </dl>
+            <div class="code-item">
+                <p class="txt">
+                    截屏并保存二维码
+                    <br />
+                    扫一扫分享朋友圈
+                </p>
+                <p class="code-img">
+                    <img src="images/code-img-202x202.png" />
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 弹出层end -->
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/awardRotate.js"></script>
+    <script type="text/javascript">     
+        var turnplate={
+                prize:[],             //大转盘奖品名称
+                startAngle:0,               //开始角度               
+                bRotate:false               //false:停止;ture:旋转
+        };
+        $(document).ready(function(){
+            turnplate.prize = ["谢谢参与","索尼靓咔™KW1", "再玩一次",  "雙妹夜来香袭人香皂", "雙妹雪白晶润面膜", "谢谢参与", "索尼靓咔™KW1 ", "再玩一次", "雙妹夜来香袭人香皂", "雙妹雪白晶润面膜"];
+            var rotateTimeOut = function (){
+                    $('.Disc').rotate({
+                        angle:0,
+                        animateTo: 2160,
+                        duration:8000,
+                        callback:function (){
+                            alert('网络超时，请检查您的网络设置！');
+                        }
+                    });
+            };
+            //旋转转盘 item:奖品位置; txt：提示语;
+            var rotateFn = function (item, txt,callback){
+                var angles = item * (360 / turnplate.prize.length) - (360 / (turnplate.prize.length*2));
+                if(angles<36){
+                    angles = 36 - angles; 
+                }else{
+                    angles = 360 - angles + 36;
+                }
+                $('.Disc').stopRotate();
+                $('.Disc').rotate({
+                    angle:0,
+                    animateTo:angles-1800,
+                    duration:4000,
+                    callback:function (){
+                        callback();
+                    }
+                });
+            };
+            //点击指针事件
+            $("#slotMachineButtonFake").click(function(){
+                var item = rnd(1,turnplate.prize.length);
+                rotateFn(item, turnplate.prize[item-1]);
+                switch (item) {
+                            case 1:
+                            rotateFn(36, turnplate.prize[0],function(){
+                            });
+                                break;
+                            case 2:
+                                rotateFn(72, turnplate.prize[1],function(){
+                                });
+                                break;
+                            case 3:
+                            rotateFn(108, turnplate.prize[2],function(){
+                            });
+                            break;
+                            case 4:
+                            rotateFn(144, turnplate.prize[3],function(){
+                            });
+                            break;
+                            case 5:
+                            rotateFn(180, turnplate.prize[4],function(){
+                            });
+                            break;
+                            case 6:
+                            rotateFn(216, turnplate.prize[5],function(){
+                            });
+                            break;
+                            case 7:
+                            rotateFn(252, turnplate.prize[6],function(){
+                            });
+                            break;
+                            case 8:
+                            rotateFn(288, turnplate.prize[7],function(){
+                            });
+                            break;
+                            case 9:
+                            rotateFn(324, turnplate.prize[8],function(){
+                            });
+                            break;
+                            case 10:
+                            rotateFn(360, turnplate.prize[9],function(){
+    
+                            });
+                            break;
+                        }
+                        console.log(item);               
+            });
+        });
+        function rnd(n, m){
+            var random = Math.floor(Math.random()*(m-n+1)+n);
+            return random;
+             
+        }
+        
+
+    </script>
+</body>
+</html>

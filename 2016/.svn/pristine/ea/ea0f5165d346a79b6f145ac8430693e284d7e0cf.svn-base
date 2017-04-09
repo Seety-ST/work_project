@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="css/zt.css" type="text/css" rel="stylesheet" />
+<title>无标题文档</title>
+</head>
+<body style="width:100%; height:100%">
+<div class="Countdown-warp">
+<div class="header re">
+  <div class="head w1000 clearfix"><a href="#" class="fl ml20"><img src="images/ll-logo-1.png" /></a><a href="#" class="fr mr20"><img src="images/ll-logo-2.png" /></a></div>
+</div>
+  <div class="w1000 re">
+    <div class="p2th">
+      <div class="time-item font_wryh">
+        <ul class="clearfix">
+          <li>4</li>
+          <li>20</li>
+          <li>15</li>
+          <li>10</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer"></div>
+<div class="max-pic" style="opacity: 1;"><img src="images/ll-img-19.jpg" id="imgbox" style="visibility:visible; opacity:1;"/></div>
+</div>
+
+
+<script type="text/javascript">
+function _auto_resize(event) {    
+    o = document.getElementById("imgbox");
+    eJ= document.getElementById("imgbox");
+    o.style.width = "auto";
+    o.style.height = "auto";
+    eJ = eJ || o;
+    var dp = document.documentElement || document.body;
+    var w = o.width || eJ.width || 1e3, 
+      h = o.height || eJ.height || 1e3, 
+      c = w / h, 
+      pw = o.parentNode.offsetWidth || dp.offsetWidth || 1024,
+      ph = o.parentNode.offsetHeight || dp.offsetHeight || 768, 
+      pc = pw / ph;
+
+    if (c < pc) {
+
+      o.style.width = pw + "px";
+      o.style.height = "auto";
+      o.style.marginLeft = "0px";
+      o.style.marginTop = -(pw / c - ph) / 2 + "px"
+      
+    } else {
+      
+      o.style.height = ph + "px";
+      o.style.width = "auto";
+      o.style.marginTop = "0px";
+      o.style.marginLeft = -(ph * c - pw) / 2 + "px"
+    }   
+};
+
+
+function autoImg() 
+{
+    var imgbox_2 = document.getElementById('imgbox_2');
+    var sw = document.documentElement.clientWidth;
+    var sh = document.documentElement.clientHeight;
+   
+    imgbox_2.style.width = sw + 'px';
+    imgbox_2.style.height = sh + 'px' ;
+}
+
+
+
+window.onload = function (e){ 
+  _auto_resize(e) ;
+  autoImg()
+};
+window.onresize = function (e){ 
+  _auto_resize(e); 
+  autoImg()
+};
+
+
+</script>
+</body>
+</html>

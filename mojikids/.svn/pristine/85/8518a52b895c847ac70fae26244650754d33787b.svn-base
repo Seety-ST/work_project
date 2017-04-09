@@ -1,0 +1,1 @@
+define("wap-kids:widget/datepicker/index",function(e,t,d){"use strict";function i(e){return e&&e.__esModule?e:{"default":e}}var a=e("wap-kids:widget/datepicker/datepicker"),r=i(a);d.exports=r.default});

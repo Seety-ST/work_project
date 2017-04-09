@@ -1,0 +1,11 @@
+<?php
+
+// 引用头部、底部、统计
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/head.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/footer.php';
+include_once PAIZHAO_TEMPLATES_ROOT.'pc/webcontrol/tj.php';
+
+print_r("dddd");
+
+
+?>

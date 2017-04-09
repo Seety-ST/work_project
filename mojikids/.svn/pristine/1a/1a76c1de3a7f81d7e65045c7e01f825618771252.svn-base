@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * 订单 列表
+ *
+ * @author willike <chenwb@yueus.com>
+ * @since 2017-01-10
+ */
+require(dirname(dirname(__FILE__)) . '/moji_input.inc.php');
+
+$goods_id = $client_data['data']['param']['goods_id'];
+// 全部 all 待付款 unpaid 待确认 tbc 待签到 checkin 已完成  completed 已关闭 closed
+$trade_type = $client_data['data']['param']['trade_type'];   // 交易类型
+// 待付款 0, 待到店 1, 待完成 2, 已关闭 7, 已完成 8, 所有 -1
+switch ($trade_type) {
+    case 'unpaid':  // 待付款
+        $status = 0;
+        break;
+    case 'tbc':  // 待确认(待到店)
+        $status = 1;
+        break;
+    case 'checkin':  // 待签到
+        $status = 2;
+        break;
+    case 'completed':  // 已完成
+        $status = 8;
+        break;
+    case 'closed':  // 已关闭
+        $status = 7;
+        break;
+    default:  // 所有
+        $status = -1;
+        break;
+}
+$mall_order_api_obj = POCO::singleton('snap_mall_order_api_class');
+$order_result = $mall_order_api_obj->get_order_full_list($user_id, 'buyer', $status, false, '', '', $limit_str);
+if ($location_id == 'test') {
+    $options['data'] = array(
+        '$user_id' => $user_id,
+        '$status' => $status,
+        '$limit_str' => $limit_str,
+        '$order_result' => $order_result,
+    );
+    return $cp->output($options);
+}
+$order_list = array();
+$order_status_keymap = moji_get_config('order_status');
+foreach ($order_result as $order_) {
+    // 0待支付，1待确认，2待签到，7已关闭，8已完成
+    $status = $order_['status'];
+    $status_str = $order_status_keymap[$status];
+    $goods_details = $order_['details'][0];  // 商品详情
+    $consignee = $order_['consignee'];  // 订单详情
+    $properties = $order_['properties'];  // 属性
+    $lng_lat = str_replace('-', ',', $properties['lng_lat']);  // 经纬度
+    $more_info = array(
+        'lng_lat' => $lng_lat,
+        'hotline' => $order_['hotline'],
+    );
+    $order_property = array(
+        array('title' => '拍摄时间:', 'value' => $goods_details['scheduled_time_str']),
+        array(
+            'title' => '拍摄门店:',
+            'value' => $properties['store_name'],
+            'lng_lat' => $lng_lat,
+        ),
+        array('title' => '门店地址:', 'value' => $consignee['address']),
+        array('title' => '门店电话:', 'value' => $order_['hotline']),
+    );
+    $button = moji_trade_button($status, $more_info);  // 按钮
+    $order_info = array(
+        'order_sn' => $order_['order_sn'],
+        'status' => $status,
+        'status_str' => $status_str,
+        'title' => $goods_details['goods_name'],
+        'goods_id' => $goods_details['goods_id'],
+        'property' => $order_property,
+        'bill' => array(
+            array('title' => '合计金额：', 'value' => '￥' . $order_['pending_amount']),
+        ),
+        'button' => $button,
+    );
+    $order_list[] = $order_info;
+}
+$options['data'] = array(
+    'title' => '我的订单',
+    'list' => $order_list,
+);
+return $cp->output($options);

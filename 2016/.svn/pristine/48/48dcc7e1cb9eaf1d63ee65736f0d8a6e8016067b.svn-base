@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Circle</title>
+    <link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <!--内容-->
+    <section class="content">
+        <div class="setNotice-page">
+            <section class="mod-set-list">
+                <ul>
+                    <li class="clearfix">
+                        <h3 class="title">丘比特匹配提醒</h3>
+                        <label class="notice-checkbox-item">
+                            <input class="checkboxInput checkboxInput-animbg" type="checkbox" />
+                        </label>
+                    </li>
+                    <li class="clearfix">
+                        <h3 class="title">评论提醒</h3>
+                        <label class="notice-checkbox-item">
+                            <input class="checkboxInput checkboxInput-animbg" type="checkbox" checked />
+                        </label>
+                    </li>
+                    <li class="clearfix">
+                        <h3 class="title">点赞提醒</h3>
+                        <label class="notice-checkbox-item">
+                            <input class="checkboxInput checkboxInput-animbg" type="checkbox" />
+                        </label>
+                    </li>
+                    <li class="clearfix">
+                        <h3 class="title">新增粉丝提醒</h3>
+                        <label class="notice-checkbox-item">
+                            <input class="checkboxInput checkboxInput-animbg" type="checkbox" />
+                        </label>
+                    </li>
+                    <li class="clearfix">
+                        <h3 class="title">访客提醒</h3>
+                        <label class="notice-checkbox-item">
+                            <input class="checkboxInput checkboxInput-animbg" type="checkbox" />
+                        </label>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/2017123/main.5e8ee97.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.39fdb82.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+    <title>
+        Swipe 范例
+    </title>
+    <style>
+        .swipe-page .mint-swipe {
+            height: 200px;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        .swiper-box {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .swiper-box img {
+            width: 100%;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="http://www.mojikids.com/static/wap/style/modules/widget/swipe/swipe.4638ca7.css" />
+</head>
+
+<body class="swipe-page">
+    <header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+    <div id="page-container" class="page-container p10">
+
+        <!-- 如果你后续需要找到当前实例化后的swiper对象以对其进行一些操作的话，可以自定义配置一个ref属性 -->
+        <swiper :options="swiperOption" ref="mySwiperA" class="swiper-box">
+            <!-- 幻灯内容 -->
+            <swiper-slide v-for="item in list"><img v-bind:src="item.url" alt=""></swiper-slide>
+            <!-- ... -->
+            <!-- 以下控件元素均为可选（使用具名slot来确定并应用一些操作控件元素） -->
+            <div class="swiper-pagination" slot="pagination"></div>
+
+        </swiper>
+
+    </div>
+
+<script type="text/javascript" src="http://www.mojikids.com/static/wap/js/2017123/swipe.a03ccd6.js"></script>
+</body>
+
+</html>
+<script src="http://www.mojikids.com/static/wap/templates/ui/head.e604cf2.js" charset="utf-8"></script>
+
+
+<script type="text/javascript">
+    (function() {
+
+        // 官方文档 https://github.com/surmon-china/vue-awesome-swiper
+
+        // 加载轮播图模块
+        var Swipe = require('wap-kids:widget/swipe/index');
+
+        // 使用轮播图
+        Vue.use(Swipe);
+
+        new Vue
+            ({
+                el: '#page-container',
+
+                created: function() {
+
+                },
+                data: {
+                    list: [{
+                            url: 'http://image19-d.yueus.com/yueyue/20150728/20150728103731_186955_100076_64099_320.jpg?750x498_120'
+                        },
+                        {
+                            url: 'http://image19-d.yueus.com/yueyue/20150805/2015080510461963262566_320.jpg?500x750_120'
+                        },
+                        {
+                            url: 'http://image19-d.yueus.com/yueyue/20150805/20150805205151_417775_101693_8235_320.jpg?1500x1001_120'
+                        },
+                        {
+                            url: 'http://image19-d.yueus.com/yueyue/20150805/20150805205151_417775_101693_8235_320.jpg?1500x1001_120'
+                        },
+                        {
+                            url: 'http://image19-d.yueus.com/yueyue/20150805/20150805205151_417775_101693_8235_320.jpg?1500x1001_120'
+                        },
+                    ],
+                    swiperOption: {
+                        pagination: '.swiper-pagination',
+                        prevButton: '.swiper-button-prev',
+                        nextButton: '.swiper-button-next',
+                        slidesPerView: 1,
+                        paginationClickable: true,
+                        spaceBetween: 30,
+                        mousewheelControl: true
+                    }
+                },
+                methods: {
+
+                }
+            });
+    })();
+</script>

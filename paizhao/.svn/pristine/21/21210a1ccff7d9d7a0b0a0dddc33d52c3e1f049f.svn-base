@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/common/main.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/ui/no-use/base.css">
+	<link charset="utf-8" rel="stylesheet" href="http://51snap.yueus.com/static/wap/style/ui/no-use/yue-ui-no-use.css">
+	<script src="http://51snap.yueus.com/static/wap/lib/base.js"></script>  
+	
+	<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+    
+</head>
+
+
+<body class="yue-ui">
+	<div class="page">
+		<div class="hd">
+			<h1 class="page-title">paizhao-ui</h1>
+			<p class="page-desc pt5">为约摄Web服务量身设计</p>
+		</div>
+		<div class="bd">
+			<div class="weui-cells weui-cells-access global-navs">
+
+				<a class="weui-cell js_cell" href="color.htm" >
+
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>颜色配置 paizhao-ui-color</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+
+   
+				<a class="weui-cell js_cell" href="avatar.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>头像 paizhao-ui-avatar</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+				
+				
+				<a class="weui-cell js_cell" href="border.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>边框 paizhao-ui-border</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+				
+
+				<a class="weui-cell js_cell" href="button.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>按钮 paizhao-ui-button</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+				
+				<a class="weui-cell js_cell" href="icon-size.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>icon大小 paizhao-ui-icon-size</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+
+				<a class="weui-cell js_cell" href="list.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>列表 paizhao-ui-list</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+			
+				<a class="weui-cell js_cell" href="dialog.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p>弹窗 paizhao-ui-dialog</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+
+
+				<a class="weui-cell js_cell" href="tab.htm" >
+					<span class="weui_cell_hd"></span>
+					<div class="weui-cell-bd weui-cell-primary">
+						<p> paizhao-ui-tab</p>
+					</div>
+					<div class="weui-cell-ft">
+					</div>
+				</a>
+				
+
+
+
+			</div>
+		</div>
+	</div>	
+
+
+</body>
+</html>
+
+

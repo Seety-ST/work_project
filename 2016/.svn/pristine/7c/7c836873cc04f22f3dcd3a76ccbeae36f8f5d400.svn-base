@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>E-land</title>
+	<link rel="stylesheet" href="css/wap.css" />
+	<script src="js/lazysizes.min.js" async=""></script>
+	<script>
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+				};
+			if (!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+</head>
+<body class="cjy-bg">
+	<section class="cjy-page">
+		<i class="d-icon"></i>
+		<section class="path1 teaser lazyload" data-expand="-30">
+			<div class="coupon-list clearfix">
+				<ul>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1770528988&activityId=f8dc9365d0cc4393b0e88121deed590a">
+							<img data-sizes="auto" data-src="images/coupon-img/1.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1771485843&activityId=88b81b18d5fb4837bfafec174c37eac0">
+							<img data-sizes="auto" data-src="images/coupon-img/2.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1985598030&activityId=a25d223002254dcdaf650da21dc00ab5">
+							<img data-sizes="auto" data-src="images/coupon-img/3.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1950314581&activityId=4b19a33f4951473280f17adcb6376780">
+							<img data-sizes="auto" data-src="images/coupon-img/4.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=2142698337&activityId=ed8bcccb44a24fb88521eef277e35425">
+							<img data-sizes="auto" data-src="images/coupon-img/5.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1985843490&activityId=b94afb3004544ebda6adf14ed855db7f">
+							<img data-sizes="auto" data-src="images/coupon-img/6.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=2955250564&activityId=3fc6e32c1c964422977c622b28ea670c">
+							<img data-sizes="auto" data-src="images/coupon-img/7.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=2145496527&activityId=a67e4200fe1346019d47164c7cb2a336">
+							<img data-sizes="auto" data-src="images/coupon-img/8.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=2177006028&activityId=af92cd217d80423ebb2c145ece141920">
+							<img data-sizes="auto" data-src="images/coupon-img/9.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=2658971474&activityId=9b7ea9ccb70b4b84a8e80d079a5fbb60">
+							<img data-sizes="auto" data-src="images/coupon-img/10.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1983806421&activityId=e6bdadda426e40f2b86a86b27dfaf49d">
+							<img data-sizes="auto" data-src="images/coupon-img/11.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1984359786&activityId=c5e97669008d48bfa6286fb1f40df196">
+							<img data-sizes="auto" data-src="images/coupon-img/12.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1983407859&activityId=2168c51a2357426590975bcbef91e9e1">
+							<img data-sizes="auto" data-src="images/coupon-img/13.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1983299538&activityId=560c83b83a8f49e1838cd9e293e0aa9c">
+							<img data-sizes="auto" data-src="images/coupon-img/14.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1971150239&activityId=477249743fab4344a5c8b07ea2c9932f">
+							<img data-sizes="auto" data-src="images/coupon-img/15.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=1974968004&activityId=d8316b0305844144b8a0d35f21a18451">
+							<img data-sizes="auto" data-src="images/coupon-img/16.jpg" class="lazyload" />
+						</a>
+					</li>
+					<li>
+						<a href="https://taoquan.taobao.com/coupon/unify_apply.htm?sellerId=2194820548&activityId=f735bed9e9664854bcbb497d0915489c">
+							<img data-sizes="auto" data-src="images/coupon-img/17.jpg" class="lazyload" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="path2 teaser lazyload" data-expand="-30">
+			<div class="con-item">
+				<div class="img-item">
+					<img data-sizes="auto" data-src="images/product/1.jpg" class="lazyload" />
+				</div>
+				<div class="link-wrap">
+					<a href="#" class="link-1"></a>
+					<a href="#" class="link-2"></a>
+					<a href="#" class="link-3"></a>
+					<a href="#" class="link-4"></a>
+					<a href="#" class="link-5"></a>
+					<a href="#" class="link-6"></a>
+					<a href="#" class="link-7"></a>
+					<a href="#" class="link-8"></a>
+				</div>
+			</div>
+		</section>
+		<section class="path3 teaser lazyload" data-expand="-30">
+			<div class="mod-con-item">
+				<div class="img-item">
+					<img data-sizes="auto" data-src="images/product/2.jpg" class="lazyload" />
+				</div>
+				<div class="link-wrap">
+					<a href="#" class="link-1"></a>
+					<a href="#" class="link-2"></a>
+					<a href="#" class="link-3"></a>
+					<a href="#" class="link-4"></a>
+					<a href="#" class="link-5"></a>
+					<a href="#" class="link-6"></a>
+					<a href="#" class="link-7"></a>
+					<a href="#" class="link-8"></a>
+					<a href="#" class="link-9"></a>
+					<a href="#" class="link-10"></a>
+					<a href="#" class="link-11"></a>
+					<a href="#" class="link-12"></a>
+				</div>
+			</div>
+		</section>
+		<section class="path4 teaser lazyload" data-expand="-30">
+			<div class="mod-con-item">
+				<div class="img-item">
+					<img data-sizes="auto" data-src="images/product/3.jpg" class="lazyload" />
+				</div>
+				<div class="link-wrap">
+					<a href="#" class="link-1"></a>
+					<a href="#" class="link-2"></a>
+					<a href="#" class="link-3"></a>
+					<a href="#" class="link-4"></a>
+				</div>
+			</div>
+		</section>
+		<section class="path5 teaser lazyload" data-expand="-30">
+			<div class="mod-con-item">
+				<div class="img-item">
+					<img data-sizes="auto" data-src="images/product/4.jpg" class="lazyload" />
+				</div>
+				<div class="link-wrap">
+					<a href="#" class="link-1"></a>
+					<a href="#" class="link-2"></a>
+					<a href="#" class="link-3"></a>
+					<a href="#" class="link-4"></a>
+				</div>
+			</div>
+		</section>
+		<section class="path6 teaser lazyload" data-expand="-30">
+			<div class="mod-con-item">
+				<div class="img-item">
+					<img data-sizes="auto" data-src="images/product/5.jpg" class="lazyload" />
+				</div>
+				<div class="link-wrap">
+					<a href="#" class="link-1"></a>
+					<a href="#" class="link-2"></a>
+					<a href="#" class="link-3"></a>
+					<a href="#" class="link-4"></a>
+				</div>
+			</div>
+		</section>
+		<div class="btn-item">
+			<a href="#" class="top-btn">返回顶部</a>
+		</div>
+	</section>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"  />
+	<title>权限帮助</title>
+	<link href="css/photo-purview.css" type="text/css" rel="stylesheet" />
+	<script>
+			(function (doc, win) {
+				var docEl = doc.documentElement;
+				var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+				var recalc = function () {
+					var clientWidth = docEl.clientWidth;
+					if (!clientWidth) return;
+					if(clientWidth>=640)
+					{
+						docEl.style.fontSize = '100px';
+					}
+					else
+					{
+						docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+					}
+				};
+				recalc();
+				if (!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+			})(document, window);
+	</script>
+</head>
+	<body>
+		<section class="purview-page">
+			<article class="con-item">
+				<div class="text-item">
+					<p>相机应用需获得访问摄像头、照片的权限才可正常。使用常用软件或系统权限设置</p>
+				</div>
+				<div class="more-list">
+					<ul>
+						<li><a href="#">小米权限设置</a></li>
+						<li><a href="#">360安全卫士权限设置</a></li>
+					</ul>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

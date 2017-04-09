@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh" >
+<head>
+    <title>摄影师主页</title>    
+    {%$pc_global_head%}
+    <!--RESOURCEMAP_PLACEHOLDER-->
+
+    <link href="../../style/camera/index-page.scss" type="text/css" rel="stylesheet" />
+    
+</head>
+<body>
+	<!-- 头部内容 -->
+	{%$pc_global_top_bar%}
+	<!-- 页面内容 -->
+	
+	<div class="camera-page font_wryh">
+		<div class="p1th">
+			<div class="w1200 clearfix">
+				<div class="lbox fldi">
+					<div class="avatar-item">
+						<div class="ui-avatar-icon ui-avatar-icon-120">
+							<i style="background-image:url(http://yue-icon-d.yueus.com/38/381539_86.jpg)"></i>
+						</div>
+						<p class="address-txt">
+							<i class="icon icon-circle-address ui-icon-size-16 dib"></i>
+							<em class="txt">广州</em>
+						</p>
+					</div>
+				</div>
+				<div class="rbox fldi">
+					<div class="item-1 clearfix">
+						<span class="fldi name-txt color-333 fb f24">库布里克</span>
+						<button class="ui-button ui-button-bg-ffc ui-button-block  ui-button-size-h40 frdi">
+							<span class="ui-button-content f14">私人订制</span>
+						</button>
+					</div>
+					<div class="item-2">
+						<div class="txt-1 color-666 f14">
+							落·音乐空间座落在一栋有百年历史的"东山口小洋楼"里。室内和室外的装潢主要都是以实木和水泥概念为主。书架上的独立音乐唱片儿和独立杂志，摆放在沙发上的抱枕们，再结合绿色清新的植物们，整体环境文艺复古，简洁舒适。暮色悠悠时还有浪漫的小灯和烛光亮起呢…
+						</div>
+						<div class="txt-2">
+							<ul class="list clearfix f14 color-333">
+								<li>
+									套系数：<span class="f24 color-2bd fb">16</span>
+								</li>
+								<li>
+									咨询数：<span class="f24 color-2bd fb">96</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="p2th">
+			<div class="w1200">
+				<div class="item-wrap">
+					<div class="select-list-item">
+						<div class="classify-item fldi">
+							<ul class="list clearfix">
+								<li class="li-cur">
+									所有分类
+								</li>
+								<li>
+									所有分类
+								</li>
+								<li>
+									所有分类
+								</li>
+							</ul>
+						</div>
+						<div class="sort-item frdi">
+							<ul class="list clearfix">
+								<li>
+									所有分类
+								</li>
+								<li>
+									所有分类
+								</li>
+								<li>
+									所有分类
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<!-- 底部内容 -->
+	{%$pc_global_footer_bar%}
+
+</body>
+
+
+{%$pc_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message 
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+<script type="text/javascript">
+
+	$(function() 
+	{
+		
+	});
+</script>
+
+{%$pc_global_tj%}
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<title>paizhao-ui</title>
+	<script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/lib.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/zepto.min.js"></script>
+	 <script src="http://static.yueus.com/yue_ui/wap-test/static/wap/lib/back.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/base.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/common/main.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-no-use.css">
+<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/no-use/yue-ui-not.css">
+<!-- 列表 -->
+	<link type="text/css" rel="stylesheet" href="http://51snap.yueus.com//static/wap/style/ui/paizhao-ui-avatar.css">
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+
+<script type="text/javascript" >
+require.resourceMap({
+    "res": {
+        "wap-huipai:global/cookie/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/cookie/index.js"
+        },
+        "wap-huipai:global/go_top/go_top": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/go_top/go_top.js"
+        },
+        "wap-huipai:global/layer/layer": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/layer/layer.js"
+        },
+        "wap-huipai:global/lazyload/lazyload": {
+            "deps": [
+                "wap-huipai:global/utility/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/lazyload/lazyload.js"
+        },
+        "wap-huipai:global/main": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/main.js"
+        },
+        "wap-huipai:global/swiper/1.0.0/swiper3.07.min": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/swiper/1.0.0/swiper3.07.min.js"
+        },
+        "wap-huipai:global/ua/index": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/ua/index.js"
+        },
+        "wap-huipai:global/utility/cross_domain_storage": {
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/cross_domain_storage.js"
+        },
+        "wap-huipai:global/utility/index": {
+            "deps": [
+                "wap-huipai:global/cookie/index",
+                "wap-huipai:global/ua/index"
+            ],
+            "url": "http://51snap.yueus.com//static/wap/modules/global/utility/index.js"
+        }
+    },
+    "pkg": {}
+});
+</script>
+
+</head>
+
+
+<header class="global-header" >
+	<div class="wbox clearfix">
+			<a href="javascript:void(0);" data-role="back">
+				<div class="back" data-role="page-back">
+					<i class="icon-back"></i>
+				</div>
+			</a>
+		<h3 class="title">头像</h3>
+	</div>
+</header>
+  
+
+
+<!-- 页面内容start -->
+<p class="pt20 f14 color-ff6">32x32</p>
+<div class="ui-avatar-icon ui-avatar-icon-32">
+	<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+</div>
+<p class="pt20 f14 color-ff6">45x45</p>
+<div class="ui-avatar-icon ui-avatar-icon-45">
+	<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+</div>
+<p class="pt20 f14 color-ff6">60x60</p>
+<div class="ui-avatar-icon ui-avatar-icon-60">
+	<i style="background-image:url(http://www.yueus.com/yue_ui/wap-test/static/wap/image/test/ui-avatar-icon-s.jpg)"></i>
+</div>
+<!-- 页面内容end -->
+
+</body>
+
+
+
+
+</html>

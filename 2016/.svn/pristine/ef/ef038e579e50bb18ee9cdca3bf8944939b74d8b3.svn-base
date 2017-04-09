@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>Circle</title>
+	<link href="css/wap.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo"> <i class="logo-icon"></i>
+		</h1>
+		<div class="r-btn-item">
+			<span class="btn-area open-btn"> <em class="txt">打开软件</em> <i class="icon more-icon"></i>
+			</span>
+		</div>
+	</header>
+	<!--内容-->
+	<section class="content">
+		<div class="list-page">
+			<section class="mod-s-item-list">
+				<article class="item">
+					<div class="user-item">
+						<div class="img-item">
+							<span class="img-area">
+								<img src="images/test/70x70.jpg" />
+							</span>
+						</div>
+						<dl class="text-item">
+							<dt class="info-item">
+								<span class="name">大D</span>
+								<i class="mod-sex-icon female-icon"></i>
+								<i class="mod-level-icon LV1">LV1</i>
+							</dt>
+							<dd class="date-item">
+								<span class="time-item">
+									<i class="icon-time"></i>
+									<time>1小时前</time>
+								</span>
+							</dd>
+						</dl>
+						<!-- 新增标签 -->
+						<span class="tag-item">
+							<i class="tag-icon main-tag-icon">帖主</i>
+						</span>
+						<!-- 新增标签 end-->
+					</div>
+					<div class="con-item">
+						<div class="text-item">
+							<p style="width: 100% !important;"> <strong style="width: 100% !important;"><span style="width: 100% !important;">七月可谓是展览月，从动漫到摄影，从人文记录到艺术创作，沪上正在举办的各大展览你一定不要错过。</span></strong> 
+								<br></p>
+							<p style="width: 100% !important;"> <strong style="width: 100% !important;"><span style="width: 100% !important;">
+										<br></span></strong> 
+							</p>
+							<p style="width: 100% !important;">
+								<strong style="width: 100% !important;">
+									<span style="width: 100% !important;">上海当代艺术馆</span>
+								</strong>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">黄浦区南京西路231号人民公园7号门（63279900），</span>
+								<span style="font-size: 14px;width: 100% !important;">门票50元，10:00-18:00</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">
+									<strong style="width: 100% !important;"></strong>
+								</span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f0f8c5c69f.jpg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">动漫美学双年展 2015—2016——奇想阁</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									本次展览在“以知识为导向”这一大方向之下，以探索动画、漫画塑造的虚构与现实的中间地带为切入点，邀请十三位来自世界各地的艺术家参与，以动画、绘画、雕塑、新媒体等各种创作方式作为工具和媒介，对空间、时间、叙事、世界观等进行重构。
+									<span style="width: 100% !important;">--&gt;</span>
+									7月17日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<br></span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f0ff8876b2.jpg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">徐文恺aaajiao / 苗颖Miao Ying：真空</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									全新艺术家合作项目“+follow+”的第一期。两位艺术家都是以网络作为创作媒介，但徐文恺立足于网络的虚拟化与数字化，通过同样虚拟数字的转换与阐述，创作出颇具抽象意味的作品。而苗颖更多则是涉及到社交网络、网络现象与人本身的链结以及所产生的异化效应，作品也总是透露着强烈的幽默感。
+									<span style="width: 100% !important;">--&gt;</span>
+									7月24日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<p style="width: 100% !important;">
+								<strong style="width: 100% !important;">
+									<span style="width: 100% !important;">
+										<br></span>
+								</strong>
+							</p>
+							<p style="width: 100% !important;">
+								<strong style="width: 100% !important;">
+									<span style="width: 100% !important;">上海二十一世纪民生美术馆</span>
+								</strong>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">浦东新区世博大道1929号(世博公园)（6105 2121），10:00-18:00</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;"></span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f11a5d97d4.jpeg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">真实的假像</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									展览包含来自亚洲、欧美、中东、大洋洲、非洲等地区的16个国家的30多位艺术家的影像、装置、摄影和绘画作品。策展人：姜节泓、马克·纳什。
+									<span style="width: 100% !important;">--&gt;</span>
+									7月31日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<br></span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<p style="width: 100% !important;">
+								<strong style="width: 100% !important;">
+									<span style="width: 100% !important;">上海摄影艺术中心</span>
+								</strong>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">徐汇区龙腾大道2555号-1（近丰谷路）（64289516），门票40元，10:30-17:30，（周一闭馆）</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f120be8cfc.jpg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">银幕背后｜布莉姬·拉孔柏</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									18岁的法国姑娘布莉姬·拉孔柏，从戛纳到好莱坞，四十年如一日，专注于明星肖像拍摄及电影剧场拍摄。在她的镜头下，莱昂纳多、温斯莱特、布拉德·皮特等巨星都对她放下身段，从熠熠生辉的明星回归演员本位。此次展览展出的作品中的人物，共有奥斯卡奖得主18人，奥斯卡奖提名5人，可谓星光熠熠。
+									<span style="width: 100% !important;">--&gt;</span>
+									8月28日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<br></span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<p style="width: 100% !important;">
+								<strong style="width: 100% !important;">
+									<span style="width: 100% !important;">上海外滩美术馆</span>
+								</strong>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">黄浦区虎丘路20号（3310 9985），门票30元，学生票10元，10:00-18:00，周一闭馆</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f1284c2ddc.jpg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">群展“告诉我一个故事：地方性与叙事”</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									展览分享了11个来自亚洲不同地区的故事，根植于当地的历史文化背景，透过艺术家独特的视角以及他们和这些土地个人化的深厚联系，呈现出一个不为我们所熟知的亚洲的面貌。
+									<span style="width: 100% !important;">--&gt;</span>
+									8月14日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<br></span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">
+										<span style="width: 100% !important;">芮欧百货艺术空间</span>
+									</strong>
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;">静安区南京西路1601号4楼</span>
+								<br></p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;"></span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f1428c7559.jpeg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">爱不孤单：奈良美智作品收藏体验展</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									奈良美智先生的作品在我们这个都市可以说随处可见，而这次展览展出的30余幅精彩作品并未从大流，以作品的质量与稀有度为展览诉求，有多幅作品之前从未在内地亮相过，且展出的作品均得到资深藏家授权。再加上同步实施的以“爱不孤单”为教育理念的亲子美学互动计划以及现场3D互动项目，让观众零距离接触大师作品的同时还有对以艺术为核心的生活方式的更深层次体验。7月9日
+									<span style="width: 100% !important;">--&gt;</span>
+									8月31日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<br></span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;"></span>
+							</p>
+							<p style="width: 100% !important;">
+								<strong style="width: 100% !important;">
+									<span style="width: 100% !important;">上海新天地</span>
+								</strong>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">黄浦区黄陂南路380号</span>
+							</p>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px;width: 100% !important;">
+									<strong style="width: 100% !important;"></strong>
+								</span>
+							</p>
+							<div class="image-package">
+								<img src="http://xsns-alioss.circle520.com/api/20160708/10/577f15d4e65dc.jpg_m640-hd"></div>
+							<p style="width: 100% !important;">
+								<span style="font-size: 14px; width: 100% !important;">
+									<strong style="width: 100% !important;">《早期蒙娜丽莎发现之旅》展</strong>
+								</span>
+								<span style="font-size: 14px; width: 100% !important;">
+									这是这个集艺术、科学、教育、多媒体互动为一体的综合展览的中国首展，全新的证据破解达芬奇之谜，文艺复兴的个性之旅，还有为孩子设计的“童趣之旅”，必将成为又一个引爆申城的潮流大展。
+									<span style="width: 100% !important;">--&gt;</span>
+									8月28日
+								</span>
+							</p>
+							<p style="width: 100% !important;">
+								<br></p>
+						</div>
+					</div>
+					<div class="btn-item clearfix">
+						<div class="date-btn btn-love">
+							<span class="btn-area">
+								<i class="icon"></i> <em>364</em>
+							</span>
+						</div>
+						<div class="date-btn btn-comment">
+							<span class="btn-area">
+								<i class="icon"></i>
+								<em>364</em>
+							</span>
+						</div>
+					</div>
+				</article>
+				<!-- 新增 最新发言 分割线 -->
+				<div class="latest-line">
+					<span class="title">最新发言</span>
+				</div>
+				<!-- 新增 最新发言 分割线 end-->
+				<article class="item">
+					<div class="user-item">
+						<picture class="img-item">
+							<img src="images/test/70x70.jpg" />
+						</picture>
+						<dl class="text-item">
+							<dt class="info-item">
+								<span class="name">飞漫迷</span>
+								<i class="mod-sex-icon male-icon"></i>
+								<i class="mod-level-icon LV1">LV1</i>
+							</dt>
+							<dd class="date-item">
+								<span class="time-item">
+									<i class="icon-time"></i>
+									<time>1小时前</time>
+								</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="con-item">
+						<div class="text-item">
+							<p>麻麻再也不担心我的周末森活辣</p>
+						</div>
+						<div class="img-list">
+							<!-- 无图 -->
+						</div>
+					</div>
+					<div class="btn-item clearfix">
+						<div class="date-btn btn-love">
+							<span class="btn-area">
+								<i class="icon"></i>
+								<em>364</em>
+							</span>
+						</div>
+						<div class="date-btn btn-comment">
+							<span class="btn-area">
+								<i class="icon"></i>
+								<em>364</em>
+							</span>
+						</div>
+					</div>
+				</article>
+				<article class="item">
+					<div class="user-item">
+						<picture class="img-item">
+							<img src="images/test/70x70.jpg" />
+						</picture>
+						<dl class="text-item">
+							<dt class="info-item">
+								<span class="name">大D</span>
+								<i class="mod-sex-icon female-icon"></i>
+								<i class="mod-level-icon LV1">LV1</i>
+							</dt>
+							<dd class="date-item">
+								<span class="time-item">
+									<i class="icon-time"></i>
+									<time>1小时前</time>
+								</span>
+							</dd>
+						</dl>
+					</div>
+					<div class="con-item">
+						<div class="text-item">
+							<p>麻麻再也不担心我的周末森活辣</p>
+						</div>
+						<div class="img-list">
+							<picture>
+								<img src="images/test/750x566.jpg" />
+							</picture>
+						</div>
+					</div>
+					<div class="btn-item clearfix">
+						<div class="date-btn btn-love">
+							<span class="btn-area">
+								<i class="icon"></i>
+								<em>364</em>
+							</span>
+						</div>
+						<div class="date-btn btn-comment">
+							<span class="btn-area">
+								<i class="icon"></i>
+								<em>364</em>
+							</span>
+						</div>
+					</div>
+				</article>
+			</section>
+		</div>
+	</section>
+	<!-- 下载浮动层 -->
+	<section class="mod-download-item">
+		<section class="info-item">
+			<div class="img-item">
+				<img src="images/logo-icon-96x96.png" />
+			</div>
+			<dl class="text-item">
+				<dt>
+					<i class="icon-logo"></i>
+					<span class="apply-item">
+						<i class="icon icon-iphone"></i>
+						<i class="icon icon-android"></i>
+					</span>
+				</dt>
+				<dd class="txt">白 领 交 友 社 区</dd>
+			</dl>
+		</section>
+		<button class="download-btn">立即下载</button>
+	</section>
+	<!-- 下载浮动层 end -->
+</body>
+</html>

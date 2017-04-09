@@ -1,0 +1,218 @@
+.detail-page {
+  padding-bottom: 0.65rem;
+}
+
+.detail-page .p1th {
+  padding: 0.15rem 0.25rem 0 0.25rem;
+  background-color: #ffc430;
+}
+
+.detail-page .p1th .wbox {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  color: #ffe8b0;
+}
+
+.detail-page .p1th .wbox .p1 {
+  color: #fff;
+  font-size: 0.16rem;
+  font-weight: bold;
+  padding: 0 0 0 0;
+}
+
+.detail-page .p1th .wbox .p2 {
+  line-height: 0.24rem;
+}
+
+.detail-page .p1th .wbox .cor {
+  font-weight: bold;
+  color: #fff;
+}
+
+.detail-page .p1th .wbox .lbox {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.detail-page .p1th .wbox .rbox {
+  padding-top: 0;
+  width: 0.84rem;
+}
+
+.detail-page .p1th .wbox .rbox img {
+  width: 0.84rem;
+}
+
+.detail-page .p2th {
+  background-color: #fff;
+  font-size: 0.14rem;
+}
+
+.detail-page .p2th .item-wrap .item {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  font-size: 0.14rem;
+  color: #666;
+  padding: 0.15rem 0.2rem 0.15rem 0.2rem;
+}
+
+.detail-page .p2th .item-wrap .item .lbox {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-page .p2th .item-wrap .item .icon {
+  width: 0.16rem;
+  height: 0.16rem;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: -0.03rem;
+  margin-right: 0.07rem;
+}
+
+.detail-page .p2th .item-wrap .item .home {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/order/icon-home.png);
+}
+
+.detail-page .p2th .item-wrap .item .place {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/order/icon-place.png);
+}
+
+.detail-page .p2th .item-wrap .item .phone {
+  background-image: url(http://mojikids.yueus.com/static/wap/image/order/icon-phone.png);
+}
+
+.detail-page .p3th {
+  margin-top: 0.1rem;
+  background-color: #fff;
+  font-size: 0.14rem;
+}
+
+.detail-page .p3th .item-wrap .item {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  font-size: 0.14rem;
+  color: #666;
+  padding: 0.15rem 0.2rem;
+}
+
+.detail-page .p4th {
+  margin-top: 0.1rem;
+  background-color: #fff;
+  font-size: 0.14rem;
+}
+
+.detail-page .p4th .item {
+  padding: 0.15rem 0.15rem 0.15rem 0.15rem;
+}
+
+.detail-page .p4th .good-item {
+  background-color: #fdfdfd;
+}
+
+.detail-page .p4th .item-line {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.detail-page .p4th .wbox1 {
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.detail-page .p4th .wbox1 .lbox img {
+  width: 0.8rem;
+  display: block;
+}
+
+.detail-page .p4th .wbox1 .cbox {
+  padding: 0 0.15rem 0 0.1rem;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.detail-page .p4th .wbox1 .cbox .p1 {
+  padding-top: 0.05rem;
+}
+
+.detail-page .p4th .wbox1 .cbox .p2 {
+  padding-top: 0.03rem;
+}
+
+.detail-page .p5th .title {
+  font-size: 0.12rem;
+  padding: 0.2rem 0.15rem 0.1rem 0.15rem;
+}
+
+.detail-page .p5th .wbox {
+  background-color: #fff;
+  display: -webkit-box;
+  display: box;
+  -webkit-box-pack: justify;
+  box-pack: justify;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  padding: 0.15rem;
+}
+
+.detail-page .p6th {
+  margin-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+.detail-page .p6th .title {
+  font-size: 0.12rem;
+  padding: 0.2rem 0.15rem 0.1rem 0.15rem;
+}
+
+.detail-page .p6th .wbox {
+  background-color: #fff;
+  padding: 0.15rem;
+  font-size: 0.14rem;
+  color: #aaa;
+  line-height: 0.28rem;
+}
+
+.detail-page .submit {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.16rem;
+  color: #fff;
+  background-color: #ffc430;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  z-index: 1;
+}
+
+.mint-popup {
+  width: 100%;
+}
+
+.global-map-pop {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+}

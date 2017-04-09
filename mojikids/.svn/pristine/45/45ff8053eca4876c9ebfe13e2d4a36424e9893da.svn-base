@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        支付
+    </title>
+    {%$wap_global_head%}
+</head>
+
+<body >
+
+<link charset="utf-8" rel="stylesheet" href="../../style/pay/index.scss">
+<main role="main">
+    <div id="page-container" class="page-container" >
+        <div class="order-info-section">
+            {%foreach $pay_info_array as $key => $val%}
+            <div class="order-info-item ui-border-b clearfix">
+                <div class="item-title color-333 fl">{%$val.title%}</div>
+                <div class="item-value {%$val.font_color%} fr">{%$val.value%}</div>
+            </div>
+            {%/foreach%}
+        </div>
+        <div class="submit-btn-section">
+            <button class="ui-button ui-button-block ui-button-100per ui-button-size-xl main-bg ui-button-radius-l" @click="order_pay">
+                <span class="ui-button-content f16">{%$btn_html%}</span>
+            </button>
+        </div>
+        <div class="date-info-tips-section tc">
+            <div class="tips-item-title main-color">档期为你保留30分钟，请尽快支付</div>
+            <div class="tips-item-count-down  main-color" v-html="left_time_html"></div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+</html>
+
+{%$wap_global_footer%}
+
+<!--SCRIPT_PLACEHOLDER-->
+
+<!--
+@message
+注意：
+引用模块必须在global_footer之后
+使用本地缓存的组件，使用方法 如： require.syncLoad('namespace:xxxxxx')
+-->
+
+
+<script type="text/javascript">
+    (function()
+    {
+
+
+        // 加载util
+        var Util =require.syncLoad(__moduleId('/modules/global/util/index'));
+
+
+        var left_time = "{%$left_time%}";
+        var __order_sn = "{%$order_sn%}";
+        var __coupon_sn = "{%$coupon_sn%}";
+        var __redirect_url = window.__MOJIKIDS_GLOBAL['PAGE_URL']['pay']+"success.php?order_sn="+__order_sn;
+
+        var vm = new Vue
+        ({
+            el: '#page-container',
+            created: function()
+            {
+
+            },
+            data:function()
+            {
+                return {
+                    left_time : left_time,
+                    left_time_html : "",
+                    btn_lock : false//按钮锁
+                }
+            },
+            methods:
+            {
+                order_pay : function(){
+                    var self = this;
+                    if(self.btn_lock)
+                    {
+                        return;
+                    }
+                    //锁按钮
+                    self.btn_lock = true;
+
+                    Util.request
+                    ({
+                        url : window.__MOJIKIDS_GLOBAL['AJAX_DOMAIN']+'pay/submit_pay.php',
+                        type : 'POST',
+                        cache : true,
+                        data :
+                        {
+                            order_sn:__order_sn,
+                            coupon_sn:__coupon_sn,
+                            redirect_url:__redirect_url
+                        },
+                        beforeSend : function()
+                        {
+
+                        },
+                        success : function(respond)
+                        {
+
+                            console.log(respond.res.data);
+                            if(respond.res.data.result=="20000")
+                            {
+                                //根据UA做分支处理，待整理
+                                if(Util.ua.is_weixin)
+                                {
+                                    var request_data = JSON.parse(respond.res.data.request_data);
+
+                                    //从返回的数值
+                                    var timestamp = request_data.timeStamp;
+                                    var nonceStr = request_data.nonceStr;
+                                    var package = request_data.package;
+                                    var signType = request_data.signType;
+                                    var paySign = request_data.paySign;
+
+
+                                    //微信相应处理
+                                    wx.chooseWXPay({
+                                        timestamp: timestamp, // 支付签名时间戳，注意微信jssdk中的所有使用timestamp字段均为小写。但最新版的支付后台生成签名使用的timeStamp字段名需大写其中的S字符
+                                        nonceStr: nonceStr, // 支付签名随机串，不长于 32 位
+                                        package: package, // 统一支付接口返回的prepay_id参数值，提交格式如：prepay_id=***）
+                                        signType: signType, // 签名方式，默认为'SHA1'，使用新版支付需传入'MD5'
+                                        paySign: paySign, // 支付签名
+                                        success: function (res) {
+                                            // 支付成功后的回调函数
+                                            if (res.errMsg == 'chooseWXPay:ok') {
+                                                Util.toast({
+                                                    message: "微信支付成功",
+                                                    position: 'middle',
+                                                    duration: 1000
+                                                });
+                                                //跳转处理
+                                                setTimeout(function(){
+                                                    window.location.href = window.__MOJIKIDS_GLOBAL['PAGE_URL']['pay']+"success.php?order_sn="+__order_sn
+                                                },1000);
+
+                                            }
+                                            else if (res.errMsg == 'chooseWXPay:cancel') {
+                                                Util.toast({
+                                                    message: "微信支付取消",
+                                                    position: 'middle',
+                                                    duration: 3000
+                                                });
+                                            }
+                                            else if (res.errMsg == 'chooseWXPay:fail') {
+                                                Util.toast({
+                                                    message: "微信支付失败",
+                                                    position: 'middle',
+                                                    duration: 3000
+                                                });
+                                            }
+                                            else {
+                                                Util.toast({
+                                                    message: "支付失败，由于网络问题提交失败，请点击左上角关闭并重新进入",
+                                                    position: 'middle',
+                                                    duration: 3000
+                                                });
+                                            }
+                                        },
+                                        fail: function(res){
+                                                Util.toast({
+                                                    message: "支付失败："+res.errMsg,
+                                                    position: 'middle',
+                                                    duration: 3000
+                                                });
+                                        },
+                                        cancel: function(){
+                                            Util.toast({
+                                                message: "取消支付",
+                                                position: 'middle',
+                                                duration: 3000
+                                            });
+                                        }
+
+                                    });
+                                }
+                                else
+                                {
+                                    //非微信，支付宝直接跳转
+                                    var jump_link = respond.res.data.request_data;
+                                    Util.toast({
+                                        message: respond.res.data.message,
+                                        position: 'middle',
+                                        duration: 1000
+                                    });
+                                    setTimeout(function(){
+                                        window.location.href = jump_link;
+                                    },1000);
+                                }
+
+                            }
+                            else
+                            {
+                                Util.toast({
+                                    message: respond.res.data.message,
+                                    position: 'middle',
+                                    duration: 3000
+                                });
+                            }
+                            //开锁
+                            self.btn_lock = false;
+
+                        },
+                        error : function(){
+                            Util.toast({
+                                message: '支付提交有误，请稍后再试',
+                                position: 'middle',
+                                duration: 1000
+                            });
+                            //开锁
+                            self.btn_lock = false;
+                        }
+
+                    });
+                }
+            },
+            computed : {
+                left_time_html : function(){
+                    var left_time = this.left_time;
+                    var m = Math.floor(left_time/60%60);
+                    if(m<10)
+                    {
+                        m = "0"+m;
+                    }
+                    var s = Math.floor(left_time%60);
+                    if(s<10)
+                    {
+                        s = "0"+s;
+                    }
+                    var left_time_html = m+":"+s;
+                    return left_time_html;
+                }
+            }
+
+        });
+
+        //倒计时处理
+        var interval_value = setInterval(function(){
+            if(vm.left_time_html=="00:00")
+            {
+                clearInterval(interval_value);
+                //跳转处理
+                Util.toast({
+                    message: "档期保留时间已经过期，订单已经关闭",
+                    position: 'middle',
+                    duration: 2000
+                });
+
+                setTimeout(function(){
+                    var jump_link = window.__MOJIKIDS_GLOBAL['PAGE_URL']['order']+"detail.php?order_sn="+__order_sn;
+                    window.location.href = jump_link;
+                },2000);
+
+                return;
+            }
+            else
+            {
+                vm.left_time = parseInt(vm.left_time)-1;
+            }
+
+        },1000);
+
+
+    })();
+</script>
+
+{%$wap_global_tj%}

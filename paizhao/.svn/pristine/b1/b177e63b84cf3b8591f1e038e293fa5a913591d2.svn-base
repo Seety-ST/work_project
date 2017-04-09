@@ -1,0 +1,3 @@
+请先安装 
+npm install -g fis-postpackager-iconfont
+将当期目录的index.js复制到 上述安装包的src中，通常是在npm的目录

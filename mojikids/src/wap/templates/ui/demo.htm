@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="import" href="./g_head.tpl.htm?__inline">
+	<title>
+		基础页面 范例
+	</title>
+
+</head>
+
+<body >
+	<link rel="import" href="./g_back.tpl.htm?__inline">
+    <main role="main">
+    	<div id="page-container" class="page-container page-view" >
+            <h1>该页面有Vue实例，工具集使用例子</h1>
+            <moji-footer index="0" >
+
+            </moji-footer>
+    	</div>
+    </main>
+
+</body>
+
+</html>
+<link rel="import" href="./g_footer.tpl.htm?__inline">
+
+
+
+
+<script type="text/javascript">
+	(function()
+    {
+        // 加载footer模块
+        var Footer =  require('/modules/layout/footer/index');
+
+        // 加载toast组件
+		var Toast  =  require.syncLoad(__moduleId('/modules/widget/toast/index'));
+
+        // 加载util
+        var Util =require.syncLoad(__moduleId('/modules/global/util/index'));
+
+        // 安装footer
+        Vue.component(Footer.name, Footer);
+        // 安装toast
+		Vue.$toast = Vue.prototype.$toast = Toast;
+        // 使用toast
+		Vue.$toast({
+			message: '提示',
+			position: 'middle',
+			duration: 5000
+		});
+
+        // 异步请求
+        Util.request
+		({
+			url : 'http://www.51snap.cn/ajax/camera/get_list_info.php',
+			type : 'GET',
+			cache : true,
+			data :
+			{
+				type_id:'',
+				user_id:100076,
+				sort:'',
+				order:'',
+				page:1,
+			},
+			beforeSend : function()
+			{
+				console.log('请求中...')
+			},
+			success : function(res)
+			{
+				console.log(res)
+			}
+		});
+
+		new Vue
+		({
+			el: '#page-container',
+			mounted: function()
+			{
+
+			},
+			data:function()
+            {
+                return {
+                    cur : 0
+                }
+            },
+			methods:
+			{
+
+			}
+		});
+	})();
+</script>

@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * 首页
+ * 
+ * @author willike <chenwb@yueus.com>
+ * @since 2017-01-03
+ */
+define('YUE_INPUT_CHECK_TOKEN', FALSE);
+require(dirname(dirname(__FILE__)) . '/moji_input.inc.php');
+$record_list = array();
+if ($lstart == 0) {
+    $rank_id = 1985;
+    include_once('/disk/data/htdocs232/poco/pai/yue_admin/cms/cms_common.inc.php'); //引入榜单
+    $cms_obj = new cms_system_class();
+    $record_result = $cms_obj->get_last_issue_record_list(false, '0,5', 'place_number ASC', $rank_id);
+    if ($location_id == 'test1') {
+        $options['data'] = array(
+            '$record_result' => $record_result,
+        );
+        return $cp->output($options);
+    }
+    foreach ($record_result as $value) {
+        $link_url = $value['link_url'];
+        $link_url = stripos($link_url, 'http') === 0 ? $link_url : 'http://' . $link_url;
+        if (!filter_var($link_url, FILTER_VALIDATE_URL)) {  // 非法链接
+            $link_url = '';
+        }
+        $record_list[] = array(
+            'image' => $value['img_url'],
+            'url' => $link_url,
+        );
+    }
+}
+$yueshe_goods_obj = POCO::singleton('pai_mall_yueshe_goods_class');
+$goods_result = $yueshe_goods_obj->get_goods_list($limit_str);
+if ($location_id == 'test') {
+    $options['data'] = array(
+        '$limit_str' => $limit_str,
+        '$goods_result' => $goods_result,
+    );
+    return $cp->output($options);
+}
+$goods_list = array();
+foreach ($goods_result as $goods_) {
+    $goods_data = $goods_['goods_data'];
+    $goods_content = $goods_data['content'];
+    $description = moji_content_strip($goods_content, 35);
+    $show_goods_id = $goods_data['goods_id'];
+    $goods_info = array(
+        'goods_id' => $show_goods_id,
+        'title' => $goods_data['titles'],
+        'image' => $goods_data['img'][0]['img_url'],
+        'description' => $description,
+        'price' => '￥' . $goods_data['prices'],
+        'url' => moji_redirect_url($show_goods_id, 'goods', $request_platform),
+    );
+    $goods_list[] = $goods_info;
+}
+$options['data'] = array(
+    'banner' => $record_list,
+    'goods' => $goods_list,
+);
+return $cp->output($options);

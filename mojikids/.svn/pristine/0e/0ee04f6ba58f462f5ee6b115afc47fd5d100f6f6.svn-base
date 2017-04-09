@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>约约 上传组件</title>
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://static.yueus.com/yue_ui/js/jquery.js"></script>
+
+</head>
+<body>
+
+<div class="from-con">
+	<div class="img-upload-item">
+		<div class="img-list clearfix">
+			<div class="J_upload-container_1 ui-item" style="overflow:hidden;" >
+
+			</div>
+		</div>
+		<div class="tips">建议尺寸：750*750像素；最多上传1张图片；文件格式为jpg、jpeg、png（每张图片大小不超过3M）</div>
+	</div>
+</div>
+
+<div class="from-con" style="display:none;">
+	<div class="img-upload-item">
+		<div class="img-list clearfix">
+			<div class="J_upload-container_2 ui-item" style="overflow:hidden;" >
+
+			</div>
+		</div>
+		<div class="tips">建议尺寸：750*750像素；最多上传1张图片；文件格式为jpg、jpeg、png（每张图片大小不超过3M）</div>
+	</div>
+</div>
+
+<br />
+<h3>图片地址</h3>
+<button id="get-imgs">获取图片地址</button>
+<div id="result"></div>
+
+<!--传图必须使用-->
+
+<script type="text/javascript" src="./webuploader.min.js"></script>
+<script type="text/javascript" src="./yueyue_uploader_v2.js?222"></script>
+<script type="text/javascript" src="http://static.yueus.com/yue_ui/layer/1.0.0/layer/layer.js"></script>
+<!--传图必须使用-->
+
+</body>
+</html>
+<script >
+
+
+$(function()
+{
+
+
+
+	$('#input').on('input',function(e)
+	{
+		var $input = $(e.currentTarget);
+		var str = $input.val();
+
+		if($input.val().charAt($input.val().length-1) =='-' )
+		{
+			return true;
+		}
+
+		str = str.replace(/-/g,'');
+
+		if(str.length % 4 == 0 )
+		{
+			$input.val($input.val()+'-');
+		}
+	})
+
+	// 使用
+	var com1 = add_upload_com($('.J_upload-container_1'),
+	{
+		part_id : 'g1[goods_id]',// 图片组id，确保每组图片都有唯一id做标记
+		imgs_arr : [],// 初始化图片
+		user_id : '100002',
+		limit : 99
+	});
+
+	add_upload_com($('.J_upload-container_2'),
+	{
+		part_id : 'content[4][img][]',// 图片组id，确保每组图片都有唯一id做标记
+		imgs_arr : ['http://image19-d.yueus.com/yueyue/20160111/20160111112451_94374_100001_23054_260.jpg?1449x815_120'],// 初始化图片
+		user_id : '100002',
+		limit : 99
+	});
+
+	$('#get-imgs').on('click',function()
+	{
+		console.clear();
+		console.table(com1.get_img_list());
+
+		var arr = com1.get_img_list();
+		var str_arr = [];
+		var $result = $('#result');
+		for(var i=0;i<arr.length;i++)
+		{
+			str_arr.push('<p><img src="'+change_img_resize(arr[i],'')+'" style="width:130px;height:130px;">   <span>'+change_img_resize(arr[i],'')+'</span> </p>');
+		}
+
+		$result.html(str_arr.join(''));
+	});
+
+	function change_img_resize(img_url,size)
+	{
+		var size_str = '';
+
+		size = size || '';
+
+		if($.inArray(size, [120,320,165,640,600,145,440,230,260]) != -1)
+		{
+			size_str = '_' +size;
+		}
+		else
+		{
+			size_str = '';
+		}
+		// 解析img_url
+
+		var url_reg = /^http:\/\/(img|image)\d*(-c|-wap|-d)?(.poco.cn.*|.yueus.com.*)\.jpg|gif|png|bmp/i;
+
+		var reg = /_(32|64|86|100|145|165|260|320|440|468|640).(jpg|png|jpeg|gif|bmp)/i;
+
+		if (url_reg.test(img_url))
+		{
+			if(reg.test(img_url))
+			{
+				img_url = img_url.replace(reg,size_str+'.$2');
+
+			}
+			else
+			{
+				img_url = img_url.replace('/(\.\d*).jpg|.jpg|.gif|.png|.bmp/i', size_str+".jpg");//两个.jpg为兼容软件的上传图片名
+
+			}
+		}
+
+
+
+		return img_url;
+	}
+
+
+    function add_upload_com($el,options)
+	{
+		options = options || {};
+		// ======== 传图组件开始 ========
+		var part_id = options.part_id;
+		var imgs_arr = options.imgs_arr;
+		var user_id = options.user_id;
+		var limit = options.limit;
+		var yue_upload_obj = new yue_upload_class
+			({
+				upload_total_limit : limit,// 传图上限
+				upload_container : $el,
+				user_id :  user_id,// 用户id
+				multiple : true,// 是否多图
+				imgs : imgs_arr,
+                server : '{%$server_url%}',
+                form_data : {%$upload_params%},
+                init_img_url : '{%$img_url%}'+'?'+new Date().getTime(),
+				sortable : true,
+				fileSizeLimit: 3 * limit * 1024 * 1024,    // 9 M * 上限 总文件大小
+				fileSingleSizeLimit: 3 * 1024 * 1024,    // 3 M 单文件大小
+				gid : part_id,
+				threads : 1,
+				formData : {
+					"sh_type":"cms"
+				},
+				accept :
+				{
+					extension : '',
+					mimeTypes : 'image/jpg,image/jpeg,image/png'
+				}
+			});
+
+			$('['+yue_upload_obj.uuid+']').on('click', function()
+			{
+				var upload_obj = {};
+				first_layer = layer.open
+				({
+					type: 1,
+					area: ['800px', '470px'],
+					fix: false, //不固定
+					title:'上传图片',
+					maxmin: false,
+					content: yue_upload_obj.tpl,
+					success : function($el,index)
+					{
+						var sec_layer = null;
+						var index = index;
+
+
+						setTimeout(function()
+						{
+							upload_obj = yue_upload_obj.init_upload($el);
+
+							upload_obj.on('uploadProgress',function()
+							{
+
+							})
+							.on('fileQueued',function(file)
+							{
+
+							})
+							.on('fileDequeued',function(file)
+							{
+
+							})
+							.on('uploadSuccess',function(file,response)
+							{
+								// response 服务端返回数据
+                                if(response.code == 0)
+                               {
+                                   $.ajax
+                                   ({
+                                       url : '//www.mojikids.com/ajax/upload/get_access_token.php',
+                                       success : function(response)
+                                       {
+                                           var res = response.res;
+
+                                           upload_obj.option('formData',{data:JSON.stringify(res.upload_params)});
+                                           upload_obj.option('server',res.server_url);
+
+                                           console.log(yue_upload_obj.init_img_url);
+                                           // 重新赋值，为了区分第一次读取的图片地址
+                                           yue_upload_obj.init_img_url = res.img_url+'?'+new Date().getTime();
+
+                                       }
+                                   })
+
+                               }
+							})
+							.on('uploadError',function()
+							{
+
+							})
+							.on('uploadFinished',function()
+							{
+
+								layer.close(index);
+							})
+						},500);
+					},
+					cancel : function()
+					{
+						if(!confirm('注意！关闭弹窗会终止上传图片'))
+						{
+							return false;
+						}
+
+						upload_obj && upload_obj.stop(true);
+
+						layer.close();
+					}
+				});
+			});
+		// ======== 传图组件结束 ========
+
+		return yue_upload_obj;
+	}
+
+})
+</script>

@@ -1,0 +1,29 @@
+.ui-avatar-icon-16 {
+  width: 16px;
+  height: 16px; }
+
+.ui-avatar-icon-64 {
+  width: 64px;
+  height: 64px; }
+
+.ui-avatar-icon-80 {
+  width: 80px;
+  height: 80px; }
+
+.ui-avatar-icon-90 {
+  width: 90px;
+  height: 90px; }
+
+.ui-avatar-icon-120 {
+  width: 120px;
+  height: 120px; }
+
+.ui-avatar-icon i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }

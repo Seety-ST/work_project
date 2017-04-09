@@ -1,0 +1,191 @@
+/* Theme Name:poco ued theme
+Author URI:poco.cn
+Description:poco */
+
+/** 清除内外边距 **/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+img/* img elements 图片元素 */ { border: medium none; margin: 0; padding: 0; }
+/** 设置默认字体 **/
+body, button, input, select, textarea { font: 12px/1.5  "SimSun", Tahoma, Arial, sans-serif }
+input, select, form img, button { vertical-align: middle; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+em { font-style: normal; }
+/** 重置列表元素 **/
+ul, ol { list-style: none; }
+/** 重置超链接元素 **/
+a { text-decoration: none; color: #000; }
+a:hover { text-decoration: none; }
+/** 重置图片元素 **/
+img { border: none; }
+/** 重置表格元素 **/
+table { border-collapse: collapse; border-spacing: 0; }
+/** 清楚浮动 **/
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix { zoom: 1; }
+/* IE6 */
+*:first-child+html .clearfix { zoom: 1; }
+/* IE7 */
+textarea, input { resize: none }
+a, textarea, input, button { outline: none }
+.clear { clear: both; font-size: 0; line-height: 0; height: 0; overflow: hidden; }
+.coz { clear: both; overflow: hidden; zoom: 1 }
+/*** font ***/
+.word_break { white-space: normal; word-wrap: break-word; word-break: break-all; }
+.f14 { font-size: 14px; }
+.fb { font-weight: bold; }
+.db { display: block }
+.dn { display: none }
+.di { display: inline }
+.tc { text-align: center; }
+.vam { vertical-align: middle; }
+.font_wryh { font-family: '微软雅黑', '黑体', '宋体'; }
+/** position **/
+.re { position: relative; z-index: 1 }
+.fr { float: right; }
+.fl { float: left; }
+.frdi { float: right; display: inline }
+.fldi { float: left; display: inline }
+/* ====================== 重置结束 ===================== */
+* { -webkit-tap-highlight-color: transparent; -webkit-appearance: none; }
+html { -ms-touch-action: none; }
+body{
+	font-size: 0.24rem;
+	color: #000;
+}
+html, body { 
+	font-family: 'Microsoft YaHei', 'Verdana', 'SimSun';
+}
+body{
+	background: #a8a4a4 url(../images/bg-item-750x1246.jpg) center top no-repeat;
+	background-size: 100% auto;
+}
+body.article-bg{
+	background: #fff;
+}
+
+
+/* content */
+/* 玩法列表 */
+.playList-page{
+	padding: 0.2rem;
+}
+.playList-page img{
+	width: 100%;
+	display: block;
+}
+.playList-page .list-wrap li{
+	position: relative;
+	border-radius: 0.16rem;
+	overflow: hidden;
+	margin-bottom: 0.2rem;
+}
+.playList-page .list-wrap li .text-item{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255, 255, 255 ,.9);
+	padding: 0.2rem 0.16rem;
+	box-sizing: border-box;
+}
+.playList-page .list-wrap li .text-item::after{
+	display: block;
+	content:"";
+	background-image: url(../images/icon-14x24.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 0.14rem;
+	height: 0.24rem;
+	position: absolute;
+	right: 0.24rem;
+	top: 50%;
+	margin-top: -0.12rem;
+}
+.playList-page .list-wrap li:active .text-item::after{
+	background-image: url(../images/icon-hover-14x24.png);
+}
+.playList-page .list-wrap li .text-item h4.title{
+	font-weight: normal;
+	font-size: 0.26rem;
+}
+
+/* 玩法详细 */
+.article-page{
+	padding: 0.65rem 0.34rem 1.1rem;
+	color: #333;
+}
+.article-page img{
+	display: block;
+	max-width: 100%;
+}
+.article-page .text-wrap{
+	font-size: 0.28rem;
+}
+.article-page .text-wrap h3.title{
+	font-size: 0.5rem;
+	line-height: 0.6rem;
+	padding-bottom: 0.65rem;
+	font-weight: normal;
+}
+.article-page .text-wrap h4.title{
+	font-size: 0.36rem;
+	line-height: 0.2rem;
+	padding: 0.98rem 0 0.56rem;
+}
+.article-page .text-wrap p{
+	margin-bottom: 0.56rem;
+	color: #2e2e2e;
+}
+.article-page .text-wrap p.remark{
+	color: #929191;
+}
+.article-page .text-wrap .image-package{
+	padding-bottom: 0.2rem;
+}
+.article-page .text-wrap .image-package img{
+	border: 1px solid #e3e3e3;
+}
+
+/* 提示弹出层 */
+.tips-pop{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	font-size: 0.26rem;
+	color: #fff;
+	background: rgba(0,0,0,.8);
+	padding: 0.2rem 0.6rem;
+	border-radius: 0.76rem;
+}
+
+/* 状态模块 */
+.noticle-item{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	text-align: center;
+	font-size: 0.3rem;
+	line-height: 0.48rem;
+}
+.noticle-item i.icon{
+	display: block;
+	margin: 0 auto;
+	background-size: contain;
+	background-repeat: repeat;
+	margin-bottom: 0.38rem;
+}
+.noticle-item p{
+	color: #fff;
+	opacity: 0.6;
+}
+.nowifi-item i.icon{
+	background-image: url(../images/nowifi-icon-155x111.png);
+	width: 1.55rem;
+	height: 1.11rem;
+}

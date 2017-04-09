@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+<link rel="stylesheet" href="http://www.mojikids.com/static/wap/style/201739/main.08b2116.css">
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-no-use.1498b96.css">
+<link charset="utf-8" rel="stylesheet" href="http://www.mojikids.com/static/wap/style/ui/no-use/yue-ui-not.e3bbaab.css">
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 start-->
+<script type="text/javascript">document.addEventListener('touchstart',function(){},false);</script>
+
+<script src="http://www.mojikids.com/static/wap/lib/base.e21917a.js" charset="utf-8"></script>
+
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+               var clientWidth = docEl.clientWidth;
+               if (!clientWidth) return;
+
+               if(clientWidth<=768)
+               {
+                 docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+               }
+               else
+               {
+                 docEl.style.fontSize = 100*(768/375) + 'px';
+               }
+
+
+            };
+            recalc();
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+
+
+<!--当前UI页面使用，跟YUE UI 使用无关联 end-->
+
+    <title>
+        对话框
+    </title>
+
+    
+</head>
+
+<body>
+
+    <!-- YUE-UI VUE 头部返回模块 start -->
+    <header class="global-header ui-border-b" data-role="global-header-bar">
+    <div class="wbox clearfix">
+        <a href="javascript:void(0);" data-role="back">
+            <div class="back" data-role="page-back">
+                <i class="icon-back"></i>
+            </div>
+        </a>
+        <h3 class="title"></h3>
+    </div>
+</header>
+
+<script async defer>
+    (function()
+    {
+        var title = document.title;
+        var $headerbar = document.querySelector('[data-role="global-header-bar"]');
+        $headerbar.querySelector('.title').innerHTML = title;
+        $headerbar.querySelector('[data-role="back"]').onclick = function()
+        {
+            if(document.referrer)
+            {
+                window.history.back();
+                return ;
+            }
+            else
+            {
+                window.location.href = './index.tpl.htm' ;
+            }
+        }
+    })();
+    
+</script>
+
+    <!-- YUE-UI VUE 头部返回模块 end -->
+
+
+<div class="content p20">
+
+    <p>
+        <div class="ui-center">
+            <div class="ui-btn" id="btn1">模板创建弹窗</div>
+        
+            <br />
+            <br />
+
+            <div class="ui-btn" id="btn2">模板创建弹窗</div>
+
+            <br />
+            <br />
+
+            <div class="ui-btn" id="btn3">loading</div>
+        </div>
+    </p>
+<!-- 
+
+    <p>
+        <div class="ui-dialog">
+            <div class="ui-dialog-cnt">
+                <div class="ui-dialog-bd">
+                    <div>
+                        <h4>标题</h4>
+                        <div>内容</div>
+                    </div>
+                </div>
+                <div class="ui-dialog-ft ui-btn-group">
+                    <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button>
+                </div>
+            </div>
+            <br>
+        </div>
+    </p> -->
+
+
+
+<p>
+    <div class="ui-btn-group ui-btn-group-bottom">
+        <button type="button" id="tips_btn1">成功提示</button>
+        <button type="button"  id="tips_btn2">内容提示</button>
+        <button type="button"  id="tips_btn3">警告提示</button>
+    </div> 
+</p>
+
+
+<script type="text/javascript">
+
+
+// var $ = require('components/zepto/zepto.js');
+// var frozen = require('yue_ui/frozen');
+
+
+
+
+</script>
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>

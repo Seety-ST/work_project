@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>约约 上传组件</title>
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="http://static-c.yueus.com/yue_ui/pc-user-common/static/pc/style/common/yue_ui_853dbf6.css">
+</head>
+<body>
+
+<div class="ml15 mr15">
+	<div class="from-con">
+		<div class="img-upload-item">
+			<div class="img-list clearfix">
+				<div class="J_upload-container_1 ui-item" style="overflow:hidden;" >
+
+				</div>
+			</div>
+			<div class="tips">最多上传10张图片；文件格式为jpg、jpeg、png（每张图片大小不超过3M）</div>
+		</div>
+	</div>
+	<div>
+		<button class="ui-button ui-button-primary ui-button-size-min ui-button-block " id="ok">
+	        <span class="ui-button-content f16">确定</span>
+	    </button>
+	</div>
+
+</div>
+
+
+<!--传图必须使用-->
+<script type="text/javascript" src="http://static-c1.yueus.com/yue_ui/js/jquery.js"></script>
+<script type="text/javascript" src="http://static-c1.yueus.com/yue_ui/upload/1.0.2/webuploader.min.js"></script>
+<script type="text/javascript" src="http://static-c1.yueus.com/yue_ui/upload/1.0.2/yueyue_uploader_v2.js?1234"></script>
+<script type="text/javascript" src="http://static-c1.yueus.com/yue_ui/layer/1.0.0/layer/layer.js"></script>
+<!--传图必须使用-->
+
+</body>
+</html>
+<script >
+
+
+$(function()
+{
+	
+
+	// 使用
+	var _upload_com_obj = add_upload_com($('.J_upload-container_1'),
+	{
+		part_id : 'g1[goods_id]',// 图片组id，确保每组图片都有唯一id做标记
+		imgs_arr : [],// 初始化图片
+		user_id : '100002',
+		limit : 10
+	});
+
+	$('#ok').on('click',function()
+	{
+		if(parent)
+		{
+			parent.postMessage(_upload_com_obj.get_img_list(),'*');
+		}	
+
+	});
+
+    function add_upload_com($el,options)
+	{
+		options = options || {};
+		// ======== 传图组件开始 ========
+		var part_id = options.part_id;
+		var imgs_arr = options.imgs_arr;
+		var user_id = options.user_id;
+		var limit = options.limit; 	
+		var yue_upload_obj = new yue_upload_class
+		({
+			upload_total_limit : limit,// 传图上限
+			upload_container : $el,
+			user_id :  user_id,// 用户id
+			multiple : true,// 是否多图
+			imgs : imgs_arr,
+			sortable : false,
+			fileSizeLimit: 3 * limit * 1024 * 1024,    // 9 M * 上限 总文件大小
+			fileSingleSizeLimit: 3 * 1024 * 1024,    // 3 M 单文件大小
+			gid : part_id,
+			extensions : 'gif,jpg,jpeg,bmp,png'
+		});
+
+		$('['+yue_upload_obj.uuid+']').on('click', function()
+		{
+			var upload_obj = {};
+			first_layer = layer.open
+			({
+				type: 1,
+				area: ['800px', '470px'],
+				fix: false, //不固定
+				title:'上传图片',
+				maxmin: false,
+				content: yue_upload_obj.tpl,
+				success : function($el,index)
+				{
+					var sec_layer = null;
+					var index = index;
+
+
+					setTimeout(function()
+					{
+						upload_obj = yue_upload_obj.init_upload($el);
+
+						upload_obj.on('uploadProgress',function()
+						{
+
+						})
+						.on('fileQueued',function(file)
+						{
+
+						})
+						.on('fileDequeued',function(file)
+						{
+
+						})
+						.on('uploadSuccess',function(file,response)
+						{
+							// response 服务端返回数据
+							//console.log(response);
+						})
+						.on('uploadError',function()
+						{
+
+						})
+						.on('uploadFinished',function()
+						{
+							layer.close(index);
+						})
+					},500);
+				},
+				cancel : function()
+				{
+					if(!confirm('注意！关闭弹窗会终止上传图片'))
+					{
+						return false;
+					}
+
+					upload_obj && upload_obj.stop(true);
+
+					layer.close();
+				}
+			});
+		});
+
+		return yue_upload_obj;
+		// ======== 传图组件结束 ========
+	}
+
+})
+</script>
+

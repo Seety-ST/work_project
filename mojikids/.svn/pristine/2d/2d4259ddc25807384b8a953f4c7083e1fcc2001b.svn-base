@@ -1,0 +1,238 @@
+<?php
+
+/**
+ * 确认订单
+ *
+ * @author willike <chenwb@yueus.com>
+ * @since 2017-01-12
+ */
+require(dirname(dirname(__FILE__)) . '/moji_input.inc.php');
+
+$goods_id = $client_data['data']['param']['goods_id'];
+$store_id = $client_data['data']['param']['store_id'];
+$standard_id = $client_data['data']['param']['standard_id'];
+$quantity = trim($client_data['data']['param']['buy_num']);
+$service_time = $client_data['data']['param']['service_time'];
+$timezone_id = $client_data['data']['param']['timezone_id']; // 档期时间ID
+if (empty($goods_id) || empty($standard_id) || empty($service_time)) {
+    $options['data'] = array(
+        'result' => 0,
+        'message' => '订单信息不完整',
+    );
+    return $cp->output($options);
+}
+if ($quantity < 1) {
+    $options['data'] = array(
+        'result' => -1,
+        'message' => '订单数量不能小于1',
+        'buy_num' => $quantity,
+    );
+    return $cp->output($options);
+}
+if (strcmp($service_time, date('Y-m-d')) < 0) {
+    $options['data'] = array(
+        'result' => -2,
+        'message' => '服务时间不正确',
+    );
+    return $cp->output($options);
+}
+$service_time_stamp = strtotime($service_time);
+if (empty($service_time_stamp)) {
+    $options['data'] = array(
+        'result' => -2,
+        'message' => '服务时间格式不正确',
+    );
+    return $cp->output($options);
+}
+if (!is_numeric($timezone_id)) {
+    $options['data'] = array(
+        'result' => -3,
+        'message' => '档期时间点ID不正确',
+    );
+    return $cp->output($options);
+}
+$yueshe_schedule_obj = POCO::singleton('pai_mall_yueshe_schedule_class');
+$schedule_time_re = $yueshe_schedule_obj->get_schedule_time_info($timezone_id);
+if (empty($schedule_time_re)) {
+    $options['data'] = array(
+        'result' => -3,
+        'message' => '没有该档期时间点',
+    );
+    return $cp->output($options);
+}
+if ($quantity > $schedule_time_re['stock_total']) {
+    $options['data'] = array(
+        'result' => -3,
+        'message' => '该档期时间点库存不足',
+    );
+    return $cp->output($options);
+}
+$time_name = $schedule_time_re['time_name'];  // 时间点
+list($h, $m) = explode(':', $time_name);
+if (is_numeric($h) && is_numeric($m)) {
+    list($h_now, $m_now) = explode(':', date('G:i'));  // 当前时分
+    if ($h < $h_now) {
+        $options['data'] = array(
+            'result' => -3,
+            'message' => '该档期时间点已过期',
+        );
+        return $cp->output($options);
+    } else if ($h == $h_now && $m < $m_now) {
+        $options['data'] = array(
+            'result' => -3,
+            'message' => '该档期时间点已过期了',
+        );
+        return $cp->output($options);
+    }
+}
+// 商品信息
+$yueshe_goods_obj = POCO::singleton('pai_mall_yueshe_goods_class');
+$goods_result = $yueshe_goods_obj->get_goods_info_for_yueshe($goods_id);
+$goods_data = $goods_result['goods_data'];
+if (empty($goods_data)) {
+    $options['data'] = array(
+        'result' => 0,
+        'message' => '没有该商品',
+    );
+    return $cp->output($options);
+}
+$seller_user_id = $goods_data['user_id'];  // 商家ID
+// 店铺
+$yueshe_detail = $goods_result['yueshe_detail'];
+$tmp_detail = array();
+foreach ($yueshe_detail as $value) {
+    $detail_key = $value['detail_key'];
+    $tmp_detail[$detail_key] = $value['detail_val'];
+}
+$store_id_list = explode(',', $tmp_detail['store_id']);  // 店铺ID集
+if (empty($store_id)) {
+    // 没有门店, 默认取 第一个
+    $store_id = $store_id_list[0];
+} else {
+    // 判断是否 在商品的门店列表中
+    if (!in_array($store_id, $store_id_list)) {
+        $options['data'] = array(
+            'result' => 0,
+            'message' => '门店ID不合法',
+        );
+        return $cp->output($options);
+    }
+}
+// 店铺信息
+$yueshe_store_obj = POCO::singleton('pai_mall_yueshe_store_class');
+$store_result = $yueshe_store_obj->get_store_info($store_id);
+if (empty($store_result)) {
+    $options['data'] = array(
+        'result' => 0,
+        'message' => '没有该店铺',
+    );
+    return $cp->output($options);
+}
+// 属性
+$property = array(
+    array('title' => '拍摄时间:', 'value' => $service_time . ' ' . $time_name),
+    array('title' => '拍摄门店:', 'value' => $store_result['name']),
+);
+// 封面图
+$cover = array();
+foreach ($goods_data['img'] as $goods_data_img) {
+    $cover[] = array(
+        'value' => $goods_data_img['img_url'],
+    );
+}
+// 规格
+$prices_data_list = $goods_result['prices_data_list'];
+$standard = array();
+$min_price = $max_price = 0;
+foreach ($prices_data_list as $prices_) {
+    $price_num = $prices_['value'];  // 价格
+    $prices_standard_id = $prices_['type_id'];
+    $standard[$prices_standard_id] = array(
+        'standard_id' => $prices_standard_id,
+        'name' => $prices_['name_val'], // 规格名称
+        'price' => $price_num,
+        'unit' => '',
+        'stock_num' => $prices_['stock_num'],
+    );
+}
+if (!isset($standard[$standard_id])) {
+    $options['data'] = array(
+        'result' => 0,
+        'message' => '没有该规格',
+    );
+    return $cp->output($options);
+}
+$standard_info = $standard[$standard_id];  // 规格信息
+// 库存判断
+if ($quantity > $standard_info['stock_num']) {
+    $options['data'] = array(
+        'result' => -1,
+        'message' => '购买数量超过库存',
+    );
+    return $cp->output($options);
+}
+$goods = array(
+    'goods_id' => $goods_data['goods_id'],
+    'title' => $goods_data['titles'],
+    'cover' => $cover[0],
+    'standard_id' => $standard_info['standard_id'],
+    'standard_name' => $standard_info['name'],
+    'price' => '￥' . $standard_info['price'],
+);
+// 合计金额
+$goods_data_list = array(
+    array(
+        'goods_id' => $goods_data['goods_id'],
+        'stage_id' => 0,
+        'prices_type_id' => $standard_id,
+        'quantity' => $quantity,
+    )
+);
+$order_api_obj = POCO::singleton('snap_mall_order_api_class');
+$cal_result = $order_api_obj->cal_shopping_cart($goods_data_list);
+if ($cal_result['result'] != 20000) {
+    $options['data'] = array(
+        'result' => -2,
+        'message' => $cal_result['message'],
+    );
+    return $cp->output($options);
+}
+$response_data = $cal_result['response_data'];
+$total_amount = $response_data['total_amount'];  // 订单金额
+$pending_amount = $response_data['pending_amount'];  // 合计金额
+// 用户信息
+$recently_ret = $order_api_obj->get_recently_order_info($user_id, 'buyer');
+$username = $phone = $baby_age = $email = '';
+if (!empty($recently_ret)) {
+    $username = $recently_ret['consignee'];
+    $phone = $recently_ret['cellphone'];
+    $baby_age = $recently_ret['baby_age'];
+    $email = $recently_ret['email'];
+}
+if (empty($phone)) { // 使用用户绑定的手机号
+    $yueshe_user_obj = POCO::singleton('pai_mall_yueshe_user_class');
+    $user_result = $yueshe_user_obj->get_member_info($user_id);
+    $phone = $user_result['cellphone'];  // 手机号
+}
+$order_info = array(
+    'title' => '确认订单',
+    'goods_id' => $goods_data['goods_id'],
+    'store_id' => $store_result['store_id'],
+    'standard_id' => $standard_id,
+    'buy_num' => $quantity,
+    'timezone_id' => $timezone_id,
+    'service_time' => $service_time,
+    'price' => '￥' . $pending_amount,
+    'property' => $property,
+    'goods' => $goods,
+    'bill' => array(
+        array('title' => '订单金额：', 'value' => '￥' . $total_amount),
+        array('title' => '合计金额：', 'value' => '￥' . $pending_amount),
+    ),
+    'username' => $username,
+    'phone' => $phone,
+    'baby_age' => $baby_age,
+    'email' => $email,
+);
+$options['data'] = $order_info;
+return $cp->output($options);

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>拍摄须知 - 莫吉照相馆 </title>
+		
+		{%$wap_global_head%}
+		<link href="http://www.mojikids.com/static/wap/style/about/shot-notice.ea19824.css" type="text/css" rel="stylesheet" />
+	
+    
+</head>
+	<body class="cor-bg-fff">
+		<div class="shot-notice-page" >
+			<div class="p1th">
+				<div class="item-wrap">
+					<dl>
+						<dt class="f17 main-color">
+							For Baby：
+						</dt>
+						<dd class="color-666 f13">
+							1. 为了让宝宝有一个好的拍摄状态，请尽量在前一天安排好
+							宝宝的作息时间。
+						</dd>
+						<dd class="color-666 f13">
+							2. 让宝宝吃好、睡好、充分休息。
+						</dd>
+						<dd class="color-666 f13">
+							3 我们提供宝宝的服装造型，爸爸妈妈们可以不用担心宝宝
+							的服装搭配。
+						</dd>
+						<dd class="color-666 f13">
+							4. 我们会给宝宝适当的妆容，如您习惯用自己的化妆品，也
+							可以带过来。
+						</dd>
+						<dd class="color-666 f13">
+							5. 宝宝在拍摄前尽量不要睡觉哦，刚睡醒会影响拍摄状态
+						</dd>
+					</dl>
+					<dl>
+						<dt class="f17 main-color">
+							For Parents：
+						</dt>
+						<dd class="color-666 f13">
+							1. 需要亲子合影的爸爸妈妈们，需要自备服装 ，我们会根据
+							套餐场景为您提供详细的服装准备说明给您参考。
+						</dd>
+						<dd class="color-666 f13">
+							2. 需要拍亲子合影的爸爸妈妈，前一晚要睡个好觉哦，别喝
+							太多水以免眼皮浮肿，也可以做个面膜让自己更美哦。
+						</dd>
+						<dd class="color-666 f13">
+							3. 有隐形眼镜的话可以佩戴，以避免拍摄时镜片会造成反光。
+						</dd>
+						<dd class="color-666 f13">
+							4. 爸爸们可以提前一天理理发洗洗头，剃胡须，让自己变得
+							更加帅气。
+						</dd>
+						<dd class="color-666 f13">
+							5. 建议平时跟宝宝熟悉亲密的家长陪同，更有利于让宝宝尽
+							快放松下来。
+						</dd>
+					</dl>
+					<dl>
+						<dt class="f17 main-color">
+							Others：
+						</dt>
+						<dd class="color-666 f13">
+							1. 每个订单只有一次修改档期的机会，请至少提前三天致电
+							客服修改。
+						</dd>
+						<dd class="color-666 f13">
+							2. 在未提前沟通的前提下，如未按预定日期到店，订单视为
+							已成功消费。
+						</dd>
+						<dd class="color-666 f13">
+							3. 对订单有疑惑的请咨询客服，客服电话：020-87399543
+							转830。
+						</dd>
+						
+					</dl>
+				</div>
+			</div>
+			<div class="p2th">
+				<div class="item-wrap">
+					<div class="img-item">
+						<i class="img"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+
+</body>
+	
+</html>
+{%$wap_global_footer%}
+
+
+
+
+<script>
+ 	(function() {
+	 	
+
+	 	
+	 })();
+</script>
+{%$wap_global_tj%}

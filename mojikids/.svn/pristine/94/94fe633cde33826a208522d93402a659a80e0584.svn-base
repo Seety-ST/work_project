@@ -1,0 +1,100 @@
+<!--底部-->
+
+<script>
+(function()
+{
+    var run_status = '<!--RUN_STATUS-->' == 'DEV' ? false : true ;
+
+    var version = '<!--COMPLIE_DATE-->';
+
+    require.resourceMap(__RESOURCE_MAP__);
+
+	console.log(require.__RESOURCES_MAP_OBJ);
+
+    var __rmap = require.__RESOURCES_MAP_OBJ;
+    var __global_list_map = [];
+
+    for(var key in __rmap['res'])
+    {
+        if(__rmap['res'][key] && __rmap['res'][key]['uri'] &&
+		( /wap-kids:global(.*)/.test(key) || /wap-kids:widget(.*)/.test(key) || /wap-kids:modules\/widget(.*)/.test(key)  ) )
+        {
+            __global_list_map.push(key);
+        }
+
+    }
+
+    __yue_ls__.loader(__rmap,__global_list_map,run_status,version,'mojikids');
+
+})();
+
+</script>
+
+{%if $is_weixin == 1%}
+<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script>
+if({%$wx_json_obj%})
+{
+    window.__wx_json__ = {%$wx_json_obj%};
+}
+
+// 微信分享
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId:  '{%$wx_json.appId%}', // 必填，公众号的唯一标识
+    timestamp: '{%$wx_json.timestamp%}', // 必填，生成签名的时间戳
+    nonceStr: '{%$wx_json.nonceStr%}', // 必填，生成签名的随机串
+    signature: '{%$wx_json.signature%}',// 必填，签名，见附录1
+    jsApiList: ['checkJsApi',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQZone',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'downloadImage',
+        'openProductSpecificView'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+
+
+
+</script>
+{%/if%}
+
+<script src="//www.mojikids.com/static/wap/js/share/yueyue_share_v4.min.js?20170306" ></script>
+<script type="text/javascript">
+    (function()
+    {
+        var __SHARE_TEXTS = {%$share_text%}.res;
+
+	    //调用分享方法
+	    window.__MOJIKIDS_GLOBAL['share_com'] = new yueyue_share_class(
+    	{
+            share_text : __SHARE_TEXTS,
+            UA : require.syncLoad(__moduleId('/modules/global/util/index')).ua
+    	});
+
+        //分享成功回调
+    	window.__MOJIKIDS_GLOBAL['share_com'].emitter.bind('share_success',function(type)
+    	{
+    		console.info(type);
+    	})
+
+    })();
+</script>

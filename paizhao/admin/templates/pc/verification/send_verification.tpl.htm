@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>验证码</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.yueus.com/js/selectlocal.js"></script>
+    <script language="javascript" type="text/javascript" src="js/DatePicker/WdatePicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link type="text/css" href="css/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+    <link type="text/css" href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-zh-CN.js"></script>
+</head>
+<body>
+<style>
+    .J_add_btn,.J_add_cover_img{
+        overflow: hidden;
+    }
+    .model-img-list li{
+        float:left; width:85px; height:100px; text-align:center; margin-right:10px
+    }
+    #img_wid img{
+        width:200px
+    }
+    /**添加样式，避免被重写样式**/
+    fieldset{
+        width:100%
+    }
+    
+</style>
+<div class="mainbox">
+<div id="tabs" style="margin-top:10px;">
+<div class="tabbox">
+<div class="table-list">
+<div class="table" style="width:100%;">
+<fieldset>
+<legend>获取安全验证码</legend>
+<iframe id="form_iframe" name="form_iframe" style="display:none;"></iframe>
+<form id="form1" name="form1" method="post" action="?action=send_verification" target="_self">
+<table width="90%" align="center">
+<tr>
+    <td width="150" height="30">用户ID:{user_id}</td>
+    <td height="30"><label for="code"></label>
+      手机号码:{phone}
+        <input type="button" name="button2" id="button2" value="发送手机验证码" onclick="javascript:this.form.action='?action=send_verification&send_sms=1';this.form.submit();"/></td>
+</tr>
+<tr>
+    <td width="150" height="30">请输入密码:</td>
+    <td height="30"><label for="code"></label>
+      <input name="password" type="password" id="password" value="{password}" /></td>
+</tr>
+<tr>
+  <td height="30">请输入你的手机验证码:</td>
+  <td height="30"><input name="code" type="text" id="code" value="{code}" />
+    <font color="#FF0000">{show_message}</font>
+</td>
+</tr>
+<tr>
+  <td height="30" colspan="2" align="center"><input name="r_url" type="hidden" id="r_url" value="{r_url}" />    <input type="submit" name="button" id="button" value="提交" /></td>
+  </tr>
+</table>
+</form>
+</fieldset>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>新速腾</title>
+	<link href="css/zt.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div class="header">
+		<div class="w1000">
+			<div class="nav-wrap clearfix">
+				<div class="nav-item">
+						<img src="images/ll-nav-1.png" usemap="#Map" border="0" />
+		                    <map name="Map" id="Map">
+		                      <area shape="poly" coords="29,1,0,48,84,46,114,-4" href="#" />
+		                      <area shape="poly" coords="118,0,91,45,209,47,239,-1" href="#" />
+		                      <area shape="poly" coords="243,-1,218,44,335,48,361,1" href="#" />
+		                      <area shape="poly" coords="370,-1,342,46,460,47,489,0" href="#" />
+		                      <area shape="poly" coords="466,47,496,-3,613,-1,586,45" href="#" />
+		                      <area shape="poly" coords="618,-2,591,46,754,48,780,-3" href="#" />
+		                    </map>
+				  </div>
+				<div class="login-item">
+					<a href="#">登录</a>/<a href="#">注册</a>
+				</div>
+			</div>
+			<h1 class="logo-item">
+				<a href="#"></a>
+			</h1>
+		</div>
+	</div>
+	<div class="content">
+		<div class="wycj-page">
+			<div class="w1000">
+				<div class="mod-listItem">
+					<img src="images/ll-img-26.png" />
+				</div>
+				<div class="path1">
+					<div class="item-box">
+						<h4 class="title title-1 font_wryh">
+							<span>参赛主题</span><em>（单选）</em>
+						</h4>
+						<div class="jc-list clearfix">
+							<ul>
+								<li class="jc-1 cur">
+									<a href="#">严谨即风尚</a>
+									<div class="info-item">
+										<p>
+											构图控的世界，追求极致的缜密与美感。至真至美的风尚，来源于对最原始细节的不断苛求，无限的想法依靠有限的规则。
+											<br />
+											上传彰显你追求极致构图的作品，忠于内心，跳跃思想。
+										</p>
+									</div>
+								</li>
+								<li class="jc-2">
+									<a href="#">动感即风尚</a>
+									<div class="info-item">
+										<p>
+											动感是逐光者的梦，诞生于不羁与张扬的内心。向往无休止的动感魅力，敢于行动，就要始终向着更具挑战的山峰进发。
+											<br />
+											上传表现你心中无限动感的作品，激扬青春，勇敢向前。
+										</p>
+									</div>
+								</li>
+								<li class="jc-3">
+									<a href="#">黑色即风尚</a>
+									<div class="info-item">
+										<p>
+											世界缤纷无极限，看惯绚丽的色彩，墨染的风韵更值得细细体味。深沉不是谁的专利，黑色却带给年轻人深思，
+											<br />
+											感受黑色之美，上传属于你的墨色风范，用力感受生命，用心触发思考。
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item-box">
+						<div class="item-con clearfix">
+							<h4 class="title font_wryh fldi">上传图片</h4>
+							<input type="text" class="inputClass inputClass-1 fldi" />
+							<div class="btn fldi pl20">
+								<a href="#" class="fldi mr15">
+									<img src="images/ll-img-29.png" />
+								</a>
+								<a href="#" class="fldi">
+									<img src="images/ll-img-30.png"/>
+								</a>
+							</div>
+						</div>
+						<div class="tips-item">
+							<p>
+								*请上传1-5张与所选主题切合的JPG格式图片
+								<br />
+								*作品大小不超过2M
+							</p>
+						</div>
+						<div class="show-list clearfix">
+							<ul>
+								<li>
+									<div class="img">
+										<img src="images/test/124x124.jpg"/>
+									</div>
+									<a class="delete db" href="#">删除</a>
+								</li>
+								<li>
+									<div class="img">
+										<img src="images/test/124x124.jpg"/>
+									</div>
+									<a class="delete db" href="#">删除</a>
+								</li>
+								<li>
+									<div class="img">
+										<img src="images/test/124x124.jpg"/>
+									</div>
+									<a class="delete db" href="#">删除</a>
+								</li>
+								<li>
+									<div class="img">
+										<img src="images/test/124x124.jpg"/>
+									</div>
+									<a class="delete db" href="#">删除</a>
+								</li>
+								<li>
+									<div class="img">
+										<img src="images/test/124x124.jpg"/>
+									</div>
+									<a class="delete db" href="#">删除</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="item-box clearfix">
+						<h4 class="title font_wryh fldi">作品标题</h4>
+						<input type="text" class="inputClass fldi" placeholder="请为您的作品写一个生动有趣的标题。" />
+					</div>
+					<div class="item-box clearfix">
+						<h4 class="title font_wryh fldi">作品描述</h4>
+						<textarea class="textarea fldi" placeholder="必填，如可说明作品的拍摄地、拍摄时间等。限300字。"></textarea>
+					</div>
+					<div class="btn-wrap clearfix">
+						<a href="#"><img src="images/ll-img-31.png" /></a>
+						<a href="#"><img src="images/ll-img-32.png" /></a>
+						<a href="#"><img src="images/ll-img-33.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer"></div>
+	<!-- 上传弹出框 -->
+	<div class="fade" style="display:none"></div>
+
+	<div class="pop_error" style="display:none">
+	    <div class="close"><input type="image" src="images/ll-img-16.png" /></div>
+	    <div class="p2th">
+	        <div class="box1"><img src="images/ll-img-45.png" /></div>
+	        <div class="box2"><a href="#"><img src="images/ll-img-46.png" /></a></div>
+	    </div>   
+	</div>
+
+	<div class="pop_success" style="display: none">
+	    <div class="close"><input type="image" src="images/ll-img-16.png" /></div>
+	    <div class="p2th">
+	        <div class="box1"><img src="images/ll-img-42.png" /></div>
+
+	        <p class="txt font_wryh">
+	            您的参赛作品将在审核通过后，
+	            <br />
+	            同步到大赛专区作品栏目内展示
+	        </p>
+	        <div class="box2"><a href="#"><img src="images/ll-img-43.png" /></a></div>
+	        <div class="box2"><a href="#"><img src="images/ll-img-44.png" /></a></div>
+	    </div>   
+	</div>
+	<!-- 上传弹出框end -->
+</body>
+</html>

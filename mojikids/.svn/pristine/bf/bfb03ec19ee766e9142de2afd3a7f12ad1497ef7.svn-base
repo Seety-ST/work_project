@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/**
+ * @authors @authors huangst
+ * @date    2017-01-05 11:15:39
+ * @version $Id$
+ * 设置页
+ */
+
+.set-up-index-page .item-wrap .ui-edit-user-info-mod .user-info-item {
+  padding: 0.14rem 0.15rem;
+}
